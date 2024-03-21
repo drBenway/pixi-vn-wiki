@@ -98,6 +98,6 @@ reactRoot.render(
 
 ( Coming soon )
 
-### Next Steps
+## Next Steps
 
 After setting up the interface, you can start creating the visual novel using Pixi'VN functions.
