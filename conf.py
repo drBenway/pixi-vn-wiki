@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Pixi'VM"
+project = "Pixi'VN"
 copyright = '2024, DRincs Productions'
 author = 'DRincs Productions'
 

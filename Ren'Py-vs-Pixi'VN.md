@@ -1,4 +1,4 @@
-# Ren'Py vs Pixi'VM
+# Ren'Py vs Pixi'VN
 
 ## Ren'Py
 
@@ -7,11 +7,11 @@ Ren'Py is a visual novel engine – used by thousands of creators from around th
 * Programming language: Ren'Py language, a programming language that allows you to develop visual novels without much knowledge and very quickly. It is based on Python.
 * Canvas: [Pygame_sdl2](https://github.com/renpy/pygame_sdl2) is a reimplementation of the Pygame API using SDL2 and related libraries. While in the past it was meant to support multiple applications, it only saw adoption as technology underlying Ren'Py, and is currently being supported for that purpose.
 
-## Pixi'VM
+## Pixi'VN
 
 ## Performance
 
-I imagine the performance of the Ren'Py and Pixi'VM libraries to be almost the same,
+I imagine the performance of the Ren'Py and Pixi'VN libraries to be almost the same,
 but the performance of the Canvas used by the two libraries is very significant.
 
 * Pygame_sdl2: This canvas is absolutely underperforming. This can be tested by inserting more moving graphic elements into Renpy.

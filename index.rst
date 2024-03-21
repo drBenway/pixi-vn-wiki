@@ -1,9 +1,9 @@
-.. Pixi'VM documentation master file, created by
+.. Pixi'VN documentation master file, created by
    sphinx-quickstart on Sun Mar  3 17:48:32 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Pixi'VM's documentation!
+Welcome to Pixi'VN's documentation!
 ===================================
 
 .. toctree::
