@@ -16,13 +16,11 @@ npm install pixi-vn
 
 ### Usage
 
-For the following example, we will use React to create the interface and Pixi'VN to manage the visual novel.
+For the following example we will use TypeScript, but you can use JavaScript as well.
 
 ```typescript
-// main.tsx
-
+// main.ts
 import { GameWindowManager } from '@drincs/pixi-vn'
-import { createRoot } from 'react-dom/client'
 import App from './App'
 import './index.css'
 
@@ -38,6 +36,39 @@ await GameWindowManager.initialize(body, 1920, 1080, {
 ```
 
 This is the HTML file that will be used to load the application.
+
+## Add JavaScript framework for interface
+
+In addition to managing the Pixi.js "Canvas", Pixi'VN offers the possibility of adding an HTML Element with the same dimensions as the "Canvas" to add interactions with the user.
+
+This allows the use of systems such as React, Vue, Angular, etc. to create much more complex interfaces with excellent performance.
+
+### Use Angular
+
+( Coming soon )
+
+### Use React
+
+```typescript
+// main.tsx
+import { GameWindowManager } from '@drincs/pixi-vn'
+import { createRoot } from 'react-dom/client'
+
+// GameWindowManager.initialize...
+
+// React setup with ReactDOM
+const root = document.getElementById('root')
+if (!root) {
+    throw new Error('root element not found')
+}
+
+GameWindowManager.initializeHTMLLayout(root)
+const reactRoot = createRoot(GameWindowManager.htmlLayout)
+
+reactRoot.render(
+    <App />
+)
+```
 
 ```html
 <!-- index.html -->
@@ -66,33 +97,6 @@ body {
   margin: 0;
   display: flex;
 }
-```
-
-## Add JavaScript framework for interface
-
-In addition to managing the Pixi.js "Canvas", Pixi'VN offers the possibility of adding an HTML Element with the same dimensions as the "Canvas" to add interactions with the user.
-
-This allows the use of systems such as React, Vue, Angular, etc. to create much more complex interfaces with excellent performance.
-
-### Use Angular
-
-( Coming soon )
-
-### Use React
-
-```typescript
-// React setup with ReactDOM
-const root = document.getElementById('root')
-if (!root) {
-    throw new Error('root element not found')
-}
-
-GameWindowManager.initializeHTMLLayout(root)
-const reactRoot = createRoot(GameWindowManager.htmlLayout)
-
-reactRoot.render(
-    <App />
-)
 ```
 
 ### Use Vue
