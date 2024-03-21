@@ -14,6 +14,10 @@ Pixi'VN is based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine
 npm install pixi-vn
 ```
 
+### Use Pivi'VN Template
+
+( Coming soon )
+
 ### Usage
 
 For the following example we will use TypeScript, but you can use JavaScript as well.
