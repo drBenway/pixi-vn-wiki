@@ -43,6 +43,9 @@ In addition to managing the Pixi.js "Canvas", Pixi'VN offers the possibility of 
 
 This allows the use of systems such as React, Vue, Angular, etc. to create much more complex interfaces with excellent performance.
 
+To switch between interface screens (without interrupting the canvas), you can use popups, modals, or even a full screen interface, or navigate between different routes.
+For example, you can use [React Router](https://reactrouter.com/en/main) to navigate between different routes.
+
 ### Use Angular
 
 ( Coming soon )
