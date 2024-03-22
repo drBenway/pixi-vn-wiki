@@ -113,3 +113,5 @@ body {
 ## Next Steps
 
 After setting up the interface, you can start creating the visual novel using Pixi'VN functions.
+
+* [Characters](Characters)
