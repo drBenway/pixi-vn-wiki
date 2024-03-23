@@ -15,11 +15,12 @@ In Pixi'VN, it is possible to create menus or game choices using the `MenuOption
 To set a menu or game choice, use the `setMenuOptions` and pass an array of `MenuOptionLabel` and a function to handle the choice.
 
 ```typescript
-    setMenuOptions([
-        new MenuOptionLabel("Orange", OrangeLabel), // by default, the label will be called by call
-        new MenuOptionLabel("Apple", AppleLabel, LabelRunModeEnum.OpenByCall),
-        new MenuOptionLabel("Banana", BananaLabel, LabelRunModeEnum.OpenByJump),
-    ])
+setDialogue("Choose a fruit:")
+setMenuOptions([
+    new MenuOptionLabel("Orange", OrangeLabel), // by default, the label will be called by call
+    new MenuOptionLabel("Apple", AppleLabel, LabelRunModeEnum.OpenByCall),
+    new MenuOptionLabel("Banana", BananaLabel, LabelRunModeEnum.OpenByJump),
+])
 ```
 
 ## Get the Menu or Game Choice
@@ -35,7 +36,7 @@ To get the menu or game choice, use the `getMenuOptions`. The return is an array
 To clear the menu or game choice, use the `clearMenuOptions`.
 
 ```typescript
-    clearMenuOptions();
+clearMenuOptions();
 ```
 
 ## Exemple of example of how to create the menu interface
@@ -43,55 +44,55 @@ To clear the menu or game choice, use the `clearMenuOptions`.
 For example ( in React using Material-UI ):
 
 ```tsx
-    const [menuOptions, setMenuOptions] = useState<MenuOptionLabel[]>(useMenuOptions())
+const [menuOptions, setMenuOptions] = useState<MenuOptionLabel[]>(useMenuOptions())
 
-    return (
-        <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-            spacing={2}
-        >
-            {menu.map((item, index) => {
-                return (
-                    <Grid
-                        key={index}
-                        justifyContent="center"
-                        alignItems="center"
+return (
+    <Grid
+        container
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        spacing={2}
+    >
+        {menu.map((item, index) => {
+            return (
+                <Grid
+                    key={index}
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <DialogueMenuButton
+                        onClick={() => {
+                            if (item.type == LabelRunModeEnum.OpenByCall) {
+                                clearMenuOptions()
+                                GameStepManager.callLabel(item.label)
+                                    .then(() => {
+                                        // after the label is called
+                                    })
+                                    .catch((e) => {
+                                        console.error(e)
+                                    })
+                            }
+                            else if (item.type == LabelRunModeEnum.OpenByJump) {
+                                GameStepManager.jumpLabel(item.label)
+                                    .then(() => {
+                                        // after the label is jumped
+                                    })
+                                    .catch((e) => {
+                                        console.error(e)
+                                    })
+                            }
+                        }}
+                        sx={{
+                            left: 0,
+                            right: 0,
+                        }}
                     >
-                        <DialogueMenuButton
-                            onClick={() => {
-                                if (item.type == LabelRunModeEnum.OpenByCall) {
-                                    clearMenuOptions()
-                                    GameStepManager.callLabel(item.label)
-                                        .then(() => {
-                                            // after the label is called
-                                        })
-                                        .catch((e) => {
-                                            console.error(e)
-                                        })
-                                }
-                                else if (item.type == LabelRunModeEnum.OpenByJump) {
-                                    GameStepManager.jumpLabel(item.label)
-                                        .then(() => {
-                                            // after the label is jumped
-                                        })
-                                        .catch((e) => {
-                                            console.error(e)
-                                        })
-                                }
-                            }}
-                            sx={{
-                                left: 0,
-                                right: 0,
-                            }}
-                        >
-                            {item.text}
-                        </DialogueMenuButton>
-                    </Grid>
-                )
-            })}
-        </Grid>
-    );
+                        {item.text}
+                    </DialogueMenuButton>
+                </Grid>
+            )
+        })}
+    </Grid>
+);
 ```

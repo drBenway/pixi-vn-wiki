@@ -40,6 +40,11 @@ setDialogue({
 })
 ```
 
+```typescript
+// if don't want to set a character, you can set a string
+setDialogue("Hello, world!")
+```
+
 ## Get a Current Dialogue
 
 To get the current dialogue, use the `getDialogue`. The return is a `DialogueModelBase`.
