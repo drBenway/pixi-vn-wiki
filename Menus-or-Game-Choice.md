@@ -29,3 +29,69 @@ To get the menu or game choice, use the `getMenuOptions`. The return is an array
 ```typescript
     const menuOptions: MenuOptionLabel[] = getMenuOptions();
 ```
+
+## Clear the Menu or Game Choice
+
+To clear the menu or game choice, use the `clearMenuOptions`.
+
+```typescript
+    clearMenuOptions();
+```
+
+## Exemple of example of how to create the menu interface
+
+For example ( in React using Material-UI ):
+
+```tsx
+    const [menuOptions, setMenuOptions] = useState<MenuOptionLabel[]>(useMenuOptions())
+
+    return (
+        <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            spacing={2}
+        >
+            {menu.map((item, index) => {
+                return (
+                    <Grid
+                        key={index}
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <DialogueMenuButton
+                            onClick={() => {
+                                if (item.type == LabelRunModeEnum.OpenByCall) {
+                                    clearMenuOptions()
+                                    GameStepManager.callLabel(item.label)
+                                        .then(() => {
+                                            // after the label is called
+                                        })
+                                        .catch((e) => {
+                                            console.error(e)
+                                        })
+                                }
+                                else if (item.type == LabelRunModeEnum.OpenByJump) {
+                                    GameStepManager.jumpLabel(item.label)
+                                        .then(() => {
+                                            // after the label is jumped
+                                        })
+                                        .catch((e) => {
+                                            console.error(e)
+                                        })
+                                }
+                            }}
+                            sx={{
+                                left: 0,
+                                right: 0,
+                            }}
+                        >
+                            {item.text}
+                        </DialogueMenuButton>
+                    </Grid>
+                )
+            })}
+        </Grid>
+    );
+```
