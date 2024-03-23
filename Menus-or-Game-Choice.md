@@ -28,7 +28,7 @@ setMenuOptions([
 To get the menu or game choice, use the `getMenuOptions`. The return is an array of `MenuOptionLabel`.
 
 ```typescript
-    const menuOptions: MenuOptionLabel[] = getMenuOptions();
+const menuOptions: MenuOptionLabel[] = getMenuOptions();
 ```
 
 ## Clear the Menu or Game Choice
