@@ -63,3 +63,7 @@ To get the history of dialogues for every [steps](Steps), use the `getDialogueHi
 ```typescript
 const dialogues: DialogueModelBase[] = getDialogueHistory();
 ```
+
+## Extend DialogueModelBase
+
+[( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/84)
