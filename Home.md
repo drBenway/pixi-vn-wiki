@@ -125,3 +125,5 @@ After setting up the interface, you can start creating the visual novel using Pi
 * [Dialogue and Narration](Dialogue-and-Narration)
 * [Menus or Game Choice](Menus-or-Game-Choice)
 * [Label and Game Step](Label-and-Game-Step)
+* [Game Storage](Game-Storage)
+* [Save and Load](Save-and-Load)
