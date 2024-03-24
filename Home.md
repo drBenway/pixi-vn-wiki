@@ -1,6 +1,6 @@
 ( the wiki is under development )
 
-# Pixi'VN
+# Pixi'VN - Pixi Visual Novel Engine
 
 Pixi'VN is a npm package that provides various features for creating visual novels.
 
