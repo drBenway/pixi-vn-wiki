@@ -127,8 +127,7 @@ After setting up the interface, you can start creating the visual novel using Pi
 * [Label and Game Step](Label-and-Game-Step)
 * [Game Storage](Game-Storage)
 * [Save and Load](Save-and-Load)
-* [Images](Images)
-* [Image Effects and Animations](Image-Effects-and-Animations)
+* [Images, Effects and Animations](Images-Effects-and-Animations)
 
 ## Olther Features
 
