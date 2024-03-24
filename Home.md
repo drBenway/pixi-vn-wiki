@@ -133,3 +133,4 @@ After setting up the interface, you can start creating the visual novel using Pi
 
 * [Canvas Elements](Canvas-Elements)
 * [Custom Effects](Custom-Effects)
+* [Stored Classes](Stored-Classes)
