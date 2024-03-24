@@ -59,3 +59,27 @@ When you jump to a label, the steps of the current label will be stopped and the
 ```typescript
 GameStepManager.jumpLabel(StartLabel)
 ```
+
+## Next Step
+
+To execute the next step you must call the `GameStepManager.runNextStep()` function.
+
+```typescript
+GameStepManager.runNextStep()
+```
+
+## Go back
+
+Every step the system saves the current state of the game. To go back to the previous step you must call the `GameStepManager.goBack()` function.
+
+In parameters you maust pass a function `navigate: (path: string) => void` that will be called with the path of the previous step.
+
+For exemple if you use a [React Router Dom](https://reactrouter.com/en/main):
+
+```typescript
+import { useNavigate } from 'react-router-dom';
+
+const navigate = useNavigate();
+
+GameStepManager.goBack(navigate)
+```

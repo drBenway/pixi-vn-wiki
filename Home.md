@@ -52,6 +52,11 @@ This allows the use of systems such as React, Vue, Angular, etc. to create much 
 To switch between interface screens (without interrupting the canvas), you can use popups, modals, or even a full screen interface, or navigate between different routes.
 For example, you can use [React Router](https://reactrouter.com/en/main) to navigate between different routes.
 
+### Enable Interaction with the Interface
+
+By default, all elements of the interface have the `pointer-events: none` style, because the canvas is above the interface.
+So you must set the `pointer-events: auto` style to the elements that you want to interact with.
+
 ### Use Angular
 
 ( Coming soon )
