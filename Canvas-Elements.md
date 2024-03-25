@@ -52,7 +52,7 @@ class AlienTintingTest extends CanvasSprite<IAlienTintingMemory> {
 To add a canvas element to the game window, you can use the `GameWindowManager.addCanvasElement`.
 The `addCanvasElement` method have the following parameters:
 
-* `tag`: Is a tag (or id) for the image. There can only be one item in the canvas with that id, if you add an image with the same tag, the previous image will be removed.
+* `tag`: Is a tag (or id) for the canvas element. There can only be one item in the canvas with that id, if you add an canvas element with the same tag, the previous canvas element will be removed.
 * `element`: The canvas element to add.
 
 ```typescript
