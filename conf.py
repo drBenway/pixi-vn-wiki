@@ -69,3 +69,9 @@ html_sidebars = {
         "sbt-sidebar-nav.html",
     ]
 }
+
+html_theme_options = {
+    "path_to_docs": "docs",
+    "repository_url": "https://github.com/DRincs-Productions/pixi-vn",
+    "repository_branch": "main",
+}
