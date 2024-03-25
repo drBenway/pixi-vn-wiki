@@ -62,13 +62,23 @@ After setting up the interface, you can start creating the visual novel using Pi
 
 ```{toctree}
 :maxdepth: 1
-:caption: Topic Areas
+:caption: Next Steps
 
-tutorials/get-started
-content/index
-sections/index
-components/index
-reference
-contributing/index
-changelog
+Add-JavaScript-framework-for-interface
+Characters
+Dialogue-and-Narration
+Menus-or-Game-Choice
+Label-and-Game-Step
+Game-Storage
+Save-and-Load
+Images
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: Other Features
+
+Canvas-Elements
+Animations-and-Effects
+Stored-Classes
 ```
