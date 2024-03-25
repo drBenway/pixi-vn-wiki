@@ -59,3 +59,16 @@ After setting up the interface, you can start creating the visual novel using Pi
 * [Canvas Elements](Canvas-Elements)
 * [Animations and Effects](Animations-and-Effects)
 * [Stored Classes](Stored-Classes)
+
+```{toctree}
+:maxdepth: 1
+:caption: Topic Areas
+
+tutorials/get-started
+content/index
+sections/index
+components/index
+reference
+contributing/index
+changelog
+```
