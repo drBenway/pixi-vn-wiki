@@ -32,6 +32,7 @@ author = 'DRincs Productions'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "ablog",
     "myst_nb",
     "numpydoc",
     "sphinx.ext.autodoc",
@@ -110,6 +111,11 @@ html_sidebars = {
     "reference/blog/*": [
         "navbar-logo.html",
         "search-field.html",
+        "ablog/postcard.html",
+        "ablog/recentposts.html",
+        "ablog/tagcloud.html",
+        "ablog/categories.html",
+        "ablog/archives.html",
         "sbt-sidebar-nav.html",
     ]
 }
