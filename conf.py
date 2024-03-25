@@ -36,11 +36,6 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx_design",
-    "sphinx_thebe",
-    "sphinxcontrib.bibtex",
-    "sphinxext.opengraph",
-    # For the kitchen sink
-    "sphinx.ext.todo",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
