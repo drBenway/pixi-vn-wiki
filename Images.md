@@ -45,3 +45,69 @@ const image2 = addImage('image2', 'path/to/image2.png')
 
 await showCanvasImages([image1, image2])
 ```
+
+You can use `showCanvasImages` also to show a single image.
+
+```typescript
+import { addImage, showCanvasImages } from '@drincs/pixi-vn'
+
+const image = addImage('image1', 'path/to/image.png')
+
+await showCanvasImages(image)
+// or await image.load()
+```
+
+Another way to make sure multiple images are displayed at the same time is to use the [`PIXI.Assets`](https://pixijs.com/8.x/examples/assets/async) function, for add the textures in cache.
+
+```typescript
+import { addImage, showCanvasImages } from '@drincs/pixi-vn'
+import { Assets } from "pixi.js";
+
+// Load the images and add them to the cache
+await Assets.load('path/to/image1.png')
+await Assets.load('path/to/image2.png')
+
+const image1 = addImage('image1', 'path/to/image1.png')
+const image2 = addImage('image2', 'path/to/image2.png')
+
+// The images are already loaded, so you can show them without waiting
+image1.load()
+image2.load()
+```
+
+## Remove Image
+
+As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](Canvas-Elements#remove-canvas-element) function.
+
+## Show Image with Transition
+
+Functions have been implemented to show images with some "standard" transitions.
+
+( Coming soon )
+
+### Dissolve Transition
+
+With the Dissolve Transition means that the image will be shown with a fade-in effect. If exist a previous image with the same tag, this image will be removed with a fade-out effect.
+
+The `showImageWithDisolveEffect` function has the following parameters:
+
+* `tag`: The tag of the image.
+* `imageUrl`: The URL or path of the image.
+* `speed`: The speed of the transition. The default value is 0.1.
+* `priority`: ( optional ) The priority of the transition.
+
+```typescript
+import { showImageWithDisolveEffect } from '@drincs/pixi-vn'
+
+showImageWithDisolveEffect('image1', 'path/to/image.png', 0.2)
+```
+
+## Show Image with Animation
+
+( Coming soon )
+
+## Olter Transitions and Animations
+
+The functions above do nothing more than add an image to the canvas, display it and start a Ticker. So you can use [`GameWindowManager.addTicker`](GameWindowManager) to add your own transitions and animations.
+
+If you create or need a transition or animation, please create a [issue](https://github.com/DRincs-Productions/pixi-vn/issues) to share/propose it.
