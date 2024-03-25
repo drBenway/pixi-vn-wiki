@@ -16,9 +16,6 @@
 
 
 # -- Project information -----------------------------------------------------
-import os
-from urllib.request import urlopen
-from pathlib import Path
 
 project = "Pixi'VN"
 copyright = '2024, DRincs Productions'
@@ -38,7 +35,6 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
-    "sphinxcontrib.youtube",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_examples",
