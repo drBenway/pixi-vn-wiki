@@ -56,3 +56,5 @@ html_static_path = ['_static']
 master_doc = "Home"
 
 html_title = "Pixi'VN Documentation"
+
+html_sidebars = { "**": ["search-field", "sidebar-nav-bs"] }
