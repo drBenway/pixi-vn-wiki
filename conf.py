@@ -70,15 +70,13 @@ html_sidebars = {
     ]
 }
 
+thebe_config = {
+    "repository_url": "https://github.com/DRincs-Productions/pixi-vn",
+    "repository_branch": "main",
+}
+
 html_theme_options = {
     "path_to_docs": "docs",
     "repository_url": "https://github.com/DRincs-Productions/pixi-vn",
     "repository_branch": "main",
-    "icon_links": [
-        {
-            "name": "GitHub",
-            "url": "https://github.com/DRincs-Productions/pixi-vn",
-            "icon": "fa-brands fa-github",
-        },
-    ],
 }
