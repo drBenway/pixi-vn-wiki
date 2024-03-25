@@ -58,7 +58,7 @@ master_doc = "Home"
 html_title = "Pixi'VN Documentation"
 
 html_sidebars = {
-    "reference/blog/*": [
+    "**": [
         "navbar-logo.html",
         "search-field.html",
         "ablog/postcard.html",
@@ -68,7 +68,6 @@ html_sidebars = {
         "ablog/archives.html",
         "sbt-sidebar-nav.html",
     ]
-    "**": ["sbt-sidebar-nav.html"]
 }
 
 thebe_config = {
