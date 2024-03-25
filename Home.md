@@ -58,5 +58,4 @@ After setting up the interface, you can start creating the visual novel using Pi
 
 * [Canvas Elements](Canvas-Elements)
 * [Animations and Effects](Animations-and-Effects)
-* [Custom Effects](Custom-Effects)
 * [Stored Classes](Stored-Classes)
