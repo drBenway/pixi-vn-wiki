@@ -54,3 +54,5 @@ html_static_path = ['_static']
 
 # Defailt home page
 master_doc = "Home"
+
+html_title = "Pixi'VN Documentation"
