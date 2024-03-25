@@ -57,4 +57,15 @@ master_doc = "Home"
 
 html_title = "Pixi'VN Documentation"
 
-html_sidebars = { "**": ["search-field", "sidebar-nav-bs"] }
+html_sidebars = {
+    "reference/blog/*": [
+        "navbar-logo.html",
+        "search-field.html",
+        "ablog/postcard.html",
+        "ablog/recentposts.html",
+        "ablog/tagcloud.html",
+        "ablog/categories.html",
+        "ablog/archives.html",
+        "sbt-sidebar-nav.html",
+    ]
+}
