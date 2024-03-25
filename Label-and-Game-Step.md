@@ -68,6 +68,16 @@ To execute the next step you must call the `GameStepManager.runNextStep()` funct
 GameStepManager.runNextStep()
 ```
 
+`GameStepManager.runNextStep()` is asynchronous, so, for example, you can use `then` for disabled a next button until the next step is executed.
+
+```typescript
+// disable next button
+GameStepManager.runNextStep()
+    .then(() => {
+        // enable next button
+    })
+```
+
 ## Go back
 
 Every step the system saves the current state of the game. To go back to the previous step you must call the `GameStepManager.goBack()` function.
