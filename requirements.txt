@@ -1,5 +1,3 @@
-ablog>=0.11.6
-myst-nb>=1.0.0
-numpydoc>=1.6.0
+myst-nb 1.0.0
 sphinx-book-theme>=1.1.2
-sphinx-design2>=0.4.0
+sphinx-thebe>=0.3.1
