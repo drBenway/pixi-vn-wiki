@@ -36,10 +36,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx_design",
-    "sphinx_examples",
-    "sphinx_tabs.tabs",
     "sphinx_thebe",
-    "sphinx_togglebutton",
     "sphinxcontrib.bibtex",
     "sphinxext.opengraph",
     # For the kitchen sink
