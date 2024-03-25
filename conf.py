@@ -76,7 +76,13 @@ thebe_config = {
 }
 
 html_theme_options = {
-    "path_to_docs": "docs",
+    "path_to_docs": "/",
     "repository_url": "https://github.com/DRincs-Productions/pixi-vn",
     "repository_branch": "main",
+    "use_edit_page_button": True,
+    "use_source_button": True,
+    "use_issues_button": True,
+    # "use_repository_button": True,
+    "use_download_button": True,
+    "use_sidenotes": True,
 }
