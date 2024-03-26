@@ -62,6 +62,7 @@ After setting up the interface, you can start creating the visual novel using Pi
 
 ```{toctree}
 :hidden:
+:caption: Introduction
 index
 ```
 
