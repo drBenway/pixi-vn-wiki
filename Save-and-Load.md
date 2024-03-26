@@ -26,7 +26,7 @@ export function saveGame() {
 
 ## Load
 
-To load the game progress, you can use the `loadSave` function. This function receives a object with the game data and a function `navigate: (path: string) => void` that will be called with the path of the previous step.
+To load the game progress, you can use the `loadSave` function. This function receives a object with the game data and a function `navigate: (path: string) => void` that will be called with the [URL Path](/Various-Answers.md#what-is-the-url-path) of the previous step.
 
 If you want to load the game progress from a json string, you can use the `loadSaveJsonString` function.
 

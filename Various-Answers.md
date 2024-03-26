@@ -14,3 +14,7 @@ By default, TypeScript does not enable the use of decorators. To enable the use 
     }
 }
 ```
+
+## What is the URL Path?
+
+The URL Path is the part of the URL that comes after the domain. For example, in the URL `https://example.com/path/to/page`, the path is `/path/to/page`.
