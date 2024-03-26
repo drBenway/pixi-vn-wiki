@@ -64,4 +64,13 @@ After setting up the interface, you can start creating the visual novel using Pi
 :hidden:
 Add-JavaScript-framework-for-interface
 Characters
+Dialogue-and-Narration
+Menus-or-Game-Choice
+Label-and-Game-Step
+Game-Storage
+Save-and-Load
+Images
+Canvas-Elements
+Animations-and-Effects
+Stored-Classes
 ```
