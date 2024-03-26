@@ -46,7 +46,7 @@ To call a label you must use the `GameStepManager.callLabel` function and pass t
 
 When you call a label, the steps of that label will be started and if before the call was running another label, the steps of the label called will be executed after the steps of the current label.
 
-For example if currently the game is running the step 5 of the label A and you call the label B, will be executed before the steps of the label B, after the step 6 (if exists) of the label A.
+For example if currently the game is running the step 5 of the label A and you call the label B, when all the steps of the label B are executed, the game will continue with the step 6 of the label A.
 
 ```typescript
 GameStepManager.callLabel(StartLabel)
