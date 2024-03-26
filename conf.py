@@ -49,6 +49,9 @@ myst_enable_extensions = [
     "colon_fence",
 ]
 
+exclude_patterns:
+- "Home.md"
+
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
