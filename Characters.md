@@ -87,7 +87,7 @@ To get the props used when instantiating the class you can use:
 * `defaultSurname`: The character's surname.
 * `defaultAge`: The character's age.
 
-This is a simplified implementation of the `CharacterModelBase` class for better understanding of the properties that are stored in the game storage:
+Here's a simplified implementation of the `CharacterModelBase` class for better understanding of the properties that are stored in the game storage:
 
 ```typescript
 export default class CharacterModelBase extends StoredClassModel implements ICharacterModelBase {
@@ -97,8 +97,11 @@ export default class CharacterModelBase extends StoredClassModel implements ICha
             tag
         )
         this.defaultName = props.name
+        this.icon = props.icon
         // ...
     }
+
+    // name property is stored in the game storage
     private defaultName: string = ""
     get name(): string {
         return this.getStorageProperty<string>("name") || this.defaultName
@@ -106,13 +109,17 @@ export default class CharacterModelBase extends StoredClassModel implements ICha
     set name(value: string) {
         this.updateStorage({ ...this, name: value })
     }
+
+    // icon property is not stored in the game storage
+    icon: string = ""
+
     // ...
 }
 ```
 
 ## Use Characters in the Game
 
-You can use the characters in the game for example to set a dialogue. You can use the character's `id` or the character's instance, but it is recommended to use the instance.
+You can use the characters in the game for example to set a [dialogue](Dialogue-and-Narration#set-a-current-dialogue). You can use the character's `id` or the character's instance, but it is recommended to use the instance.
 
 ```typescript
 export const liam = new CharacterModelBase('liam_id', {
