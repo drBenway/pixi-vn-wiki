@@ -10,9 +10,9 @@ In Pixi'VN, it is possible to create choice menus using the `MenuOptionLabel` cl
 * `label`: The [label](/Label-and-Game-Step#label) which will be called when the player chooses the option.
 * `type`: The way the [label will be called](/Label-and-Game-Step#run-a-label). It is a `LabelRunModeEnum` enum.
 
-## Set a Choice Menus
+## Set a Choice Menu
 
-To set a choice menus, use the `setMenuOptions` and pass an array of `MenuOptionLabel` and a function to handle the choice.
+To set a choice menu, use the `setMenuOptions` and pass an array of `MenuOptionLabel` and a function to handle the choice.
 
 ```typescript
 setDialogue("Choose a fruit:")
@@ -23,21 +23,25 @@ setMenuOptions([
 ])
 ```
 
-## Get the Choice Menus
+## Get the Choice Menu
 
-To get the Choice Menus, use the `getMenuOptions`. The return is an array of `MenuOptionLabel`.
+To get the choice menu, use the `getMenuOptions`. The return is an array of `MenuOptionLabel`.
 
 ```typescript
 const menuOptions: MenuOptionLabel[] = getMenuOptions();
 ```
 
-## Clear the Choice Menus
+## Clear the Choice Menu
 
-To clear the Choice Menus, use the `clearMenuOptions`.
+To clear the choice menu, use the `clearMenuOptions`.
 
 ```typescript
 clearMenuOptions();
 ```
+
+## Get last Choice
+
+[( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/88)
 
 ## Exemple of example of how to create the menu interface
 
