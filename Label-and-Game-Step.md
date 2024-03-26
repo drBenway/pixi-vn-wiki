@@ -37,14 +37,16 @@ export class StartLabel extends Label {
 
 There are two ways to run a label:
 
-* Call a label
-* Jump to a label
+* [Call a label](#call-a-label)
+* [Jump to a label](#jump-to-a-label)
 
 ### Call a label
 
 To call a label you must use the `GameStepManager.callLabel` function and pass the label class.
 
-When you call a label, the steps of that label will be started and the remaining steps will be queued. For example if currently the game is running the step 5 of the label A and you call the label B, will be executed before the steps of the label B, after the step 6 (if exists) of the label A.
+When you call a label, the steps of that label will be started and if before the call was running another label, the steps of the label called will be executed after the steps of the current label.
+
+For example if currently the game is running the step 5 of the label A and you call the label B, will be executed before the steps of the label B, after the step 6 (if exists) of the label A.
 
 ```typescript
 GameStepManager.callLabel(StartLabel)
@@ -55,6 +57,8 @@ GameStepManager.callLabel(StartLabel)
 To jump to a label you must use the `GameStepManager.jumpLabel` function and pass the label class.
 
 When you jump to a label, the steps of the current label will be stopped and the steps of the label passed as parameter will be started.
+
+For example if currently the game is running the step 5 of the label A and you jump to the label B, when all the steps of the label B are executed, the game will end, also if the label B have a step 6.
 
 ```typescript
 GameStepManager.jumpLabel(StartLabel)
