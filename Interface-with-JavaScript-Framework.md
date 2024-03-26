@@ -71,9 +71,11 @@ body {
 ## How navigate/switch between interface screens?
 
 To switch between interface screens (without interrupting the canvas), you can use popups and modals, or navigate between different routes.
-For navigate between, for example, you can use [React Router](https://reactrouter.com/en/main).
+For navigate between different routes, for example, you can use [React Router](https://reactrouter.com/en/main).
 
 ## How to enable interface interaction?
 
-By default, all elements of the interface have the `pointer-events: none` style, because the canvas is above the interface.
-So you must set the `pointer-events: auto` style to the elements that you want to interact with.
+By default, all elements of the interface have the `pointer-events: none` style.
+The reason is that because the canvas is above the interface, therefore if it were enabled it would intercept all clicks, not allowing interactions with the canvas.
+
+So you must set the `pointer-events: auto` style only for the elements that you want to interact with the user.
