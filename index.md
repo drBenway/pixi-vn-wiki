@@ -62,6 +62,11 @@ After setting up the interface, you can start creating the visual novel using Pi
 
 ```{toctree}
 :hidden:
+index
+```
+
+```{toctree}
+:hidden:
 :caption: First steps
 Add-JavaScript-framework-for-interface
 Characters
