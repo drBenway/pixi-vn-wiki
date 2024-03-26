@@ -71,7 +71,7 @@ loadCharacters();
 
 `CharacterModelBase` is a [stored class model](Stored-Classes), which means that it is possible to save and load the character's properties from the [game storage](Game-Storage).
 
-It means that if the character's name is changed during the game, the new character name will be saved in the game store by linking it to his `id`.
+It means that if the character's name is changed during the game, the new character name will be saved in the game storage by linking it to his `id`.
 
 Furthermore, it is important to consider that if the character's `id` is changed from one version to another, the system will **not** move the data linked to the previous `id` to the new `id`.
 
