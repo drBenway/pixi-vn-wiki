@@ -43,7 +43,7 @@ clearMenuOptions();
 
 [( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/88)
 
-## Exemple of example of how to create the menu interface
+## How to create the choice menu interface
 
 For example ( in React using Material-UI ):
 
