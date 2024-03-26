@@ -108,6 +108,6 @@ showImageWithDisolveEffect('image1', 'path/to/image.png', 0.2)
 
 ## Olter Transitions and Animations
 
-The functions above do nothing more than add an image to the canvas, display it and start a Ticker. So you can use [`GameWindowManager.addTicker`](GameWindowManager) to add your own transitions and animations.
+The functions above do nothing more than add an image to the canvas, display it and start a Ticker. So you can use [`GameWindowManager.addTicker`](Animations-and-Effects) to add your own transitions and animations.
 
 If you create or need a transition or animation, please create a [issue](https://github.com/DRincs-Productions/pixi-vn/issues) to share/propose it.
