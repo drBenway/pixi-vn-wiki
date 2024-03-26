@@ -1,6 +1,6 @@
 # Dialogues and Narration
 
-The dialogue/narration is the core of the visual novel. It is where the story is told and the [characters](Characters) interact.
+The dialogue/narration is the core of the visual novel.
 
 In Pixi'VN, is possible to set/get a current dialogue and get the history of dialogues.
 A dialogue can link to a [character](Characters) or [character id](Characters) or a string and will be used to indicate who is speaking.
@@ -63,7 +63,7 @@ clearDialogue();
 
 ## Get the History of Dialogues
 
-To get the history of dialogues for every [steps](Label-and-Game-Step), use the `getDialogueHistory`. The return is a `DialogueModelBase[]`.
+To get the history of dialogues for every [game steps](Label-and-Game-Step), use the `getDialogueHistory`. The return is a `DialogueModelBase[]`.
 
 ```typescript
 const dialogues: DialogueModelBase[] = getDialogueHistory();
