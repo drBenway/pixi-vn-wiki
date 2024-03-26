@@ -9,7 +9,7 @@ To initialize a character, you need to create a new instance of the `CharacterMo
 
 For create a new instance of `CharacterModelBase` you need to pass:
 
-* `id`: A unique identifier for the character. It is used to reference the character in the game (key in the dictionary).
+* `id`: A unique identifier for the character. It is used to reference the character in the game (key in the object).
 * `props`: An object with the character's properties. `props` extends the `ICharacterModelBase` interface. The properties are:
   * `name`: The character's name. ( Required )
   * `surname`: The character's surname. ( Optional )
