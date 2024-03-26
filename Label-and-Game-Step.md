@@ -4,7 +4,7 @@ Visual Novels are usually a succession of screenshots with images and text.
 
 In Pixi'VN, you can manage this succession of screens with the "steps". The steps they are functions that are executed every time the `next()` function is called. In these steps you can add images, dialogues etc...
 
-While labels are containers of steps, they are used to organize the steps in a more readable way.
+The labels are containers of steps, they are used to organize the steps in a more readable way.
 
 Basically the idea of the life cycle of the game is which is started at the beginning a label and is executed the first step of the label. After that, connecting the function `next()` to a event (like a button click), every time the function is called, the next step of the label is executed.
 Some steps could start other labels. The game will end only when all the steps are completed.
@@ -13,9 +13,9 @@ Some steps could start other labels. The game will end only when all the steps a
 
 The label is a container of steps. It is used to organize the steps in a more readable way.
 
-To define the Labels you must define a class that extends the `Label` class and add a decorator `@labelDecorator` to the class.
+To define the Labels you must define a class that extends the `Label` class and must add a decorator `@labelDecorator` to the class.
 
-`@labelDecorator` is a decorator that save the label in memory. For parameters you can pass the label name (the name mast be unique), if you don't pass the name, the label will be saved with the class name. ( [How enable the decorator in TypeScript?](/Various-Answers#how-enable-the-decorator-in-typescript) )
+`@labelDecorator` is a decorator that save the label in memory. Have a optional parameter that is the id of the label (must be unique). If you don't pass the name, the label will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers#how-enable-the-decorators-in-typescript) )
 
 Also to add steps to the label you must override the `steps` property and return an array of functions.
 

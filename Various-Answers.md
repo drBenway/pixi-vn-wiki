@@ -1,10 +1,10 @@
 # Various Answers
 
-## How enable the decorator in TypeScript?
+## How enable the decorators in TypeScript?
 
-In Pixi'VN, in many basic functions, it is necessary to use decorator.
+In Pixi'VN, in many basic functions, it is necessary to use decorators.
 
-By default, TypeScript does not enable the use of decorator. To enable the use of decorator in TypeScript, you must add the following configuration to the `tsconfig.json` file:
+By default, TypeScript does not enable the use of decorators. To enable the use of decorators in TypeScript, you must add the following configuration to the `tsconfig.json` file:
 
 ```json
 {
