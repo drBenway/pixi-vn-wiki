@@ -82,6 +82,10 @@ GameStepManager.runNextStep()
     })
 ```
 
+## Close current label
+
+( [Coming soon](https://github.com/DRincs-Productions/pixi-vn/issues/89) )
+
 ## Go back
 
 Every step the system saves the current state of the game. To go back to the previous step you must call the `GameStepManager.goBack()` function.
