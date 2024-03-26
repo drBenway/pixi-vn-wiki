@@ -1,6 +1,6 @@
 # Canvas Elements
 
-Pixi'VN provides a set of elements to create a visual novel interface. These elements are based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine with additional features to perform save and load operations.
+Pixi'VN provides a set of canvas elements. These elements are based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine with additional features to perform save and load operations.
 
 ## Base Elements
 
