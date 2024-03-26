@@ -1,22 +1,16 @@
-# Add JavaScript framework for interface
+# Interface with JavaScript Framework
 
 In addition to managing the Pixi.js "Canvas", Pixi'VN offers the possibility of adding an HTML Element with the same dimensions as the "Canvas" to add interactions with the user.
 
 This allows the use of systems such as React, Vue, Angular, etc. to create much more complex interfaces with excellent performance.
 
-To switch between interface screens (without interrupting the canvas), you can use popups, modals, or even a full screen interface, or navigate between different routes.
-For example, you can use [React Router](https://reactrouter.com/en/main) to navigate between different routes.
+## Add JavaScript framework for interface
 
-## Enable Interaction with the Interface
-
-By default, all elements of the interface have the `pointer-events: none` style, because the canvas is above the interface.
-So you must set the `pointer-events: auto` style to the elements that you want to interact with.
-
-## Use Angular
+### Use Angular
 
 ( Coming soon )
 
-## Use React
+### Use React
 
 ```typescript
 // main.tsx
@@ -70,6 +64,16 @@ body {
 }
 ```
 
-## Use Vue
+### Use Vue
 
 ( Coming soon )
+
+## How navigate/switch between interface screens?
+
+To switch between interface screens (without interrupting the canvas), you can use popups and modals, or navigate between different routes.
+For navigate between, for example, you can use [React Router](https://reactrouter.com/en/main).
+
+## How to enable interface interaction?
+
+By default, all elements of the interface have the `pointer-events: none` style, because the canvas is above the interface.
+So you must set the `pointer-events: auto` style to the elements that you want to interact with.

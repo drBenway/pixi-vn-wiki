@@ -43,7 +43,7 @@ await GameWindowManager.initialize(body, 1920, 1080, {
 
 After setting up the interface, you can start creating the visual novel using Pixi'VN functions.
 
-* [Add JavaScript framework for interface](Add-JavaScript-framework-for-interface)
+* [Add JavaScript framework for interface](Interface-with-JavaScript-Framework)
 * [Characters](Characters)
 * [Dialogue and Narration](Dialogue-and-Narration)
 * [Menus or Game Choice](Menus-or-Game-Choice)
