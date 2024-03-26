@@ -10,7 +10,7 @@ In Pixi'VN, it is possible to create choice menus using the `MenuOptionLabel` cl
 * `label`: The [label](/Label-and-Game-Step#label) which will be called when the player chooses the option.
 * `type`: The way the [label will be called](/Label-and-Game-Step#run-a-label). It is a `LabelRunModeEnum` enum.
 
-## Set a Choice Menu
+## Set a choice menu
 
 To set a choice menu, use the `setMenuOptions` and pass an array of `MenuOptionLabel`.
 
@@ -23,7 +23,7 @@ setMenuOptions([
 ])
 ```
 
-## Get the Choice Menu
+## Get the choice menu
 
 To get the choice menu, use the `getMenuOptions`. The return is an array of `MenuOptionLabel`.
 
@@ -31,7 +31,7 @@ To get the choice menu, use the `getMenuOptions`. The return is an array of `Men
 const menuOptions: MenuOptionLabel[] = getMenuOptions();
 ```
 
-## Clear the Choice Menu
+## Clear the choice menu
 
 To clear the choice menu, use the `clearMenuOptions`.
 
@@ -39,7 +39,7 @@ To clear the choice menu, use the `clearMenuOptions`.
 clearMenuOptions();
 ```
 
-## Get last Choice
+## Get last choice
 
 [( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/88)
 
