@@ -12,7 +12,7 @@ In Pixi'VN, it is possible to create choice menus using the `MenuOptionLabel` cl
 
 ## Set a Choice Menu
 
-To set a choice menu, use the `setMenuOptions` and pass an array of `MenuOptionLabel` and a function to handle the choice.
+To set a choice menu, use the `setMenuOptions` and pass an array of `MenuOptionLabel`.
 
 ```typescript
 setDialogue("Choose a fruit:")
