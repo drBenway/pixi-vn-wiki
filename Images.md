@@ -83,7 +83,7 @@ As for the Canvas Elements, you can remove an image from the canvas using the [`
 
 Functions have been implemented to show images with some "standard" transitions.
 
-( Coming soon )
+[( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
 ### Dissolve Transition
 
@@ -101,10 +101,6 @@ import { showImageWithDisolveEffect } from '@drincs/pixi-vn'
 
 showImageWithDisolveEffect('image1', 'path/to/image.png', 0.2)
 ```
-
-## Show Image with Animation
-
-( Coming soon )
 
 ## Olter Transitions and Animations
 
