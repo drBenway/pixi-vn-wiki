@@ -1,18 +1,18 @@
-# Menus or Game Choice
+# Choice Menus
 
-In the visual novel, usually, there are menus or game choices that allow the player to make decisions that will affect the story.
+In the visual novel, usually, there are choice menus that allow the player to make decisions that will affect the story.
 
-In Pixi'VN, it is possible to create menus or game choices using the `MenuOptionLabel` class and a function to handle the choice.
+In Pixi'VN, it is possible to create choice menus using the `MenuOptionLabel` class and a function to handle the choice.
 
 `MenuOptionLabel` is a class which has as parameters:
 
-* `text`: The text that will be displayed in the menu or game choice.
+* `text`: The text that will be displayed in the choice menus.
 * `label`: The [label](/Label-and-Game-Step#label) which will be called when the player chooses the option.
 * `type`: The way the [label will be called](/Label-and-Game-Step#run-a-label). It is a `LabelRunModeEnum` enum.
 
-## Set a Menu or Game Choice
+## Set a Choice Menus
 
-To set a menu or game choice, use the `setMenuOptions` and pass an array of `MenuOptionLabel` and a function to handle the choice.
+To set a choice menus, use the `setMenuOptions` and pass an array of `MenuOptionLabel` and a function to handle the choice.
 
 ```typescript
 setDialogue("Choose a fruit:")
@@ -23,17 +23,17 @@ setMenuOptions([
 ])
 ```
 
-## Get the Menu or Game Choice
+## Get the Choice Menus
 
-To get the menu or game choice, use the `getMenuOptions`. The return is an array of `MenuOptionLabel`.
+To get the Choice Menus, use the `getMenuOptions`. The return is an array of `MenuOptionLabel`.
 
 ```typescript
 const menuOptions: MenuOptionLabel[] = getMenuOptions();
 ```
 
-## Clear the Menu or Game Choice
+## Clear the Choice Menus
 
-To clear the menu or game choice, use the `clearMenuOptions`.
+To clear the Choice Menus, use the `clearMenuOptions`.
 
 ```typescript
 clearMenuOptions();
