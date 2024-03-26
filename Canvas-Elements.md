@@ -103,7 +103,7 @@ GameWindowManager.removeCanvasElements()
 
 ## Add a listener for a given event
 
-( it is suggested to try to add events to the [interface](Add-JavaScript-framework-for-interface) and try as little as possible to add it to the canvas elements. )
+It is suggested to try to add events to the [interface](Add-JavaScript-framework-for-interface) and try as little as possible to add it to the canvas elements.
 
 In Pixi'VN compared to Pixi you can't set a [listener with the `on` method](https://pixijs.com/8.x/examples/events/click), because it is not possible to save the listeners in the memory for the save and load operations.
 
