@@ -115,7 +115,7 @@ The class that is passed must have the following characteristics:
 
 * extends the `CanvasEvent` class
 * override the `fn` method. This method will be executed when the event is triggered.
-* have the decorator `@eventDecorator` for register the event, for parameters you can pass the event name (the name mast be unique), if you don't pass the name the event will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers.md#how-enable-the-decorators-in-typescript) )
+* have the decorator `@eventDecorator`. `@eventDecorator` is a decorator that save the event in memory. It have a optional parameter that is the id of the event (must be unique). If you don't pass the id, the event will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers.md#how-enable-the-decorators-in-typescript) )
 
 ```typescript
 @eventDecorator()
