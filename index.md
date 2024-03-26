@@ -70,7 +70,7 @@ index
 Interface-with-JavaScript-Framework
 Characters
 Dialogues-and-Narration
-Menus-or-Game-Choice
+Choice-Menus
 Label-and-Game-Step
 Game-Storage
 Save-and-Load
