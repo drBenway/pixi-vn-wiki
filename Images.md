@@ -25,7 +25,7 @@ After adding the image, you can load the texture and show it on the canvas using
 
 This method is asynchronous, so:
 
-* You can use the `await` keyword to wait for the image to load. So if you show the image in a step, you can disable the [next step](/Label-and-Game-Step#next-step) until the image is loaded.
+* You can use the `await` keyword to wait for the image to load. So if you show the image in a step, you can disable the [next step](/Label-and-Game-Step.md#next-step) until the image is loaded.
 * You can not use the `await` keyword and show the image in the next step. In this case, the image will be loaded in the background and will be shown when it is ready.
 
 ```typescript
@@ -77,7 +77,7 @@ image2.load()
 
 ## Remove Image
 
-As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/Canvas-Elements#remove-canvas-element) function.
+As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/Canvas-Elements.md#remove-canvas-element) function.
 
 ## Show Image with Transition
 

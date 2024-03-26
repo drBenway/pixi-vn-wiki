@@ -12,7 +12,7 @@ Currently the base canvas elements are:
 
 ## Custom Elements
 
-You can create custom elements by extending the base elements. It is necessary use the decorator `canvasElementDecorator` for register the custom element, for parameters you can pass the canvas element name (the name mast be unique), if you don't pass the name the canvas element will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers#how-enable-the-decorators-in-typescript) )
+You can create custom elements by extending the base elements. It is necessary use the decorator `canvasElementDecorator` for register the custom element, for parameters you can pass the canvas element name (the name mast be unique), if you don't pass the name the canvas element will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers.md#how-enable-the-decorators-in-typescript) )
 
 And is necessary to override the `memory` property to store the custom element properties.
 On `get memory()` if very important to return the `className` property, this property must equal to the decorator parameter or the class name if the decorator parameter is not passed.
@@ -113,7 +113,7 @@ The class that is passed must have the following characteristics:
 
 * extends the `CanvasEvent` class
 * override the `fn` method. This method will be executed when the event is triggered.
-* have the decorator `@eventDecorator` for register the event, for parameters you can pass the event name (the name mast be unique), if you don't pass the name the event will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers#how-enable-the-decorators-in-typescript) )
+* have the decorator `@eventDecorator` for register the event, for parameters you can pass the event name (the name mast be unique), if you don't pass the name the event will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers.md#how-enable-the-decorators-in-typescript) )
 
 ```typescript
 @eventDecorator()

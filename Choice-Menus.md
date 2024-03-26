@@ -7,8 +7,8 @@ In Pixi'VN, it is possible to create choice menus using the `MenuOptionLabel` cl
 `MenuOptionLabel` is a class which has as parameters:
 
 * `text`: The text that will be displayed in the choice menus.
-* `label`: The [label](/Label-and-Game-Step#label) which will be called when the player chooses the option.
-* `type`: The way the [label will be called](/Label-and-Game-Step#run-a-label). It is a `LabelRunModeEnum` enum.
+* `label`: The [label](/Label-and-Game-Step.md#label) which will be called when the player chooses the option.
+* `type`: The way the [label will be called](/Label-and-Game-Step.md#run-a-label). It is a `LabelRunModeEnum` enum.
 
 ## Set a choice menu
 
