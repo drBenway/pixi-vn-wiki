@@ -15,7 +15,7 @@ The label is a container of steps. It is used to organize the steps in a more re
 
 To define the Labels you must define a class that extends the `Label` class and add a decorator `@labelDecorator` to the class.
 
-`@labelDecorator` is a decorator that save the label in memory. For parameters you can pass the label name (the name mast be unique), if you don't pass the name, the label will be saved with the class name. ( [How enable the decorator in TypeScript?](Various-Answers#how-enable-the-decorator-in-typescript) )
+`@labelDecorator` is a decorator that save the label in memory. For parameters you can pass the label name (the name mast be unique), if you don't pass the name, the label will be saved with the class name. ( [How enable the decorator in TypeScript?](/Various-Answers#how-enable-the-decorator-in-typescript) )
 
 Also to add steps to the label you must override the `steps` property and return an array of functions.
 
