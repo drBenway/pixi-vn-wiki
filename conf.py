@@ -49,8 +49,9 @@ myst_enable_extensions = [
     "colon_fence",
 ]
 
-exclude_patterns:
-- "Home.md"
+exclude_patterns: [
+    "Home.md",
+]
 
 # -- Options for HTML output -------------------------------------------------
 
