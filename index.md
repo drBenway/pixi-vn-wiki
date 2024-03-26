@@ -41,7 +41,7 @@ await GameWindowManager.initialize(body, 1920, 1080, {
 })
 ```
 
-## Next Steps
+## First steps
 
 After setting up the interface, you can start creating the visual novel using Pixi'VN functions.
 
@@ -54,7 +54,7 @@ After setting up the interface, you can start creating the visual novel using Pi
 * [Save and Load](Save-and-Load)
 * [Images](Images)
 
-## Olther Features
+## Advanced topics
 
 * [Canvas Elements](Canvas-Elements)
 * [Animations and Effects](Animations-and-Effects)
@@ -62,6 +62,7 @@ After setting up the interface, you can start creating the visual novel using Pi
 
 ```{toctree}
 :hidden:
+:caption: First steps
 Add-JavaScript-framework-for-interface
 Characters
 Dialogue-and-Narration
@@ -70,6 +71,11 @@ Label-and-Game-Step
 Game-Storage
 Save-and-Load
 Images
+```
+
+```{toctree}
+:hidden:
+:caption: Advanced topics
 Canvas-Elements
 Animations-and-Effects
 Stored-Classes
