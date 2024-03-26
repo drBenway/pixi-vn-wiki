@@ -14,7 +14,7 @@ Currently the base canvas elements are:
 
 You can create custom elements by extending the base elements. It is necessary use the decorator `@canvasElementDecorator`.
 
-`@canvasElementDecorator` is a decorator that save the canvas element in memory. It have a optional parameter that is the id of the canvas element (must be unique). If you don't pass the name, the canvas element will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers.md#how-enable-the-decorators-in-typescript) )
+`@canvasElementDecorator` is a decorator that save the canvas element in memory. It have a optional parameter that is the id of the canvas element (must be unique). If you don't pass the id, the canvas element will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers.md#how-enable-the-decorators-in-typescript) )
 
 And is necessary to override the `memory` property to store the custom element properties.
 On `get memory()` if very important to return the `className` property, this property must equal to the decorator parameter or the class name if the decorator parameter is not passed.
