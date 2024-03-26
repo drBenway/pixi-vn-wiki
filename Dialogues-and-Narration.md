@@ -1,4 +1,4 @@
-# Dialogue and Narration
+# Dialogues and Narration
 
 The dialogue/narration is the core of the visual novel. It is where the story is told and the [characters](Characters) interact.
 
