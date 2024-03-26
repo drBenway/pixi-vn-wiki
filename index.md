@@ -6,7 +6,7 @@ Pixi'VN has functions to manage story steps, saving and loading, variable storag
 
 Pixi'VN is based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine.
 
-## Use Pivi'VN Template
+## Use Pivi'VN Templates
 
 ( Coming soon )
 
