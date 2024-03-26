@@ -1,8 +1,8 @@
 # Game storage
 
-The game storage is a feature that allows you to save and load the game state. This feature is essential for visual novels, as it allows the player to save their progress and continue the game later.
+The game storage is a place where you can save variables that you want to keep between game sessions.
 
-It is essential to understand that if the variables are not saved in the game memory, when loading a save and going back, they will not be handled.
+It is essential to understand that if the variables are not saved in the game memory, when loading a save and [going back](/Label-and-Game-Step.md#go-back), they will not be handled.
 
 Furthermore, only primary type variables can be saved in the game storage. The primary types are `string`, `number`, `boolean`, `object`, `array`...  and not `function`, `class`...
 
