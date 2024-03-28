@@ -25,7 +25,7 @@ In Pixi'VN, it is possible to force the completion of a Transition/Effect/Animat
 
 Transition/Effect/Animation usually increment a variable until it reaches a target, after which it is closed.
 
-In this case you can simply set which variable equal to the objective to be achieved in the next step.
+In this case you can simply set the variable equal to the objective to be achieved in the next step.
 
 For example:
 
@@ -45,3 +45,5 @@ export class ShowImageTest extends Label {
     }
 }
 ```
+
+Also, you can [unlink the Transition/Effect/Animation](Tickers) from the canvas element in the next step.
