@@ -107,3 +107,7 @@ showImageWithDisolveEffect('image1', 'path/to/image.png', 0.2)
 The functions above do nothing more than add an image to the canvas, display it and start a Ticker. So you can use [`GameWindowManager.addTicker`](Animations-and-Effects) to add your own transitions and animations.
 
 If you create or need a transition or animation, please create a [issue](https://github.com/DRincs-Productions/pixi-vn/issues) to share/propose it.
+
+### How to force completion of an Transition in the next step?
+
+[Read this](/Various-Answers.md#how-to-force-completion-of-an-transition-effect-animation-in-the-next-step)

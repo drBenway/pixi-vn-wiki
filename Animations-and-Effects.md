@@ -87,4 +87,6 @@ GameWindowManager.addCanvasElement("alien", alien);
 GameWindowManager.addTicker("alien", new TickerFade({ speed: 0.2 }));
 ```
 
-```typescript
+### How to force completion of an Transition/Effect/Animation in the next step?
+
+[Read this](/Various-Answers.md#how-to-force-completion-of-an-transition-effect-animation-in-the-next-step)

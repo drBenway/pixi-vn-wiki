@@ -22,3 +22,26 @@ The URL Path is the part of the URL that comes after the domain. For example, in
 ## How to force completion of an Transition/Effect/Animation in the next step?
 
 In Pixi'VN, it is possible to force the completion of a Transition/Effect/Animation in the next step in many cases it can be useful.
+
+Transition/Effect/Animation usually increment a variable until it reaches a target, after which it is closed.
+
+In this case you can simply set which variable equal to the objective to be achieved in the next step.
+
+For example:
+
+```typescript
+@labelDecorator()
+export class ShowImageTest extends Label {
+    override get steps(): StepLabelType[] {
+        return [
+            () => {
+                showImageWithDisolveEffect("alien", 'https://pixijs.com/assets/eggHead.png', 0.01)
+            },
+            () => {
+                let alien = GameWindowManager.getCanvasElement<CanvasImage>("alien")
+                if (alien) alien.alpha = 1
+            },
+        ]
+    }
+}
+```
