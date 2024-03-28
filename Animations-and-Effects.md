@@ -2,7 +2,7 @@
 
 Pixi'VN provides a set of functions to create animations and effects in your visual novel.
 
-Animations and Effects are based on [Ticker](Tickers). So fr add, remove... animations and effects read the [Tickers documentation](Tickers).
+Animations and Effects are based on [Ticker](Tickers). So for add, remove... animations and effects read the [Tickers documentation](Tickers).
 
 ## Animations
 
