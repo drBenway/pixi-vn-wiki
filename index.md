@@ -86,3 +86,10 @@ Animations-and-Effects
 Tickers
 Stored-Classes
 ```
+
+```{toctree}
+:hidden:
+:caption: Other
+Various-Answers
+RenPy-vs-PixiVN
+```
