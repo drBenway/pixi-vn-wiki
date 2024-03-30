@@ -19,6 +19,13 @@ By default, TypeScript does not enable the use of decorators. To enable the use 
 
 The URL Path is the part of the URL that comes after the domain. For example, in the URL `https://example.com/path/to/page`, the path is `/path/to/page`.
 
+A routering system can be used to manage navigation between URL Paths. For example you can use:
+
+* [React Router](https://reactrouter.com/)
+* [Vue Router](https://router.vuejs.org/)
+* [Angular Router](https://angular.io/guide/router)
+* [TanStack Router](https://tanstack.com/router/latest)
+
 ## How to force completion of an Transition/Effect/Animation in the next step?
 
 In Pixi'VN, it is possible to force the completion of a Transition/Effect/Animation in the next step in many cases it can be useful.
