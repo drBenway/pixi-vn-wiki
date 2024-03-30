@@ -1,3 +1,90 @@
 # Tickers
 
 The [PixiJS Ticker](https://pixijs.com/8.x/examples/basic/tinting) is a class that manages the update loop. It is used to animate the canvas elements.
+
+In Pixi'VN, you can use the Ticker, but through functions of the `GameWindowManager` class.
+The reason is that this way I can keep track of the Tickers and delete those that are no longer used.
+
+## Create a Ticker
+
+In Pixi.js, you can add a Ticker by passing a lambda as a parameter that will be executed on each frame.
+
+In Pixi'VN, you must create a class tha extends `TickerBase`, add a decorator `@tickerDecorator` to the class and override the `fn` method.
+
+`@tickerDecorator` is a decorator that save the ticker in memory. It have a optional parameter that is the id of the ticker (must be unique). If you don't pass the id, the ticker will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers.md#how-enable-the-decorators-in-typescript) )
+
+```typescript
+@tickerDecorator() // or @tickerDecorator('TickerRotate')
+export default class TickerRotate extends TickerBase<{ speed?: number, clockwise?: boolean }> {
+    override fn(
+        t: Ticker,
+        args: {
+            speed?: number,
+            clockwise?: boolean,
+        },
+        tags: string[]
+    ): void {
+        let speed = args.speed === undefined ? 0.1 : args.speed
+        let clockwise = args.clockwise === undefined ? true : args.clockwise
+        tags.forEach((tag) => {
+            let element = GameWindowManager.getCanvasElement(tag)
+            if (element && element instanceof Container) {
+                if (clockwise)
+                    element.rotation += speed * t.deltaTime
+                else
+                    element.rotation -= speed * t.deltaTime
+            }
+        })
+    }
+}
+```
+
+## Run a Ticker and associate with a Canvas Element
+
+To add a Ticker you must use the `GameWindowManager.addTicker` function and pass the ticker class.
+
+```typescript
+const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
+const alien = CanvasSprite.from(texture);
+GameWindowManager.addCanvasElement("alien", alien);
+
+GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }))
+```
+
+If a ticket needs to update multiple canvas elements, you can pass an array of tags to the `addTicker` function.
+
+```typescript
+GameWindowManager.addTicker(["alien", "alien2"], new TickerRotate({ speed: my_speed }))
+```
+
+## Remove association between a Ticker and a Canvas Element
+
+For unlink a Ticker from a Canvas Element you must use the `GameWindowManager.removeAssociationBetweenTickerCanvasElement` function and pass the tag of the canvas element and a ticker class.
+
+If the ticker not have any more canvas elements associated, it will be deleted.
+
+```typescript
+const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
+const alien = CanvasSprite.from(texture);
+GameWindowManager.addCanvasElement("alien", alien);
+
+GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }))
+
+// ...
+
+GameWindowManager.removeAssociationBetweenTickerCanvasElement("alien", TickerRotate)
+```
+
+If you remove the Canvas Element associated with the Ticker, if the Ticker not have any more canvas elements associated, it will be deleted.
+
+```typescript
+const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
+const alien = CanvasSprite.from(texture);
+GameWindowManager.addCanvasElement("alien", alien);
+
+GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }))
+
+// ...
+
+GameWindowManager.removeCanvasElement("alien")
+```
