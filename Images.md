@@ -102,7 +102,7 @@ import { showImageWithDisolveEffect } from '@drincs/pixi-vn'
 showImageWithDisolveEffect('image1', 'path/to/image.png', 0.2)
 ```
 
-## Olter Transitions and Animations
+## Other Transitions and Animations
 
 The functions above do nothing more than add an image to the canvas, display it and start a Ticker. So you can use [`GameWindowManager.addTicker`](Animations-and-Effects) to add your own transitions and animations.
 
