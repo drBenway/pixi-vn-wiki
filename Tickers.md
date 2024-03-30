@@ -95,9 +95,9 @@ GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }))
 GameWindowManager.removeCanvasElement("alien")
 ```
 
-## Run a Ticker with steps
+## Run a succession of Tickers
 
-You can run a Ticker with steps.
+You can run a succession of Tickers.
 This means you can start a list of tokens, so that when one ends the next one starts.
 
 For this you must use the `GameStepManager.addTickersSteps` function and pass the tag of the canvas element and an array of tickers.
