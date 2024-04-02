@@ -26,9 +26,9 @@ export function saveGame() {
 
 ## Load
 
-To load the game progress, you can use the `loadSave` function. This function receives a object with the game data and a function `navigate: (path: string) => void` that will be called with the [URL Path](/Various-Answers.md#what-is-the-url-path) of the saved step, so you can use it to navigate to the saved [Interface](/Interface-with-JavaScript-Framework.md#how-navigateswitch-between-interface-screens).
+To load the game progress, you can use the `loadSaveData` function. This function receives a object with the game data and a function `navigate: (path: string) => void` that will be called with the [URL Path](/Various-Answers.md#what-is-the-url-path) of the saved step, so you can use it to navigate to the saved [Interface](/Interface-with-JavaScript-Framework.md#how-navigateswitch-between-interface-screens).
 
-If you want to load the game progress from a json string, you can use the `loadSaveJsonString` function.
+If you want to load the game progress from a json string, you can use the `loadSaveJson` function.
 
 A exemple of how to load the game progress:
 
@@ -45,7 +45,7 @@ export function loadGameSave(navigate: (path: string) => void, afterLoad?: () =>
             reader.onload = (e) => {
                 const jsonString = e.target?.result as string;
                 // load the save data from the JSON string
-                loadSaveJsonString(jsonString, navigate);
+                loadSaveJson(jsonString, navigate);
                 afterLoad && afterLoad();
             };
             reader.readAsText(file);
