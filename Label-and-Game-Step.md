@@ -84,7 +84,20 @@ GameStepManager.runNextStep()
 
 ## Close current label
 
-( [Coming soon](https://github.com/DRincs-Productions/pixi-vn/issues/89) )
+To close the current label you must call the `GameStepManager.closeCurrentLabel()` function.
+
+```typescript
+GameStepManager.closeCurrentLabel()
+```
+
+## Clase all labels
+
+To close all labels you must call the `GameStepManager.closeAllLabels()` function.
+If you call this function and after that you don't call any label, the game will end.
+
+```typescript
+GameStepManager.closeAllLabels()
+```
 
 ## Go back
 
