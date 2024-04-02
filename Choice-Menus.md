@@ -33,10 +33,10 @@ const menuOptions: ChoiceMenuOptionLabel[] = getMenuOptions();
 
 ## Clear the choice menu
 
-To clear the choice menu, use the `clearMenuOptions`.
+To clear the choice menu, use the `clearChoiceMenuOptions`.
 
 ```typescript
-clearMenuOptions();
+clearChoiceMenuOptions();
 ```
 
 ## Get last choice
@@ -68,7 +68,7 @@ return (
                     <DialogueMenuButton
                         onClick={() => {
                             if (item.type == LabelRunModeEnum.OpenByCall) {
-                                clearMenuOptions()
+                                clearChoiceMenuOptions()
                                 GameStepManager.callLabel(item.label)
                                     .then(() => {
                                         // after the label is called
