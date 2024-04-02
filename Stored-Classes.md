@@ -38,7 +38,7 @@ export default class MyClass extends StoredClassModel {
         return this.getStorageProperty<string>("test") || ""
     }
     set test(value: string) {
-        this.updateStorageProperty({ ...this, test: value })
+        this.updateStorageProperty<string>("test", value)
     }
 }
 ```
