@@ -54,3 +54,22 @@ export function loadGameSave(navigate: (path: string) => void, afterLoad?: () =>
     input.click();
 }
 ```
+
+## Convart JSON to Save Data
+
+If you want to convert a JSON string to a save data object, you can use the `jsonToSaveData` function.
+
+A exemple of how to convert a JSON string to a save data object:
+
+```typescript
+const saveData = jsonToSaveData(jsonString);
+```
+
+## Get Pixi'VN version of the save data
+
+Pixi'VN add your own version in the save data object. You can access it by the `version` property.
+
+```typescript
+const saveData = jsonToSaveData(jsonString);
+console.log(saveData.version);
+```
