@@ -25,10 +25,10 @@ setChoiceMenuOptions([
 
 ## Get the choice menu
 
-To get the choice menu, use the `getMenuOptions`. The return is an array of `ChoiceMenuOptionLabel`.
+To get the choice menu, use the `getChoiceMenuOptions`. The return is an array of `ChoiceMenuOptionLabel`.
 
 ```typescript
-const menuOptions: ChoiceMenuOptionLabel[] = getMenuOptions();
+const menuOptions: ChoiceMenuOptionLabel[] = getChoiceMenuOptions();
 ```
 
 ## Clear the choice menu
