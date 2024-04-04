@@ -63,10 +63,10 @@ clearDialogue();
 
 ## Get the History of Dialogues
 
-To get the history of dialogues for every [game steps](Label-and-Game-Step), use the `getDialogueHistory`. The return is a `DialogueModelBase[]`.
+To get the history of dialogues for every [game steps](Label-and-Game-Step), use the `getDialogueHistory`. The return is a `IDialogueHistory<T>[]`.
 
 ```typescript
-const dialogues: DialogueModelBase[] = getDialogueHistory();
+const dialogues: IDialogueHistory<DialogueModelBase>[] = getDialogueHistory<DialogueModelBase>();
 ```
 
 ## Extend DialogueModelBase
