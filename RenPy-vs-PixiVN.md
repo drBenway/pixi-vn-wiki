@@ -1,19 +1,21 @@
 # Ren'Py vs Pixi'VN
 
+Making a comparison between Ren'Py and Pixi'VN is necessary because Ren'Py is currently the most popular engine for creating visual novels. While Pixi'VN was born because the current systems for creating a visual novel are based on dated systems and have many shortcomings.
+
 ## Ren'Py
 
 Ren'Py is a visual novel engine – used by thousands of creators from around the world – that helps you use words, images, and sounds to tell interactive stories that run on computers and mobile devices. These can be both visual novels and life simulation games. The easy to learn script language allows anyone to efficiently write large visual novels, while its Python scripting is enough for complex simulation games.
 
 * Programming language: `Ren'Py language`, a programming language that allows you to develop visual novels without much knowledge and very quickly. It is based on Python.
-* Canvas: [Pygame_sdl2](https://github.com/renpy/pygame_sdl2) is a reimplementation of the Pygame API using SDL2 and related libraries. While in the past it was meant to support multiple applications, it only saw adoption as technology underlying Ren'Py, and is currently being supported for that purpose.
-* How does it work: Ren'Py is a complete framework that takes care of creating a project, executing it, creating files to be distributed on multiple devices etc...
+* Canvas: `[Pygame_sdl2](https://github.com/renpy/pygame_sdl2)` is a reimplementation of the Pygame API using SDL2 and related libraries. While in the past it was meant to support multiple applications, it only saw adoption as technology underlying Ren'Py, and is currently being supported for that purpose.
+* How does it work: Ren'Py is a complete visual novel engine/framework that takes care of creating a project, executing it, creating files to be distributed on multiple devices etc...
 
 ## Performance
 
 I imagine the performance of the Ren'Py and Pixi'VN libraries to be almost the same,
 but the performance of the Canvas used by the two libraries is very significant.
 
-* [Pygame_sdl2](https://github.com/renpy/pygame_sdl2): This canvas is absolutely underperforming. This can be tested by inserting more moving graphic elements into Renpy.
+* `[Pygame_sdl2](https://github.com/renpy/pygame_sdl2)`: This canvas is absolutely underperforming. This can be tested by inserting more moving graphic elements into Renpy.
 * PixiJS: It is based on more modern systems and has great performance. This can be tested directly from an example made by PixiJS: [Exemple](https://pixijs.com/examples/basic/cache-as-bitmap).
 
 ## Programming language
@@ -37,10 +39,32 @@ Pixi'VN uses JavaScript/TypeScript, which is a very powerful and popular languag
 
 In Ren'Py, you can create a project and then export it to multiple devices and this process is really simple.
 
-In Pixi'VN, Creating a site with an interface that adapts to multiple devices is very simple, but creating a mobile or desktop application is not that simple.
-you can create a project and then export it to multiple devices, but this process is more complex than Ren'Py.
+In Pixi'VN, creating a site with an interface that adapts to multiple devices is very simple, but creating a mobile or desktop application is more complex than Ren'Py.
 To do this you will need to use libraries or frameworks for desktop and mobile applications. For example, you can use `Electron`, `Electron Forge`, `Cordova`, `Ionic`, etc...
 
 ## Development possibilities
 
+Ren'Py is a framework designed only for creating visual novels. Adding features that go outside of visual novel development is limiting and not recommended by the Ren'Py team. It does not have management for libraries
+
+Pixi'VN is not a framework, but an npm library that allows you to create visual novels. So if you want you can use this library in a project that is not natively a visual novel. It has management for libraries with [npm](https://www.npmjs.com/).
+
+## Project size
+
+The entire interface of Renpy is based on "physical images", so the default size of a project is large.
+
+In a Pixi'VN project, you can choose whether and which graphics component library to use or use a canvas with a "physical images". Being a library it does not determine the size of the project, but if you use vite, or webpack, or other tools, ad agraphics component library for the interface, default size of a project is very small.
+
+## Longevity and ease of internal development
+
+Ren'py born in 2004 and is still used today. It is a very stable and mature project.
+Ren'Py in addition to including the development of its own library for visual novels also includes the development of `Ren'Py language` and `Pygame_sdl2`.
+This means that keeping Ren'Py updated with the latest technologies requires a lot of development.
+
 ## Conclusion
+
+Finally my personal conclusion is Pixi'VN is not for you, while RenìPy if one of these points describes you:
+
+* You have never programmed and would try to stay away from programming as much as possible. (In the future, a library could be created that allows you to create a visual novel with Pixi'Vn using an interface without having to program)
+* Besides showing text and images with transitions or other effects, you don't want to implement anything else in the future either (e.g. minigames). Ren'Py with renpy you can certainly use much less to create a project of this kind.
+
+If these points don't describe you then Pixi'VN is for you.
