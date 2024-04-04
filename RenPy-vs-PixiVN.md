@@ -18,11 +18,29 @@ but the performance of the Canvas used by the two libraries is very significant.
 
 ## Programming language
 
-Ren'Py uses its own language, `Ren'Py language`, which is based on Python. This language is very simple and easy to learn, suitable for people who are not programmers. It is a language that is very useful for creating visual novels, but it is not suitable for creating complex games.
-Ren'Py is not typed and there are currently no debugging systems.
+Ren'Py uses its own language, `Ren'Py language`, which is based on Python. This language is:
 
-Pixi'VN uses JavaScript/TypeScript, which is a very powerful and popular language. Compared to `Ren'Py language`, it is not a language created for visual novels and is not suitable for people who do not know object-oriented programming. It is a typed language, has a debugging system and have a lot of tools for development.
+* Very simple and easy to learn, suitable for people who are not programmers.
+* A language that is very useful for creating visual novels, but it is not suitable for creating complex games.
+* Not typed
+* At the moment, there are no debug systems present.
+* Only used in RenPy, so once you learn it you won't be able to use it for anything else.
+
+Pixi'VN uses JavaScript/TypeScript, which is a very powerful and popular language. Compared to `Ren'Py language`, it is
+
+* Not a language created for visual novels and is not suitable for people who do not know object-oriented programming.
+* A typed language
+* Has a debugging system and have a lot of tools for development.
+* Used in many other projects, so once you learn it you can use it for other projects. For example, you can use it to create a website, backend, app, pc software, etc...
 
 ## Device Distribution
 
+In Ren'Py, you can create a project and then export it to multiple devices and this process is really simple.
+
+In Pixi'VN, Creating a site with an interface that adapts to multiple devices is very simple, but creating a mobile or desktop application is not that simple.
+you can create a project and then export it to multiple devices, but this process is more complex than Ren'Py.
+To do this you will need to use libraries or frameworks for desktop and mobile applications. For example, you can use `Electron`, `Electron Forge`, `Cordova`, `Ionic`, etc...
+
 ## Development possibilities
+
+## Conclusion
