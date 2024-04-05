@@ -44,9 +44,9 @@ To do this you will need to use libraries or frameworks for desktop and mobile a
 
 ## Development possibilities
 
-Ren'Py is a framework designed only for creating visual novels. Adding features that go outside of visual novel development is limiting and not recommended by the Ren'Py team. It does not have management for libraries
+Ren'Py is a engine designed only for creating visual novels. Adding features that go outside of visual novel development is limiting and not recommended by the Ren'Py team. It does not have management for libraries
 
-Pixi'VN is not a framework, but an npm library that allows you to create visual novels. So if you want you can use this library in a project that is not natively a visual novel. It has management for libraries with [npm](https://www.npmjs.com/).
+Pixi'VN is not a engine, but an npm library that allows you to create visual novels. So if you want you can use this library in a project that is not natively a visual novel. It has management for libraries with [npm](https://www.npmjs.com/).
 
 ## Project size
 
@@ -57,8 +57,14 @@ In a Pixi'VN project, you can choose whether and which graphics component librar
 ## Longevity and ease of internal development
 
 Ren'py born in 2004 and is still used today. It is a very stable and mature project.
-Ren'Py in addition to including the development of its own library for visual novels also includes the development of `Ren'Py language` and `Pygame_sdl2`.
-This means that keeping Ren'Py updated with the latest technologies requires a lot of development.
+Ren'Py in addition to including the development of its own library for visual novels also includes the development of `Ren'Py language` and `Pygame_sdl2`, and being an engine, developers must ensure that it is compatible with new technologies.
+
+This means that keeping Ren'Py updated is a constant and very complex process that "touches" many types of programming (Parsing, Graphics, etc...).
+
+Pixi'VN born in 2024. It is a very young project.
+Pixi'VN is only a library that uses PixiJS for the canvas. As well as providing functionality for visual novels, it doesn't care about anything else.
+
+This means that keeping Pixi'VN updated is a very simple process and once it reaches a stable version it will not need constant updates.
 
 ## Conclusion
 
