@@ -67,6 +67,24 @@ export function loadCharacters() {
 loadCharacters();
 ```
 
+## Get Characters by id
+
+To get a character by its `id`, you can use the `getCharacterById` function.
+
+```typescript
+import { getCharacterById } from "@drincs/pixi-vn";
+
+const liam = getCharacterById('liam');
+```
+
+If you use the [Extended CharacterModel](#extend-charactermodelbase) class, you can get the character and cast it to the subclass.
+
+```typescript
+import { getCharacterById } from "@drincs/pixi-vn";
+
+const liam = getCharacterById<ExtendedCharacterModel>('liam');
+```
+
 ## Edit Characters in the Game
 
 `CharacterModelBase` is a [stored class model](Stored-Classes), which means that it is possible to save and load the character's properties from the [game storage](Game-Storage).
@@ -91,10 +109,10 @@ Here's a simplified implementation of the `CharacterModelBase` class for better 
 
 ```typescript
 export default class CharacterModelBase extends StoredClassModel implements ICharacterModelBase {
-    constructor(tag: string, props: ICharacterModelBase) {
+    constructor(id: string, props: ICharacterModelBase) {
         super(
             // ... +
-            tag
+            id
         )
         this.defaultName = props.name
         this.icon = props.icon
@@ -150,8 +168,8 @@ interface ICharacterModel extends ICharacterModelBase {
 }
 
 export class CharacterModel extends CharacterModelBase {
-    constructor(tag: string, props: ICharacterModel) {
-        super(tag, props)
+    constructor(id: string, props: ICharacterModel) {
+        super(id, props)
     }
 
     private _mood: string = ""
