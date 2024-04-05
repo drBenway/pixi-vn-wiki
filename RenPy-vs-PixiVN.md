@@ -44,7 +44,7 @@ To do this you will need to use libraries or frameworks for desktop and mobile a
 
 Ren'Py is a engine designed only for creating visual novels. Adding features that go outside of visual novel development is limiting and not recommended by the Ren'Py team. It does not have management for libraries
 
-Pixi'VN is not a engine, but an npm library that allows you to create visual novels. So if you want you can use this library in a project that is not natively a visual novel. It has management for libraries with [npm](https://www.npmjs.com/).
+Pixi'VN is not a visual novels engine, but an npm library that allows you to create visual novels. So if you want you can use this library in a project that is not natively a visual novel. It has vast management for libraries with [npm](https://www.npmjs.com/).
 
 ## Project size
 
