@@ -54,3 +54,7 @@ export class ShowImageTest extends Label {
 ```
 
 Also, you can [unlink the Transition/Effect/Animation](Tickers) from the canvas element in the next step.
+
+## Why Pixi'VN?
+
+The reason why Pixi'VN was born is that current systems for creating a visual novel are based on dated systems and have many shortcomings.

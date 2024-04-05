@@ -29,3 +29,10 @@ To remove a variable from the game storage, you can use the `GameStorageManager.
 ```typescript
 GameStorageManager.removeVariable("myVariable");
 ```
+
+## System variables
+
+In storage game, there are some system variables that are used by the game engine. All system variables start with the prefix `___`.
+So please avoid using this prefix in your variables.
+
+You can get all the system variables keys with the `GameStorageManager.keysSystem` function.
