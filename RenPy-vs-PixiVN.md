@@ -66,7 +66,7 @@ This means that keeping Pixi'VN updated is a very simple process and once it rea
 
 ## Conclusion
 
-Finally my personal conclusion is Pixi'VN is not for you, while RenìPy if one of these points describes you:
+Finally my personal conclusion, if one of these points describes you, then Pixi'VN is not for you:
 
 * You have never programmed and would try to stay away from programming as much as possible. (In the future, a library could be created that allows you to create a visual novel with Pixi'Vn using an interface without having to program)
 * Besides showing text and images with transitions or other effects, you don't want to implement anything else in the future either (e.g. minigames). Ren'Py with renpy you can certainly use much less to create a project of this kind.
