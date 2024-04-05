@@ -4,18 +4,18 @@ Pixi'VN provides a abstract class `StoredClassModel` that you can use to create 
 
 ## Storage key
 
-The custructor of the `StoredClassModel` class have a parameter `tag` that must be unique. This tag is used to save the class in the game storage (key in the object).
+The custructor of the `StoredClassModel` class have a parameter `id` that must be unique. This id is used to save the class in the game storage (key in the object).
 
-My suggestion is Create a costant variable and use it as a "prefix" and in the constructor of the class add the prefix to the tag.
+My suggestion is Create a costant variable and use it as a "prefix" and in the constructor of the class add the prefix to the id.
 
 ```typescript
 const MY_CLASS_PREFIX = "__MyClass__"
 
 export default class MyClass extends StoredClassModel {
-    constructor(tag: string, props: IMyClass) {
+    constructor(id: string, props: IMyClass) {
         super(
             // ... +
-            MY_CLASS_PREFIX + tag
+            MY_CLASS_PREFIX + id
         )
         // ...
     }
@@ -30,7 +30,7 @@ For example, if you have a property `test` that you want to save in the game sto
 
 ```typescript
 export default class MyClass extends StoredClassModel {
-    constructor(tag: string, props: IMyClass) {
+    constructor(id: string, props: IMyClass) {
         // ...
     }
 
