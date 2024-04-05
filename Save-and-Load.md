@@ -6,7 +6,7 @@ The save and load system is a feature that allows the player to save the game pr
 
 Pixi'VN provides a function to save the game progress. The `getSaveData` function saves the current game state, including the current step, variables, and other game data in a object.
 
-If you want to save the game progress into a json string, you can use the `getSaveJson` function.
+If you want to save the game progress into a json string, you can use the `getSaveJson` function. This function returns a json string, the decision to encrypt and/or compress the save is a developer's decision.
 
 A exemple of how to save the game progress:
 
