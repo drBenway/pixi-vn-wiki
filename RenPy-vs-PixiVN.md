@@ -22,7 +22,7 @@ I imagine the performance of the Pixi'VN and the "visual novel library" used by 
 Ren'Py uses its own language, `Ren'Py language`, which is based on Python. This language is:
 
 * Very simple and easy to learn, suitable for people who are not programmers, but it is not suitable for creating complex games.
-* Not typed
+* Not typed language
 * At the moment, there are no debug systems present.
 * Only used in RenPy, so once you learn it you will have no way to use it for other types of development.
 
