@@ -31,13 +31,13 @@ Pixi'VN uses JavaScript/TypeScript, which is a very powerful and popular languag
 * Not a language created for visual novels and is not suitable for people who do not know object-oriented programming.
 * A typed language
 * Has a debugging system and have a lot of tools for development.
-* Used in many other projects, so once you learn it you can use it for other projects. For example, you can use it to create a website, backend, app, pc software, etc...
+* You can use it to create website, backend, mobile app, pc software, etc...
 
 ## Device Distribution
 
-In Ren'Py, you can create a project and then export it to multiple devices and this process is really simple.
+In Ren'Py, you can create a project and then export it to multiple devices and this process is really simple and fast.
 
-In Pixi'VN, creating a site with an interface that adapts to multiple devices is very simple, but creating a mobile or desktop application is more complex than Ren'Py.
+In Pixi'VN, creating a site with an interface that adapts to multiple devices is very simple, but distributing the project as a mobile or desktop application is not fast like Ren'Py.
 To do this you will need to use libraries or frameworks for desktop and mobile applications. For example, you can use `Electron`, `Electron Forge`, `Cordova`, `Ionic`, etc...
 
 ## Development possibilities
