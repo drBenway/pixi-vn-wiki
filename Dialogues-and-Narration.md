@@ -53,6 +53,17 @@ To get the current dialogue, use the `getDialogue`. The return is a `DialogueMod
 const currentDialogue: DialogueModelBase = getDialogue();
 ```
 
+If you use the [Extended DialogueModel](#extend-dialoguemodelbase), you can get the current dialogue and cast to the extended class.
+The return is your extended class or `DialogueModelBase`, so you can use `instanceof` to check the type.
+
+```typescript
+const currentDialogue: DialogueModel | DialogueModelBase = getDialogue<DialogueModel>()
+
+if (!currentDialogue instanceof DialogueModel) {
+    // console.log("The current dialogue is not a DialogueModel")
+}
+```
+
 ## Clear a Current Dialogue
 
 To clear the current dialogue, use the `clearDialogue`.
@@ -69,6 +80,31 @@ To get the history of dialogues for every [game steps](Label-and-Game-Step), use
 const dialogues: IDialogueHistory<DialogueModelBase>[] = getDialogueHistory<DialogueModelBase>();
 ```
 
+If you use the [Extended DialogueModel](#extend-dialoguemodelbase), you can get the history of dialogues and cast to the extended class.
+The return is your extended class or `DialogueModelBase`, so you can use `instanceof` to check the type.
+
+```typescript
+const dialogues: IDialogueHistory<DialogueModel | DialogueModelBase>[] = getDialogueHistory<DialogueModel>();
+
+if (!dialogues[0].dialogue instanceof DialogueModel) {
+    // console.log("The first dialogue is not a DialogueModel")
+}
+```
+
 ## Extend DialogueModelBase
 
-[( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/84)
+You can extend the `DialogueModelBase` to add more properties.
+
+```typescript
+export class DialogueModel extends DialogueModelBase {
+    constructor(
+        character: CharacterModelBase | string,
+        text: string,
+        emotion: string
+    ) {
+        super(character, text);
+        this.emotion = emotion;
+    }
+    emotion = ""
+}
+```
