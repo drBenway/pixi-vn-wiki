@@ -34,7 +34,7 @@ if (!body) {
     throw new Error('body element not found')
 }
 
-await GameWindowManager.initialize(body, 1920, 1080, {
+GameWindowManager.initialize(body, 1920, 1080, {
     backgroundColor: "#303030"
 })
 ```

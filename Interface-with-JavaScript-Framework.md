@@ -18,19 +18,22 @@ import { GameWindowManager } from '@drincs/pixi-vn'
 import { createRoot } from 'react-dom/client'
 
 // GameWindowManager.initialize...
+GameWindowManager.initialize(body, 1920, 1080, {
+    backgroundColor: "#303030"
+}).then(() => {
+    // React setup with ReactDOM
+    const root = document.getElementById('root')
+    if (!root) {
+        throw new Error('root element not found')
+    }
 
-// React setup with ReactDOM
-const root = document.getElementById('root')
-if (!root) {
-    throw new Error('root element not found')
-}
+    GameWindowManager.initializeHTMLLayout(root)
+    const reactRoot = createRoot(GameWindowManager.htmlLayout)
 
-GameWindowManager.initializeHTMLLayout(root)
-const reactRoot = createRoot(GameWindowManager.htmlLayout)
-
-reactRoot.render(
-    <App />
-)
+    reactRoot.render(
+        <App />
+    )
+})
 ```
 
 This is the HTML file that will be used to load the application.
