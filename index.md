@@ -15,7 +15,7 @@ Pixi'VN is based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine
 ### Installation
 
 ```bash
-npm install pixi-vn
+npm install @drincs/pixi-vn
 ```
 
 ### Usage
