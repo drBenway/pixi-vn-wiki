@@ -112,5 +112,7 @@ import { useNavigate } from 'react-router-dom';
 
 const navigate = useNavigate();
 
-GameStepManager.goBack(navigate)
+if (GameStepManager.canGoBack) {
+    GameStepManager.goBack(navigate)
+}
 ```
