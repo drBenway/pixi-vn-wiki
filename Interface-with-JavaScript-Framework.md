@@ -74,7 +74,7 @@ body {
 ## How navigate/switch between interface screens?
 
 To switch between interface screens (without interrupting the canvas), you can use popups and modals, or navigate between different routes.
-For navigate between different routes, for example, you can use [React Router](https://reactrouter.com/en/main).
+For navigate between different [URL Path](/Various-Answers.md#what-is-the-url-path).
 
 ## How to enable interface interaction?
 
