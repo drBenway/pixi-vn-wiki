@@ -58,3 +58,9 @@ After setting up the interface, you can start creating the visual novel using Pi
 * [Animations and Effects](Animations-and-Effects)
 * [Tickers](Tickers)
 * [Stored Classes](Stored-Classes)
+
+## Other
+
+* [Distribution](Distribution)
+* [Various Answers](Various-Answers)
+* [RenPy vs PixiVN](RenPy-vs-PixiVN)
