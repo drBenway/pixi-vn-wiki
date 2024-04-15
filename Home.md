@@ -61,6 +61,7 @@ After setting up the interface, you can start creating the visual novel using Pi
 
 ## Other
 
+* [Intecept Events](Intercept-Events)
 * [Distribution](Distribution)
 * [Various Answers](Various-Answers)
 * [RenPy vs PixiVN](RenPy-vs-PixiVN)
