@@ -4,11 +4,11 @@ Intercepting events can be very useful to allow hotkeys or to block/prevent brow
 
 ## Refresh page
 
-Using the refresh button without managing it causes you to lose all temporary game data.
+Using the browser's refresh button without managing it causes you to lose all temporary game data.
 
-The solution is to create a save when refreshing the pages in local storage. Next, check after the refresh if a save exists, and if it exists then load it and then delete it. The same solution can be used to prevent browser crashes.
+The solution is to create a save, in local storage, before refreshing the page. Then, when the page is refreshed, check if the save exists, load it, and then delete it.
 
-Example:
+Example ( This solution also prevents the loss of data when the page is closed ):
 
 ```ts
 // ActionsUtility.ts
