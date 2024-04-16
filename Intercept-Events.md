@@ -105,3 +105,5 @@ export function useMyNavigate(): NavigateFunction {
     }
 }
 ```
+
+While the feature to go back in the game with the browser button is [under development](https://github.com/DRincs-Productions/pixi-vn/issues/114).
