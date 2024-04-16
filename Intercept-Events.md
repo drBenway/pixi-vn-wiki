@@ -56,10 +56,11 @@ export default function EventInterceptor() {
 
 Using the back and forward buttons can cause the game to be in an inconsistent state.
 
-Since it is not possible to intercept the event before the page changes, it is difficult to be able to use the buttons as a possibility to go back.
-So the best solution is to try to block the possibility of going back. There are many ways to do this, but what I suggest is the following:
+The best solution would be to be able to use the navigation keys to navigate the game as well.
 
-Intercept the event `popstate`, which is started after that the back button is pressed, and go forward one. This means that when the back button is pressed it returns to the previous path for a very short time and immediately afterwards returns to the current path. To ensure that the path is not changed, even for a short time, you can add 2 nodes to the history every time you navigate to a new path, instead of 1 node.
+The first thing to do is to prevent the path change, when the back button is pressed. There are many ways to do this, but what I suggest is the following:
+
+Intercept the event `popstate`, which is started after that the back button is pressed, and go forward one. This means that when the back button is pressed it returns to the previous path for a short time and immediately afterwards returns to the current path. To ensure that the path is not changed, even for a short time, you can add 2 nodes to the history every time you navigate to a new path, instead of 1 node (the default).
 
 Example:
 
@@ -76,7 +77,7 @@ export default function EventInterceptor() {
     }, []);
 
     function onpopstate() {
-        window.history.go(1);
+        window.history.forward();
     }
 
     return null
