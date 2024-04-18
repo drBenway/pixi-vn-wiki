@@ -58,3 +58,45 @@ Also, you can [unlink the Transition/Effect/Animation](Tickers) from the canvas 
 ## Why Pixi'VN?
 
 The reason why Pixi'VN was born is that current systems for creating a visual novel are based on dated systems and have many shortcomings.
+
+## Skip step and Auto Forward
+
+In a visual novel, It's very helpful to have the option to skip a step or auto forward to the next step.
+
+Pixi'VN does not directly implement these 2 features, in order to leave more customization to the developer.
+
+My advice to implement these features is to add a control where `GameStepManager.runNextStep()` is used:
+
+```typescript
+// React example
+const [skipEnabled, setSkipEnabled] = useState<boolean>(false)
+const [autoEnabled, setAutoEnabled] = useState<boolean>(false)
+const [recheckSkipAuto, setRecheckSkipAuto] = useState<number>(0)
+
+useEffect(() => {
+    if (skipEnabled || autoEnabled) {
+        nextOnClick()
+    }
+}, [skipEnabled, recheckSkipAuto, autoEnabled])
+
+function nextOnClick() {
+    GameStepManager.runNextStep()
+        .then(() => {
+            if (skipEnabled) {
+                setTimeout(() => {
+                    setRecheckSkipAuto((p) => p + 1)
+                }, 200);
+            }
+            else if (autoEnabled) {
+                setTimeout(() => {
+                    setRecheckSkipAuto((p) => p + 1)
+                }, 2000);
+            }
+        })
+        .catch((e) => {
+            // ...
+        })
+}
+
+// Button for enable skip and auto ...
+```
