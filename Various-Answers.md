@@ -135,6 +135,11 @@ export default function Typewriter({ text, delay }: ITypewriterProps) {
         }
     }, [currentIndex, delay, text]);
 
+    useEffect(() => {
+        setCurrentText('');
+        setCurrentIndex(0);
+    }, [text]);
+
     return <span>{currentText}</span>;
 };
 ```
