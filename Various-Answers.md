@@ -100,3 +100,7 @@ function nextOnClick() {
 
 // Button for enable skip and auto ...
 ```
+
+## How translate the visual novel?
+
+It is the developer's job to choose which library to use to translate the game. I recommend using [i18next](https://www.i18next.com/).
