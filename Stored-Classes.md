@@ -14,7 +14,6 @@ const MY_CLASS_PREFIX = "__MyClass__"
 export default class MyClass extends StoredClassModel {
     constructor(id: string, props: IMyClass) {
         super(
-            // ... +
             MY_CLASS_PREFIX + id
         )
         // ...
