@@ -124,7 +124,7 @@ export default class CharacterModelBase extends StoredClassModel implements ICha
         return this.getStorageProperty<string>("name") || this.defaultName
     }
     set name(value: string) {
-        this.updateStorageProperty<string>("name", value)
+        this.setStorageProperty<string>("name", value)
     }
 
     // icon property is not stored in the game storage
@@ -176,7 +176,7 @@ export class CharacterModel extends CharacterModelBase {
         return this.getStorageProperty<string>("mood") || this.defaultName
     }
     set mood(value: string) {
-        this.updateStorageProperty<string>("mood", value)
+        this.setStorageProperty<string>("mood", value)
     }
 }
 ```

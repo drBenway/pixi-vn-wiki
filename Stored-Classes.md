@@ -22,7 +22,7 @@ export default class MyClass extends StoredClassModel {
 
 ## Storate properties
 
-To save the properties of the class in the game storage you must use the `getStorageProperty` and `updateStorageProperty` methods.
+To save the properties of the class in the game storage you must use the `getStorageProperty` and `setStorageProperty` methods.
 
 For example, if you have a property `test` that you want to save in the game storage, you can add a getter and setter like this:
 
@@ -36,7 +36,7 @@ export default class MyClass extends StoredClassModel {
         return this.getStorageProperty<string>("test") || ""
     }
     set test(value: string) {
-        this.updateStorageProperty<string>("test", value)
+        this.setStorageProperty<string>("test", value)
     }
 }
 ```
