@@ -111,8 +111,7 @@ Here's a simplified implementation of the `CharacterModelBase` class for better 
 export default class CharacterModelBase extends StoredClassModel implements ICharacterModelBase {
     constructor(id: string, props: ICharacterModelBase) {
         super(
-            // ... +
-            id
+            // ...
         )
         this.defaultName = props.name
         this.icon = props.icon
