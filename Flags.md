@@ -28,3 +28,40 @@ import { getFlag } from '@drincs/pixi-vn'
 
 const flag1 = getFlag('flag1')
 ```
+
+## Development possibilities
+
+### Connect flag to class boolean property
+
+If you are creating a class with a boolean property, you can connect it to a flag. So this property will be automatically updated when the flag is changed.
+
+This can simplify the code and make it more readable.
+
+```typescript
+import { getFlag, setFlag } from '@drincs/pixi-vn'
+
+class ButtonClass {
+    private _disabled: boolean | string
+    get disabled() {
+        if (typeof this._disabled === 'string') {
+            return getFlag(this._disabled)
+        }
+        return this._disabled
+    }
+    set disabled(value: boolean | string) {
+        this._disabled = value
+    }
+}
+```
+
+```typescript
+// Button to go to school
+const goToSchoolButton = new ButtonClass()
+goToSchoolButton.disabled = 'weekend'
+
+function afterNewDay() {
+    setFlag('weekend', 
+        // Check if it is Saturday or Sunday
+    )
+}
+```
