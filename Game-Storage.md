@@ -6,6 +6,8 @@ It is essential to understand that if the variables are not saved in the game me
 
 Furthermore, only primary type variables can be saved in the game storage. The primary types are `string`, `number`, `boolean`, `object`, `array`...  and not `function`, `class`...
 
+( For boolean values, you can use the [flags management](Flags) )
+
 ## Set a variable in the game storage
 
 To set a variable in the game storage, you can use the `GameStorageManager.setVariable`, which takes two parameters: the variable name and the value.
