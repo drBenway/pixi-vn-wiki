@@ -116,3 +116,13 @@ if (GameStepManager.canGoBack) {
     GameStepManager.goBack(navigate)
 }
 ```
+
+## How determinate if current step is the last step in the game (end of the game)
+
+To determinate if the current step is the last step in the game you must call the `GameStepManager.isLastGameStep` function.
+
+```typescript
+if (GameStepManager.isLastGameStep) {
+    // end of the game
+}
+```
