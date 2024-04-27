@@ -107,3 +107,46 @@ export function useMyNavigate(): NavigateFunction {
 ```
 
 While the feature to go back in the game with the browser button is [under development](https://github.com/DRincs-Productions/pixi-vn/issues/114).
+
+## Attaching events to keymaps to allow hotkeys
+
+To attach events to keymaps is useful to allow hotkeys.
+
+Example:
+
+```ts
+// EventInterceptor.ts
+import { useEffect } from 'react';
+
+export default function EventInterceptor() {
+    useEffect(() => {
+        window.addEventListener('keydown', onkeydown);
+
+        return () => {
+            window.removeEventListener('keydown', onkeydown);
+        };
+    }, []);
+
+    function onkeydown(event: KeyboardEvent) {
+        if (event.code == 'Enter' || event.code == 'Space') {
+            nextStep((prev) => prev + 1)
+        }
+        else if (event.code == 'Escape') {
+            setOpenSettings((prev) => !prev)
+        }
+        else if (event.code == 'KeyH') {
+            setOpenHistory((prev) => !prev)
+        }
+    }
+
+    return null
+}
+```
+
+I suggest the following hotkeys:
+
+* Enter or Space: Next step
+* Escape: Open settings
+* H: Open history
+* V: Hide/show interface
+* M: Open menu
