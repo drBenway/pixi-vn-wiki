@@ -85,6 +85,24 @@ import { getCharacterById } from "@drincs/pixi-vn";
 const liam = getCharacterById<ExtendedCharacterModel>('liam');
 ```
 
+## Get All Characters
+
+To get all characters, you can use the `getAllCharacters` function.
+
+```typescript
+import { getAllCharacters } from "@drincs/pixi-vn";
+
+const characters = getAllCharacters();
+```
+
+If you use the [Extended CharacterModel](#extend-characterbasemodel) class, you can get all characters and cast them to the subclass.
+
+```typescript
+import { getAllCharacters } from "@drincs/pixi-vn";
+
+const characters = getAllCharacters<ExtendedCharacterModel>();
+```
+
 ## Edit Characters in the Game
 
 `CharacterBaseModel` is a [stored class model](Stored-Classes), which means that it is possible to save and load the character's properties from the [game storage](Game-Storage).
