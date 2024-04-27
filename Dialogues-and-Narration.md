@@ -19,7 +19,7 @@ setDialogue({
 ```
 
 ```typescript
-export const liam = new CharacterModelBase('liam-id', {
+export const liam = new CharacterBaseModel('liam-id', {
     name: 'Liam',
     surname: 'Smith',
     age: 25,
@@ -47,17 +47,17 @@ setDialogue("Hello, world!")
 
 ## Get a Current Dialogue
 
-To get the current dialogue, use the `getDialogue`. The return is a `DialogueModelBase`.
+To get the current dialogue, use the `getDialogue`. The return is a `DialogueBaseModel`.
 
 ```typescript
-const currentDialogue: DialogueModelBase = getDialogue();
+const currentDialogue: DialogueBaseModel = getDialogue();
 ```
 
-If you use the [Extended DialogueModel](#extend-dialoguemodelbase), you can get the current dialogue and cast to the extended class.
-The return is your extended class or `DialogueModelBase`, so you can use `instanceof` to check the type.
+If you use the [Extended DialogueModel](#extend-dialoguebasemodel), you can get the current dialogue and cast to the extended class.
+The return is your extended class or `DialogueBaseModel`, so you can use `instanceof` to check the type.
 
 ```typescript
-const currentDialogue: DialogueModel | DialogueModelBase = getDialogue<DialogueModel>()
+const currentDialogue: DialogueModel | DialogueBaseModel = getDialogue<DialogueModel>()
 
 if (!currentDialogue instanceof DialogueModel) {
     // console.log("The current dialogue is not a DialogueModel")
@@ -77,28 +77,28 @@ clearDialogue();
 To get the history of dialogues for every [game steps](Label-and-Game-Step), use the `getDialogueHistory`. The return is a `IDialogueHistory<T>[]`.
 
 ```typescript
-const dialogues: IDialogueHistory<DialogueModelBase>[] = getDialogueHistory<DialogueModelBase>();
+const dialogues: IDialogueHistory<DialogueBaseModel>[] = getDialogueHistory<DialogueBaseModel>();
 ```
 
-If you use the [Extended DialogueModel](#extend-dialoguemodelbase), you can get the history of dialogues and cast to the extended class.
-The return is your extended class or `DialogueModelBase`, so you can use `instanceof` to check the type.
+If you use the [Extended DialogueModel](#extend-dialoguebasemodel), you can get the history of dialogues and cast to the extended class.
+The return is your extended class or `DialogueBaseModel`, so you can use `instanceof` to check the type.
 
 ```typescript
-const dialogues: IDialogueHistory<DialogueModel | DialogueModelBase>[] = getDialogueHistory<DialogueModel>();
+const dialogues: IDialogueHistory<DialogueModel | DialogueBaseModel>[] = getDialogueHistory<DialogueModel>();
 
 if (!dialogues[0].dialogue instanceof DialogueModel) {
     // console.log("The first dialogue is not a DialogueModel")
 }
 ```
 
-## Extend DialogueModelBase
+## Extend DialogueBaseModel
 
-You can extend the `DialogueModelBase` to add more properties.
+You can extend the `DialogueBaseModel` to add more properties.
 
 ```typescript
-export class DialogueModel extends DialogueModelBase {
+export class DialogueModel extends DialogueBaseModel {
     constructor(
-        character: CharacterModelBase | string,
+        character: CharacterBaseModel | string,
         text: string,
         emotion: string
     ) {
