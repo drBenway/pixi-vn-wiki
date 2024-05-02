@@ -38,6 +38,8 @@ setDialogue({
     character: liam,
     text: "Hello, world!"
 })
+// or
+setDialogue(new DialogueBaseModel("Hello, world!", liam))
 ```
 
 ```typescript
