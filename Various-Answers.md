@@ -105,6 +105,31 @@ function nextOnClick() {
 
 It is the developer's job to choose which library to use to translate the game. I recommend using [i18next](https://www.i18next.com/).
 
+For you want use i18next args in dialogues, you can use the following code:
+
+```typescript
+export class DialogueModel extends DialogueBaseModel {
+    constructor(
+        character: CharacterModel | string,
+        text: string,
+        i18nArgs: { key: string }
+    ) {
+        super(character, text);
+        this.i18nArgs = i18nArgs;
+    }
+    i18nArgs: { key: string } = { key: "" }
+}
+```
+
+```typescript
+
+
+let dial = getDialogue<DialogueModel>()
+if (dial) {
+    setText(t(dial.text, dial.i18nArgs))
+}
+```
+
 ## How implement Speed text or Typewriter effect?
 
 In a visual novel, it is very useful to have a typewriter effect.
