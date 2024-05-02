@@ -122,8 +122,6 @@ export class DialogueModel extends DialogueBaseModel {
 ```
 
 ```typescript
-
-
 let dial = getDialogue<DialogueModel>()
 if (dial) {
     setText(t(dial.text, dial.i18nArgs))
