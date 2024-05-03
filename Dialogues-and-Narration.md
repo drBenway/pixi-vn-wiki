@@ -47,6 +47,13 @@ setDialogue(new DialogueBaseModel("Hello, world!", liam))
 setDialogue("Hello, world!")
 ```
 
+```typescript
+// if don't want to set a character, you can set a string
+setDialogue("Hello, world!", {
+    emotion: "happy"
+})
+```
+
 ## Get a Current Dialogue
 
 To get the current dialogue, use the `getDialogue`. The return is a `DialogueBaseModel`.
@@ -95,7 +102,9 @@ if (!dialogues[0].dialogue instanceof DialogueModel) {
 
 ## Extend DialogueBaseModel
 
-You can extend the `DialogueBaseModel` to add more properties.
+You can extend the `DialogueBaseModel` to add more properties, but it not recommended (you can use the param `oltherParams` to add more properties).
+
+If you decide to extend the `DialogueBaseModel` keep in mind that this class will be saved on storage as json with `JSON.stringify` and `JSON.parse`.
 
 ```typescript
 export class DialogueModel extends DialogueBaseModel {
