@@ -56,6 +56,10 @@ export class StartLabel extends Label {
 }
 ```
 
+The use of `StepResult` it is not mandatory, but it is useful for passing data.
+
+An other possibility is to use the [Game Storage](/Game-Storage.md) for share data, but increase the save file if you not delete the data after use.
+
 ## Run a label
 
 There are two ways to run a label:
@@ -217,6 +221,31 @@ export class StartLabel extends Label {
 GameStepManager.runNextStep()
     .then((result) => {
         if (result?.newRoute) {
+            // navigate to new route
+        }
+    })
+```
+
+Or, if you don't want to use the [`StepResult`](#step-result) you can [`GameStorageManager.setVariable`](/Game-Storage.md#set-a-variable-in-the-game-storage) and after the step is executed, the game will navigate to the new route/path.
+
+```typescript
+@labelDecorator() // or @labelDecorator('StartLabel')
+export class StartLabel extends Label {
+    override get steps(): StepLabelType[] {
+        return [
+            () => {
+                GameStorageManager.setVariable('newRoute', '/new-route')
+            },
+        ]
+    }
+}
+```
+
+```typescript
+GameStepManager.runNextStep()
+    .then(() => {
+        const newRoute = GameStorageManager.getVariable<string>('newRoute')
+        if (newRoute) {
             // navigate to new route
         }
     })
