@@ -2,14 +2,14 @@
 
 The [PixiJS Ticker](https://pixijs.com/8.x/examples/basic/tinting) is a class that manages the update loop. It is used to animate the canvas elements.
 
-In Pixi'VN, you can use the Ticker, but through functions of the `GameWindowManager` class.
+In Pixi’VN, you can use the Ticker, but through functions of the `GameWindowManager` class.
 The reason is that this way I can keep track of the Tickers and delete those that are no longer used.
 
 ## Create a Ticker
 
 In Pixi.js, you can add a Ticker by passing a lambda as a parameter that will be executed on each frame.
 
-In Pixi'VN, you must create a class tha extends `TickerBase`, add a decorator `@tickerDecorator` to the class and override the `fn` method.
+In Pixi’VN, you must create a class tha extends `TickerBase`, add a decorator `@tickerDecorator` to the class and override the `fn` method.
 
 `@tickerDecorator` is a decorator that save the ticker in memory. It have a optional parameter that is the id of the ticker (must be unique). If you don't pass the id, the ticker will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers.md#how-enable-the-decorators-in-typescript) )
 

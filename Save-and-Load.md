@@ -4,7 +4,7 @@ The save and load system is a feature that allows the player to save the game pr
 
 ## Save
 
-Pixi'VN provides a function to save the game progress. The `getSaveData` function saves the current game state, including the current step, variables, and other game data in a object.
+Pixi’VN provides a function to save the game progress. The `getSaveData` function saves the current game state, including the current step, variables, and other game data in a object.
 
 If you want to save the game progress into a json string, you can use the `getSaveJson` function. This function returns a json string, the decision to **encrypt and/or compress** the save is a developer's decision.
 
@@ -65,9 +65,9 @@ A exemple of how to convert a JSON string to a save data object:
 const saveData = jsonToSaveData(jsonString);
 ```
 
-## Get Pixi'VN version of the save data
+## Get Pixi’VN version of the save data
 
-Pixi'VN add your own version in the save data object. You can access it by the `version` property.
+Pixi’VN add your own version in the save data object. You can access it by the `version` property.
 
 ```typescript
 const saveData = jsonToSaveData(jsonString);

@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Pixi'VN"
+project = "Pixi’VN"
 copyright = '2024, DRincs Productions'
 author = 'DRincs Productions'
 # language = "fr"  # For testing language translations
@@ -28,6 +28,7 @@ ogp_site_url = "https://pixivn.readthedocs.io/"
 ogp_type = "wiki"
 ogp_custom_meta_tags = [
     '<meta name="google-site-verification" content="EjlqJaE0G1aE1YOv6ZxhdET5H98MyaS7jcP07ZExHZg" />',
+    '<meta name="description" content="Pixi’VN is a npm package that provides various features for creating visual novels, based on PixiJS.">',
 ]
 
 # -- General configuration ---------------------------------------------------
@@ -72,7 +73,7 @@ html_static_path = ['_static']
 master_doc = "index"
 
 # html_logo = "_static/logo-wide.svg"
-html_title = "Pixi'VN Documentation"
+html_title = "Pixi’VN Documentation"
 # html_favicon = "_static/logo-square.svg"
 
 thebe_config = {

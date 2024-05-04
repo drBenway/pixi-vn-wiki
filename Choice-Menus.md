@@ -2,7 +2,7 @@
 
 In the visual novel, usually, there are choice menus that allow the player to make decisions that will affect the story.
 
-In Pixi'VN, it is possible to create choice menus using the `ChoiceMenuOptionLabel` class and a function to handle the choice.
+In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOptionLabel` class and a function to handle the choice.
 
 `ChoiceMenuOptionLabel` is a class which has as parameters:
 

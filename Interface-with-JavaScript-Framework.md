@@ -1,6 +1,6 @@
 # Interface with JavaScript Framework
 
-In addition to managing the Pixi.js "Canvas", Pixi'VN offers the possibility of adding an HTML Element with the same dimensions as the "Canvas" to add interactions with the user.
+In addition to managing the Pixi.js "Canvas", Pixi’VN offers the possibility of adding an HTML Element with the same dimensions as the "Canvas" to add interactions with the user.
 
 This allows the use of systems such as React, Vue, Angular, etc. to create much more complex interfaces with excellent performance.
 
@@ -46,7 +46,7 @@ This is the HTML file that will be used to load the application.
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/pixiVN.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixi'VN</title>
+    <title>Pixi’VN</title>
   </head>
   <body>
     <div id="root"></div>

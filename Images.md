@@ -1,6 +1,6 @@
 # Images
 
-To make adding and managing images on the canvas easier than pixi.js methods, Pixi'VN it has very basic functions for showing an image.
+To make adding and managing images on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing an image.
 
 ## Add Image and Show
 

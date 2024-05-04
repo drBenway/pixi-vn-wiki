@@ -1,6 +1,6 @@
 # Flags Management
 
-Pixi'VN provides functions to manage "game flags". By "game flags" I mean boolean values that can be used to control the flow of the game, or olther boolean values that you want to save in the game storage.
+Pixi’VN provides functions to manage "game flags". By "game flags" I mean boolean values that can be used to control the flow of the game, or olther boolean values that you want to save in the game storage.
 
 This mechanic has much less impact on save size than directly [saving a boolean in Game Sorage](/Game-Storage.md#set-a-variable-in-the-game-storage).
 

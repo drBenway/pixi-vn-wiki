@@ -1,6 +1,6 @@
 # Canvas Elements
 
-Pixi'VN provides a set of canvas elements. These elements are based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine with additional features to perform save and load operations.
+Pixi’VN provides a set of canvas elements. These elements are based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine with additional features to perform save and load operations.
 
 ## Base Elements
 
@@ -107,7 +107,7 @@ GameWindowManager.removeCanvasElements()
 
 **Note that**: It is suggested to try to add events to the [interface](Interface-with-JavaScript-Framework) and not add it to the canvas elements.
 
-In Pixi'VN compared to Pixi you can't set a [listener with the `on` method](https://pixijs.com/8.x/examples/events/click), because it is not possible to save the listeners in the memory for the save and load operations.
+In Pixi’VN compared to Pixi you can't set a [listener with the `on` method](https://pixijs.com/8.x/examples/events/click), because it is not possible to save the listeners in the memory for the save and load operations.
 
 But you can use `onEvent`, it is a same method that `on` but you can't pass a lambda function, you must pass a Class.
 
