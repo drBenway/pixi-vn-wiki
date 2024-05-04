@@ -22,15 +22,6 @@ copyright = '2024, DRincs Productions'
 author = 'DRincs Productions'
 # language = "fr"  # For testing language translations
 
-# The Open Graph protocol
-
-ogp_site_url = "https://pixivn.readthedocs.io/"
-ogp_type = "wiki"
-ogp_custom_meta_tags = [
-    '<meta name="google-site-verification" content="EjlqJaE0G1aE1YOv6ZxhdET5H98MyaS7jcP07ZExHZg" />',
-    '<meta name="description" content="Pixi’VN is a npm package that provides various features for creating visual novels, based on PixiJS.">',
-]
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -98,4 +89,12 @@ html_theme_options = {
     "use_issues_button": True,
     "launch_buttons": {"thebelab": True},
     "navigation_with_keys": False,  # To prevent an unnecessary warning
+}
+
+# add html meta headers
+html_context = {
+    "meta": {
+        "description": "Pixi’VN is a npm package that provides various features for creating visual novels, based on PixiJS.",
+        "google-site-verification": "EjlqJaE0G1aE1YOv6ZxhdET5H98MyaS7jcP07ZExHZg",
+    }
 }
