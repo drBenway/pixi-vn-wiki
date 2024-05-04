@@ -22,6 +22,13 @@ copyright = '2024, DRincs Productions'
 author = 'DRincs Productions'
 # language = "fr"  # For testing language translations
 
+# The Open Graph protocol
+
+ogp_site_url = "https://pixivn.readthedocs.io/"
+ogp_type = "wiki"
+ogp_custom_meta_tags = [
+    '<meta name="google-site-verification" content="EjlqJaE0G1aE1YOv6ZxhdET5H98MyaS7jcP07ZExHZg" />',
+]
 
 # -- General configuration ---------------------------------------------------
 
