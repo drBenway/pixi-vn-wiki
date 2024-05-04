@@ -80,9 +80,20 @@ GameStepManager.callLabel(StartLabel)
 Remember that if I call the `GameStepManager.callLabel` inside a step, the [result of first step of the called label](#step-result) will be returned. So you then you should return the result of the called step.
 
 ```typescript
-return GameStepManager.callLabel(StartLabel).then((result) => {
-    return result
-})
+@labelDecorator()
+export class StartLabel extends Label {
+    override get steps(): StepLabelType[] {
+        return [
+            () => {
+                return GameStepManager.callLabel(TestLabel).then((result) => {
+                    return result
+                })
+            },
+            // or in one line
+            () => GameStepManager.callLabel(TestLabel),
+        ]
+    }
+}
 ```
 
 ### Jump to a label
@@ -102,9 +113,20 @@ GameStepManager.jumpLabel(StartLabel)
 Remember that if I call the `GameStepManager.jumpLabel` inside a step, the [result of first step of the called label](#step-result) will be returned. So you then you should return the result of the called step.
 
 ```typescript
-return GameStepManager.jumpLabel(StartLabel).then((result) => {
-    return result
-})
+@labelDecorator()
+export class StartLabel extends Label {
+    override get steps(): StepLabelType[] {
+        return [
+            () => {
+                return GameStepManager.jumpLabel(TestLabel).then((result) => {
+                    return result
+                })
+            },
+            // or in one line
+            () => GameStepManager.jumpLabel(TestLabel),
+        ]
+    }
+}
 ```
 
 ## Next Step
