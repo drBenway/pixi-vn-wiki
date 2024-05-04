@@ -92,13 +92,6 @@ html_theme_options = {
 }
 
 # add html meta headers
-html_context = {
-    "meta": {
-        "description": "Pixi’VN is a npm package that provides various features for creating visual novels, based on PixiJS.",
-        "google-site-verification": "EjlqJaE0G1aE1YOv6ZxhdET5H98MyaS7jcP07ZExHZg"
-    }
-}
-
 myst_html_meta = {
     "description lang=en": "Pixi’VN is a npm package that provides various features for creating visual novels, based on PixiJS.",
     "google-site-verification": "EjlqJaE0G1aE1YOv6ZxhdET5H98MyaS7jcP07ZExHZg"
