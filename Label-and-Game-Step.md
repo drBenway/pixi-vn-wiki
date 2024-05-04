@@ -81,7 +81,7 @@ For example if currently the game is running the step 5 of the label A and you c
 GameStepManager.callLabel(StartLabel)
 ```
 
-Remember that if I call the `GameStepManager.callLabel` inside a step, the [result of first step of the called label](#step-result) will be returned. So you then you should return the result of the called step.
+Remember that if you call the `GameStepManager.callLabel` inside a step, the [result of first step of the called label](#step-result) will be returned. So you then you should return the result of the called step.
 
 ```typescript
 @labelDecorator()
@@ -114,7 +114,7 @@ For example if currently the game is running the step 5 of the label A and you j
 GameStepManager.jumpLabel(StartLabel)
 ```
 
-Remember that if I call the `GameStepManager.jumpLabel` inside a step, the [result of first step of the called label](#step-result) will be returned. So you then you should return the result of the called step.
+Remember that if you call the `GameStepManager.jumpLabel` inside a step, the [result of first step of the called label](#step-result) will be returned. So you then you should return the result of the called step.
 
 ```typescript
 @labelDecorator()
