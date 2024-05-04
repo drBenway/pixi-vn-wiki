@@ -2,4 +2,3 @@ myst-nb>=1.0.0
 sphinx_design>=0.5.0
 sphinx-book-theme>=1.1.2
 sphinx-thebe>=0.3.1
-sphinxext-opengraph>=0.9.1
