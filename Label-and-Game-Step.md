@@ -33,6 +33,29 @@ export class StartLabel extends Label {
 }
 ```
 
+### Step Result
+
+The steps can return a `StepResult` that is undefined or a object with the following properties:
+
+* `newRoute`: The new [route](/Various-Answers.md#what-is-the-url-path) to navigate.
+* you property: You can add any property that you want.
+
+```typescript
+@labelDecorator() // or @labelDecorator('StartLabel')
+export class StartLabel extends Label {
+    override get steps(): StepLabelType[] {
+        return [
+            () => {
+                return {
+                    newRoute: '/new-route',
+                    customProperty: 12
+                }
+            },
+        ]
+    }
+}
+```
+
 ## Run a label
 
 There are two ways to run a label:
@@ -48,8 +71,18 @@ When you call a label, the steps of that label will be started and if before the
 
 For example if currently the game is running the step 5 of the label A and you call the label B, when all the steps of the label B are executed, the game will continue with the step 6 of the label A.
 
+`GameStepManager.callLabel` returns a [result of first step of the called label](#step-result).
+
 ```typescript
 GameStepManager.callLabel(StartLabel)
+```
+
+Remember that if I call the `GameStepManager.callLabel` inside a step, the [result of first step of the called label](#step-result) will be returned. So you then you should return the result of the called step.
+
+```typescript
+return GameStepManager.callLabel(StartLabel).then((result) => {
+    return result
+})
 ```
 
 ### Jump to a label
@@ -60,8 +93,18 @@ When you jump to a label, the steps of the current label will be stopped and the
 
 For example if currently the game is running the step 5 of the label A and you jump to the label B, when all the steps of the label B are executed, the game will end, also if the label B have a step 6.
 
+`GameStepManager.jumpLabel` returns a [result of first step of the called label](#step-result).
+
 ```typescript
 GameStepManager.jumpLabel(StartLabel)
+```
+
+Remember that if I call the `GameStepManager.jumpLabel` inside a step, the [result of first step of the called label](#step-result) will be returned. So you then you should return the result of the called step.
+
+```typescript
+return GameStepManager.jumpLabel(StartLabel).then((result) => {
+    return result
+})
 ```
 
 ## Next Step
@@ -77,7 +120,7 @@ GameStepManager.runNextStep()
 ```typescript
 // disable next button
 GameStepManager.runNextStep()
-    .then(() => {
+    .then((result) => {
         // enable next button
     })
 ```
@@ -125,4 +168,34 @@ To determinate if the current step is the last step in the game you must call th
 if (GameStepManager.isLastGameStep) {
     // end of the game
 }
+```
+
+## How navigate in new route/path in the Game Step
+
+In some cases it is not possible to navigate to a new route/path in the step, for example if you are using a [React Router Dom](https://reactrouter.com) and you want to navigate to a new route/path in the step.
+
+The solution is to return a [`StepResult`](#step-result) with the `newRoute` property, and after the step is executed, the game will navigate to the new route/path.
+
+```typescript
+@labelDecorator() // or @labelDecorator('StartLabel')
+export class StartLabel extends Label {
+    override get steps(): StepLabelType[] {
+        return [
+            () => {
+                return {
+                    newRoute: '/new-route',
+                }
+            },
+        ]
+    }
+}
+```
+
+```typescript
+GameStepManager.runNextStep()
+    .then((result) => {
+        if (result?.newRoute) {
+            // navigate to new route
+        }
+    })
 ```
