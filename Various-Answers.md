@@ -103,7 +103,7 @@ function nextOnClick() {
 
 ## How translate the visual novel?
 
-It is the developer's job to choose which library to use to translate the game. I recommend using [i18next](https://www.i18next.com/).
+It is the developer's job to choose which library to use to translate the game. It recommend using [i18next](https://www.i18next.com/).
 
 For you want use i18next args in dialogues, you can use the following code:
 
@@ -169,11 +169,11 @@ export default function Typewriter({ text, delay }: ITypewriterProps) {
 
 ## Where can I store the images?
 
-You are completely free to store the images in the project.
+You are completely free to store images however you want.
 
-Usually there may be the following possibilities:
+The main possibilities are the following:
 
-* Inside the project: You can insert the images inside the project and use the relative path. You recommend this method if you plan to create a desktop/mobile application.
-* Inside the project, but download them upon installation: You can insert the images inside the project and download them upon installation. You recommend this method if you plan to create a desktop/mobile application.
-* Public URL: There are more sites that allow you to upload images for free, for example [imgur](https://imgur.com/). You can use the public URL of the image. You recommend this method if you plan to create a web application.
-* Private URL: You can use a private URL of the image, you can use a private server or a cloud service, for example [Amazon S3](https://aws.amazon.com/s3/) or [Firebase](https://firebase.google.com/). You recommend this method if you plan to create a web application.
+* Inside the project: You can insert the images inside the project and use the relative path. It recommend this method if you plan to create a desktop/mobile application.
+* Inside the project, but download them upon installation: You can insert the images inside the project and download them upon installation. It recommend t this method if you plan to create a desktop/mobile application.
+* Public URL: There are more sites that allow you to upload images for free, for example [imgur](https://imgur.com/). You can use the public URL of the image. It recommend t this method if you plan to create a web application.
+* Private URL: You can use a private URL of the image, you can use a private server or a cloud service, for example [Amazon S3](https://aws.amazon.com/s3/) or [Firebase](https://firebase.google.com/). It recommend t this method if you plan to create a web application.

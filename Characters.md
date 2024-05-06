@@ -173,7 +173,7 @@ setDialogue({ character: "liam_id", text: "Hello" })
 
 ## Extend CharacterBaseModel
 
-I recommend creating a subclass of `CharacterBaseModel` to add new properties or methods to the character.
+It recommend creating a subclass of `CharacterBaseModel` to add new properties or methods to the character.
 
 For example, you can create a subclass `CharacterModel` that extends `CharacterBaseModel` and add a new property `mood`.
 
