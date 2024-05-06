@@ -35,10 +35,12 @@ export class StartLabel extends Label {
 
 ### Step Result
 
-The steps can return a `StepResult` that is undefined or a object with the following properties:
+The steps can return a `StepResult` object with the following properties:
 
 * `newRoute`: The new [route](/Various-Answers.md#what-is-the-url-path) to navigate.
 * you property: You can add any property that you want.
+
+This can be very useful **for passing information** between steps when you call/jump to a label or run the next step.
 
 ```typescript
 @labelDecorator() // or @labelDecorator('StartLabel')
@@ -56,9 +58,7 @@ export class StartLabel extends Label {
 }
 ```
 
-The use of `StepResult` it is not mandatory, but it is useful for passing data.
-
-An other possibility is to use the [Game Storage](/Game-Storage.md) for share data, but increase the save file if you not delete the data after use.
+An other possibility is to use the [Game Storage](/Game-Storage.md) for **for passing information**, but increase the save file if you not delete the data after use.
 
 ## Run a label
 
