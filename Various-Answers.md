@@ -166,3 +166,14 @@ export default function Typewriter({ text, delay }: ITypewriterProps) {
     return <span>{currentText}</span>;
 };
 ```
+
+## Where can I insert images?
+
+You are completely free to insert images as you like.
+
+Usually there may be the following possibilities:
+
+* Inside the project: You can insert the images inside the project and use the relative path. You recommend this method if you plan to create a desktop/mobile application.
+* Inside the project, but download them upon installation: You can insert the images inside the project and download them upon installation. You recommend this method if you plan to create a desktop/mobile application.
+* Public URL: There are more sites that allow you to upload images for free, for example [imgur](https://imgur.com/). You can use the public URL of the image. You recommend this method if you plan to create a web application.
+* Private URL: You can use a private URL of the image, you can use a private server or a cloud service, for example [Amazon S3](https://aws.amazon.com/s3/) or [Firebase](https://firebase.google.com/). You recommend this method if you plan to create a web application.
