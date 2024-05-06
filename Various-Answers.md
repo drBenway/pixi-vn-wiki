@@ -167,9 +167,9 @@ export default function Typewriter({ text, delay }: ITypewriterProps) {
 };
 ```
 
-## Where can I insert images?
+## Where can I store the images?
 
-You are completely free to insert images as you like.
+You are completely free to store the images in the project.
 
 Usually there may be the following possibilities:
 
