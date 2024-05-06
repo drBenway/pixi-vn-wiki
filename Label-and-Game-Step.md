@@ -58,7 +58,9 @@ export class StartLabel extends Label {
 }
 ```
 
-An other possibility is to use the [Game Storage](/Game-Storage.md) **for get variables**, but increase the save file if you not delete the data after use.
+An other possibility is to use the [Game Storage](/Game-Storage.md) **for get variables**, but increase the save file if you not delete the variable after use.
+
+```typescript
 
 ## Run a label
 
