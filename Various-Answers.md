@@ -119,6 +119,27 @@ export class DialogueModel extends DialogueBaseModel {
     }
     i18nArgs: { key: string } = { key: "" }
 }
+// or better
+export class DialogueModel extends DialogueBaseModel {
+    constructor(
+        text: string,
+        character: CharacterModel | string,
+        i18nArgs: { [key: string]: string } = {}
+    ) {
+        super(text, character);
+        this.oltherParams = {
+            i18nArgs: i18nArgs
+        }
+    }
+    oltherParams: { // oltherParams is a param of DialogueBaseModel
+        [key: string | number | symbol]: StorageElementType,
+        i18nArgs: { [key: string]: string }
+    }
+
+    get i18nArgs() {
+        return this.oltherParams.i18nArgs;
+    }
+}
 ```
 
 ```typescript
