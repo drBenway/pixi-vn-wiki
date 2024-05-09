@@ -12,7 +12,7 @@ hero:
       link: /markdown-examples
     - theme: alt
       text: Why Pixi’VN?
-      link: /why-pixi-vn
+      link: /why
     - theme: alt
       text: GitHub
       link: https://github.com/DRincs-Productions/pixi-vn

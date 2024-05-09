@@ -14,7 +14,7 @@ export default defineConfig({
       {
         text: 'Guide',
         items: [
-          { text: 'Why Pixi’VN?', link: '/why-pixi-vn' },
+          { text: 'Why Pixi’VN?', link: '/why' },
         ]
       }
     ],
