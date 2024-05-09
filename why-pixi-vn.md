@@ -2,11 +2,19 @@
 
 The reason why Pixi’VN was born is that current systems for creating a visual novel are based on dated systems and have many shortcomings.
 
+## What is Pixi’VN?
+
+Pixi’VN is a npm package that provides various features for creating visual novels, has functions to manage story steps, saving and loading, variable storage, dialogues, character,canvas management, and much more.
+
+It is designed for web developers, with basic experience in JavaScript/TypeScript, who want to create a visual novel with a modern 2D rendering engine and their favorite JavaScript framework.
+
+It is based on [Pixi.js](https://pixijs.com/), a rendering engine that allows you to create fast 2D graphics. It is based on WebGL and is very fast and efficient. It is used by many developers to create games, websites, and applications.
+
 ## Ren'Py vs Pixi’VN
 
 Making a comparison between Ren'Py and Pixi’VN is necessary because Ren'Py is currently the most popular engine for creating visual novels.
 
-### What is Pixi’VN?
+### What is Ren'Py?
 
 Ren'Py is a visual novel engine – used by thousands of creators from around the world – that helps you use words, images, and sounds to tell interactive stories that run on computers and mobile devices. These can be both visual novels and life simulation games. The easy to learn script language allows anyone to efficiently write large visual novels, while its Python scripting is enough for complex simulation games.
 
