@@ -7,7 +7,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
+      { text: 'Guide', link: '/get-start' },
     ],
 
     sidebar: [
@@ -15,6 +15,8 @@ export default defineConfig({
         text: 'Guide',
         items: [
           { text: 'Why Pixi’VN?', link: '/why' },
+          { text: 'Getting Started', link: '/get-start' },
+          { text: 'Interface with JavaScript Framework', link: '/interface' },
         ]
       }
     ],

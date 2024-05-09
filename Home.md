@@ -1,43 +1,11 @@
 # Pixi’VN - PixiJS Visual Novel Engine
 
-## Use Pivi'VN Templates
-
-* [Pixi’VN template (React + Vite + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)
-
-## Get Started
-
-### Installation
-
-```bash
-npm install @drincs/pixi-vn
-```
-
-### Usage
-
-For the following example we will use TypeScript, but you can use JavaScript as well.
-
-```typescript
-// main.ts
-import { GameWindowManager } from '@drincs/pixi-vn'
-import App from './App'
-import './index.css'
-
-// Canvas setup with PIXI
-const body = document.body
-if (!body) {
-    throw new Error('body element not found')
-}
-
-GameWindowManager.initialize(body, 1920, 1080, {
-    backgroundColor: "#303030"
-})
-```
+* [Why Pixi’VN?](why)
 
 ## First steps
 
-After setting up the interface, you can start creating the visual novel using Pixi’VN functions.
-
-* [Add JavaScript framework for interface](Interface-with-JavaScript-Framework)
+* [Get Started](get-start)
+* [Interface with JavaScript Framework](interface)
 * [Characters](Characters)
 * [Dialogue and Narration](Dialogues-and-Narration)
 * [Choice Menus](Choice-Menus)
