@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Quick start
-      link: /get-start
+      link: /getting-started
     - theme: alt
       text: Why Pixi’VN?
       link: /why

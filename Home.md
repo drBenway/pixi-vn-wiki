@@ -1,7 +1,7 @@
 # Pixi’VN - PixiJS Visual Novel Engine
 
 * [Why Pixi’VN?](why)
-* [Get Started](get-start)
+* [Get Started](getting-started)
 * [Interface with JavaScript Framework](interface)
 
 ## First steps
@@ -17,13 +17,13 @@
 
 ## Advanced topics
 
-* [Canvas Elements](Canvas-Elements)
-* [Animations and Effects](Animations-and-Effects)
-* [Tickers](Tickers)
-* [Stored Classes](Stored-Classes)
+* [Canvas Elements](canvas-elements)
+* [Animations and Effects](animations-effects)
+* [Tickers](tickers)
+* [Stored Classes](stored-classes)
+* [Intecept Events](intercept-events)
 
-## Other
+## Other topics
 
-* [Intecept Events](Intercept-Events)
-* [Distribution](Distribution)
-* [Various Answers](Various-Answers)
+* [Distribution](distribution)
+* [Various Answers](various-answers)
