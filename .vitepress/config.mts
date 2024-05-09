@@ -12,11 +12,24 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Guide',
+        text: 'Getting Started',
         items: [
           { text: 'Why Pixi’VN?', link: '/why' },
           { text: 'Getting Started', link: '/get-start' },
           { text: 'Interface with JavaScript Framework', link: '/interface' },
+        ]
+      },
+      {
+        text: 'First steps',
+        items: [
+          { text: 'Characters', link: '/character' },
+          { text: 'Dialogue and Narration', link: '/narration' },
+          { text: 'Choice Menus', link: '/choices' },
+          { text: 'Label and Game Step', link: '/labels' },
+          { text: 'Game Storage', link: '/storage' },
+          { text: 'Flags Management', link: '/flags' },
+          { text: 'Save and Load', link: '/save' },
+          { text: 'Images and Animations', link: '/images' },
         ]
       }
     ],

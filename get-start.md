@@ -10,9 +10,7 @@ If you have already initialized a new project for your visual novel, you move on
 
 ## Initialize a new project
 
-If you want create a new project from scratch it is recommended initialize a new project with [Vite](https://vitejs.dev/).
-
-Otherwise you can use one of the following templates.
+If you want create a new project from scratch it is recommended initialize a new project with [Vite](https://vitejs.dev/). Otherwise you can use one of the following templates.
 
 ### Pivi'VN Templates
 

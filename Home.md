@@ -1,19 +1,19 @@
 # Pixi’VN - PixiJS Visual Novel Engine
 
 * [Why Pixi’VN?](why)
+* [Get Started](get-start)
+* [Interface with JavaScript Framework](interface)
 
 ## First steps
 
-* [Get Started](get-start)
-* [Interface with JavaScript Framework](interface)
-* [Characters](Characters)
-* [Dialogue and Narration](Dialogues-and-Narration)
-* [Choice Menus](Choice-Menus)
-* [Label and Game Step](Label-and-Game-Step)
-* [Game Storage](Game-Storage)
-* [Flags Management](Flags)
-* [Save and Load](Save-and-Load)
-* [Images](Images)
+* [Characters](character)
+* [Dialogue and Narration](narration)
+* [Choice Menus](choices)
+* [Label and Game Step](labels)
+* [Game Storage](storage)
+* [Flags Management](flags)
+* [Save and Load](save)
+* [Images and Animations](images)
 
 ## Advanced topics
 
@@ -27,4 +27,3 @@
 * [Intecept Events](Intercept-Events)
 * [Distribution](Distribution)
 * [Various Answers](Various-Answers)
-* [RenPy vs PixiVN](RenPy-vs-PixiVN)
