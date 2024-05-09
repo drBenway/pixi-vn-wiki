@@ -1,4 +1,4 @@
-## Why Pixi’VN?
+# Why Pixi’VN?
 
 The reason why Pixi’VN was born is that current systems for creating a visual novel are based on dated systems and have many shortcomings.
 
