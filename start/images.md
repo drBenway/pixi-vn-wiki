@@ -19,6 +19,20 @@ import { addImage } from '@drincs/pixi-vn'
 const image = addImage('image1', 'path/to/image.png')
 ```
 
+If you want initialize the image before and add it to the canvas, you can use the [`GameWindowManager.addCanvasElement`](/advanced/canvas-elements#add-canvas-elements)function.
+
+```typescript
+import { GameWindowManager, CanvasImage } from '@drincs/pixi-vn'
+
+let alien = new CanvasImage({ textureImage: 'https://pixijs.com/assets/eggHead.png' })
+alien.anchor.set(0.5);
+alien.x = 100
+alien.y = 100
+await alien.load()
+
+GameWindowManager.addCanvasElement("alien", alien)
+```
+
 ## Load and Show Image
 
 After adding the image, you can load the texture and show it on the canvas using the `CanvasImage.load` method.
