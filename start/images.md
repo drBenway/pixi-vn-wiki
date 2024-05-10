@@ -91,6 +91,8 @@ image2.load()
 
 ## Load Image Textures in Cache when a label is called
 
+If a label shows a sequence of very large images, it can be very useful to load the images in the cache when the label is called. This way, the images will be loaded in the background and will be ready to be displayed when they are needed.
+
 ```typescript
 import { Assets, Label, labelDecorator, StepLabelType } from "@drincs/pixi-vn";
 
