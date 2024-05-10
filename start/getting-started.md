@@ -1,0 +1,50 @@
+# Getting Started
+
+If you have already initialized a new project for your visual novel, you move on to the [installation step](#installation)
+
+## Prerequisites
+
+* [Node.js](https://nodejs.org/) version 18 or higher.
+* Text Editor with TypeScript support.
+  * VSCode is recommended.
+
+## Initialize a new project
+
+If you want create a new project from scratch it is recommended initialize a new project with [Vite](https://vitejs.dev/). Otherwise you can use one of the following templates.
+
+### Pivi'VN Templates
+
+**[Pixi’VN template (React + Vite + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)** is a template for creating visual novels in React, contains basic functionality inspired by Ren'Py. This template uses [MUI joy](https://mui.com/joy-ui/getting-started/), [Recoil](https://recoiljs.org/), [React Router](https://reactrouter.com/), [i18next](https://www.i18next.com/), [Vite](https://vitejs.dev/), [Vite Checker](https://vite-plugin-checker.netlify.app/) and [PWA Vite Plugin](https://vite-pwa-org.netlify.app/)
+
+## Installation
+
+For installing the Pixi’VN package, you can use the following command:
+
+```bash
+# for npm
+npm install @drincs/pixi-vn
+# for yarn
+yarn add @drincs/pixi-vn
+```
+
+## Usage
+
+Now you must initialize the Pixi’VN window before using the engine.
+
+For example, you add the following code to the `main.ts` or `index.ts` (It depends on your project configuration):
+
+```typescript
+import { GameWindowManager } from '@drincs/pixi-vn'
+import App from './App'
+import './index.css'
+
+// Canvas setup with PIXI
+const body = document.body
+if (!body) {
+    throw new Error('body element not found')
+}
+
+GameWindowManager.initialize(body, 1920, 1080, {
+    backgroundColor: "#303030"
+})
+```

@@ -4,7 +4,7 @@ To make adding and managing images on the canvas easier than pixi.js methods, Pi
 
 ## Add Image and Show
 
-To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/Canvas-Elements.md#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/Canvas-Elements.md#base-elements).
+To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/advanced/canvas-elements#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/advanced/canvas-elements#base-elements).
 
 It is important to take into account that this function only adds the element to the canvas but does not show it and does not load its texture.
 
@@ -25,7 +25,7 @@ After adding the image, you can load the texture and show it on the canvas using
 
 This method is asynchronous, so:
 
-* You can use the `await` keyword to wait for the image to load. So if you show the image in a step, you can disable the [next step](/Label-and-Game-Step.md#next-step) until the image is loaded.
+* You can use the `await` keyword to wait for the image to load. So if you show the image in a step, you can disable the [next step](/start/labels#next-step) until the image is loaded.
 * You can not use the `await` keyword and show the image in the next step. In this case, the image will be loaded in the background and will be shown when it is ready.
 
 ```typescript
@@ -77,7 +77,7 @@ image2.load()
 
 ## Remove Image
 
-As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/Canvas-Elements.md#remove-canvas-elements) function.
+As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/advanced/canvas-elements#remove-canvas-elements) function.
 
 ## Show Image with Transition
 
@@ -104,10 +104,10 @@ showImageWithDissolveTransition('image1', 'path/to/image.png', 0.2)
 
 ## Other Transitions and Animations
 
-The functions above do nothing more than add an image to the canvas, display it and start a Ticker. So you can use [`GameWindowManager.addTicker`](Animations-and-Effects) to add your own transitions and animations.
+The functions above do nothing more than add an image to the canvas, display it and start a Ticker. So you can use [`GameWindowManager.addTicker`](/advanced/animations-effects) to add your own transitions and animations.
 
 If you create or need a transition or animation, please create a [issue](https://github.com/DRincs-Productions/pixi-vn/issues) to share/propose it.
 
 ### How to force completion of an Transition in the next step?
 
-[Read this](/Various-Answers.md#how-to-force-completion-of-an-transition-effect-animation-in-the-next-step)
+[Read this](/other/various-answers#how-to-force-completion-of-an-transition-effect-animation-in-the-next-step)

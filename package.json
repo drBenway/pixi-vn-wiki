@@ -1,0 +1,13 @@
+{
+  "name": "pixi-vn-documentation",
+  "author": "DRincs Productions",
+  "private": false,
+  "devDependencies": {
+    "vitepress": "^1.1.4"
+  },
+  "scripts": {
+    "start": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  }
+}
