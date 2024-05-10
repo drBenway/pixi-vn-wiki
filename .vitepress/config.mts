@@ -7,60 +7,60 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Guide', link: '/getting-started' },
-      { text: 'Advanced topics', link: '/canvas-elements' },
+      { text: 'Guide', link: '/start/getting-started' },
+      { text: 'Advanced topics', link: '/advanced/canvas-elements' },
       {
         text: 'Other topics',
         items: [
-          { text: 'Distribution', link: '/distribution' },
-          { text: 'Various Answers', link: '/various-answers' },
+          { text: 'Distribution', link: '/other/distribution' },
+          { text: 'Various Answers', link: '/other/various-answers' },
         ],
       },
     ],
 
     sidebar: {
-      '/getting-started': [
+      '/start/': [
         {
           text: 'Getting Started',
           items: [
-            { text: 'Why Pixi’VN?', link: '/why' },
-            { text: 'Getting Started', link: '/getting-started' },
-            { text: 'Interface with JavaScript Framework', link: '/interface' },
+            { text: 'Why Pixi’VN?', link: '/start/why' },
+            { text: 'Getting Started', link: '/start/getting-started' },
+            { text: 'Interface with JavaScript Framework', link: '/start/interface' },
           ]
         },
         {
           text: 'First steps',
           items: [
-            { text: 'Characters', link: '/character' },
-            { text: 'Dialogue and Narration', link: '/narration' },
-            { text: 'Choice Menus', link: '/choices' },
-            { text: 'Label and Game Step', link: '/labels' },
-            { text: 'Game Storage', link: '/storage' },
-            { text: 'Flags Management', link: '/flags' },
-            { text: 'Save and Load', link: '/save' },
-            { text: 'Images and Animations', link: '/images' },
-            { text: 'Canvas Elements', link: '/canvas-elements' },
+            { text: 'Characters', link: '/start/character' },
+            { text: 'Dialogue and Narration', link: '/start/narration' },
+            { text: 'Choice Menus', link: '/start/choices' },
+            { text: 'Label and Game Step', link: '/start/labels' },
+            { text: 'Game Storage', link: '/start/storage' },
+            { text: 'Flags Management', link: '/start/flags' },
+            { text: 'Save and Load', link: '/start/save' },
+            { text: 'Images and Animations', link: '/start/images' },
+            { text: 'Canvas Elements', link: '/advanced/canvas-elements' },
           ]
         }
       ],
-      '/canvas-elements': [
+      '/advanced/': [
         {
           text: 'Advanced topics',
           items: [
-            { text: 'Canvas Elements', link: '/canvas-elements' },
-            { text: 'Animations and Effects', link: '/animations-effects' },
-            { text: 'Tickers', link: '/tickers' },
-            { text: 'Stored Classes', link: '/stored-classes' },
-            { text: 'Intecept Events', link: '/intercept-events' },
+            { text: 'Canvas Elements', link: '/advanced/canvas-elements' },
+            { text: 'Animations and Effects', link: '/advanced/animations-effects' },
+            { text: 'Tickers', link: '/advanced/tickers' },
+            { text: 'Stored Classes', link: '/advanced/stored-classes' },
+            { text: 'Intecept Events', link: '/advanced/intercept-events' },
           ]
         }
       ],
-      '/distribution': [
+      '/other/': [
         {
           text: 'Other topics',
           items: [
-            { text: 'Distribution', link: '/distribution' },
-            { text: 'Various Answers', link: '/various-answers' },
+            { text: 'Distribution', link: '/other/distribution' },
+            { text: 'Various Answers', link: '/other/various-answers' },
           ]
         }
       ]

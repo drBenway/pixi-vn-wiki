@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Quick start
-      link: /getting-started
+      link: /start/getting-started
     - theme: alt
       text: Why Pixi’VN?
-      link: /why
+      link: /start/why
     - theme: alt
       text: GitHub
       link: https://github.com/DRincs-Productions/pixi-vn

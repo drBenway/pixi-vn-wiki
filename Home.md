@@ -1,29 +1,29 @@
 # Pixi’VN - PixiJS Visual Novel Engine
 
-* [Why Pixi’VN?](why)
-* [Get Started](getting-started)
-* [Interface with JavaScript Framework](interface)
+* [Why Pixi’VN?](start/why)
+* [Get Started](start/getting-started)
+* [Interface with JavaScript Framework](start/interface)
 
 ## First steps
 
-* [Characters](character)
-* [Dialogue and Narration](narration)
-* [Choice Menus](choices)
-* [Label and Game Step](labels)
-* [Game Storage](storage)
-* [Flags Management](flags)
-* [Save and Load](save)
-* [Images and Animations](images)
+* [Characters](start/character)
+* [Dialogue and Narration](start/narration)
+* [Choice Menus](start/choices)
+* [Label and Game Step](start/labels)
+* [Game Storage](start/storage)
+* [Flags Management](start/flags)
+* [Save and Load](start/save)
+* [Images and Animations](start/images)
 
 ## Advanced topics
 
-* [Canvas Elements](canvas-elements)
-* [Animations and Effects](animations-effects)
-* [Tickers](tickers)
-* [Stored Classes](stored-classes)
-* [Intecept Events](intercept-events)
+* [Canvas Elements](advanced/canvas-elements)
+* [Animations and Effects](advanced/animations-effects)
+* [Tickers](advanced/tickers)
+* [Stored Classes](advanced/stored-classes)
+* [Intecept Events](advanced/intercept-events)
 
 ## Other topics
 
-* [Distribution](distribution)
-* [Various Answers](various-answers)
+* [Distribution](other/distribution)
+* [Various Answers](other/various-answers)
