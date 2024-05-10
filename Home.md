@@ -19,7 +19,7 @@
 
 * [Canvas Elements](advanced/canvas-elements)
 * [Animations and Effects](advanced/animations-effects)
-* [Tickers](advanced/tickers)
+* [Tickers](/advanced/tickers)
 * [Stored Classes](advanced/stored-classes)
 * [Intecept Events](advanced/intercept-events)
 

@@ -53,7 +53,7 @@ export class ShowImageTest extends Label {
 }
 ```
 
-Also, you can [unlink the Transition/Effect/Animation](Tickers) from the canvas element in the next step.
+Also, you can [unlink the Transition/Effect/Animation](/advanced/tickers) from the canvas element in the next step.
 
 ## Skip step and Auto Forward
 

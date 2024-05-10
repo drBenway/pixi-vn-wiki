@@ -3,7 +3,7 @@
 The dialogue/narration is the core of the visual novel.
 
 In Pixi’VN, is possible to set/get a current dialogue and get the history of dialogues.
-A dialogue can link to a [character](/Characters.md#use-characters-in-the-game) or [character id](/Characters.md#use-characters-in-the-game) or a string and will be used to indicate who is speaking.
+A dialogue can link to a [character](/start/character#use-characters-in-the-game) or [character id](/start/character#use-characters-in-the-game) or a string and will be used to indicate who is speaking.
 
 ## Set a Current Dialogue
 
@@ -83,7 +83,7 @@ clearDialogue();
 
 ## Get the History of Dialogues
 
-To get the history of dialogues for every [game steps](Label-and-Game-Step), use the `getDialogueHistory`. The return is a `IDialogueHistory<T>[]`.
+To get the history of dialogues for every [game steps](/start/labels), use the `getDialogueHistory`. The return is a `IDialogueHistory<T>[]`.
 
 ```typescript
 const dialogues: IDialogueHistory<DialogueBaseModel>[] = getDialogueHistory<DialogueBaseModel>();

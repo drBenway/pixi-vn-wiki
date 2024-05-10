@@ -1,6 +1,6 @@
 # Storage Classes
 
-Pixi’VN provides a abstract class `StoredClassModel` that you can use to create classes that can be saved and loaded from the [game storage](Stored-Classes). I suggest you extend this class to create your own stored class.
+Pixi’VN provides a abstract class `StoredClassModel` that you can use to create classes that can be saved and loaded from the [game storage](/advanced/stored-classes). I suggest you extend this class to create your own stored class.
 
 ## Storage key
 

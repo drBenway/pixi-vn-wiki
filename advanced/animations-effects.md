@@ -2,25 +2,25 @@
 
 Pixi’VN provides a set of functions to create animations and effects in your visual novel.
 
-Animations and Effects are based on [Ticker](Tickers). So for add, remove... animations and effects read the [Tickers documentation](Tickers).
+Animations and Effects are based on [Ticker](/advanced/tickers). So for add, remove... animations and effects read the [Tickers documentation](/advanced/tickers).
 
 ## Animations
 
-Animations are [Tickers](Tickers) that move a [canvas element](Canvas-Elements) without altering the texture.
+Animations are [Tickers](/advanced/tickers) that move a [canvas element](canvas-elements) without altering the texture.
 
 [( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
 ### Rotate
 
 For rotating a canvas element you can use the `TickerRotate` class.
-This Ticker edit the `rotation` property of the [canvas element](Canvas-Elements).
-It is possible to start rotation on all [canvas element](Canvas-Elements).
+This Ticker edit the `rotation` property of the [canvas element](canvas-elements).
+It is possible to start rotation on all [canvas element](canvas-elements).
 
 `TickerRotate` have a constructor that takes the a object with the following properties:
 
 * `speed`: is a number that represents the speed of the rotation. default is `0.01`.
 * `clockwise`: is a boolean that represents the direction of the rotation. if `true` the rotation is clockwise, if `false` the rotation is counterclockwise. default is `true`.
-* `speedProgression`: is a [`TickerProgrationType`](Tickers). default is `undefined`.
+* `speedProgression`: is a [`TickerProgrationType`](/advanced/tickers). default is `undefined`.
 * `startOnlyIfHaveTexture`: is a boolean that represents if the animation should start only if the canvas element have a texture not empty. default is `false`.
 
 for example:
@@ -57,15 +57,15 @@ GameWindowManager.addTicker("alien", new TickerRotate({ speed: 0, speedProgressi
 
 ## Effects
 
-Effects are [Tickers](Tickers) that alter the texture of a [canvas element](Canvas-Elements).
+Effects are [Tickers](/advanced/tickers) that alter the texture of a [canvas element](canvas-elements).
 
 [( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
 ### Fade
 
 For fading a canvas element you can use the `TickerFade` class.
-This Ticker edit the `alpha` property of the [canvas element](Canvas-Elements).
-It is possible to start fading on all [canvas element](Canvas-Elements).
+This Ticker edit the `alpha` property of the [canvas element](canvas-elements).
+It is possible to start fading on all [canvas element](canvas-elements).
 
 `TickerFade` have a constructor that takes the a object with the following properties:
 
@@ -73,7 +73,7 @@ It is possible to start fading on all [canvas element](Canvas-Elements).
 * `type`: it can be `hide` or `show`. if `hide` the canvas element will disappear, if `show` the canvas element will appear. default is `show`.
 * `limit`: is a number that represents the limit of the fade. default is `1` if `type` is `show` and `0` if `type` is `hide`.
 * `startOnlyIfHaveTexture`: is a boolean that represents if the animation should start only if the canvas element have a texture not empty. default is `false`.
-* `tagToRemoveAfter`: is a string[] that contains the tags of the [canvas element](Canvas-Elements) that will be removed after the fade. default is `[]`.
+* `tagToRemoveAfter`: is a string[] that contains the tags of the [canvas element](canvas-elements) that will be removed after the fade. default is `[]`.
 
 for example:
 
@@ -89,4 +89,4 @@ GameWindowManager.addTicker("alien", new TickerFade({ speed: 0.2 }));
 
 ### How to force completion of an Transition/Effect/Animation in the next step?
 
-[Read this](/Various-Answers.md#how-to-force-completion-of-an-transition-effect-animation-in-the-next-step)
+[Read this](/other/various-answers#how-to-force-completion-of-an-transition-effect-animation-in-the-next-step)

@@ -2,11 +2,11 @@
 
 The game storage is a place where you can save variables that you want to keep between game sessions.
 
-It is essential to understand that if the variables are not saved in the game memory, when [loading a save](/Save-and-Load.md#load) or when [going back](/Label-and-Game-Step.md#go-back), they will not be handled.
+It is essential to understand that if the variables are not saved in the game memory, when [loading a save](/start/save#load) or when [going back](/start/labels#go-back), they will not be handled.
 
 Furthermore, only primary type variables can be saved in the game storage. The primary types are `string`, `number`, `boolean`, `object`, `array`...  and not `function`, `class`...
 
-( For boolean values, you can use the [flags management](Flags) )
+( For boolean values, you can use the [flags management](/start/flags) )
 
 ## Set a variable in the game storage
 

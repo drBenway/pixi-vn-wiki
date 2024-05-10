@@ -105,7 +105,7 @@ const characters = getAllCharacters<ExtendedCharacterModel>();
 
 ## Edit Characters in the Game
 
-`CharacterBaseModel` is a [stored class model](Stored-Classes), which means that it is possible to save and load the character's properties from the [game storage](Game-Storage).
+`CharacterBaseModel` is a [stored class model](/advanced/stored-classes), which means that it is possible to save and load the character's properties from the [game storage](/start/storage).
 
 It means that if the character's name is changed during the game, the new character name will be saved in the game storage by linking it to his `id`.
 
@@ -154,7 +154,7 @@ export default class CharacterBaseModel extends StoredClassModel implements ICha
 
 ## Use Characters in the Game
 
-You can use the characters in the game for example to [set a dialogue](/Dialogues-and-Narration.md#set-a-current-dialogue). You can use the character's `id` or the character's instance, but it is recommended to use the instance.
+You can use the characters in the game for example to [set a dialogue](/start/narration#set-a-current-dialogue). You can use the character's `id` or the character's instance, but it is recommended to use the instance.
 
 ```typescript
 export const liam = new CharacterBaseModel('liam_id', {

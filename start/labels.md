@@ -15,7 +15,7 @@ The label is a container of steps. It is used to organize the steps in a more re
 
 To define the Labels you must define a class that extends the `Label` class and must add a decorator `@labelDecorator` to the class.
 
-`@labelDecorator` is a decorator that save the label in memory. It have a optional parameter that is the id of the label (must be unique). If you don't pass the id, the label will be saved with the class name. ( [How enable the decorators in TypeScript?](/Various-Answers.md#how-enable-the-decorators-in-typescript) )
+`@labelDecorator` is a decorator that save the label in memory. It have a optional parameter that is the id of the label (must be unique). If you don't pass the id, the label will be saved with the class name. ( [How enable the decorators in TypeScript?](/other/various-answers#how-enable-the-decorators-in-typescript) )
 
 Also to add steps to the label you must override the `steps` property and return an array of functions.
 
@@ -37,7 +37,7 @@ export class StartLabel extends Label {
 
 The steps can return a `StepResult` object with the following properties:
 
-* `newRoute`: The new [route](/Various-Answers.md#what-is-the-url-path) to navigate.
+* `newRoute`: The new [route](/other/various-answers#what-is-the-url-path) to navigate.
 * you property: You can add any property that you want.
 
 This can be very useful **for get variables** when you call/jump to a label or run the next step.
@@ -58,7 +58,7 @@ export class StartLabel extends Label {
 }
 ```
 
-An other possibility is to use the [Game Storage](/Game-Storage.md) **for get variables**, but increase the save file if you not delete the variable after use.
+An other possibility is to use the [Game Storage](/start/storage) **for get variables**, but increase the save file if you not delete the variable after use.
 
 ```typescript
 
@@ -174,7 +174,7 @@ GameStepManager.closeAllLabels()
 
 Every step the system saves the current state of the game. To go back to the previous step you must call the `GameStepManager.goBack()` function.
 
-In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path](/Various-Answers.md#what-is-the-url-path) of the previous step, so you can use it to navigate to the previous [Interface](/Interface-with-JavaScript-Framework.md#how-navigateswitch-between-interface-screens).
+In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path](/other/various-answers#what-is-the-url-path) of the previous step, so you can use it to navigate to the previous [Interface](/start/interface#how-navigateswitch-between-interface-screens).
 
 For exemple if you use a [React Router Dom](https://reactrouter.com):
 
@@ -228,7 +228,7 @@ GameStepManager.runNextStep()
     })
 ```
 
-Or, if you don't want to use the [`StepResult`](#step-result) you can [`GameStorageManager.setVariable`](/Game-Storage.md#set-a-variable-in-the-game-storage) and after the step is executed, the game will navigate to the new route/path.
+Or, if you don't want to use the [`StepResult`](#step-result) you can [`GameStorageManager.setVariable`](/start/storage#set-a-variable-in-the-game-storage) and after the step is executed, the game will navigate to the new route/path.
 
 ```typescript
 @labelDecorator() // or @labelDecorator('StartLabel')
