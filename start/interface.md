@@ -10,6 +10,8 @@ This allows the use of systems such as React, Vue, Angular, etc. to create much 
 
 ## Use React
 
+[React](https://react.dev/) is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript.
+
 ```typescript
 // main.tsx
 import { GameWindowManager } from '@drincs/pixi-vn'
@@ -72,7 +74,7 @@ body {
 ## How navigate/switch between interface screens?
 
 To switch between interface screens (without interrupting the canvas), you can use popups and modals, or navigate between different routes.
-For navigate between different [URL Path](/other/various-answers#what-is-the-url-path).
+For navigate between different url paths/routes ( [What is the URL Path and Routes?](/other/various-answers#what-is-the-url-path) ).
 
 ## How to enable interface interaction?
 

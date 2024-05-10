@@ -25,6 +25,7 @@ features:
       />
     title: PixiJS
     details: Add images, animations, and effects to your visual novel with the powerful 2D rendering engine, PixiJS.
+    link: https://pixijs.com
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftypescript-icon.svg?alt=media&token=4716cb0b-8e60-47ac-971a-8e3d1e43b3aa" 
         alt="TypeScript"
@@ -32,6 +33,7 @@ features:
       />
     title: TypeScript
     details: Write your visual novel with the modern JavaScript language, TypeScript.
+    link: https://www.typescriptlang.org/
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvscode-icon.png?alt=media&token=a758dd7e-b40c-4d70-987f-120fee738332" 
         alt="VS Code"
@@ -39,6 +41,7 @@ features:
       />
     title: Visual Studio Code
     details: Use the powerful code editor, Visual Studio Code, to write your visual novel.
+    link: https://code.visualstudio.com/
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvitejs-icon.svg?alt=media&token=67f5d40b-d840-4b40-845a-16b186f64c0a" 
         alt="ViteJS"
@@ -46,6 +49,7 @@ features:
       />
     title: ViteJS
     details: Initialize your visual novel with the modern JavaScript framework, ViteJS.
+    link: https://vitejs.dev/
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Freact-icon.png?alt=media&token=5fc594c1-c945-460c-b385-12c647e37626" 
         alt="React"
