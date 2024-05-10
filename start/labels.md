@@ -37,7 +37,7 @@ export class StartLabel extends Label {
 
 The steps can return a `StepResult` object with the following properties:
 
-* `newRoute`: The new [URL Path or route key](/other/various-answers#what-is-the-url-path) to navigate.
+* `newRoute`: The new [URL Path or route key](/other/various-answers#what-is-the-url-path-and-routes) to navigate.
 * you property: You can add any property that you want.
 
 This can be very useful **for get variables** when you call/jump to a label or run the next step.
@@ -174,7 +174,7 @@ GameStepManager.closeAllLabels()
 
 Every step the system saves the current state of the game. To go back to the previous step you must call the `GameStepManager.goBack()` function.
 
-In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/other/various-answers#what-is-the-url-path) of the previous step, so you can use it to navigate to the previous [Interface](/start/interface#how-navigateswitch-between-interface-screens).
+In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/other/various-answers#what-is-the-url-path-and-routes-and-routes) of the previous step, so you can use it to navigate to the previous [Interface](/start/interface#how-navigateswitch-between-interface-screens).
 
 For exemple if you use a [React Router Dom](https://reactrouter.com):
 
