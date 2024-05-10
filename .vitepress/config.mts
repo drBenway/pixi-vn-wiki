@@ -76,5 +76,11 @@ export default defineConfig({
         detailedView: true,
       }
     }
-  }
+  },
+
+  sitemap: {
+    hostname: 'https://pixi-vn.web.app/'
+  },
+
+  srcExclude: ['**/Home.md']
 })

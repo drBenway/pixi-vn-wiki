@@ -24,3 +24,6 @@ dist-ssr
 # VitePress
 .vitepress/dist
 .vitepress/cache
+
+# Firebase
+.firebase
