@@ -89,6 +89,26 @@ image1.load()
 image2.load()
 ```
 
+## Load Image Textures in Cache when a label is called
+
+```typescript
+import { Assets, Label, labelDecorator, StepLabelType } from "@drincs/pixi-vn";
+
+@labelDecorator()
+export class StartLabel extends Label {
+    constructor() {
+        super();
+        Assets.load('path/to/image1.png')
+        Assets.load('path/to/image2.png')
+    }
+    override get steps(): StepLabelType[] {
+        return [
+            // ...
+        ]
+    }
+}
+```
+
 ## Remove Image
 
 As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/advanced/canvas-elements#remove-canvas-elements) function.
