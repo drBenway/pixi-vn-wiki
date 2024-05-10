@@ -61,7 +61,7 @@ html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
 
 # Defailt home page
-master_doc = "index"
+master_doc = "https://pixi-vn.web.app"
 
 # html_logo = "_static/logo-wide.svg"
 html_title = "Pixi’VN Documentation"
