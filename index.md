@@ -24,7 +24,7 @@ features:
         style="border-radius:30%;"
       />
     title: PixiJS
-    details: Add images, animations, and effects to your visual novel with the powerful 2D rendering engine.
+    details: Add images, animations, and effects to your visual novel with the powerful 2D rendering engine, PixiJS.
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftypescript-icon.svg?alt=media&token=4716cb0b-8e60-47ac-971a-8e3d1e43b3aa" 
         alt="TypeScript"
@@ -53,6 +53,7 @@ features:
       />
     title: React
     details: Use your favorite JavaScript framework, React, to create your visual novel interface.
+    link: /start/interface#use-react
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvue-icon.png?alt=media&token=0e2bd717-28e7-4e2a-b9ab-f50b1bf44893" 
         alt="Vue"
@@ -60,6 +61,7 @@ features:
       />
     title: Vue
     details: Use your favorite JavaScript framework, Vue, to create your visual novel interface.
+    link: /start/interface#use-vue
   - icon: <img
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fangular-icon.png?alt=media&token=320f9114-c9bb-42e5-8fde-218bdc91b26a" 
         alt="Angular"
@@ -67,5 +69,6 @@ features:
       />
     title: Angular
     details: Use your favorite JavaScript framework, Angular, to create your visual novel interface.
+    link: /start/interface#use-angular
 ---
 
