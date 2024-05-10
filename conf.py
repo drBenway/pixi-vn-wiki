@@ -63,7 +63,7 @@ html_static_path = ['_static']
 # Defailt home page
 master_doc = "index"
 redirects = {
-    "index": "https://pixi-vn.web.app",
+    "*": "https://pixi-vn.web.app",
 }
 
 # html_logo = "_static/logo-wide.svg"
