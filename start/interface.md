@@ -4,7 +4,7 @@ In addition to managing the Pixi.js "Canvas", Pixi’VN offers the possibility o
 
 This allows the use of systems such as React, Vue, Angular, etc. to create much more complex interfaces with excellent performance.
 
-With this, you can use varius UI tools to create a more complex interface screens.
+With this, you can use varius UI tools to create a more complex **interface screens**.
 
 ## How to enable HTML interaction?
 
