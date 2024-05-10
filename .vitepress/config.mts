@@ -68,6 +68,13 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/DRincs-Productions/pixi-vn' }
-    ]
+    ],
+
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true,
+      }
+    }
   }
 })
