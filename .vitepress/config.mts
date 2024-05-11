@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Pixi’VN",
+  title: "Pixi’VN - PixiJS Visual Novel Engine",
   description: "Pixi’VN - Pixi'VN is a npm package that provides various features for creating visual novels, based on PixiJS.",
 
   themeConfig: {
