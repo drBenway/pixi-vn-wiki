@@ -24,11 +24,11 @@ If you want initialize the image before and add it to the canvas, you can use th
 ```typescript
 import { GameWindowManager, CanvasImage } from '@drincs/pixi-vn'
 
-let alien = new CanvasImage({ textureImage: 'https://pixijs.com/assets/eggHead.png' })
-alien.anchor.set(0.5);
-alien.x = 100
-alien.y = 100
-await alien.load()
+let alien = new CanvasImage({
+    anchor: { x: 0.5, y: 0.5 },
+    x: 100,
+    y: 100,
+}, 'https://pixijs.com/assets/eggHead.png')
 
 GameWindowManager.addCanvasElement("alien", alien)
 ```
