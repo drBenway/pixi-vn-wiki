@@ -8,7 +8,18 @@ Animations and Effects are based on [Ticker](/advanced/tickers). So for add, rem
 
 Animations are [Tickers](/advanced/tickers) that move a [canvas element](canvas-elements) without altering the texture.
 
-[( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
+### Move
+
+For moving a canvas element in a x and y direction you can use the `TickerMove` class.
+This Ticker edit the `x` and `y` properties of the [canvas element](canvas-elements).
+It is possible to start moving on all [canvas element](canvas-elements).
+
+`TickerMove` have a constructor that takes the a object with the following properties:
+
+* `speed`: is a number that represents the speed of the movement. default is `0.01`.
+* `destination`: is a `{y: number, x: number}` that represents the destination of the movement. ( is required )
+* `speedProgression`: is a [`TickerProgrationType`](/advanced/tickers). default is `undefined`.
+* `startOnlyIfHaveTexture`: is a boolean that represents if the animation should start only if the canvas element have a texture not empty. default is `false`.
 
 ### Rotate
 
@@ -59,7 +70,7 @@ GameWindowManager.addTicker("alien", new TickerRotate({ speed: 0, speedProgressi
 
 Effects are [Tickers](/advanced/tickers) that alter the texture of a [canvas element](canvas-elements).
 
-[( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
+[( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
 ### Fade
 

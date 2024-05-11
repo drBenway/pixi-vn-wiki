@@ -41,7 +41,7 @@ clearChoiceMenuOptions();
 
 ## Get last choice
 
-[( Coming soon )](https://github.com/DRincs-Productions/pixi-vn/issues/88)
+[( Documentation under review )](https://github.com/DRincs-Productions/pixi-vn/issues/88)
 
 ## How to create the choice menu interface
 

@@ -4,7 +4,7 @@ A very important point to take into account before developing a game is the dist
 
 ## Website
 
-( Coming soon )
+( Documentation under review )
 
 ### Enable the ADD TO HOME SCREEN - PWA Plugin
 
@@ -16,8 +16,8 @@ Else, you can create the `manifest.json`, it depernds on the framework you are u
 
 ## Desktop devices
 
-( Coming soon )
+( Documentation under review )
 
 ## Mobile devices
 
-( Coming soon )
+( Documentation under review )

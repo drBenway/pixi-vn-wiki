@@ -20,7 +20,7 @@ For navigate between different url paths/routes ( [What is the URL Path and Rout
 
 ## Use Angular
 
-( Coming soon )
+( Documentation under review )
 
 ## Use React
 
