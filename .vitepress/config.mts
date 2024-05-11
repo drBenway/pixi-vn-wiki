@@ -80,7 +80,31 @@ export default defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://pixi-vn.web.app/'
+    hostname: 'https://pixi-vn.web.app/',
+    xmlns: {
+      news: false,
+      xhtml: true,
+      image: false,
+      video: false
+    },
+    transformItems: (items) => {
+      return items.map((item) => {
+        if (item.url.includes('/start/')) {
+          return {
+            url: item.url,
+            changefreq: 'monthly',
+            priority: 1,
+            lastmod: new Date().toISOString()
+          }
+        }
+        return {
+          url: item.url,
+          changefreq: 'monthly',
+          priority: 0.8,
+          lastmod: new Date().toISOString()
+        }
+      })
+    }
   },
 
   srcExclude: ['**/Home.md']
