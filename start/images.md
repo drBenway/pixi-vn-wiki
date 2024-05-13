@@ -125,7 +125,7 @@ Functions have been implemented to show images with some "standard" transitions.
 
 With the Dissolve Transition means that the image will be shown with a fade-in effect. If exist a previous image with the same tag, this image will be removed with a fade-out effect.
 
-The `showImageWithDissolveTransition` function has the following parameters:
+The `showWithDissolveTransition` function has the following parameters:
 
 * `tag`: The tag of the image.
 * `imageUrl`: The URL or path of the image.
@@ -133,9 +133,17 @@ The `showImageWithDissolveTransition` function has the following parameters:
 * `priority`: ( optional ) The priority of the transition.
 
 ```typescript
-import { showImageWithDissolveTransition } from '@drincs/pixi-vn'
+import { showWithDissolveTransition } from '@drincs/pixi-vn'
 
-showImageWithDissolveTransition('image1', 'path/to/image.png', 0.2)
+showWithDissolveTransition('image1', 'path/to/image.png', 0.2)
+```
+
+```typescript
+import { showWithDissolveTransition } from '@drincs/pixi-vn'
+
+let sprite = new CanvasSprite(yourTexture)
+// you can pass a canvas element
+showWithDissolveTransition('image1', sprite, 0.2)
 ```
 
 ## Other Transitions and Animations

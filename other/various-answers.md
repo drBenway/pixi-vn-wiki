@@ -42,7 +42,7 @@ export class ShowImageTest extends Label {
     override get steps(): StepLabelType[] {
         return [
             () => {
-                showImageWithDissolveTransition("alien", 'https://pixijs.com/assets/eggHead.png', 0.01)
+                showWithDissolveTransition("alien", 'https://pixijs.com/assets/eggHead.png', 0.01)
             },
             () => {
                 let alien = GameWindowManager.getCanvasElement<CanvasImage>("alien")
