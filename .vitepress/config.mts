@@ -89,19 +89,19 @@ export default defineConfig({
     },
     transformItems: (items) => {
       return items.map((item) => {
-        if (item.url.includes('/start/')) {
+        if (item.url.includes('start')) {
           return {
             url: item.url,
             changefreq: 'monthly',
             priority: 1,
-            lastmod: new Date().toISOString()
+            lastmod: new Date()
           }
         }
         return {
           url: item.url,
           changefreq: 'monthly',
-          priority: 0.8,
-          lastmod: new Date().toISOString()
+          priority: 0.7,
+          lastmod: new Date()
         }
       })
     }
