@@ -35,10 +35,19 @@ export class StartLabel extends Label {
 
 ### Step Result
 
-The steps can return a `StepResult` object with the following properties:
+The steps can return a `StepLabelResult` object that contains your properties.
 
-* `newRoute`: The new [URL Path or route key](/other/various-answers#what-is-the-url-path-and-routes) to navigate.
-* you property: You can add any property that you want.
+You can "override" the interface `StepLabelResult` to add your properties.
+
+```typescript
+// pixi-vn.types.ts
+declare module '@drincs/pixi-vn/dist/override' {
+    interface StepLabelResult {
+        newRoute?: string,
+        [key: string]: any
+    }
+}
+```
 
 This can be very useful **for get variables** when you call/jump to a label or run the next step.
 
@@ -58,9 +67,30 @@ export class StartLabel extends Label {
 }
 ```
 
-An other possibility is to use the [Game Storage](/start/storage) **for get variables**, but increase the save file if you not delete the variable after use.
+### Step Parameters
+
+You can pass a parameter `StepLabelProps` to the step function, object that contains your properties.
+
+You can "override" the interface `StepLabelProps` to add your properties.
 
 ```typescript
+// pixi-vn.types.ts
+declare module '@drincs/pixi-vn/dist/override' {
+    interface StepLabelProps {
+        navigate: (route: string) => void,
+    }
+}
+```
+
+This can be very useful **pass variables** to the step.
+
+```typescript
+return GameStepManager.callLabel(TestLabel, {
+    navigate: (route) => {
+        // navigate to route
+    }
+})
+```
 
 ## Run a label
 
@@ -83,20 +113,20 @@ For example if currently the game is running the step 5 of the label A and you c
 GameStepManager.callLabel(StartLabel)
 ```
 
-Remember that if you call the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#step-result).
+Remember that if you call the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#step-result) and pass the [parameters](#step-parameters).
 
 ```typescript
 @labelDecorator()
 export class StartLabel extends Label {
     override get steps(): StepLabelType[] {
         return [
-            () => {
-                return GameStepManager.callLabel(TestLabel).then((result) => {
+            (props) => {
+                return GameStepManager.callLabel(TestLabel, props).then((result) => {
                     return result
                 })
             },
             // or in one line
-            () => GameStepManager.callLabel(TestLabel),
+            (props) => GameStepManager.callLabel(TestLabel, props),
         ]
     }
 }
@@ -116,20 +146,20 @@ For example if currently the game is running the step 5 of the label A and you j
 GameStepManager.jumpLabel(StartLabel)
 ```
 
-Remember that if you call the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#step-result).
+Remember that if you call the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#step-result) and pass the [parameters](#step-parameters).
 
 ```typescript
 @labelDecorator()
 export class StartLabel extends Label {
     override get steps(): StepLabelType[] {
         return [
-            () => {
-                return GameStepManager.jumpLabel(TestLabel).then((result) => {
+            (props) => {
+                return GameStepManager.jumpLabel(TestLabel, props).then((result) => {
                     return result
                 })
             },
             // or in one line
-            () => GameStepManager.jumpLabel(TestLabel),
+            (props) => GameStepManager.jumpLabel(TestLabel, props),
         ]
     }
 }
