@@ -14,7 +14,7 @@ Currently the base canvas elements are:
 
 You can create custom elements by extending the base elements. It is necessary use the decorator `@canvasElementDecorator`.
 
-`@canvasElementDecorator` is a decorator that save the canvas element in memory. It have a optional parameter that is the id of the canvas element (must be unique). If you don't pass the id, the canvas element will be saved with the class name. ( [How enable the decorators in TypeScript?](/other/various-answers#how-enable-the-decorators-in-typescript) )
+`@canvasElementDecorator` is a decorator that save the canvas element in memory. It have a optional parameter that is the id of the canvas element (must be unique). If you don't pass the id, the canvas element will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
 
 And is necessary to override the `memory` property to store the custom element properties.
 In `get memory()` is very important to return the `className` property, this property must equal to the decorator parameter or the class name if the decorator parameter is not passed.
@@ -115,7 +115,7 @@ The class that is passed must have the following characteristics:
 
 * extends the `CanvasEvent` class
 * override the `fn` method. This method will be executed when the event is triggered.
-* have the decorator `@eventDecorator`. `@eventDecorator` is a decorator that save the event in memory. It have a optional parameter that is the id of the event (must be unique). If you don't pass the id, the event will be saved with the class name. ( [How enable the decorators in TypeScript?](/other/various-answers#how-enable-the-decorators-in-typescript) )
+* have the decorator `@eventDecorator`. `@eventDecorator` is a decorator that save the event in memory. It have a optional parameter that is the id of the event (must be unique). If you don't pass the id, the event will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
 
 ```typescript
 @eventDecorator()

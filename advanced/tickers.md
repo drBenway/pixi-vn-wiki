@@ -11,7 +11,7 @@ In Pixi.js, you can add a Ticker by passing a lambda as a parameter that will be
 
 In Pixi’VN, you must create a class tha extends `TickerBase`, add a decorator `@tickerDecorator` to the class and override the `fn` method.
 
-`@tickerDecorator` is a decorator that save the ticker in memory. It have a optional parameter that is the id of the ticker (must be unique). If you don't pass the id, the ticker will be saved with the class name. ( [How enable the decorators in TypeScript?](/other/various-answers#how-enable-the-decorators-in-typescript) )
+`@tickerDecorator` is a decorator that save the ticker in memory. It have a optional parameter that is the id of the ticker (must be unique). If you don't pass the id, the ticker will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
 
 ```typescript
 @tickerDecorator() // or @tickerDecorator('TickerRotate')
