@@ -35,8 +35,7 @@ You can pass a type to `newLabel` function to set to add other parameters in add
 ```typescript
 const START_LABEL_ID = "StartLabel"
 
-export const startLabel = newLabel<{name: string}>(
-    START_LABEL_ID,
+export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
     [
         (props) => {
             if (props) {
@@ -96,19 +95,16 @@ declare module '@drincs/pixi-vn/dist/override' {
 This can be very useful **for get variables** when you call/jump to a label or run the next step.
 
 ```typescript
-@labelDecorator() // or @labelDecorator('StartLabel')
-export class StartLabel extends Label {
-    override get steps(): StepLabelType[] {
-        return [
-            () => {
-                return {
-                    newRoute: '/new-route',
-                    customProperty: 12
-                }
-            },
-        ]
-    }
-}
+export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+    [
+        () => {
+            return {
+                newRoute: '/new-route',
+                customProperty: 12
+            }
+        },
+    ]
+)
 ```
 
 ## Run a label
@@ -135,20 +131,17 @@ GameStepManager.callLabel(StartLabel)
 Remember that if you call the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
 
 ```typescript
-@labelDecorator()
-export class StartLabel extends Label {
-    override get steps(): StepLabelType[] {
-        return [
-            (props) => {
-                return GameStepManager.callLabel(TestLabel, props).then((result) => {
-                    return result
-                })
-            },
-            // or in one line
-            (props) => GameStepManager.callLabel(TestLabel, props),
-        ]
-    }
-}
+export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+    [
+        (props) => {
+            return GameStepManager.callLabel(TestLabel, props).then((result) => {
+                return result
+            })
+        },
+        // or in one line
+        (props) => GameStepManager.callLabel(TestLabel, props),
+    ]
+)
 ```
 
 ### Jump to a label
@@ -168,20 +161,17 @@ GameStepManager.jumpLabel(StartLabel)
 Remember that if you call the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
 
 ```typescript
-@labelDecorator()
-export class StartLabel extends Label {
-    override get steps(): StepLabelType[] {
-        return [
-            (props) => {
-                return GameStepManager.jumpLabel(TestLabel, props).then((result) => {
-                    return result
-                })
-            },
-            // or in one line
-            (props) => GameStepManager.jumpLabel(TestLabel, props),
-        ]
-    }
-}
+export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+    [
+        (props) => {
+            return GameStepManager.jumpLabel(TestLabel, props).then((result) => {
+                return result
+            })
+        },
+        // or in one line
+        (props) => GameStepManager.jumpLabel(TestLabel, props),
+    ]
+)
 ```
 
 ## Next Step
@@ -254,18 +244,15 @@ In some cases it is not possible to navigate to a new route/path in the step, fo
 The solution is to return a [`StepResult`](#all-steps-result) with the `newRoute` property, and after the step is executed, the game will navigate to the new route/path.
 
 ```typescript
-@labelDecorator() // or @labelDecorator('StartLabel')
-export class StartLabel extends Label {
-    override get steps(): StepLabelType[] {
-        return [
-            () => {
-                return {
-                    newRoute: '/new-route',
-                }
-            },
-        ]
-    }
-}
+export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+    [
+        () => {
+            return {
+                newRoute: '/new-route',
+            }
+        },
+    ]
+)
 ```
 
 ```typescript
@@ -280,16 +267,13 @@ GameStepManager.runNextStep()
 Or, if you don't want to use the [`StepResult`](#all-steps-result) you can [`GameStorageManager.setVariable`](/start/storage#set-a-variable-in-the-game-storage) and after the step is executed, the game will navigate to the new route/path.
 
 ```typescript
-@labelDecorator() // or @labelDecorator('StartLabel')
-export class StartLabel extends Label {
-    override get steps(): StepLabelType[] {
-        return [
-            () => {
-                GameStorageManager.setVariable('newRoute', '/new-route')
-            },
-        ]
-    }
-}
+export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+    [
+        () => {
+            GameStorageManager.setVariable('newRoute', '/new-route')
+        },
+    ]
+)
 ```
 
 ```typescript

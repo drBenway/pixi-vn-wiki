@@ -22,20 +22,17 @@ In this case you can simply set the variable equal to the objective to be achiev
 For example:
 
 ```typescript
-@labelDecorator()
-export class ShowImageTest extends Label {
-    override get steps(): StepLabelType[] {
-        return [
-            () => {
-                showWithDissolveTransition("alien", 'https://pixijs.com/assets/eggHead.png', 0.01)
-            },
-            () => {
-                let alien = GameWindowManager.getCanvasElement<CanvasImage>("alien")
-                if (alien) alien.alpha = 1
-            },
-        ]
-    }
-}
+export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+    [
+        () => {
+            showWithDissolveTransition("alien", 'https://pixijs.com/assets/eggHead.png', 0.01)
+        },
+        () => {
+            let alien = GameWindowManager.getCanvasElement<CanvasImage>("alien")
+            if (alien) alien.alpha = 1
+        },
+    ]
+)
 ```
 
 Also, you can [unlink the Transition/Effect/Animation](/advanced/tickers) from the canvas element in the next step.
