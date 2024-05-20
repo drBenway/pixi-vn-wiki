@@ -83,17 +83,17 @@ clearDialogue();
 
 ## Get the History of Dialogues
 
-To get the history of dialogues for every [game steps](/start/labels), use the `getDialogueHistory`. The return is a `IDialogueHistory<T>[]`.
+To get the history of dialogues for every [game steps](/start/labels), use the `getDialogueHistory`. The return is a `DialogueHistory<T>[]`.
 
 ```typescript
-const dialogues: IDialogueHistory<DialogueBaseModel>[] = getDialogueHistory<DialogueBaseModel>();
+const dialogues: DialogueHistory<DialogueBaseModel>[] = getDialogueHistory<DialogueBaseModel>();
 ```
 
 If you use the [Extended DialogueModel](#extend-dialoguebasemodel), you can get the history of dialogues and cast to the extended class.
 The return is your extended class or `DialogueBaseModel`, so you can use `instanceof` to check the type.
 
 ```typescript
-const dialogues: IDialogueHistory<DialogueModel | DialogueBaseModel>[] = getDialogueHistory<DialogueModel>();
+const dialogues: DialogueHistory<DialogueModel | DialogueBaseModel>[] = getDialogueHistory<DialogueModel>();
 
 if (!dialogues[0].dialogue instanceof DialogueModel) {
     // console.log("The first dialogue is not a DialogueModel")
