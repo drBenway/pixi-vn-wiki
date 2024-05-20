@@ -13,27 +13,71 @@ Some steps could start other labels. The game will end only when all the steps a
 
 The label is a container of steps. It is used to organize the steps in a more readable way.
 
-To define the Labels you must define a class that extends the `Label` class and must add a decorator `@labelDecorator` to the class.
-
-`@labelDecorator` is a decorator that save the label in memory. It have a optional parameter that is the id of the label (must be unique). If you don't pass the id, the label will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
-
-Also to add steps to the label you must override the `steps` property and return an array of functions.
+For create a label you must use the `@newLabel` function and pass the label ID and the steps.
 
 ```typescript
-@labelDecorator() // or @labelDecorator('StartLabel')
-export class StartLabel extends Label {
-    override get steps(): StepLabelType[] {
-        return [
-            () => {
-                setDialogue({ character: liam, text: "Example of dialogue" })
-            },
-            () => GameStepManager.jumpLabel(StartLabel),
-        ]
+const START_LABEL_ID = "StartLabel"
+
+export const startLabel = newLabel(START_LABEL_ID,
+    [
+        () => {
+            setDialogue({ character: liam, text: "Example of dialogue" })
+        },
+        (props) => GameStepManager.jumpLabel(START_LABEL_ID, props),
+    ]
+)
+```
+
+### Label Steps Parameters
+
+You can pass a type to `newLabel` function to set to add other parameters in addition to [`StepLabelProps`](#all-steps-parameters) to all steps of the label.
+
+```typescript
+const START_LABEL_ID = "StartLabel"
+
+export const startLabel = newLabel<{name: string}>(
+    START_LABEL_ID,
+    [
+        (props) => {
+            if (props) {
+                console.log(props.name)
+            }
+        },
+    ]
+)
+
+GameStepManager.callLabel(startLabel, {
+    // add StepLabelProps here
+    navigate: navigate, // example
+    // and the props that will be passed to the label
+    name: "John"
+})
+```
+
+### All Steps Parameters
+
+You can "override" the interface `StepLabelProps` to set required properties to all steps.
+
+```typescript
+// pixi-vn.types.ts
+declare module '@drincs/pixi-vn/dist/override' {
+    interface StepLabelProps {
+        navigate: (route: string) => void,
     }
 }
 ```
 
-### Step Result
+This can be very useful **pass variables** to the step.
+
+```typescript
+return GameStepManager.callLabel(TestLabel, {
+    navigate: (route) => {
+        // navigate to route
+    }
+})
+```
+
+### All Steps Result
 
 The steps can return a `StepLabelResult` object that contains your properties.
 
@@ -67,31 +111,6 @@ export class StartLabel extends Label {
 }
 ```
 
-### Step Parameters
-
-You can pass a parameter `StepLabelProps` to the step function, object that contains your properties.
-
-You can "override" the interface `StepLabelProps` to add your properties.
-
-```typescript
-// pixi-vn.types.ts
-declare module '@drincs/pixi-vn/dist/override' {
-    interface StepLabelProps {
-        navigate: (route: string) => void,
-    }
-}
-```
-
-This can be very useful **pass variables** to the step.
-
-```typescript
-return GameStepManager.callLabel(TestLabel, {
-    navigate: (route) => {
-        // navigate to route
-    }
-})
-```
-
 ## Run a label
 
 There are two ways to run a label:
@@ -107,13 +126,13 @@ When you call a label, the steps of that label will be started and if before the
 
 For example if currently the game is running the step 5 of the label A and you call the label B, when all the steps of the label B are executed, the game will continue with the step 6 of the label A.
 
-`GameStepManager.callLabel` returns a [result of first step of the called label](#step-result).
+`GameStepManager.callLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
 GameStepManager.callLabel(StartLabel)
 ```
 
-Remember that if you call the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#step-result) and pass the [parameters](#step-parameters).
+Remember that if you call the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
 
 ```typescript
 @labelDecorator()
@@ -140,13 +159,13 @@ When you jump to a label, the steps of the current label will be stopped and the
 
 For example if currently the game is running the step 5 of the label A and you jump to the label B, when all the steps of the label B are executed, the game will end, also if the label B have a step 6.
 
-`GameStepManager.jumpLabel` returns a [result of first step of the called label](#step-result).
+`GameStepManager.jumpLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
 GameStepManager.jumpLabel(StartLabel)
 ```
 
-Remember that if you call the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#step-result) and pass the [parameters](#step-parameters).
+Remember that if you call the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
 
 ```typescript
 @labelDecorator()
@@ -232,7 +251,7 @@ if (GameStepManager.isLastGameStep) {
 
 In some cases it is not possible to navigate to a new route/path in the step, for example if you are using a [React Router Dom](https://reactrouter.com) and you want to navigate to a new route/path in the step.
 
-The solution is to return a [`StepResult`](#step-result) with the `newRoute` property, and after the step is executed, the game will navigate to the new route/path.
+The solution is to return a [`StepResult`](#all-steps-result) with the `newRoute` property, and after the step is executed, the game will navigate to the new route/path.
 
 ```typescript
 @labelDecorator() // or @labelDecorator('StartLabel')
@@ -258,7 +277,7 @@ GameStepManager.runNextStep()
     })
 ```
 
-Or, if you don't want to use the [`StepResult`](#step-result) you can [`GameStorageManager.setVariable`](/start/storage#set-a-variable-in-the-game-storage) and after the step is executed, the game will navigate to the new route/path.
+Or, if you don't want to use the [`StepResult`](#all-steps-result) you can [`GameStorageManager.setVariable`](/start/storage#set-a-variable-in-the-game-storage) and after the step is executed, the game will navigate to the new route/path.
 
 ```typescript
 @labelDecorator() // or @labelDecorator('StartLabel')
