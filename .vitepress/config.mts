@@ -34,8 +34,8 @@ export default defineConfig({
           items: [
             { text: 'Characters', link: '/start/character' },
             { text: 'Dialogue and Narration', link: '/start/narration' },
-            { text: 'Choice Menus', link: '/start/choices' },
             { text: 'Label and Game Step', link: '/start/labels' },
+            { text: 'Choice Menus', link: '/start/choices' },
             { text: 'Game Storage', link: '/start/storage' },
             { text: 'Flags Management', link: '/start/flags' },
             { text: 'Save and Load', link: '/start/save' },
