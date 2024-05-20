@@ -60,6 +60,7 @@ clearChoiceMenuOptions();
 For example ( in React using Material-UI ):
 
 ```tsx
+// react
 const [menuOptions, setChoiceMenuOptions] = useState<ChoiceMenuOption[]>(getChoiceMenuOptions())
 
 return (
