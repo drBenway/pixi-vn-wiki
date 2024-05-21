@@ -95,7 +95,7 @@ declare module '@drincs/pixi-vn/dist/override' {
 This can be very useful **for get variables** when you call/jump to a label or run the next step.
 
 ```typescript
-export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+export const startLabel = newLabel(START_LABEL_ID,
     [
         () => {
             return {
@@ -131,7 +131,7 @@ GameStepManager.callLabel(StartLabel)
 Remember that if you call the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
 
 ```typescript
-export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+export const startLabel = newLabel(START_LABEL_ID,
     [
         (props) => {
             return GameStepManager.callLabel(TestLabel, props).then((result) => {
@@ -161,7 +161,7 @@ GameStepManager.jumpLabel(StartLabel)
 Remember that if you call the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
 
 ```typescript
-export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+export const startLabel = newLabel(START_LABEL_ID,
     [
         (props) => {
             return GameStepManager.jumpLabel(TestLabel, props).then((result) => {
@@ -244,7 +244,7 @@ In some cases it is not possible to navigate to a new route/path in the step, fo
 The solution is to return a [`StepResult`](#all-steps-result) with the `newRoute` property, and after the step is executed, the game will navigate to the new route/path.
 
 ```typescript
-export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+export const startLabel = newLabel(START_LABEL_ID,
     [
         () => {
             return {
@@ -267,7 +267,7 @@ GameStepManager.runNextStep()
 Or, if you don't want to use the [`StepResult`](#all-steps-result) you can [`GameStorageManager.setVariable`](/start/storage#set-a-variable-in-the-game-storage) and after the step is executed, the game will navigate to the new route/path.
 
 ```typescript
-export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+export const startLabel = newLabel(START_LABEL_ID,
     [
         () => {
             GameStorageManager.setVariable('newRoute', '/new-route')
