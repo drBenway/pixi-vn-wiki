@@ -77,9 +77,9 @@ return GameStepManager.callLabel(TestLabel, {
 
 ### All Steps Result
 
-The steps can return a `StepLabelResult` object, by default the `StepLabelResult` object is a `{ [key: string]: any }` object.
+The steps can return a `StepLabelResult` object, by default the `StepLabelResult` object is a `{ [key: string]: any }`.
 
-You can "override" the interface `StepLabelResult` to set a result property.
+You can "override" the interface `StepLabelResult` to set your custom properties in the result of the steps.
 
 ```typescript
 // pixi-vn.types.ts
