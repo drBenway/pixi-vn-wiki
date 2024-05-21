@@ -13,7 +13,10 @@ Some steps could start other labels. The game will end only when all the steps a
 
 The label is a container of steps. It is used to organize the steps in a more readable way.
 
-For create a label you must use the `@newLabel` function and pass the label ID and the steps.
+For create a label you must use the `newLabel()` function and pass:
+
+* the `id` of the label, must be unique
+* the `steps` of the label, an array of functions that will be executed in order
 
 ```typescript
 const START_LABEL_ID = "StartLabel"
