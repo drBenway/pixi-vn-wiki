@@ -234,49 +234,30 @@ if (GameStepManager.isLastGameStep) {
 
 ## How navigate in new route/path in the Game Step
 
-In some cases it is not possible to navigate to a new route/path in the step, for example if you are using a [React Router Dom](https://reactrouter.com) and you want to navigate to a new route/path in the step.
+In some cases it is not possible to navigate to a new route/path in the step.
 
-The solution is to return a [`StepResult`](#all-steps-result) with the `newRoute` property, and after the step is executed, the game will navigate to the new route/path.
+The solution is [override the `StepLabelProps`](#all-steps-parameters) interface and add a `navigate` function that will be called in the step.
+
+```typescript
+// pixi-vn.types.ts
+declare module '@drincs/pixi-vn/dist/override' {
+    interface StepLabelProps {
+        navigate: (route: string) => void,
+    }
+}
+```
 
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
-        () => {
-            return {
-                newRoute: '/new-route',
+        (props) => {
+            if (props) {
+                props.navigate('/new-route')
+            }
+            else {
+                console.error('you not passed the props')
             }
         },
     ]
 )
-```
-
-```typescript
-GameStepManager.runNextStep()
-    .then((result) => {
-        if (result?.newRoute) {
-            // navigate to new route
-        }
-    })
-```
-
-Or, if you don't want to use the [`StepResult`](#all-steps-result) you can [`GameStorageManager.setVariable`](/start/storage#set-a-variable-in-the-game-storage) and after the step is executed, the game will navigate to the new route/path.
-
-```typescript
-export const startLabel = newLabel(START_LABEL_ID,
-    [
-        () => {
-            GameStorageManager.setVariable('newRoute', '/new-route')
-        },
-    ]
-)
-```
-
-```typescript
-GameStepManager.runNextStep()
-    .then(() => {
-        const newRoute = GameStorageManager.getVariable<string>('newRoute')
-        if (newRoute) {
-            // navigate to new route
-        }
-    })
 ```
