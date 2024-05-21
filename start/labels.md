@@ -171,7 +171,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ## Next Step
 
-To execute the next step you must call the `GameStepManager.runNextStep()` function.
+To execute the next step you must execute the `GameStepManager.runNextStep()` function.
 
 ```typescript
 GameStepManager.runNextStep()
@@ -189,7 +189,7 @@ GameStepManager.runNextStep()
 
 ## Close current label
 
-To close the current label you must call the `GameStepManager.closeCurrentLabel()` function.
+To close the current label you must execute the `GameStepManager.closeCurrentLabel()` function.
 
 ```typescript
 GameStepManager.closeCurrentLabel()
@@ -197,7 +197,7 @@ GameStepManager.closeCurrentLabel()
 
 ## Clase all labels
 
-To close all labels you must call the `GameStepManager.closeAllLabels()` function.
+To close all labels you must execute the `GameStepManager.closeAllLabels()` function.
 If you call this function and after that you don't call any label, the game will end.
 
 ```typescript
@@ -206,7 +206,7 @@ GameStepManager.closeAllLabels()
 
 ## Go back
 
-Every step the system saves the current state of the game. To go back to the previous step you must call the `GameStepManager.goBack()` function.
+Every step the system saves the current state of the game. To go back to the previous step you must execute the `GameStepManager.goBack()` function.
 
 In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/other/various-answers#what-is-the-url-path-and-routes-and-routes) of the previous step, so you can use it to navigate to the previous [Interface](/start/interface#how-navigateswitch-between-interface-screens).
 
@@ -224,7 +224,7 @@ if (GameStepManager.canGoBack) {
 
 ## How determinate if current step is the last step in the game (end of the game)
 
-To determinate if the current step is the last step in the game you must call the `GameStepManager.isLastGameStep` function.
+To determinate if the current step is the last step in the game you must use the `GameStepManager.isLastGameStep` property.
 
 ```typescript
 if (GameStepManager.isLastGameStep) {
