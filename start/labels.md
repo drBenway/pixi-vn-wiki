@@ -123,7 +123,7 @@ For example if currently the game is running the step 5 of the label A and you c
 GameStepManager.callLabel(StartLabel)
 ```
 
-Remember that if you call the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
+Remember that if you execute the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
 
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
@@ -141,7 +141,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ### Jump to a label
 
-To jump to a label you must use the `GameStepManager.jumpLabel` function and pass the label class.
+To jump to a label you must use the `GameStepManager.jumpLabel` function and pass the label.
 
 When you jump to a label, the steps of the current label will be stopped and the steps of the label passed as parameter will be started.
 
@@ -153,7 +153,7 @@ For example if currently the game is running the step 5 of the label A and you j
 GameStepManager.jumpLabel(StartLabel)
 ```
 
-Remember that if you call the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
+Remember that if you execute the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
 
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
