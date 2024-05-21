@@ -94,9 +94,7 @@ image2.load()
 If a label shows a sequence of very large images, it can be very useful to load the images in the cache when the label is called. This way, the images will be loaded in the background and will be ready to be displayed when they are needed.
 
 ```typescript
-import { Assets, Label, labelDecorator, StepLabelType } from "@drincs/pixi-vn";
-
-export const startLabel = new Label("StartLabel", [
+export const startLabel = newLabel("StartLabel", [
     // use the image1 ...
     // ...
     ], () => {
@@ -108,9 +106,7 @@ export const startLabel = new Label("StartLabel", [
 ```
 
 ```typescript
-import { Assets, Label, labelDecorator, StepLabelType } from "@drincs/pixi-vn";
-
-export const startLabel = new Label("StartLabel", [
+export const startLabel = newLabel("StartLabel", [
     // use the image1 ...
     // ...
     ], () => {
