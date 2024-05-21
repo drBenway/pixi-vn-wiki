@@ -96,19 +96,29 @@ If a label shows a sequence of very large images, it can be very useful to load 
 ```typescript
 import { Assets, Label, labelDecorator, StepLabelType } from "@drincs/pixi-vn";
 
-@labelDecorator()
-export class StartLabel extends Label {
-    constructor() {
-        super();
+export const startLabel = new Label("StartLabel", [
+    // use the image1 ...
+    // ...
+    ], () => {
+        // Load the images in the cache asynchronously, so the images will be loaded in the background
         Assets.load('path/to/image1.png')
         Assets.load('path/to/image2.png')
     }
-    override get steps(): StepLabelType[] {
-        return [
-            // ...
-        ]
+)
+```
+
+```typescript
+import { Assets, Label, labelDecorator, StepLabelType } from "@drincs/pixi-vn";
+
+export const startLabel = new Label("StartLabel", [
+    // use the image1 ...
+    // ...
+    ], () => {
+        // Load the images in the cache synchronously, so before the next step the images will be loaded
+        await Assets.load('path/to/image1.png')
+        await Assets.load('path/to/image2.png')
     }
-}
+)
 ```
 
 ## Remove Image
