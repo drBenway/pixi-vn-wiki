@@ -31,9 +31,9 @@ export const startLabel = newLabel(START_LABEL_ID,
 )
 ```
 
-### Label Steps Parameters
+### Parameters of the label steps
 
-You can pass a type to `newLabel` function to set to add other parameters in addition to [`StepLabelProps`](#all-steps-parameters) to all steps of the label.
+You can pass a type to `newLabel` function to set to add other parameters in addition to [`StepLabelProps`](#all-steps-parameters) for all steps of the label.
 
 ```typescript
 const START_LABEL_ID = "StartLabel"
@@ -58,7 +58,7 @@ GameStepManager.callLabel(startLabel, {
 
 ### All Steps Parameters
 
-You can "override" the interface `StepLabelProps` to set required properties to all steps.
+You can "override" the interface `StepLabelProps` to set required parameters for all steps of all labels.
 
 ```typescript
 // pixi-vn.types.ts
@@ -67,11 +67,7 @@ declare module '@drincs/pixi-vn/dist/override' {
         navigate: (route: string) => void,
     }
 }
-```
 
-This can be very useful **pass variables** to the step.
-
-```typescript
 return GameStepManager.callLabel(TestLabel, {
     navigate: (route) => {
         // navigate to route
@@ -81,9 +77,9 @@ return GameStepManager.callLabel(TestLabel, {
 
 ### All Steps Result
 
-The steps can return a `StepLabelResult` object that contains your properties.
+The steps can return a `StepLabelResult` object, by default the `StepLabelResult` object is a `{ [key: string]: any }` object.
 
-You can "override" the interface `StepLabelResult` to add your properties.
+You can "override" the interface `StepLabelResult` to set a result property.
 
 ```typescript
 // pixi-vn.types.ts
@@ -93,11 +89,7 @@ declare module '@drincs/pixi-vn/dist/override' {
         [key: string]: any
     }
 }
-```
 
-This can be very useful **for get variables** when you call/jump to a label or run the next step.
-
-```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
         () => {
@@ -119,9 +111,9 @@ There are two ways to run a label:
 
 ### Call a label
 
-To call a label you must use the `GameStepManager.callLabel` function and pass the label class.
+To call a label you must use the `GameStepManager.callLabel` function and pass the label.
 
-When you call a label, the steps of that label will be started and if before the call was running another label, the steps of the label called will be executed after the steps of the current label.
+When you call a label, the steps of that label will be started. If before the call was running another label, the remaining steps of the another label will be executed after the steps of the called label.
 
 For example if currently the game is running the step 5 of the label A and you call the label B, when all the steps of the label B are executed, the game will continue with the step 6 of the label A.
 
