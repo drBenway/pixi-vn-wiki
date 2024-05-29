@@ -254,9 +254,7 @@ declare module '@drincs/pixi-vn/dist/override' {
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
-        (props) => {
-            props.navigate('/new-route')
-        },
+        ({ navigate }) => navigate('/new-route'),
     ]
 )
 ```
