@@ -41,9 +41,7 @@ const START_LABEL_ID = "StartLabel"
 export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
     [
         (props) => {
-            if (props) {
-                console.log(props.name)
-            }
+            console.log(props.name)
         },
     ]
 )
@@ -111,7 +109,10 @@ There are two ways to run a label:
 
 ### Call a label
 
-To call a label you must use the `GameStepManager.callLabel` function and pass the label.
+To call a label you must use the `GameStepManager.callLabel` function and pass the label. This function have 2 parameters:
+
+* `label`: the label that will be called
+* `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
 
 When you call a label, the steps of that label will be started. If before the call was running another label, the remaining steps of the another label will be executed after the steps of the called label.
 
@@ -120,7 +121,7 @@ For example if currently the game is running the step 5 of the label A and you c
 `GameStepManager.callLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
-GameStepManager.callLabel(StartLabel)
+GameStepManager.callLabel(StartLabel, {})
 ```
 
 Remember that if you execute the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
@@ -141,7 +142,10 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ### Jump to a label
 
-To jump to a label you must use the `GameStepManager.jumpLabel` function and pass the label.
+To jump to a label you must use the `GameStepManager.jumpLabel` function and pass the label. This function have 2 parameters:
+
+* `label`: the label that will be called
+* `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
 
 When you jump to a label, the steps of the current label will be stopped and the steps of the label passed as parameter will be started.
 
@@ -150,7 +154,7 @@ For example if currently the game is running the step 5 of the label A and you j
 `GameStepManager.jumpLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
-GameStepManager.jumpLabel(StartLabel)
+GameStepManager.jumpLabel(StartLabel, {})
 ```
 
 Remember that if you execute the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and pass the [parameters](#all-steps-parameters).
@@ -171,17 +175,17 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ## Next Step
 
-To execute the next step you must execute the `GameStepManager.runNextStep()` function.
+To execute the next step you must execute the `GameStepManager.runNextStep()` function. This function have a parameter `props` that will be passed to the next step, if you not want to pass any parameter you can pass an empty object `{}`.
 
 ```typescript
-GameStepManager.runNextStep()
+GameStepManager.runNextStep({})
 ```
 
 `GameStepManager.runNextStep()` is asynchronous, so, for example, you can use `then` for disabled a next button until the next step is executed.
 
 ```typescript
 // disable next button
-GameStepManager.runNextStep()
+GameStepManager.runNextStep({})
     .then((result) => {
         // enable next button
     })
@@ -251,12 +255,7 @@ declare module '@drincs/pixi-vn/dist/override' {
 export const startLabel = newLabel(START_LABEL_ID,
     [
         (props) => {
-            if (props) {
-                props.navigate('/new-route')
-            }
-            else {
-                console.error('you not passed the props')
-            }
+            props.navigate('/new-route')
         },
     ]
 )

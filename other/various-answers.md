@@ -58,7 +58,7 @@ useEffect(() => {
 }, [skipEnabled, recheckSkipAuto, autoEnabled])
 
 function nextOnClick() {
-    GameStepManager.runNextStep()
+    GameStepManager.runNextStep({})
         .then(() => {
             if (skipEnabled) {
                 setTimeout(() => {
