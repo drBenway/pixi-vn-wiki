@@ -85,14 +85,9 @@ const dialogues: DialogueHistory<DialogueBaseModel>[] = getDialogueHistory<Dialo
 ```
 
 If you use the [Extended DialogueModel](#extend-dialoguebasemodel), you can get the history of dialogues and cast to the extended class.
-The return is your extended class or `DialogueBaseModel`, so you can use `instanceof` to check the type.
 
 ```typescript
-const dialogues: DialogueHistory<DialogueModel | DialogueBaseModel>[] = getDialogueHistory<DialogueModel>();
-
-if (!dialogues[0].dialogue instanceof DialogueModel) {
-    // console.log("The first dialogue is not a DialogueModel")
-}
+const dialogues: DialogueHistory<DialogueModel>[] = getDialogueHistory<DialogueModel>();
 ```
 
 ## Extend DialogueBaseModel
