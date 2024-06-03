@@ -92,7 +92,7 @@ const dialogues: DialogueHistory<DialogueModel>[] = getDialogueHistory<DialogueM
 
 ## Extend DialogueBaseModel
 
-You can extend the `DialogueBaseModel` to add more properties, but it not recommended (you can use the param `oltherParams` to add more properties. `oltherParams` forces you to use only type variables that can be saved on storage).
+You can extend the `DialogueBaseModel` to add more properties, but it **not recommended** (you can use the param `oltherParams` to add more properties. `oltherParams` forces you to use only type variables that can be saved on storage).
 
 If you decide to extend the `DialogueBaseModel` keep in mind that this class will be saved on storage as json with `JSON.stringify` and `JSON.parse`.
 
