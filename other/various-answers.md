@@ -21,7 +21,12 @@ For example:
 // pixi-vn.types.ts
 declare module '@drincs/pixi-vn/dist/override' {
     interface StepLabelProps {
-        navigate: (route: string) => void,
+        /**
+         * function to navigate to a new route.
+         * @param route The route to navigate to.
+         * @returns 
+         */
+        navigate: (route: string) => void
         // ...
     }
 }
@@ -107,47 +112,34 @@ function nextOnClick() {
 
 It is the developer's job to choose which library to use to translate the game. It recommend using [i18next](https://www.i18next.com/).
 
-For you want use i18next args in dialogues, you can use the following code:
+It is recommended to overwrite the `StepLabelProps` interface to add the `t` function. `t` function is a function that will be called with the key of the translation, so you can use it to translate the text.
 
 ```typescript
-export class DialogueModel extends DialogueBaseModel {
-    constructor(
-        character: CharacterModel | string,
-        text: string,
-        i18nArgs: { key: string }
-    ) {
-        super(character, text);
-        this.i18nArgs = i18nArgs;
-    }
-    i18nArgs: { key: string } = { key: "" }
-}
-// or better
-export class DialogueModel extends DialogueBaseModel {
-    constructor(
-        text: string,
-        character: CharacterModel | string,
-        i18nArgs: { [key: string]: string } = {}
-    ) {
-        super(text, character);
-        this.oltherParams = {
-            i18nArgs: i18nArgs
-        }
-    }
-    oltherParams: { // oltherParams is a param of DialogueBaseModel
-        [key: string | number | symbol]: StorageElementType,
-        i18nArgs: { [key: string]: string }
-    }
-
-    get i18nArgs() {
-        return this.oltherParams.i18nArgs;
+// pixi-vn.types.ts
+declare module '@drincs/pixi-vn/dist/override' {
+    interface StepLabelProps {
+        /**
+         * Translate a key to a string.
+         * @param key The key to translate.
+         * @returns The translated string.
+         */
+        t: TFunction<[string], undefined>
+        // ...
     }
 }
 ```
 
 ```typescript
-let dial = getDialogue<DialogueModel>()
-if (dial) {
-    setText(t(dial.text, dial.i18nArgs))
+export const startLabel = newLabel(START_LABEL_ID,
+    [
+        ({ t }) => setDialogue({ character: liam, text: t("hello_my_name_is", { name: "Liam" }) }),
+    ]
+)
+```
+
+```json
+{
+    "hello_my_name_is": "Hello, my name is {{name}}"
 }
 ```
 

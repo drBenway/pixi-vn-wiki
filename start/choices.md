@@ -70,7 +70,7 @@ clearChoiceMenuOptions();
 
 ## Close th choice menu
 
-To close the choice menu, use the `GameStepManager.closeChoiceMenu`. This is used after choosing [`ChoiceMenuOptionClose`](#choice-menu-option-close).
+To close the choice menu, use the `GameStepManager.closeChoiceMenu`. This is used after choosing [`ChoiceMenuOptionClose`](#choice-for-closing-the-menu).
 
 This function have the 2 parameters:
 
