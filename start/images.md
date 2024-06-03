@@ -6,7 +6,7 @@ To make adding and managing images on the canvas easier than pixi.js methods, Pi
 
 To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/advanced/canvas-elements#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/advanced/canvas-elements#base-elements).
 
-It is important to take into account that this function only adds the element to the canvas but does not show it and does not load its texture.
+It is important to take into account that this function only adds the element to the canvas but does **not show it and does not load its texture**.
 
 `addImage` function has the following parameters:
 
