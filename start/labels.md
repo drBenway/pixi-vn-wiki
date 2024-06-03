@@ -235,26 +235,3 @@ if (GameStepManager.isLastGameStep) {
     // end of the game
 }
 ```
-
-## How navigate in new route/path in the Game Step
-
-In some cases it is not possible to navigate to a new route/path in the step.
-
-The solution is [override the `StepLabelProps`](#all-steps-parameters) interface and add a `navigate` function that will be called in the step.
-
-```typescript
-// pixi-vn.types.ts
-declare module '@drincs/pixi-vn/dist/override' {
-    interface StepLabelProps {
-        navigate: (route: string) => void,
-    }
-}
-```
-
-```typescript
-export const startLabel = newLabel(START_LABEL_ID,
-    [
-        ({ navigate }) => navigate('/new-route'),
-    ]
-)
-```

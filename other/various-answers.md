@@ -11,6 +11,30 @@ A routering system can be used to manage navigation between URL Paths. For examp
 * [Angular Router](https://angular.io/guide/router)
 * [TanStack Router](https://tanstack.com/router/latest)
 
+### How use navigation function in step/label?
+
+It is recommended to overwrite the `StepLabelProps` interface to add the `navigate` function. `navigate` function is a function that will be called with the URL Path or Route of the next step, so you can use it to navigate to the next Interface.
+
+For example:
+
+```typescript
+// pixi-vn.types.ts
+declare module '@drincs/pixi-vn/dist/override' {
+    interface StepLabelProps {
+        navigate: (route: string) => void,
+        // ...
+    }
+}
+```
+
+```typescript
+export const startLabel = newLabel(START_LABEL_ID,
+    [
+        ({ navigate }) => navigate('/new-route'),
+    ]
+)
+```
+
 ## How to force completion of an Transition/Effect/Animation in the next step?
 
 In Pixi’VN, it is possible to force the completion of a Transition/Effect/Animation in the next step in many cases it can be useful.
