@@ -9,7 +9,7 @@ To initialize a character, you need to create a new instance of the `CharacterBa
 
 For create a new instance of `CharacterBaseModel` you need to pass:
 
-* `id`: A unique identifier for the character. It is used to reference the character in the game (key in the object).
+* `id`: A unique identifier for the character. It is used to reference the character in the game (must be unique).
 * `props`: An object with the character's properties. `props` extends the `ICharacterBaseModel` interface. The properties are:
   * `name`: The character's name. ( Required )
   * `surname`: The character's surname. ( Optional )
@@ -38,6 +38,8 @@ export const emma = new CharacterBaseModel('emma', {
 
 saveCharacter([liam, emma]);
 ```
+
+`saveCharacter` is required to save the characters in the game.
 
 It is also possible to create a function for loading characters. The important thing is that it is started at least once before the characters are used in the game, otherwise they will not be available.
 
@@ -109,7 +111,7 @@ const characters = getAllCharacters<ExtendedCharacterModel>();
 
 It means that if the character's name is changed during the game, the new character name will be saved in the game storage by linking it to his `id`.
 
-Furthermore, it is important to consider that if the character's `id` is changed from one version to another, the system will **not** move the data linked to the previous `id` to the new `id`.
+Furthermore, it is important to consider that if the character's `id` is changed, from one version to another, the system will **not** move the data linked to the previous `id` to the new `id`.
 
 The props of the `CharacterBaseModel` that are stored in the game storage are:
 
