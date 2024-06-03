@@ -63,14 +63,9 @@ const currentDialogue: DialogueBaseModel = getDialogue();
 ```
 
 If you use the [Extended DialogueModel](#extend-dialoguebasemodel), you can get the current dialogue and cast to the extended class.
-The return is your extended class or `DialogueBaseModel`, so you can use `instanceof` to check the type.
 
 ```typescript
-const currentDialogue: DialogueModel | DialogueBaseModel = getDialogue<DialogueModel>()
-
-if (!currentDialogue instanceof DialogueModel) {
-    // console.log("The current dialogue is not a DialogueModel")
-}
+const currentDialogue: DialogueModel = getDialogue<DialogueModel>()
 ```
 
 ## Clear a Current Dialogue
