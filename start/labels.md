@@ -109,7 +109,7 @@ There are two ways to run a label:
 
 ### Call a label
 
-To call a label you must use the `GameStepManager.callLabel` function and pass the label. This function have 2 parameters:
+To call a label you must use the `GameStepManager.callLabel` function. This function have 2 parameters:
 
 * `label`: the label that will be called
 * `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
