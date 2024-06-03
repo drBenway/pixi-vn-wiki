@@ -2,21 +2,19 @@
 
 In addition to managing the Pixi.js "Canvas", Pixi’VN offers the possibility of adding an HTML Element with the same dimensions as the "Canvas" to add interactions with the user.
 
-This allows the use of systems such as React, Vue, Angular, etc. to create much more complex interfaces with excellent performance.
-
-With this, you can use varius UI tools to create a more complex **interface screens**.
+This allows the use of systems such as React, Vue, Angular, etc. to create much more complex **interface screens** with excellent performance.
 
 ## How to enable HTML interaction?
 
 By default, all HTML elements of the interface have the `pointer-events: none` style.
-The reason is that because the canvas is above the interface, therefore if it were enabled it would intercept all clicks, not allowing interactions with the canvas.
+The reason is that because the html interface is above the canvas, all clicks are intercepted by the interface and not by the canvas.
 
-So you must set the `pointer-events: auto` style only for the elements that you want to interact with the user.
+So you must set the `pointer-events: auto` style only for the elements (example a button, a form, etc...) that you want to interact with the user.
 
 ## How navigate/switch between interface screens?
 
 To switch between interface screens (without interrupting the canvas), you can use popups and modals, or navigate between different routes.
-For navigate between different url paths/routes ( [What is the URL Path and Routes?](/other/various-answers#what-is-the-url-path-and-routes) ).
+For navigate between different url paths/routes you should read: [What is the URL Path and Routes?](/other/various-answers#what-is-the-url-path-and-routes).
 
 ## Use Angular
 
