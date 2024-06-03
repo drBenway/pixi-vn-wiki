@@ -2,7 +2,7 @@
 
 To make adding and managing images on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing an image.
 
-## Add image and show it
+## Add image
 
 To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/advanced/canvas-elements#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/advanced/canvas-elements#base-elements).
 
@@ -19,7 +19,7 @@ import { addImage } from '@drincs/pixi-vn'
 const image = addImage('image1', 'path/to/image.png')
 ```
 
-If you want initialize the image before and add it to the canvas, you can use the [`GameWindowManager.addCanvasElement`](/advanced/canvas-elements#add-canvas-elements)function.
+If you want initialize the image before and then add it to the canvas, you can use the [`GameWindowManager.addCanvasElement`](/advanced/canvas-elements#add-canvas-elements)function.
 
 ```typescript
 import { GameWindowManager, CanvasImage } from '@drincs/pixi-vn'
