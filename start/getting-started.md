@@ -1,6 +1,6 @@
 # Getting Started
 
-If you have already initialized a new project for your visual novel, you move on to the [installation step](#installation)
+If you have already initialized a new project for your visual novel, you can jump to the [installation](#installation) section.
 
 ## Prerequisites
 
