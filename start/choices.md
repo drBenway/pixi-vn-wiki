@@ -2,7 +2,7 @@
 
 In the visual novel, usually, there are choice menus that allow the player to make decisions that will affect the story.
 
-## Choice Menu Option
+## Choice menu option
 
 In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption` class and a function to handle the choice.
 
@@ -17,7 +17,7 @@ This class is only intended to give you information about a choice, it is up to 
 
 In practice this means that after you get the list of choices through the `getChoiceMenuOptions` function, you will have to call the label using the [`callLabel`](/start/labels.md#call-a-label) or [`jumpLabel`](/start/labels.md#jump-to-a-label) function.
 
-### Choice Menu Option Close
+### Choice for closing the menu
 
 In addition to `ChoiceMenuOption` there is also another class `ChoiceMenuOptionClose` that allows you to create a closing option. Its operation consists in closing the menu of choices and continuing with the [steps](/start/labels.md), without having to call any [label](/start/labels.md#label).
 
