@@ -33,7 +33,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ### Parameters of the label steps
 
-You can pass a type to `newLabel` function to set to add other parameters in addition to [`StepLabelProps`](#all-steps-parameters) for all steps of the label.
+You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters) for all steps of the label.
 
 ```typescript
 const START_LABEL_ID = "StartLabel"
