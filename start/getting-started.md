@@ -14,7 +14,16 @@ If you want create a new project from scratch it is recommended initialize a new
 
 ### Pivi'VN Templates
 
-**[Pixi’VN template (React + Vite + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)** is a template for creating visual novels in React, contains basic functionality inspired by Ren'Py. This template uses [MUI joy](https://mui.com/joy-ui/getting-started/), [Recoil](https://recoiljs.org/), [React Router](https://reactrouter.com/), [i18next](https://www.i18next.com/), [Vite](https://vitejs.dev/), [Vite Checker](https://vite-plugin-checker.netlify.app/) and [PWA Vite Plugin](https://vite-pwa-org.netlify.app/)
+**[Pixi’VN template (React + Vite + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)** is a template for creating visual novels in React, contains basic functionality inspired by Ren'Py. This template uses:
+
+* [MUI joy](https://mui.com/joy-ui/getting-started/)
+* [Recoil](https://recoiljs.org/)
+* [React Router](https://reactrouter.com/)
+* [i18next](https://www.i18next.com/)
+* [Vite](https://vitejs.dev/)
+* [Vite Checker](https://vite-plugin-checker.netlify.app/)
+* [PWA Vite Plugin](https://vite-pwa-org.netlify.app/)
+* [Framer Motion](https://www.framer.com/motion/)
 
 ## Installation
 
