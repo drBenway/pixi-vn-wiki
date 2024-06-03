@@ -2,6 +2,8 @@
 
 In the visual novel, usually, there are choice menus that allow the player to make decisions that will affect the story.
 
+## Choice Menu Option
+
 In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption` class and a function to handle the choice.
 
 `ChoiceMenuOption` is a class which has as parameters:
@@ -10,6 +12,20 @@ In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption`
 * `label`: The [label](/start/labels#label) which will be called when the player chooses the option.
 * `type`: The way the [label will be called](/start/labels#run-a-label). It can be `call` or `jump`. Default is `call`.
 * `props`: The properties that will be passed to the label. Default is `{}`.
+
+This class is only intended to give you information about a choice, it is up to you to call the label.
+
+In practice this means that after you get the list of choices through the `getChoiceMenuOptions` function, you will have to call the label using the [`callLabel`](/start/labels.md#call-a-label) or [`jumpLabel`](/start/labels.md#jump-to-a-label) function.
+
+### Choice Menu Option Close
+
+In addition to `ChoiceMenuOption` there is also another class `ChoiceMenuOptionClose` that allows you to create a closing option. Its operation consists in closing the menu of choices and continuing with the [steps](/start/labels.md), without having to call any [label](/start/labels.md#label).
+
+`ChoiceMenuOptionClose` is a class which has as parameters:
+
+* `text`: The text that will be displayed in the choice menus.
+
+This class is only intended to give you information about a choice, it is up to you to close the choice menu using the [`closeChoiceMenu`](#close-th-choice-menu) function.
 
 ## Set a choice menu
 
@@ -32,6 +48,7 @@ setChoiceMenuOptions([
     new ChoiceMenuOption("Orange", orangeLabel), // by default, the label will be called by call
     new ChoiceMenuOption("Banana", bananaLabel, "jump"),
     new ChoiceMenuOption("Apple", appleLabel, "call", { quantity: 5 }),
+    new ChoiceMenuOptionClose("Cancel"),
 ])
 ```
 
@@ -51,6 +68,19 @@ To clear the choice menu, use the `clearChoiceMenuOptions`.
 clearChoiceMenuOptions();
 ```
 
+## Close th choice menu
+
+To close the choice menu, use the `GameStepManager.closeChoiceMenu`. This is used after choosing [`ChoiceMenuOptionClose`](#choice-menu-option-close).
+
+This function have the 2 parameters:
+
+* `label`: the label that will be called
+* `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
+
+```typescript
+GameStepManager.closeChoiceMenu(label, props)
+```
+
 ## Get last choice
 
 [( Documentation under review )](https://github.com/DRincs-Productions/pixi-vn/issues/88)
@@ -62,6 +92,50 @@ For example ( in React using Material-UI ):
 ```tsx
 // react
 const [menuOptions, setChoiceMenuOptions] = useState<ChoiceMenuOption[]>(getChoiceMenuOptions())
+function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
+    clearChoiceMenuOptions()
+    if (item.type == "call") {
+        GameStepManager.callLabel(item.label, {
+            // add StepLabelProps here
+            navigate: navigate, // example
+            // and the props that will be passed to the label
+            ...item.props
+        })
+            .then(() => {
+                // ...
+            })
+            .catch((e) => {
+                console.error(e)
+            })
+    }
+    else if (item.type == "jump") {
+        GameStepManager.jumpLabel(item.label, {
+            navigate: navigate,
+            ...item.props
+        })
+            .then(() => {
+                // ...
+            })
+            .catch((e) => {
+                console.error(e)
+            })
+    }
+    else if (item.type == "close") {
+        GameStepManager.closeChoiceMenu(item.label, {
+            navigate: navigate,
+            ...item.props
+        })
+            .then(() => {
+                // ...
+            })
+            .catch((e) => {
+                console.error(e)
+            })
+    }
+    else {
+        console.error("Unsupported label run mode")
+    }
+}
 
 return (
     <Grid
@@ -80,54 +154,10 @@ return (
                 >
                     <DialogueMenuButton
                         onClick={() => {
-                            clearChoiceMenuOptions()
-                            if (item.type == "call") {
-                                GameStepManager.callLabel(item.label, {
-                                    // add StepLabelProps here
-                                    navigate: navigate, // example
-                                    // and the props that will be passed to the label
-                                    ...item.props
-                                })
-                                    .then(() => {
-                                        // ...
-                                    })
-                                    .catch((e) => {
-                                        console.error(e)
-                                    })
-                            }
-                            else if (item.type == "jump") {
-                                GameStepManager.jumpLabel(item.label, {
-                                    // add StepLabelProps here
-                                    navigate: navigate, // example
-                                    // and the props that will be passed to the label
-                                    ...item.props
-                                })
-                                    .then(() => {
-                                        // ...
-                                    })
-                                    .catch((e) => {
-                                        console.error(e)
-                                    })
-                            }
-                            else if (item.type == "close") {
-                                GameStepManager.closeChoiceMenu({
-                                    // add StepLabelProps here
-                                    navigate: navigate, // example
-                                    // and the props that will be passed to the label
-                                    ...item.props
-                                })
-                                    .then(() => {
-                                        // ...
-                                    })
-                                    .catch((e) => {
-                                        console.error(e)
-                                    })
-                            }
-                            else {
-                                console.error("Unsupported label run mode")
-                            }
+                            afterSelectChoice(item)
                         }}
                         sx={{
+                            pointerEvents: "auto",
                             left: 0,
                             right: 0,
                         }}
