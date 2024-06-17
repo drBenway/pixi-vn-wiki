@@ -16,7 +16,7 @@ The label is a container of steps. It is used to organize the steps in a more re
 For create a label you must use the `newLabel()` function and pass:
 
 * the `id` of the label, must be unique
-* the `steps` of the label, an array of functions that will be executed in order
+* the `steps` of the label, an array of functions that will be executed in order. Or a function that returns the steps.
 
 ```typescript
 const START_LABEL_ID = "StartLabel"
@@ -224,6 +224,31 @@ const navigate = useNavigate();
 if (GameStepManager.canGoBack) {
     GameStepManager.goBack(navigate)
 }
+```
+
+## How to return different step lists based on a condition
+
+When you create a new label you can pass a function that returns the steps of the label.
+
+```typescript
+const START_LABEL_ID = "StartLabel"
+
+export const startLabel = newLabel(START_LABEL_ID,
+    () => {
+        if (condition) {
+            return [
+                () => setDialogue({ character: liam, text: "Example of dialogue" })
+                (props) => GameStepManager.jumpLabel(START_LABEL_ID, props),
+            ]
+        } else {
+            return [
+                () => setDialogue({ character: liam, text: "Another example of dialogue" })
+                () => setDialogue({ character: liam, text: "Another example of dialogue 2" })
+                (props) => GameStepManager.jumpLabel(START_LABEL_ID, props),
+            ]
+        }
+    }
+)
 ```
 
 ## How determinate if current step is the last step in the game (end of the game)
