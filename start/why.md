@@ -45,6 +45,20 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 * Has a debugging system and have a lot of tools for development.
 * You can use it to create website, backend, mobile app, pc software, etc...
 
+<!-- TODO: #### Dialogues Example -->
+
+#### Minigame implementation
+
+In Ren'Py, for creating minigames with complex mechanics/animations, you need to use the [`Creator-Defined Displayables (CDD)`](https://www.renpy.org/doc/html/cdd.html), this is necessary because otherwise you will have big performance problems. With CDD you can create/control one or more graphic elements through a render loop, but it's really limiting.
+
+<!-- TODO -->
+
+#### Interface implementation
+
+In Ren'Py, for creating the interface, you need to create screens and styles. The most recommended implementation is to create a series of images that are positioned within the canvas across graphic objects. The graphic tools are very few, limiting and not very intuitive.
+
+In Pixi’VN, in addition to being able to use the elements of PixiJS, you can also use systems such as React, Vue, Angular, etc. and install component libraries such as Material-UI, Bootstrap, etc. This allows you to create much more complex interface screens with excellent performance.
+
 ### Device Distribution
 
 In Ren'Py, you can create a project and then distribute it to multiple devices and this process is really simple and fast.
