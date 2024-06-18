@@ -49,9 +49,16 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 
 #### Minigame implementation
 
-In Ren'Py, for creating minigames with complex mechanics/animations, you need to use the [`Creator-Defined Displayables (CDD)`](https://www.renpy.org/doc/html/cdd.html), this is necessary because otherwise you will have big performance problems. With CDD you can create/control one or more graphic elements through a render loop, but it's really limiting.
+In Ren'Py, for creating minigames with complex mechanics/animations, you need to use the [`Creator-Defined Displayables (CDD)`](https://www.renpy.org/doc/html/cdd.html), this is necessary because otherwise you will have big performance problems. With CDD you can create/control one or more graphic elements through a render loop.
+CDD is not very intuitive and complicated to use. There are very few examples and few developers using CDD. In fact, most of the minigames do not have complex logic and animations.
 
-<!-- TODO -->
+In Pixi’VN, you can use PixiJS to create minigames. PixiJS is a very powerful library that allows you to create complex animations and mechanics. The documentation and examples are very detailed and there are many developers using PixiJS.
+
+You can try some Ren'py and PIxiJS games to understand the difference:
+
+* Ren'Py minigames: <https://itch.io/game-assets/free/tag-minigames/tag-renpy>
+* PixiJS minigames: <https://github.com/pixijs/open-games>
+* PixiJS tutorials: <https://pixijs.com/8.x/tutorials>
 
 #### Interface implementation
 
@@ -91,4 +98,4 @@ This means that keeping Pixi’VN updated is a very simple process and once it r
 
 ### Conclusion
 
-Finally my personal conclusion is that, you know object-oriented programming and you want to create a visual novel with various features (for example, minigames, etc...) you should use Pixi’VN. If you are not a programmer and you want to create a visual novel quickly and easily, you can use Ren'Py.
+Finally my personal conclusion is that, you know object-oriented programming and you want to create a visual novel with various features (minigames, etc...) you should use Pixi’VN. If you are not a programmer and you want to create a visual novel quickly and easily, you can use Ren'Py.
