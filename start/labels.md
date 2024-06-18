@@ -104,6 +104,10 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 The game flow is managed by functions that call labels, jump to labels, go back, close labels... These functions are in the `GameStepManager` object.
 
+* [Run a label](#run-a-label)
+* [Next Step and Go back](#next-step-and-go-back)
+* [Close labels](#close-labels)
+
 ### Run a label
 
 There are two ways to run a label:
@@ -267,7 +271,7 @@ When all the steps of all labels are executed, the game will block. The develope
 * The game has no end, so if the steps are finished, there has been an error, and it needs to be handled
 * The game ends when the player reaches a certain point. For example, when the player reaches a certain point in the story you can navigate to a game over screen
 
-The recommended method for managing the end of the game is to create a `StartLabel` that will be the first label to be executed. This label will be responsible for calling the other labels and managing the end of the game. `StartLabel` for manage the end must have a how last step a function that will be responsible for ending the game.
+The recommended method for managing the end of the game is to create a `StartLabel` that will be the first label to be executed. This label will be responsible for calling the other labels. `StartLabel` for manage the end must have a how last step a function that will be responsible for ending the game.
 
 For example, if you want to end the game when the steps are finished:
 
