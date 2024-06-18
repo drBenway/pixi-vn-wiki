@@ -199,10 +199,10 @@ To close the current label you must execute the `GameStepManager.closeCurrentLab
 GameStepManager.closeCurrentLabel()
 ```
 
-## Clase all labels
+## Close all labels
 
 To close all labels you must execute the `GameStepManager.closeAllLabels()` function.
-If you call this function and after that you don't call any label, the game will end.
+**If you call this function and after that you don't call any label, the game will block.** After closing all labels you should call a [label for manage the end of the game](#how-manage-the-end-of-the-game).
 
 ```typescript
 GameStepManager.closeAllLabels()
@@ -237,13 +237,13 @@ export const startLabel = newLabel(START_LABEL_ID,
     () => {
         if (condition) {
             return [
-                () => setDialogue({ character: liam, text: "Example of dialogue" })
+                () => setDialogue({ character: liam, text: "Example of dialogue" }),
                 (props) => GameStepManager.jumpLabel(START_LABEL_ID, props),
             ]
         } else {
             return [
-                () => setDialogue({ character: liam, text: "Another example of dialogue" })
-                () => setDialogue({ character: liam, text: "Another example of dialogue 2" })
+                () => setDialogue({ character: liam, text: "Another example of dialogue" }),
+                () => setDialogue({ character: liam, text: "Another example of dialogue 2" }),
                 (props) => GameStepManager.jumpLabel(START_LABEL_ID, props),
             ]
         }
@@ -251,12 +251,30 @@ export const startLabel = newLabel(START_LABEL_ID,
 )
 ```
 
-## How determinate if current step is the last step in the game (end of the game)
+## How manage the end of the game
 
-To determinate if the current step is the last step in the game you must use the `GameStepManager.isLastGameStep` property.
+When all the steps of all labels are executed, the game will block. The developer must manage the end of the game. The reason is that ending management in visual novels can be handled in different ways:
+
+* The game ends when all the steps are executed
+* The game has no end, so if the steps are finished, there has been an error, and it needs to be handled
+* The game ends when the player reaches a certain point
+
+The recommended method for managing the end of the game is to create a `StartLabel` that will be the first label to be executed. This label will be responsible for calling the other labels and managing the end of the game. `StartLabel` for manage the end must have a how last step a function that will be responsible for ending the game.
+
+For example, if you want to end the game when the steps are finished:
 
 ```typescript
-if (GameStepManager.isLastGameStep) {
-    // end of the game
-}
+const START_LABEL_ID = "StartLabel"
+
+export const startLabel = newLabel(START_LABEL_ID,
+    () => {
+        return [
+            () => callLabel(AnotherLabel, {}),
+            ({ navigate }) => { // last step
+                // if you want to end the game when the steps are finished you can navigate to a route
+                navigate('/end')
+            },
+        ]
+    }
+)
 ```
