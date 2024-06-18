@@ -100,14 +100,18 @@ export const startLabel = newLabel(START_LABEL_ID,
 )
 ```
 
-## Run a label
+## Manage game flow with labels
+
+The game flow is managed by functions that call labels, jump to labels, go back, close labels... These functions are in the `GameStepManager` object.
+
+### Run a label
 
 There are two ways to run a label:
 
 * [Call a label](#call-a-label)
 * [Jump to a label](#jump-to-a-label)
 
-### Call a label
+#### Call a label
 
 To call a label you must use the `GameStepManager.callLabel` function. This function have 2 parameters:
 
@@ -129,18 +133,18 @@ Remember that if you execute the `GameStepManager.callLabel` inside a step, you 
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
+        (props) => GameStepManager.callLabel(TestLabel, props),
+        // not recommended but you can use this way:
         (props) => {
             return GameStepManager.callLabel(TestLabel, props).then((result) => {
                 return result
             })
         },
-        // or in one line
-        (props) => GameStepManager.callLabel(TestLabel, props),
     ]
 )
 ```
 
-### Jump to a label
+#### Jump to a label
 
 To jump to a label you must use the `GameStepManager.jumpLabel` function and pass the label. This function have 2 parameters:
 
@@ -162,18 +166,20 @@ Remember that if you execute the `GameStepManager.jumpLabel` inside a step, you 
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
+        (props) => GameStepManager.jumpLabel(TestLabel, props),
+        // not recommended but you can use this way:
         (props) => {
             return GameStepManager.jumpLabel(TestLabel, props).then((result) => {
                 return result
             })
         },
-        // or in one line
-        (props) => GameStepManager.jumpLabel(TestLabel, props),
     ]
 )
 ```
 
-## Next Step
+### Next Step and Go back
+
+#### Next Step
 
 To execute the next step you must execute the `GameStepManager.runNextStep()` function. This function have a parameter `props` that will be passed to the next step, if you not want to pass any parameter you can pass an empty object `{}`.
 
@@ -191,24 +197,7 @@ GameStepManager.runNextStep({})
     })
 ```
 
-## Close current label
-
-To close the current label you must execute the `GameStepManager.closeCurrentLabel()` function.
-
-```typescript
-GameStepManager.closeCurrentLabel()
-```
-
-## Close all labels
-
-To close all labels you must execute the `GameStepManager.closeAllLabels()` function.
-**If you call this function and after that you don't call any label, the game will block.** After closing all labels you should call a [label for manage the end of the game](#how-manage-the-end-of-the-game).
-
-```typescript
-GameStepManager.closeAllLabels()
-```
-
-## Go back
+#### Go back
 
 Every step the system saves the current state of the game. To go back to the previous step you must execute the `GameStepManager.goBack()` function.
 
@@ -224,6 +213,25 @@ const navigate = useNavigate();
 if (GameStepManager.canGoBack) {
     GameStepManager.goBack(navigate)
 }
+```
+
+### Close labels
+
+#### Close current label
+
+To close the current label you must execute the `GameStepManager.closeCurrentLabel()` function.
+
+```typescript
+GameStepManager.closeCurrentLabel()
+```
+
+#### Close all labels
+
+To close all labels you must execute the `GameStepManager.closeAllLabels()` function.
+**If you call this function and after that you don't call any label, the game will block.** After closing all labels you should call a [label for manage the end of the game](#how-manage-the-end-of-the-game).
+
+```typescript
+GameStepManager.closeAllLabels()
 ```
 
 ## How to return different step lists based on a condition
@@ -257,7 +265,7 @@ When all the steps of all labels are executed, the game will block. The develope
 
 * The game ends when all the steps are executed
 * The game has no end, so if the steps are finished, there has been an error, and it needs to be handled
-* The game ends when the player reaches a certain point
+* The game ends when the player reaches a certain point. For example, when the player reaches a certain point in the story you can navigate to a game over screen
 
 The recommended method for managing the end of the game is to create a `StartLabel` that will be the first label to be executed. This label will be responsible for calling the other labels and managing the end of the game. `StartLabel` for manage the end must have a how last step a function that will be responsible for ending the game.
 
@@ -269,11 +277,42 @@ const START_LABEL_ID = "StartLabel"
 export const startLabel = newLabel(START_LABEL_ID,
     () => {
         return [
-            () => callLabel(AnotherLabel, {}),
+            () => callLabel(anotherLabel, {}),
             ({ navigate }) => { // last step
                 // if you want to end the game when the steps are finished you can navigate to a route
                 navigate('/end')
             },
+        ]
+    }
+)
+```
+
+For example, if the game has no end:
+
+```typescript
+const START_LABEL_ID = "StartLabel"
+
+export const startLabel = newLabel(START_LABEL_ID,
+    () => {
+        return [
+            () => callLabel(prologueLabel, {}),
+            () => callLabel(goToNavigationLabel, {}),
+            ({ navigate }) => { // last step
+                // at this point the game cannot pass
+                navigate('/error')
+            },
+        ]
+    }
+)
+
+const goToNavigationLabel = newLabel("goToNavigationLabel",
+    () => {
+        return [
+            ({ navigate }) => {
+                navigate('/navigation')
+            },
+            // so the game is infinite
+            () => jumpLabel(goToNavigationLabel, {}),
         ]
     }
 )
