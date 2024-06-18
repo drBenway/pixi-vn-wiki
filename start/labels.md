@@ -124,7 +124,7 @@ To call a label you must use the `GameStepManager.callLabel` function. This func
 
 When you call a label, the steps of that label will be started. If before the call was running another label, the remaining steps of the another label will be executed after the steps of the called label.
 
-For example if currently the game is running the step 5 of the label A and you call the label B, when all the steps of the label B are executed, the game will continue with the step 6 of the label A.
+For example if currently the game is running the step 5 of the label A and you **call** the label B, when all the steps of the label B are executed, the game will continue with the step 6 of the label A.
 
 `GameStepManager.callLabel` returns a [result of first step of the called label](#all-steps-result).
 
@@ -157,7 +157,7 @@ To jump to a label you must use the `GameStepManager.jumpLabel` function and pas
 
 When you jump to a label, the steps of the current label will be stopped and the steps of the label passed as parameter will be started.
 
-For example if currently the game is running the step 5 of the label A and you jump to the label B, when all the steps of the label B are executed, the game will end, also if the label B have a step 6.
+For example if currently the game is running the step 5 of the label A, and **call** the label B, and you **jump** to the label C, when all the steps of the label C are executed, the game will continue with the step 6 of the label A. Because when you jump to the label C, the label B is closed.
 
 `GameStepManager.jumpLabel` returns a [result of first step of the called label](#all-steps-result).
 
