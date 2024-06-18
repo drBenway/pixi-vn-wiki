@@ -295,6 +295,7 @@ For example, if the game has no end:
 
 ```typescript
 const START_LABEL_ID = "start_label_id"
+const GO_TO_NAVIGATION_LABEL_ID = "go_to_navigation_label_id"
 
 export const startLabel = newLabel(START_LABEL_ID,
     () => {
@@ -308,8 +309,6 @@ export const startLabel = newLabel(START_LABEL_ID,
         ]
     }
 )
-
-const GO_TO_NAVIGATION_LABEL_ID = "go_to_navigation_label_id"
 
 const goToNavigationLabel = newLabel(GO_TO_NAVIGATION_LABEL_ID,
     () => {
