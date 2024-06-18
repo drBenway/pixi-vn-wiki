@@ -281,7 +281,7 @@ const START_LABEL_ID = "StartLabel"
 export const startLabel = newLabel(START_LABEL_ID,
     () => {
         return [
-            () => GameStepManager.callLabel(anotherLabel, {}),
+            (props) => GameStepManager.callLabel(anotherLabel, props),
             ({ navigate }) => { // last step
                 // if you want to end the game when the steps are finished you can navigate to a route
                 navigate('/end')
@@ -299,8 +299,8 @@ const START_LABEL_ID = "StartLabel"
 export const startLabel = newLabel(START_LABEL_ID,
     () => {
         return [
-            () => GameStepManager.callLabel(prologueLabel, {}),
-            () => GameStepManager.callLabel(goToNavigationLabel, {}),
+            (props) => GameStepManager.callLabel(prologueLabel, props),
+            (props) => GameStepManager.callLabel(goToNavigationLabel, props),
             ({ navigate }) => { // last step
                 // at this point the game cannot pass
                 navigate('/error')
@@ -316,7 +316,7 @@ const goToNavigationLabel = newLabel("goToNavigationLabel",
                 navigate('/navigation')
             },
             // so the game is infinite
-            () => GameStepManager.jumpLabel(goToNavigationLabel, {}),
+            (props) => GameStepManager.jumpLabel(goToNavigationLabel, props),
         ]
     }
 )
