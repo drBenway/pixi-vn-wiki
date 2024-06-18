@@ -19,7 +19,7 @@ For create a label you must use the `newLabel()` function and pass:
 * the `steps` of the label, an array of functions that will be executed in order. Or a function that returns the steps.
 
 ```typescript
-const START_LABEL_ID = "StartLabel"
+const START_LABEL_ID = "start_label_id"
 
 export const startLabel = newLabel(START_LABEL_ID,
     [
@@ -36,7 +36,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters) for all steps of the label.
 
 ```typescript
-const START_LABEL_ID = "StartLabel"
+const START_LABEL_ID = "start_label_id"
 
 export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
     [
@@ -243,7 +243,7 @@ GameStepManager.closeAllLabels()
 When you create a new label you can pass a function that returns the steps of the label.
 
 ```typescript
-const START_LABEL_ID = "StartLabel"
+const START_LABEL_ID = "start_label_id"
 
 export const startLabel = newLabel(START_LABEL_ID,
     () => {
@@ -276,7 +276,7 @@ The recommended method for managing the end of the game is to create a `StartLab
 For example, if you want to end the game when the steps are finished:
 
 ```typescript
-const START_LABEL_ID = "StartLabel"
+const START_LABEL_ID = "start_label_id"
 
 export const startLabel = newLabel(START_LABEL_ID,
     () => {
@@ -294,7 +294,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 For example, if the game has no end:
 
 ```typescript
-const START_LABEL_ID = "StartLabel"
+const START_LABEL_ID = "start_label_id"
 
 export const startLabel = newLabel(START_LABEL_ID,
     () => {
@@ -309,14 +309,16 @@ export const startLabel = newLabel(START_LABEL_ID,
     }
 )
 
-const goToNavigationLabel = newLabel("goToNavigationLabel",
+const GO_TO_NAVIGATION_LABEL_ID = "go_to_navigation_label_id"
+
+const goToNavigationLabel = newLabel(GO_TO_NAVIGATION_LABEL_ID,
     () => {
         return [
             ({ navigate }) => {
                 navigate('/navigation')
             },
             // so the game is infinite
-            (props) => GameStepManager.jumpLabel(goToNavigationLabel, props),
+            (props) => GameStepManager.jumpLabel(GO_TO_NAVIGATION_LABEL_ID, props),
         ]
     }
 )
