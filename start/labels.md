@@ -129,7 +129,7 @@ For example if currently the game is running the step 5 of the label A and you *
 `GameStepManager.callLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
-GameStepManager.callLabel(StartLabel, {})
+GameStepManager.callLabel(startLabel, {})
 ```
 
 Remember that if you execute the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
@@ -162,7 +162,7 @@ For example if currently the game is running the step 5 of the label A, and **ca
 `GameStepManager.jumpLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
-GameStepManager.jumpLabel(StartLabel, {})
+GameStepManager.jumpLabel(startLabel, {})
 ```
 
 Remember that if you execute the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
@@ -271,7 +271,7 @@ When all the steps of all labels are executed, the game will block. The develope
 * The game has no end, so if the steps are finished, there has been an error, and it needs to be handled
 * The game ends when the player reaches a certain point. For example, when the player reaches a certain point in the story you can navigate to a game over screen
 
-The recommended method for managing the end of the game is to create a `StartLabel` that will be the first label to be executed. This label will be responsible for calling the other labels. `StartLabel` for manage the end must have a how last step a function that will be responsible for ending the game.
+The recommended method for managing the end of the game is to create a `startLabel` that will be the first label to be executed. This label will be responsible for calling the other labels. `startLabel` for manage the end must have a how last step a function that will be responsible for ending the game.
 
 For example, if you want to end the game when the steps are finished:
 
@@ -295,13 +295,13 @@ For example, if the game has no end:
 
 ```typescript
 const START_LABEL_ID = "start_label_id"
-const GO_TO_NAVIGATION_LABEL_ID = "go_to_navigation_label_id"
+const GO_TO_NAVIGATION_LABEL_ID = "go_to_navigation_label_id2"
 
 export const startLabel = newLabel(START_LABEL_ID,
     () => {
         return [
             (props) => GameStepManager.callLabel(prologueLabel, props),
-            (props) => GameStepManager.callLabel(goToNavigationLabel, props),
+            (props) => GameStepManager.callLabel(goToNavigation, props),
             ({ navigate }) => { // last step
                 // at this point the game cannot pass
                 navigate('/error')
@@ -310,14 +310,64 @@ export const startLabel = newLabel(START_LABEL_ID,
     }
 )
 
-const goToNavigationLabel = newLabel(GO_TO_NAVIGATION_LABEL_ID,
+/**
+ * This label causes the player to return to navigation after completing a dialogue.
+ * This label creates a loop, causing the game to never end.
+ * Only if a jump is called immediately after this label, it will be terminated, moving on to the father label.
+ */
+const goToNavigation = newLabel(GO_TO_NAVIGATION_LABEL_ID,
     () => {
         return [
-            ({ navigate }) => {
-                navigate('/navigation')
+            ({ navigate }) => navigate('/navigation'),
+            (props) => GameStepManager.jumpLabel(GO_TO_NAVIGATION_FATHER_LABEL_ID, props),
+        ]
+    }
+)
+```
+
+The previous example is only functional if no jumps are used immediately after `goToNavigation`.
+To make it possible to use jumps, an intermediate label must be added as follows:
+
+```typescript
+const START_LABEL_ID = "start_label_id"
+const GO_TO_NAVIGATION_FATHER_LABEL_ID = "go_to_navigation_label_id"
+const GO_TO_NAVIGATION_LABEL_ID = "go_to_navigation_label_id2"
+
+export const startLabel = newLabel(START_LABEL_ID,
+    () => {
+        return [
+            (props) => GameStepManager.callLabel(prologueLabel, props),
+            (props) => GameStepManager.callLabel(goToNavigationFather, props),
+            ({ navigate }) => { // last step
+                // at this point the game cannot pass
+                navigate('/error')
             },
-            // so the game is infinite
-            (props) => GameStepManager.jumpLabel(GO_TO_NAVIGATION_LABEL_ID, props),
+        ]
+    }
+)
+
+/**
+ * This label ensures that even when {@link goToNavigation} is closed, {@link goToNavigation} is reopened.
+ */
+const goToNavigationFather = newLabel(GO_TO_NAVIGATION_FATHER_LABEL_ID,
+    () => {
+        return [
+            (props) => GameStepManager.callLabel(goToNavigation, props),
+            (props) => GameStepManager.jumpLabel(GO_TO_NAVIGATION_FATHER_LABEL_ID, props),
+        ]
+    }
+)
+
+/**
+ * This label causes the player to return to navigation after completing a dialogue.
+ * This label creates a loop, causing the game to never end.
+ * Only if a jump is called immediately after this label, it will be terminated, moving on to the father label.
+ */
+const goToNavigation = newLabel(GO_TO_NAVIGATION_LABEL_ID,
+    () => {
+        return [
+            ({ navigate }) => navigate('/navigation'),
+            (props) => GameStepManager.jumpLabel(GO_TO_NAVIGATION_FATHER_LABEL_ID, props),
         ]
     }
 )
