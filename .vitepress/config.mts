@@ -6,6 +6,7 @@ export default defineConfig({
   description: "Pixi’VN - Pixi'VN is a npm package that provides various features for creating visual novels, based on PixiJS.",
 
   themeConfig: {
+    logo: '/logo.webp',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Guide', link: '/start/getting-started' },

@@ -6,6 +6,9 @@ hero:
   name: "Pixi’VN"
   text: "PixiJS & Visual Novel engine"
   tagline: Create visual novels with a modern 2D rendering engine and your favorite JavaScript framework.
+  image:
+    src: /logo.webp
+    alt: Pixi’VN Logo
   actions:
     - theme: brand
       text: Quick start
