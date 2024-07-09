@@ -60,7 +60,7 @@ GameWindowManager.addTicker(["alien", "alien2"], new TickerRotate({ speed: my_sp
 You can also set the duration of the ticket so that upon completion it is deleted.
 
 ```typescript
-GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }, 2000))
+GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }, 2))
 ```
 
 ## Remove association between a Ticker and a Canvas Element
@@ -104,8 +104,8 @@ For this you must use the `GameStepManager.addTickersSteps` function and pass th
 
 ```typescript
 GameWindowManager.addTickersSteps("alien", [
-    new TickerRotate({ speed: 0.1, clockwise: true }, 2000),
-    new TickerRotate({ speed: 0.2, clockwise: false }, 2000),
+    new TickerRotate({ speed: 0.1, clockwise: true }, 2),
+    new TickerRotate({ speed: 0.2, clockwise: false }, 2),
 ])
 ```
 
@@ -115,9 +115,9 @@ If you want to pause the steps for a while, you can use the `Pause` token.
 
 ```typescript
 GameWindowManager.addTickersSteps("alien", [
-    new TickerRotate({ speed: 0.1, clockwise: true }, 2000),
-    Pause(500),
-    new TickerRotate({ speed: 0.2, clockwise: false }, 2000),
+    new TickerRotate({ speed: 0.1, clockwise: true }, 2),
+    Pause(1),
+    new TickerRotate({ speed: 0.2, clockwise: false }, 2),
 ])
 ```
 
@@ -127,8 +127,8 @@ If you want to repeat the steps, you can use the `Repeat` token.
 
 ```typescript
 GameWindowManager.addTickersSteps("alien", [
-    new TickerRotate({ speed: 0.1, clockwise: true }, 2000),
-    new TickerRotate({ speed: 0.2, clockwise: false }, 2000),
+    new TickerRotate({ speed: 0.1, clockwise: true }, 2),
+    new TickerRotate({ speed: 0.2, clockwise: false }, 2),
     Repeat,
 ])
 ```

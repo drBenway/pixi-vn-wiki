@@ -92,12 +92,12 @@ function nextOnClick() {
             if (skipEnabled) {
                 setTimeout(() => {
                     setRecheckSkipAuto((p) => p + 1)
-                }, 200);
+                }, 0.2);
             }
             else if (autoEnabled) {
                 setTimeout(() => {
                     setRecheckSkipAuto((p) => p + 1)
-                }, 2000);
+                }, 2);
             }
         })
         .catch((e) => {

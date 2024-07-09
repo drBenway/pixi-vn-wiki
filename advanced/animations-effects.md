@@ -53,7 +53,7 @@ alien.anchor.set(0.5);
 GameWindowManager.addCanvasElement("alien", alien);
 
 // in this example we rotate the canvas element "alien" with a speed of 0.2 and counterclockwise
-GameWindowManager.addTicker("alien", new TickerRotate({ speed: 0.2, clockwise: false }, 2000))
+GameWindowManager.addTicker("alien", new TickerRotate({ speed: 0.2, clockwise: false }, 2))
 ```
 
 ```typescript
