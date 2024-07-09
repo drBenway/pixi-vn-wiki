@@ -49,32 +49,32 @@ const image = addImage('image1', 'path/to/image.png')
 await image.load()
 ```
 
-In some cases you may need to ensure that multiple images are displayed at the same time. In this case, you can use the `loadImages` function to load a array of `CanvasImage`.
+In some cases you may need to ensure that multiple images are displayed at the same time. In this case, you can use the `loadImage` function to load a array of `CanvasImage`.
 
 ```typescript
-import { addImage, loadImages } from '@drincs/pixi-vn'
+import { addImage, loadImage } from '@drincs/pixi-vn'
 
 const image1 = addImage('image1', 'path/to/image1.png')
 const image2 = addImage('image2', 'path/to/image2.png')
 
-await loadImages([image1, image2])
+await loadImage([image1, image2])
 ```
 
-You can use `loadImages` also to show a single image.
+You can use `loadImage` also to show a single image.
 
 ```typescript
-import { addImage, loadImages } from '@drincs/pixi-vn'
+import { addImage, loadImage } from '@drincs/pixi-vn'
 
 const image = addImage('image1', 'path/to/image.png')
 
-await loadImages(image)
+await loadImage(image)
 // or await image.load()
 ```
 
 Another way to make sure multiple images are displayed at the same time is to use the [`PIXI.Assets`](https://pixijs.com/8.x/examples/assets/async) function, for add the textures in cache.
 
 ```typescript
-import { addImage, loadImages } from '@drincs/pixi-vn'
+import { addImage, loadImage } from '@drincs/pixi-vn'
 import { Assets } from "pixi.js";
 
 // Load the images and add them to the cache
