@@ -2,6 +2,23 @@
 
 To make adding and managing images on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing an image.
 
+## Show Image
+
+The simplest and fastest method to show an image on the canvas is to use the `showImage` function.
+
+This function has the following parameters:
+
+* `tag`: Is a tag (or id) for the image. There can only be one item in the canvas with that id, if you add an image with the same tag, the previous image will be removed.
+* `imageUrl`: The URL or path of the image.
+
+```typescript
+import { showImage } from '@drincs/pixi-vn'
+
+showImage('image1', 'path/to/image.png')
+```
+
+This function is a combination of the [`addImage`](#add-image) and [`load`](#load-image) functions. It is very simple to use, but in cases where you want to manipulate the image before showing it, it is better to use the [`addImage`](#add-image) and [`load`](#load-image) functions separately.
+
 ## Add image
 
 To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/advanced/canvas-elements#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/advanced/canvas-elements#base-elements).
@@ -33,7 +50,7 @@ let alien = new CanvasImage({
 GameWindowManager.addCanvasElement("alien", alien)
 ```
 
-## Load and Show Image
+## Load Image
 
 After adding the image, you can load the texture and show it on the canvas using the `CanvasImage.load` method.
 
@@ -49,32 +66,32 @@ const image = addImage('image1', 'path/to/image.png')
 await image.load()
 ```
 
-In some cases you may need to ensure that multiple images are displayed at the same time. In this case, you can use the `loadImages` function to load a array of `CanvasImage`.
+In some cases you may need to ensure that multiple images are displayed at the same time. In this case, you can use the `loadImage` function to load a array of `CanvasImage`.
 
 ```typescript
-import { addImage, loadImages } from '@drincs/pixi-vn'
+import { addImage, loadImage } from '@drincs/pixi-vn'
 
 const image1 = addImage('image1', 'path/to/image1.png')
 const image2 = addImage('image2', 'path/to/image2.png')
 
-await loadImages([image1, image2])
+await loadImage([image1, image2])
 ```
 
-You can use `loadImages` also to show a single image.
+You can use `loadImage` also to show a single image.
 
 ```typescript
-import { addImage, loadImages } from '@drincs/pixi-vn'
+import { addImage, loadImage } from '@drincs/pixi-vn'
 
 const image = addImage('image1', 'path/to/image.png')
 
-await loadImages(image)
+await loadImage(image)
 // or await image.load()
 ```
 
 Another way to make sure multiple images are displayed at the same time is to use the [`PIXI.Assets`](https://pixijs.com/8.x/examples/assets/async) function, for add the textures in cache.
 
 ```typescript
-import { addImage, loadImages } from '@drincs/pixi-vn'
+import { addImage, loadImage } from '@drincs/pixi-vn'
 import { Assets } from "pixi.js";
 
 // Load the images and add them to the cache
@@ -121,7 +138,7 @@ export const startLabel = newLabel("StartLabel", [
 
 As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/advanced/canvas-elements#remove-canvas-elements) function.
 
-## Show Image with Transition
+## Show/Remove Image with Transition
 
 Functions have been implemented to show images with some "standard" transitions.
 
@@ -135,13 +152,13 @@ The `showWithDissolveTransition` function has the following parameters:
 
 * `tag`: The tag of the image.
 * `imageUrl`: The URL or path of the image.
-* `speed`: The speed of the transition. The default value is 0.1.
+* `duration`: The duration of the transition. The default value is 1.
 * `priority`: ( optional ) The priority of the transition.
 
 ```typescript
 import { showWithDissolveTransition } from '@drincs/pixi-vn'
 
-showWithDissolveTransition('image1', 'path/to/image.png', 0.2)
+showWithDissolveTransition('image1', 'path/to/image.png', 2)
 ```
 
 ```typescript
@@ -149,7 +166,15 @@ import { showWithDissolveTransition } from '@drincs/pixi-vn'
 
 let sprite = new CanvasSprite(yourTexture)
 // you can pass a canvas element
-showWithDissolveTransition('image1', sprite, 0.2)
+showWithDissolveTransition('image1', sprite, 2)
+```
+
+For remove an image with a fade-out effect, you can use the `removeWithDissolveTransition` function.
+
+```typescript
+import { removeWithDissolveTransition } from '@drincs/pixi-vn'
+
+removeWithDissolveTransition('image1', 2)
 ```
 
 ## Other Transitions and Animations
