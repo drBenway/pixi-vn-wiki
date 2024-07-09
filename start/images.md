@@ -135,7 +135,7 @@ The `showWithDissolveTransition` function has the following parameters:
 
 * `tag`: The tag of the image.
 * `imageUrl`: The URL or path of the image.
-* `speed`: The speed of the transition. The default value is 0.1.
+* `duration`: The duration of the transition. The default value is 1.
 * `priority`: ( optional ) The priority of the transition.
 
 ```typescript

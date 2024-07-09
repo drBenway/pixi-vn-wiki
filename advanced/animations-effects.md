@@ -80,7 +80,7 @@ It is possible to start fading on all [canvas element](canvas-elements).
 
 `TickerFade` have a constructor that takes the a object with the following properties:
 
-* `speed`: is a number that represents the speed of the fade. default is `0.01`.
+* `duration`: is a number that represents the duration of the fade. default is `1`.
 * `type`: it can be `hide` or `show`. if `hide` the canvas element will disappear, if `show` the canvas element will appear. default is `show`.
 * `limit`: is a number that represents the limit of the fade. default is `1` if `type` is `show` and `0` if `type` is `hide`.
 * `startOnlyIfHaveTexture`: is a boolean that represents if the animation should start only if the canvas element have a texture not empty. default is `false`.
@@ -94,8 +94,8 @@ const alien = CanvasSprite.from(texture);
 alien.alpha = 0;
 GameWindowManager.addCanvasElement("alien", alien);
 
-// in this example we fade the canvas element "alien" with a speed of 0.2
-GameWindowManager.addTicker("alien", new TickerFade({ speed: 0.2 }));
+// in this example we fade the canvas element "alien" with a duration of 2 seconds
+GameWindowManager.addTicker("alien", new TickerFade({ duration: 2 }));
 ```
 
 ### How to force completion of an Transition/Effect/Animation in the next step?
