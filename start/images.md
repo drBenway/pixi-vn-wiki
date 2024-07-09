@@ -138,7 +138,7 @@ export const startLabel = newLabel("StartLabel", [
 
 As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/advanced/canvas-elements#remove-canvas-elements) function.
 
-## Show Image with Transition
+## Show/Remove Image with Transition
 
 Functions have been implemented to show images with some "standard" transitions.
 
@@ -158,7 +158,7 @@ The `showWithDissolveTransition` function has the following parameters:
 ```typescript
 import { showWithDissolveTransition } from '@drincs/pixi-vn'
 
-showWithDissolveTransition('image1', 'path/to/image.png', 0.2)
+showWithDissolveTransition('image1', 'path/to/image.png', 2)
 ```
 
 ```typescript
@@ -166,7 +166,15 @@ import { showWithDissolveTransition } from '@drincs/pixi-vn'
 
 let sprite = new CanvasSprite(yourTexture)
 // you can pass a canvas element
-showWithDissolveTransition('image1', sprite, 0.2)
+showWithDissolveTransition('image1', sprite, 2)
+```
+
+For remove an image with a fade-out effect, you can use the `removeWithDissolveTransition` function.
+
+```typescript
+import { removeWithDissolveTransition } from '@drincs/pixi-vn'
+
+removeWithDissolveTransition('image1', 2)
 ```
 
 ## Other Transitions and Animations
