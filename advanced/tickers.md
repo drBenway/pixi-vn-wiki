@@ -43,6 +43,12 @@ export default class TickerRotate extends TickerBase<{ speed?: number, clockwise
 
 To add a Ticker you must use the `GameWindowManager.addTicker` function and pass the ticker class.
 
+<!-- TODO  
+You can run multiple addTicker with the same tag and different tickerClasses.
+* If you run a ticker with the same tag and tickerClass, the old ticker will be removed.
+* If already exists a sequence of tickers with the same tag, it will be removed.
+-->
+
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
@@ -96,6 +102,10 @@ GameWindowManager.removeCanvasElement("alien")
 ```
 
 ## Run a succession of Tickers
+
+<!-- TODO 
+remove the ticker if there is no canvas element connected to it.
+-->
 
 You can run a succession of Tickers.
 This means you can start a list of tokens, so that when one ends the next begins.
