@@ -27,7 +27,7 @@ Ren'Py is a visual novel engine – used by thousands of creators from around th
 I imagine the performance of the Pixi’VN and the "visual novel library" used by Ren'Py to be almost the same, but the performance of the "canvas library" used is very significant.
 
 * [`Pygame_sdl2`](https://github.com/renpy/pygame_sdl2): This canvas is absolutely underperforming. This can be tested by inserting more moving graphic elements into Renpy.
-* PixiJS: It is based on more modern systems and has great performance. This can be tested directly from an example made by PixiJS: [Exemple](https://pixijs.com/examples/basic/cache-as-bitmap).
+* PixiJS: It is based on more modern systems and has great performance. This can be tested directly from an example made by PixiJS: [Exemple](https://pixijs.com/8.x/examples/textures/render-texture-advanced).
 
 ### Programming language
 
