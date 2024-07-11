@@ -146,19 +146,21 @@ Functions have been implemented to show images with some "standard" transitions.
 
 ### Dissolve Transition
 
-With the Dissolve Transition means that the image will be shown with a fade-in effect. If exist a previous image with the same tag, this image will be removed with a fade-out effect.
+With the Dissolve Transition means that the image will be shown with a fade-in effect. If exist a image with the same tag, then the image is replaced and the first image is removed after the effect is done.
+
+( This transition is created with the [`TickerFade`](/advanced/animations-effects.md#fade) )
 
 The `showWithDissolveTransition` function has the following parameters:
 
-* `tag`: The tag of the image.
-* `imageUrl`: The URL or path of the image.
-* `duration`: The duration of the transition. The default value is 1.
-* `priority`: ( optional ) The priority of the transition.
+* `tag`: The unique tag of the image. You can use this tag to refer to this image
+* `image`: The imageUrl or the canvas element
+* `props`: The properties of the effect
+* `priority`: ( optional ) The priority of the effect
 
 ```typescript
 import { showWithDissolveTransition } from '@drincs/pixi-vn'
 
-showWithDissolveTransition('image1', 'path/to/image.png', 2)
+showWithDissolveTransition('image1', 'path/to/image.png', { duration: 2 })
 ```
 
 ```typescript
@@ -166,7 +168,7 @@ import { showWithDissolveTransition } from '@drincs/pixi-vn'
 
 let sprite = new CanvasSprite(yourTexture)
 // you can pass a canvas element
-showWithDissolveTransition('image1', sprite, 2)
+showWithDissolveTransition('image1', sprite, { duration: 2 })
 ```
 
 For remove an image with a fade-out effect, you can use the `removeWithDissolveTransition` function.
@@ -174,7 +176,42 @@ For remove an image with a fade-out effect, you can use the `removeWithDissolveT
 ```typescript
 import { removeWithDissolveTransition } from '@drincs/pixi-vn'
 
-removeWithDissolveTransition('image1', 2)
+removeWithDissolveTransition('image1', { duration: 2 })
+```
+
+### Fade Transition
+
+With the Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same tag, the existing image is removed with a fade transition, and after the effect is done, the new image is shown with a fade transition.
+
+( This transition is created with the [`TickerFade`](/advanced/animations-effects.md#fade) )
+
+The `showWithFadeTransition` function has the following parameters:
+
+* `tag`: The unique tag of the image. You can use this tag to refer to this image
+* `image`: The imageUrl or the canvas element
+* `props`: The properties of the effect
+* `priority`: ( optional ) The priority of the effect
+
+```typescript
+import { showWithFadeTransition } from '@drincs/pixi-vn'
+
+showWithFadeTransition('image1', 'path/to/image.png', { duration: 2 })
+```
+
+```typescript
+import { showWithFadeTransition } from '@drincs/pixi-vn'
+
+let sprite = new CanvasSprite(yourTexture)
+// you can pass a canvas element
+showWithFadeTransition('image1', sprite, { duration: 2 })
+```
+
+For remove an image with a fade-out effect, you can use the `removeWithFadeTransition` function.
+
+```typescript
+import { removeWithFadeTransition } from '@drincs/pixi-vn'
+
+removeWithFadeTransition('image1', { duration: 2 })
 ```
 
 ## Other Transitions and Animations
