@@ -148,7 +148,7 @@ Functions have been implemented to show images with some "standard" transitions.
 
 With the Dissolve Transition means that the image will be shown with a fade-in effect. If exist a image with the same tag, then the image is replaced and the first image is removed after the effect is done.
 
-( This transition is created with the [`TickerFade`](/advanced/animations-effects.md#fade) )
+( This transition is created with the [`FadeAlphaTicker`](/advanced/animations-effects.md#fade) )
 
 The `showWithDissolveTransition` function has the following parameters:
 
@@ -183,7 +183,7 @@ removeWithDissolveTransition('image1', { duration: 2 })
 
 With the Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same tag, the existing image is removed with a fade transition, and after the effect is done, the new image is shown with a fade transition.
 
-( This transition is created with the [`TickerFade`](/advanced/animations-effects.md#fade) )
+( This transition is created with the [`FadeAlphaTicker`](/advanced/animations-effects.md#fade) )
 
 The `showWithFadeTransition` function has the following parameters:
 

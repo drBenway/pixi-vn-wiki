@@ -14,8 +14,8 @@ In Pixi’VN, you must create a class tha extends `TickerBase`, add a decorator 
 `@tickerDecorator` is a decorator that save the ticker in memory. It have a optional parameter that is the id of the ticker (must be unique). If you don't pass the id, the ticker will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
 
 ```typescript
-@tickerDecorator() // or @tickerDecorator('TickerRotate')
-export default class TickerRotate extends TickerBase<{ speed?: number, clockwise?: boolean }> {
+@tickerDecorator() // or @tickerDecorator('RotateTicker')
+export default class RotateTicker extends TickerBase<{ speed?: number, clockwise?: boolean }> {
     override fn(
         t: Ticker,
         args: {
@@ -54,19 +54,19 @@ const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
 GameWindowManager.addCanvasElement("alien", alien);
 
-GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }))
+GameWindowManager.addTicker("alien", new RotateTicker({ speed: my_speed }))
 ```
 
 If a ticket needs to update multiple canvas elements, you can pass an array of tags to the `addTicker` function.
 
 ```typescript
-GameWindowManager.addTicker(["alien", "alien2"], new TickerRotate({ speed: my_speed }))
+GameWindowManager.addTicker(["alien", "alien2"], new RotateTicker({ speed: my_speed }))
 ```
 
 You can also set the duration of the ticket so that upon completion it is deleted.
 
 ```typescript
-GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }, 2))
+GameWindowManager.addTicker("alien", new RotateTicker({ speed: my_speed }, 2))
 ```
 
 ## Remove association between a Ticker and a Canvas Element
@@ -80,11 +80,11 @@ const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
 GameWindowManager.addCanvasElement("alien", alien);
 
-GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }))
+GameWindowManager.addTicker("alien", new RotateTicker({ speed: my_speed }))
 
 // ...
 
-GameWindowManager.removeAssociationBetweenTickerCanvasElement("alien", TickerRotate)
+GameWindowManager.removeAssociationBetweenTickerCanvasElement("alien", RotateTicker)
 ```
 
 If you remove the Canvas Element associated with the Ticker, if the Ticker not have any more canvas elements associated, it will be deleted.
@@ -94,7 +94,7 @@ const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
 GameWindowManager.addCanvasElement("alien", alien);
 
-GameWindowManager.addTicker("alien", new TickerRotate({ speed: my_speed }))
+GameWindowManager.addTicker("alien", new RotateTicker({ speed: my_speed }))
 
 // ...
 
@@ -114,8 +114,8 @@ For this you must use the `GameStepManager.addTickersSteps` function and pass th
 
 ```typescript
 GameWindowManager.addTickersSteps("alien", [
-    new TickerRotate({ speed: 0.1, clockwise: true }, 2),
-    new TickerRotate({ speed: 0.2, clockwise: false }, 2),
+    new RotateTicker({ speed: 0.1, clockwise: true }, 2),
+    new RotateTicker({ speed: 0.2, clockwise: false }, 2),
 ])
 ```
 
@@ -125,9 +125,9 @@ If you want to pause the steps for a while, you can use the `Pause` token.
 
 ```typescript
 GameWindowManager.addTickersSteps("alien", [
-    new TickerRotate({ speed: 0.1, clockwise: true }, 2),
+    new RotateTicker({ speed: 0.1, clockwise: true }, 2),
     Pause(1),
-    new TickerRotate({ speed: 0.2, clockwise: false }, 2),
+    new RotateTicker({ speed: 0.2, clockwise: false }, 2),
 ])
 ```
 
@@ -137,8 +137,8 @@ If you want to repeat the steps, you can use the `Repeat` token.
 
 ```typescript
 GameWindowManager.addTickersSteps("alien", [
-    new TickerRotate({ speed: 0.1, clockwise: true }, 2),
-    new TickerRotate({ speed: 0.2, clockwise: false }, 2),
+    new RotateTicker({ speed: 0.1, clockwise: true }, 2),
+    new RotateTicker({ speed: 0.2, clockwise: false }, 2),
     Repeat,
 ])
 ```
