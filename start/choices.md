@@ -24,6 +24,7 @@ In addition to `ChoiceMenuOption` there is also another class `ChoiceMenuOptionC
 `ChoiceMenuOptionClose` is a class which has as parameters:
 
 * `text`: The text that will be displayed in the choice menus.
+* `closeCurrentLabel`: If `true`, the current label will be closed. Default is `false`.
 
 This class is only intended to give you information about a choice, it is up to you to close the choice menu using the [`closeChoiceMenu`](#close-th-choice-menu) function.
 
@@ -74,7 +75,7 @@ To close the choice menu, use the `GameStepManager.closeChoiceMenu`. This is use
 
 This function have the 2 parameters:
 
-* `label`: the label that will be called
+* `choice`: the [`ChoiceMenuOptionClose`](#choice-for-closing-the-menu) that will be used to close the menu.
 * `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
 
 ```typescript
@@ -121,7 +122,7 @@ function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
             })
     }
     else if (item.type == "close") {
-        GameStepManager.closeChoiceMenu(item.label, {
+        GameStepManager.closeChoiceMenu(item, {
             navigate: navigate,
             ...item.props
         })
