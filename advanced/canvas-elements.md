@@ -103,6 +103,8 @@ import { GameWindowManager } from '@drincs/pixi-vn'
 GameWindowManager.removeCanvasElements()
 ```
 
+<!-- TODO: editCanvasElementTag -->
+
 ## Add a listener for a given event
 
 **Note that**: It is suggested to try to add events to the [interface](/start/interface) and not add it to the canvas elements.
