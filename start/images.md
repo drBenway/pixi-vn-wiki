@@ -140,13 +140,13 @@ As for the Canvas Elements, you can remove an image from the canvas using the [`
 
 ## Show/Remove Image with Transition
 
-Functions have been implemented to show images with some "standard" transitions.
+You can show and remove an image with a transition effect. Currently,
 
 [( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
 ### Dissolve Transition
 
-With the Dissolve Transition means that the image will be shown with a fade-in effect. If exist a image with the same tag, then the image is replaced and the first image is removed after the effect is done.
+Dissolve Transition means that the image will be shown with a dissolve effect. If exist a image with the same tag, the existing image will be removed when the new image is shown.
 
 ( This transition is created with the [`FadeAlphaTicker`](/advanced/animations-effects.md#fade) )
 
@@ -181,7 +181,7 @@ removeWithDissolveTransition('image1', { duration: 2 })
 
 ### Fade Transition
 
-With the Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same tag, the existing image is removed with a fade transition, and after the effect is done, the new image is shown with a fade transition.
+Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same tag, the existing image will be removed with a fade-out effect before the new image is shown.
 
 ( This transition is created with the [`FadeAlphaTicker`](/advanced/animations-effects.md#fade) )
 
