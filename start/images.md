@@ -214,11 +214,54 @@ import { removeWithFadeTransition } from '@drincs/pixi-vn'
 removeWithFadeTransition('image1', { duration: 2 })
 ```
 
-## Other Transitions and Animations
+## Create your own transitions
 
-The functions above do nothing more than add an image to the canvas, display it and start a Ticker. So you can use [`GameWindowManager.addTicker`](/advanced/animations-effects) to add your own transitions and animations.
+Create a transition is very simple, you can combine more [Animations and Effects](/advanced/animations-effects) to create your own transition.
 
-If you create or need a transition or animation, please create a [issue](https://github.com/DRincs-Productions/pixi-vn/issues) to share/propose it.
+For example, the function `showWithDissolveTransition` is a combination of the [`FadeAlphaTicker`](/advanced/animations-effects.md#fade) and the `showImage` functions.
+
+```typescript
+export async function showWithDissolveTransition<T extends CanvasBase<any> | string = string>(
+    tag: string,
+    image: T,
+    props: Omit<FadeAlphaTickerProps, "type" | tagToRemoveAfterType | "startOnlyIfHaveTexture"> = {},
+    priority?: UPDATE_PRIORITY,
+): Promise<void> {
+    let oldCanvasTag: string | undefined = undefined
+    // if exist a canvas element with the same tag, then the image is replaced and the first image is removed after the effect is done
+    if (GameWindowManager.getCanvasElement(tag)) {
+        oldCanvasTag = tag + "_temp_disolve"
+        // so is necessary to change the tag of the old canvas element
+        // and remove the old canvas element after the effect is done
+        GameWindowManager.editCanvasElementTag(tag, oldCanvasTag)
+    }
+
+    let canvasElement: CanvasBase<any>
+    if (typeof image === "string") {
+        canvasElement = addImage(tag, image)
+    }
+    else {
+        canvasElement = image
+        GameWindowManager.addCanvasElement(tag, canvasElement)
+    }
+    if (canvasElement instanceof CanvasImage && canvasElement.texture?.label == "EMPTY") {
+        await canvasElement.load()
+    }
+    canvasElement.alpha = 0
+
+    let effect = new FadeAlphaTicker({
+        ...props,
+        type: "show",
+        // After the effect is done, the old canvas element is removed
+        tagToRemoveAfter: oldCanvasTag,
+        startOnlyIfHaveTexture: true,
+    }, 10, priority)
+    GameWindowManager.addTicker(tag, effect)
+    return
+}
+```
+
+The Pixi’VN Team welcomes new proposals/sharing to make this library more and more complete. So you can create a [issue](https://github.com/DRincs-Productions/pixi-vn/issues) to share/propose it.
 
 ### How to force completion of an Transition in the next step?
 

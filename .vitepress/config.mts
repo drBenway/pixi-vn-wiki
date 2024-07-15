@@ -41,7 +41,7 @@ export default defineConfig({
             { text: 'Game Storage', link: '/start/storage' },
             { text: 'Flags Management', link: '/start/flags' },
             { text: 'Save and Load', link: '/start/save' },
-            { text: 'Images and Animations', link: '/start/images' },
+            { text: 'Images and Transitions', link: '/start/images' },
             { text: 'Canvas Elements', link: '/advanced/canvas-elements' },
           ]
         }
