@@ -185,17 +185,17 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 #### Next Step
 
-To execute the next step you must execute the `GameStepManager.runNextStep()` function. This function have a parameter `props` that will be passed to the next step, if you not want to pass any parameter you can pass an empty object `{}`.
+To execute the next step you must execute the `GameStepManager.goNext()` function. This function have a parameter `props` that will be passed to the next step, if you not want to pass any parameter you can pass an empty object `{}`.
 
 ```typescript
-GameStepManager.runNextStep({})
+GameStepManager.goNext({})
 ```
 
-`GameStepManager.runNextStep()` is asynchronous, so, for example, you can use `then` for disabled a next button until the next step is executed.
+`GameStepManager.goNext()` is asynchronous, so, for example, you can use `then` for disabled a next button until the next step is executed.
 
 ```typescript
 // disable next button
-GameStepManager.runNextStep({})
+GameStepManager.goNext({})
     .then((result) => {
         // enable next button
     })
