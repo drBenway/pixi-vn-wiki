@@ -13,7 +13,7 @@
 * [Game Storage](start/storage)
 * [Flags Management](start/flags)
 * [Save and Load](start/save)
-* [Images and Animations](start/images)
+* [Images and Transitions](start/images)
 
 ## Advanced topics
 
