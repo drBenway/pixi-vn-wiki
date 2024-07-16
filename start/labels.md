@@ -201,6 +201,8 @@ GameStepManager.goNext({})
     })
 ```
 
+<!-- TODO: canGoNext -->
+
 #### Go back
 
 Every step the system saves the current state of the game. To go back to the previous step you must execute the `GameStepManager.goBack()` function.
