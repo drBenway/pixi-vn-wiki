@@ -214,6 +214,10 @@ import { removeWithFadeTransition } from '@drincs/pixi-vn'
 removeWithFadeTransition('image1', { duration: 2 })
 ```
 
+<!-- TODO moveIn -->
+
+<!-- TODO zoomIn -->
+
 ## Create your own transitions
 
 Create a transition is very simple, you can combine more [Animations and Effects](/advanced/animations-effects) to create your own transition.
