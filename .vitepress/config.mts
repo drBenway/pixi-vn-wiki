@@ -70,7 +70,8 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/DRincs-Productions/pixi-vn' }
+      { icon: 'github', link: 'https://github.com/DRincs-Productions/pixi-vn' },
+      { icon: 'npm', link: 'https://www.npmjs.com/package/@drincs/pixi-vn' },
     ],
 
     search: {
