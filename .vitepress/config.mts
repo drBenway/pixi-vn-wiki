@@ -70,6 +70,7 @@ export default defineConfig({
     },
 
     socialLinks: [
+      { icon: 'discord', link: 'https://discord.gg/E95FZWakzp' },
       { icon: 'github', link: 'https://github.com/DRincs-Productions/pixi-vn' },
       { icon: 'npm', link: 'https://www.npmjs.com/package/@drincs/pixi-vn' },
     ],
