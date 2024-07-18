@@ -6,6 +6,10 @@ A very important point to take into account before developing a game is the dist
 
 ( Documentation under review )
 
+### Hosting
+
+( Documentation under review )
+
 ### Enable the ADD TO HOME SCREEN - PWA Plugin
 
 It could be very beneficial to enable the ability to install the website as a "browser application" and be able to use it as a standalone application on the device.
@@ -26,26 +30,34 @@ Else, you can create the `manifest.json`, it depernds on the framework you are u
 
 You can distribute your game on [itch.io](https://itch.io/). It is a platform that allows you to upload your game and distribute it to the public. It is a great platform to distribute your game and get feedback from the community.
 
-To do this you will need to build your project and zip the build folder. Then you can upload the zip file to itch.io.
+itch.io can run only the html and javascript files: if you need to build your game and d zip the build folder. Then you can upload the zip file to itch.io.
 
 You will see a result of something like this:
 
 ![image](https://github.com/user-attachments/assets/0482a6fa-8c21-4fa6-b4e1-04f05bc4315d)
 
-The game is just blank. Despite it working when you ran the project locally, with npm start, it does not work on itch.io.
-So how do you fix this? The solution is, thankfully, quite simple. Go into your package.json and add the following line:
+The solution is to [host the game on a server](#hosting) and then create an iframe on itch.io to show the game.
 
-`"homepage": ".",`
+For example, after hosting the game on a server, you can create a index.html file with the following content:
 
-Your package.json should now look something like this:
-
-```json
-{
-    "name": "Example Game",
-    "version": "0.1.0",
-    "homepage": ".",
-    // ...
-}
+```html
+<!doctype html>
+<html lang="en" style="height: 100%; width: 100%;">
+  <head></head>
+  <body
+    style="height: 100%; width: 100%; display: flex; overflow: hidden; margin: 0; background-color: #242424;"
+  >
+    <div id="root"
+      style="height: 100%; width: 100%;"
+    >
+      <iframe
+        src="https://pixi-vn-react-template.web.app/"
+        style="height: 100%; width: 100%; border: none;"
+      >
+      </iframe>
+    </div>
+  </body>
+</html>
 ```
 
-Now, when you build your project, it will work on itch.io.
+Then you can upload the index.html file to itch.io.
