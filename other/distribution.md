@@ -30,6 +30,8 @@ To do this you will need to build your project and zip the build folder. Then yo
 
 You will see a result of something like this:
 
+![image](https://github.com/user-attachments/assets/0482a6fa-8c21-4fa6-b4e1-04f05bc4315d)
+
 The game is just blank. Despite it working when you ran the project locally, with npm start, it does not work on itch.io.
 So how do you fix this? The solution is, thankfully, quite simple. Go into your package.json and add the following line:
 
