@@ -21,3 +21,29 @@ Else, you can create the `manifest.json`, it depernds on the framework you are u
 ## Mobile devices
 
 ( Documentation under review )
+
+## itch.io
+
+You can distribute your game on [itch.io](https://itch.io/). It is a platform that allows you to upload your game and distribute it to the public. It is a great platform to distribute your game and get feedback from the community.
+
+To do this you will need to build your project and zip the build folder. Then you can upload the zip file to itch.io.
+
+You will see a result of something like this:
+
+The game is just blank. Despite it working when you ran the project locally, with npm start, it does not work on itch.io.
+So how do you fix this? The solution is, thankfully, quite simple. Go into your package.json and add the following line:
+
+`"homepage": ".",`
+
+Your package.json should now look something like this:
+
+```json
+{
+    "name": "Example Game",
+    "version": "0.1.0",
+    "homepage": ".",
+    // ...
+}
+```
+
+Now, when you build your project, it will work on itch.io.
