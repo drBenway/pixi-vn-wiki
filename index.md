@@ -46,6 +46,14 @@ features:
     details: Use the powerful code editor, Visual Studio Code, to write your visual novel.
     link: https://code.visualstudio.com/
   - icon: <img 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fnodejs-icon.png?alt=media&token=910cabac-88a5-4522-81f0-708a7848e13f" 
+        alt="NodeJS"
+        style="border-radius:30%;"
+      />
+    title: NodeJS
+    details: Use the JavaScript runtime, NodeJS, to run your visual novel.
+    link: https://nodejs.org/
+  - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvitejs-icon.svg?alt=media&token=67f5d40b-d840-4b40-845a-16b186f64c0a" 
         alt="ViteJS"
         style="border-radius:30%;"

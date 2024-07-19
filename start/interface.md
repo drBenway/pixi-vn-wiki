@@ -18,7 +18,7 @@ For navigate between different url paths/routes you should read: [What is the UR
 
 ## Use Angular
 
-( Documentation under review )
+( [Documentation under review](https://github.com/DRincs-Productions/pixi-vn/issues/162) )
 
 ## Use React
 
@@ -81,4 +81,4 @@ body {
 
 ## Use Vue
 
-( Coming soon )
+( [Documentation under review](https://github.com/DRincs-Productions/pixi-vn/issues/162) )
