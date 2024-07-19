@@ -8,6 +8,7 @@
   "scripts": {
     "start": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "publish": "vitepress build && firebase deploy"
   }
 }
