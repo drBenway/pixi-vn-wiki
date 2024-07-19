@@ -14,7 +14,7 @@ If you want create a new project from scratch it is recommended initialize a new
 
 ### Pivi'VN Templates
 
-**[Pixi’VN template (React + Vite + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)** is a template for creating visual novels in React, contains basic functionality inspired by Ren'Py. (you can try this template [here](https://pixi-vn-react-template.web.app/))
+**[Pixi’VN template (React + Vite + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)** is a template for creating visual novels in React, contains basic functionality inspired by Ren'Py. (you can try this template [here](https://drincs-productions.itch.io/pixi-vn))
 
 This template uses the following libraries:
 
