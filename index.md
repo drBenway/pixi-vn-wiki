@@ -22,7 +22,7 @@ hero:
 
 features:
   - icon: <img 
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fpixijs-icon.png?alt=media&token=f2bf87f6-4c79-433b-acfa-23ed82254ba6" 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fpixijs-icon.png?alt=media" 
         alt="PixiJS"
         style="border-radius:30%;"
       />
@@ -30,7 +30,7 @@ features:
     details: Add images, animations, and effects to your visual novel with the powerful 2D rendering engine, PixiJS.
     link: https://pixijs.com
   - icon: <img 
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftypescript-icon.svg?alt=media&token=4716cb0b-8e60-47ac-971a-8e3d1e43b3aa" 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftypescript-icon.svg?alt=media" 
         alt="TypeScript"
         style="border-radius:30%;"
       />
@@ -38,7 +38,7 @@ features:
     details: Write your visual novel with the modern JavaScript language, TypeScript.
     link: https://www.typescriptlang.org/
   - icon: <img 
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvscode-icon.png?alt=media&token=a758dd7e-b40c-4d70-987f-120fee738332" 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvscode-icon.png?alt=media" 
         alt="VS Code"
         style="border-radius:30%;"
       />
@@ -46,7 +46,7 @@ features:
     details: Use the powerful code editor, Visual Studio Code, to write your visual novel.
     link: https://code.visualstudio.com/
   - icon: <img 
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fnodejs-icon.png?alt=media&token=910cabac-88a5-4522-81f0-708a7848e13f" 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fnodejs-icon.png?alt=media" 
         alt="NodeJS"
         style="border-radius:30%;"
       />
@@ -54,7 +54,7 @@ features:
     details: Use the JavaScript runtime, NodeJS, to run your visual novel.
     link: https://nodejs.org/
   - icon: <img 
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvitejs-icon.svg?alt=media&token=67f5d40b-d840-4b40-845a-16b186f64c0a" 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvitejs-icon.svg?alt=media" 
         alt="ViteJS"
         style="border-radius:30%;"
       />
@@ -62,7 +62,7 @@ features:
     details: Initialize your visual novel with the modern JavaScript framework, ViteJS.
     link: https://vitejs.dev/
   - icon: <img 
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Freact-icon.png?alt=media&token=5fc594c1-c945-460c-b385-12c647e37626" 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Freact-icon.png?alt=media" 
         alt="React"
         style="border-radius:30%;"
       />
@@ -70,7 +70,7 @@ features:
     details: Use your favorite JavaScript framework, React, to create your visual novel interface.
     link: /start/interface#use-react
   - icon: <img 
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvue-icon.png?alt=media&token=0e2bd717-28e7-4e2a-b9ab-f50b1bf44893" 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvue-icon.png?alt=media" 
         alt="Vue"
         style="border-radius:30%;"
       />
@@ -78,7 +78,7 @@ features:
     details: Use your favorite JavaScript framework, Vue, to create your visual novel interface.
     link: /start/interface#use-vue
   - icon: <img
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fangular-icon.png?alt=media&token=320f9114-c9bb-42e5-8fde-218bdc91b26a" 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fangular-icon.png?alt=media" 
         alt="Angular"
         style="border-radius:30%;"
       />
