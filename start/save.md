@@ -2,6 +2,8 @@
 
 The save and load system is a feature that allows the player to save the game progress and load it later. This feature is essential for visual novels, as it allows the player to continue the story from where they left off.
 
+<!-- TODO base64 option -->
+
 ## Save
 
 Pixi’VN provides a function to save the game progress. The `getSaveData` function saves the current game state, including the current step, variables, and other game data in a object.
@@ -45,8 +47,9 @@ export function loadGameSave(navigate: (path: string) => void, afterLoad?: () =>
             reader.onload = (e) => {
                 const jsonString = e.target?.result as string;
                 // load the save data from the JSON string
-                loadSaveJson(jsonString, navigate);
-                afterLoad && afterLoad();
+                loadSaveJson(jsonString, navigate).then(() => {
+                    afterLoad && afterLoad();
+                });
             };
             reader.readAsText(file);
         }

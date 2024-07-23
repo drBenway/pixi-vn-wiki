@@ -10,8 +10,8 @@ In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption`
 
 * `text`: The text that will be displayed in the choice menus.
 * `label`: The [label](/start/labels#label) which will be called when the player chooses the option.
+* `props`: The properties that will be passed to the label, if the label not need any parameter you can pass an empty object `{}`.
 * `type`: The way the [label will be called](/start/labels#run-a-label). It can be `call` or `jump`. Default is `call`.
-* `props`: The properties that will be passed to the label. Default is `{}`.
 
 This class is only intended to give you information about a choice, it is up to you to call the label.
 
@@ -46,9 +46,9 @@ export const appleLabel = newLabel<{quantity: number}>("AppleLabel",
 ```typescript
 setDialogue("Choose a fruit:")
 setChoiceMenuOptions([
-    new ChoiceMenuOption("Orange", orangeLabel), // by default, the label will be called by call
-    new ChoiceMenuOption("Banana", bananaLabel, "jump"),
-    new ChoiceMenuOption("Apple", appleLabel, "call", { quantity: 5 }),
+    new ChoiceMenuOption("Orange", orangeLabel, {}), // by default, the label will be called by call
+    new ChoiceMenuOption("Banana", bananaLabel, {}, "jump"),
+    new ChoiceMenuOption("Apple", appleLabel, { quantity: 5 }, "call"),
     new ChoiceMenuOptionClose("Cancel"),
 ])
 ```
