@@ -375,4 +375,4 @@ const goToNavigation = newLabel(GO_TO_NAVIGATION_LABEL_ID,
 )
 ```
 
-<!-- TODO: document `onStepRun` -->
+<!-- TODO: document `onStepStart` -->
