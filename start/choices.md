@@ -13,6 +13,8 @@ In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption`
 * `props`: The properties that will be passed to the label, if the label not need any parameter you can pass an empty object `{}`.
 * `type`: The way the [label will be called](/start/labels#run-a-label). It can be `call` or `jump`. Default is `call`.
 
+<!-- TODO redocumentar the props -->
+
 This class is only intended to give you information about a choice, it is up to you to call the label.
 
 In practice this means that after you get the list of choices through the `getChoiceMenuOptions` function, you will have to call the label using the [`callLabel`](/start/labels.md#call-a-label) or [`jumpLabel`](/start/labels.md#jump-to-a-label) function.
