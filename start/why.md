@@ -47,7 +47,30 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 * Has a debugging system and have a lot of tools for development.
 * You can use it to create website, backend, mobile app, pc software, etc...
 
-<!-- TODO: #### Dialogues Example -->
+#### Dialogues implementation
+
+Pixi’VN uses JavaScript/TypeScript, so respect to Ren'Py, it not have a specific language for dialogues.
+
+So the Ren'Py language syntax is very compact and easy respect to JavaScript/TypeScript.
+
+Example of Ren'Py:
+
+```renpy
+label start:
+    "Hello, world!"
+    "This is a Ren'Py tutorial."
+    "I hope you enjoy it!"
+```
+
+Example of Pixi’VN:
+
+```typescript
+const startLabel = newLabel("start_label_id", [
+    (props) => setDialogue("Hello, world!"),
+    (props) => setDialogue("This is a Pixi’VN tutorial."),
+    (props) => setDialogue("I hope you enjoy it!")
+])
+```
 
 #### Minigame implementation
 
