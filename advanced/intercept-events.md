@@ -21,10 +21,10 @@ export function addRefreshSave() {
     }
 }
 
-export function loadRefreshSave(navigate: (path: string) => void) {
+export async function loadRefreshSave(navigate: (path: string) => void) {
     const jsonString = localStorage.getItem("refreshSave")
     if (jsonString) {
-        loadSaveJson(jsonString, navigate);
+        await loadSaveJson(jsonString, navigate);
         localStorage.removeItem("refreshSave")
     }
 }
