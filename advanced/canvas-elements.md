@@ -62,7 +62,20 @@ import { GameWindowManager } from '@drincs/pixi-vn'
 GameWindowManager.removeCanvasElements()
 ```
 
-<!-- TODO: editCanvasElementTag -->
+## Edit Canvas Element Tag
+
+To edit the tag of a canvas element, you can use the `GameWindowManager.editCanvasElementTag`.
+
+The `editCanvasElementTag` method have the following parameters:
+
+* `oldTag`: The old tag of the element to edit.
+* `newTag`: The new tag of the element.
+
+```typescript
+import { GameWindowManager } from '@drincs/pixi-vn'
+
+GameWindowManager.editCanvasElementTag('sprite1', 'sprite2')
+```
 
 ## Add a listener for a given event
 
