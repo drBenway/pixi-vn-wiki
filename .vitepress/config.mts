@@ -85,7 +85,7 @@ export default defineConfig({
                 { text: 'Tickers', link: '/start/tickers' },
               ]
             },
-            { text: 'Intecept Events', link: '/advanced/intercept-events' },
+            { text: 'Advanced topics', link: '/advanced/intercept-events' },
           ]
         }
       ],
@@ -93,6 +93,7 @@ export default defineConfig({
         {
           text: 'Advanced topics',
           items: [
+            { text: 'First steps', link: '/start/character' },
             { text: 'Intecept Events', link: '/advanced/intercept-events' },
             { text: 'Distribution', link: '/advanced/distribution' },
           ]
