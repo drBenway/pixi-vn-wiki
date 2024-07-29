@@ -21,7 +21,7 @@ This function is a combination of the [`addImage`](#add-image) and [`load`](#loa
 
 ## Add image
 
-To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/advanced/canvas-elements#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/advanced/canvas-elements#base-elements).
+To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/start/canvas-elements#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/start/canvas-elements#base-elements).
 
 It is important to take into account that this function only adds the element to the canvas but does **not show it and does not load its texture**.
 
@@ -36,7 +36,7 @@ import { addImage } from '@drincs/pixi-vn'
 const image = addImage('image1', 'path/to/image.png')
 ```
 
-If you want initialize the image before and then add it to the canvas, you can use the [`GameWindowManager.addCanvasElement`](/advanced/canvas-elements#add-canvas-elements)function.
+If you want initialize the image before and then add it to the canvas, you can use the [`GameWindowManager.addCanvasElement`](/start/canvas-elements#add-canvas-elements)function.
 
 ```typescript
 import { GameWindowManager, CanvasImage } from '@drincs/pixi-vn'
@@ -136,7 +136,7 @@ export const startLabel = newLabel("StartLabel", [
 
 ## Remove Image
 
-As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/advanced/canvas-elements#remove-canvas-elements) function.
+As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/start/canvas-elements#remove-canvas-elements) function.
 
 ## Show/Remove Image with Transition
 
@@ -148,7 +148,7 @@ You can show and remove an image with a transition effect. Currently,
 
 Dissolve Transition means that the image will be shown with a dissolve effect. If exist a image with the same tag, the existing image will be removed when the new image is shown.
 
-( This transition is created with the [`FadeAlphaTicker`](/advanced/animations-effects.md#fade) )
+( This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade) )
 
 The `showWithDissolveTransition` function has the following parameters:
 
@@ -183,7 +183,7 @@ removeWithDissolveTransition('image1', { duration: 2 })
 
 Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same tag, the existing image will be removed with a fade-out effect before the new image is shown.
 
-( This transition is created with the [`FadeAlphaTicker`](/advanced/animations-effects.md#fade) )
+( This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade) )
 
 The `showWithFadeTransition` function has the following parameters:
 
@@ -220,9 +220,9 @@ removeWithFadeTransition('image1', { duration: 2 })
 
 ## Create your own transitions
 
-Create a transition is very simple, you can combine more [Animations and Effects](/advanced/animations-effects) to create your own transition.
+Create a transition is very simple, you can combine more [Animations and Effects](/start/animations-effects) to create your own transition.
 
-For example, the function `showWithDissolveTransition` is a combination of the [`FadeAlphaTicker`](/advanced/animations-effects.md#fade) and the `showImage` functions.
+For example, the function `showWithDissolveTransition` is a combination of the [`FadeAlphaTicker`](/start/animations-effects.md#fade) and the `showImage` functions.
 
 ```typescript
 export async function showWithDissolveTransition<T extends CanvasBase<any> | string = string>(

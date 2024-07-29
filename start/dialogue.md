@@ -76,20 +76,6 @@ To clear the current dialogue, use the `clearDialogue`.
 clearDialogue();
 ```
 
-## Get the History of Dialogues
-
-To get the history of dialogues for every [game steps](/start/labels), use the `getDialogueHistory`. The return is a `DialogueHistory<T>[]`.
-
-```typescript
-const dialogues: DialogueHistory<DialogueBaseModel>[] = getDialogueHistory<DialogueBaseModel>();
-```
-
-If you use the [Extended DialogueModel](#extend-dialoguebasemodel), you can get the history of dialogues and cast to the extended class.
-
-```typescript
-const dialogues: DialogueHistory<DialogueModel>[] = getDialogueHistory<DialogueModel>();
-```
-
 ## Extend DialogueBaseModel
 
 You can extend the `DialogueBaseModel` to add more properties, but it **not recommended** (you can use the param `oltherParams` to add more properties. `oltherParams` forces you to use only type variables that can be saved on storage).

@@ -2,11 +2,11 @@
 
 Pixi’VN provides a set of functions to create animations and effects in your visual novel.
 
-Animations and Effects are based on [Ticker](/advanced/tickers). So for add, remove... animations and effects read the [Tickers documentation](/advanced/tickers).
+Animations and Effects are based on [Ticker](/start/tickers). So for add, remove... animations and effects read the [Tickers documentation](/start/tickers).
 
 ## Animations
 
-Animations are [Tickers](/advanced/tickers) that move a [canvas element](canvas-elements) without altering the texture.
+Animations are [Tickers](/start/tickers) that move a [canvas element](canvas-elements) without altering the texture.
 
 ### Move
 
@@ -18,7 +18,7 @@ It is possible to start moving on all [canvas element](canvas-elements).
 
 * `speed`: is a number that represents the speed of the movement. default is `0.01`.
 * `destination`: is a `{y: number, x: number}` that represents the destination of the movement. ( is required )
-* `speedProgression`: is a [`TickerProgrationType`](/advanced/tickers). default is `undefined`.
+* `speedProgression`: is a [`TickerProgrationType`](/start/tickers). default is `undefined`.
 * `startOnlyIfHaveTexture`: is a boolean that represents if the animation should start only if the canvas element have a texture not empty. default is `false`.
 
 ### Rotate
@@ -31,7 +31,7 @@ It is possible to start rotation on all [canvas element](canvas-elements).
 
 * `speed`: is a number that represents the speed of the rotation. default is `0.01`.
 * `clockwise`: is a boolean that represents the direction of the rotation. if `true` the rotation is clockwise, if `false` the rotation is counterclockwise. default is `true`.
-* `speedProgression`: is a [`TickerProgrationType`](/advanced/tickers). default is `undefined`.
+* `speedProgression`: is a [`TickerProgrationType`](/start/tickers). default is `undefined`.
 * `startOnlyIfHaveTexture`: is a boolean that represents if the animation should start only if the canvas element have a texture not empty. default is `false`.
 
 for example:
@@ -68,7 +68,7 @@ GameWindowManager.addTicker("alien", new RotateTicker({ speed: 0, speedProgressi
 
 ## Effects
 
-Effects are [Tickers](/advanced/tickers) that alter the texture of a [canvas element](canvas-elements).
+Effects are [Tickers](/start/tickers) that alter the texture of a [canvas element](canvas-elements).
 
 [( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 

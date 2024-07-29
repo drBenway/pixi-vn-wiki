@@ -13,11 +13,11 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Guide', link: '/start/getting-started' },
-      { text: 'Advanced topics', link: '/advanced/canvas-elements' },
+      { text: 'Advanced topics', link: '/start/canvas-elements' },
       {
         text: 'Other topics',
         items: [
-          { text: 'Distribution', link: '/other/distribution' },
+          { text: 'Distribution', link: '/advanced/distribution' },
           { text: 'Various Answers', link: '/other/various-answers' },
         ],
       },
@@ -40,16 +40,31 @@ export default defineConfig({
             {
               text: 'Narration',
               items: [
-                { text: 'Dialogue and Narration', link: '/start/dialogue' },
+                { text: 'Dialogue', link: '/start/dialogue' },
                 { text: 'Label and Game Step', link: '/start/labels' },
                 { text: 'Choice Menus', link: '/start/choices' },
+                { text: 'History', link: '/start/history' },
               ]
             },
-            { text: 'Game Storage', link: '/start/storage' },
-            { text: 'Flags Management', link: '/start/flags' },
+            {
+              text: 'Storage',
+              items: [
+                { text: 'Game Storage', link: '/start/storage' },
+                { text: 'Flags Management', link: '/start/flags' },
+                { text: 'Stored Classes', link: '/start/stored-classes' },
+              ]
+            },
             { text: 'Save and Load', link: '/start/save' },
-            { text: 'Images and Transitions', link: '/start/images' },
-            { text: 'Canvas Elements', link: '/advanced/canvas-elements' },
+            {
+              text: 'Canvas',
+              items: [
+                { text: 'Images and Transitions', link: '/start/images' },
+                { text: 'Canvas Elements', link: '/start/canvas-elements' },
+                { text: 'Animations and Effects', link: '/start/animations-effects' },
+                { text: 'Tickers', link: '/start/tickers' },
+              ]
+            },
+            { text: 'Intecept Events', link: '/advanced/intercept-events' },
           ]
         }
       ],
@@ -57,11 +72,8 @@ export default defineConfig({
         {
           text: 'Advanced topics',
           items: [
-            { text: 'Canvas Elements', link: '/advanced/canvas-elements' },
-            { text: 'Animations and Effects', link: '/advanced/animations-effects' },
-            { text: 'Tickers', link: '/advanced/tickers' },
-            { text: 'Stored Classes', link: '/advanced/stored-classes' },
             { text: 'Intecept Events', link: '/advanced/intercept-events' },
+            { text: 'Distribution', link: '/advanced/distribution' },
           ]
         }
       ],
@@ -69,7 +81,6 @@ export default defineConfig({
         {
           text: 'Other topics',
           items: [
-            { text: 'Distribution', link: '/other/distribution' },
             { text: 'Various Answers', link: '/other/various-answers' },
           ]
         }

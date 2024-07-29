@@ -64,7 +64,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 )
 ```
 
-Also, you can [unlink the Transition/Effect/Animation](/advanced/tickers) from the canvas element in the next step.
+Also, you can [unlink the Transition/Effect/Animation](/start/tickers) from the canvas element in the next step.
 
 ## Skip step and Auto Forward
 
