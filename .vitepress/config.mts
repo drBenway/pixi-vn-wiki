@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 
+const ogUrl = 'https://pixi-vn.web.app'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Pixi’VN",
@@ -35,9 +37,14 @@ export default defineConfig({
           text: 'First steps',
           items: [
             { text: 'Characters', link: '/start/character' },
-            { text: 'Dialogue and Narration', link: '/start/narration' },
-            { text: 'Label and Game Step', link: '/start/labels' },
-            { text: 'Choice Menus', link: '/start/choices' },
+            {
+              text: 'Narration',
+              items: [
+                { text: 'Dialogue and Narration', link: '/start/dialogue' },
+                { text: 'Label and Game Step', link: '/start/labels' },
+                { text: 'Choice Menus', link: '/start/choices' },
+              ]
+            },
             { text: 'Game Storage', link: '/start/storage' },
             { text: 'Flags Management', link: '/start/flags' },
             { text: 'Save and Load', link: '/start/save' },
@@ -132,5 +139,21 @@ export default defineConfig({
     ]
   ],
 
-  srcExclude: ['**/Home.md']
+  srcExclude: ['**/Home.md'],
+
+  transformPageData(pageData) {
+    const canonicalUrl = `${ogUrl}/${pageData.relativePath}`
+      .replace(/\/index\.md$/, '/')
+      .replace(/\/getting-started\.md$/, '/')
+      .replace(/\/character\.md$/, '/')
+      .replace(/\/dialogue\.md$/, '/')
+      .replace(/\/images\.md$/, '/')
+      .replace(/\.md$/, '/')
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.unshift(
+      ['link', { rel: 'canonical', href: canonicalUrl }],
+      ['meta', { property: 'og:title', content: pageData.title }],
+    )
+    return pageData
+  },
 })

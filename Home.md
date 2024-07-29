@@ -7,7 +7,7 @@
 ## First steps
 
 * [Characters](start/character)
-* [Dialogue and Narration](start/narration)
+* [Dialogue](start/dialogue)
 * [Choice Menus](start/choices)
 * [Label and Game Step](start/labels)
 * [Game Storage](start/storage)

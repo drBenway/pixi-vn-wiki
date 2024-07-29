@@ -156,7 +156,7 @@ export default class CharacterBaseModel extends StoredClassModel implements ICha
 
 ## Use Characters in the Game
 
-You can use the characters in the game for example to [set a dialogue](/start/narration#set-a-current-dialogue). You can use the character's `id` or the character's instance, but it is recommended to use the instance.
+You can use the characters in the game for example to [set a dialogue](/start/dialogue#set-a-current-dialogue). You can use the character's `id` or the character's instance, but it is recommended to use the instance.
 
 ```typescript
 export const liam = new CharacterBaseModel('liam_id', {
