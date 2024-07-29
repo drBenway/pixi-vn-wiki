@@ -5,8 +5,29 @@ const ogUrl = 'https://pixi-vn.web.app'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Pixi’VN",
-  // title: "Pixi’VN - PixiJS Visual Novel Engine",
   description: "Pixi’VN - Pixi'VN is a npm package that provides various features for creating visual novels, based on PixiJS.",
+
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.svg' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'Pixi’VN' }],
+    ['meta', { property: 'og:url', content: 'https://pixi-vn.web.app' }],
+    ['meta', { property: 'og:description', content: 'PixiJS Visual Novel Engine' }],
+    ['meta', { property: 'og:site_name', content: 'pixivn' }],
+    ['meta', { name: 'theme-color', content: '#646cff' }],
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-KGCCEKXRVG' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KGCCEKXRVG');`
+    ]
+  ],
 
   themeConfig: {
     logo: '/logo.webp',
@@ -87,6 +108,11 @@ export default defineConfig({
       ]
     },
 
+    editLink: {
+      pattern: 'https://github.com/DRincs-Productions/pixi-vn/wiki',
+      text: 'Suggest changes to this page',
+    },
+
     socialLinks: [
       { icon: 'discord', link: 'https://discord.gg/E95FZWakzp' },
       { icon: 'github', link: 'https://github.com/DRincs-Productions/pixi-vn' },
@@ -133,22 +159,6 @@ export default defineConfig({
       })
     }
   },
-
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.svg' }],
-    [
-      'script',
-      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-KGCCEKXRVG' }
-    ],
-    [
-      'script',
-      {},
-      `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-KGCCEKXRVG');`
-    ]
-  ],
 
   srcExclude: ['**/Home.md'],
 
