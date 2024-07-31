@@ -1,6 +1,6 @@
 # Getting Started
 
-If you have already initialized a new project for your visual novel, you can jump to the [installation](#installation) section.
+You can start using Pixi’VN by [initializing a new project](#project-initialization) or [installing the package](#package-installation) in an existing project.
 
 ## Prerequisites
 
@@ -8,40 +8,51 @@ If you have already initialized a new project for your visual novel, you can jum
 * Text Editor with TypeScript support.
   * VSCode is recommended.
 
-## Initialize a new project
+## Project Initialization
 
-If you want create a new project from scratch it is recommended initialize a new project with [Vite](https://vitejs.dev/). Otherwise you can use one of the following templates.
+To initialize a new project, you can use the following command:
 
-### Pivi'VN Templates
+```bash
+# npm
+npm create pixi-vn@latest
 
-**[Pixi’VN template (React + Vite + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)** is a template for creating visual novels in React, contains basic functionality inspired by Ren'Py. (you can try this template [here](https://drincs-productions.itch.io/pixi-vn))
+# yarn
+yarn create pixi-vn@latest
 
-This template uses the following libraries:
+# pnpm
+pnpm create pixi-vn@latest
 
-* [Pixi'VN](https://www.npmjs.com/package/@drincs/pixi-vn)
-* [Vite](https://vitejs.dev/)
-* [Vite Checker](https://www.npmjs.com/package/vite-plugin-checker)
-* [PWA Vite Plugin](https://vite-pwa-org.netlify.app)
-* [Recoil](https://recoiljs.org/)
-* [React Router](https://reactrouter.com/)
-* [Mui Joy](https://mui.com/joy-ui/getting-started/)
-* [Framer Motion](https://www.framer.com/motion/)
-* [Notistack](https://iamhosseindhv.com/notistack)
-* [i18next](https://www.i18next.com/)
-* [Reacr Markdown](https://www.npmjs.com/package/react-markdown)
+# bun
+bun create pixi-vn@latest
+```
 
-## Installation
+The supported template presets are:
+
+**[Basic Visual Novel - Web page (Vite + React + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)**
+
+( More templates will be added in the future, see this [issue](https://github.com/DRincs-Productions/pixi-vn/issues/162) for more information )
+
+After the project is initialized, you can open the project directory with your text editor (VSCode is recommended) and start developing your visual novel.
+
+Into all templates there is a `README.md` file with more information about the project.
+
+## Package Installation
 
 For installing the Pixi’VN package, you can use the following command:
 
 ```bash
-# for npm
+# npm
 npm install @drincs/pixi-vn
-# for yarn
-yarn add @drincs/pixi-vn
-```
 
-## Usage
+# yarn
+yarn add @drincs/pixi-vn
+
+# pnpm
+pnpm add @drincs/pixi-vn
+
+# bun
+bun add @drincs/pixi-vn
+```
 
 Now you must initialize the Pixi’VN window before using the engine.
 
