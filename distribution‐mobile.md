@@ -22,6 +22,8 @@ https://www.microsoft.com/openjdk
 
 $env:JAVA_HOME="C:\Program Files\Microsoft\jdk-21.0.4.7-hotspot"
 
+restart pc
+
 ios
 
 ![image](https://github.com/user-attachments/assets/b39d87d5-07f0-4fb0-994b-def749876823)
