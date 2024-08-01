@@ -14,6 +14,8 @@ android
 
 ![image](https://github.com/user-attachments/assets/f0d3561d-f147-400a-91d5-e611aa098996)
 
+![image](https://github.com/user-attachments/assets/71be6155-18ec-4dd1-867d-bc698ac66caf)
+
 ios
 
 ![image](https://github.com/user-attachments/assets/b39d87d5-07f0-4fb0-994b-def749876823)
