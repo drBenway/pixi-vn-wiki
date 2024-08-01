@@ -6,4 +6,6 @@ distribution-mobile
 
 ![image](https://github.com/user-attachments/assets/aa576001-41ed-4e2a-9c1a-fb9326c383aa)
 
+![image](https://github.com/user-attachments/assets/b004117b-34ba-4383-8e83-428a5f075550)
+
 ![image](https://github.com/user-attachments/assets/b39d87d5-07f0-4fb0-994b-def749876823)
