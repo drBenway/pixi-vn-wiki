@@ -1,33 +1,33 @@
 # Pixi’VN - PixiJS Visual Novel Engine
 
-* [Why Pixi’VN?](/start/why)
-* [Get Started](/start/getting-started)
-* [Interface with JavaScript Framework](/start/interface)
+* [Why Pixi’VN?](why)
+* [Get Started](getting-started)
+* [Interface with JavaScript Framework](interface)
 
 ## First steps
 
-* [Characters](/start/character)
+* [Characters](character)
 * Narration:
-  * [Dialogue](/start/dialogue)
-  * [Choice Menus](/start/choices)
-  * [Label and Game Step](/start/labels)
-  * [History](/start/history)
+  * [Dialogue](dialogue)
+  * [Choice Menus](choices)
+  * [Label and Game Step](labels)
+  * [History](history)
 * Storage:
-  * [Game Storage](/start/storage)
-  * [Flags Management](/start/flags)
-  * [Stored Classes](/start/stored-classes)
-* [Save and Load](/start/save)
+  * [Game Storage](storage)
+  * [Flags Management](flags)
+  * [Stored Classes](stored-classes)
+* [Save and Load](save)
 * Canvas:
-  * [Images and Transitions](/start/images)
-  * [Canvas Elements](/start/canvas-elements)
-  * [Animations and Effects](/start/animations-effects)
-  * [Tickers](/start/tickers)
+  * [Images and Transitions](images)
+  * [Canvas Elements](canvas-elements)
+  * [Animations and Effects](animations-effects)
+  * [Tickers](tickers)
 
 ## Advanced topics
 
-* [Intecept Events](/advanced/intercept-events)
-* [Distribution](/advanced/distribution)
+* [Intecept Events](intercept-events)
+* [Distribution](distribution)
 
 ## Other topics
 
-* [Various Answers](/other/various-answers)
+* [Various Answers](various-answers)
