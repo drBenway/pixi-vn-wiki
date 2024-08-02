@@ -12,6 +12,8 @@ A very important point to take into account before developing a game is the dist
 
 ### Enable the ADD TO HOME SCREEN - PWA Plugin
 
+![image](https://github.com/user-attachments/assets/7afa46f0-347f-4d61-846c-b71ba39f0105)
+
 It could be very beneficial to enable the ability to install the website as a "browser application" and be able to use it as a standalone application on the device.
 
 If you are using [Vite js](https://vitejs.dev/) as a build tool, you can use the [PWA Vite Plugin](https://vite-pwa-org.netlify.app/). You can copy this [exemple](https://vite-pwa-org.netlify.app/guide/pwa-minimal-requirements.html#web-app-manifest).
