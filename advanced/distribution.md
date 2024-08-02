@@ -30,7 +30,13 @@ If it's the first time you use firebase-tools, login to your Google account with
 firebase login
 ```
 
-With the Firebase CLI installed, run firebase init within your project. The CLI prompts:
+With the Firebase CLI installed, run (within your project):
+
+```bash
+firebase init
+```
+
+The CLI prompts:
 
 "Which Firebase CLI features do you want to set up for this folder?" Choose `Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`.
 
@@ -42,7 +48,11 @@ Create a new Firebase project or select an existing one.
 
 Configure as a single-page app (rewrite all urls to /index.html)?" Enter `yes`. (Answering this question will ensure that routing, hard reload, and deep linking work in the app)
 
-"File build/index.html already exists. Overwrite?" Enter `no`.
+"File dist/index.html already exists. Overwrite?" Enter `no`.
+
+---
+
+GitHub Action deploys are optional. If you want to set up automatic builds and deploys with Github, answer the following questions:
 
 Set up automatic builds and deploys with Github? Enter `yes`.
 
@@ -55,6 +65,8 @@ What script should be run before every deploy? Enter `npm ci && npm run build`.
 Set up automatic deployment to your sites live channel when a PR is merged? Enter `yes`.
 
 What is the name of the get hooked branch associated with your sites live channel? Enter your project's main branch name.
+
+---
 
 A firebase.json config file is generated, configuring the app for deployment.
 
@@ -69,35 +81,6 @@ The last thing needed is to make sure caching headers are being set correctly. T
       {
         "source": "**",
         "destination": "/index.html"
-      }
-    ],
-    "headers": [
-      {
-        "source": "/**",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "public, max-age=31536000"
-          }
-        ]
-      },
-      {
-        "source": "precache-manifest.*.js",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "no-cache"
-          }
-        ]
-      },
-      {
-        "source": "service-worker.js",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "no-cache"
-          }
-        ]
       }
     ]
   }
