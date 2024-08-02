@@ -2,13 +2,116 @@
 
 A very important point to take into account before developing a game is the distribution of the game. It is important to know how the game will be distributed and how it will be played by the users.
 
+Potentially all JavaScript/Typescript projects can be distributed in **all platforms**. For example, Discord is a JavaScript/Typescript project that have a desktop app, a web app and a mobile app.
+
 ## Website
 
-( Documentation under review )
+The game can be distributed as a website. The game can be played on the browser and can be accessed by anyone with an internet connection. To do this you need to [host the game on a server](#hosting-and-deploying).
 
-### Hosting
+### Hosting and Deploying
 
-( Documentation under review )
+You can use various hosts like [Firebase](https://firebase.google.com/), [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/) (these are completely free). All will have similar setup processes that need to be completed.
+
+#### Firebase Hosting
+
+For this guide, Firebase will be used as the hosting example. Why Firebase? Because it have more features than the others, like the ability to host a database, authentication, and more. Also, Firebase is a Google product, so it is very reliable.
+
+First, if not already available, [create the project in Firebase](https://console.firebase.google.com/).
+
+Next, in a Terminal, install the Firebase CLI:
+
+```bash
+npm install -g firebase-tools
+```
+
+If it's the first time you use firebase-tools, login to your Google account with:
+
+```bash
+firebase login
+```
+
+With the Firebase CLI installed, run firebase init within your project. The CLI prompts:
+
+"Which Firebase CLI features do you want to set up for this folder?" Choose `Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`.
+
+Create a new Firebase project or select an existing one.
+
+"Select a default Firebase project for this directory:" Choose the project you created on the Firebase website.
+
+"What do you want to use as your public directory?" Enter `dist`.
+
+Configure as a single-page app (rewrite all urls to /index.html)?" Enter `yes`. (Answering this question will ensure that routing, hard reload, and deep linking work in the app)
+
+"File build/index.html already exists. Overwrite?" Enter `no`.
+
+Set up automatic builds and deploys with Github? Enter `yes`.
+
+For which GitHub repository would you like to set up a Github Workflow? Enter your project name.
+
+Set up the workflow to run a build script before every deploy? Enter `yes`.
+
+What script should be run before every deploy? Enter `npm ci && npm run build`.
+
+Set up automatic deployment to your sites live channel when a PR is merged? Enter `yes`.
+
+What is the name of the get hooked branch associated with your sites live channel? Enter your project's main branch name.
+
+A firebase.json config file is generated, configuring the app for deployment.
+
+The last thing needed is to make sure caching headers are being set correctly. To do this, add a headers snippet to the firebase.json file. The complete firebase.json looks like:
+
+```json
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "precache-manifest.*.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "service-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+For more information about the firebase.json properties, see the [Firebase documentation](https://firebase.google.com/docs/hosting/full-config#section-firebase-json).
+
+To deploy the app, run:
+
+```bash
+npm run build
+firebase deploy
+```
 
 ### Enable the ADD TO HOME SCREEN - PWA Plugin
 
