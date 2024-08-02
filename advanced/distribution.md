@@ -141,7 +141,7 @@ You will see a result of something like this:
 
 ![image](https://github.com/user-attachments/assets/0482a6fa-8c21-4fa6-b4e1-04f05bc4315d)
 
-The solution is to [host the game on a server](#hosting) and then create an iframe on itch.io to show the game.
+The solution is to [host the game on a server](#hosting-and-deploying) and then create an iframe on itch.io to show the game.
 
 For example, after hosting the game on a server, you can create a index.html file with the following content:
 
