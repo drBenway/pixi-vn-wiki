@@ -72,6 +72,25 @@ Ok, now you can go on Ionic Extension and run the project on your device (remenb
 
 ![image](https://github.com/user-attachments/assets/e559d9c3-ed07-47a4-8028-2b733e9a6ddf)
 
+You need to set the screenOrientatio, in the `android\app\src\main\AndroidManifest.xml`.
+
+```xml
+<!-- AndroidManifest.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity
+            <!-- For horizontal orientation -->
+            android:screenOrientation="sensorLandscape"
+            <!-- For vertical orientation -->
+            android:screenOrientation="sensorPortrait"
+            <!-- ... -->
+            >
+        </activity>
+    </application>
+</manifest>
+```
+
 ## iOS
 
 For IOS the documentation is currently under review.
