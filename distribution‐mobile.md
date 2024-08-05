@@ -1,4 +1,6 @@
-distribution-mobile
+# Mobile distribution
+
+There are various ways to distribute mobile applications. In our case we will use [Ionic](https://ionicframework.com/) to build the mobile application and [Capacitor](https://capacitorjs.com/) to deploy it to the mobile devices.
 
 android
 
@@ -18,7 +20,7 @@ android
 
 ![image](https://github.com/user-attachments/assets/e559d9c3-ed07-47a4-8028-2b733e9a6ddf)
 
-https://www.microsoft.com/openjdk
+<https://www.microsoft.com/openjdk>
 
 $env:JAVA_HOME="C:\Program Files\Microsoft\jdk-21.0.4.7-hotspot"
 
@@ -27,4 +29,3 @@ restart pc
 ios
 
 ![image](https://github.com/user-attachments/assets/b39d87d5-07f0-4fb0-994b-def749876823)
-
