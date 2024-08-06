@@ -34,7 +34,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Guide', link: '/start/getting-started' },
-      { text: 'Advanced topics', link: '/start/canvas-elements' },
+      { text: 'Advanced topics', link: '/start/intercept-events' },
       {
         text: 'Other topics',
         items: [
