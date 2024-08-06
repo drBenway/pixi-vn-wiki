@@ -81,7 +81,7 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JAVA_HOME=$(/usr/lib/jvm/java-11-openjdk-amd64)
 ```
 
-Second, you need to install the ADB (Android Debug Bridge), you can read the instructions [here](https://www.xda-developers.com/install-adb-windows-macos-linux/).
+Second, you need to **install the ADB** (Android Debug Bridge) and add ADB to your Path environment variables. You can read the instructions [here](https://www.xda-developers.com/install-adb-windows-macos-linux/).
 
 After that, you need restart your computer.
 
