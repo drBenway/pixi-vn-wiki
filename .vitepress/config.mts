@@ -96,6 +96,7 @@ export default defineConfig({
             { text: 'First steps', link: '/start/character' },
             { text: 'Intecept Events', link: '/advanced/intercept-events' },
             { text: 'Distribution', link: '/advanced/distribution' },
+            { text: 'Mobile distribution', link: '/advanced/distribution‐mobile' },
           ]
         }
       ],

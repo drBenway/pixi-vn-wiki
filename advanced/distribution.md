@@ -106,15 +106,7 @@ If you are using [Vite js](https://vitejs.dev/) as a build tool, you can use the
 
 Else, you can create the `manifest.json`, it depernds on the framework you are using.
 
-## Desktop devices
-
-( Documentation under review )
-
-## Mobile devices
-
-( Documentation under review )
-
-## itch.io
+### itch.io
 
 You can distribute your game on [itch.io](https://itch.io/). It is a platform that allows you to upload your game and distribute it to the public. It is a great platform to distribute your game and get feedback from the community.
 
@@ -149,3 +141,13 @@ For example, after hosting the game on a server, you can create a index.html fil
 ```
 
 Then you can upload the index.html file to itch.io.
+
+## Desktop devices
+
+There are many ways to distribute your game on desktop devices. You can use [Electron](https://www.electronjs.org/), [NW.js](https://nwjs.io/), or [React Native for Windows + Mac](https://microsoft.github.io/react-native-windows/).
+
+However, if you do not want to create a project with large customizations, I recommend using the [multi-device templates](/start/getting-started.md#project-initialization), in which Electron Forge has been added in order to allow both the development of a Web app and the development of desktop and mobile applications, and the readme explains how to distribute the game on multiple devices.
+
+## Mobile devices
+
+All the information to develop a mobile application is on the following page: [Mobile distribution](/advanced/distribution‐mobile.md)

@@ -27,6 +27,7 @@
 
 * [Intecept Events](intercept-events)
 * [Distribution](distribution)
+* [Mobile distribution](distribution-mobile)
 
 ## Other topics
 
