@@ -39,14 +39,6 @@ After add the Android project, you need `Build` and `Sync` the project, this way
 
 ![image](https://github.com/user-attachments/assets/593e2b73-d566-4c22-843d-1d581d515ad2)
 
-Ok, now if everything went well, after Android studio has finished compiling the project,
-
-![image](https://github.com/user-attachments/assets/f0d3561d-f147-400a-91d5-e611aa098996)
-
-You can run the project on an emulator.
-
-![image](https://github.com/user-attachments/assets/71be6155-18ec-4dd1-867d-bc698ac66caf)
-
 You need to set the screenOrientatio, in the `android\app\src\main\AndroidManifest.xml`.
 
 ```xml
@@ -65,6 +57,14 @@ You need to set the screenOrientatio, in the `android\app\src\main\AndroidManife
     </application>
 </manifest>
 ```
+
+Ok, now if everything went well, after Android studio has finished compiling the project,
+
+![image](https://github.com/user-attachments/assets/f0d3561d-f147-400a-91d5-e611aa098996)
+
+You can run the project on an emulator.
+
+![image](https://github.com/user-attachments/assets/71be6155-18ec-4dd1-867d-bc698ac66caf)
 
 ### Run project on your android device
 
