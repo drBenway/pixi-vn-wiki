@@ -1,6 +1,6 @@
 # Pixi'VN + Ink Language
 
-Pixi vn gives you the ability to write your own narrative using Ink.
+Pixi'VN gives you the ability to write your own narrative using Ink.
 
 ## What is ink?
 
