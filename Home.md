@@ -9,8 +9,8 @@
 * [Characters](character)
 * Narration:
   * [Dialogue](dialogue)
-  * [Choice Menus](choices)
   * [Label and Game Step](labels)
+  * [Choice Menus](choices)
   * [History](history)
 * Storage:
   * [Game Storage](storage)
