@@ -101,12 +101,6 @@ The reason is that as explained by Pixi'VN you can't start a whole ink file, but
 
 So for example the following cases will be ignored:
 
-```typescript
-// main.ts
-import { importInkText } from '@drincs/pixi-vn-ink'
-import startLabel from './ink_labels/start.ink?raw'
-
-importInkText([startLabel, ...])
 ```ink
 Hello # ❌ This will be ignored
 -> start # ❌ This will be ignored
