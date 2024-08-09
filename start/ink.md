@@ -83,3 +83,34 @@ import startLabel from './ink_labels/start.ink?raw'
 
 importInkText([startLabel, ...])
 ```
+
+## Ink elements that will be ignored by Pixi'VN
+
+The following elements will be ignored by Pixi'VN (They will not create errors).
+
+### Ink INCLUDE
+
+`INCLUDE` is used by Ink to import other ink files.
+
+In Pixi'VN you can use the `importInkText()` function to import the ink files. So if you use `INCLUDE` it will not be handled, so it does not import the files.
+
+### Ink External Narration
+
+The narration outside the knots (or labels) will be ignored.
+The reason is that as explained by Pixi'VN you can't start a whole ink file, but you have to use this [functions](/start/labels.md#run-a-label) for run a knot (or label).
+
+So for example the following cases will be ignored:
+
+```typescript
+// main.ts
+import { importInkText } from '@drincs/pixi-vn-ink'
+import startLabel from './ink_labels/start.ink?raw'
+
+importInkText([startLabel, ...])
+```ink
+Hello # ❌ This will be ignored
+-> start # ❌ This will be ignored
+=== start === # ✅ This will be handled
+My name is John # ✅ This will be handled
+-> DONE # ✅ This will be handled
+```
