@@ -8,6 +8,16 @@ Ink is a scripting language for writing interactive narrative. It is used in gam
 
 This language is very simple to learn, you can learn the basics in a few minutes. Go on [ink website](https://www.inklestudios.com/ink/) to learn more about it.
 
+## Why use Ink with Pixi’VN?
+
+Programming a game narrative in **Javascript/Typescript** has the advantage of having total development freedom, but the disadvantage is that it slows down the writing of a narrative (it makes you write a lot of code).
+
+**Ink** is a language that allows you to write a narrative easily, without having to write a lot of code. Plus, it only takes you about ten minutes to learn the basic functions. Ink is basically designed only for writing narratives, so it doesn't require a canvas or other features outside of narrative.
+
+Launching narrative labels (or knots) from Javascript/Typescript to Ink sharing the same memory and canvas is a double benefit. You can use Ink to write the narration, while using Javascript/Typescript to handle everything that is not possible with Ink.
+
+Furthermore, novice developers can use a template to start writing narratives with Ink. After becoming familiar with Javascript/Typescript they can start to create more laborious features, like minigames or complex animations.
+
 ## Start using Ink in Pixi’VN
 
 If you have not created a project yet then it is recommended to use the [template](/start/getting-started.md#project-initialization) and select a template that is based on ink.
