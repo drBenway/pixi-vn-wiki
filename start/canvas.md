@@ -14,10 +14,17 @@ It is perfect for creating visual novels because it allows you to easily add ima
 
 Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal project. The only differences are as follows:
 
-![image](https://github.com/user-attachments/assets/579a181f-b865-44ff-9b55-2fbe609632bc)
-
-
 * A new element called [CanvasImage](/start/animations-effects.md) has been added, it simplifies the process of adding images to the canvas and the ability to use transitions to add and remove images.
 * You do not have direct access to PIXI.Application, but you need to use GameWindowManager.
 * You cannot use [PixiJS Components](https://pixijs.com/8.x/guides/components/assets) and Tickers directly, but other [components](/start/canvas-elements.md) and [Tickers](/start/tickers.md) that are equivalent to PixiJS ones.
 * You can't set a listener with the `on` method, but must use the [onEvent](/start/canvas-elements.md#add-a-listener-for-a-given-event) to add a listener.
+
+## Use PixiJS DevTools with Pixi’VN
+
+[**PixiJS DevTools**](https://pixijs.io/devtools/) is a Chrome extension that allows you to inspect and debug PixiJS applications. You can use it to view the display list, inspect textures, and debug your PixiJS application. You can use it with Pixi’VN to inspect the canvas and debug your visual novel.
+
+![devtools](https://pixijs.io/devtools/img/devtool-screenshot.png)
+
+For access to the PixiJS DevTools after installing it, you need to open the Chrome DevTools (F12) and go to the `PixiJS` tab.
+
+![image](https://github.com/user-attachments/assets/579a181f-b865-44ff-9b55-2fbe609632bc)
