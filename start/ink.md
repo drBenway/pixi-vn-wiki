@@ -94,9 +94,21 @@ import startLabel from './ink_labels/start.ink?raw'
 importInkText([startLabel, ...])
 ```
 
-## Ink elements that will be ignored by Pixi’VN
+## Ink syntax that still needs to be implemented in Pixi’VN
 
-The following elements will be ignored by Pixi’VN (They will not create errors).
+The following syntax will be ignored by Pixi’VN (They will create errors), because they are not yet implemented.
+
+* [Varying Choices & Conditional Choices](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#7-varying-choices) -> [#9](https://github.com/DRincs-Productions/pixi-vn-ink/issues/9)
+* [Variable Text](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#8-variable-text) -> [#10](https://github.com/DRincs-Productions/pixi-vn-ink/issues/10)
+* [Game Queries and Functions](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#9-game-queries-and-functions) -> [#11](https://github.com/DRincs-Productions/pixi-vn-ink/issues/11)
+* [Weave](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#part-2-weave) -> [#12](https://github.com/DRincs-Productions/pixi-vn-ink/issues/12)
+* [Variables and Logic](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#part-3-variables-and-logic) -> [#13](https://github.com/DRincs-Productions/pixi-vn-ink/issues/13)
+* [Advanced Flow Control](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#part-4-advanced-flow-control) -> [#14](https://github.com/DRincs-Productions/pixi-vn-ink/issues/14)
+* [Advanced State Tracking](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#part-5-advanced-state-tracking) -> [#15](https://github.com/DRincs-Productions/pixi-vn-ink/issues/15)
+
+## Ink syntax that will be ignored by Pixi’VN
+
+The following syntax will be ignored by Pixi’VN (They will not create errors).
 
 ### Ink INCLUDE
 
