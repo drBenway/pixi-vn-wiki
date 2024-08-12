@@ -2,7 +2,6 @@
 
 * [Why Pixi’VN?](why)
 * [Get Started](getting-started)
-* [Interface with JavaScript Framework](interface)
 
 ## First steps
 
@@ -12,16 +11,20 @@
   * [Label and Game Step](labels)
   * [Choice Menus](choices)
   * [History](history)
-* Storage:
-  * [Game Storage](storage)
-  * [Flags Management](flags)
-  * [Stored Classes](stored-classes)
-* [Save and Load](save)
 * [PixiJS Canvas](canvas):
   * [Images and Transitions](images)
   * [Canvas Elements](canvas-elements)
   * [Animations and Effects](animations-effects)
   * [Tickers](tickers)
+* [Interface with JavaScript Framework](interface)
+  * [Angular Interface](interface-angular)
+  * [React Interface](interface-react)
+  * [Vue Interface](interface-vue)
+* Storage:
+  * [Game Storage](storage)
+  * [Flags Management](flags)
+  * [Stored Classes](stored-classes)
+* [Save and Load](save)
 
 ## Advanced topics
 

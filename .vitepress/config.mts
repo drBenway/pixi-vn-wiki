@@ -51,7 +51,6 @@ export default defineConfig({
           items: [
             { text: 'Why Pixi’VN?', link: '/start/why' },
             { text: 'Getting Started', link: '/start/getting-started' },
-            { text: 'Interface with JavaScript Framework', link: '/start/interface' },
           ]
         },
         {
@@ -68,15 +67,6 @@ export default defineConfig({
               ]
             },
             {
-              text: 'Storage',
-              items: [
-                { text: 'Game Storage', link: '/start/storage' },
-                { text: 'Flags Management', link: '/start/flags' },
-                { text: 'Stored Classes', link: '/start/stored-classes' },
-              ]
-            },
-            { text: 'Save and Load', link: '/start/save' },
-            {
               text: 'PixiJS Canvas',
               link: '/start/canvas',
               items: [
@@ -86,6 +76,24 @@ export default defineConfig({
                 { text: 'Tickers', link: '/start/tickers' },
               ]
             },
+            {
+              text: 'Interface with JavaScript Framework',
+              link: '/start/interface',
+              items: [
+                { text: 'Angular Interface', link: '/start/interface-angular' },
+                { text: 'React Interface', link: '/start/interface-react' },
+                { text: 'Vue Interface', link: '/start/interface-vue' },
+              ]
+            },
+            {
+              text: 'Storage',
+              items: [
+                { text: 'Game Storage', link: '/start/storage' },
+                { text: 'Flags Management', link: '/start/flags' },
+                { text: 'Stored Classes', link: '/start/stored-classes' },
+              ]
+            },
+            { text: 'Save and Load', link: '/start/save' },
             { text: 'Advanced topics', link: '/advanced/intercept-events' },
           ]
         }
