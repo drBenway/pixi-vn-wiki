@@ -77,7 +77,8 @@ export default defineConfig({
             },
             { text: 'Save and Load', link: '/start/save' },
             {
-              text: 'Canvas',
+              text: 'PixiJS Canvas',
+              link: '/start/canvas',
               items: [
                 { text: 'Images and Transitions', link: '/start/images' },
                 { text: 'Canvas Elements', link: '/start/canvas-elements' },

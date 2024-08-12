@@ -17,7 +17,7 @@
   * [Flags Management](flags)
   * [Stored Classes](stored-classes)
 * [Save and Load](save)
-* Canvas:
+* [PixiJS Canvas](canvas):
   * [Images and Transitions](images)
   * [Canvas Elements](canvas-elements)
   * [Animations and Effects](animations-effects)

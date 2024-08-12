@@ -28,7 +28,7 @@ features:
       />
     title: PixiJS
     details: Add images, animations, and effects to your visual novel with the powerful 2D rendering engine, PixiJS.
-    link: https://pixijs.com
+    link: /start/canvas
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftypescript-icon.svg?alt=media" 
         alt="TypeScript"
