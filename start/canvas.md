@@ -14,6 +14,9 @@ It is perfect for creating visual novels because it allows you to easily add ima
 
 Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal project. The only differences are as follows:
 
+![image](https://github.com/user-attachments/assets/579a181f-b865-44ff-9b55-2fbe609632bc)
+
+
 * A new element called [CanvasImage](/start/animations-effects.md) has been added, it simplifies the process of adding images to the canvas and the ability to use transitions to add and remove images.
 * You do not have direct access to PIXI.Application, but you need to use GameWindowManager.
 * You cannot use [PixiJS Components](https://pixijs.com/8.x/guides/components/assets) and Tickers directly, but other [components](/start/canvas-elements.md) and [Tickers](/start/tickers.md) that are equivalent to PixiJS ones.
