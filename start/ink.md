@@ -110,13 +110,13 @@ The following syntax will be ignored by Pixi’VN (They will create errors), bec
 
 The following syntax will be ignored by Pixi’VN (They will not create errors).
 
-### Ink INCLUDE
+### INCLUDE
 
 `INCLUDE` is used by Ink to import other ink files.
 
 In Pixi’VN you can use the `importInkText()` function to import the ink files. So if you use `INCLUDE` it will not be handled, so it does not import the files.
 
-### Ink External Narration
+### Narration outside the knots
 
 The narration outside the knots (or labels) will be ignored.
 The reason is that as explained by Pixi’VN you can't start a whole ink file, but you have to use this [functions](/start/labels.md#run-a-label) for run a knot (or label).
