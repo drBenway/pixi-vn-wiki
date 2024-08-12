@@ -207,7 +207,7 @@ GameStepManager.goNext({})
 
 Every step the system saves the current state of the game. To go back to the previous step you must execute the `GameStepManager.goBack()` function.
 
-In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/other/various-answers#what-is-the-url-path-and-routes-and-routes) of the previous step, so you can use it to navigate to the previous [Interface](/start/interface#how-navigateswitch-between-interface-screens).
+In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/start/interface.md#what-is-the-url-path-and-routes) of the previous step, so you can use it to navigate to the previous [Interface](/start/interface#how-navigateswitch-between-interface-screens).
 
 For exemple if you use a [React Router Dom](https://reactrouter.com):
 

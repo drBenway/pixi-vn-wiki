@@ -15,7 +15,18 @@ This allows the use of systems such as React, Vue, Angular, etc. to create much 
 ## How navigate/switch between interface screens?
 
 To switch between interface screens (without interrupting the canvas), you can use popups and modals, or navigate between different routes.
-For navigate between different url paths/routes you should read: [What is the URL Path and Routes?](/other/various-answers#what-is-the-url-path-and-routes).
+For navigate between different url [paths/routes](#what-is-the-url-path-and-routes).
+
+### What is the URL Path and Routes?
+
+The URL Path is the part of the URL that comes after the domain. For example, in the URL `https://example.com/path/to/page`, the path is `/path/to/page`.
+
+A routering system can be used to manage navigation between URL Paths. For example you can use:
+
+* [React Router](https://reactrouter.com/)
+* [Vue Router](https://router.vuejs.org/)
+* [Angular Router](https://angular.io/guide/router)
+* [TanStack Router](https://tanstack.com/router/latest)
 
 ## How to enable HTML interaction?
 
