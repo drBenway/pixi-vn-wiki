@@ -1,6 +1,8 @@
 # Interface with JavaScript Framework
 
-In addition to managing the Pixi.js "Canvas", Pixi’VN offers the possibility of adding an HTML Element with the same dimensions as the "Canvas" to add interactions with the user.
+Pixi’VN offers the possibility of adding an HTML Element with the same dimensions as the [PixiJS Canvas](/start/canvas-elements.md) to add an **interface** with JavaScript frameworks.
+
+By "Interface" is meant the elements that are above the canvas, such as buttons, forms, etc.
 
 This allows the use of systems such as React, Vue, Angular, etc. to create much more complex **interface screens** with excellent performance.
 
