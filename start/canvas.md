@@ -25,7 +25,7 @@ Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal proje
 
 [**PixiJS DevTools**](https://pixijs.io/devtools/) is a [Chrome extension](https://chromewebstore.google.com/detail/pixijs-devtools/dlkffcaaoccbofklocbjcmppahjjboce) that allows you to inspect and debug PixiJS applications. You can use it to view the display list, inspect textures, and debug your PixiJS application. You can use it with Pixi’VN to inspect the canvas and debug your visual novel.
 
-![devtools](https://pixijs.io/devtools/img/devtool-screenshot.png)
+![devtools](https://pixijs.io/devtools/gif/devtool-properties.gif)
 
 For access to the PixiJS DevTools after installing it, you need to open the Chrome DevTools (F12) and go to the `PixiJS` tab.
 
