@@ -88,9 +88,9 @@ export default defineConfig({
               ]
             },
             {
-              text: 'Storage',
+              text: 'Game storage',
+              link: '/start/storage',
               items: [
-                { text: 'Game Storage', link: '/start/storage' },
                 { text: 'Flags Management', link: '/start/flags' },
                 { text: 'Stored Classes', link: '/start/stored-classes' },
               ]

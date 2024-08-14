@@ -22,8 +22,7 @@
   * [Angular Interface](interface-angular)
   * [React Interface](interface-react)
   * [Vue Interface](interface-vue)
-* Storage:
-  * [Game Storage](storage)
+* [Game storage](storage):
   * [Flags Management](flags)
   * [Stored Classes](stored-classes)
 * [Save and Load](save)
