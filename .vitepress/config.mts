@@ -70,7 +70,9 @@ export default defineConfig({
               text: 'PixiJS Canvas',
               link: '/start/canvas',
               items: [
-                { text: 'Images and Transitions', link: '/start/images' },
+                { text: 'Images', link: '/start/images' },
+                { text: 'Video', link: '/start/videos' },
+                { text: 'Transitions', link: '/start/transition' },
                 { text: 'Canvas Elements', link: '/start/canvas-elements' },
                 { text: 'Animations and Effects', link: '/start/animations-effects' },
                 { text: 'Tickers', link: '/start/tickers' },

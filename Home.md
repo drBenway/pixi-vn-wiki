@@ -12,7 +12,9 @@
   * [Choice Menus](choices)
   * [History](history)
 * [PixiJS Canvas](canvas):
-  * [Images and Transitions](images)
+  * [Images](images)
+  * [Video](videos)
+  * [Transitions](transition)
   * [Canvas Elements](canvas-elements)
   * [Animations and Effects](animations-effects)
   * [Tickers](tickers)

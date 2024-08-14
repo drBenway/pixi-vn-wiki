@@ -10,6 +10,11 @@ Currently the base canvas elements are:
 * `CanvasContainer` is a class that extends the [PIXI.Container](https://pixijs.com/8.x/examples/basic/container) class.
 * `CanvasText` is a class that extends the [PIXI.Text](https://pixijs.com/8.x/examples/text/pixi-text) class.
 
+Other elements are added by Pixi’VN, such as:
+
+* [CanvasImage](/start/images.md) is a class that extends the `CanvasSprite` class.
+* [CanvasVideo](/start/videos.md) is a class that extends the `CanvasImage` class.
+
 ## Add Canvas Elements
 
 To add a canvas element to the game window, you can use the `GameWindowManager.addCanvasElement`.
