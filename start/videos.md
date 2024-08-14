@@ -1,6 +1,6 @@
 # Videos
 
-To make adding and managing videos on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing and managing videos.
+To make adding and managing videos on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing and managing videos. `CanvasVideo` is a class that extends [`CanvasImage`](/start/images.md), all the methods and properties of [`CanvasImage`](/start/images.md) can be used with `CanvasVideo` and all functions that work with images can work with videos.
 
 ## Show Video
 
@@ -108,6 +108,51 @@ video2.load()
 
 ## Load Video Textures in Cache when a label is called
 
+It's exactly the same as [Load Image Textures in Cache when a label is called](/start/images.md#load-image-textures-in-cache-when-a-label-is-called), but with videos.
+
 ## Remove Video
 
 As for the Canvas Elements, you can remove an video from the canvas using the [`removeCanvasElement`](/start/canvas-elements#remove-canvas-elements) function.
+
+## Play and Pause Video
+
+You can use the `play()` and `pause()` methods to play and pause the video, or set the `paused` property to `true` or `false`.
+
+```typescript
+import { addVideo } from '@drincs/pixi-vn'
+
+const video = addVideo('video1', 'path/to/video.mp4')
+await video.load()
+
+video.play()
+// or video.paused = false
+
+video.pause()
+// or video.paused = true
+```
+
+## Loop Video
+
+You can use the `loop` property to set the video to loop.
+
+```typescript
+import { addVideo } from '@drincs/pixi-vn'
+
+const video = addVideo('video1', 'path/to/video.mp4')
+await video.load()
+
+video.loop = true
+```
+
+## Restart Video
+
+You can use the `restart` method to restart the video.
+
+```typescript
+import { addVideo } from '@drincs/pixi-vn'
+
+const video = addVideo('video1', 'path/to/video.mp4')
+await video.load()
+
+video.restart()
+```
