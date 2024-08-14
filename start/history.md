@@ -13,10 +13,10 @@ const isLabelCompleted = GameStepManager.isLabelAlreadyCompleted(startLabel);
 
 ## Get already made choices of current step
 
-To get the already made choices of the current step, use the `GameStepManager.getAlreadyCurrentStepMadeChoices`.
+To get the already made choices of the current step, use the `GameStepManager.alreadyCurrentStepMadeChoices`.
 
 ```typescript
-const choices = GameStepManager.getAlreadyCurrentStepMadeChoices();
+const choices = GameStepManager.alreadyCurrentStepMadeChoices;
 ```
 
 ## Check if current step is already opened
@@ -24,7 +24,7 @@ const choices = GameStepManager.getAlreadyCurrentStepMadeChoices();
 To check if the current step is already opened, use the `GameStepManager.isCurrentStepAlreadyOpened`.
 
 ```typescript
-const isCurrentStepOpened = GameStepManager.isCurrentStepAlreadyOpened();
+const isCurrentStepOpened = GameStepManager.isCurrentStepAlreadyOpened;
 ```
 
 ## Get Narrative History
