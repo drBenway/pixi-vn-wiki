@@ -58,7 +58,7 @@ export function loadGameSave(navigate: (path: string) => void, afterLoad?: () =>
 }
 ```
 
-## Convart JSON to Save Data
+## Convert JSON to Save Data
 
 If you want to convert a JSON string to a save data object, you can use the `jsonToSaveData` function.
 
