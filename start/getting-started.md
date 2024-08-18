@@ -60,7 +60,7 @@ Now you must initialize the Pixi’VN window before using the engine.
 For example, you add the following code to the `main.ts` or `index.ts` (It depends on your project configuration):
 
 ```typescript
-import { canvas } from '@drincs/pixi-vn'
+import { canvas, narration } from '@drincs/pixi-vn'
 import App from './App'
 import './index.css'
 
