@@ -19,6 +19,8 @@ For create a label you must use the `newLabel()` function and pass:
 * the `steps` of the label, an array of functions that will be executed in order. Or a function that returns the steps.
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 const START_LABEL_ID = "start_label_id"
 
 export const startLabel = newLabel(START_LABEL_ID,
@@ -36,6 +38,8 @@ export const startLabel = newLabel(START_LABEL_ID,
 You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters) for all steps of the label.
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 const START_LABEL_ID = "start_label_id"
 
 export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
@@ -60,6 +64,8 @@ You can "override" the interface `StepLabelProps` to set required parameters for
 
 ```typescript
 // pixi-vn.types.ts
+import { narration } from '@drincs/pixi-vn'
+
 declare module '@drincs/pixi-vn/dist/override' {
     interface StepLabelProps {
         navigate: (route: string) => void,
@@ -135,6 +141,8 @@ narration.callLabel(startLabel, {})
 Remember that if you execute the `narration.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 export const startLabel = newLabel(START_LABEL_ID,
     [
         (props) => narration.callLabel(TestLabel, props),
@@ -162,12 +170,16 @@ For example if currently the game is running the step 5 of the label A, and **ca
 `narration.jumpLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 narration.jumpLabel(startLabel, {})
 ```
 
 Remember that if you execute the `narration.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 export const startLabel = newLabel(START_LABEL_ID,
     [
         (props) => narration.jumpLabel(TestLabel, props),
@@ -188,12 +200,16 @@ export const startLabel = newLabel(START_LABEL_ID,
 To execute the next step you must execute the `narration.goNext()` function. This function have a parameter `props` that will be passed to the next step, if you not want to pass any parameter you can pass an empty object `{}`.
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 narration.goNext({})
 ```
 
 `narration.goNext()` is asynchronous, so, for example, you can use `then` for disabled a next button until the next step is executed.
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 // disable next button
 narration.goNext({})
     .then((result) => {
@@ -212,6 +228,7 @@ In parameters you must pass a function `navigate: (path: string) => void` that w
 For exemple if you use a [React Router Dom](https://reactrouter.com):
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
 import { useNavigate } from 'react-router-dom';
 
 const navigate = useNavigate();
@@ -230,6 +247,8 @@ if (narration.canGoBack) {
 To close the current label you must execute the `narration.closeCurrentLabel()` function.
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 narration.closeCurrentLabel()
 ```
 
@@ -239,6 +258,8 @@ To close all labels you must execute the `narration.closeAllLabels()` function.
 **If you call this function and after that you don't call any label, the game will block.** After closing all labels you should call a [label for manage the end of the game](#how-manage-the-end-of-the-game).
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 narration.closeAllLabels()
 ```
 
