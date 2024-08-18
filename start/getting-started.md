@@ -60,7 +60,7 @@ Now you must initialize the Pixi’VN window before using the engine.
 For example, you add the following code to the `main.ts` or `index.ts` (It depends on your project configuration):
 
 ```typescript
-import { GameWindowManager } from '@drincs/pixi-vn'
+import { canvas } from '@drincs/pixi-vn'
 import App from './App'
 import './index.css'
 
@@ -70,9 +70,14 @@ if (!body) {
     throw new Error('body element not found')
 }
 
-GameWindowManager.initialize(body, 1920, 1080, {
+canvas.initialize(body, 1920, 1080, {
     backgroundColor: "#303030"
 })
+
+// read more here: https://pixi-vn.web.app/start/labels.html#how-manage-the-end-of-the-game
+narration.gameEnd = async (props) => {
+    props.navigate("/")
+}
 ```
 
 ### How enable the decorators in TypeScript?

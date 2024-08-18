@@ -2,7 +2,7 @@
 
 The [PixiJS Ticker](https://pixijs.com/8.x/examples/basic/tinting) is a class that manages the update loop. It is used to animate the canvas elements.
 
-In Pixi’VN, you can use the Ticker, but through functions of the `GameWindowManager` class.
+In Pixi’VN, you can use the Ticker, but through functions of the `canvas` class.
 The reason is that this way I can keep track of the Tickers and delete those that are no longer used.
 
 ## Create a Ticker
@@ -27,7 +27,7 @@ export default class RotateTicker extends TickerBase<{ speed?: number, clockwise
         let speed = args.speed === undefined ? 0.1 : args.speed
         let clockwise = args.clockwise === undefined ? true : args.clockwise
         tags.forEach((tag) => {
-            let element = GameWindowManager.getCanvasElement(tag)
+            let element = canvas.getCanvasElement(tag)
             if (element && element instanceof Container) {
                 if (clockwise)
                     element.rotation += speed * t.deltaTime
@@ -41,7 +41,7 @@ export default class RotateTicker extends TickerBase<{ speed?: number, clockwise
 
 ## Run a Ticker and associate with a Canvas Element
 
-To add a Ticker you must use the `GameWindowManager.addTicker` function and pass the ticker class.
+To add a Ticker you must use the `canvas.addTicker` function and pass the ticker class.
 
 <!-- TODO  
 You can run multiple addTicker with the same tag and different tickerClasses.
@@ -52,39 +52,39 @@ You can run multiple addTicker with the same tag and different tickerClasses.
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
-GameWindowManager.addCanvasElement("alien", alien);
+canvas.addCanvasElement("alien", alien);
 
-GameWindowManager.addTicker("alien", new RotateTicker({ speed: my_speed }))
+canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 ```
 
 If a ticket needs to update multiple canvas elements, you can pass an array of tags to the `addTicker` function.
 
 ```typescript
-GameWindowManager.addTicker(["alien", "alien2"], new RotateTicker({ speed: my_speed }))
+canvas.addTicker(["alien", "alien2"], new RotateTicker({ speed: my_speed }))
 ```
 
 You can also set the duration of the ticket so that upon completion it is deleted.
 
 ```typescript
-GameWindowManager.addTicker("alien", new RotateTicker({ speed: my_speed }, 2))
+canvas.addTicker("alien", new RotateTicker({ speed: my_speed }, 2))
 ```
 
 ## Remove association between a Ticker and a Canvas Element
 
-For unlink a Ticker from a Canvas Element you must use the `GameWindowManager.removeAssociationBetweenTickerCanvasElement` function and pass the tag of the canvas element and a ticker class.
+For unlink a Ticker from a Canvas Element you must use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the tag of the canvas element and a ticker class.
 
 If the ticker not have any more canvas elements associated, it will be deleted.
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
-GameWindowManager.addCanvasElement("alien", alien);
+canvas.addCanvasElement("alien", alien);
 
-GameWindowManager.addTicker("alien", new RotateTicker({ speed: my_speed }))
+canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 
 // ...
 
-GameWindowManager.removeAssociationBetweenTickerCanvasElement("alien", RotateTicker)
+canvas.removeAssociationBetweenTickerCanvasElement("alien", RotateTicker)
 ```
 
 If you remove the Canvas Element associated with the Ticker, if the Ticker not have any more canvas elements associated, it will be deleted.
@@ -92,13 +92,13 @@ If you remove the Canvas Element associated with the Ticker, if the Ticker not h
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
-GameWindowManager.addCanvasElement("alien", alien);
+canvas.addCanvasElement("alien", alien);
 
-GameWindowManager.addTicker("alien", new RotateTicker({ speed: my_speed }))
+canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 
 // ...
 
-GameWindowManager.removeCanvasElement("alien")
+canvas.removeCanvasElement("alien")
 ```
 
 ## Run a succession of Tickers
@@ -113,7 +113,7 @@ This means you can start a list of tokens, so that when one ends the next begins
 For this you must use the `GameStepManager.addTickersSteps` function and pass the tag of the canvas element and an array of tickers.
 
 ```typescript
-GameWindowManager.addTickersSteps("alien", [
+canvas.addTickersSteps("alien", [
     new RotateTicker({ speed: 0.1, clockwise: true }, 2),
     new RotateTicker({ speed: 0.2, clockwise: false }, 2),
 ])
@@ -124,7 +124,7 @@ GameWindowManager.addTickersSteps("alien", [
 If you want to pause the steps for a while, you can use the `Pause` token.
 
 ```typescript
-GameWindowManager.addTickersSteps("alien", [
+canvas.addTickersSteps("alien", [
     new RotateTicker({ speed: 0.1, clockwise: true }, 2),
     Pause(1),
     new RotateTicker({ speed: 0.2, clockwise: false }, 2),
@@ -136,7 +136,7 @@ GameWindowManager.addTickersSteps("alien", [
 If you want to repeat the steps, you can use the `Repeat` token.
 
 ```typescript
-GameWindowManager.addTickersSteps("alien", [
+canvas.addTickersSteps("alien", [
     new RotateTicker({ speed: 0.1, clockwise: true }, 2),
     new RotateTicker({ speed: 0.2, clockwise: false }, 2),
     Repeat,

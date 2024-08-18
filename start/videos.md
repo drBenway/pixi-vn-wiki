@@ -36,10 +36,10 @@ import { addVideo } from '@drincs/pixi-vn'
 const video = addVideo('video1', 'path/to/video.mp4')
 ```
 
-If you want initialize the video before and then add it to the canvas, you can use the [`GameWindowManager.addCanvasElement`](/start/canvas-elements#add-canvas-elements)function.
+If you want initialize the video before and then add it to the canvas, you can use the [`canvas.addCanvasElement`](/start/canvas-elements#add-canvas-elements)function.
 
 ```typescript
-import { GameWindowManager, CanvasVideo } from '@drincs/pixi-vn'
+import { canvas, CanvasVideo } from '@drincs/pixi-vn'
 
 let alien = new CanvasVideo({
     anchor: { x: 0.5, y: 0.5 },
@@ -47,7 +47,7 @@ let alien = new CanvasVideo({
     y: 100,
 }, 'https://pixijs.com/assets/eggHead.mp4')
 
-GameWindowManager.addCanvasElement("alien", alien)
+canvas.addCanvasElement("alien", alien)
 ```
 
 ## Load Video

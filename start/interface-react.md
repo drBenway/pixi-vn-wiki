@@ -10,11 +10,11 @@ To add a React Interface to Pixi’VN, you need to create a new React applicatio
 
 ```typescript
 // main.tsx
-import { GameWindowManager } from '@drincs/pixi-vn'
+import { canvas } from '@drincs/pixi-vn'
 import { createRoot } from 'react-dom/client'
 
-// GameWindowManager.initialize...
-GameWindowManager.initialize(body, 1920, 1080, {
+// canvas.initialize...
+canvas.initialize(body, 1920, 1080, {
     backgroundColor: "#303030"
 }).then(() => {
     // React setup with ReactDOM
@@ -23,8 +23,8 @@ GameWindowManager.initialize(body, 1920, 1080, {
         throw new Error('root element not found')
     }
 
-    GameWindowManager.initializeHTMLLayout(root)
-    const reactRoot = createRoot(GameWindowManager.htmlLayout)
+    canvas.initializeHTMLLayout(root)
+    const reactRoot = createRoot(canvas.htmlLayout)
 
     reactRoot.render(
         <App />

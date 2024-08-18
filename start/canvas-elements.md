@@ -17,59 +17,59 @@ Other elements are added by Pixi’VN, such as:
 
 ## Add Canvas Elements
 
-To add a canvas element to the game window, you can use the `GameWindowManager.addCanvasElement`.
+To add a canvas element to the game window, you can use the `canvas.addCanvasElement`.
 The `addCanvasElement` method have the following parameters:
 
 * `tag`: Is a tag (or id) for the canvas element. There can only be one item in the canvas with that id, if you add an canvas element with the same tag, the previous canvas element will be removed.
 * `element`: The canvas element to add.
 
 ```typescript
-import { GameWindowManager, CanvasSprite } from '@drincs/pixi-vn'
+import { canvas, CanvasSprite } from '@drincs/pixi-vn'
 
 const sprite = new CanvasSprite()
 const texture = await Assets.load("path/to/image.png")
-GameWindowManager.addCanvasElement('sprite1', sprite)
+canvas.addCanvasElement('sprite1', sprite)
 ```
 
 ## Get Canvas Elements
 
-To get a canvas element from the game window, you can use the `GameWindowManager.getCanvasElement`, if the element does not exist, it will return `undefined`.
+To get a canvas element from the game window, you can use the `canvas.getCanvasElement`, if the element does not exist, it will return `undefined`.
 The `getCanvasElement` method have the following parameters:
 
 * `tag`: The tag of the element to get.
 
 ```typescript
-import { GameWindowManager } from '@drincs/pixi-vn'
+import { canvas } from '@drincs/pixi-vn'
 
-const sprite = GameWindowManager.getCanvasElement<CanvasSprite>('sprite1')
+const sprite = canvas.getCanvasElement<CanvasSprite>('sprite1')
 ```
 
 ## Remove Canvas Elements
 
-To remove a canvas element from the game window, you can use the `GameWindowManager.removeCanvasElement`.
+To remove a canvas element from the game window, you can use the `canvas.removeCanvasElement`.
 The `removeCanvasElement` method have the following parameters:
 
 * `tag`: The tag of the element to remove.
 
 ```typescript
-import { GameWindowManager } from '@drincs/pixi-vn'
+import { canvas } from '@drincs/pixi-vn'
 
-GameWindowManager.removeCanvasElement('sprite1')
+canvas.removeCanvasElement('sprite1')
 ```
 
 ## Remove All Canvas Elements
 
-To remove all canvas elements from the game window, you can use the `GameWindowManager.removeCanvasElements`.
+To remove all canvas elements from the game window, you can use the `canvas.removeCanvasElements`.
 
 ```typescript
-import { GameWindowManager } from '@drincs/pixi-vn'
+import { canvas } from '@drincs/pixi-vn'
 
-GameWindowManager.removeCanvasElements()
+canvas.removeCanvasElements()
 ```
 
 ## Edit Canvas Element Tag
 
-To edit the tag of a canvas element, you can use the `GameWindowManager.editCanvasElementTag`.
+To edit the tag of a canvas element, you can use the `canvas.editCanvasElementTag`.
 
 The `editCanvasElementTag` method have the following parameters:
 
@@ -77,9 +77,9 @@ The `editCanvasElementTag` method have the following parameters:
 * `newTag`: The new tag of the element.
 
 ```typescript
-import { GameWindowManager } from '@drincs/pixi-vn'
+import { canvas } from '@drincs/pixi-vn'
 
-GameWindowManager.editCanvasElementTag('sprite1', 'sprite2')
+canvas.editCanvasElementTag('sprite1', 'sprite2')
 ```
 
 ## Add a listener for a given event
@@ -155,7 +155,7 @@ button
     .onEvent('pointerout', EventTest2);
 
 // Add it to the stage
-GameWindowManager.addCanvasElement("button", button);
+canvas.addCanvasElement("button", button);
 ```
 
 ## Custom Elements

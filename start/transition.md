@@ -95,11 +95,11 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
 ): Promise<void> {
     let oldCanvasTag: string | undefined = undefined
     // if exist a canvas element with the same tag, then the image is replaced and the first image is removed after the effect is done
-    if (GameWindowManager.getCanvasElement(tag)) {
+    if (canvas.getCanvasElement(tag)) {
         oldCanvasTag = tag + "_temp_disolve"
         // so is necessary to change the tag of the old canvas element
         // and remove the old canvas element after the effect is done
-        GameWindowManager.editCanvasElementTag(tag, oldCanvasTag)
+        canvas.editCanvasElementTag(tag, oldCanvasTag)
     }
 
     let canvasElement: CanvasBase<any>
@@ -108,7 +108,7 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
     }
     else {
         canvasElement = image
-        GameWindowManager.addCanvasElement(tag, canvasElement)
+        canvas.addCanvasElement(tag, canvasElement)
     }
     if (canvasElement instanceof CanvasImage && canvasElement.texture?.label == "EMPTY") {
         await canvasElement.load()
@@ -122,7 +122,7 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
         tagToRemoveAfter: oldCanvasTag,
         startOnlyIfHaveTexture: true,
     }, 10, priority)
-    GameWindowManager.addTicker(tag, effect)
+    canvas.addTicker(tag, effect)
     return
 }
 ```
