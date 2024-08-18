@@ -18,6 +18,7 @@
   * [Canvas Elements](canvas-elements)
   * [Animations and Effects](animations-effects)
   * [Tickers](tickers)
+* [Sounds and Music](sound)
 * [Interface with JavaScript Framework](interface)
   * [Angular Interface](interface-angular)
   * [React Interface](interface-react)

@@ -78,6 +78,7 @@ export default defineConfig({
                 { text: 'Tickers', link: '/start/tickers' },
               ]
             },
+            { text: 'Sounds and Music', link: '/start/sound' },
             {
               text: 'Interface with JavaScript Framework',
               link: '/start/interface',
