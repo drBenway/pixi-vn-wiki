@@ -13,6 +13,8 @@ Furthermore, only primary type variables can be saved in the game storage. The p
 To set a variable in the game storage, you can use the `storage.setVariable`, which takes two parameters: the variable name and the value.
 
 ```typescript
+import { storage } from '@drincs/pixi-vn'
+
 storage.setVariable("myVariable", 42);
 ```
 
@@ -21,6 +23,8 @@ storage.setVariable("myVariable", 42);
 To get a variable from the game storage, you can use the `storage.getVariable`, which takes one parameter: the variable name.
 
 ```typescript
+import { storage } from '@drincs/pixi-vn'
+
 const myVariable = storage.getVariable<number>("myVariable");
 ```
 
@@ -29,6 +33,8 @@ const myVariable = storage.getVariable<number>("myVariable");
 To remove a variable from the game storage, you can use the `storage.removeVariable`, which takes one parameter: the variable name.
 
 ```typescript
+import { storage } from '@drincs/pixi-vn'
+
 storage.removeVariable("myVariable");
 ```
 
