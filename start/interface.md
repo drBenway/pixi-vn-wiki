@@ -72,7 +72,7 @@ We will create a Selector called `textSelector` that will be used to set and get
 
 ```typescript
 // textSelectorState.ts
-import { GameStorageManager } from "@drincs/pixi-vn";
+import { storage } from "@drincs/pixi-vn";
 import { atom, selector } from "recoil";
 import { reloadInterfaceDataEventAtom } from "./reloadInterfaceDataEventAtom";
 
@@ -89,11 +89,11 @@ export const textSelectorState = selector<string>({
         get(reloadInterfaceDataEventAtom)
         get(textAtom)
 
-        return GameStorageManager.getVariable<string>("text") || "";
+        return storage.getVariable<string>("text") || "";
     },
     set: ({ set }, newValue) => {
         set(textAtom, newValue);
-        GameStorageManager.setVariable("text", newValue as string);
+        storage.setVariable("text", newValue as string);
     },
 });
 ```
@@ -110,12 +110,12 @@ import { reloadInterfaceDataEventAtom } from './reloadInterfaceDataEventAtom';
 
 const notifyReloadInterfaceDataEvent = useSetRecoilState(reloadInterfaceDataEventAtom);
 
-GameStepManager.goNext({})
+narration.goNext({})
     .then((result) => {
         notifyReloadInterfaceDataEvent((value) => value + 1);
     });
 
-GameStepManager.goBack({})
+narration.goBack({})
     .then((result) => {
         notifyReloadInterfaceDataEvent((value) => value + 1);
     });
@@ -126,7 +126,7 @@ loadSaveJson(jsonString, navigate)
     })
 
 // only if you are not in a label step
-GameStepManager.callLabel("myLabel", {})
+narration.callLabel("myLabel", {})
     .then((result) => {
         notifyReloadInterfaceDataEvent((value) => value + 1);
     });

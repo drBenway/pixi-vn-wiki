@@ -110,7 +110,7 @@ remove the ticker if there is no canvas element connected to it.
 You can run a succession of Tickers.
 This means you can start a list of tokens, so that when one ends the next begins.
 
-For this you must use the `GameStepManager.addTickersSteps` function and pass the tag of the canvas element and an array of tickers.
+For this you must use the `narration.addTickersSteps` function and pass the tag of the canvas element and an array of tickers.
 
 ```typescript
 canvas.addTickersSteps("alien", [

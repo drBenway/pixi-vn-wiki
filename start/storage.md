@@ -10,26 +10,26 @@ Furthermore, only primary type variables can be saved in the game storage. The p
 
 ## Set a variable in the game storage
 
-To set a variable in the game storage, you can use the `GameStorageManager.setVariable`, which takes two parameters: the variable name and the value.
+To set a variable in the game storage, you can use the `storage.setVariable`, which takes two parameters: the variable name and the value.
 
 ```typescript
-GameStorageManager.setVariable("myVariable", 42);
+storage.setVariable("myVariable", 42);
 ```
 
 ## Get a variable from the game storage
 
-To get a variable from the game storage, you can use the `GameStorageManager.getVariable`, which takes one parameter: the variable name.
+To get a variable from the game storage, you can use the `storage.getVariable`, which takes one parameter: the variable name.
 
 ```typescript
-const myVariable = GameStorageManager.getVariable<number>("myVariable");
+const myVariable = storage.getVariable<number>("myVariable");
 ```
 
 ## Remove a variable from the game storage
 
-To remove a variable from the game storage, you can use the `GameStorageManager.removeVariable`, which takes one parameter: the variable name.
+To remove a variable from the game storage, you can use the `storage.removeVariable`, which takes one parameter: the variable name.
 
 ```typescript
-GameStorageManager.removeVariable("myVariable");
+storage.removeVariable("myVariable");
 ```
 
 ## System variables
@@ -37,4 +37,4 @@ GameStorageManager.removeVariable("myVariable");
 In storage game, there are some system variables that are used by the game engine. All system variables start with the prefix `___`.
 So please avoid using this prefix in your variables.
 
-You can get all the system variables keys with the `GameStorageManager.keysSystem` function.
+You can get all the system variables keys with the `storage.keysSystem` function.

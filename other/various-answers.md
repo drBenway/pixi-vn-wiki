@@ -61,7 +61,7 @@ In a visual novel, It's very helpful to have the option to skip a step or auto f
 
 Pixi’VN does not directly implement these 2 features, in order to leave more customization to the developer.
 
-My advice to implement these features is to add a control where `GameStepManager.goNext()` is used:
+My advice to implement these features is to add a control where `narration.goNext()` is used:
 
 ```tsx
 // React example
@@ -76,7 +76,7 @@ useEffect(() => {
 }, [skipEnabled, recheckSkipAuto, autoEnabled])
 
 function nextOnClick() {
-    GameStepManager.goNext({})
+    narration.goNext({})
         .then(() => {
             if (skipEnabled) {
                 setTimeout(() => {

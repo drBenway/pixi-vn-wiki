@@ -28,7 +28,7 @@ In addition to `ChoiceMenuOption` there is also another class `ChoiceMenuOptionC
 * `text`: The text that will be displayed in the choice menus.
 * `closeCurrentLabel`: If `true`, the current label will be closed. Default is `false`.
 
-This class is only intended to give you information about a choice, it is up to you to close the choice menu using the [`closeChoiceMenu`](#close-th-choice-menu) function.
+This class is only intended to give you information about a choice, it is up to you to close the choice menu using the [`closeChoiceMenu`](#close-the-choice-menu) function.
 
 ## Set a choice menu
 
@@ -73,7 +73,7 @@ clearChoiceMenuOptions();
 
 ## Close the choice menu
 
-To close the choice menu, use the `GameStepManager.closeChoiceMenu`. This is used after choosing [`ChoiceMenuOptionClose`](#choice-for-closing-the-menu).
+To close the choice menu, use the `narration.closeChoiceMenu`. This is used after choosing [`ChoiceMenuOptionClose`](#choice-for-closing-the-menu).
 
 This function have the 2 parameters:
 
@@ -81,7 +81,7 @@ This function have the 2 parameters:
 * `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
 
 ```typescript
-GameStepManager.closeChoiceMenu(label, props)
+narration.closeChoiceMenu(label, props)
 ```
 
 ## Get last choice
@@ -98,7 +98,7 @@ const [menuOptions, setChoiceMenuOptions] = useState<ChoiceMenuOption[]>(getChoi
 function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
     clearChoiceMenuOptions()
     if (item.type == "call") {
-        GameStepManager.callLabel(item.label, {
+        narration.callLabel(item.label, {
             // add StepLabelProps here
             navigate: navigate, // example
             // and the props that will be passed to the label
@@ -112,7 +112,7 @@ function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
             })
     }
     else if (item.type == "jump") {
-        GameStepManager.jumpLabel(item.label, {
+        narration.jumpLabel(item.label, {
             navigate: navigate,
             ...item.props
         })
@@ -124,7 +124,7 @@ function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
             })
     }
     else if (item.type == "close") {
-        GameStepManager.closeChoiceMenu(item, {
+        narration.closeChoiceMenu(item, {
             navigate: navigate,
             ...item.props
         })

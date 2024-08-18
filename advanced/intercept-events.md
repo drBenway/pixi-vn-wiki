@@ -12,7 +12,7 @@ Example ( This solution also prevents the loss of data when the page is closed )
 
 ```ts
 // ActionsUtility.ts
-import { GameStepManager, getSaveJson, loadSaveJson } from "@drincs/pixi-vn";
+import { narration, getSaveJson, loadSaveJson } from "@drincs/pixi-vn";
 
 export function addRefreshSave() {
     const jsonString = getSaveJson()

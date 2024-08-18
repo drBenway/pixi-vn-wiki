@@ -26,7 +26,7 @@ export const startLabel = newLabel(START_LABEL_ID,
         () => {
             setDialogue({ character: liam, text: "Example of dialogue" })
         },
-        (props) => GameStepManager.jumpLabel(START_LABEL_ID, props),
+        (props) => narration.jumpLabel(START_LABEL_ID, props),
     ]
 )
 ```
@@ -46,7 +46,7 @@ export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
     ]
 )
 
-GameStepManager.callLabel(startLabel, {
+narration.callLabel(startLabel, {
     // add StepLabelProps here
     navigate: navigate, // example
     // and the props that will be passed to the label
@@ -66,7 +66,7 @@ declare module '@drincs/pixi-vn/dist/override' {
     }
 }
 
-return GameStepManager.callLabel(TestLabel, {
+return narration.callLabel(TestLabel, {
     navigate: (route) => {
         // navigate to route
     }
@@ -102,7 +102,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ## Manage game flow with labels
 
-The game flow is managed by functions that call labels, jump to labels, go back, close labels... These functions are in the `GameStepManager` object.
+The game flow is managed by functions that call labels, jump to labels, go back, close labels... These functions are in the `narration` object.
 
 * [Run a label](#run-a-label)
 * [Next Step and Go back](#next-step-and-go-back)
@@ -117,7 +117,7 @@ There are two ways to run a label:
 
 #### Call a label
 
-To call a label you must use the `GameStepManager.callLabel` function. This function have 2 parameters:
+To call a label you must use the `narration.callLabel` function. This function have 2 parameters:
 
 * `label`: the label that will be called
 * `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
@@ -126,21 +126,21 @@ When you call a label, the steps of that label will be started. If before the ca
 
 For example if currently the game is running the step 5 of the label A and you **call** the label B, when all the steps of the label B are executed, the game will continue with the step 6 of the label A.
 
-`GameStepManager.callLabel` returns a [result of first step of the called label](#all-steps-result).
+`narration.callLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
-GameStepManager.callLabel(startLabel, {})
+narration.callLabel(startLabel, {})
 ```
 
-Remember that if you execute the `GameStepManager.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
+Remember that if you execute the `narration.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
 
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
-        (props) => GameStepManager.callLabel(TestLabel, props),
+        (props) => narration.callLabel(TestLabel, props),
         // not recommended but you can use this way:
         (props) => {
-            return GameStepManager.callLabel(TestLabel, props).then((result) => {
+            return narration.callLabel(TestLabel, props).then((result) => {
                 return result
             })
         },
@@ -150,7 +150,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 #### Jump to a label
 
-To jump to a label you must use the `GameStepManager.jumpLabel` function and pass the label. This function have 2 parameters:
+To jump to a label you must use the `narration.jumpLabel` function and pass the label. This function have 2 parameters:
 
 * `label`: the label that will be called
 * `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
@@ -159,21 +159,21 @@ When you jump to a label, the steps of the current label will be stopped and the
 
 For example if currently the game is running the step 5 of the label A, and **call** the label B, and you **jump** to the label C, when all the steps of the label C are executed, the game will continue with the step 6 of the label A. Because when you jump to the label C, the label B is closed.
 
-`GameStepManager.jumpLabel` returns a [result of first step of the called label](#all-steps-result).
+`narration.jumpLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
-GameStepManager.jumpLabel(startLabel, {})
+narration.jumpLabel(startLabel, {})
 ```
 
-Remember that if you execute the `GameStepManager.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
+Remember that if you execute the `narration.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
 
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
-        (props) => GameStepManager.jumpLabel(TestLabel, props),
+        (props) => narration.jumpLabel(TestLabel, props),
         // not recommended but you can use this way:
         (props) => {
-            return GameStepManager.jumpLabel(TestLabel, props).then((result) => {
+            return narration.jumpLabel(TestLabel, props).then((result) => {
                 return result
             })
         },
@@ -185,17 +185,17 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 #### Next Step
 
-To execute the next step you must execute the `GameStepManager.goNext()` function. This function have a parameter `props` that will be passed to the next step, if you not want to pass any parameter you can pass an empty object `{}`.
+To execute the next step you must execute the `narration.goNext()` function. This function have a parameter `props` that will be passed to the next step, if you not want to pass any parameter you can pass an empty object `{}`.
 
 ```typescript
-GameStepManager.goNext({})
+narration.goNext({})
 ```
 
-`GameStepManager.goNext()` is asynchronous, so, for example, you can use `then` for disabled a next button until the next step is executed.
+`narration.goNext()` is asynchronous, so, for example, you can use `then` for disabled a next button until the next step is executed.
 
 ```typescript
 // disable next button
-GameStepManager.goNext({})
+narration.goNext({})
     .then((result) => {
         // enable next button
     })
@@ -205,7 +205,7 @@ GameStepManager.goNext({})
 
 #### Go back
 
-Every step the system saves the current state of the game. To go back to the previous step you must execute the `GameStepManager.goBack()` function.
+Every step the system saves the current state of the game. To go back to the previous step you must execute the `narration.goBack()` function.
 
 In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/start/interface.md#what-is-the-url-path-and-routes) of the previous step, so you can use it to navigate to the previous [Interface](/start/interface#navigateswitch-between-interface-screens).
 
@@ -216,8 +216,8 @@ import { useNavigate } from 'react-router-dom';
 
 const navigate = useNavigate();
 
-if (GameStepManager.canGoBack) {
-    GameStepManager.goBack(navigate).then(() => {
+if (narration.canGoBack) {
+    narration.goBack(navigate).then(() => {
         // ...
     })
 }
@@ -227,19 +227,19 @@ if (GameStepManager.canGoBack) {
 
 #### Close current label
 
-To close the current label you must execute the `GameStepManager.closeCurrentLabel()` function.
+To close the current label you must execute the `narration.closeCurrentLabel()` function.
 
 ```typescript
-GameStepManager.closeCurrentLabel()
+narration.closeCurrentLabel()
 ```
 
 #### Close all labels
 
-To close all labels you must execute the `GameStepManager.closeAllLabels()` function.
+To close all labels you must execute the `narration.closeAllLabels()` function.
 **If you call this function and after that you don't call any label, the game will block.** After closing all labels you should call a [label for manage the end of the game](#how-manage-the-end-of-the-game).
 
 ```typescript
-GameStepManager.closeAllLabels()
+narration.closeAllLabels()
 ```
 
 ## How to return different step lists based on a condition
@@ -254,13 +254,13 @@ export const startLabel = newLabel(START_LABEL_ID,
         if (condition) {
             return [
                 () => setDialogue({ character: liam, text: "Example of dialogue" }),
-                (props) => GameStepManager.jumpLabel(START_LABEL_ID, props),
+                (props) => narration.jumpLabel(START_LABEL_ID, props),
             ]
         } else {
             return [
                 () => setDialogue({ character: liam, text: "Another example of dialogue" }),
                 () => setDialogue({ character: liam, text: "Another example of dialogue 2" }),
-                (props) => GameStepManager.jumpLabel(START_LABEL_ID, props),
+                (props) => narration.jumpLabel(START_LABEL_ID, props),
             ]
         }
     }
@@ -275,15 +275,15 @@ When all the steps of all labels are executed, the game will block. The develope
 * The game has no end, so if the steps are finished, there has been an error, and it needs to be handled
 * The game ends when the player reaches a certain point. For example, when the player reaches a certain point in the story you can navigate to a game over screen
 
-The method for managing the end of the game is to set `GameStepManager.gameEnd` with a function that has the same characteristics as a step function.
+The method for managing the end of the game is to set `narration.gameEnd` with a function that has the same characteristics as a step function.
 
 For example, if you want to end the game when the steps are finished:
 
 ```typescript
 // main.tsx
-import { GameStepManager } from '@drincs/pixi-vn'
+import { narration } from '@drincs/pixi-vn'
 
-GameStepManager.gameEnd = async (props) => {
+narration.gameEnd = async (props) => {
     props.navigate("/end")
 }
 ```
@@ -303,10 +303,10 @@ export const startLabel = newLabel("start_label_id",
 
 ```typescript
 // main.tsx
-import { GameStepManager } from '@drincs/pixi-vn'
+import { narration } from '@drincs/pixi-vn'
 
-GameStepManager.gameEnd = async (props) => {
-    GameStepManager.callLabel(startLabel, props)
+narration.gameEnd = async (props) => {
+    narration.callLabel(startLabel, props)
 }
 ```
 

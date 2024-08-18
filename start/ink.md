@@ -56,7 +56,7 @@ importInkText([inkText, ...])
 Now you can run the `start` knot (or label) with [Pixi’VN functions](/start/labels.md#run-a-label).
 
 ```typescript
-GameStepManager.callLabel(`start`, {})
+narration.callLabel(`start`, {})
 ```
 
 ### Import text contained in .ink files
