@@ -53,8 +53,8 @@ export const appleLabel = newLabel<{quantity: number}>("AppleLabel",
 setDialogue("Choose a fruit:")
 setChoiceMenuOptions([
     new ChoiceMenuOption("Orange", orangeLabel, {}), // by default, the label will be called by call
-    new ChoiceMenuOption("Banana", bananaLabel, {}, "jump"),
-    new ChoiceMenuOption("Apple", appleLabel, { quantity: 5 }, "call"),
+    new ChoiceMenuOption("Banana", bananaLabel, {}, { type: "jump" }),
+    new ChoiceMenuOption("Apple", appleLabel, { quantity: 5 }, { type: "call" }),
     new ChoiceMenuOptionClose("Cancel"),
 ])
 ```
