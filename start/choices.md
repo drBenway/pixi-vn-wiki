@@ -11,7 +11,9 @@ In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption`
 * `text`: The text that will be displayed in the choice menus.
 * `label`: The [label](/start/labels#label) which will be called when the player chooses the option.
 * `props`: The properties that will be passed to the label, if the label not need any parameter you can pass an empty object `{}`.
-* `type`: The way the [label will be called](/start/labels#run-a-label). It can be `call` or `jump`. Default is `call`.
+* `options`:
+  * `type`: The way the [label will be called](/start/labels#run-a-label). It can be `call` or `jump`. Default is `call`.
+  * `oneTime`: If this is `true`, the choice can only be made once.
 
 <!-- TODO redocumentar the props -->
 
@@ -26,7 +28,9 @@ In addition to `ChoiceMenuOption` there is also another class `ChoiceMenuOptionC
 `ChoiceMenuOptionClose` is a class which has as parameters:
 
 * `text`: The text that will be displayed in the choice menus.
-* `closeCurrentLabel`: If `true`, the current label will be closed. Default is `false`.
+* `options`:
+  * `closeCurrentLabel`: If `true`, the current label will be closed. Default is `false`.
+  * `oneTime`: If this is `true`, the choice can only be made once.
 
 This class is only intended to give you information about a choice, it is up to you to close the choice menu using the [`closeChoiceMenu`](#close-the-choice-menu) function.
 
