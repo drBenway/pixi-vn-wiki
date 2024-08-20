@@ -47,13 +47,6 @@ narration.dialogue = new DialogueBaseModel("Hello, world!", liam)
 narration.dialogue = "Hello, world!"
 ```
 
-```typescript
-// if don't want to set a character, you can set a string
-narration.dialogue = "Hello, world!", {
-    emotion: "happy"
-}
-```
-
 ## Get a Current Dialogue
 
 To get the current dialogue, use the `narration.dialogue`. The return is a `DialogueBaseModel`.
