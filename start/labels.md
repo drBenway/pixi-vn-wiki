@@ -296,7 +296,7 @@ When all the steps of all labels are executed, the game will block. The develope
 * The game has no end, so if the steps are finished, there has been an error, and it needs to be handled
 * The game ends when the player reaches a certain point. For example, when the player reaches a certain point in the story you can navigate to a game over screen
 
-The method for managing the end of the game is to set `narration.gameEnd` with a function that has the same characteristics as a step function.
+The method for managing the end of the game is to set `narration.onGameEnd` with a function that has the same characteristics as a step function.
 
 For example, if you want to end the game when the steps are finished:
 
@@ -304,7 +304,7 @@ For example, if you want to end the game when the steps are finished:
 // main.tsx
 import { narration } from '@drincs/pixi-vn'
 
-narration.gameEnd = async (props) => {
+narration.onGameEnd = async (props) => {
     props.navigate("/end")
 }
 ```
@@ -326,7 +326,7 @@ export const startLabel = newLabel("start_label_id",
 // main.tsx
 import { narration } from '@drincs/pixi-vn'
 
-narration.gameEnd = async (props) => {
+narration.onGameEnd = async (props) => {
     narration.callLabel(startLabel, props)
 }
 ```
