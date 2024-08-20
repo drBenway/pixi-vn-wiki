@@ -27,6 +27,52 @@ To check if the current step is already opened, use the `narration.isCurrentStep
 const isCurrentStepOpened = narration.isCurrentStepAlreadyOpened;
 ```
 
+## Counter of execution times of the current step
+
+To get the counter of execution times of the current step, use the `narration.currentStepCounter`. **Important**: The counter will be incremented only if `narration.currentStepCounter` is called at least once in a step.
+
+```typescript
+export const label = newLabel("id",
+    () => {
+        if (narration.currentStepCounter === 0) { // ✅ will be incremented
+            // ...
+        } else {
+            // ...
+        }
+    }
+)
+```
+
+```typescript
+export const label = newLabel("id",
+    () => {
+        if (narration.currentStepCounter === 0) { // ✅ will be incremented
+            // ...
+        } else if (narration.currentStepCounter === 1) { // ✅ It will not be incremented, because it has already been incremented in this step
+            // ...
+        }
+    }
+)
+```
+
+```typescript
+export const label = newLabel("id",
+    () => {
+        if (flag) {
+            if (narration.currentStepCounter === 1) { // ❌ It will be incremented only if "flag" is true
+                // ...
+            }
+        }
+    }
+)
+```
+
+Restart the counter of execution times of the current step, use the `narration.currentStepCounter = 0`.
+
+```typescript
+narration.currentStepCounter = 0;
+```
+
 ## Get Narrative History
 
 The Narration timeline of the game is a list of all dialogues that have been displayed. It is useful to know what has been said and to display it in the game.
