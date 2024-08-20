@@ -83,12 +83,6 @@ To get the history of dialogues, choices and responses for every [game steps](/s
 const dialogues: NarrativeHistory<DialogueBaseModel>[] = narration.getNarrativeHistory();
 ```
 
-If you use the [Extended DialogueModel](/start/dialogue.md#extend-dialoguebasemodel), you can get the history of dialogues and cast to the extended class.
-
-```typescript
-const dialogues: NarrativeHistory<DialogueModel>[] = narration.getNarrativeHistory<DialogueModel>();
-```
-
 ## Example
 
 ```tsx
