@@ -332,3 +332,19 @@ narration.onGameEnd = async (props) => {
 ```
 
 <!-- TODO: document `onStepStart` -->
+
+## How manage the step error
+
+When an error occurs in a step, the game gives a console error and stops the execution of the steps. The developer must manage the error. The method for managing the error is to set `narration.onStepError`.
+
+For example, if you want to send a notification when an error occurs:
+
+```typescript
+// main.tsx
+import { narration } from '@drincs/pixi-vn'
+
+narration.onStepError = async (error, props) => {
+    props.notify("An error occurred")
+    // send a notification to GlitchTip, Sentry, etc...
+}
+```
