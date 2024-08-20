@@ -64,8 +64,8 @@ const currentDialogue: DialogueBaseModel = narration.dialogue;
 
 ## Clear a Current Dialogue
 
-To clear the current dialogue, use the `clearDialogue`.
+To clear the current dialogue, use the `narration.dialogue`.
 
 ```typescript
-clearDialogue();
+narration.dialogue = undefined;
 ```
