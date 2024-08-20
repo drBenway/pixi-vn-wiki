@@ -79,12 +79,12 @@ import { getCharacterById } from "@drincs/pixi-vn";
 const liam = getCharacterById('liam');
 ```
 
-If you use the [Extended CharacterModel](#extend-characterbasemodel) class, you can get the character and cast it to the subclass.
+If you use the [Extended CharacterModel](#custom-character) class, you can get the character and cast it to the subclass.
 
 ```typescript
 import { getCharacterById } from "@drincs/pixi-vn";
 
-const liam = getCharacterById<ExtendedCharacterModel>('liam');
+const liam = getCharacterById('liam');
 ```
 
 ## Get All Characters
@@ -97,12 +97,12 @@ import { getAllCharacters } from "@drincs/pixi-vn";
 const characters = getAllCharacters();
 ```
 
-If you use the [Extended CharacterModel](#extend-characterbasemodel) class, you can get all characters and cast them to the subclass.
+If you use the [Extended CharacterModel](#custom-character) class, you can get all characters and cast them to the subclass.
 
 ```typescript
 import { getAllCharacters } from "@drincs/pixi-vn";
 
-const characters = getAllCharacters<ExtendedCharacterModel>();
+const characters = getAllCharacters();
 ```
 
 ## Edit Characters in the Game
@@ -173,30 +173,104 @@ setDialogue({ character: liam, text: "Hello" })
 setDialogue({ character: "liam_id", text: "Hello" })
 ```
 
-## Extend CharacterBaseModel
+## Custom Character
 
-It recommend creating a subclass of `CharacterBaseModel` to add new properties or methods to the character.
+It recommend creating your own class `Character` that extends `CharacterStoredClass` to use your properties or methods, and "override" the interface `CharacterInterface` to add the new properties.
 
-For example, you can create a subclass `CharacterModel` that extends `CharacterBaseModel` and add a new property `mood`.
+For example, you can create a class `Character`. You must "override" the interface `CharacterInterface` to use your properties or methods.
 
 ```typescript
-import { CharacterBaseModel } from "@drincs/pixi-vn";
-
-interface ICharacterModel extends ICharacterBaseModel {
-    mood: string
+// pixi-vn.types.ts
+declare module '@drincs/pixi-vn/dist/override' {
+    interface CharacterInterface {
+        name: string
+        surname?: string
+        age?: number
+        icon?: string
+        color?: string
+    }
 }
+```
 
-export class CharacterModel extends CharacterBaseModel {
-    constructor(id: string, props: ICharacterModel) {
-        super(id, props)
-    }
+Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`.
 
-    private _mood: string = ""
-    get mood(): string {
-        return this.getStorageProperty<string>("mood") || this.defaultName
+```typescript
+import { CharacterStoredClass } from "@drincs/pixi-vn";
+
+export class Character extends CharacterStoredClass implements CharacterInterface {
+    constructor(id: string, props: CharacterProps) {
+        super(id)
+        this._name = props.name
+        this._surname = props.surname
+        this._age = props.age
+        this._icon = props.icon
+        this._color = props.color
     }
-    set mood(value: string) {
-        this.setStorageProperty<string>("mood", value)
+    private _name: string = ""
+    get name(): string {
+        return this._name
+    }
+    private _surname?: string
+    get surname(): string | undefined {
+        return this._surname
+    }
+    private _age?: number | undefined
+    get age(): number | undefined {
+        return this._age
+    }
+    private _icon?: string
+    get icon(): string | undefined {
+        return this._icon
+    }
+    private _color?: string | undefined
+    get color(): string | undefined {
+        return this._color
+    }
+}
+```
+
+In this class you can't set the properties, because they are read-only. For set the properties and store them in the game storage, you must use the `setStorageProperty` method.
+
+```typescript
+import { CharacterStoredClass } from "@drincs/pixi-vn";
+
+export class Character extends CharacterStoredClass implements CharacterInterface {
+    constructor(id: string, props: CharacterProps) {
+        super(id)
+        this.defaultName = props.name
+        this.defaultSurname = props.surname
+        this.defaultAge = props.age
+        this._icon = props.icon
+        this._color = props.color
+    }
+    private defaultName: string = ""
+    get name(): string {
+        return this.getStorageProperty<string>("name") || this.defaultName
+    }
+    set name(value: string | undefined) {
+        this.setStorageProperty<string>("name", value)
+    }
+    private defaultSurname?: string
+    get surname(): string | undefined {
+        return this.getStorageProperty<string>("surname") || this.defaultSurname
+    }
+    set surname(value: string | undefined) {
+        this.setStorageProperty<string>("surname", value)
+    }
+    private defaultAge?: number | undefined
+    get age(): number | undefined {
+        return this.getStorageProperty<number>("age") || this.defaultAge
+    }
+    set age(value: number | undefined) {
+        this.setStorageProperty<number>("age", value)
+    }
+    private _icon?: string
+    get icon(): string | undefined {
+        return this._icon
+    }
+    private _color?: string | undefined
+    get color(): string | undefined {
+        return this._color
     }
 }
 ```

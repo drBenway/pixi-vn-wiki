@@ -71,7 +71,9 @@ declare module '@drincs/pixi-vn/dist/override' {
         navigate: (route: string) => void,
     }
 }
+```
 
+```typescript
 return narration.callLabel(TestLabel, {
     navigate: (route) => {
         // navigate to route
@@ -93,7 +95,9 @@ declare module '@drincs/pixi-vn/dist/override' {
         [key: string]: any
     }
 }
+```
 
+```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
         () => {
