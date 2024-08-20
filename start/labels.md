@@ -26,7 +26,7 @@ const START_LABEL_ID = "start_label_id"
 export const startLabel = newLabel(START_LABEL_ID,
     [
         () => {
-            setDialogue({ character: liam, text: "Example of dialogue" })
+            narration.dialogue = { character: liam, text: "Example of dialogue" }
         },
         (props) => narration.jumpLabel(START_LABEL_ID, props),
     ]
@@ -278,13 +278,13 @@ export const startLabel = newLabel(START_LABEL_ID,
     () => {
         if (condition) {
             return [
-                () => setDialogue({ character: liam, text: "Example of dialogue" }),
+                () => narration.dialogue = { character: liam, text: "Example of dialogue" },
                 (props) => narration.jumpLabel(START_LABEL_ID, props),
             ]
         } else {
             return [
-                () => setDialogue({ character: liam, text: "Another example of dialogue" }),
-                () => setDialogue({ character: liam, text: "Another example of dialogue 2" }),
+                () => narration.dialogue = { character: liam, text: "Another example of dialogue" },
+                () => narration.dialogue = { character: liam, text: "Another example of dialogue 2" },
                 (props) => narration.jumpLabel(START_LABEL_ID, props),
             ]
         }

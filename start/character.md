@@ -168,9 +168,9 @@ export const liam = new CharacterBaseModel('liam_id', {
 });
 saveCharacter([liam, emma]);
 
-setDialogue({ character: liam, text: "Hello" })
+narration.dialogue = { character: liam, text: "Hello" }
 // or
-setDialogue({ character: "liam_id", text: "Hello" })
+narration.dialogue = { character: "liam_id", text: "Hello" }
 ```
 
 ## Custom Character

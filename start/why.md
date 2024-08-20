@@ -66,9 +66,9 @@ Example of Pixi’VN:
 
 ```typescript
 const startLabel = newLabel("start_label_id", [
-    (props) => setDialogue("Hello, world!"),
-    (props) => setDialogue("This is a Pixi’VN tutorial."),
-    (props) => setDialogue("I hope you enjoy it!")
+    (props) => narration.dialogue = "Hello, world!",
+    (props) => narration.dialogue = "This is a Pixi’VN tutorial.",
+    (props) => narration.dialogue = "I hope you enjoy it!"
 ])
 ```
 

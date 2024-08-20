@@ -50,7 +50,7 @@ export const appleLabel = newLabel<{quantity: number}>("AppleLabel",
 ```
 
 ```typescript
-setDialogue("Choose a fruit:")
+narration.dialogue = "Choose a fruit:"
 setChoiceMenuOptions([
     new ChoiceMenuOption("Orange", orangeLabel, {}), // by default, the label will be called by call
     new ChoiceMenuOption("Banana", bananaLabel, {}, { type: "jump" }),

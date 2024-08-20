@@ -121,7 +121,7 @@ declare module '@drincs/pixi-vn/dist/override' {
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
-        ({ t }) => setDialogue({ character: liam, text: t("hello_my_name_is", { name: "Liam" }) }),
+        ({ t }) => narration.dialogue = { character: liam, text: t("hello_my_name_is", { name: "Liam" }) },
     ]
 )
 ```

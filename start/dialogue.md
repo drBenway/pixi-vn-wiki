@@ -7,15 +7,15 @@ A dialogue can link to a [character](/start/character#use-characters-in-the-game
 
 ## Set a Current Dialogue
 
-To set a current dialogue, use the `setDialogue`.
+To set a current dialogue, use the `narration.dialogue`.
 
 ```typescript
 // in this example, not exists a character with id 'Alice'
 // so when you get the current dialogue, the character is a fake character with the name 'Alice'
-setDialogue({
+narration.dialogue = {
     character: "Alice",
     text: "Hello, world!"
-})
+}
 ```
 
 ```typescript
@@ -29,29 +29,29 @@ export const liam = new CharacterBaseModel('liam-id', {
 
 // in this example, exists a character with id 'liam-id'
 // so when you get the current dialogue, the character is the character with id 'liam-id'
-setDialogue({
+narration.dialogue = {
     character: 'liam-id',
     text: "Hello, world!"
-})
+}
 // or
-setDialogue({
+narration.dialogue = {
     character: liam,
     text: "Hello, world!"
-})
+}
 // or
-setDialogue(new DialogueBaseModel("Hello, world!", liam))
+narration.dialogue = new DialogueBaseModel("Hello, world!", liam)
 ```
 
 ```typescript
 // if don't want to set a character, you can set a string
-setDialogue("Hello, world!")
+narration.dialogue = "Hello, world!"
 ```
 
 ```typescript
 // if don't want to set a character, you can set a string
-setDialogue("Hello, world!", {
+narration.dialogue = "Hello, world!", {
     emotion: "happy"
-})
+}
 ```
 
 ## Get a Current Dialogue
