@@ -36,7 +36,7 @@ This class is only intended to give you information about a choice, it is up to 
 
 ## Set a choice menu
 
-To set a choice menu, use the `setChoiceMenuOptions` and pass an array of `ChoiceMenuOption`.
+To set a choice menu, use the `narration.choiceMenuOptions` and pass an array of `ChoiceMenuOption`.
 
 ```typescript
 export const appleLabel = newLabel<{quantity: number}>("AppleLabel",
@@ -51,12 +51,12 @@ export const appleLabel = newLabel<{quantity: number}>("AppleLabel",
 
 ```typescript
 narration.dialogue = "Choose a fruit:"
-setChoiceMenuOptions([
+narration.choiceMenuOptions = [
     new ChoiceMenuOption("Orange", orangeLabel, {}), // by default, the label will be called by call
     new ChoiceMenuOption("Banana", bananaLabel, {}, { type: "jump" }),
     new ChoiceMenuOption("Apple", appleLabel, { quantity: 5 }, { type: "call" }),
     new ChoiceMenuOptionClose("Cancel"),
-])
+]
 ```
 
 ## Get the choice menu
