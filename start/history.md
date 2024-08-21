@@ -77,10 +77,10 @@ narration.currentStepCounter = 0;
 
 The Narration timeline of the game is a list of all dialogues that have been displayed. It is useful to know what has been said and to display it in the game.
 
-To get the history of dialogues, choices and responses for every [game steps](/start/labels), use the `narration.getNarrativeHistory`. The return is a `NarrativeHistory<T>[]`.
+To get the history of dialogues, choices and responses for every [game steps](/start/labels), use the `narration.narrativeHistory`. The return is a `NarrativeHistory<T>[]`.
 
 ```typescript
-const dialogues: NarrativeHistory<Dialogue>[] = narration.getNarrativeHistory();
+const dialogues: NarrativeHistory<Dialogue>[] = narration.narrativeHistory;
 ```
 
 ## Example
@@ -102,7 +102,7 @@ export default function History() {
             }}
         >
             <Stack spacing={2} justifyContent="flex-end">
-                {narration.getNarrativeHistory()
+                {narration.narrativeHistory
                     .map((step) => {
                         let character = step.dialoge?.character ? getCharacterById(step.dialoge?.character) ?? new CharacterBaseModel(step.dialoge?.character, { name: step.dialoge?.character }) : undefined
                         return {
