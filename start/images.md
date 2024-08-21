@@ -91,8 +91,7 @@ await loadImage(image)
 Another way to make sure multiple images are displayed at the same time is to use the [`PIXI.Assets`](https://pixijs.com/8.x/examples/assets/async) function, for add the textures in cache.
 
 ```typescript
-import { addImage } from '@drincs/pixi-vn'
-import { Assets } from "pixi.js";
+import { addImage, Assets } from '@drincs/pixi-vn'
 
 // Load the images and add them to the cache
 await Assets.load('path/to/image1.png')

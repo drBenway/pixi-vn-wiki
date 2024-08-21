@@ -91,8 +91,7 @@ await loadVideo(video)
 Another way to make sure multiple videos are displayed at the same time is to use the [`PIXI.Assets`](https://pixijs.com/8.x/examples/assets/async) function, for add the textures in cache.
 
 ```typescript
-import { addVideo } from '@drincs/pixi-vn'
-import { Assets } from "pixi.js";
+import { addVideo, Assets } from '@drincs/pixi-vn'
 
 // Load the videos and add them to the cache
 await Assets.load('path/to/video1.png')
