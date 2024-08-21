@@ -27,7 +27,7 @@ export default class RotateTicker extends TickerBase<{ speed?: number, clockwise
         let speed = args.speed === undefined ? 0.1 : args.speed
         let clockwise = args.clockwise === undefined ? true : args.clockwise
         tags.forEach((tag) => {
-            let element = canvas.getCanvasElement(tag)
+            let element = canvas.find(tag)
             if (element && element instanceof Container) {
                 if (clockwise)
                     element.rotation += speed * t.deltaTime

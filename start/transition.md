@@ -95,7 +95,7 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
 ): Promise<void> {
     let oldCanvasTag: string | undefined = undefined
     // if exist a canvas element with the same tag, then the image is replaced and the first image is removed after the effect is done
-    if (canvas.getCanvasElement(tag)) {
+    if (canvas.find(tag)) {
         oldCanvasTag = tag + "_temp_disolve"
         // so is necessary to change the tag of the old canvas element
         // and remove the old canvas element after the effect is done

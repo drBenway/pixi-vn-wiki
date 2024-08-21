@@ -33,15 +33,15 @@ canvas.add('sprite1', sprite)
 
 ## Get Canvas Elements
 
-To get a canvas element from the game window, you can use the `canvas.getCanvasElement`, if the element does not exist, it will return `undefined`.
-The `getCanvasElement` method have the following parameters:
+To get a canvas element from the game window, you can use the `canvas.find`, if the element does not exist, it will return `undefined`.
+The `find` method have the following parameters:
 
 * `tag`: The tag of the element to get.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
 
-const sprite = canvas.getCanvasElement<CanvasSprite>('sprite1')
+const sprite = canvas.find<CanvasSprite>('sprite1')
 ```
 
 ## Remove Canvas Elements
