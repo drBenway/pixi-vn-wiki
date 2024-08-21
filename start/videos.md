@@ -8,7 +8,7 @@ The simplest and fastest method to show an video on the canvas is to use the `sh
 
 This function has the following parameters:
 
-* `tag`: Is a tag (or id) for the video. There can only be one item in the canvas with that id, if you add an video with the same tag, the previous video will be removed.
+* `alias`: Is a alias (or id) for the video. There can only be one item in the canvas with that id, if you add an video with the same alias, the previous video will be removed.
 * `videoUrl`: The URL or path of the video.
 
 ```typescript
@@ -27,7 +27,7 @@ It is important to take into account that this function only adds the element to
 
 `addVideo` function has the following parameters:
 
-* `tag`: Is a tag (or id) for the video. There can only be one item in the canvas with that id, if you add an video with the same tag, the previous video will be removed.
+* `alias`: Is a alias (or id) for the video. There can only be one item in the canvas with that id, if you add an video with the same alias, the previous video will be removed.
 * `videoUrl`: The URL or path of the video.
 
 ```typescript

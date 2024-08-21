@@ -8,7 +8,7 @@ The simplest and fastest method to show an image on the canvas is to use the `sh
 
 This function has the following parameters:
 
-* `tag`: Is a tag (or id) for the image. There can only be one item in the canvas with that id, if you add an image with the same tag, the previous image will be removed.
+* `alias`: Is a alias (or id) for the image. There can only be one item in the canvas with that id, if you add an image with the same alias, the previous image will be removed.
 * `imageUrl`: The URL or path of the image.
 
 ```typescript
@@ -27,7 +27,7 @@ It is important to take into account that this function only adds the element to
 
 `addImage` function has the following parameters:
 
-* `tag`: Is a tag (or id) for the image. There can only be one item in the canvas with that id, if you add an image with the same tag, the previous image will be removed.
+* `alias`: Is a alias (or id) for the image. There can only be one item in the canvas with that id, if you add an image with the same alias, the previous image will be removed.
 * `imageUrl`: The URL or path of the image.
 
 ```typescript

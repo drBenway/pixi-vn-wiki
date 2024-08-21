@@ -8,13 +8,13 @@ You can use the Pixi’VN built-in transitions or [create your own transitions](
 
 ## Dissolve Transition
 
-Dissolve Transition means that the image will be shown with a dissolve effect. If exist a image with the same tag, the existing image will be removed when the new image is shown.
+Dissolve Transition means that the image will be shown with a dissolve effect. If exist a image with the same alias, the existing image will be removed when the new image is shown.
 
 ( This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade) )
 
 The `showWithDissolveTransition` function has the following parameters:
 
-* `tag`: The unique tag of the image. You can use this tag to refer to this image
+* `alias`: The unique alias of the image. You can use this alias to refer to this image
 * `image`: The imageUrl or the canvas element. If imageUrl is a video, then the CanvasVideo is added to the canvas.
 * `props`: The properties of the effect
 * `priority`: ( optional ) The priority of the effect
@@ -43,13 +43,13 @@ removeWithDissolveTransition('image1', { duration: 2 })
 
 ## Fade Transition
 
-Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same tag, the existing image will be removed with a fade-out effect before the new image is shown.
+Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same alias, the existing image will be removed with a fade-out effect before the new image is shown.
 
 ( This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade) )
 
 The `showWithFadeTransition` function has the following parameters:
 
-* `tag`: The unique tag of the image. You can use this tag to refer to this image
+* `alias`: The unique alias of the image. You can use this alias to refer to this image
 * `image`: The imageUrl or the canvas element. If imageUrl is a video, then the CanvasVideo is added to the canvas.
 * `props`: The properties of the effect
 * `priority`: ( optional ) The priority of the effect
@@ -88,27 +88,27 @@ For example, the function `showWithDissolveTransition` is a combination of the [
 
 ```typescript
 export async function showWithDissolveTransition<T extends CanvasBase<any> | string = string>(
-    tag: string,
+    alias: string,
     image: T,
     props: Omit<FadeAlphaTickerProps, "type" | tagToRemoveAfterType | "startOnlyIfHaveTexture"> = {},
     priority?: UPDATE_PRIORITY,
 ): Promise<void> {
     let oldCanvasTag: string | undefined = undefined
-    // if exist a canvas element with the same tag, then the image is replaced and the first image is removed after the effect is done
-    if (canvas.find(tag)) {
-        oldCanvasTag = tag + "_temp_disolve"
-        // so is necessary to change the tag of the old canvas element
+    // if exist a canvas element with the same alias, then the image is replaced and the first image is removed after the effect is done
+    if (canvas.find(alias)) {
+        oldCanvasTag = alias + "_temp_disolve"
+        // so is necessary to change the alias of the old canvas element
         // and remove the old canvas element after the effect is done
-        canvas.editAlias(tag, oldCanvasTag)
+        canvas.editAlias(alias, oldCanvasTag)
     }
 
     let canvasElement: CanvasBase<any>
     if (typeof image === "string") {
-        canvasElement = addImage(tag, image)
+        canvasElement = addImage(alias, image)
     }
     else {
         canvasElement = image
-        canvas.add(tag, canvasElement)
+        canvas.add(alias, canvasElement)
     }
     if (canvasElement instanceof CanvasImage && canvasElement.texture?.label == "EMPTY") {
         await canvasElement.load()
@@ -122,7 +122,7 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
         tagToRemoveAfter: oldCanvasTag,
         startOnlyIfHaveTexture: true,
     }, 10, priority)
-    canvas.addTicker(tag, effect)
+    canvas.addTicker(alias, effect)
     return
 }
 ```

@@ -26,8 +26,8 @@ export default class RotateTicker extends TickerBase<{ speed?: number, clockwise
     ): void {
         let speed = args.speed === undefined ? 0.1 : args.speed
         let clockwise = args.clockwise === undefined ? true : args.clockwise
-        tags.forEach((tag) => {
-            let element = canvas.find(tag)
+        tags.forEach((alias) => {
+            let element = canvas.find(alias)
             if (element && element instanceof Container) {
                 if (clockwise)
                     element.rotation += speed * t.deltaTime
@@ -44,9 +44,9 @@ export default class RotateTicker extends TickerBase<{ speed?: number, clockwise
 To add a Ticker you must use the `canvas.addTicker` function and pass the ticker class.
 
 <!-- TODO  
-You can run multiple addTicker with the same tag and different tickerClasses.
-* If you run a ticker with the same tag and tickerClass, the old ticker will be removed.
-* If already exists a sequence of tickers with the same tag, it will be removed.
+You can run multiple addTicker with the same alias and different tickerClasses.
+* If you run a ticker with the same alias and tickerClass, the old ticker will be removed.
+* If already exists a sequence of tickers with the same alias, it will be removed.
 -->
 
 ```typescript
@@ -71,7 +71,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: my_speed }, 2))
 
 ## Remove association between a Ticker and a Canvas Element
 
-For unlink a Ticker from a Canvas Element you must use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the tag of the canvas element and a ticker class.
+For unlink a Ticker from a Canvas Element you must use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the alias of the canvas element and a ticker class.
 
 If the ticker not have any more canvas elements associated, it will be deleted.
 
@@ -110,7 +110,7 @@ remove the ticker if there is no canvas element connected to it.
 You can run a succession of Tickers.
 This means you can start a list of tokens, so that when one ends the next begins.
 
-For this you must use the `narration.addTickersSteps` function and pass the tag of the canvas element and an array of tickers.
+For this you must use the `narration.addTickersSteps` function and pass the alias of the canvas element and an array of tickers.
 
 ```typescript
 canvas.addTickersSteps("alien", [

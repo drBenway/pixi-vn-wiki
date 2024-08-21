@@ -20,7 +20,7 @@ Other elements are added by Pixi’VN, such as:
 To add a canvas element to the game window, you can use the `canvas.add`.
 The `add` method have the following parameters:
 
-* `tag`: Is a tag (or id) for the canvas element. There can only be one item in the canvas with that id, if you add an canvas element with the same tag, the previous canvas element will be removed.
+* `alias`: Is a alias (or id) for the canvas element. There can only be one item in the canvas with that id, if you add an canvas element with the same alias, the previous canvas element will be removed.
 * `element`: The canvas element to add.
 
 ```typescript
@@ -36,7 +36,7 @@ canvas.add('sprite1', sprite)
 To get a canvas element from the game window, you can use the `canvas.find`, if the element does not exist, it will return `undefined`.
 The `find` method have the following parameters:
 
-* `tag`: The tag of the element to get.
+* `alias`: The alias of the element to get.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
@@ -49,7 +49,7 @@ const sprite = canvas.find<CanvasSprite>('sprite1')
 To remove a canvas element from the game window, you can use the `canvas.remove`.
 The `remove` method have the following parameters:
 
-* `tag`: The tag of the element to remove.
+* `alias`: The alias of the element to remove.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
@@ -69,12 +69,12 @@ canvas.removeAll()
 
 ## Edit Canvas Element Tag
 
-To edit the tag of a canvas element, you can use the `canvas.editAlias`.
+To edit the alias of a canvas element, you can use the `canvas.editAlias`.
 
 The `editAlias` method have the following parameters:
 
-* `oldTag`: The old tag of the element to edit.
-* `newTag`: The new tag of the element.
+* `oldTag`: The old alias of the element to edit.
+* `newTag`: The new alias of the element.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
