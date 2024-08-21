@@ -84,7 +84,7 @@ It is possible to start fading on all [canvas element](canvas-elements).
 * `type`: it can be `hide` or `show`. if `hide` the canvas element will disappear, if `show` the canvas element will appear. default is `show`.
 * `limit`: is a number that represents the limit of the fade. default is `1` if `type` is `show` and `0` if `type` is `hide`.
 * `startOnlyIfHaveTexture`: is a boolean that represents if the animation should start only if the canvas element have a texture not empty. default is `false`.
-* `tagToRemoveAfter`: is a string[] that contains the tags of the [canvas element](canvas-elements) that will be removed after the fade. default is `[]`.
+* `tagToRemoveAfter`: is a string[] that contains the aliases of the [canvas element](canvas-elements) that will be removed after the fade. default is `[]`.
 
 for example:
 

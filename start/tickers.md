@@ -22,11 +22,11 @@ export default class RotateTicker extends TickerBase<{ speed?: number, clockwise
             speed?: number,
             clockwise?: boolean,
         },
-        tags: string[]
+        aliases: string[]
     ): void {
         let speed = args.speed === undefined ? 0.1 : args.speed
         let clockwise = args.clockwise === undefined ? true : args.clockwise
-        tags.forEach((alias) => {
+        aliases.forEach((alias) => {
             let element = canvas.find(alias)
             if (element && element instanceof Container) {
                 if (clockwise)
@@ -57,7 +57,7 @@ canvas.add("alien", alien);
 canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 ```
 
-If a ticket needs to update multiple canvas elements, you can pass an array of tags to the `addTicker` function.
+If a ticket needs to update multiple canvas elements, you can pass an array of aliases to the `addTicker` function.
 
 ```typescript
 canvas.addTicker(["alien", "alien2"], new RotateTicker({ speed: my_speed }))
