@@ -24,10 +24,11 @@ The `add` method have the following parameters:
 * `element`: The canvas element to add.
 
 ```typescript
-import { canvas, CanvasSprite } from '@drincs/pixi-vn'
+import { canvas, CanvasSprite, Assets } from '@drincs/pixi-vn'
 
 const sprite = new CanvasSprite()
 const texture = await Assets.load("path/to/image.png")
+sprite.texture = texture
 canvas.add('sprite1', sprite)
 ```
 
