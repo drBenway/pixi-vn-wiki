@@ -1,6 +1,6 @@
 # Videos
 
-To make adding and managing videos on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing and managing videos. `CanvasVideo` is a class that extends [`CanvasImage`](/start/images.md), all the methods and properties of [`CanvasImage`](/start/images.md) can be used with `CanvasVideo` and all functions that work with images can work with videos.
+To make adding and managing videos on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing and managing videos. `Video` is a class that extends [`CanvasImage`](/start/images.md), all the methods and properties of [`CanvasImage`](/start/images.md) can be used with `Video` and all functions that work with images can work with videos.
 
 ## Show Video
 
@@ -21,7 +21,7 @@ This function is a combination of the [`addVideo`](#add-video) and [`load`](#loa
 
 ## Add Video
 
-To add an video to the canvas, you can use the `addVideo` function. This function will return a `CanvasVideo` object that you can use to manipulate the video. `CanvasVideo` is a class the extends [`CanvasImage`](/start/images.md), so you can use all the methods and properties of [`CanvasImage`](/start/images.md).
+To add an video to the canvas, you can use the `addVideo` function. This function will return a `Video` object that you can use to manipulate the video. `Video` is a class the extends [`CanvasImage`](/start/images.md), so you can use all the methods and properties of [`CanvasImage`](/start/images.md).
 
 It is important to take into account that this function only adds the element to the canvas but does **not show it and does not load its texture**.
 
@@ -39,9 +39,9 @@ const video = addVideo('video1', 'path/to/video.mp4')
 If you want initialize the video before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-elements#add-canvas-elements)function.
 
 ```typescript
-import { canvas, CanvasVideo } from '@drincs/pixi-vn'
+import { canvas, Video } from '@drincs/pixi-vn'
 
-let alien = new CanvasVideo({
+let alien = new Video({
     anchor: { x: 0.5, y: 0.5 },
     x: 100,
     y: 100,
@@ -52,7 +52,7 @@ canvas.add("alien", alien)
 
 ## Load Video
 
-After adding the video, you can load the texture and show it on the canvas using the `CanvasVideo.load` method.
+After adding the video, you can load the texture and show it on the canvas using the `Video.load` method.
 
 This method is asynchronous, so:
 
@@ -66,7 +66,7 @@ const video = addVideo('video1', 'path/to/video.mp4')
 await video.load()
 ```
 
-In some cases you may need to ensure that multiple videos are displayed at the same time. In this case, you can use the `loadVideo` function to load a array of `CanvasVideo`.
+In some cases you may need to ensure that multiple videos are displayed at the same time. In this case, you can use the `loadVideo` function to load a array of `Video`.
 
 ```typescript
 import { addVideo, loadVideo } from '@drincs/pixi-vn'

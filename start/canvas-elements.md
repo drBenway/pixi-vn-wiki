@@ -13,7 +13,7 @@ Currently the base canvas elements are:
 Other elements are added by Pixi’VN, such as:
 
 * [CanvasImage](/start/images.md) is a class that extends the `CanvasSprite` class.
-* [CanvasVideo](/start/videos.md) is a class that extends the `CanvasImage` class.
+* [Video](/start/videos.md) is a class that extends the `CanvasImage` class.
 
 ## Add Canvas Elements
 
