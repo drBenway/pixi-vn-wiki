@@ -19,7 +19,7 @@ In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption`
 
 This class is only intended to give you information about a choice, it is up to you to call the label.
 
-In practice this means that after you get the list of choices through the `getChoiceMenuOptions` function, you will have to call the label using the [`callLabel`](/start/labels.md#call-a-label) or [`jumpLabel`](/start/labels.md#jump-to-a-label) function.
+In practice this means that after you get the list of choices through the `narration.choiceMenuOptions` function, you will have to call the label using the [`callLabel`](/start/labels.md#call-a-label) or [`jumpLabel`](/start/labels.md#jump-to-a-label) function.
 
 ### Choice for closing the menu
 
@@ -61,10 +61,10 @@ setChoiceMenuOptions([
 
 ## Get the choice menu
 
-To get the choice menu, use the `getChoiceMenuOptions`. The return is an array of `ChoiceMenuOption`.
+To get the choice menu, use the `narration.choiceMenuOptions`. The return is an array of `ChoiceMenuOption`.
 
 ```typescript
-const menuOptions: ChoiceMenuOption[] = getChoiceMenuOptions();
+const menuOptions: ChoiceMenuOption[] = narration.choiceMenuOptions;
 ```
 
 ## Clear the choice menu
@@ -98,7 +98,7 @@ For example ( in React using Material-UI ):
 
 ```tsx
 // react
-const [menuOptions, setChoiceMenuOptions] = useState<ChoiceMenuOption[]>(getChoiceMenuOptions())
+const [menuOptions, setChoiceMenuOptions] = useState<ChoiceMenuOption[]>(narration.choiceMenuOptions)
 function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
     clearChoiceMenuOptions()
     if (item.type == "call") {
