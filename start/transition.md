@@ -90,16 +90,16 @@ For example, the function `showWithDissolveTransition` is a combination of the [
 export async function showWithDissolveTransition<T extends CanvasBase<any> | string = string>(
     alias: string,
     image: T,
-    props: Omit<FadeAlphaTickerProps, "type" | tagToRemoveAfterType | "startOnlyIfHaveTexture"> = {},
+    props: Omit<FadeAlphaTickerProps, "type" | aliasToRemoveAfterType | "startOnlyIfHaveTexture"> = {},
     priority?: UPDATE_PRIORITY,
 ): Promise<void> {
-    let oldCanvasTag: string | undefined = undefined
+    let oldCanvasAlias: string | undefined = undefined
     // if exist a canvas element with the same alias, then the image is replaced and the first image is removed after the effect is done
     if (canvas.find(alias)) {
-        oldCanvasTag = alias + "_temp_disolve"
+        oldCanvasAlias = alias + "_temp_disolve"
         // so is necessary to change the alias of the old canvas element
         // and remove the old canvas element after the effect is done
-        canvas.editAlias(alias, oldCanvasTag)
+        canvas.editAlias(alias, oldCanvasAlias)
     }
 
     let canvasElement: CanvasBase<any>
@@ -119,7 +119,7 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
         ...props,
         type: "show",
         // After the effect is done, the old canvas element is removed
-        tagToRemoveAfter: oldCanvasTag,
+        aliasToRemoveAfter: oldCanvasAlias,
         startOnlyIfHaveTexture: true,
     }, 10, priority)
     canvas.addTicker(alias, effect)

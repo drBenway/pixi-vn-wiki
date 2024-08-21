@@ -67,14 +67,14 @@ import { canvas } from '@drincs/pixi-vn'
 canvas.removeAll()
 ```
 
-## Edit Canvas Element Tag
+## Edit Canvas Element Alias
 
 To edit the alias of a canvas element, you can use the `canvas.editAlias`.
 
 The `editAlias` method have the following parameters:
 
-* `oldTag`: The old alias of the element to edit.
-* `newTag`: The new alias of the element.
+* `oldAlias`: The old alias of the element to edit.
+* `newAlias`: The new alias of the element.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
