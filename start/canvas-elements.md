@@ -64,14 +64,14 @@ To remove all canvas elements from the game window, you can use the `canvas.remo
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
 
-canvas.removeCanvasElements()
+canvas.removeAll()
 ```
 
 ## Edit Canvas Element Tag
 
-To edit the tag of a canvas element, you can use the `canvas.editCanvasElementTag`.
+To edit the tag of a canvas element, you can use the `canvas.editAlias`.
 
-The `editCanvasElementTag` method have the following parameters:
+The `editAlias` method have the following parameters:
 
 * `oldTag`: The old tag of the element to edit.
 * `newTag`: The new tag of the element.
@@ -79,7 +79,7 @@ The `editCanvasElementTag` method have the following parameters:
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
 
-canvas.editCanvasElementTag('sprite1', 'sprite2')
+canvas.editAlias('sprite1', 'sprite2')
 ```
 
 ## Add a listener for a given event

@@ -99,7 +99,7 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
         oldCanvasTag = tag + "_temp_disolve"
         // so is necessary to change the tag of the old canvas element
         // and remove the old canvas element after the effect is done
-        canvas.editCanvasElementTag(tag, oldCanvasTag)
+        canvas.editAlias(tag, oldCanvasTag)
     }
 
     let canvasElement: CanvasBase<any>
