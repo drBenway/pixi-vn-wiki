@@ -34,11 +34,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Guide', link: '/start/getting-started' },
-      { text: 'Advanced topics', link: '/start/intercept-events' },
+      { text: 'Advanced topics', link: '/advanced/intercept-events' },
       {
         text: 'Other topics',
         items: [
-          { text: 'Distribution', link: '/advanced/distribution' },
           { text: 'Various Answers', link: '/other/various-answers' },
         ],
       },
