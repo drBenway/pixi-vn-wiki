@@ -39,7 +39,7 @@ narration.dialogue = {
     text: "Hello, world!"
 }
 // or
-narration.dialogue = new DialogueBaseModel("Hello, world!", liam)
+narration.dialogue = new Dialogue("Hello, world!", liam)
 ```
 
 ```typescript
@@ -49,10 +49,10 @@ narration.dialogue = "Hello, world!"
 
 ## Get a Current Dialogue
 
-To get the current dialogue, use the `narration.dialogue`. The return is a `DialogueBaseModel`.
+To get the current dialogue, use the `narration.dialogue`. The return is a `Dialogue`.
 
 ```typescript
-const currentDialogue: DialogueBaseModel = narration.dialogue;
+const currentDialogue: Dialogue = narration.dialogue;
 ```
 
 ## Clear a Current Dialogue

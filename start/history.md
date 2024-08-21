@@ -80,7 +80,7 @@ The Narration timeline of the game is a list of all dialogues that have been dis
 To get the history of dialogues, choices and responses for every [game steps](/start/labels), use the `narration.getNarrativeHistory`. The return is a `NarrativeHistory<T>[]`.
 
 ```typescript
-const dialogues: NarrativeHistory<DialogueBaseModel>[] = narration.getNarrativeHistory();
+const dialogues: NarrativeHistory<Dialogue>[] = narration.getNarrativeHistory();
 ```
 
 ## Example
