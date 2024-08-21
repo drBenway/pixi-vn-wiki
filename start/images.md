@@ -135,4 +135,4 @@ export const startLabel = newLabel("StartLabel", [
 
 ## Remove Image
 
-As for the Canvas Elements, you can remove an image from the canvas using the [`removeCanvasElement`](/start/canvas-elements#remove-canvas-elements) function.
+As for the Canvas Elements, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-elements#remove-canvas-elements) function.

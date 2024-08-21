@@ -98,7 +98,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 
 // ...
 
-canvas.removeCanvasElement("alien")
+canvas.remove("alien")
 ```
 
 ## Run a succession of Tickers

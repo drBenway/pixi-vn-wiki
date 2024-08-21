@@ -46,20 +46,20 @@ const sprite = canvas.find<CanvasSprite>('sprite1')
 
 ## Remove Canvas Elements
 
-To remove a canvas element from the game window, you can use the `canvas.removeCanvasElement`.
-The `removeCanvasElement` method have the following parameters:
+To remove a canvas element from the game window, you can use the `canvas.remove`.
+The `remove` method have the following parameters:
 
 * `tag`: The tag of the element to remove.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
 
-canvas.removeCanvasElement('sprite1')
+canvas.remove('sprite1')
 ```
 
 ## Remove All Canvas Elements
 
-To remove all canvas elements from the game window, you can use the `canvas.removeCanvasElements`.
+To remove all canvas elements from the game window, you can use the `canvas.remove`.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
