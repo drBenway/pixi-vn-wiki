@@ -17,8 +17,8 @@ Other elements are added by Pixi’VN, such as:
 
 ## Add Canvas Elements
 
-To add a canvas element to the game window, you can use the `canvas.addCanvasElement`.
-The `addCanvasElement` method have the following parameters:
+To add a canvas element to the game window, you can use the `canvas.add`.
+The `add` method have the following parameters:
 
 * `tag`: Is a tag (or id) for the canvas element. There can only be one item in the canvas with that id, if you add an canvas element with the same tag, the previous canvas element will be removed.
 * `element`: The canvas element to add.
@@ -28,7 +28,7 @@ import { canvas, CanvasSprite } from '@drincs/pixi-vn'
 
 const sprite = new CanvasSprite()
 const texture = await Assets.load("path/to/image.png")
-canvas.addCanvasElement('sprite1', sprite)
+canvas.add('sprite1', sprite)
 ```
 
 ## Get Canvas Elements
@@ -155,7 +155,7 @@ button
     .onEvent('pointerout', EventTest2);
 
 // Add it to the stage
-canvas.addCanvasElement("button", button);
+canvas.add("button", button);
 ```
 
 ## Custom Elements

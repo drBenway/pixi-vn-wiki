@@ -40,7 +40,7 @@ for example:
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
 alien.anchor.set(0.5);
-canvas.addCanvasElement("alien", alien);
+canvas.add("alien", alien);
 
 // in this example we rotate the canvas element "alien" with a speed of 0.2
 canvas.addTicker("alien", new RotateTicker({ speed: 0.2 }));
@@ -50,7 +50,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: 0.2 }));
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
 alien.anchor.set(0.5);
-canvas.addCanvasElement("alien", alien);
+canvas.add("alien", alien);
 
 // in this example we rotate the canvas element "alien" with a speed of 0.2 and counterclockwise
 canvas.addTicker("alien", new RotateTicker({ speed: 0.2, clockwise: false }, 2))
@@ -60,7 +60,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: 0.2, clockwise: false }, 2))
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
 alien.anchor.set(0.5);
-canvas.addCanvasElement("alien", alien);
+canvas.add("alien", alien);
 
 // in this example the canvas element "alien" will rotate with a speed of 0 and the speed will increase linearly until it reaches 0.5
 canvas.addTicker("alien", new RotateTicker({ speed: 0, speedProgression: { type: "linear", amt: 0.001, limit: 0.5 } }))
@@ -92,7 +92,7 @@ for example:
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
 alien.alpha = 0;
-canvas.addCanvasElement("alien", alien);
+canvas.add("alien", alien);
 
 // in this example we fade the canvas element "alien" with a duration of 2 seconds
 canvas.addTicker("alien", new FadeAlphaTicker({ duration: 2 }));

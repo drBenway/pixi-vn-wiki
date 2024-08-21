@@ -36,7 +36,7 @@ import { addVideo } from '@drincs/pixi-vn'
 const video = addVideo('video1', 'path/to/video.mp4')
 ```
 
-If you want initialize the video before and then add it to the canvas, you can use the [`canvas.addCanvasElement`](/start/canvas-elements#add-canvas-elements)function.
+If you want initialize the video before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-elements#add-canvas-elements)function.
 
 ```typescript
 import { canvas, CanvasVideo } from '@drincs/pixi-vn'
@@ -47,7 +47,7 @@ let alien = new CanvasVideo({
     y: 100,
 }, 'https://pixijs.com/assets/eggHead.mp4')
 
-canvas.addCanvasElement("alien", alien)
+canvas.add("alien", alien)
 ```
 
 ## Load Video

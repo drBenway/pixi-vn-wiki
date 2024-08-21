@@ -52,7 +52,7 @@ You can run multiple addTicker with the same tag and different tickerClasses.
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
-canvas.addCanvasElement("alien", alien);
+canvas.add("alien", alien);
 
 canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 ```
@@ -78,7 +78,7 @@ If the ticker not have any more canvas elements associated, it will be deleted.
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
-canvas.addCanvasElement("alien", alien);
+canvas.add("alien", alien);
 
 canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 
@@ -92,7 +92,7 @@ If you remove the Canvas Element associated with the Ticker, if the Ticker not h
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
 const alien = CanvasSprite.from(texture);
-canvas.addCanvasElement("alien", alien);
+canvas.add("alien", alien);
 
 canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 

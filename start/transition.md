@@ -108,7 +108,7 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
     }
     else {
         canvasElement = image
-        canvas.addCanvasElement(tag, canvasElement)
+        canvas.add(tag, canvasElement)
     }
     if (canvasElement instanceof CanvasImage && canvasElement.texture?.label == "EMPTY") {
         await canvasElement.load()

@@ -36,7 +36,7 @@ import { addImage } from '@drincs/pixi-vn'
 const image = addImage('image1', 'path/to/image.png')
 ```
 
-If you want initialize the image before and then add it to the canvas, you can use the [`canvas.addCanvasElement`](/start/canvas-elements#add-canvas-elements)function.
+If you want initialize the image before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-elements#add-canvas-elements)function.
 
 ```typescript
 import { canvas, CanvasImage } from '@drincs/pixi-vn'
@@ -47,7 +47,7 @@ let alien = new CanvasImage({
     y: 100,
 }, 'https://pixijs.com/assets/eggHead.png')
 
-canvas.addCanvasElement("alien", alien)
+canvas.add("alien", alien)
 ```
 
 ## Load Image
