@@ -69,10 +69,10 @@ const menuOptions: ChoiceMenuOption[] = narration.choiceMenuOptions;
 
 ## Clear the choice menu
 
-To clear the choice menu, use the `clearChoiceMenuOptions`.
+To clear the choice menu, use the `narration.choiceMenuOptions`.
 
 ```typescript
-clearChoiceMenuOptions();
+narration.choiceMenuOptions = undefined;
 ```
 
 ## Close the choice menu
@@ -100,7 +100,7 @@ For example ( in React using Material-UI ):
 // react
 const [menuOptions, setChoiceMenuOptions] = useState<ChoiceMenuOption[]>(narration.choiceMenuOptions)
 function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
-    clearChoiceMenuOptions()
+    narration.choiceMenuOptions = undefined;
     if (item.type == "call") {
         narration.callLabel(item.label, {
             // add StepLabelProps here
