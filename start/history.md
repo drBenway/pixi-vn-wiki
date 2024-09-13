@@ -80,7 +80,7 @@ Pixi’VN has a built-in function to generate a random number. To generate a ran
 - `min`: The minimum value of the random number.
 - `max`: The maximum value of the random number.
 - `options`:
-  - `onceonly`: If true, the number will be generated only once on the current step of the label (default: false).
+  - `onceonly`: If true, the number will be generated only once on the current step of the label (default: false). Attention: `min` and `max`affect the storage of already generated numbers.
 
 ## Get Narrative History
 
