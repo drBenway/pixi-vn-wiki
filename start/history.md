@@ -73,6 +73,15 @@ Restart the counter of execution times of the current step, use the `narration.c
 narration.currentStepTimesCounter = 0;
 ```
 
+## Randomize number
+
+Pixi’VN has a built-in function to generate a random number. To generate a random number, use the `narration.getRandomNumber()`. This function takes the following parameters:
+
+- `min`: The minimum value of the random number.
+- `max`: The maximum value of the random number.
+- `options`:
+  - `onceonly`: If true, the number will be generated only once on the current step of the label (default: false).
+
 ## Get Narrative History
 
 The Narration timeline of the game is a list of all dialogues that have been displayed. It is useful to know what has been said and to display it in the game.
