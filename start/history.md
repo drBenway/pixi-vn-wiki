@@ -29,12 +29,12 @@ const isCurrentStepOpened = narration.isCurrentStepAlreadyOpened;
 
 ## Counter of execution times of the current step
 
-To get the counter of execution times of the current step, use the `narration.currentStepCounter`. **Important**: The counter will be incremented only if `narration.currentStepCounter` is called at least once in a step.
+To get the counter of execution times of the current step, use the `narration.currentStepTimesCounter`. **Important**: The counter will be incremented only if `narration.currentStepTimesCounter` is called at least once in a step.
 
 ```typescript
 export const label = newLabel("id",
     () => {
-        if (narration.currentStepCounter === 0) { // ✅ will be incremented
+        if (narration.currentStepTimesCounter === 0) { // ✅ will be incremented
             // ...
         } else {
             // ...
@@ -46,9 +46,9 @@ export const label = newLabel("id",
 ```typescript
 export const label = newLabel("id",
     () => {
-        if (narration.currentStepCounter === 0) { // ✅ will be incremented
+        if (narration.currentStepTimesCounter === 0) { // ✅ will be incremented
             // ...
-        } else if (narration.currentStepCounter === 1) { // ✅ It will not be incremented, because it has already been incremented in this step
+        } else if (narration.currentStepTimesCounter === 1) { // ✅ It will not be incremented, because it has already been incremented in this step
             // ...
         }
     }
@@ -59,7 +59,7 @@ export const label = newLabel("id",
 export const label = newLabel("id",
     () => {
         if (flag) {
-            if (narration.currentStepCounter === 1) { // ❌ It will be incremented only if "flag" is true
+            if (narration.currentStepTimesCounter === 1) { // ❌ It will be incremented only if "flag" is true
                 // ...
             }
         }
@@ -67,10 +67,10 @@ export const label = newLabel("id",
 )
 ```
 
-Restart the counter of execution times of the current step, use the `narration.currentStepCounter = 0`.
+Restart the counter of execution times of the current step, use the `narration.currentStepTimesCounter = 0`.
 
 ```typescript
-narration.currentStepCounter = 0;
+narration.currentStepTimesCounter = 0;
 ```
 
 ## Get Narrative History
