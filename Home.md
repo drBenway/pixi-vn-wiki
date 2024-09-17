@@ -15,7 +15,7 @@
   * [Images](images)
   * [Video](videos)
   * [Transitions](transition)
-  * [Canvas Elements](canvas-elements)
+  * [Canvas Elements](/start/canvas-elements)
   * [Animations and Effects](animations-effects)
   * [Tickers](tickers)
 * [Sounds and Music](sound)

@@ -6,13 +6,13 @@ Animations and Effects are based on [Ticker](/start/tickers). So for add, remove
 
 ## Animations
 
-Animations are [Tickers](/start/tickers) that move a [canvas element](canvas-elements) without altering the texture.
+Animations are [Tickers](/start/tickers) that move a [canvas element](/start/canvas-elements) without altering the texture.
 
 ### Move
 
 For moving a canvas element in a x and y direction you can use the `MoveTicker` class.
-This Ticker edit the `x` and `y` properties of the [canvas element](canvas-elements).
-It is possible to start moving on all [canvas element](canvas-elements).
+This Ticker edit the `x` and `y` properties of the [canvas element](/start/canvas-elements).
+It is possible to start moving on all [canvas element](/start/canvas-elements).
 
 `MoveTicker` have a constructor that takes the a object with the following properties:
 
@@ -24,8 +24,8 @@ It is possible to start moving on all [canvas element](canvas-elements).
 ### Rotate
 
 For rotating a canvas element you can use the `RotateTicker` class.
-This Ticker edit the `rotation` property of the [canvas element](canvas-elements).
-It is possible to start rotation on all [canvas element](canvas-elements).
+This Ticker edit the `rotation` property of the [canvas element](/start/canvas-elements).
+It is possible to start rotation on all [canvas element](/start/canvas-elements).
 
 `RotateTicker` have a constructor that takes the a object with the following properties:
 
@@ -68,15 +68,15 @@ canvas.addTicker("alien", new RotateTicker({ speed: 0, speedProgression: { type:
 
 ## Effects
 
-Effects are [Tickers](/start/tickers) that alter the texture of a [canvas element](canvas-elements).
+Effects are [Tickers](/start/tickers) that alter the texture of a [canvas element](/start/canvas-elements).
 
 [( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
 ### Fade
 
 For fading a canvas element you can use the `FadeAlphaTicker` class.
-This Ticker edit the `alpha` property of the [canvas element](canvas-elements).
-It is possible to start fading on all [canvas element](canvas-elements).
+This Ticker edit the `alpha` property of the [canvas element](/start/canvas-elements).
+It is possible to start fading on all [canvas element](/start/canvas-elements).
 
 `FadeAlphaTicker` have a constructor that takes the a object with the following properties:
 
@@ -84,7 +84,7 @@ It is possible to start fading on all [canvas element](canvas-elements).
 * `type`: it can be `hide` or `show`. if `hide` the canvas element will disappear, if `show` the canvas element will appear. default is `show`.
 * `limit`: is a number that represents the limit of the fade. default is `1` if `type` is `show` and `0` if `type` is `hide`.
 * `startOnlyIfHaveTexture`: is a boolean that represents if the animation should start only if the canvas element have a texture not empty. default is `false`.
-* `aliasToRemoveAfter`: is a string[] that contains the aliases of the [canvas element](canvas-elements) that will be removed after the fade. default is `[]`.
+* `aliasToRemoveAfter`: is a string[] that contains the aliases of the [canvas element](/start/canvas-elements) that will be removed after the fade. default is `[]`.
 
 for example:
 
