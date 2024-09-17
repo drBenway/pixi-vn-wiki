@@ -1,4 +1,4 @@
-# Pixi’VN + Ink Language
+# Ink Language Integration
 
 Pixi’VN gives you the ability to write your own narrative using Ink.
 
@@ -8,7 +8,7 @@ Ink is a scripting language for writing interactive narrative. It is used in gam
 
 This language is very simple to learn, you can learn the basics in a few minutes. Go on [ink website](https://www.inklestudios.com/ink/) to learn more about it.
 
-## Why use Ink with Pixi’VN?
+## Why use Ink integration?
 
 Programming a game narrative in **Javascript/Typescript** has the advantage of having total development freedom, but the disadvantage is that it slows down the writing of a narrative (it makes you write a lot of code).
 
@@ -94,17 +94,21 @@ import startLabel from './ink_labels/start.ink?raw'
 importInkText([startLabel, ...])
 ```
 
-## Ink syntax that still needs to be implemented in Pixi’VN
+## Ink features in development
 
-The following syntax will be ignored by Pixi’VN (They will create errors), because they are not yet implemented.
+The following features are in development and will be added in the future:
 
-* [Varying Choices & Conditional Choices](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#7-varying-choices) -> [#9](https://github.com/DRincs-Productions/pixi-vn-ink/issues/9)
-* [Variable Text](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#8-variable-text) -> [#10](https://github.com/DRincs-Productions/pixi-vn-ink/issues/10)
-* [Game Queries and Functions](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#9-game-queries-and-functions) -> [#11](https://github.com/DRincs-Productions/pixi-vn-ink/issues/11)
-* [Weave](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#part-2-weave) -> [#12](https://github.com/DRincs-Productions/pixi-vn-ink/issues/12)
-* [Variables and Logic](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#part-3-variables-and-logic) -> [#13](https://github.com/DRincs-Productions/pixi-vn-ink/issues/13)
-* [Advanced Flow Control](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#part-4-advanced-flow-control) -> [#14](https://github.com/DRincs-Productions/pixi-vn-ink/issues/14)
-* [Advanced State Tracking](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#part-5-advanced-state-tracking) -> [#15](https://github.com/DRincs-Productions/pixi-vn-ink/issues/15)
+( Add a like or comment to the issue to show your interest in the feature )
+
+* [Functions and Game Queries](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#9-game-queries-and-functions) (issue [#11](https://github.com/DRincs-Productions/pixi-vn-ink/issues/11)):
+  * [User-created functions](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#5-functions) (issue [#32](https://github.com/DRincs-Productions/pixi-vn-ink/issues/32))
+  * `CHOICE_COUNT()`
+  * `TURNS()`
+  * `TURNS_SINCE()`
+  * `SEED_RANDOM()`
+* [`LIST`](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#1-basic-lists) (issue [#15](https://github.com/DRincs-Productions/pixi-vn-ink/issues/15))
+* [`Tunnels`](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#1-tunnels) (issue [#38](https://github.com/DRincs-Productions/pixi-vn-ink/issues/38))
+* [`Threads`](https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#2-threads) (issue [#39](https://github.com/DRincs-Productions/pixi-vn-ink/issues/39))
 
 ## Ink syntax that will be ignored by Pixi’VN
 
