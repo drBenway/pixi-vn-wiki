@@ -7,6 +7,8 @@ Pixi’VN can be integrated with JSON files to create a visual novel. This metho
 
 ( In both these cases it is advisable to notify the developers of Pixi’VN to add the new feature to be helped )
 
+![Pixi’VN + Json Integration](https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2FPixiVNJson.png?alt=media)
+
 ## How use Pixi’VN + Json?
 
 All you need to do to use this integration is create
