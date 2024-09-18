@@ -4,7 +4,7 @@ Pixi’VN offers the possibility of adding an HTML Element with the same dimensi
 
 By "Interface" is meant the elements that are above the canvas, such as buttons, forms, etc.
 
-![Frame_Aufbau](https://github.com/user-attachments/assets/54adca3e-7f5a-4886-a52a-d499d2cca6b3)
+![Frame_Aufbau](https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2FPixiVN_interface.png?alt=media)
 
 This allows the use of systems such as React, Vue, Angular, etc. to create much more complex **interface screens** with excellent performance.
 
