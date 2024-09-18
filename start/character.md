@@ -173,6 +173,40 @@ narration.dialogue = { character: liam, text: "Hello" }
 narration.dialogue = { character: "liam_id", text: "Hello" }
 ```
 
+## Character Emotions
+
+It can often be useful to have multiple types of the same character.
+
+A classic example of visual novels is to have a character "Alice" and a subtype "Angry Alice". The two characters have the same characteristics apart from one or more properties, such as the icon.
+
+In Pixi’VN it is possible by passing as parameter instead of the id instead of a string an object that contains the `id`, that corresponds to the id of an already existing character, and the `emotion`, that corresponds to the emotion of the character.
+
+```typescript
+import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
+
+export const alice = new CharacterBaseModel('alice', {
+    name: 'Alice',
+    icon: "https://example.com/alice.png",
+    color: "#9e2e12"
+});
+
+export const angryAlice = new CharacterBaseModel({ id: 'alice', emotion: 'angry' }, {
+    icon: "https://example.com/angryAlice.png",
+});
+
+saveCharacter([alice, angryAlice]);
+```
+
+```typescript
+alice.name = "Eleonora";
+console.log(alice.name); // Eleonora
+console.log(angryAlice.name); // Eleonora
+
+angryAlice = "Angry Eleonora";
+console.log(alice.name); // Eleonora
+console.log(angryAlice.name); // Angry Eleonora
+```
+
 ## Custom Character
 
 It recommend creating your own class `Character` that extends `CharacterStoredClass` to use your properties or methods, and "override" the interface `CharacterInterface` to add the new properties.
@@ -199,16 +233,16 @@ import { CharacterStoredClass } from "@drincs/pixi-vn";
 
 export class Character extends CharacterStoredClass implements CharacterInterface {
     constructor(id: string, props: CharacterProps) {
-        super(id)
+        super(typeof id === "string" ? id : id.id, typeof id === "string" ? "" : id.emotion)
         this._name = props.name
         this._surname = props.surname
         this._age = props.age
         this._icon = props.icon
         this._color = props.color
     }
-    private _name: string = ""
+    private _name?: string
     get name(): string {
-        return this._name
+        return this._name || this.id
     }
     private _surname?: string
     get surname(): string | undefined {
