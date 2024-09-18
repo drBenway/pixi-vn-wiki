@@ -134,3 +134,7 @@ Hello # ❌ This will be ignored
 My name is John # ✅ This will be handled
 -> DONE # ✅ This will be handled
 ```
+
+## Using Pixi’VN Features from Ink
+
+* [Use Character in ink](/start/ink-character.md)
