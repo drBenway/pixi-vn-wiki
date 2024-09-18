@@ -206,7 +206,7 @@ To execute the next step you must execute the `narration.goNext()` function. Thi
 ```typescript
 import { narration } from '@drincs/pixi-vn'
 
-narration.goNext({})
+await narration.goNext({})
 ```
 
 `narration.goNext()` is asynchronous, so, for example, you can use `then` for disabled a next button until the next step is executed.
@@ -219,6 +219,20 @@ narration.goNext({})
     .then((result) => {
         // enable next button
     })
+```
+
+**If you use `narration.goNext()` inside a label** it is really important to use await. The reason is that it might generate a wrong history, so using [`narration.goBack()`](#go-back) might cause errors.
+
+```typescript
+import { narration, newLabel } from '@drincs/pixi-vn'
+
+export const startLabel = newLabel(START_LABEL_ID,
+    [
+        async (props) => {
+            await narration.goNext(props)
+        },
+    ]
+)
 ```
 
 <!-- TODO: canGoNext -->
