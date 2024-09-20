@@ -21,6 +21,8 @@ It is based on [Pixi.js](https://pixijs.com/), a rendering engine that allows yo
 
 Making a comparison between Ren'Py and Pixi’VN is necessary because Ren'Py is currently the most popular engine for creating visual novels.
 
+(This comparison was made by the Pixi’VN team, trying to be unbiased. If you disagree with this comparison or if you should compare other features create an [issue](https://github.com/DRincs-Productions/pixi-vn/issues).)
+
 ### What is Ren'Py?
 
 Ren'Py is a visual novel engine – used by thousands of creators from around the world – that helps you use words, images, and sounds to tell interactive stories that run on computers and mobile devices. These can be both visual novels and life simulation games. The easy to learn script language allows anyone to efficiently write large visual novels, while its Python scripting is enough for complex simulation games.
