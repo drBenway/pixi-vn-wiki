@@ -74,14 +74,6 @@ const startLabel = newLabel("start_label_id", [
 ])
 ```
 
-```renpy
-# Ren'Py language
-label start:
-    "Hello, world!"
-    "This is a Ren'Py tutorial."
-    "I hope you enjoy it!"
-```
-
 ```ink
 # Ink
 === start
@@ -89,6 +81,14 @@ Hello, world!
 This is a Ren'Py tutorial.
 I hope you enjoy it!
 ->DONE
+```
+
+```renpy
+# Ren'Py language
+label start:
+    "Hello, world!"
+    "This is a Ren'Py tutorial."
+    "I hope you enjoy it!"
 ```
 
 #### Minigame implementation
