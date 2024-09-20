@@ -137,4 +137,4 @@ My name is John # ✅ This will be handled
 
 ## Using Pixi’VN Features from Ink
 
-* [Use Character in ink](/start/ink-character.md)
+* [Use Character in ink](/ink/ink-character.md)
