@@ -56,6 +56,7 @@ So the Ren'Py language syntax is very compact and easy respect to JavaScript/Typ
 Example of Ren'Py:
 
 ```renpy
+# Ren'Py language
 label start:
     "Hello, world!"
     "This is a Ren'Py tutorial."
@@ -65,11 +66,29 @@ label start:
 Example of Pixi’VN:
 
 ```typescript
+// TypeScript
 const startLabel = newLabel("start_label_id", [
     (props) => narration.dialogue = "Hello, world!",
     (props) => narration.dialogue = "This is a Pixi’VN tutorial.",
     (props) => narration.dialogue = "I hope you enjoy it!"
 ])
+```
+
+```renpy
+# Ren'Py language
+label start:
+    "Hello, world!"
+    "This is a Ren'Py tutorial."
+    "I hope you enjoy it!"
+```
+
+```ink
+# Ink
+=== start
+Hello, world!
+This is a Ren'Py tutorial.
+I hope you enjoy it!
+->DONE
 ```
 
 #### Minigame implementation
