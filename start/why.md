@@ -10,6 +10,11 @@ Pixi’VN + [Templates](/start/getting-started.md#pivivn-templates) provides a c
 
 It is designed for web developers, with basic experience in JavaScript/TypeScript, who want to create a visual novel with a modern 2D rendering engine and their favorite JavaScript framework.
 
+With the [PixiVNJson](/advanced/pixi-vn-json.md) implementation you have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
+
+* [Ink](/start/ink.md)
+* [Ren'Py](/start/renpy.md)
+
 It is based on [Pixi.js](https://pixijs.com/), a rendering engine that allows you to create fast 2D graphics. It is based on WebGL and is very fast and efficient. It is used by many developers to create games, websites, and applications.
 
 ## Ren'Py vs Pixi’VN
@@ -24,28 +29,21 @@ Ren'Py is a visual novel engine – used by thousands of creators from around th
 * Canvas library: [`Pygame_sdl2`](https://github.com/renpy/pygame_sdl2) is a reimplementation of the Pygame API using SDL2 and related libraries. While in the past it was meant to support multiple applications, it only saw adoption as technology underlying Ren'Py, and is currently being supported for that purpose.
 * How does it work: Ren'Py is a complete visual novel engine/framework that takes care of creating a project, executing it, distributing it, and much more.
 
-### Performance
-
-I imagine the performance of the Pixi’VN and the "visual novel library" used by Ren'Py to be almost the same, but the performance of the "canvas library" used is very significant.
-
-* [`Pygame_sdl2`](https://github.com/renpy/pygame_sdl2): This canvas is absolutely underperforming. This can be tested by inserting more moving graphic elements into Renpy.
-* PixiJS: It is based on more modern systems and has great performance. This can be tested directly from an example made by PixiJS: [Exemple](https://pixijs.com/8.x/examples/textures/render-texture-advanced).
-
 ### Programming language
 
-Ren'Py uses its own language, `Ren'Py language`, which is based on Python. This language is:
+Ren'Py uses its own language, `Ren'Py language`, which is based on superset of Python. You can use Python statements in Ren'Py language.
 
-* Very simple and easy to learn, suitable for people who are not programmers, but it is not suitable for creating complex games.
-* Not typed language
-* At the moment, there are no debug systems present.
-* Only used in RenPy, so once you learn it you will have no way to use it for other types of development.
+Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular language. To write narrative instead of using a specific language, you can use various narrative languages ​​(with the [PixiVNJson](/advanced/pixi-vn-json.md)).
 
-Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular language. Compared to `Ren'Py language`, it is
-
-* Not a language created for visual novels and is not suitable for people who do not know object-oriented programming.
-* A typed language
-* Has a debugging system and have a lot of tools for development.
-* You can use it to create website, backend, mobile app, pc software, etc...
+| Programming language | Ren'Py | Pixi’VN |
+|---|---|---|
+| Ease of learning | It is intended for people who do not know how to program | You can use templates to get started, but you will need some knowledge of JavaScript/TypeScript, NodeJS and npm |
+| Is it a typed language? | ❌ (Using Python you can use types, but the Ren'Py compiler does not have type checking. Also, much of the native Ren'Py code does not use types.) | ✅ |
+| Can you use debug? | ❌ | ✅ |
+| package/libraries manager | ❌ | npm |
+| Narrative Language | Ren'Py language and Python Statements | JavaScript/TypeScript and various narrative languages ​​(including Ren'Py language) |
+| Minigame implementation | You can use Ren'Py Creator-Defined Displayables (CDD) | You can use PixiJS or install other libraries |
+| Interface implementation | You can use Ren'Py screens | You can use PixiJS, React, Vue, Angular, etc. |
 
 #### Dialogues implementation
 
@@ -90,6 +88,13 @@ You can try some Ren'py and PIxiJS games to understand the difference:
 In Ren'Py, for creating the interface, you need to create screens and styles. The most recommended implementation is to create a series of images that are positioned within the canvas across graphic objects. The graphic tools are very few, limiting and not very intuitive.
 
 In Pixi’VN, in addition to being able to use the elements of PixiJS, you can also use systems such as React, Vue, Angular, etc. and install component libraries such as Material-UI, Bootstrap, etc. This allows you to create much more complex interface screens with excellent performance.
+
+### Performance
+
+I imagine the performance of the Pixi’VN and the "visual novel library" used by Ren'Py to be almost the same, but the performance of the "canvas library" used is very significant.
+
+* [`Pygame_sdl2`](https://github.com/renpy/pygame_sdl2): This canvas is absolutely underperforming. This can be tested by inserting more moving graphic elements into Renpy.
+* PixiJS: It is based on more modern systems and has great performance. This can be tested directly from an example made by PixiJS: [Exemple](https://pixijs.com/8.x/examples/textures/render-texture-advanced).
 
 ### Device Distribution
 
