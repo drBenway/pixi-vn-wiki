@@ -138,3 +138,4 @@ My name is John # ✅ This will be handled
 ## Using Pixi’VN Features from Ink
 
 * [Use Character in ink](/ink/ink-character.md)
+* [Style Text on Ink + Pixi’VN](/ink/ink-markdown.md)
