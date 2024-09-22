@@ -139,3 +139,4 @@ My name is John # ✅ This will be handled
 
 * [Use Character in ink](/ink/ink-character.md)
 * [Style Text on Ink + Pixi’VN](/ink/ink-markdown.md)
+* [Use PixiJS Canvas in Ink](/ink/ink-canvas.md)
