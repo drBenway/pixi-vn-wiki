@@ -1,6 +1,6 @@
-# Use PixiJS Canvas in Ink
+# Use Canvas in Ink
 
-Pixi’VN included in Ink syntax the possibility to use the PixiJS Canvas.
+Pixi’VN included in Ink syntax the possibility to use the [PixiJS Canvas](/start/canvas.md).
 
 The syntax is as follows:
 
