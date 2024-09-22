@@ -44,7 +44,7 @@ features:
       />
     title: Ink
     details: Write your visual novel with the narrative scripting language, Ink.
-    link: /ink/ink
+    link: /start/ink
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Frenpy-icon.png?alt=media" 
         alt="TypeScript"
@@ -52,7 +52,7 @@ features:
       />
     title: Ren'Py
     details: Write your visual novel with the narrative scripting language, Ren'Py.
-    link: /renpy/renpy
+    link: /start/renpy
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvscode-icon.png?alt=media" 
         alt="VS Code"

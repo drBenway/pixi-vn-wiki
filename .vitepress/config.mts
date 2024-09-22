@@ -63,8 +63,26 @@ export default defineConfig({
                 { text: 'Dialogue', link: '/start/dialogue' },
                 { text: 'Label and Game Step', link: '/start/labels' },
                 { text: 'Choice Menus', link: '/start/choices' },
+                { text: 'Input', link: '/start/input' },
                 { text: 'History', link: '/start/history' },
+                { text: 'Typewriter effect', link: '/start/typewriter' },
+                { text: 'Style Text (Markdown)', link: '/start/markdown' },
               ]
+            },
+            {
+              text: 'Narration with Ink',
+              link: '/start/ink',
+              items: [
+                { text: 'Characters', link: '/start/ink-character' },
+                { text: 'Style Text (Markdown)', link: '/start/ink-markdown' },
+                { text: 'Input', link: '/start/ink-input' },
+                { text: 'Canvas', link: '/start/ink-canvas' },
+                { text: 'Sounds and Music', link: '/start/ink-sound' },
+              ]
+            },
+            {
+              text: 'Narration with Ren’Py (In Development)',
+              link: '/start/renpy',
             },
             {
               text: 'PixiJS Canvas',

@@ -137,8 +137,8 @@ My name is John # ✅ This will be handled
 
 ## Using Pixi’VN Features from Ink
 
-* [Use Character in ink](/ink/ink-character.md)
-* [Style Text on Ink + Pixi’VN](/ink/ink-markdown.md)
-* [Use PixiJS Canvas in Ink](/ink/ink-canvas.md)
-* [Use Sounds and Music in Ink](/ink/ink-sound.md)
-* [Use input in Ink](/ink/ink-input.md)
+* [Use Character in ink](/start/ink-character.md)
+* [Style Text on Ink + Pixi’VN](/start/ink-markdown.md)
+* [Use PixiJS Canvas in Ink](/start/ink-canvas.md)
+* [Use Sounds and Music in Ink](/start/ink-sound.md)
+* [Use input in Ink](/start/ink-input.md)
