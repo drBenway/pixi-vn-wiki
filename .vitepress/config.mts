@@ -57,7 +57,8 @@ export default defineConfig({
           items: [
             { text: 'Characters', link: '/start/character' },
             {
-              text: 'Narration',
+              text: 'Narration (JS/TS)',
+              link: '/start/narration',
               items: [
                 { text: 'Dialogue', link: '/start/dialogue' },
                 { text: 'Label and Game Step', link: '/start/labels' },
