@@ -134,7 +134,7 @@ Pixi’VN is a library that does not deal with distributing the project. You can
 | Interface scaling based on device type | ✅ | ✅ |
 | Interface scaling to fit screen size | ❌ | ✅ |
 | Windows/Linux/Mac OS | ✅ (using Ren'Py) | ✅ (using Electron, Electron Forge, Cordova, etc...) |
-| Android/iOS | ✅ (using Ren'Py) | ✅ (using Cordova, Ionic, etc...) |
+| Android/iOS | ✅ (using Ren'Py) | ✅ (using Ionic or Cordova) |
 | Web | ✅ (is in beta) | ✅ (is natively supported) |
 | Xbox/PlayStation/Nintendo Switch | ✅ (using Sen’py) | Only with Xbox with UWP |
 
