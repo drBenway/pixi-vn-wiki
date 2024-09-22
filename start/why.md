@@ -50,9 +50,9 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 
 #### Dialogues implementation
 
-Pixi’VN uses JavaScript/TypeScript, so respect to Ren'Py, it not have a specific language for dialogues.
+In Ren'Py, for creating dialogues, you need to use the `Ren'Py language`. This language is very simple and easy to learn. It is based on Python and you can use Python statements in Ren'Py language.
 
-So the Ren'Py language syntax is very compact and easy respect to JavaScript/TypeScript.
+In Pixi’VN, you can use JavaScript/TypeScript to create dialogues. You can also use various narrative languages ​​(with the [PixiVNJson](/advanced/pixi-vn-json.md)).
 
 Example of Ren'Py:
 
