@@ -131,8 +131,14 @@ export default defineConfig({
           items: [
             { text: 'First steps', link: '/start/character' },
             { text: 'Intecept Events', link: '/advanced/intercept-events' },
-            { text: 'Distribution', link: '/advanced/distribution' },
-            { text: 'Mobile distribution', link: '/advanced/distribution‐mobile' },
+            {
+              text: 'Distribution',
+              link: '/advanced/distribution',
+              items: [
+                { text: 'Mobile distribution', link: '/advanced/distribution‐mobile' },
+              ]
+            },
+            { text: 'Pixi’VN + Json', link: '/advanced/pixi-vn-json' },
           ]
         }
       ],
