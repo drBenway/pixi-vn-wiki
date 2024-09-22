@@ -38,6 +38,22 @@ features:
     details: Write your visual novel with the modern JavaScript language, TypeScript.
     link: https://www.typescriptlang.org/
   - icon: <img 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fink-icon.png?alt=media" 
+        alt="TypeScript"
+        style="border-radius:30%;"
+      />
+    title: Ink
+    details: Write your visual novel with the narrative scripting language, Ink.
+    link: /ink/ink
+  - icon: <img 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Frenpy-icon.png?alt=media" 
+        alt="TypeScript"
+        style="border-radius:30%;"
+      />
+    title: Ren'Py
+    details: Write your visual novel with the narrative scripting language, Ren'Py.
+    link: /renpy/renpy
+  - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvscode-icon.png?alt=media" 
         alt="VS Code"
         style="border-radius:30%;"
