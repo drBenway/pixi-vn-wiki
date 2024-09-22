@@ -70,7 +70,7 @@ export default defineConfig({
               ]
             },
             { text: 'Narration with Ink', link: '/ink/ink' },
-            { text: 'Narration with Ren’Py (In Development)', link: '/ink/renpy' },
+            { text: 'Narration with Ren’Py (In Development)', link: '/renpy/renpy' },
             {
               text: 'PixiJS Canvas',
               link: '/start/canvas',
