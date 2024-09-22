@@ -6,11 +6,21 @@
 ## First steps
 
 * [Characters](character)
-* Narration:
+* [Narration](narration):
   * [Dialogue](dialogue)
   * [Label and Game Step](labels)
   * [Choice Menus](choices)
+  * [Input](input)
   * [History](history)
+  * [Typewriter effect](typewriter)
+  * [Style Text (Markdown)](markdown)
+* [Narration with Ink](ink):
+  * [Characters](ink-character)
+  * [Style Text (Markdown)](ink-markdown)
+  * [Input](ink-input)
+  * [Canvas](ink-canvas)
+  * [Sounds and Music](ink-sound)
+* [Narration with Ren’Py](renpy)
 * [PixiJS Canvas](canvas):
   * [Images](images)
   * [Video](videos)
