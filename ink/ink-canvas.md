@@ -43,7 +43,9 @@ VAR durationVar = 3
 
 ## Edit Canvas Element in Ink
 
-To edit a canvas element in Ink, you can use the `edit` operation.
+To edit a canvas element in Ink, you can use the `edit` operation. After the tag of the canvas element, you must include the properties of [canvas element](/start/canvas-elements.md) that you want to edit.
+
+```ink
 
 In the `parameters` you must include the properties that you want to edit. The properties must be set as follows: `propertyName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
 
