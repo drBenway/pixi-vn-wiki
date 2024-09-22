@@ -44,7 +44,7 @@ features:
       />
     title: Ink
     details: Write your visual novel with the narrative scripting language, Ink.
-    link: /start/ink
+    link: /ink/ink
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Frenpy-icon.png?alt=media" 
         alt="TypeScript"

@@ -69,21 +69,8 @@ export default defineConfig({
                 { text: 'Style Text (Markdown)', link: '/start/markdown' },
               ]
             },
-            {
-              text: 'Narration with Ink',
-              link: '/start/ink',
-              items: [
-                { text: 'Characters', link: '/start/ink-character' },
-                { text: 'Style Text (Markdown)', link: '/start/ink-markdown' },
-                { text: 'Input', link: '/start/ink-input' },
-                { text: 'Canvas', link: '/start/ink-canvas' },
-                { text: 'Sounds and Music', link: '/start/ink-sound' },
-              ]
-            },
-            {
-              text: 'Narration with Ren’Py (In Development)',
-              link: '/start/renpy',
-            },
+            { text: 'Narration with Ink', link: '/ink/ink' },
+            { text: 'Narration with Ren’Py (In Development)', link: '/start/renpy' },
             {
               text: 'PixiJS Canvas',
               link: '/start/canvas',
@@ -117,6 +104,25 @@ export default defineConfig({
             { text: 'Save and Load', link: '/start/save' },
             { text: 'Advanced topics', link: '/advanced/intercept-events' },
           ]
+        }
+      ],
+      '/ink/': [
+        {
+          text: 'Ink',
+          items: [
+            {
+              text: 'Narration with Ink',
+              link: '/ink/ink',
+              items: [
+                { text: 'Characters', link: '/ink/ink-character' },
+                { text: 'Style Text (Markdown)', link: '/ink/ink-markdown' },
+                { text: 'Input', link: '/ink/ink-input' },
+                { text: 'Canvas', link: '/ink/ink-canvas' },
+                { text: 'Sounds and Music', link: '/ink/ink-sound' },
+              ]
+            },
+            { text: 'Narration (JS/TS)', link: '/start/narration' }
+          ],
         }
       ],
       '/advanced/': [
