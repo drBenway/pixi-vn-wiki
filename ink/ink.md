@@ -141,3 +141,4 @@ My name is John # ✅ This will be handled
 * [Style Text on Ink + Pixi’VN](/ink/ink-markdown.md)
 * [Use PixiJS Canvas in Ink](/ink/ink-canvas.md)
 * [Use Sounds and Music in Ink](/ink/ink-sound.md)
+* [Use input in Ink](/ink/ink-input.md)
