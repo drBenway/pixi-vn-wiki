@@ -6,4 +6,4 @@ With the [PixiVNJson](/advanced/pixi-vn-json.md) implementation you have the opt
 
 * JavaScript/TypeScript: leads to writing a lot of code for writing a narrative. The advantage is that from this language you can type and from here you can perform a lot of functions.
 * [Ink](/ink/ink.md): allows you to write a narrative easily, without having to write a lot of code.
-* [Ren'Py](/start/renpy.md) (coming soon): allows you to write a narrative easily, without having to write a lot of code.
+* [Ren'Py](/ink/renpy.md) (coming soon): allows you to write a narrative easily, without having to write a lot of code.

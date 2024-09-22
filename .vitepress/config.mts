@@ -70,7 +70,7 @@ export default defineConfig({
               ]
             },
             { text: 'Narration with Ink', link: '/ink/ink' },
-            { text: 'Narration with Ren’Py (In Development)', link: '/start/renpy' },
+            { text: 'Narration with Ren’Py (In Development)', link: '/ink/renpy' },
             {
               text: 'PixiJS Canvas',
               link: '/start/canvas',
@@ -121,6 +121,15 @@ export default defineConfig({
                 { text: 'Sounds and Music', link: '/ink/ink-sound' },
               ]
             },
+            { text: 'Narration (JS/TS)', link: '/start/narration' }
+          ],
+        }
+      ],
+      '/renpy/': [
+        {
+          text: 'Ren’Py (In Development)',
+          items: [
+            { text: 'Narration with Ren’Py', link: '/renpy/renpy' },
             { text: 'Narration (JS/TS)', link: '/start/narration' }
           ],
         }

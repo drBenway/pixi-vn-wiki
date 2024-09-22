@@ -13,7 +13,7 @@ It is designed for web developers, with basic experience in JavaScript/TypeScrip
 With the [PixiVNJson](/advanced/pixi-vn-json.md) implementation you have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
 
 * [Ink](/ink/ink.md)
-* [Ren'Py](/start/renpy.md)
+* [Ren'Py](/ink/renpy.md)
 
 It is based on [Pixi.js](https://pixijs.com/), a rendering engine that allows you to create fast 2D graphics. It is based on WebGL and is very fast and efficient. It is used by many developers to create games, websites, and applications.
 
