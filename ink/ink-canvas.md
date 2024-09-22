@@ -7,7 +7,7 @@ The syntax is as follows:
 `#` + `canvas operation` + `type of the canvas element` + `tag of the canvas element` + `parameters`
 
 * `#` It is a special character used by Ink syntax for add Special Commands.
-* `canvas operation` It is the operation that you want to do with the canvas element. The available operations are `show`, `edit`, and `remove`.
+* `canvas operation` It is the operation that you want to do with the canvas element. The available operations are `show`, `edit`, and `remove`. In addition only for the video canvas element are `pause` and `resume`.
 * `type of the canvas element` It is the type of the canvas element. The available types are `image` and `video`.
 * `tag of the canvas element` It is the tag of the canvas element. The tag is a string that identifies the canvas element.
   * If the tag includes spaces, you must use double quotes.
@@ -71,4 +71,22 @@ After the transition type, you can add the transition parameters. These paramete
 ```ink
 # remove image bg dissolve
 # remove image bg fade duration 3
+```
+
+## Pause Video Canvas Element in Ink
+
+To pause a video canvas element in Ink, you can use the `pause` operation.
+
+```ink
+# pause video bg
+# pause video "bg 2"
+```
+
+## Resume Video Canvas Element in Ink
+
+To resume a video canvas element in Ink, you can use the `resume` operation.
+
+```ink
+# resume video bg
+# resume video "bg 2"
 ```
