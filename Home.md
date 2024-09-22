@@ -6,7 +6,7 @@
 ## First steps
 
 * [Characters](character)
-* [Narration](narration):
+* [Narration (JS/TS)](narration):
   * [Dialogue](dialogue)
   * [Label and Game Step](labels)
   * [Choice Menus](choices)
