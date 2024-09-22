@@ -46,6 +46,7 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 | Narrative Language | Ren'Py language and Python Statements | JavaScript/TypeScript and various narrative languages ​​(including Ren'Py language) |
 | Minigame implementation | You can use Ren'Py Creator-Defined Displayables (CDD) | You can use PixiJS or install other libraries |
 | Interface implementation | You can use Ren'Py screens | You can use PixiJS, React, Vue, Angular, etc. |
+| Interface components | You can use components provided by renpy. They are usually based on images. | Depending on the interface framework you choose, you can use the component library you prefer. For example Material-UI, Bootstrap, PixiJS UI, etc. |
 
 #### Dialogues implementation
 
@@ -119,9 +120,23 @@ I imagine the performance of the Pixi’VN and the "visual novel library" used b
 
 ### Device Distribution
 
-In Ren'Py, you can create a project and then distribute it to multiple devices and this process is really simple and fast.
+Ren'Py framework is directly responsible for distributing the game on various devices.
 
-Pixi’VN does not deal with the distribution of the project. To distribute the project you will need to use libraries or frameworks for desktop and mobile applications. For example, you can use `Electron`, `Electron Forge`, `Cordova`, `Ionic`, etc...
+Pixi’VN is a library that does not deal with distributing the project. You can use various tools (Electron, Cordova, etc...) to distribute the project on various devices. Pixi’VN provides templates that already include the necessary configurations for distribution.
+
+| Device Distribution | Ren'Py | Pixi’VN |
+|---|---|---|
+| Ease of use | It's very simple. You can use an Ren'Py interface to create the package | For less experienced users, it can be difficult to set up the project so that it can be distributed on multiple devices. Using templates can simplify this step. |
+| Package Configurations | Essential | Very complete. (You can choose if the package should be installed and run without an installation) |
+| Deployment automations with github action or gitlab pipeline | ❌ | ✅ |
+| System notification | ❌ | ✅ |
+| Use connected devices (Camera, Flashlight etc...) | ❌ | ✅ |
+| Interface scaling based on device type | ✅ | ✅ |
+| Interface scaling to fit screen size | ❌ | ✅ |
+| Windows/Linux/Mac OS | ✅ (using Ren'Py) | ✅ (using Electron, Electron Forge, Cordova, etc...) |
+| Android/iOS | ✅ (using Ren'Py) | ✅ (using Cordova, Ionic, etc...) |
+| Web | ✅ (is in beta) | ✅ (is natively supported) |
+| Xbox/PlayStation/Nintendo Switch | ✅ (using Sen’py) | Only with Xbox with UWP |
 
 ### Development possibilities
 
