@@ -232,7 +232,7 @@ Now you can create a class `Character` that extends `CharacterStoredClass` and i
 import { CharacterStoredClass } from "@drincs/pixi-vn";
 
 export class Character extends CharacterStoredClass implements CharacterInterface {
-    constructor(id: string, props: CharacterProps) {
+    constructor(id: string | { id: string, emotion: string }, props: CharacterProps) {
         super(typeof id === "string" ? id : id.id, typeof id === "string" ? "" : id.emotion)
         this._name = props.name
         this._surname = props.surname
@@ -269,17 +269,17 @@ In this class you can't set the properties, because they are read-only. For set 
 import { CharacterStoredClass } from "@drincs/pixi-vn";
 
 export class Character extends CharacterStoredClass implements CharacterInterface {
-    constructor(id: string, props: CharacterProps) {
-        super(id)
+    constructor(id: string | { id: string, emotion: string }, props: CharacterProps) {
+        super(typeof id === "string" ? id : id.id, typeof id === "string" ? "" : id.emotion)
         this.defaultName = props.name
         this.defaultSurname = props.surname
         this.defaultAge = props.age
         this._icon = props.icon
         this._color = props.color
     }
-    private defaultName: string = ""
+    private defaultName?: string
     get name(): string {
-        return this.getStorageProperty<string>("name") || this.defaultName
+        return this.getStorageProperty<string>("name") || this.defaultName || this.id
     }
     set name(value: string | undefined) {
         this.setStorageProperty<string>("name", value)
