@@ -24,6 +24,9 @@ canvas.initialize(body, 1920, 1080, {
     }
 
     canvas.initializeHTMLLayout(root)
+    if (!canvas.htmlLayout) {
+        throw new Error('htmlLayout not found')
+    }
     const reactRoot = createRoot(canvas.htmlLayout)
 
     reactRoot.render(
