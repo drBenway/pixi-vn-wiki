@@ -24,6 +24,7 @@ This operation requires one parameter, the URL or path of the image.
 ```ink
 # show image bg /image.png
 # show image "bg 2 alice" /image2.png
+# show image bg https:\/\/game.com/image.png
 ```
 
 ### Show Canvas Element with Transition in Ink
