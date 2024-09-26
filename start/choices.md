@@ -14,12 +14,10 @@ In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption`
 * `options`:
   * `type`: The way the [label will be called](/start/labels#run-a-label). It can be `call` or `jump`. Default is `call`.
   * `oneTime`: If this is `true`, the choice can only be made once.
+  * `onlyHaveNoChoice`: If `true`, the choice can see only if there are no other choices.
+  * `autoSelect`: If `true` and if is the only choice, it will be selected automatically.
 
-<!-- TODO redocumentar the props -->
-
-This class is only intended to give you information about a choice, it is up to you to call the label.
-
-In practice this means that after you get the list of choices through the `narration.choiceMenuOptions` function, you will have to call the label using the [`callLabel`](/start/labels.md#call-a-label) or [`jumpLabel`](/start/labels.md#jump-to-a-label) function.
+You can use this class to create a item of the `narration.choiceMenuOptions` list. To select a choice, you must use the [`narration.selectChoice` function](#select-a-choice).
 
 ### Choice for closing the menu
 
@@ -31,12 +29,14 @@ In addition to `ChoiceMenuOption` there is also another class `ChoiceMenuOptionC
 * `options`:
   * `closeCurrentLabel`: If `true`, the current label will be closed. Default is `false`.
   * `oneTime`: If this is `true`, the choice can only be made once.
+  * `onlyHaveNoChoice`: If `true`, the choice can see only if there are no other choices.
+  * `autoSelect`: If `true` and if is the only choice, it will be selected automatically.
 
-This class is only intended to give you information about a choice, it is up to you to close the choice menu using the [`closeChoiceMenu`](#close-the-choice-menu) function.
+You can use this class to create a item of the `narration.choiceMenuOptions` list. To select a choice, you must use the [`narration.selectChoice` function](#select-a-choice).
 
 ## Set a choice menu
 
-To set a choice menu, use the `narration.choiceMenuOptions` and pass an array of `ChoiceMenuOption`.
+To set a choice menu, use the `narration.choiceMenuOptions` and pass an array of `ChoiceMenuOption` or/and `ChoiceMenuOptionClose`.
 
 ```typescript
 export const appleLabel = newLabel<{quantity: number}>("AppleLabel",
@@ -67,6 +67,25 @@ To get the choice menu, use the `narration.choiceMenuOptions`. The return is an 
 const menuOptions: ChoiceMenuOption[] = narration.choiceMenuOptions;
 ```
 
+## Select a choice
+
+To select a choice, you must use the `callLabel` or `jumpLabel` function.
+
+```typescript
+narration.selectChoice(item, {
+    // add StepLabelProps here
+    navigate: navigate, // example
+    // and the props that will be passed to the label
+    ...item.props
+})
+    .then(() => {
+        // ...
+    })
+    .catch((e) => {
+        // ...
+    })
+```
+
 ## Clear the choice menu
 
 To clear the choice menu, use the `narration.choiceMenuOptions`.
@@ -74,23 +93,6 @@ To clear the choice menu, use the `narration.choiceMenuOptions`.
 ```typescript
 narration.choiceMenuOptions = undefined;
 ```
-
-## Close the choice menu
-
-To close the choice menu, use the `narration.closeChoiceMenu`. This is used after choosing [`ChoiceMenuOptionClose`](#choice-for-closing-the-menu).
-
-This function have the 2 parameters:
-
-* `choice`: the [`ChoiceMenuOptionClose`](#choice-for-closing-the-menu) that will be used to close the menu.
-* `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
-
-```typescript
-narration.closeChoiceMenu(label, props)
-```
-
-## Get last choice
-
-[( Documentation under review )](https://github.com/DRincs-Productions/pixi-vn/issues/88)
 
 ## How to create the choice menu interface
 
@@ -100,48 +102,18 @@ For example ( in React using Material-UI ):
 // react
 const [menuOptions, setChoiceMenuOptions] = useState<ChoiceMenuOption[]>(narration.choiceMenuOptions)
 function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
-    narration.choiceMenuOptions = undefined;
-    if (item.type == "call") {
-        narration.callLabel(item.label, {
-            // add StepLabelProps here
-            navigate: navigate, // example
-            // and the props that will be passed to the label
-            ...item.props
-        })
-            .then(() => {
+    narration.selectChoice(item, {
+        // add StepLabelProps here
+        navigate: navigate, // example
+        // and the props that will be passed to the label
+        ...item.props
+    })
+        .then(() => {
                 // ...
-            })
-            .catch((e) => {
-                console.error(e)
-            })
-    }
-    else if (item.type == "jump") {
-        narration.jumpLabel(item.label, {
-            navigate: navigate,
-            ...item.props
         })
-            .then(() => {
-                // ...
-            })
-            .catch((e) => {
-                console.error(e)
-            })
-    }
-    else if (item.type == "close") {
-        narration.closeChoiceMenu(item, {
-            navigate: navigate,
-            ...item.props
+        .catch((e) => {
+            console.error(e)
         })
-            .then(() => {
-                // ...
-            })
-            .catch((e) => {
-                console.error(e)
-            })
-    }
-    else {
-        console.error("Unsupported label run mode")
-    }
 }
 
 return (
