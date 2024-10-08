@@ -319,7 +319,7 @@ The method for managing the end of the game is to set `narration.onGameEnd` with
 For example, if you want to end the game when the steps are finished:
 
 ```typescript
-// main.tsx
+// main.ts
 import { narration } from '@drincs/pixi-vn'
 
 narration.onGameEnd = async (props) => {
@@ -341,7 +341,7 @@ export const startLabel = newLabel("start_label_id",
 ```
 
 ```typescript
-// main.tsx
+// main.ts
 import { narration } from '@drincs/pixi-vn'
 
 narration.onGameEnd = async (props) => {
@@ -358,7 +358,7 @@ When an error occurs in a step, the game gives a console error and stops the exe
 For example, if you want to send a notification when an error occurs:
 
 ```typescript
-// main.tsx
+// main.ts
 import { narration } from '@drincs/pixi-vn'
 
 narration.onStepError = async (error, props) => {

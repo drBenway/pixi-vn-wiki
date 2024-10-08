@@ -8,7 +8,7 @@
 
 To add a React Interface to Pixi’VN, you need to create a new React application and add it to the HTML layout of the Pixi’VN application.
 
-```typescript
+```tsx
 // main.tsx
 import { canvas } from '@drincs/pixi-vn'
 import { createRoot } from 'react-dom/client'
