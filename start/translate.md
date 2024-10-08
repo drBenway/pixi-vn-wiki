@@ -85,7 +85,7 @@ Depending on what you want to translate, it is recommended to use the following 
 
 * [Translate the interface](#translate-the-interface)
 * [Translate the narration (TypeScript/JavaScript)](#translate-the-narration-typescriptjavascript)
-* [Translate the narration (Ink)](/ink/ink-translation.md)
+* [Translate the narration (Ink)](/ink/ink-translate.md)
 * Translate the dialogue (Ren'Py) (Under development)
 
 ## Translate the interface
