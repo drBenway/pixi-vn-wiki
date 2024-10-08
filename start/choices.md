@@ -94,7 +94,7 @@ To clear the choice menu, use the `narration.choiceMenuOptions`.
 narration.choiceMenuOptions = undefined;
 ```
 
-## How to create the choice menu UI
+## How to create the choice menu UI screen
 
 For example ( in React using Material-UI ):
 
