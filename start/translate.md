@@ -57,17 +57,6 @@ export default function App() {
 It is recommended to divide the translations into two parts: interface and narration. The [interface](/start/interface.md) is the text that is not part of the story, such as buttons, menus, etc. The [narration](/start/narration.md) is the text that is part of the story, such as dialogues, monologues, etc.
 
 ```json
-// strings_en.json
-{
-    "interface": {
-        "text_speed": "Text speed",
-        // ...
-    },
-    "narration": {}
-}
-```
-
-```json
 // strings_es.json
 {
     "interface": {
