@@ -85,7 +85,7 @@ canvas.editAlias('sprite1', 'sprite2')
 
 ## Add a listener for a given event
 
-**Note that**: It is suggested to try to add events to the [interface](/start/interface) and not add it to the canvas elements.
+**Note that**: It is suggested to try to add events to the [UI](/start/interface) and not add it to the canvas elements.
 
 In Pixi’VN compared to PixiJS you can't set a [listener with the `on` method](https://pixijs.com/8.x/examples/events/click), because it is not possible to save the listeners in the memory for the save and load operations.
 

@@ -99,7 +99,7 @@ features:
         style="border-radius:30%;"
       />
     title: React
-    details: Use your favorite JavaScript framework, React, to create your visual novel interface.
+    details: Use your favorite JavaScript framework, React, to create your visual novel UI.
     link: /start/interface-react
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvue-icon.png?alt=media" 
@@ -107,7 +107,7 @@ features:
         style="border-radius:30%;"
       />
     title: Vue
-    details: Use your favorite JavaScript framework, Vue, to create your visual novel interface.
+    details: Use your favorite JavaScript framework, Vue, to create your visual novel UI.
     link: /start/interface-vue
   - icon: <img
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fangular-icon.png?alt=media" 
@@ -115,7 +115,7 @@ features:
         style="border-radius:30%;"
       />
     title: Angular
-    details: Use your favorite JavaScript framework, Angular, to create your visual novel interface.
+    details: Use your favorite JavaScript framework, Angular, to create your visual novel UI.
     link: /start/interface-angular
 ---
 

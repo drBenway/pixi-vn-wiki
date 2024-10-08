@@ -86,12 +86,12 @@ export default defineConfig({
             },
             { text: 'Sounds and Music', link: '/start/sound' },
             {
-              text: 'Interface with JavaScript Framework',
+              text: 'UI with JavaScript Framework',
               link: '/start/interface',
               items: [
-                { text: 'Angular Interface', link: '/start/interface-angular' },
-                { text: 'React Interface', link: '/start/interface-react' },
-                { text: 'Vue Interface', link: '/start/interface-vue' },
+                { text: 'Angular UI', link: '/start/interface-angular' },
+                { text: 'React UI', link: '/start/interface-react' },
+                { text: 'Vue UI', link: '/start/interface-vue' },
               ]
             },
             {
