@@ -139,6 +139,8 @@ For example if currently the game is running the step 5 of the label A and you *
 `narration.callLabel` returns a [result of first step of the called label](#all-steps-result).
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 narration.callLabel(startLabel, {})
 ```
 

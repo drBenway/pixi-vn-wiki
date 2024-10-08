@@ -62,6 +62,8 @@ importPixiVNJson(obj);
 After that you can run the `back_in_london` label with [Pixi’VN functions](/start/labels.md#run-a-label).
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 narration.callLabel(`back_in_london`, {})
 ```
 

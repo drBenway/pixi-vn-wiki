@@ -56,6 +56,8 @@ importInkText([inkText, ...])
 Now you can run the `start` knot (or label) with [Pixi’VN functions](/start/labels.md#run-a-label).
 
 ```typescript
+import { narration } from '@drincs/pixi-vn'
+
 narration.callLabel(`start`, {})
 ```
 

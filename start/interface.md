@@ -107,6 +107,7 @@ This seems like a very time consuming process, but in reality if you have design
 ```typescript
 import { useSetRecoilState } from 'recoil';
 import { reloadInterfaceDataEventAtom } from './reloadInterfaceDataEventAtom';
+import { narration } from '@drincs/pixi-vn'
 
 const notifyReloadInterfaceDataEvent = useSetRecoilState(reloadInterfaceDataEventAtom);
 
