@@ -12,6 +12,7 @@
   * [Choice Menus](choices)
   * [Input](input)
   * [History](history)
+  * [Translating](translate)
   * [Typewriter effect](typewriter)
   * [Style Text (Markdown)](markdown)
 * [Narration with Ink](ink):
@@ -20,6 +21,7 @@
   * [Input](ink-input)
   * [Canvas](ink-canvas)
   * [Sounds and Music](ink-sound)
+  * [Translating](ink-translate)
 * [Narration with Ren’Py](renpy)
 * [PixiJS Canvas](canvas):
   * [Images](images)

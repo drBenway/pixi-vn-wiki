@@ -65,6 +65,7 @@ export default defineConfig({
                 { text: 'Choice Menus', link: '/start/choices' },
                 { text: 'Input', link: '/start/input' },
                 { text: 'History', link: '/start/history' },
+                { text: 'Translating', link: '/start/translate' },
                 { text: 'Typewriter effect', link: '/start/typewriter' },
                 { text: 'Style Text (Markdown)', link: '/start/markdown' },
               ]
@@ -119,6 +120,7 @@ export default defineConfig({
                 { text: 'Input', link: '/ink/ink-input' },
                 { text: 'Canvas', link: '/ink/ink-canvas' },
                 { text: 'Sounds and Music', link: '/ink/ink-sound' },
+                { text: 'Transitions', link: '/ink/ink-transition' },
               ]
             },
             { text: 'Narration (JS/TS)', link: '/start/narration' }

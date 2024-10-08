@@ -97,41 +97,6 @@ function nextOnClick() {
 // Button for enable skip and auto ...
 ```
 
-## How translate the visual novel?
-
-It is the developer's job to choose which library to use to translate the game. It recommend using [i18next](https://www.i18next.com/).
-
-It is recommended to overwrite the `StepLabelProps` interface to add the `t` function. `t` function is a function that will be called with the key of the translation, so you can use it to translate the text.
-
-```typescript
-// pixi-vn.types.ts
-declare module '@drincs/pixi-vn/dist/override' {
-    interface StepLabelProps {
-        /**
-         * Translate a key to a string.
-         * @param key The key to translate.
-         * @returns The translated string.
-         */
-        t: TFunction<[string], undefined>
-        // ...
-    }
-}
-```
-
-```typescript
-export const startLabel = newLabel(START_LABEL_ID,
-    [
-        ({ t }) => narration.dialogue = { character: liam, text: t("hello_my_name_is", { name: "Liam" }) },
-    ]
-)
-```
-
-```json
-{
-    "hello_my_name_is": "Hello, my name is {{name}}"
-}
-```
-
 ## Where can I store the images?
 
 You are completely free to store images however you want.

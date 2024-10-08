@@ -53,6 +53,22 @@ features:
     title: Ren'Py
     details: Write your visual novel with the narrative scripting language, Ren'Py.
     link: /renpy/renpy
+  - icon: <img
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Felectronjs-icon.png?alt=media" 
+        alt="Multi device"
+        style="border-radius:30%;"
+      />
+    title: Multi device
+    details: Create your visual novel for multiple devices, including desktop, mobile, web, and more.
+    link: /advanced/distribution
+  - icon: <img
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fi18n-icon.png?alt=media" 
+        alt="Translating"
+        style="border-radius:30%;"
+      />
+    title: Translating
+    details: Translate your visual novel into multiple languages with your favorite translation framework. For example, i18next.
+    link: /start/translate
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvscode-icon.png?alt=media" 
         alt="VS Code"

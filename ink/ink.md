@@ -190,3 +190,4 @@ My name is John # ✅ This will be handled
 * [Use PixiJS Canvas in Ink](/ink/ink-canvas.md)
 * [Use Sounds and Music in Ink](/ink/ink-sound.md)
 * [Use input in Ink](/ink/ink-input.md)
+* [How translate Ink text](/ink/ink-translate.md)
