@@ -135,6 +135,42 @@ My name is John # ✅ This will be handled
 -> DONE # ✅ This will be handled
 ```
 
+## Differences between Native Ink and Pixi’VN Ink
+
+* in this case:
+
+    ```ink
+    { shuffle:
+      -  2 of Diamonds.
+        'You lose this time!' crowed the croupier.
+    }
+    ```
+
+    you will not see 2 different dialogues, but the following dialogue: `2 of Diamonds.\n\n'You lose this time!' crowed the croupier.`. In [Markdown](/ink/ink-markdown.md) it will be displayed as:
+
+    ```txt
+    2 of Diamonds.
+    'You lose this time!' crowed the croupier.
+    ```
+
+* if a `shove` weave is attached to a one time choice, and it is opened with `-> shove` it will not invalidate the one time choice. To invalidate it you will have to select the choice as usual.
+
+    Here is an example:
+
+    ```ink
+    -> start
+    === start ===
+    * [1] -> shove
+    * (shove) [2] 2
+    * {shove} [3] -> END
+    -  -> start
+    -> DONE
+    ```
+
+    In case you take choice 1, the second time it will be opened `start`:
+  * if you use **Native Ink**, you will only be able to choose choice `3`. The choice `2` is hidden because being "one time" Native Ink will know that you have already made this decision with `-> shove`.
+  * if you use **Pixi’VN Ink**, you will be able to choose choice `2` or `3`. The choice `2` is not hidden because Pixi'VN Ink doesn't know that `shove` is paired with a choice.
+
 ## Using Pixi’VN Features from Ink
 
 * [Use Character in ink](/ink/ink-character.md)
