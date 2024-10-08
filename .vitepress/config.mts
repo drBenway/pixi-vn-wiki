@@ -146,7 +146,7 @@ export default defineConfig({
               text: 'Distribution',
               link: '/advanced/distribution',
               items: [
-                { text: 'Mobile distribution', link: '/advanced/distribution‐mobile' },
+                { text: 'Mobile distribution', link: '/advanced/distribution-mobile' },
               ]
             },
             { text: 'Pixi’VN + Json', link: '/advanced/pixi-vn-json' },
