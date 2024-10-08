@@ -171,6 +171,18 @@ My name is John # ✅ This will be handled
   * if you use **Native Ink**, you will only be able to choose choice `3`. The choice `2` is hidden because being "one time" Native Ink will know that you have already made this decision with `-> shove`.
   * if you use **Pixi’VN Ink**, you will be able to choose choice `2` or `3`. The choice `2` is not hidden because Pixi'VN Ink doesn't know that `shove` is paired with a choice.
 
+  To get the same logic as `start` both in Native Ink and Pixi'VN Ink you will have to write the following code:
+
+  ```ink
+  -> start
+  === start ===
+  * [1] -> shove
+  * (shove) {!shove} [2] 2
+  * {shove} [3] -> END
+  -  -> start
+  -> DONE
+  ```
+
 ## Using Pixi’VN Features from Ink
 
 * [Use Character in ink](/ink/ink-character.md)
