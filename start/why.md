@@ -111,12 +111,24 @@ In Ren'Py, for creating the interface, you need to create screens and styles. Th
 
 In Pixi’VN, in addition to being able to use the elements of PixiJS, you can also use systems such as React, Vue, Angular, etc. and install component libraries such as Material-UI, Bootstrap, etc. This allows you to create much more complex interface screens with excellent performance.
 
-### Performance
+### Performance and project size
 
-I imagine the performance of the Pixi’VN and the "visual novel library" used by Ren'Py to be almost the same, but the performance of the "canvas library" used is very significant.
+The performance and size of the project are very important factors to consider when choosing a framework.
+
+**Canvas libraries used:**
 
 * [`Pygame_sdl2`](https://github.com/renpy/pygame_sdl2): This canvas is absolutely underperforming. This can be tested by inserting more moving graphic elements into Renpy.
 * PixiJS: It is based on more modern systems and has great performance. This can be tested directly from an example made by PixiJS: [Exemple](https://pixijs.com/8.x/examples/textures/render-texture-advanced).
+
+**Interface performance:**
+
+* Ren'Py's interface is based on canvas components that use images within the project.
+* In Pixi’VN you can use HTML and/or JavaScript frameworks, known for their performance and usability, or cancas. HTML/JavaScript components are not necessarily based on images, which leads to a smaller project size.
+
+**Project size:**
+
+* The entire interface of Renpy is based on "physical images" and this makes the size of the project very large.
+* In a Pixi’VN project, you can choose whether and which graphics component library to use or use a canvas with a "physical images". Being a library it does not determine the size of the project, but if you use [vite](https://vitejs.dev/) or other tools, the size of the project will be very small.
 
 ### Device Distribution
 
@@ -143,12 +155,6 @@ Pixi’VN is a library that does not deal with distributing the project. You can
 Ren'Py is a engine designed only for creating visual novels. Adding features that go outside of visual novel development is limiting and not recommended by the Ren'Py team. It does not have management for libraries.
 
 Pixi’VN is an [npm](https://www.npmjs.com/) library that allows you to create visual novels. So if you want you can use this library in a project that is not natively a visual novel. [npm](https://www.npmjs.com/) is a package manager for JavaScript and the world's largest software registry.
-
-### Project size
-
-The entire interface of Renpy is based on "physical images" and this makes the size of the project very large.
-
-In a Pixi’VN project, you can choose whether and which graphics component library to use or use a canvas with a "physical images". Being a library it does not determine the size of the project, but if you use [vite](https://vitejs.dev/) or other tools, the size of the project will be very small.
 
 ### Longevity and ease of internal development
 
