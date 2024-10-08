@@ -120,7 +120,7 @@ export default defineConfig({
                 { text: 'Input', link: '/ink/ink-input' },
                 { text: 'Canvas', link: '/ink/ink-canvas' },
                 { text: 'Sounds and Music', link: '/ink/ink-sound' },
-                { text: 'Transitions', link: '/ink/ink-transition' },
+                { text: 'Translating', link: '/ink/ink-translate' },
               ]
             },
             { text: 'Narration (JS/TS)', link: '/start/narration' }
