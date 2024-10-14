@@ -45,8 +45,8 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 | package/libraries manager | ❌ | npm |
 | Narrative Language | Ren'Py language and Python Statements | JavaScript/TypeScript and various narrative languages ​​(including Ren'Py language) |
 | Minigame implementation | You can use Ren'Py Creator-Defined Displayables (CDD) | You can use PixiJS or install other libraries |
-| Interface implementation | You can use Ren'Py screens | You can use PixiJS, React, Vue, Angular, etc. |
-| Interface components | You can use components provided by renpy. They are usually based on images. | Depending on the interface framework you choose, you can use the component library you prefer. For example Material-UI, Bootstrap, PixiJS UI, etc. |
+| UI implementation | You can use Ren'Py screens | You can use PixiJS, React, Vue, Angular, etc. |
+| UI components | You can use components provided by renpy. They are usually based on images. | Depending on the UI framework you choose, you can use the component library you prefer. For example Material-UI, Bootstrap, PixiJS UI, etc. |
 
 #### Dialogues implementation
 
@@ -105,11 +105,11 @@ You can try some Ren'py and PIxiJS games to understand the difference:
 * PixiJS minigames: <https://github.com/pixijs/open-games>
 * PixiJS tutorials: <https://pixijs.com/8.x/tutorials>
 
-#### Interface implementation
+#### UI implementation
 
-In Ren'Py, for creating the interface, you need to create screens and styles. The most recommended implementation is to create a series of images that are positioned within the canvas across graphic objects. The graphic tools are very few, limiting and not very intuitive.
+In Ren'Py, for creating the UI, you need to create screens and styles. The most recommended implementation is to create a series of images that are positioned within the canvas across graphic objects. The graphic tools are very few, limiting and not very intuitive.
 
-In Pixi’VN, in addition to being able to use the elements of PixiJS, you can also use systems such as React, Vue, Angular, etc. and install component libraries such as Material-UI, Bootstrap, etc. This allows you to create much more complex interface screens with excellent performance.
+In Pixi’VN, in addition to being able to use the elements of PixiJS, you can also use systems such as React, Vue, Angular, etc. and install component libraries such as Material-UI, Bootstrap, etc. This allows you to create much more complex UI screens with excellent performance.
 
 ### Performance and project size
 
@@ -120,14 +120,14 @@ The performance and size of the project are very important factors to consider w
 * [`Pygame_sdl2`](https://github.com/renpy/pygame_sdl2): This canvas is absolutely underperforming. This can be tested by inserting more moving graphic elements into Renpy.
 * PixiJS: It is based on more modern systems and has great performance. This can be tested directly from an example made by PixiJS: [Exemple](https://pixijs.com/8.x/examples/textures/render-texture-advanced).
 
-**Interface performance:**
+**UI performance:**
 
-* Ren'Py's interface is based on canvas components that use images within the project.
+* Ren'Py's UI is based on canvas components that use images within the project.
 * In Pixi’VN you can use HTML and/or JavaScript frameworks, known for their performance and usability, or cancas. HTML/JavaScript components are not necessarily based on images, which leads to a smaller project size.
 
 **Project size:**
 
-* The entire interface of Renpy is based on "physical images" and this makes the size of the project very large.
+* The entire UI of Renpy is based on "physical images" and this makes the size of the project very large.
 * In a Pixi’VN project, you can choose whether and which graphics component library to use or use a canvas with a "physical images". Being a library it does not determine the size of the project, but if you use [vite](https://vitejs.dev/) or other tools, the size of the project will be very small.
 
 ### Device Distribution
@@ -138,13 +138,13 @@ Pixi’VN is a library that does not deal with distributing the project. You can
 
 | Device Distribution | Ren'Py | Pixi’VN |
 |---|---|---|
-| Ease of use | It's **very simple**. You can use an Ren'Py interface to create the package | For less experienced users, it **can be difficult** to set up the project so that it can be distributed on multiple devices. Using templates can simplify this step. |
+| Ease of use | It's **very simple**. You can use an Ren'Py UI to create the package | For less experienced users, it **can be difficult** to set up the project so that it can be distributed on multiple devices. Using templates can simplify this step. |
 | Package Configurations | Essential | Very complete. (You can choose if the package should be installed and run without an installation) |
 | Deployment automations with github action or gitlab pipeline | ❌ | ✅ |
 | System notification | ❌ | ✅ |
 | Use connected devices (Camera, Flashlight etc...) | ❌ | ✅ |
-| Interface scaling based on device type | ✅ | ✅ |
-| Interface scaling to fit screen size | ❌ | ✅ |
+| UI scaling based on device type | ✅ | ✅ |
+| UI scaling to fit screen size | ❌ | ✅ |
 | Windows/Linux/Mac OS | ✅ (using Ren'Py) | ✅ (using Electron, Electron Forge, Cordova, etc...) |
 | Android/iOS | ✅ (using Ren'Py) | ✅ (using Ionic or Cordova) |
 | Web | ✅ (is in beta) | ✅ (is natively supported) |

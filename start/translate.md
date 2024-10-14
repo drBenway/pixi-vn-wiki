@@ -54,12 +54,12 @@ export default function App() {
 }
 ```
 
-It is recommended to divide the translations into two parts: interface and narration. The [interface](/start/interface.md) is the text that is not part of the story, such as buttons, menus, etc. The [narration](/start/narration.md) is the text that is part of the story, such as dialogues, monologues, etc.
+It is recommended to divide the translations into two parts: UI and narration. The [UI](/start/interface.md) is the text that is not part of the story, such as buttons, menus, etc. The [narration](/start/narration.md) is the text that is part of the story, such as dialogues, monologues, etc.
 
 ```json
 // strings_es.json
 {
-    "interface": {
+    "ui": {
         "text_speed": "Velocidad del texto",
         // ...
     },
@@ -72,14 +72,14 @@ It is recommended to divide the translations into two parts: interface and narra
 
 Depending on what you want to translate, it is recommended to use the following guides:
 
-* [Translate the interface](#translate-the-interface)
+* [Translate the UI](#translate-the-ui)
 * [Translate the narration (TypeScript/JavaScript)](#translate-the-narration-typescriptjavascript)
 * [Translate the narration (Ink)](/ink/ink-translate.md)
 * Translate the dialogue (Ren'Py) (Under development)
 
-## Translate the interface
+## Translate the UI
 
-To translate the interface, you need to use the `t` function that is provided by i18next. The `t` function is a function that will be called with the key of the translation, so you can use it to translate the text.
+To translate the UI, you need to use the `t` function that is provided by i18next. The `t` function is a function that will be called with the key of the translation, so you can use it to translate the text.
 
 Is recommended to use as translation key the a lowercase string with underscores.
 
@@ -89,7 +89,7 @@ For example in React:
 import { useTranslation } from 'react-i18next';
 
 export default function MyComponent() {
-    const { t } = useTranslation("interface");
+    const { t } = useTranslation("ui");
 
     return (
         <div>
@@ -101,9 +101,9 @@ export default function MyComponent() {
 
 ## Translate the narration (TypeScript/JavaScript)
 
-To translate the interface, you need overwrite the `StepLabelProps` interface to add the `t` function. The `t` function is a function that will be called with the key of the translation, so you can use it to translate the text.
+To translate the UI, you need overwrite the `StepLabelProps` interface to add the `t` function. The `t` function is a function that will be called with the key of the translation, so you can use it to translate the text.
 
-This way you can use the `t` function in [labels](/start/labels.md) to translate the text. It is recommended to use `t` inside the [label](/start/labels.md) and not when the interface is displayed, because this way you can use the [i18n Interpolation](https://i18next.com/translation-function/interpolation).
+This way you can use the `t` function in [labels](/start/labels.md) to translate the text. It is recommended to use `t` inside the [label](/start/labels.md) and not when the UI is displayed, because this way you can use the [i18n Interpolation](https://i18next.com/translation-function/interpolation).
 
 Is recommended to use as translation key the native string from which the translation is made.
 
