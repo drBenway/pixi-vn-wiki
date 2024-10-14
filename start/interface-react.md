@@ -1,12 +1,12 @@
-# React Interface
+# React UI
 
 <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Freact-logo.png?alt=media" alt="drawing" width="200" style="margin-top: 10px;" />
 
 [React](https://react.dev/) is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript.
 
-## How add React Interface to Pixi’VN?
+## How add React UI to Pixi’VN?
 
-To add a React Interface to Pixi’VN, you need to create a new React application and add it to the HTML layout of the Pixi’VN application.
+To add a React UI to Pixi’VN, you need to create a new React application and add it to the HTML layout of the Pixi’VN application.
 
 ```tsx
 // main.tsx

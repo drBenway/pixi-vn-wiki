@@ -2,7 +2,7 @@
 
 In Visual Novels it may be necessary to ask the user to enter text, number, date, etc.
 
-Pixi’VN provides functions to manage this possibility. In short, the operation is that through the functions provided you enable and can set the type of variable that will be requested from the user, while the [interface](/start/interface.md) side will have to manage the information obtained from this variable.
+Pixi’VN provides functions to manage this possibility. In short, the operation is that through the functions provided you enable and can set the type of variable that will be requested from the user, while the [UI](/start/interface.md) side will have to manage the information obtained from this variable.
 
 ## Requesting input
 
