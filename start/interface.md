@@ -16,7 +16,7 @@ This allows the use of systems such as React, Vue, Angular, etc. to create much 
 
 UI and canvas are two different things. The UI is above the canvas and is used to create buttons, forms, etc. The canvas is used to display images, videos, etc.
 
-All canvas information is included in saves and Pixi’VN manages going back and forth between the different steps. The UI is not included in the saves and is not managed by Pixi’VN, so you have to [manage it yourself saving information](#use-atom-for-connect-the-interface-with-variables-in-the-game-storage) you care about in [game storage](/start/storage.md) or browser storage.
+All canvas information is included in saves and Pixi’VN manages going back and forth between the different steps. The UI is not included in the saves and is not managed by Pixi’VN, so you have to [manage it yourself saving information](#connect-the-ui-with-variables-in-the-game-storage) you care about in [game storage](/start/storage.md) or browser storage.
 
 In the canvas you can add elements during each step. In the UI you can't do that, you can create several ["screens" and navigate between them](#navigateswitch-between-ui-screens).
 

@@ -243,7 +243,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 Every step the system saves the current state of the game. To go back to the previous step you must execute the `narration.goBack()` function.
 
-In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/start/interface.md#what-is-the-url-path-and-routes) of the previous step, so you can use it to [navigate to the previous UI screen](/start/interface#navigateswitch-between-interface-screens).
+In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/start/interface.md#what-is-the-url-path-and-routes) of the previous step, so you can use it to [navigate to the previous UI screen](/start/interface#navigateswitch-between-ui-screens).
 
 For exemple if you use a [React Router Dom](https://reactrouter.com):
 
