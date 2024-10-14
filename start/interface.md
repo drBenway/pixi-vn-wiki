@@ -16,7 +16,7 @@ This allows the use of systems such as React, Vue, Angular, etc. to create much 
 
 UI and canvas are two different things. The UI is above the canvas and is used to create buttons, forms, etc. The canvas is used to display images, videos, etc.
 
-All canvas information is included in saves and Pixi’VN manages going back and forth between the different steps. The UI is not included in the saves and is not managed by Pixi’VN, so you have to [manage it yourself saving information](#connect-the-ui-with-variables-in-the-game-storage) you care about in [game storage](/start/storage.md) or browser storage.
+All canvas information is included in saves and Pixi’VN manages going back and forth between the different steps. The UI is not included in the saves and is not managed by Pixi’VN, so you have to [manage it yourself saving information](#connect-the-ui-with-variables-in-the-game-variables) you care about in [game storage](/start/storage.md) or browser storage.
 
 In the canvas you can add elements during each step. In the UI you can't do that, you can create several ["screens" and navigate between them](#navigateswitch-between-ui-screens).
 
@@ -44,114 +44,120 @@ The reason is that because the html UI is above the canvas, all clicks are inter
 
 So you must set the `pointer-events: auto` style only for the elements (example a button, a form, etc...) that you want to interact with the user.
 
-## Connect the UI with variables in the game storage
+## Connect the UI with variables in the game variables
 
-What is an Atom? An Atom (or Atomics) is a JavaScript object which gives atomic tasks to proceed as static strategies. Much the same as the strategies for Math object, the techniques, and properties of Atomics are additionally static. Atomics are utilized with SharedArrayBuffer objects.
+The best way to connect the UI with the game variables is to use the [TanStack Query](https://tanstack.com/query/latest) library.
 
-There are more npm packages that can be used to manage the UI with the [game storage](/start/storage.md), such as: [Recoil](https://recoiljs.org/), [Redux](https://redux.js.org/), [MobX](https://mobx.js.org/README.html), etc. We will use [Recoil](https://recoiljs.org/) because it has "[Selectors](https://recoiljs.org/docs/basic-tutorial/selectors)" which is right for us.
-
-The purpose of the Atom + Selector will be to set the Atom and [game storage](/start/storage.md) to a value changed by the UI, and update the Atom when the value in [game storage](/start/storage.md) is updated.
+**What is TanStack Query?** TanStack Query is a library that allows you to manage the state of your application in a simple and efficient way. It is based on the concept of queries, mutations and subscriptions. This library is very useful and is compatible with React, Vue, Angular, Svelte, etc.
 
 Here is an example:
 
-In our example we would have a variable `text` saved in the [game storage](/start/storage.md), this variable will be updated either by an input in the UI or by a [label step](/start/labels.md).
+In our example we would have two variables, `text1` and `text2`, saved in the [game storage](/start/storage.md), this variables will be updated either by an input in the UI or by a [label step](/start/labels.md).
 
-Taking into account that a storage variable can only be changed during a [next step, go back](/start/labels.md#next-step-and-go-back), [run label](/start/labels.md#run-a-label) or [loading a save](/start/save.md#load) (outside the interface), we will create an Atom called "reloadInterfaceDataEventAtom" that will be updated after each [next step, go back](/start/labels.md#next-step-and-go-back), [run label](/start/labels.md#run-a-label) or [loading a save](/start/save.md#load). `reloadInterfaceDataEventAtom` will be used to trigger the update of olther Atoms.
+Taking into account that a storage variables can only be changed during a [next step, go back](/start/labels.md#next-step-and-go-back), [run label](/start/labels.md#run-a-label) or [loading a save](/start/save.md#load) (outside the interface), we will create a `useQueryText1` and `useQueryText2` that will be updated after each [next step, go back](/start/labels.md#next-step-and-go-back), [run label](/start/labels.md#run-a-label) or [loading a save](/start/save.md#load).
 
 ```typescript
-// reloadInterfaceDataEventAtom.ts
-import { atom } from "recoil";
+import { useQuery } from "@tanstack/react-query";
+import { getLastSaveFromIndexDB } from "../utilities/save-utility";
 
-export const reloadInterfaceDataEventAtom = atom<number>({
-    key: 'reloadInterfaceDataEventAtom',
-    default: 0,
-});
+// this is a "father" key that will be used to invalidate all queries that depend on it
+export const INTERFACE_DATA_USE_QUEY_KEY = "interface_data_use_quey_key";
+
+const TEXT1_USE_QUEY_KEY = "text1_save_use_quey_key";
+export default function useQueryText1() {
+ return useQuery({
+  queryKey: [INTERFACE_DATA_USE_QUEY_KEY, TEXT1_USE_QUEY_KEY],
+  queryFn: async () => {
+    return storage.getVariable<string>("text1") || "";
+  },
+ });
+}
+
+const TEXT2_USE_QUEY_KEY = "text2_save_use_quey_key";
+export default function useQueryText2() {
+ return useQuery({
+  queryKey: [INTERFACE_DATA_USE_QUEY_KEY, TEXT2_USE_QUEY_KEY],
+  queryFn: async () => {
+    return storage.getVariable<string>("text2") || "";
+  },
+ });
+}
 ```
 
-We will create a Selector called `textSelector` that will be used to set and get the value of the `text` variable in the [game storage](/start/storage.md).
+For invalidate the queries we can use the `queryClient.invalidateQueries` function.
 
-```typescript
-// textSelectorState.ts
-import { storage } from "@drincs/pixi-vn";
-import { atom, selector } from "recoil";
-import { reloadInterfaceDataEventAtom } from "./reloadInterfaceDataEventAtom";
+In this example if we want to update all the queries that depend on the `INTERFACE_DATA_USE_QUEY_KEY` key, we can use the following code:
 
-// questo atom attiverà l'aggiornamento di textSelectorState quando modificherò il valore di textSelectorState
-const textAtom = atom<string>({
-    key: 'textAtom',
-    default: "",
-});
-
-export const textSelectorState = selector<string>({
-    key: 'textSelector',
-    get: ({ get }) => {
-        // This will trigger the update of the Atom when the value in game storage is updated
-        get(reloadInterfaceDataEventAtom)
-        get(textAtom)
-
-        return storage.getVariable<string>("text") || "";
-    },
-    set: ({ set }, newValue) => {
-        set(textAtom, newValue);
-        storage.setVariable("text", newValue as string);
-    },
-});
+```ts
+const queryClient = useQueryClient()
+queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] })
 ```
 
-Remember to update the `reloadInterfaceDataEventAtom` after each [next step, go back](/start/labels.md#next-step-and-go-back) or [loading a save](/start/save.md#load).
+If we want to update only the `text1` or `text2` query, we can use the following code:
 
-Even after use [run label](/start/labels.md#run-a-label) out of the [step label](/start/labels.md#run-a-label).
-
-This seems like a very time consuming process, but in reality if you have designed your game well or used a [template](/start/getting-started.md#project-initialization), you will only need to update the Atom in one place.
+```ts
+const queryClient = useQueryClient()
+queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY, TEXT1_USE_QUEY_KEY] })
+queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY, TEXT2_USE_QUEY_KEY] })
+```
 
 ```typescript
-import { useSetRecoilState } from 'recoil';
-import { reloadInterfaceDataEventAtom } from './reloadInterfaceDataEventAtom';
-import { narration } from '@drincs/pixi-vn'
-
-const notifyReloadInterfaceDataEvent = useSetRecoilState(reloadInterfaceDataEventAtom);
+const queryClient = useQueryClient()
 
 narration.goNext({})
     .then((result) => {
-        notifyReloadInterfaceDataEvent((value) => value + 1);
+        queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] })
     });
 
 narration.goBack({})
     .then((result) => {
-        notifyReloadInterfaceDataEvent((value) => value + 1);
+        queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] })
     });
 
 loadSaveJson(jsonString, navigate)
     .then(() => {
-        notifyReloadInterfaceDataEvent((value) => value + 1);
+        queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] })
     })
 
 // only if you are not in a label step
 narration.callLabel("myLabel", {})
     .then((result) => {
-        notifyReloadInterfaceDataEvent((value) => value + 1);
+        queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] })
     });
 ```
 
-Ok now we have the Atom and Selector, we can use the `textSelector` in the UI.
+In the UI we will use the `useQueryText1` and `useQueryText2` hooks to get the values of the variables `text1` and `text2`.
 
 ```tsx
 // react example
-import { useRecoilState } from 'recoil';
-import { textSelectorState } from './textSelectorState';
-import { Input } from '@mui/joy';
-
 export function MyComponent() {
-    const [text, setText] = useRecoilState(textSelectorState);
+    const { data: text1 = "" } = useQueryText1()
+    const { data: text2 = "" } = useQueryText2()
+    const queryClient = useQueryClient()
 
     return (
+        <>
             <Input
                 sx={{
                     pointerEvents: "auto",
                 }}
-                value={text}
-                onChange={(e) => setText(e.target.value)}
+                value={text1}
+                onChange={(e) => {
+                    storage.setVariable("text1", e.target.value);
+                    queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY, TEXT1_USE_QUEY_KEY] })
+                }}
             />
+            <Input
+                sx={{
+                    pointerEvents: "auto",
+                }}
+                value={text2}
+                onChange={(e) => {
+                    storage.setVariable("text2", e.target.value);
+                    queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY, TEXT2_USE_QUEY_KEY] })
+                }}
+            />
+        </>
     );
 }
 ```
