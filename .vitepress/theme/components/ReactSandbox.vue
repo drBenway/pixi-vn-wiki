@@ -12,7 +12,11 @@
       ...props, // do not forget it
       deps: {
         '@drincs/pixi-vn': 'latest',
-        '@tanstack/react-query': '^5.59.13'
+        '@tanstack/react-query': '^5.59.13',
+        '@emotion/react': '^11.13.3',
+        '@emotion/styled': '^11.13.0',
+        '@mui/base': '^5.0.0-beta.58',
+        '@mui/system': '^6.1.3'
       }
     }"
     :code-options="codeOptions"
