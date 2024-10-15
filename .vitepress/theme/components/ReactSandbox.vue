@@ -1,4 +1,3 @@
-<!-- MySandbox.vue -->
 <template>
   <!-- 'code-options' is a build-in prop, do not edit it -->
   <Sandbox
@@ -12,7 +11,8 @@
     :custom-setup="{
       ...props, // do not forget it
       deps: {
-        '@drincs/pixi-vn': 'latest'
+        '@drincs/pixi-vn': 'latest',
+        '@tanstack/react-query': '^5.59.13'
       }
     }"
     :code-options="codeOptions"

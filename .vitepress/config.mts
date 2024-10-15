@@ -244,9 +244,9 @@ export default defineConfig({
     config(md) {
       md
         // the second parameter is html tag name
-        .use(container, 'sandbox', {
+        .use(container, 'react-sandbox', {
           render(tokens, idx) {
-            return renderSandbox(tokens, idx, 'sandbox');
+            return renderSandbox(tokens, idx, 'react-sandbox');
           },
         });
     },
