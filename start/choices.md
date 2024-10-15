@@ -158,7 +158,6 @@ canvas.initialize(body, 1920, 1080, {
 
 ```tsx /App.tsx [active]
 import { ChoiceMenuOption, ChoiceMenuOptionClose, narration } from '@drincs/pixi-vn';
-import { Button } from '@mui/base';
 import { Box, Grid } from '@mui/system';
 import { useQueryClient } from '@tanstack/react-query';
 import { INTERFACE_DATA_USE_QUEY_KEY, useQueryChoiceMenuOptions } from './useQueryInterface';
