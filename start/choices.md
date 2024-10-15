@@ -116,13 +116,9 @@ body {
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
-
 import App from "./App";
-import React from "react";
-
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { canvas } from '@drincs/pixi-vn'
-
+import { canvas, narration } from '@drincs/pixi-vn'
 import { INTERFACE_DATA_USE_QUEY_KEY } from './useQueryInterface';
 import { startLabel } from './startLabel';
 
@@ -136,7 +132,7 @@ canvas.initialize(body, 1920, 1080, {
     backgroundColor: "#303030"
 }).then(() => {
     // React setup with ReactDOM
-    const root = createRoot(document.getElementById("root") as HTMLElement);
+    const root = document.getElementById('root')
     if (!root) {
         throw new Error('root element not found')
     }
@@ -226,10 +222,10 @@ import { canvas, ChoiceMenuOption, narration, newLabel, showImage } from "@drinc
 
 export const startLabel = newLabel("start_label",
     [
-        (props) => {
+        () => {
             narration.choiceMenuOptions = [
-                new ChoiceMenuOption("Helmlok", helmlokLabel, props),
-                new ChoiceMenuOption("Skully", skullyLabel, props),
+                new ChoiceMenuOption("Helmlok", helmlokLabel, {}),
+                new ChoiceMenuOption("Skully", skullyLabel, {}),
             ]
         },
         (props) => narration.jumpLabel("start_label", props),
