@@ -96,56 +96,182 @@ narration.choiceMenuOptions = undefined;
 
 ## How to create the choice menu UI screen
 
-For example ( in React using Material-UI ):
+For example:
 
-```tsx
-// react
-const [menuOptions, setChoiceMenuOptions] = useState<ChoiceMenuOption[]>(narration.choiceMenuOptions)
-function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
-    narration.selectChoice(item, {
-        // add StepLabelProps here
-        navigate: navigate, // example
-        // and the props that will be passed to the label
-        ...item.props
-    })
-        .then(() => {
-                // ...
-        })
-        .catch((e) => {
-            console.error(e)
-        })
+::: react-sandbox {template=vite-react-ts}
+
+```css /index.css [hidden]
+:root {
+  background-color: #242424;
 }
 
-return (
-    <Grid
-        container
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-        spacing={2}
-    >
-        {menu.map((item, index) => {
-            return (
-                <Grid
-                    key={index}
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    <DialogueMenuButton
-                        onClick={() => {
-                            afterSelectChoice(item)
-                        }}
-                        sx={{
-                            pointerEvents: "auto",
-                            left: 0,
-                            right: 0,
-                        }}
-                    >
-                        {item.text}
-                    </DialogueMenuButton>
-                </Grid>
-            )
-        })}
-    </Grid>
-);
+body {
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
 ```
+
+```tsx /index.tsx [hidden]
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles.css";
+
+import App from "./App";
+import React from "react";
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { canvas } from '@drincs/pixi-vn'
+
+import { INTERFACE_DATA_USE_QUEY_KEY } from './useQueryInterface';
+import { startLabel } from './startLabel';
+
+// Canvas setup with PIXI
+const body = document.body
+if (!body) {
+    throw new Error('body element not found')
+}
+
+canvas.initialize(body, 1920, 1080, {
+    backgroundColor: "#303030"
+}).then(() => {
+    // React setup with ReactDOM
+    const root = createRoot(document.getElementById("root") as HTMLElement);
+    if (!root) {
+        throw new Error('root element not found')
+    }
+
+    canvas.initializeHTMLLayout(root)
+    if (!canvas.htmlLayout) {
+        throw new Error('htmlLayout not found')
+    }
+    const reactRoot = createRoot(canvas.htmlLayout)
+    const queryClient = new QueryClient()
+    narration.callLabel(startLabel, {})
+        .then(() => queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] }))
+
+    reactRoot.render(
+        <StrictMode>
+            <QueryClientProvider client={queryClient}>
+                <App />
+            </QueryClientProvider>
+        </StrictMode>
+    )
+})
+```
+
+```tsx /App.tsx [active]
+import { ChoiceMenuOption, ChoiceMenuOptionClose, narration } from '@drincs/pixi-vn';
+import { Button } from '@mui/base';
+import { Box, Grid } from '@mui/system';
+import { useQueryClient } from '@tanstack/react-query';
+import { INTERFACE_DATA_USE_QUEY_KEY, useQueryChoiceMenuOptions } from './useQueryInterface';
+
+export default function ChoiceMenu() {
+    const { data: menu = [] } = useQueryChoiceMenuOptions()
+    const queryClient = useQueryClient()
+
+    function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
+        narration.selectChoice(item, {})
+            .then(() => queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] }))
+            .catch((e) => console.error(e))
+    }
+
+    return (
+        <Box
+            sx={{
+                width: '100%',
+                height: "100%",
+                position: "absolute",
+                top: 0, left: 0, right: 0,
+                pointerEvents: "auto",
+            }}
+        >
+            <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                spacing={2}
+                sx={{
+                    overflow: 'auto',
+                    height: "100%",
+                    gap: 1,
+                    width: '100%',
+                }}
+            >
+                {menu?.map((item, index) => {
+                    return (
+                        <Grid
+                            key={"choice-" + index}
+                            justifyContent="center"
+                            alignItems="center"
+                        >
+                            <Button
+                                onClick={() => afterSelectChoice(item)}
+                            >
+                                {item.text}
+                            </Button>
+                        </Grid>
+                    )
+                })}
+            </Grid>
+        </Box>
+    );
+}
+```
+
+```ts /startLabel.ts
+import { canvas, ChoiceMenuOption, narration, newLabel, showImage } from "@drincs/pixi-vn"
+
+export const startLabel = newLabel("start_label",
+    [
+        (props) => {
+            narration.choiceMenuOptions = [
+                new ChoiceMenuOption("Helmlok", helmlokLabel, props),
+                new ChoiceMenuOption("Skully", skullyLabel, props),
+            ]
+        },
+        (props) => narration.jumpLabel("start_label", props),
+    ]
+)
+
+const helmlokLabel = newLabel("helmlok_label",
+    [
+        async (props) => {
+            canvas.clear()
+            await showImage('skully', 'https://pixijs.com/assets/skully.png')
+            narration.jumpLabel(startLabel, props)
+        },
+    ]
+)
+
+const skullyLabel = newLabel("skully_label",
+    [
+        async (props) => {
+            canvas.clear()
+            await showImage('helmlok', 'https://pixijs.com/assets/helmlok.png')
+            narration.jumpLabel(startLabel, props)
+        },
+    ]
+)
+```
+
+```ts /useQueryInterface.ts
+import { narration } from "@drincs/pixi-vn";
+import { useQuery } from "@tanstack/react-query";
+
+export const INTERFACE_DATA_USE_QUEY_KEY = "interface_data_use_quey_key";
+
+const CHOICE_MENU_OPTIONS_USE_QUEY_KEY = "choice_menu_options_use_quey_key";
+export function useQueryChoiceMenuOptions() {
+ return useQuery({
+  queryKey: [INTERFACE_DATA_USE_QUEY_KEY, CHOICE_MENU_OPTIONS_USE_QUEY_KEY],
+  queryFn: () => {
+   return narration.choiceMenuOptions || []
+  },
+ });
+}
+```
+
+:::
