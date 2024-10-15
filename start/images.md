@@ -14,7 +14,7 @@ This function has the following parameters:
 ```typescript
 import { showImage } from '@drincs/pixi-vn'
 
-showImage('image1', 'path/to/image.png')
+await showImage('image1', 'path/to/image.png')
 ```
 
 This function is a combination of the [`addImage`](#add-image) and [`load`](#load-image) functions. It is very simple to use, but in cases where you want to manipulate the image before showing it, it is better to use the [`addImage`](#add-image) and [`load`](#load-image) functions separately.
