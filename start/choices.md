@@ -98,7 +98,7 @@ narration.choiceMenuOptions = undefined;
 
 For example:
 
-::: react-sandbox {template=vite-react-ts}
+::: react-sandbox {template=vite-react-ts coderHeight=512}
 
 ```css /index.css [hidden]
 :root {
@@ -174,50 +174,41 @@ export default function ChoiceMenu() {
     }
 
     return (
-        <Box
+        <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            spacing={2}
             sx={{
                 width: '100%',
                 height: "100%",
-                position: "absolute",
-                top: 0, left: 0, right: 0,
+                overflow: 'auto',
+                gap: 1,
                 pointerEvents: "auto",
             }}
         >
-            <Grid
-                container
-                direction="column"
-                justifyContent="center"
-                alignItems="center"
-                spacing={2}
-                sx={{
-                    overflow: 'auto',
-                    height: "100%",
-                    gap: 1,
-                    width: '100%',
-                }}
-            >
-                {menu?.map((item, index) => {
-                    return (
-                        <Grid
-                            key={"choice-" + index}
-                            justifyContent="center"
-                            alignItems="center"
+            {menu?.map((item, index) => {
+                return (
+                    <Grid
+                        key={"choice-" + index}
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <button
+                            onClick={() => afterSelectChoice(item)}
                         >
-                            <Button
-                                onClick={() => afterSelectChoice(item)}
-                            >
-                                {item.text}
-                            </Button>
-                        </Grid>
-                    )
-                })}
-            </Grid>
-        </Box>
+                            {item.text}
+                        </button>
+                    </Grid>
+                )
+            })}
+        </Grid>
     );
 }
 ```
 
-```ts /startLabel.ts
+```ts /startLabel.ts [readonly]
 import { canvas, ChoiceMenuOption, narration, newLabel, showImage } from "@drincs/pixi-vn"
 
 export const startLabel = newLabel("start_label",
@@ -253,7 +244,7 @@ const skullyLabel = newLabel("skully_label",
 )
 ```
 
-```ts /useQueryInterface.ts
+```ts /useQueryInterface.ts [readonly]
 import { narration } from "@drincs/pixi-vn";
 import { useQuery } from "@tanstack/react-query";
 
