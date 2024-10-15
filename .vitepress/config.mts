@@ -1,4 +1,6 @@
+import container from 'markdown-it-container'
 import { defineConfig } from 'vitepress'
+import { renderSandbox } from 'vitepress-plugin-sandpack'
 
 const ogUrl = 'https://pixi-vn.web.app'
 
@@ -236,5 +238,17 @@ export default defineConfig({
       ['meta', { property: 'og:title', content: pageData.title }],
     )
     return pageData
+  },
+
+  markdown: {
+    config(md) {
+      md
+        // the second parameter is html tag name
+        .use(container, 'sandbox', {
+          render(tokens, idx) {
+            return renderSandbox(tokens, idx, 'sandbox');
+          },
+        });
+    },
   },
 })

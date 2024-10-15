@@ -2,6 +2,7 @@
     "recommendations": [
         "ms-vscode.vscode-typescript-next",
         "antiantisepticeye.vscode-color-picker",
-        "davidanson.vscode-markdownlint"
+        "davidanson.vscode-markdownlint",
+        "vue.volar"
     ]
 }
