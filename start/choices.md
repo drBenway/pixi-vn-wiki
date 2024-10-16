@@ -100,126 +100,31 @@ For example:
 
 ::: react-sandbox {template=vite-react-ts coderHeight=512}
 
-```css /index.css [hidden]
-:root {
-  background-color: #242424;
-}
+<<< @/snippets/react/index.css{#hidden}
+<<< @/snippets/react/index.tsx{#hidden}
+<<< @/snippets/react/App.tsx{#hidden}
 
-body {
-  margin: 0;
-  display: flex;
-  overflow: hidden;
-}
-```
+<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#active/screens/}
 
-```tsx /index.tsx [hidden]
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./styles.css";
-import App from "./App";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { canvas, narration } from '@drincs/pixi-vn'
-import { INTERFACE_DATA_USE_QUEY_KEY } from './useQueryInterface';
-import { startLabel } from './startLabel';
-
-// Canvas setup with PIXI
-const body = document.body
-if (!body) {
-    throw new Error('body element not found')
-}
-
-canvas.initialize(body, 1920, 1080, {
-    backgroundColor: "#303030"
-}).then(() => {
-    // React setup with ReactDOM
-    const root = document.getElementById('root')
-    if (!root) {
-        throw new Error('root element not found')
-    }
-
-    canvas.initializeHTMLLayout(root)
-    if (!canvas.htmlLayout) {
-        throw new Error('htmlLayout not found')
-    }
-    const reactRoot = createRoot(canvas.htmlLayout)
-    const queryClient = new QueryClient()
-    narration.callLabel(startLabel, {})
-        .then(() => queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] }))
-
-    reactRoot.render(
-        <StrictMode>
-            <QueryClientProvider client={queryClient}>
-                <App />
-            </QueryClientProvider>
-        </StrictMode>
-    )
-})
-```
-
-```tsx /App.tsx [active]
-import { ChoiceMenuOption, ChoiceMenuOptionClose, narration } from '@drincs/pixi-vn';
-import { Box, Grid } from '@mui/system';
-import { useQueryClient } from '@tanstack/react-query';
-import { INTERFACE_DATA_USE_QUEY_KEY, useQueryChoiceMenuOptions } from './useQueryInterface';
-
-export default function ChoiceMenu() {
-    const { data: menu = [] } = useQueryChoiceMenuOptions()
-    const queryClient = useQueryClient()
-
-    function afterSelectChoice(item: ChoiceMenuOptionClose | ChoiceMenuOption<{}>) {
-        narration.selectChoice(item, {})
-            .then(() => queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] }))
-            .catch((e) => console.error(e))
-    }
-
-    return (
-        <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-            spacing={2}
-            sx={{
-                width: '100%',
-                height: "100%",
-                overflow: 'auto',
-                gap: 1,
-                pointerEvents: "auto",
-            }}
-        >
-            {menu?.map((item, index) => {
-                return (
-                    <Grid
-                        key={"choice-" + index}
-                        justifyContent="center"
-                        alignItems="center"
-                    >
-                        <button
-                            onClick={() => afterSelectChoice(item)}
-                        >
-                            {item.text}
-                        </button>
-                    </Grid>
-                )
-            })}
-        </Grid>
-    );
-}
-```
-
-```ts /startLabel.ts [readonly]
-import { canvas, ChoiceMenuOption, narration, newLabel, showImage } from "@drincs/pixi-vn"
+```ts /labels/startLabel.ts [readonly]
+import { canvas, ChoiceMenuOption, narration, newLabel, showImage, Assets } from "@drincs/pixi-vn"
 
 export const startLabel = newLabel("start_label",
     [
-        () => {
+        async () => {
             narration.choiceMenuOptions = [
                 new ChoiceMenuOption("Helmlok", helmlokLabel, {}),
                 new ChoiceMenuOption("Skully", skullyLabel, {}),
             ]
         },
         (props) => narration.jumpLabel("start_label", props),
-    ]
+    ],
+    {
+        onLoadStep: async () => {
+            Assets.load('https://pixijs.com/assets/skully.png')
+            Assets.load('https://pixijs.com/assets/helmlok.png')
+        }
+    }
 )
 
 const helmlokLabel = newLabel("helmlok_label",
@@ -243,21 +148,6 @@ const skullyLabel = newLabel("skully_label",
 )
 ```
 
-```ts /useQueryInterface.ts [readonly]
-import { narration } from "@drincs/pixi-vn";
-import { useQuery } from "@tanstack/react-query";
-
-export const INTERFACE_DATA_USE_QUEY_KEY = "interface_data_use_quey_key";
-
-const CHOICE_MENU_OPTIONS_USE_QUEY_KEY = "choice_menu_options_use_quey_key";
-export function useQueryChoiceMenuOptions() {
- return useQuery({
-  queryKey: [INTERFACE_DATA_USE_QUEY_KEY, CHOICE_MENU_OPTIONS_USE_QUEY_KEY],
-  queryFn: () => {
-   return narration.choiceMenuOptions || []
-  },
- });
-}
-```
+<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
 
 :::
