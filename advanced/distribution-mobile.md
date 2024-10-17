@@ -93,6 +93,6 @@ Ok, now you can go on Ionic Extension and run the project on your device (remenb
 
 ## iOS
 
-For IOS the documentation is currently under review.
+For IOS the documentation is currently [under review](https://github.com/DRincs-Productions/pixi-vn/issues/245).
 
 ![image](https://github.com/user-attachments/assets/b39d87d5-07f0-4fb0-994b-def749876823)

@@ -148,6 +148,8 @@ export default defineConfig({
               text: 'Distribution',
               link: '/advanced/distribution',
               items: [
+                { text: 'Website distribution', link: '/advanced/distribution-website' },
+                { text: 'Desktop distribution', link: '/advanced/distribution-desktop' },
                 { text: 'Mobile distribution', link: '/advanced/distribution-mobile' },
               ]
             },
