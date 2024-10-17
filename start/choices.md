@@ -103,7 +103,7 @@ For example:
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/index.tsx{#hidden}
 <<< @/snippets/react/App.tsx{#hidden}
-
+<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
 <<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#active/screens/}
 
 ```ts /labels/startLabel.ts [readonly]
