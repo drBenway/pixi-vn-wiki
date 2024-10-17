@@ -150,4 +150,4 @@ However, if you do not want to create a project with large customizations, I rec
 
 ## Mobile devices
 
-All the information to develop a mobile application is on the following page: [Mobile distribution](/advanced/distribution‐mobile.md)
+All the information to develop a mobile application is on the following page: [Mobile distribution](/advanced/distribution-mobile.md)
