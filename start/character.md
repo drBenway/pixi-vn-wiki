@@ -200,47 +200,27 @@ console.log(angryAlice.name); // Angry Eleonora
 It recommend creating your own class `Character` that extends `CharacterStoredClass` and "override" the interface `CharacterInterface`
 to add/edit/remove properties or methods.
 
-For example, you want to create a class `Character`, you must "override" the interface `CharacterInterface` to use your properties or methods.
+For example, you want to create a class `Character`, you must "override" the interface `CharacterInterface` to use your properties or methods. ( See the following file: `pixi-vn.types.ts` )
 
-```typescript
-// pixi-vn.types.ts
-declare module '@drincs/pixi-vn/dist/override' {
-    interface CharacterInterface {
-        name: string
-        surname?: string
-        age?: number
-        icon?: string
-        color?: string
-    }
-}
-```
+Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`. ( See the following file: `Character.ts` )
 
-Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`.
+In this class you can't set the properties, because they are read-only. For set the properties and store them in the game storage, you must use the `setStorageProperty` method. ( See the following file: `Character.ts` )
 
-```typescript
-import { CharacterStoredClass } from "@drincs/pixi-vn";
+::: react-sandbox {template=vite-react-ts coderHeight=712 previewHeight=1}
+
+```ts /models/Character.ts [active]
+import { CharacterInterface, CharacterStoredClass } from "@drincs/pixi-vn";
 
 export class Character extends CharacterStoredClass implements CharacterInterface {
     constructor(id: string | { id: string, emotion: string }, props: CharacterProps) {
         super(typeof id === "string" ? id : id.id, typeof id === "string" ? "" : id.emotion)
-        this._name = props.name
-        this._surname = props.surname
-        this._age = props.age
         this._icon = props.icon
         this._color = props.color
+        this.defaultName = props.name
+        this.defaultSurname = props.surname
+        this.defaultAge = props.age
     }
-    private _name?: string
-    get name(): string {
-        return this._name || this.id
-    }
-    private _surname?: string
-    get surname(): string | undefined {
-        return this._surname
-    }
-    private _age?: number | undefined
-    get age(): number | undefined {
-        return this._age
-    }
+    // Not stored properties
     private _icon?: string
     get icon(): string | undefined {
         return this._icon
@@ -249,23 +229,7 @@ export class Character extends CharacterStoredClass implements CharacterInterfac
     get color(): string | undefined {
         return this._color
     }
-}
-```
-
-In this class you can't set the properties, because they are read-only. For set the properties and store them in the game storage, you must use the `setStorageProperty` method.
-
-```typescript
-import { CharacterStoredClass } from "@drincs/pixi-vn";
-
-export class Character extends CharacterStoredClass implements CharacterInterface {
-    constructor(id: string | { id: string, emotion: string }, props: CharacterProps) {
-        super(typeof id === "string" ? id : id.id, typeof id === "string" ? "" : id.emotion)
-        this.defaultName = props.name
-        this.defaultSurname = props.surname
-        this.defaultAge = props.age
-        this._icon = props.icon
-        this._color = props.color
-    }
+    // Stored properties
     private defaultName?: string
     get name(): string {
         return this.getStorageProperty<string>("name") || this.defaultName || this.id
@@ -287,13 +251,19 @@ export class Character extends CharacterStoredClass implements CharacterInterfac
     set age(value: number | undefined) {
         this.setStorageProperty<number>("age", value)
     }
-    private _icon?: string
-    get icon(): string | undefined {
-        return this._icon
-    }
-    private _color?: string | undefined
-    get color(): string | undefined {
-        return this._color
+}
+```
+
+```ts /pixi-vn.types.ts
+declare module '@drincs/pixi-vn/dist/override' {
+    interface CharacterInterface {
+        name: string
+        surname?: string
+        age?: number
+        icon?: string
+        color?: string
     }
 }
 ```
+
+:::
