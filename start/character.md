@@ -142,7 +142,7 @@ export default class CharacterBaseModel extends StoredClassModel implements Char
 
 ## Use Characters in the Game
 
-You can use the characters in the game for example to [set a dialogue](/start/dialogue#set-a-current-dialogue). You can use the character's `id` or the character's instance, but it is recommended to use the instance.
+You can use the characters in the game for example to [set a dialogue](/start/dialogue#set-the-current-dialogue). You can use the character's `id` or the character's instance, but it is recommended to use the instance.
 
 ```typescript
 export const liam = new CharacterBaseModel('liam_id', {
@@ -206,7 +206,7 @@ Now you can create a class `Character` that extends `CharacterStoredClass` and i
 
 For set the properties and store them in the game storage, you must use the `setStorageProperty` method. ( See the following file `Character.ts` )
 
-::: react-sandbox {template=vite-react-ts coderHeight=712 previewHeight=1}
+::: react-sandbox {template=vite-react-ts coderHeight=950 previewHeight=1}
 
 ```ts /models/Character.ts [active]
 import { CharacterInterface, CharacterStoredClass } from "@drincs/pixi-vn";
