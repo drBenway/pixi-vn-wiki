@@ -81,25 +81,9 @@ import { getCharacterById } from "@drincs/pixi-vn";
 const liam = getCharacterById('liam');
 ```
 
-If you use the [Extended CharacterModel](#custom-character) class, you can get the character and cast it to the subclass.
-
-```typescript
-import { getCharacterById } from "@drincs/pixi-vn";
-
-const liam = getCharacterById('liam');
-```
-
 ## Get All Characters
 
 To get all characters, you can use the `getAllCharacters` function.
-
-```typescript
-import { getAllCharacters } from "@drincs/pixi-vn";
-
-const characters = getAllCharacters();
-```
-
-If you use the [Extended CharacterModel](#custom-character) class, you can get all characters and cast them to the subclass.
 
 ```typescript
 import { getAllCharacters } from "@drincs/pixi-vn";
