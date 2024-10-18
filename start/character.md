@@ -11,7 +11,8 @@ For create a new instance of `CharacterBaseModel` you need the following paramet
 
 * `id`: A unique identifier for the character (string). It is used to reference the character in the game (must be unique).
 If you want to create a [character with an emotion, you can pass an object](#character-emotions).
-* `props`: An object with the character's properties. `props` extends the `CharacterBaseModelProps` interface. The properties are:
+* `props`: An object with the character's properties.
+The properties are:
   * `name`: The character's name. ( Required )
   * `surname`: The character's surname. ( Optional )
   * `age`: The character's age. ( Optional )
