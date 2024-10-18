@@ -116,7 +116,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ## Manage game flow with labels
 
-The game flow is managed by functions that call labels, jump to labels, go back, close labels... These functions are in the `narration` object.
+The game flow is managed by functions that `call labels`, `jump labels`, `go back`, `close labels`... These functions are in the `narration` object.
 
 * [Run a label](#run-a-label)
 * [Next Step and Go back](#next-step-and-go-back)
