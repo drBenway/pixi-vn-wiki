@@ -13,7 +13,7 @@ With the [PixiVNJson](/advanced/pixi-vn-json.md) implementation you have the opt
 | Ease of learning | ❌ | ✅ | ✅ |
 | Is it a typed language? | ✅ | ❌ | ❌ |
 | Official vscode extension | ✅ | ❌ | ✅ |
-| Translate possibilities | ✅ | ✅ (Under development) | ✅ (Under development) |
-| Auto-generation of translation files | ❌ | ✅ (Under development) | ✅ (Under development) |
-| Ability to use non-Pixi’VN features | ✅ | ❌ | ❌ |
+| Translate possibilities | ✅ | ✅ ([Under development](https://github.com/DRincs-Productions/pixi-vn-ink/issues/50)) | ✅ (Under development) |
+| Auto-generation of translation files | ❌ | ✅ ([Under development](https://github.com/DRincs-Productions/pixi-vn-json/issues/3)) | ✅ (Under development) |
+| Ability to use non-Pixi’VN features | ✅ | ✅ (using # - [Under development](https://github.com/DRincs-Productions/pixi-vn-ink/issues/51)) | ✅ (using $ - Under development) |
 | Debugging | ✅ | ❌ | ❌ |
