@@ -4,7 +4,7 @@ The narrative is the set of [dialogues](/start/dialogue.md), [choices](/start/ch
 
 With the [PixiVNJson](/advanced/pixi-vn-json.md) implementation you have the option to use various types of narrative languages. You can also switch from one language to another to take advantage of the features of each one.
 
-* JavaScript/TypeScript: it will lead you to write a lot of code. The advantage is that from this language you can type and from here you can perform a lot of functions.
+* JavaScript/TypeScript: it will lead you to write a lot of code. The advantage is that you can type and from here you can perform a lot of functions.
 * [Ink](/ink/ink.md): allows you to write a narrative easily, without having to write a lot of code.
 * [Ren'Py](/renpy/renpy.md) (coming soon): allows you to write a narrative easily, without having to write a lot of code.
 
