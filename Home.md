@@ -12,10 +12,10 @@
   * [Choice Menus](choices)
   * [Input](input)
   * [History](history)
-  * [Other features](other-narrative-features)
   * [Translating](translate)
   * [Typewriter effect](typewriter)
   * [Style Text (Markdown)](markdown)
+  * [Other features](other-narrative-features)
 * [Narration with Ink](ink):
   * [Characters](ink-character)
   * [Style Text (Markdown)](ink-markdown)
