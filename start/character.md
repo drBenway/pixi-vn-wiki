@@ -197,7 +197,8 @@ console.log(angryAlice.name); // Angry Eleonora
 
 ## Custom Character
 
-It recommend creating your own class `Character` that extends `CharacterStoredClass` to use your properties or methods, and "override" the interface `CharacterInterface` to add the new properties.
+It recommend creating your own class `Character` that extends `CharacterStoredClass` and "override" the interface `CharacterInterface`
+to add/edit/remove properties or methods.
 
 For example, you can create a class `Character`. You must "override" the interface `CharacterInterface` to use your properties or methods.
 
