@@ -87,3 +87,36 @@ To clear the current dialogue, you can use `narration.dialogue = undefined`.
 ```typescript
 narration.dialogue = undefined;
 ```
+
+## How to create the narrative dialogue UI screen
+
+For example:
+
+::: react-sandbox {template=vite-react-ts coderHeight=512}
+
+<<< @/snippets/react/index.css{#hidden}
+<<< @/snippets/react/index.tsx{#hidden}
+<<< @/snippets/react/App.tsx{#hidden}
+<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#active/screens/}
+<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
+<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
+<<< @/snippets/react/components/NextButton.tsx{prefix=/components/}
+
+```ts /labels/startLabel.ts [readonly]
+import { canvas, ChoiceMenuOption, narration, newLabel, showImage, Assets } from "@drincs/pixi-vn"
+
+export const startLabel = newLabel("start_label",
+    [
+        () => {
+            narration.dialogue = {
+                character: eggHead,
+                text: "Hello, world!"
+            }
+        },
+    ]
+)
+```
+
+<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
+
+:::
