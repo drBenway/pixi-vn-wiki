@@ -2,26 +2,30 @@
 
 Pixi’VN save all dialogues, choices and responses that have been displayed in the game and all label and step opened.
 
-## Check if the label is already completed
+## Check if the label has already been completed
 
-To check if a label is already completed, use the `narration.isLabelAlreadyCompleted`.
+To check if a label has already been completed, you can use the `narration.isLabelAlreadyCompleted` function.
 
-```typescript
-const isLabelCompleted = narration.isLabelAlreadyCompleted("labelid");
-const isLabelCompleted = narration.isLabelAlreadyCompleted(startLabel);
-```
+The function takes the following parameters:
 
-## Get already made choices of current step
-
-To get the already made choices of the current step, use the `narration.alreadyCurrentStepMadeChoices`.
+* `label`: The [label](/start/labels) to check if it is already completed.
 
 ```typescript
-const choices = narration.alreadyCurrentStepMadeChoices;
+const isLabelCompleted = narration.isLabelAlreadyCompleted(startLabel)
+const isLabelCompleted = narration.isLabelAlreadyCompleted("labelid")
 ```
 
-## Check if current step is already opened
+## Get already been made choices of current step
 
-To check if the current step is already opened, use the `narration.isCurrentStepAlreadyOpened`.
+To get the already been made choices of the current step, you can use the `narration.alreadyCurrentStepMadeChoices`.
+
+```typescript
+const choices = narration.alreadyCurrentStepMadeChoices
+```
+
+## Check if current step is already been opened
+
+To check if the current step is already been opened, you can use the `narration.isCurrentStepAlreadyOpened`.
 
 ```typescript
 const isCurrentStepOpened = narration.isCurrentStepAlreadyOpened;
@@ -29,7 +33,7 @@ const isCurrentStepOpened = narration.isCurrentStepAlreadyOpened;
 
 ## Counter of execution times of the current step
 
-To get the counter of execution times of the current step, use the `narration.currentStepTimesCounter`. **Important**: The counter will be incremented only if `narration.currentStepTimesCounter` is called at least once in a step.
+To get the counter of execution times of the current step, you can use the `narration.currentStepTimesCounter`. **Important**: The counter will be incremented only if `narration.currentStepTimesCounter` is called at least once in a step.
 
 ```typescript
 export const label = newLabel("id",
@@ -67,26 +71,17 @@ export const label = newLabel("id",
 )
 ```
 
-Restart the counter of execution times of the current step, use the `narration.currentStepTimesCounter = 0`.
+To restart the counter of execution times of the current step, you can use the `narration.currentStepTimesCounter = 0`.
 
 ```typescript
 narration.currentStepTimesCounter = 0;
 ```
 
-## Randomize number
-
-Pixi’VN has a built-in function to generate a random number. To generate a random number, use the `narration.getRandomNumber()`. This function takes the following parameters:
-
-- `min`: The minimum value of the random number.
-- `max`: The maximum value of the random number.
-- `options`:
-  - `onceonly`: If true, the number will be generated only once on the current step of the label (default: false). Attention: `min` and `max`affect the storage of already generated numbers.
-
 ## Get Narrative History
 
-The Narration timeline of the game is a list of all dialogues that have been displayed. It is useful to know what has been said and to display it in the game.
+The Narration timeline of the game is a list of all dialogues that have been displayed. It is useful to show the history of dialogues and choices to the player.
 
-To get the history of dialogues, choices and responses for every [game steps](/start/labels), use the `narration.narrativeHistory`. The return is a `NarrativeHistory<T>[]`.
+To get the narrative history of the game, you can use the `narration.narrativeHistory`. It returns a list of `NarrativeHistory<T>[]`.
 
 ```typescript
 const dialogues: NarrativeHistory<Dialogue>[] = narration.narrativeHistory;

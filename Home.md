@@ -12,6 +12,7 @@
   * [Choice Menus](choices)
   * [Input](input)
   * [History](history)
+  * [Other features](other-narrative-features)
   * [Translating](translate)
   * [Typewriter effect](typewriter)
   * [Style Text (Markdown)](markdown)

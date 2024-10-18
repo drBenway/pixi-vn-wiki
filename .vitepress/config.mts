@@ -67,6 +67,7 @@ export default defineConfig({
                 { text: 'Choice Menus', link: '/start/choices' },
                 { text: 'Input', link: '/start/input' },
                 { text: 'History', link: '/start/history' },
+                { text: 'Other features', link: '/start/other-narrative-features' },
                 { text: 'Translating', link: '/start/translate' },
                 { text: 'Typewriter effect', link: '/start/typewriter' },
                 { text: 'Style Text (Markdown)', link: '/start/markdown' },
