@@ -202,9 +202,9 @@ to add/edit/remove properties or methods.
 
 For example, you want to create a class `Character`, you must "override" the interface `CharacterInterface` to use your properties or methods. ( See the following file: `pixi-vn.types.ts` )
 
-Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`. ( See the following file: `Character.ts` )
+Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`. ( See the following file `Character.ts` )
 
-In this class you can't set the properties, because they are read-only. For set the properties and store them in the game storage, you must use the `setStorageProperty` method. ( See the following file: `Character.ts` )
+In this class you can't set the properties, because they are read-only. For set the properties and store them in the game storage, you must use the `setStorageProperty` method. ( See the following file `Character.ts` )
 
 ::: react-sandbox {template=vite-react-ts coderHeight=712 previewHeight=1}
 
