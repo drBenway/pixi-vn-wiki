@@ -9,16 +9,16 @@ A dialogue can link to a [character](/start/character#use-characters-in-the-game
 
 To set the current dialogue, you can use the `narration.dialogue`.
 
-::: react-sandbox {template=vite-react-ts coderHeight=749}
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=749}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/index.tsx{#hidden}
 <<< @/snippets/react/App.tsx{#hidden}
 <<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
 <<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
 <<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
 <<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
-<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
 
 ```ts /labels/startLabel.ts [active]
 import { Dialogue, narration, newLabel } from "@drincs/pixi-vn"
@@ -70,6 +70,8 @@ export const eggHead = new CharacterBaseModel('egg-head', {
 saveCharacter(eggHead);
 ```
 
+<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
+
 :::
 
 ## Get the current Dialogue
@@ -92,18 +94,20 @@ narration.dialogue = undefined;
 
 For example:
 
-::: react-sandbox {template=vite-react-ts coderHeight=512}
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/index.tsx{#hidden}
 <<< @/snippets/react/App.tsx{#hidden}
+<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
 <<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#active/screens/}
 <<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
 <<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
-<<< @/snippets/react/components/NextButton.tsx{prefix=/components/}
 
-```ts /labels/startLabel.ts [readonly]
+```ts /labels/startLabel.ts
 import { canvas, ChoiceMenuOption, narration, newLabel, showImage, Assets } from "@drincs/pixi-vn"
+import { eggHead } from "../values/characters"
 
 export const startLabel = newLabel("start_label",
     [
@@ -115,6 +119,20 @@ export const startLabel = newLabel("start_label",
         },
     ]
 )
+```
+
+```ts /values/characters.ts [hidden]
+import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
+
+export const eggHead = new CharacterBaseModel('egg-head', {
+    name: 'Egg',
+    surname: 'Head',
+    age: 25,
+    icon: "https://pixijs.com/assets/eggHead.png",
+    color: "#9e2e12"
+});
+
+saveCharacter(eggHead);
 ```
 
 <<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}

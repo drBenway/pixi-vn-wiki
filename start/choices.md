@@ -98,17 +98,18 @@ narration.choiceMenuOptions = undefined;
 
 For example:
 
-::: react-sandbox {template=vite-react-ts coderHeight=512}
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/index.tsx{#hidden}
 <<< @/snippets/react/App.tsx{#hidden}
 <<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
 <<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
 <<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
 <<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#active/screens/}
 
-```ts /labels/startLabel.ts [readonly]
+```ts /labels/startLabel.ts
 import { canvas, ChoiceMenuOption, narration, newLabel, showImage, Assets } from "@drincs/pixi-vn"
 
 export const startLabel = newLabel("start_label",
@@ -119,7 +120,7 @@ export const startLabel = newLabel("start_label",
                 new ChoiceMenuOption("Skully", skullyLabel, {}),
             ]
         },
-        (props) => narration.jumpLabel("start_label", props),
+        async (props) => await narration.jumpLabel("start_label", props),
     ],
     {
         onLoadStep: async () => {
