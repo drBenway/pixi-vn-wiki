@@ -2,7 +2,7 @@
 
 In Visual Novels it may be necessary to ask the user to enter text, number, date, etc.
 
-Pixi’VN provides functions to manage this possibility. In short, the operation is that through the functions provided you enable and can set the type of variable that will be requested from the user, while the [UI](/start/interface.md) side will have to manage the information obtained from this variable.
+Pixi’VN provides functions to manage this possibility. In short, through the functions provided by Pixi’VN, you can enable the game to request input from the player, while the [UI](/start/interface.md) must manage the information obtained from this variable.
 
 ## Requesting input
 
@@ -36,3 +36,40 @@ To remove the input request, you must use the `narration.removeInputRequest()` f
 ```typescript
 narration.removeInputRequest()
 ```
+
+## How to create the input dialog UI
+
+For example:
+
+( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
+
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
+
+<<< @/snippets/react/index.css{#hidden}
+<<< @/snippets/react/index.tsx{#hidden}
+<<< @/snippets/react/App.tsx{#hidden}
+<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
+<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#active/screens/modals/}
+<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
+
+```ts /labels/startLabel.ts
+import { narration, newLabel } from "@drincs/pixi-vn"
+
+export const startLabel = newLabel("start_label",
+    [
+        () => {
+            narration.dialogue = "What is your name?"
+            narration.requestInput({ type: "string" })
+        },
+        () => {
+            narration.dialogue = `Nice to meet you, ${narration.inputValue}!`
+        }
+    ]
+)
+```
+
+<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
+
+:::

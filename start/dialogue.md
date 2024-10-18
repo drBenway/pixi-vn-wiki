@@ -94,6 +94,8 @@ narration.dialogue = undefined;
 
 For example:
 
+( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
+
 ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
 
 <<< @/snippets/react/index.css{#hidden}
