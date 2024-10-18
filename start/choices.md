@@ -2,6 +2,61 @@
 
 In the visual novel, usually, there are choice menus that allow the player to make decisions that will affect the story.
 
+## Set a choice menu
+
+To set a choice menu, you can use `narration.choiceMenuOptions` and pass an array of [`ChoiceMenuOption`](#choice-menu-option) or/and [`ChoiceMenuOptionClose`](#choice-for-closing-the-menu).
+
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=749}
+
+<<< @/snippets/react/index.css{#hidden}
+<<< @/snippets/react/index.tsx{#hidden}
+<<< @/snippets/react/App.tsx{#hidden}
+<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
+<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
+<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
+
+```ts /labels/startLabel.ts [active]
+import { ChoiceMenuOption, ChoiceMenuOptionClose, narration, newLabel } from "@drincs/pixi-vn"
+
+export const startLabel = newLabel("start_label",
+    [
+        async () => {
+            narration.dialogue = "Choose a fruit:"
+            narration.choiceMenuOptions = [
+                new ChoiceMenuOption("Orange", orangeLabel, {}), // by default, the label will be called by call
+                new ChoiceMenuOption("Banana", bananaLabel, {}, { type: "jump" }),
+                new ChoiceMenuOption("Apple", appleLabel, { quantity: 5 }, { type: "call" }),
+                new ChoiceMenuOptionClose("Cancel"),
+            ]
+        },
+        () => { narration.dialogue = "Restart" },
+        async (props) => await narration.jumpLabel("start_label", props)
+    ],
+)
+
+const appleLabel = newLabel<{ quantity: number }>("AppleLabel",
+    [
+        (props) => { narration.dialogue = `You have ${props?.quantity ?? 0} apples` },
+    ]
+)
+const orangeLabel = newLabel("OrangeLabel",
+    [
+        () => { narration.dialogue = "You have an orange" }
+    ]
+)
+const bananaLabel = newLabel("BananaLabel",
+    [
+        () => { narration.dialogue = "You have a banana" }
+    ]
+)
+```
+
+<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
+
+:::
+
 ## Choice menu option
 
 In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption` class and a function to handle the choice.
@@ -34,34 +89,9 @@ In addition to `ChoiceMenuOption` there is also another class `ChoiceMenuOptionC
 
 You can use this class to create a item of the `narration.choiceMenuOptions` list. To select a choice, you must use the [`narration.selectChoice` function](#select-a-choice).
 
-## Set a choice menu
-
-To set a choice menu, use the `narration.choiceMenuOptions` and pass an array of `ChoiceMenuOption` or/and `ChoiceMenuOptionClose`.
-
-```typescript
-export const appleLabel = newLabel<{quantity: number}>("AppleLabel",
-    [
-        async (props) => {
-            let quantity = props?.quantity ?? 0;
-            console.log(`You have ${quantity} apples`);
-        },
-    ]
-)
-```
-
-```typescript
-narration.dialogue = "Choose a fruit:"
-narration.choiceMenuOptions = [
-    new ChoiceMenuOption("Orange", orangeLabel, {}), // by default, the label will be called by call
-    new ChoiceMenuOption("Banana", bananaLabel, {}, { type: "jump" }),
-    new ChoiceMenuOption("Apple", appleLabel, { quantity: 5 }, { type: "call" }),
-    new ChoiceMenuOptionClose("Cancel"),
-]
-```
-
 ## Get the choice menu
 
-To get the choice menu, use the `narration.choiceMenuOptions`. The return is an array of `ChoiceMenuOption`.
+To get the choice menu, you can use `narration.choiceMenuOptions`. The return is an array of `ChoiceMenuOption` and/or `ChoiceMenuOptionClose`.
 
 ```typescript
 const menuOptions: ChoiceMenuOption[] = narration.choiceMenuOptions;
@@ -69,7 +99,7 @@ const menuOptions: ChoiceMenuOption[] = narration.choiceMenuOptions;
 
 ## Select a choice
 
-To select a choice, you must use the `callLabel` or `jumpLabel` function.
+To select a choice, you can use `narration.selectChoice`.
 
 ```typescript
 narration.selectChoice(item, {
@@ -88,7 +118,7 @@ narration.selectChoice(item, {
 
 ## Clear the choice menu
 
-To clear the choice menu, use the `narration.choiceMenuOptions`.
+To clear the choice menu, you can use `narration.choiceMenuOptions = undefined`.
 
 ```typescript
 narration.choiceMenuOptions = undefined;
