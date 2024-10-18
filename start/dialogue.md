@@ -3,11 +3,11 @@
 The dialogue/narration is the core of the visual novel.
 
 In Pixi’VN, is possible to set/get a current dialogue and get the history of dialogues.
-A dialogue can link to a [character](/start/character#use-characters-in-the-game) or [character id](/start/character#use-characters-in-the-game) or a string and will be used to indicate who is speaking.
+A dialogue can link to a [character](/start/character#use-characters-in-the-game) or a string and will be used to indicate who is speaking.
 
 ## Set a Current Dialogue
 
-To set a current dialogue, use the `narration.dialogue`.
+To set the current dialogue, you can use the `narration.dialogue`.
 
 ```typescript
 // in this example, not exists a character with id 'Alice'
@@ -49,7 +49,7 @@ narration.dialogue = "Hello, world!"
 
 ## Get a Current Dialogue
 
-To get the current dialogue, use the `narration.dialogue`. The return is a `Dialogue`.
+To get the current dialogue, you can use the `narration.dialogue`. The return is a `Dialogue`.
 
 ```typescript
 const currentDialogue: Dialogue = narration.dialogue;
@@ -57,7 +57,7 @@ const currentDialogue: Dialogue = narration.dialogue;
 
 ## Clear a Current Dialogue
 
-To clear the current dialogue, use the `narration.dialogue`.
+To clear the current dialogue, you can use the `narration.dialogue`.
 
 ```typescript
 narration.dialogue = undefined;
