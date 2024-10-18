@@ -6,8 +6,12 @@ In Pixi’VN, you can manage this succession of screens with the "**steps**". Th
 
 The **labels** are containers of steps, they are used to organize the steps in a more readable way.
 
-Basically the idea of the life cycle of the game is which is started at the beginning a label and is executed the first step of the label. After that, connecting the function [Next Step](#next-step) to a event (like a button click), every time the function is called, the next step of the label is executed.
-Some steps could start other labels. The game will end only when all the steps are completed.
+Basically the idea of the life cycle of the game is:
+
+* The game starts by [calling a label](#call-a-label). The first step of the label will be executed automatically.
+* After that, connecting the function [Next Step](#next-step) to a event (like a button click), every time the function is called, the next step of the label is executed.
+Some steps could start other labels.
+* The game will end only when all the steps are completed.
 
 ## Label
 
@@ -15,8 +19,8 @@ The label is a container of steps. It is used to organize the steps in a more re
 
 For create a label you must use the `newLabel()` function and pass:
 
-* the `id` of the label, must be unique
-* the `steps` of the label, an array of functions that will be executed in order. Or a function that returns the steps.
+* The `id` of the label, must be unique
+* The `steps` of the label, an array of functions that will be executed in order. Or a function that returns the steps.
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
@@ -35,7 +39,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ### Parameters of the label steps
 
-You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters) for all steps of the label.
+You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters).
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
