@@ -148,20 +148,17 @@ import { narration } from '@drincs/pixi-vn'
 narration.callLabel(startLabel, {})
 ```
 
-Remember that if you execute the `narration.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
+Remember that if you execute the `narration.callLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and use `await`. The reason is that it might generate a wrong history.
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
 
 export const startLabel = newLabel(START_LABEL_ID,
     [
-        (props) => narration.callLabel(TestLabel, props),
-        // not recommended but you can use this way:
-        (props) => {
-            return narration.callLabel(TestLabel, props).then((result) => {
-                return result
-            })
+        async (props) => {
+            return await narration.callLabel(TestLabel, props)
         },
+        async (props) => await narration.callLabel(TestLabel, props),
     ]
 )
 ```
@@ -185,25 +182,24 @@ import { narration } from '@drincs/pixi-vn'
 narration.jumpLabel(startLabel, {})
 ```
 
-Remember that if you execute the `narration.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result).
+Remember that if you execute the `narration.jumpLabel` inside a step, you should return the [result of first step of the called label](#all-steps-result) and use `await`. The reason is that it might not await the first step of the new label.
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
 
 export const startLabel = newLabel(START_LABEL_ID,
     [
-        (props) => narration.jumpLabel(TestLabel, props),
-        // not recommended but you can use this way:
-        (props) => {
-            return narration.jumpLabel(TestLabel, props).then((result) => {
-                return result
-            })
+        async (props) => {
+            return await narration.jumpLabel(TestLabel, props)
         },
+        async (props) => await narration.jumpLabel(TestLabel, props),
     ]
 )
 ```
 
 ### Next Step and Go back
+
+<!-- TODO can go next -->
 
 #### Next Step
 
@@ -227,8 +223,7 @@ narration.goNext({})
     })
 ```
 
-Remember that if you execute the `narration.goNext()` inside a
- it is really important to use await. The reason is that it might generate a wrong history, so using [`narration.goBack()`](#go-back) might cause errors.
+Remember that if you execute the `narration.goNext()` inside a step, you should return the [result of the step](#all-steps-result) and use `await`. The reason is that it might generate a wrong history.
 
 ```typescript
 import { narration, newLabel } from '@drincs/pixi-vn'
@@ -248,7 +243,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 Every step the system saves the current state of the game. To go back to the previous step you must execute the `narration.goBack()` function.
 
-In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/start/interface.md#what-is-the-url-path-and-routes) of the previous step, so you can use it to [navigate to the previous UI screen](/start/interface#navigateswitch-between-ui-screens).
+In parameters you must pass a function `navigate: (path: string) => void` that will be called with the [URL Path or Route](/start/interface.md#what-is-the-url-path-and-routes) of the previous step, so you can to [navigate to the previous UI screen](/start/interface#navigateswitch-between-ui-screens).
 
 For exemple if you use a [React Router Dom](https://reactrouter.com):
 
@@ -280,7 +275,7 @@ narration.closeCurrentLabel()
 #### Close all labels
 
 To close all labels you must execute the `narration.closeAllLabels()` function.
-**If you call this function and after that you don't call any label, the game will block.** After closing all labels you should call a [label for manage the end of the game](#how-manage-the-end-of-the-game).
+**If you call this function and after that you don't call any label, the [game will end](#how-manage-the-end-of-the-game).**
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
@@ -321,7 +316,7 @@ When all the steps of all labels are executed, the game will block. The develope
 * The game has no end, so if the steps are finished, there has been an error, and it needs to be handled
 * The game ends when the player reaches a certain point. For example, when the player reaches a certain point in the story you can navigate to a game over screen
 
-The method for managing the end of the game is to set `narration.onGameEnd` with a function that has the same characteristics as a step function.
+The method for managing the end of the game is to set `narration.onGameEnd`. This function is executed when the game ends and have same characteristics of a `step`.
 
 For example, if you want to end the game when the steps are finished:
 
@@ -374,4 +369,34 @@ narration.onStepError = async (error, props) => {
 }
 ```
 
-<!-- TODO: onLoadStep onStepEnd onStepStart -->
+## How to create the Go Back and Go Next buttons
+
+For example:
+
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
+
+<<< @/snippets/react/index.css{#hidden}
+<<< @/snippets/react/index.tsx{#hidden}
+<<< @/snippets/react/App.tsx{#hidden}
+<<< @/snippets/react/components/NextButton.tsx{prefix=#active/components/}
+<<< @/snippets/react/components/BackButton.tsx{prefix=/components/}
+<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
+<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
+<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
+
+```ts /labels/startLabel.ts
+import { narration, newLabel } from "@drincs/pixi-vn"
+
+export const startLabel = newLabel("start_label",
+    [
+        () => narration.dialogue = "Step 1",
+        () => narration.dialogue = "Step 2",
+        () => narration.dialogue = "Step 3",
+        () => narration.dialogue = "Restart",
+    ]
+)
+```
+
+<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
+
+:::

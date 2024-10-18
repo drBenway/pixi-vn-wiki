@@ -106,7 +106,7 @@ For example:
 <<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
 
 ```ts /labels/startLabel.ts
-import { canvas, ChoiceMenuOption, narration, newLabel, showImage, Assets } from "@drincs/pixi-vn"
+import { narration, newLabel } from "@drincs/pixi-vn"
 import { eggHead } from "../values/characters"
 
 export const startLabel = newLabel("start_label",
