@@ -7,10 +7,11 @@ In Pixi’VN, characters are created using the `CharacterBaseModel` class or a [
 
 To initialize a character, you need to create a new instance of the `CharacterBaseModel` class and add it into a game character dictionary, when the game is initialized.
 
-For create a new instance of `CharacterBaseModel` you need to pass:
+For create a new instance of `CharacterBaseModel` you need the following parameters:
 
-* `id`: A unique identifier for the character. It is used to reference the character in the game (must be unique).
-* `props`: An object with the character's properties. `props` extends the `ICharacterBaseModel` interface. The properties are:
+* `id`: A unique identifier for the character (string). It is used to reference the character in the game (must be unique).
+If you want to create a [character with an emotion, you can pass an object](#character-emotions).
+* `props`: An object with the character's properties. `props` extends the `CharacterBaseModelProps` interface. The properties are:
   * `name`: The character's name. ( Required )
   * `surname`: The character's surname. ( Optional )
   * `age`: The character's age. ( Optional )
@@ -128,8 +129,8 @@ To get the props used when instantiating the class you can use:
 Here's a simplified implementation of the `CharacterBaseModel` class for better understanding of the properties that are stored in the game storage:
 
 ```typescript
-export default class CharacterBaseModel extends StoredClassModel implements ICharacterBaseModel {
-    constructor(id: string, props: ICharacterBaseModel) {
+export default class CharacterBaseModel extends StoredClassModel implements CharacterBaseModelProps {
+    constructor(id: string, props: CharacterBaseModelProps) {
         super(
             // ...
         )
