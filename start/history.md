@@ -87,6 +87,21 @@ To get the narrative history of the game, you can use the `narration.narrativeHi
 const dialogues: NarrativeHistory<Dialogue>[] = narration.narrativeHistory;
 ```
 
+## Delete Narrative History
+
+To delete all the narrative history, use the `narration.removeNarrativeHistory`.
+
+```typescript
+narration.removeNarrativeHistory();
+```
+
+To delete a part of the narrative history, use the `narration.removeNarrativeHistory`.
+
+```typescript
+// delete the first 2 elements
+narration.removeNarrativeHistory(2);
+```
+
 ## Example
 
 ```tsx
@@ -175,19 +190,4 @@ export default function History() {
         </Box>
     );
 }
-```
-
-## Delete Narrative History
-
-To delete all the narrative history, use the `narration.removeNarrativeHistory`.
-
-```typescript
-narration.removeNarrativeHistory();
-```
-
-To delete a part of the narrative history, use the `narration.removeNarrativeHistory`.
-
-```typescript
-// delete the first 2 elements
-narration.removeNarrativeHistory(2);
 ```
