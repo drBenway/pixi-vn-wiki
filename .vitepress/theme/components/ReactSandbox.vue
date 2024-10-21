@@ -12,6 +12,7 @@
       ...props, // do not forget it
       deps: {
         '@drincs/pixi-vn': 'latest',
+        '@drincs/pixi-vn-ink': 'latest',
         '@tanstack/react-query': '^5.59.13',
         '@emotion/react': '^11.13.3',
         '@emotion/styled': '^11.13.0',
