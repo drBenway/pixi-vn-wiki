@@ -158,6 +158,7 @@ export default function Typewriter({ text, delay = 30 }: {
                                 href={href}
                                 target="_blank"
                                 variants={letterVariants}
+                                style={style}
                             >
                                 {children}
                             </motion.a>
@@ -170,6 +171,7 @@ export default function Typewriter({ text, delay = 30 }: {
                             letterVariants={letterVariants}
                             dadElement={(children) => <motion.code
                                 variants={letterVariants}
+                                style={style}
                             >
                                 {children}
                             </motion.code>
@@ -181,10 +183,7 @@ export default function Typewriter({ text, delay = 30 }: {
                             children={children}
                             letterVariants={letterVariants}
                             dadElement={(children) => <motion.ul
-                                style={{
-                                    ...style,
-                                    margin: 0,
-                                }}
+                                style={style}
                                 variants={letterVariants}
                             >
                                 {children}
@@ -294,10 +293,7 @@ export default function Typewriter({ text, delay = 30 }: {
                             children={children}
                             letterVariants={letterVariants}
                             dadElement={(children) => <motion.h1
-                                style={{
-                                    ...style,
-                                    margin: 0,
-                                }}
+                                style={style}
                                 variants={letterVariants}
                             >
                                 {children}
@@ -310,10 +306,7 @@ export default function Typewriter({ text, delay = 30 }: {
                             children={children}
                             letterVariants={letterVariants}
                             dadElement={(children) => <motion.h2
-                                style={{
-                                    ...style,
-                                    margin: 0,
-                                }}
+                                style={style}
                                 variants={letterVariants}
                             >
                                 {children}
@@ -326,10 +319,7 @@ export default function Typewriter({ text, delay = 30 }: {
                             children={children}
                             letterVariants={letterVariants}
                             dadElement={(children) => <motion.h3
-                                style={{
-                                    ...style,
-                                    margin: 0,
-                                }}
+                                style={style}
                                 variants={letterVariants}
                             >
                                 {children}
@@ -342,10 +332,7 @@ export default function Typewriter({ text, delay = 30 }: {
                             children={children}
                             letterVariants={letterVariants}
                             dadElement={(children) => <motion.h4
-                                style={{
-                                    ...style,
-                                    margin: 0,
-                                }}
+                                style={style}
                                 variants={letterVariants}
                             >
                                 {children}
