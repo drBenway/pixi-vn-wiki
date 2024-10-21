@@ -6,23 +6,29 @@ The package Pixi'VN does not manage Markdown, but it is recommended to use a lib
 
 It is recommended to use a library that converts Markdown to HTML, for example [react-markdown](https://www.npmjs.com/package/react-markdown).
 
-```tsx
-import { Typography } from "@mui/joy";
-import { motion, Variants } from "framer-motion";
-import { Key, useMemo } from "react";
+::: react-typewriter-sandbox {template=vite-react-ts previewHeight=200 coderHeight=400}
+
+```tsx /App.tsx [hidden]
+import MarkdownComponent from "./components/MarkdownComponent";
+import text from "./values/markdown.md?raw";
+
+export default function App() {
+    return (
+        <>
+            <MarkdownComponent text={text} />
+        </>
+    )
+}
+```
+
+```tsx /components/MarkdownComponent.tsx [active]
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 
-const text = `
-# Hello, world!
-
-This is a paragraph.
-
-<span style="color:blue">some *blue* text</span>.
-`
-
-export default function Example() {
+export default function MarkdownComponent({ text }: {
+    text: string;
+}) {
     return (
         <Markdown
             remarkPlugins={[remarkGfm]}
@@ -33,6 +39,10 @@ export default function Example() {
     )
 };
 ```
+
+<<< @/snippets/react/values/markdown.md{prefix=/values/}
+
+:::
 
 ## Markdown + Typewriter
 
