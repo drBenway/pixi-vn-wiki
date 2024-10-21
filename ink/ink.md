@@ -8,6 +8,29 @@ Ink is a scripting language for writing interactive narrative. It is used in gam
 
 This language is very simple to learn. Go on [ink website](https://www.inklestudios.com/ink/) to learn more about it.
 
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
+
+<<< @/snippets/react/index.css{#hidden}
+<<< @/snippets/react/App.tsx{#hidden}
+<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
+<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
+<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
+<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
+
+```ink /ink_labels/start.ink [active]
+=== start ===
+Hello
+-> END
+```
+
+<<< @/snippets/react/ink/index.tsx{prefix=/}
+<<< @/snippets/react/ink/ink.d.ts{prefix=#readOnly/}
+<<< @/snippets/react/ink/vite.config.ts{prefix=#readOnly/}
+
+:::
+
 ## Why use Ink integration?
 
 Programming a game narrative in **Javascript/Typescript** has the advantage of having total development freedom, but the disadvantage is that it slows down the writing of a narrative (it makes you write a lot of code).
