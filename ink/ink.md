@@ -8,7 +8,7 @@ Ink is a scripting language for writing interactive narrative. It is used in gam
 
 This language is very simple to learn. Go on [ink website](https://www.inklestudios.com/ink/) to learn more about it.
 
-::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=522}
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/App.tsx{#hidden}
@@ -19,32 +19,8 @@ This language is very simple to learn. Go on [ink website](https://www.inklestud
 <<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
 <<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
 
-```ink /ink_labels/start.ink [active]
-=== start ===
-
-We arrived into London at 9.45pm exactly.
-
-* "There is not a moment to lose!"[] I declared.
- -> hurry_outside
-
-* "Monsieur, let us savour this moment!"[] I declared.
- My master clouted me firmly around the head and dragged me out of the door.
- -> dragged_outside
-
-* [We hurried home] -> hurry_outside
-
-=== hurry_outside ===
-We hurried home to Savile Row -> as_fast_as_we_could
-
-=== dragged_outside ===
-He insisted that we hurried home to Savile Row
--> as_fast_as_we_could
-
-=== as_fast_as_we_could ===
-<> as fast as we could.
-```
-
-<<< @/snippets/react/ink/index.tsx{prefix=#readOnly/}
+<<< @/snippets/react/ink/ink_labels/start.ink{prefix=#active/ink_labels/}
+<<< @/snippets/react/ink/index.tsx{prefix=/}
 <<< @/snippets/react/ink/ink.d.ts{prefix=#readOnly/}
 <<< @/snippets/react/ink/vite.config.ts{prefix=#readOnly/}
 
