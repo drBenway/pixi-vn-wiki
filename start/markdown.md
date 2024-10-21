@@ -4,8 +4,6 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 
 The package Pixi'VN does not manage Markdown, but it is recommended to use a library that converts Markdown to HTML, for example [react-markdown](https://www.npmjs.com/package/react-markdown).
 
-It is recommended to use a library that converts Markdown to HTML, for example [react-markdown](https://www.npmjs.com/package/react-markdown).
-
 ::: react-typewriter-sandbox {template=vite-react-ts previewHeight=200 coderHeight=400}
 
 ```tsx /App.tsx [hidden]
