@@ -50,36 +50,60 @@ To be able to merge with Markdown and Typewriter, you can use [react-markdown](h
 
 The following phrase creates an effect of typing only for a "normal" text (in the react-markdown is the "p" element), for the other elements it will be displayed immediately.
 
-```tsx
+::: react-typewriter-sandbox {template=vite-react-ts previewHeight=200 coderHeight=912}
+
+```tsx /App.tsx [hidden]
+import Typewriter from "./components/Typewriter";
+import text from "./values/markdown.md?raw";
+
+export default function App() {
+    return (
+        <>
+            <Typewriter text={text} />
+        </>
+    )
+}
+```
+
+```tsx /components/Typewriter.tsx [active]
 import { motion, Variants } from "framer-motion";
-import { Key, useMemo } from "react";
+import { useMemo, useRef } from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 
-function TypewriterMarkdownInternal({ children, key, letterVariants, dadElement }: {
-    children: any,
-    key: Key | null | undefined;
-    letterVariants: Variants;
-    dadElement: (children: JSX.Element | JSX.Element[]) => JSX.Element | JSX.Element[];
-    isRoot?: boolean;
+function TypewriterInternal({ children, letterVariants, dadElement }: {
+    children: any
+    letterVariants: Variants
+    dadElement: (children: JSX.Element | JSX.Element[]) => JSX.Element | JSX.Element[]
+    isRoot?: boolean
 }) {
     if (typeof children === "string") {
-        const spanList = children.split("").map((char, i) => (
-            <motion.span key={`${key}-${char}-${i}`} variants={letterVariants} >
+        const spanList = children.split("").map((char, i) => {
+            const ref = useRef<HTMLSpanElement>(null);
+            return <motion.span
+                ref={ref}
+                key={`span-${char}-${i}`}
+                variants={letterVariants}
+            >
                 {char}
             </motion.span>
-        ))
+        })
         return dadElement(spanList)
     }
-    if (Array.isArray(children)) {
+    else if (Array.isArray(children)) {
         const list = children.map((child) => {
             if (typeof child === "string") {
-                let spanList = child.split("").map((char, i) => (
-                    <motion.span key={`${key}-${char}-${i}`} variants={letterVariants} >
+                let spanList = child.split("").map((char, i) => {
+                    const ref = useRef<HTMLSpanElement>(null);
+                    return <motion.span
+                        ref={ref}
+                        key={`span-${char}-${i}`}
+                        variants={letterVariants}
+                    >
                         {char}
                     </motion.span>
-                ))
+                })
                 return spanList
             }
             return child
@@ -89,7 +113,10 @@ function TypewriterMarkdownInternal({ children, key, letterVariants, dadElement 
     return dadElement(children)
 };
 
-export default function TypewriterMarkdown({ text, delay = 0 }: { text: string; delay?: number; }) {
+export default function Typewriter({ text, delay = 30 }: {
+    text: string
+    delay?: number
+}) {
     const sentenceVariants: Variants = {
         hidden: {},
         visible: { opacity: 1, transition: { staggerChildren: delay / 1000 } },
@@ -100,24 +127,24 @@ export default function TypewriterMarkdown({ text, delay = 0 }: { text: string; 
     }), [delay]);
 
     return (
-        <motion.p
+        <motion.div
+            key={text}
             variants={sentenceVariants}
             initial="hidden"
-            animate="visible"
+            animate={"visible"}
         >
             <Markdown
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
                 components={{
                     // "p" element is the "normal" text, it will have the typewriter effect
-                    p: ({ children, key }) => {
-                        return <TypewriterMarkdownInternal
+                    p: ({ children }) => {
+                        return <TypewriterInternal
                             children={children}
-                            key={key}
                             letterVariants={letterVariants}
                             dadElement={(children) => {
                                 if (Array.isArray(children)) {
-                                    children.push(<motion.br key={key + "-br"} />)
+                                    children.push(<motion.br />)
                                     return children
                                 }
                                 return children
@@ -125,15 +152,13 @@ export default function TypewriterMarkdown({ text, delay = 0 }: { text: string; 
                         />
                     },
                     // Other elements will be displayed immediately
-                    a: ({ children, href, key, style }) => {
-                        return <TypewriterMarkdownInternal
+                    a: ({ children, href, style }) => {
+                        return <TypewriterInternal
                             children={children}
-                            key={key}
                             letterVariants={letterVariants}
                             dadElement={(children) => <motion.a
                                 href={href}
-                                key={key}
-                                style={style}
+                                target="_blank"
                                 variants={letterVariants}
                             >
                                 {children}
@@ -141,14 +166,140 @@ export default function TypewriterMarkdown({ text, delay = 0 }: { text: string; 
                             }
                         />
                     },
-                    h1: ({ children, key, style }) => {
-                        return <TypewriterMarkdownInternal
+                    code: ({ children, style }) => {
+                        return <TypewriterInternal
                             children={children}
-                            key={key}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.code
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.code>
+                            }
+                        />
+                    },
+                    ul: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.ul
+                                style={{
+                                    ...style,
+                                    margin: 0,
+                                }}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.ul>
+                            }
+                        />
+                    },
+                    li: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.li
+                                style={style}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.li>
+                            }
+                        />
+                    },
+                    strong: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.strong
+                                style={style}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.strong>
+                            }
+                        />
+                    },
+                    em: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.em
+                                style={style}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.em>
+                            }
+                        />
+                    },
+                    hr: ({ style }) => {
+                        return <motion.hr
+                            style={style}
+                            variants={letterVariants}
+                        />
+                    },
+                    th: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.th
+                                style={style}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.th>
+                            }
+                        />
+                    },
+                    del: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.del
+                                style={style}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.del>
+                            }
+                        />
+                    },
+                    table: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.table
+                                style={style}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.table>
+                            }
+                        />
+                    },
+                    span: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.span
+                                style={style}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.span>
+                            }
+                        />
+                    },
+                    h1: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
                             letterVariants={letterVariants}
                             dadElement={(children) => <motion.h1
-                                key={key}
-                                style={style}
+                                style={{
+                                    ...style,
+                                    margin: 0,
+                                }}
                                 variants={letterVariants}
                             >
                                 {children}
@@ -156,13 +307,63 @@ export default function TypewriterMarkdown({ text, delay = 0 }: { text: string; 
                             }
                         />
                     },
-                    // ...
-                    // You can see the complete implementation here: https://github.com/DRincs-Productions/pixi-vn-react-template/blob/main/src/components/TypewriterMarkdown.tsx
+                    h2: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.h2
+                                style={{
+                                    ...style,
+                                    margin: 0,
+                                }}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.h2>
+                            }
+                        />
+                    },
+                    h3: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.h3
+                                style={{
+                                    ...style,
+                                    margin: 0,
+                                }}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.h3>
+                            }
+                        />
+                    },
+                    h4: ({ children, style }) => {
+                        return <TypewriterInternal
+                            children={children}
+                            letterVariants={letterVariants}
+                            dadElement={(children) => <motion.h4
+                                style={{
+                                    ...style,
+                                    margin: 0,
+                                }}
+                                variants={letterVariants}
+                            >
+                                {children}
+                            </motion.h4>
+                            }
+                        />
+                    },
                 }}
             >
                 {text}
             </Markdown>
-        </Typography>
+        </motion.div>
     )
 };
 ```
+
+<<< @/snippets/react/values/markdown.md{prefix=/values/}
+
+:::
