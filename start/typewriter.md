@@ -63,27 +63,46 @@ You can set the delay to 50 milliseconds by passing delay={50}.
 
 You can achieve the same result using the library [Framer Motion](https://www.framer.com/motion/):
 
-```tsx
-import { motion, Variants } from "framer-motion";
+::: react-typewriter-sandbox {template=vite-react-ts previewHeight=200 coderHeight=695}
+
+```tsx /App.tsx [hidden]
+import Typewriter from "./components/Typewriter";
+import text from "./values/text.txt?raw";
+
+export default function App() {
+    return (
+        <>
+            <Typewriter text={text} />
+        </>
+    )
+}
+```
+
+```tsx /components/Typewriter.tsx [active]
+import { motion } from "framer-motion";
 import { useMemo } from "react";
 
-export default function Typewriter({ children, delay = 0 }: { children: string; delay?: number; }) {
-    const sentenceVariants: Variants = {
+export default function Typewriter({ text, delay = 30 }: {
+    text: string;
+    delay?: number;
+}) {
+    const sentenceVariants = {
         hidden: {},
         visible: { opacity: 1, transition: { staggerChildren: delay / 1000 } },
     };
-    const letterVariants = useMemo<Variants>(() => ({
+    const letterVariants = useMemo(() => ({
         hidden: { opacity: 0 },
         visible: { opacity: 1, transition: { opacity: { duration: 0 } } },
     }), [delay]);
 
     return (
         <motion.p
+            key={text}
             variants={sentenceVariants}
             initial="hidden"
             animate="visible"
         >
-            {children.split("").map((char, i) => (
+            {text.split("").map((char, i) => (
                 <motion.span key={`${char}-${i}`} variants={letterVariants}>
                     {char}
                 </motion.span>
@@ -92,3 +111,15 @@ export default function Typewriter({ children, delay = 0 }: { children: string; 
     )
 };
 ```
+
+```txt /values/text.txt
+This is a random text that will be displayed with a typewriter effect.
+You can change this text to whatever you want. The delay between each character can also be changed.
+The default delay is 30 milliseconds. You can change it by passing a different value to the delay prop.
+For example, you can set the delay to 100 milliseconds by passing delay={100}.
+You can also change the text by editing the text.txt file. You can add more text or remove some text.
+You can also change the delay between characters by passing a different value to the delay prop.
+You can set the delay to 50 milliseconds by passing delay={50}.
+```
+
+:::
