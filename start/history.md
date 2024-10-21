@@ -102,92 +102,120 @@ To delete a part of the narrative history, use the `narration.removeNarrativeHis
 narration.removeNarrativeHistory(2);
 ```
 
-## Example
+## How to create the history UI screen
 
-```tsx
-export default function History() {
-    const [searchString, setSearchString] = useState("")
+For example:
 
+( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
+
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
+
+<<< @/snippets/react/index.css{#hidden}
+<<< @/snippets/react/index.tsx{#hidden}
+
+```tsx /App.tsx [hidden]
+import BackButton from "./components/BackButton";
+import NextButton from "./components/NextButton";
+import GoNextTimeout from "./screens/GoNextTimeout";
+import HistoryScreen from "./screens/HistoryScreen";
+import TextInput from "./screens/modals/TextInput";
+import NarrationScreen from "./screens/NarrationScreen";
+
+export default function App() {
     return (
-        <Box
-            sx={{
-                display: 'flex',
-                flex: 1,
-                minHeight: 0,
-                px: 2,
-                py: 3,
-                overflowY: 'scroll',
-                flexDirection: 'column-reverse',
-            }}
-        >
-            <Stack spacing={2} justifyContent="flex-end">
-                {narration.narrativeHistory
-                    .map((step) => {
-                        let character = step.dialoge?.character ? getCharacterById(step.dialoge?.character) ?? new CharacterBaseModel(step.dialoge?.character, { name: step.dialoge?.character }) : undefined
-                        return {
-                            character: character?.name ? character.name + (character.surname ? " " + character.surname : "") : undefined,
-                            text: step.dialoge?.text || "",
-                            icon: character?.icon,
-                            choices: step.choices,
-                        }
-                    })
-                    .filter((data) => {
-                        if (!searchString) return true
-                        return data.character?.toLowerCase().includes(searchString.toLowerCase()) || data.text?.toLowerCase().includes(searchString.toLowerCase())
-                    })
-                    .map((data, index) => {
-                        return <React.Fragment key={"history" + index}>
-                            <Stack
-                                direction="row"
-                                spacing={1.5}
-                            >
-                                <Avatar
-                                    size="sm"
-                                    src={data.icon}
-                                />
-                                <Box sx={{ flex: 1 }}>
-                                    {data.character && <Typography level="title-sm">{data.character}</Typography>}
-                                    <Markdown
-                                        remarkPlugins={[remarkGfm]}
-                                        rehypePlugins={[rehypeRaw]}
-                                        components={{
-                                            p: ({ children, key }) => {
-                                                return <p key={key} style={{ margin: 0 }}>{children}</p>
-                                            },
-                                        }}
-                                    >
-                                        {data.text}
-                                    </Markdown>
-                                </Box>
-                            </Stack>
-                            <Stack
-                                direction="row"
-                                spacing={0.5}
-                            >
-                                <Box sx={{ flex: 1 }}>
-                                    {data.choices && data.choices.map((choice, index) => {
-                                        if (choice.isResponse) {
-                                            return <Chip
-                                                key={"choices-success" + index}
-                                                color="success"
-                                                endDecorator={<CheckIcon />}
-                                            >
-                                                {choice.text}
-                                            </Chip>
-                                        }
-                                        return <Chip
-                                            key={"choices" + index}
-                                            color="primary"
-                                        >
-                                            {choice.text}
-                                        </Chip>
-                                    })}
-                                </Box>
-                            </Stack>
-                        </React.Fragment>
-                    })}
-            </Stack>
-        </Box>
-    );
+        <>
+            <HistoryScreen />
+            <GoNextTimeout />
+        </>
+    )
 }
 ```
+
+<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
+<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
+<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
+<<< @/snippets/react/screens/HistoryScreen.tsx{prefix=#active/screens/}
+
+```ts /labels/startLabel.ts
+import { narration, newLabel } from "@drincs/pixi-vn"
+import { eggHead, flower } from "../values/characters"
+
+export const startLabel = newLabel("start_label",
+    [
+        () => {
+            narration.dialogue = {
+                character: eggHead,
+                text: "Hello, I am Egg Head. I am a character in this game.",
+            }
+        },
+        () => {
+            narration.dialogue = {
+                character: flower,
+                text: "Hello, I am Flower Top. I am another character in this game.",
+            }
+        },
+        () => {
+            narration.dialogue = {
+                character: eggHead,
+                text: "This is a dialogue. It is a conversation between characters.",
+            }
+        },
+        () => {
+            narration.dialogue = {
+                character: flower,
+                text: "This is a dialogue too.",
+            }
+        },
+    ],
+)
+```
+
+```ts /values/characters.ts [hidden]
+import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
+
+export const eggHead = new CharacterBaseModel('egg-head', {
+    name: 'Egg',
+    surname: 'Head',
+    icon: "https://pixijs.com/assets/eggHead.png",
+    color: "#9e2e12"
+});
+
+export const flower = new CharacterBaseModel('flower-top', {
+    name: 'Flower',
+    surname: 'Top',
+    icon: "https://pixijs.com/assets/flowerTop.png",
+    color: "#12959e"
+});
+
+saveCharacter([eggHead, flower]);
+```
+
+```tsx /screens/GoNextTimeout.ts [hidden]
+import { narration } from '@drincs/pixi-vn';
+import { useQueryClient } from '@tanstack/react-query';
+import { useEffect, useState } from 'react';
+import { INTERFACE_DATA_USE_QUEY_KEY } from '../use_query/useQueryInterface';
+
+export default function GoNextTimeout() {
+    const queryClient = useQueryClient()
+    const [update, setUpdate] = useState(0)
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (narration.canGoNext) {
+                narration.goNext({}).then(() => {
+                    queryClient.invalidateQueries({ queryKey: [INTERFACE_DATA_USE_QUEY_KEY] })
+                })
+                setUpdate((item) => item + 1)
+            }
+        }, 2000)
+    }, [update])
+    return null
+}
+```
+
+<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
+
+:::
