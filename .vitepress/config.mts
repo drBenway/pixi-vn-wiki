@@ -251,7 +251,12 @@ export default defineConfig({
           render(tokens, idx) {
             return renderSandbox(tokens, idx, 'react-sandbox');
           },
-        });
+        })
+        .use(container, 'react-typewriter-sandbox', {
+          render(tokens, idx) {
+            return renderSandbox(tokens, idx, 'react-typewriter-sandbox');
+          },
+        })
     },
   },
 })
