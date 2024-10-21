@@ -11,7 +11,7 @@
     :custom-setup="{
       ...props, // do not forget it
       deps: {
-        "framer-motion": "^11.11.8",
+        'framer-motion': '^11.11.8',
         'react-markdown': '^9.0.1',
         'rehype-raw': '^7.0.0',
         'remark-gfm': '^4.0.0'
