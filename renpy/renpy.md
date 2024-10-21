@@ -2,7 +2,7 @@
 
 Pixi’VN gives you the ability to write your own narrative using Ren'Py Language.
 
-## What is Ren'Py Language?
+**What is Ren'Py Language?**
 
 Ren'Py Language is a scripting language for writing interactive narrative. It is used in games like Doki Doki Literature Club, Katawa Shoujo, and Long Live the Queen to create branching stories.
 

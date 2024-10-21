@@ -2,11 +2,11 @@
 
 Pixi’VN gives you the ability to write your own narrative using Ink.
 
-## What is ink?
+**What is ink?**
 
 Ink is a scripting language for writing interactive narrative. It is used in games like 80 Days, Heaven's Vault, and Sorcery! to create branching stories.
 
-This language is very simple to learn, you can learn the basics in a few minutes. Go on [ink website](https://www.inklestudios.com/ink/) to learn more about it.
+This language is very simple to learn. Go on [ink website](https://www.inklestudios.com/ink/) to learn more about it.
 
 ## Why use Ink integration?
 
