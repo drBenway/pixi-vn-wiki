@@ -142,3 +142,5 @@ canvas.addTickersSteps("alien", [
     Repeat,
 ])
 ```
+
+<!-- TODO: paused tiker -->
