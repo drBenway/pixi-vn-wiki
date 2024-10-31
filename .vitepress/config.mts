@@ -244,6 +244,24 @@ export default defineConfig({
   },
 
   markdown: {
+    languageAlias: {
+      'ink': 'bash',
+      'renpy': 'bash',
+      '#hidden': 'bash',
+      'prefix#hidden/components/': 'bash',
+      'prefix#hidden/screens/': 'bash',
+      'prefix#hidden/screens/modals/': 'bash',
+      'prefix#hidden/use_query/': 'bash',
+      'prefix#active/ink_labels/': 'bash',
+      'prefix/': 'bash',
+      'prefix#readonly/': 'bash',
+      'prefix#active/screens/': 'bash',
+      'prefix#readonly/use_query/': 'bash',
+      'prefix#active/screens/modals/': 'bash',
+      'prefix#active/components/': 'bash',
+      'prefix/components/': 'bash',
+      'prefix/values/': 'bash',
+    },
     config(md) {
       md
         // the second parameter is html tag name
