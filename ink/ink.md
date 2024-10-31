@@ -8,7 +8,7 @@ Ink is a scripting language for writing interactive narrative. It is used in gam
 
 This language is very simple to learn. Go on [ink website](https://www.inklestudios.com/ink/) to learn more about it.
 
-::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
+::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=532}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/App.tsx{#hidden}
