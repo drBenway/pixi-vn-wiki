@@ -211,5 +211,4 @@ My name is John # ✅ This will be handled
 * [Use Sounds and Music in Ink](/ink/ink-sound.md)
 * [Use input in Ink](/ink/ink-input.md)
 * [How translate Ink text](/ink/ink-translate.md)
-* [How translate Ink text](/ink/ink-translate.md)
 * [Custome Hashtag Script](/ink/ink-hashtag.md)
