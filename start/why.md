@@ -4,18 +4,16 @@ The reason why Pixi’VN was born is that current systems for creating a visual 
 
 ## What is Pixi’VN?
 
-Pixi’VN is a npm package that provides various features for creating visual novels, has functions to manage story steps, saving and loading, variable storage, dialogues, character,canvas management, and much more.
+Pixi’VN is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the [Pixi.js](https://pixijs.com/) library for rendering.
 
-Pixi’VN + [Templates](/start/getting-started.md#pivivn-templates) provides a complete solution and is in effect a visual novel engine.
+Its great versatility is due to the fact that Pixi’VN is a npm package, that provides various core features to manage story steps, dialogues, character, canvas management, variable storage, saving and loading, and much more. This means that it can be used both to create visual novels and to create other types of 2D games (such as Point and Click Adventure Games, RPGs, etc...), with your favorite JavaScript framework (React, Vue, Angular, etc...).
 
-It is designed for web developers, with basic experience in JavaScript/TypeScript, who want to create a visual novel with a modern 2D rendering engine and their favorite JavaScript framework.
+Pixi’VN provides the ability to use [Templates](/start/getting-started.md#pivivn-templates) to get started quickly. Less experienced developers can use these templates to create a visual novel without much knowledge of JavaScript/TypeScript.
 
 With the [PixiVNJson](/advanced/pixi-vn-json.md) implementation you have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
 
 * [Ink](/ink/ink.md)
 * [Ren'Py](/renpy/renpy.md)
-
-It is based on [Pixi.js](https://pixijs.com/), a rendering engine that allows you to create fast 2D graphics. It is based on WebGL and is very fast and efficient. It is used by many developers to create games, websites, and applications.
 
 ## Ren'Py vs Pixi’VN
 
