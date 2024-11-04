@@ -21,6 +21,12 @@ Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal proje
 * You cannot use [PixiJS Components](https://pixijs.com/8.x/guides/components/assets) and Tickers directly, but other [components](/start/canvas-elements.md) and [Tickers](/start/tickers.md) that are equivalent to PixiJS ones.
 * You can't set a listener with the `on` method, but must use the [onEvent](/start/canvas-elements.md#add-a-listener-for-a-given-event) to add a listener.
 
+<!-- TODO ### Alias -->
+<!-- TODO ### New element and not use PixiJS Components -->
+<!-- TODO ### New method to add remove and find elements -->
+<!-- TODO ### New method to add listener -->
+<!-- TODO ### access to PIXI.Application -->
+
 ## Use PixiJS DevTools with Pixi’VN
 
 [**PixiJS DevTools**](https://pixijs.io/devtools/) is a [Chrome extension](https://chromewebstore.google.com/detail/pixijs-devtools/dlkffcaaoccbofklocbjcmppahjjboce) that allows you to inspect and debug PixiJS applications. You can use it to view the display list, inspect textures, and debug your PixiJS application. You can use it with Pixi’VN to inspect the canvas and debug your visual novel.
