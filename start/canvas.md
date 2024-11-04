@@ -23,6 +23,7 @@ Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal proje
 
 <!-- TODO ### Alias -->
 <!-- TODO **PixiJS stage alias** -->
+<!-- TODO #### Alias - Heredity factor -->
 <!-- TODO ### New element and not use PixiJS Components -->
 <!-- TODO ### New method to add remove and find elements -->
 <!-- TODO ### New method to add listener -->
