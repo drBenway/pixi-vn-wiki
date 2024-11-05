@@ -248,8 +248,6 @@ export default defineConfig({
 
   markdown: {
     languageAlias: {
-      'ink': 'bash',
-      'renpy': 'bash',
       '#hidden': 'bash',
       'prefix#hidden/components/': 'bash',
       'prefix#hidden/screens/': 'bash',
@@ -279,5 +277,58 @@ export default defineConfig({
           },
         })
     },
+    languages: [
+      {
+        displayName: "Ink",
+        name: "ink",
+        patterns: [
+          {
+            include: "#comment"
+          },
+        ],
+        repository: {
+          "comment": {
+            "captures": {
+              "0": {
+                "name": "punctuation.definition.comment.ink"
+              },
+            },
+            "match": "(?<=^|\\s)(\\/\\/)(.*$)",
+          },
+          // === start ===
+          "knot": {
+            "captures": {
+              "1": {
+                // give red color
+                "name": "punctuation.definition.regex.ink"
+              }
+            },
+            "begin": "^\\s*==="
+          }
+        },
+        scopeName: "source.ink",
+      },
+      {
+        displayName: "Ren’Py",
+        name: "renpy",
+        patterns: [
+          {
+            include: "source.python"
+          }
+        ],
+        repository: {},
+        scopeName: "source.renpy",
+      }
+    ],
+    highlight: (str: string, lang: string, attrs: string) => {
+      if (lang === 'ink') {
+        console.log(str, lang, attrs)
+        return `<pre><code>${str}</code></pre>`
+      }
+      if (lang === 'renpy') {
+        return `<pre><code>${str}</code></pre>`
+      }
+      return `<pre><code class="language-${lang}">${str}</code></pre>`
+    }
   },
 })

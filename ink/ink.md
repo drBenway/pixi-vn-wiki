@@ -145,12 +145,12 @@ The narration outside the knots (or labels) will be ignored, except for variable
 So for example the following cases will be ignored:
 
 ```ink
-VAR my_var = false ✅ This will be handled (because it is a variable)
-Hello # ❌ This will be ignored
--> start # ❌ This will be ignored
-=== start === # ✅ This will be handled
-My name is John # ✅ This will be handled
--> DONE # ✅ This will be handled
+VAR my_var = false // ✅ This will be handled (because it is a variable)
+Hello // ❌ This will be ignored // [!code warning]
+-> start // ❌ This will be ignored // [!code warning]
+=== start === // ✅ This will be handled
+My name is John // ✅ This will be handled
+-> DONE // ✅ This will be handled
 ```
 
 ## Differences between Native Ink and Pixi’VN Ink
