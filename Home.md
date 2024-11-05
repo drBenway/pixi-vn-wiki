@@ -18,11 +18,14 @@
   * [Other features](other-narrative-features)
 * [Narration with Ink](ink):
   * [Characters](ink-character)
+  * [Open a knot](ink-label)
+  * [Variables](ink-variables)
   * [Style Text (Markdown)](ink-markdown)
   * [Input](ink-input)
   * [Canvas](ink-canvas)
   * [Sounds and Music](ink-sound)
   * [Translating](ink-translate)
+  * [Custome Hashtag Script](ink-hashtag)
 * [Narration with Ren’Py](renpy)
 * [PixiJS Canvas](canvas):
   * [Images](images)

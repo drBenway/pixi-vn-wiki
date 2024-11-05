@@ -119,11 +119,14 @@ export default defineConfig({
               link: '/ink/ink',
               items: [
                 { text: 'Characters', link: '/ink/ink-character' },
+                { text: 'Open a knot from Ink', link: '/ink/ink-label' },
+                { text: 'Variables in Ink', link: '/ink/ink-variables' },
                 { text: 'Style Text (Markdown)', link: '/ink/ink-markdown' },
                 { text: 'Input', link: '/ink/ink-input' },
                 { text: 'Canvas', link: '/ink/ink-canvas' },
                 { text: 'Sounds and Music', link: '/ink/ink-sound' },
                 { text: 'Translating', link: '/ink/ink-translate' },
+                { text: 'Custome Hashtag Script', link: '/ink/ink-hashtag' },
               ]
             },
             { text: 'Narration (JS/TS)', link: '/start/narration' }

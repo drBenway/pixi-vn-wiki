@@ -206,6 +206,8 @@ My name is John # ✅ This will be handled
 ## Using Pixi’VN Features from Ink
 
 * [Use Character in ink](/ink/ink-character.md)
+* [Open a knot from Ink](/ink/ink-label.md)
+* [Variables in Ink](/ink/ink-variables.md)
 * [Style Text on Ink + Pixi’VN](/ink/ink-markdown.md)
 * [Use PixiJS Canvas in Ink](/ink/ink-canvas.md)
 * [Use Sounds and Music in Ink](/ink/ink-sound.md)
