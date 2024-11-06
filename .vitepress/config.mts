@@ -290,21 +290,11 @@ export default defineConfig({
           "comment": {
             "captures": {
               "0": {
-                "name": "punctuation.definition.comment.ink"
+                "name": "entity.name.label.ink"
               },
             },
             "match": "(?<=^|\\s)(\\/\\/)(.*$)",
           },
-          // === start ===
-          "knot": {
-            "captures": {
-              "1": {
-                // give red color
-                "name": "punctuation.definition.regex.ink"
-              }
-            },
-            "begin": "^\\s*==="
-          }
         },
         scopeName: "source.ink",
       },
@@ -319,16 +309,6 @@ export default defineConfig({
         repository: {},
         scopeName: "source.renpy",
       }
-    ],
-    highlight: (str: string, lang: string, attrs: string) => {
-      if (lang === 'ink') {
-        console.log(str, lang, attrs)
-        return `<pre><code>${str}</code></pre>`
-      }
-      if (lang === 'renpy') {
-        return `<pre><code>${str}</code></pre>`
-      }
-      return `<pre><code class="language-${lang}">${str}</code></pre>`
-    }
+    ]
   },
 })
