@@ -43,19 +43,32 @@ If you have not created a project yet then it is recommended to use the [templat
 
 Otherwise to add ***ink*** to your Pixi’VN project you need to install the `@drincs/pixi-vn-ink` package.
 
+:::tabs
+== npm
+
 ```bash
-# npm
 npm install @drincs/pixi-vn-ink
+```
 
-# yarn
+== yarn
+
+```bash
 yarn add @drincs/pixi-vn-ink
+```
 
-# pnpm
+== pnpm
+
+```bash
 pnpm add @drincs/pixi-vn-ink
+```
 
-# bun
+== bun
+
+```bash
 bun add @drincs/pixi-vn-ink
 ```
+
+:::
 
 After installing the package you need to use the `importInkText()` function to import the ***ink* script** into your project.
 

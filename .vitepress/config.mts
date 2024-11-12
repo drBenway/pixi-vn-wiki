@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react';
 import container from 'markdown-it-container';
 import { defineConfig } from 'vitepress';
 import { renderSandbox } from 'vitepress-plugin-sandpack';
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
 
 const ogUrl = 'https://pixi-vn.web.app'
 
@@ -266,6 +267,7 @@ export default defineConfig({
     },
     config(md) {
       md
+        .use(tabsMarkdownPlugin)
         // the second parameter is html tag name
         .use(container, 'react-sandbox', {
           render(tokens, idx) {

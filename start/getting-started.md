@@ -12,19 +12,32 @@ You can start using Pixi’VN by [initializing a new project](#project-initializ
 
 To initialize a new project, you can use the following command:
 
+:::tabs
+== npm
+
 ```bash
-# npm
 npm create pixi-vn@latest
+```
 
-# yarn
+== yarn
+
+```bash
 yarn create pixi-vn@latest
+```
 
-# pnpm
+== pnpm
+
+```bash
 pnpm create pixi-vn@latest
+```
 
-# bun
+== bun
+
+```bash
 bun create pixi-vn@latest
 ```
+
+:::
 
 The supported template presets are:
 
@@ -41,19 +54,32 @@ Into all templates there is a `README.md` file with more information about the p
 
 For installing the Pixi’VN package, you can use the following command:
 
+:::tabs
+== npm
+
 ```bash
-# npm
 npm install @drincs/pixi-vn
+```
 
-# yarn
+== yarn
+
+```bash
 yarn add @drincs/pixi-vn
+```
 
-# pnpm
+== pnpm
+
+```bash
 pnpm add @drincs/pixi-vn
+```
 
-# bun
+== bun
+
+```bash
 bun add @drincs/pixi-vn
 ```
+
+:::
 
 Now you must initialize the Pixi’VN window before using the engine.
 

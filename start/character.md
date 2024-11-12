@@ -206,9 +206,10 @@ Now you can create a class `Character` that extends `CharacterStoredClass` and i
 
 For set the properties and store them in the game storage, you must use the `setStorageProperty` method. ( See the following file `Character.ts` )
 
-::: react-sandbox {template=vite-react-ts coderHeight=950 previewHeight=1}
+:::tabs
+== models/Character.ts
 
-```ts /models/Character.ts [active]
+```ts
 import { CharacterInterface, CharacterStoredClass } from "@drincs/pixi-vn";
 
 export class Character extends CharacterStoredClass implements CharacterInterface {
@@ -254,7 +255,9 @@ export class Character extends CharacterStoredClass implements CharacterInterfac
 }
 ```
 
-```ts /pixi-vn.types.ts
+== pixi-vn.types.ts
+
+```ts
 declare module '@drincs/pixi-vn/dist/override' {
     interface CharacterInterface {
         name: string

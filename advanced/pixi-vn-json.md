@@ -13,19 +13,32 @@ Pixi’VN can be integrated with JSON files to create a visual novel. This metho
 
 First of all you need to install the following library:
 
+:::tabs
+== npm
+
 ```bash
-# npm
 npm install @drincs/pixi-vn-json
+```
 
-# yarn
+== yarn
+
+```bash
 yarn add @drincs/pixi-vn-json
+```
 
-# pnpm
+== pnpm
+
+```bash
 pnpm add @drincs/pixi-vn-json
+```
 
-# bun
+== bun
+
+```bash
 bun add @drincs/pixi-vn-json
 ```
+
+:::
 
 All you need to do to use this integration is create a object using the [`PixiVNJson` Model](#pixivnjson-model) and use the `importPixiVNJson()` function to import the object.
 
