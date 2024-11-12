@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SandboxReact({ template, previewHeight = 400, ...rest }: {
+export default function SandboxReact({ template, previewHeight = 500, ...rest }: {
     template: string,
     previewHeight?: number,
     entry?: string
