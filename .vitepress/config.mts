@@ -1,6 +1,7 @@
-import container from 'markdown-it-container'
-import { defineConfig } from 'vitepress'
-import { renderSandbox } from 'vitepress-plugin-sandpack'
+import react from '@vitejs/plugin-react';
+import container from 'markdown-it-container';
+import { defineConfig } from 'vitepress';
+import { renderSandbox } from 'vitepress-plugin-sandpack';
 
 const ogUrl = 'https://pixi-vn.web.app'
 
@@ -276,6 +277,11 @@ export default defineConfig({
             return renderSandbox(tokens, idx, 'react-typewriter-sandbox');
           },
         })
+        .use(container, 'sandbox', {
+          render(tokens, idx) {
+            return renderSandbox(tokens, idx, 'sandbox');
+          },
+        })
     },
     languages: [
       {
@@ -310,5 +316,8 @@ export default defineConfig({
         scopeName: "source.renpy",
       }
     ]
+  },
+  vite: {
+    plugins: [react()],
   },
 })
