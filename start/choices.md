@@ -78,7 +78,7 @@ export const startLabel = newLabel("start_label",
 )
 ```
 
-::: sandbox {template=wv63yr}
+::: sandbox {template=wv63yr entry=/src/labels/startLabel.ts}
 :::
 
 ## Choice menu option
@@ -211,5 +211,5 @@ const skullyLabel = newLabel("skully_label",
 
 ::: -->
 
-::: sandbox {template=k8r2xf}
+::: sandbox {template=k8r2xf entry=/src/screens/ChoiceMenu.tsx}
 :::

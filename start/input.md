@@ -74,5 +74,5 @@ export const startLabel = newLabel("start_label",
 
 ::: -->
 
-::: sandbox {template=mjn5c8}
+::: sandbox {template=mjn5c8 entry=/src/screens/modals/TextInput.tsx}
 :::

@@ -220,5 +220,5 @@ export default function GoNextTimeout() {
 
 ::: -->
 
-::: sandbox {template=ryzljv}
+::: sandbox {template=ryzljv entry=/src/screens/HistoryScreen.tsx}
 :::

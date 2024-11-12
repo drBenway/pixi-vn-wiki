@@ -111,7 +111,7 @@ export const startLabel = newLabel("start_label",
 )
 ```
 
-::: sandbox {template=tts9jh}
+::: sandbox {template=tts9jh entry=/src/labels/startLabel.ts}
 :::
 
 ## Get the current Dialogue
@@ -181,5 +181,5 @@ saveCharacter(eggHead);
 
 ::: -->
 
-::: sandbox {template=d6mn3d}
+::: sandbox {template=d6mn3d entry=/src/screens/NarrationScreen.tsx}
 :::

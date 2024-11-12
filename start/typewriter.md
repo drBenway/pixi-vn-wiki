@@ -34,7 +34,7 @@ export default function Typewriter({ text, delay = 30 }: {
 };
 ```
 
-::: sandbox {template=8lns2x previewHeight=200 entry=%2Fsrc%2Fcomponents%2FTypewriter.tsx}
+::: sandbox {template=8lns2x previewHeight=200 entry=/src/components/Typewriter.tsx}
 :::
 
 You can achieve the same result using the library [Framer Motion](https://www.framer.com/motion/):
@@ -73,5 +73,5 @@ export default function Typewriter({ text, delay = 30 }: {
 };
 ```
 
-::: sandbox {template=73dkhh previewHeight=200 entry=%2Fsrc%2Fcomponents%2FTypewriter.tsx}
+::: sandbox {template=73dkhh previewHeight=200 entry=/src/components/Typewriter.tsx}
 :::

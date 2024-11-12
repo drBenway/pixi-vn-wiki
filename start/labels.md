@@ -380,7 +380,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 )
 ```
 
-::: sandbox {template=5jtwrt}
+::: sandbox {template=5jtwrt entry=/src/labels/startLabel.ts}
 :::
 
 ## How manage the end of the game
@@ -478,5 +478,5 @@ export const startLabel = newLabel("start_label",
 
 ::: -->
 
-::: sandbox {template=5r7m9z}
+::: sandbox {template=5r7m9z entry=/src/components/NextButton.tsx,/src/components/BackButton.tsx}
 :::

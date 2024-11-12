@@ -5,11 +5,10 @@ export default function SandboxReact({ template, previewHeight = 400, ...rest }:
     previewHeight?: number,
     entry?: string
 }) {
-    const entry = rest.entry ? "module=" + rest.entry + "&" : ''
+    const entry = rest.entry ? "module=" + encodeURI(rest.entry) + "&" : ''
     return (
         <iframe
-            // src="https://codesandbox.io/embed/framer-motion-animatepresence-wait-mode-t0mnhu?fontsize=14&hidenavigation=1&theme=dark&view=preview&codemirror=1&hidedevtools=1"
-            src={`https://codesandbox.io/embed/${template}?${entry}fontsize=14&hidenavigation=1&theme=dark&view=preview&codemirror=1&hidedevtools=1`}
+            src={`https://codesandbox.io/embed/${template}?${entry}fontsize=12&hidenavigation=1&theme=dark&view=preview&hidedevtools=1`}
             style={{
                 width: '100%',
                 height: `${previewHeight}px`,
