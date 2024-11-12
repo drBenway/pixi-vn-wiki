@@ -305,26 +305,83 @@ narration.closeAllLabels()
 
 When you create a new label you can pass a function that returns the steps of the label.
 
-```typescript
-const START_LABEL_ID = "start_label_id"
+<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
 
+<<< @/snippets/react/index.css{#hidden}
+<<< @/snippets/react/index.tsx{#hidden}
+<<< @/snippets/react/App.tsx{#hidden}
+<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
+<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
+<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
+<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
+
+```ts /labels/startLabel.ts
+import { getFlag, narration, newLabel, setFlag } from "@drincs/pixi-vn"
+
+const START_LABEL_ID = "start_label"
 export const startLabel = newLabel(START_LABEL_ID,
     () => {
+        let condition = getFlag("condition")
         if (condition) {
             return [
-                () => narration.dialogue = { character: liam, text: "Example of dialogue" },
-                (props) => narration.jumpLabel(START_LABEL_ID, props),
+                () => {
+                    narration.dialogue = "Step 2"
+                },
             ]
         } else {
             return [
-                () => narration.dialogue = { character: liam, text: "Another example of dialogue" },
-                () => narration.dialogue = { character: liam, text: "Another example of dialogue 2" },
-                (props) => narration.jumpLabel(START_LABEL_ID, props),
+                () => {
+                    narration.dialogue = "Step 1"
+                },
+                async (props) => {
+                    setFlag("condition", true)
+                    return await narration.jumpLabel(START_LABEL_ID, props)
+                }
             ]
         }
     }
 )
 ```
+
+<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
+
+::: -->
+
+```ts
+// /labels/startLabel.ts
+import { getFlag, narration, newLabel, setFlag } from "@drincs/pixi-vn"
+
+const START_LABEL_ID = "start_label"
+export const startLabel = newLabel(START_LABEL_ID,
+    () => {
+        let condition = getFlag("condition")
+        if (condition) {
+            return [
+                () => {
+                    narration.dialogue = "Step 2"
+                },
+                () => {
+                    narration.dialogue = "Restart";
+                },
+            ]
+        } else {
+            return [
+                () => {
+                    narration.dialogue = "Step 1"
+                },
+                async (props) => {
+                    setFlag("condition", true)
+                    return await narration.jumpLabel(START_LABEL_ID, props)
+                }
+            ]
+        }
+    }
+)
+```
+
+::: sandbox {template=5jtwrt}
+:::
 
 ## How manage the end of the game
 

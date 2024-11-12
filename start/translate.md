@@ -6,8 +6,12 @@ The most used library and compatible with many frameworks is [i18next](https://w
 
 In order to use i18n you have to initialize it and load the translations.
 
+It is recommended to divide the translations into two parts: UI and narration. The [UI](/start/interface.md) is the text that is not part of the story, such as buttons, menus, etc. The [narration](/start/narration.md) is the text that is part of the story, such as dialogues, monologues, etc. (See `strings_es.json` tab).
+
+:::tabs
+== i18n.ts
+
 ```typescript
-// i18n.ts
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
@@ -41,12 +45,13 @@ export const useI18n = () => {
 }
 ```
 
+== App.tsx
+
 ```tsx
-// App.tsx
-import { useI18n } from './i18n';
+import { useI18n } from './i18n'; // [!code focus]
 
 export default function App() {
-    useI18n()
+    useI18n() // [!code focus]
 
     return (
         // ...
@@ -54,10 +59,9 @@ export default function App() {
 }
 ```
 
-It is recommended to divide the translations into two parts: UI and narration. The [UI](/start/interface.md) is the text that is not part of the story, such as buttons, menus, etc. The [narration](/start/narration.md) is the text that is part of the story, such as dialogues, monologues, etc.
+== strings_es.json
 
 ```json
-// strings_es.json
 {
     "ui": {
         "text_speed": "Velocidad del texto",
@@ -69,6 +73,8 @@ It is recommended to divide the translations into two parts: UI and narration. T
     }
 }
 ```
+
+:::
 
 Depending on what you want to translate, it is recommended to use the following guides:
 
@@ -86,14 +92,14 @@ Is recommended to use as translation key the a lowercase string with underscores
 For example in React:
 
 ```tsx
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'; // [!code focus]
 
 export default function MyComponent() {
-    const { t } = useTranslation("ui");
+    const { t } = useTranslation("ui"); // [!code focus]
 
     return (
         <div>
-            <Button>{t("text_speed")}</Button>
+            <Button>{t("text_speed")}</Button> // [!code focus]
         </div>
     );
 }
@@ -107,8 +113,10 @@ This way you can use the `t` function in [labels](/start/labels.md) to translate
 
 Is recommended to use as translation key the native string from which the translation is made.
 
+:::tabs
+== pixi-vn.types.ts
+
 ```typescript
-// pixi-vn.types.ts
 declare module '@drincs/pixi-vn/dist/override' {
     interface StepLabelProps {
         /**
@@ -122,10 +130,19 @@ declare module '@drincs/pixi-vn/dist/override' {
 }
 ```
 
+== startLabel.ts
+
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
-        ({ t }) => narration.dialogue = { character: liam, text: t("Hello, my name is {{name}}", { name: "Liam" }) },
+        ({ t }) => { // [!code focus]
+            narration.dialogue = {
+                character: liam,
+                text: t("Hello, my name is {{name}}", { name: "Liam" }) // [!code focus]
+            }
+        },
     ]
 )
 ```
+
+:::
