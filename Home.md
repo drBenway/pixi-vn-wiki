@@ -16,7 +16,7 @@
   * [Typewriter effect](typewriter)
   * [Style Text (Markdown)](markdown)
   * [Other features](other-narrative-features)
-* [Narration with Ink](ink):
+* [Narration with ink](ink):
   * [Characters](ink-character)
   * [Open a knot](ink-label)
   * [Variables](ink-variables)

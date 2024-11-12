@@ -73,7 +73,7 @@ export default defineConfig({
                 { text: 'Other features', link: '/start/other-narrative-features' },
               ]
             },
-            { text: 'Narration with Ink', link: '/ink/ink' },
+            { text: 'Narration with ink', link: '/ink/ink' },
             { text: 'Narration with Ren’Py (In Development)', link: '/renpy/renpy' },
             {
               text: 'PixiJS Canvas',
@@ -112,15 +112,15 @@ export default defineConfig({
       ],
       '/ink/': [
         {
-          text: 'Ink',
+          text: 'ink',
           items: [
             {
-              text: 'Narration with Ink',
+              text: 'Narration with ink',
               link: '/ink/ink',
               items: [
                 { text: 'Characters', link: '/ink/ink-character' },
-                { text: 'Open a knot from Ink', link: '/ink/ink-label' },
-                { text: 'Variables in Ink', link: '/ink/ink-variables' },
+                { text: 'Open a knot from ink', link: '/ink/ink-label' },
+                { text: 'Variables in ink', link: '/ink/ink-variables' },
                 { text: 'Style Text (Markdown)', link: '/ink/ink-markdown' },
                 { text: 'Input', link: '/ink/ink-input' },
                 { text: 'Canvas', link: '/ink/ink-canvas' },
@@ -279,7 +279,7 @@ export default defineConfig({
     },
     languages: [
       {
-        displayName: "Ink",
+        displayName: "ink",
         name: "ink",
         patterns: [
           {

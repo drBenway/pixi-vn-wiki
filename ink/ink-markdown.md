@@ -1,8 +1,8 @@
-# Style Text on Ink + Pixi’VN
+# Style Text on *ink* + Pixi’VN
 
-To add style in native Ink it must be done through `.css` files. **This method is not possible** to use in Pixi’VN.
+To add style in **native *ink*** it must be done through `.css` files. **This method is not possible** to use in Pixi’VN.
 
-For this reason Pixi’VN + Ink provides the following possibilities that are not handled by native Ink.
+For this reason ***ink* + Pixi’VN integration** provides the following possibilities that are not handled by **native *ink***.
 
 ## New Lines
 
@@ -13,11 +13,11 @@ Hello, this is a test. \\n<>
 This is a new line.
 ```
 
-## Style Text with Markdown on Ink
+## Style Text with Markdown on *ink*
 
 On Pixi’VN it is recommended to use Markdown to add style to your text. If you have [implemented Markdown in your project](/start/markdown.md) then you will be able to write your dialogues using Markdown.
 
-To do this you need to keep in mind that many symbols in Markdown syntax are also used by Ink syntax, such as: `#`, `*`, `/`, `~`, `-`, `|` etc. To avoid conflicts you can use the escape character `\` before the symbol.
+To do this you need to keep in mind that many symbols in Markdown syntax are also used by ***ink* syntax**, such as: `#`, `*`, `/`, `~`, `-`, `|` etc. To avoid conflicts you can use the escape character `\` before the symbol.
 
 Here's an example:
 
@@ -26,7 +26,7 @@ On Markdown:
 ```markdown
 # Markdown Test
 
-Hello, this is a test of the markdown parser. Pixi'VN does not manage markdown, but you can implement a markdown parser to display text with markdown syntax.
+Hello, this is a test of the markdown parser. Pixi’VN does not manage markdown, but you can implement a markdown parser to display text with markdown syntax.
 
 For example in React, you can use the library [react-markdown](https://www.npmjs.com/package/react-markdown).
 
@@ -86,12 +86,12 @@ console.log("Hello World")
 Footer
 ```
 
-On Ink:
+On *ink*:
 
 ```ink
 \# Markdown Test \\n<>
 
-Hello, this is a test of the markdown parser. Pixi'VN does not manage markdown, but you can implement a markdown parser to display text with markdown syntax. \\n<>
+Hello, this is a test of the markdown parser. Pixi’VN does not manage markdown, but you can implement a markdown parser to display text with markdown syntax. \\n<>
 
 For example in React, you can use the library [react-markdown](https:\/\/www.npmjs.com/package/react-markdown). \\n<>
 

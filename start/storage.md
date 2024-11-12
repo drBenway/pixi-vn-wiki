@@ -44,3 +44,5 @@ In storage game, there are some system variables that are used by the game engin
 So please avoid using this prefix in your variables.
 
 You can get all the system variables keys with the `storage.keysSystem` function.
+
+<!-- TODO Temp storage -->

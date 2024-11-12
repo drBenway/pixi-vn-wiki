@@ -1,6 +1,6 @@
-# Use Character in ink
+# Use Character in *ink*
 
-You can use the [Pixi’VN Character](/start/character.md) in ink. To use the character in ink, you need to create a new character and in the ink script, you can use following syntax:
+You can use the [Pixi’VN Character](/start/character.md) in ***ink***. To use the character in ***ink***, you need to create a new character and in the ***ink* script**, you can use following syntax:
 
 `character_id` + `:` + `SPACE` + `text`
 
@@ -19,9 +19,9 @@ saveCharacter(liam);
 liam_id: Hello, I'm Liam.
 ```
 
-## Use Character Emotions in ink
+## Use Character Emotions in *ink*
 
-You can use the [Pixi’VN Character Emotions](/start/character.md#character-emotions) in ink. To use the character emotions in ink, you need to create a new character and in the ink script, you can use following syntax:
+You can use the [Pixi’VN Character Emotions](/start/character.md#character-emotions) in ***ink***. To use the character emotions in ***ink***, you need to create a new character and in the ***ink* script**, you can use following syntax:
 
 `character_id` + `@` + `emotion` + `:` + `SPACE` + `text`
 

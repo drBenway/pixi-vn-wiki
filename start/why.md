@@ -12,7 +12,7 @@ Pixi’VN provides the ability to use [Templates](/start/getting-started.md#pivi
 
 With the [PixiVNJson](/advanced/pixi-vn-json.md) implementation you have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
 
-* [Ink](/ink/ink.md)
+* [*ink*](/ink/ink.md)
 * [Ren'Py](/renpy/renpy.md)
 
 ## Ren'Py vs Pixi’VN
@@ -74,7 +74,7 @@ const startLabel = newLabel("start_label_id", [
 ```
 
 ```ink
-# Ink
+# ink
 === start
 Hello, world!
 This is a Ren'Py tutorial.

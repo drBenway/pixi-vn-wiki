@@ -42,8 +42,8 @@ features:
         alt="TypeScript"
         style="border-radius:30%;"
       />
-    title: Ink
-    details: Write your visual novel with the narrative scripting language, Ink.
+    title: ink
+    details: Write your visual novel with the narrative scripting language, ink.
     link: /ink/ink
   - icon: <img 
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Frenpy-icon.png?alt=media" 
