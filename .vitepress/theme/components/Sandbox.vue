@@ -13,7 +13,7 @@ const alertDialog = ref()
 
 onMounted(() => {
   createReactApp([
-    createPortalNode(SandboxReact, alertDialog.value, { template: props.template }),
+    createPortalNode(SandboxReact, alertDialog.value, { template: props.template, previewHeight: props.previewHeight, entry: props.entry }),
   ])
 })
 </script>
