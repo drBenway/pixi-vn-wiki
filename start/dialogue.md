@@ -9,7 +9,7 @@ A dialogue can link to a [character](/start/character#use-characters-in-the-game
 
 To set the current dialogue, you can use the `narration.dialogue`.
 
-::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=749}
+<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=749}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/index.tsx{#hidden}
@@ -72,6 +72,46 @@ saveCharacter(eggHead);
 
 <<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
 
+::: -->
+
+```ts
+// /labels/startLabel.ts
+import { Dialogue, narration, newLabel } from "@drincs/pixi-vn"
+import { eggHead } from "../values/characters"
+
+// What is a Label? https://pixi-vn.web.app/start/labels.html
+export const startLabel = newLabel("start_label",
+    [
+        () => {
+            // in this example, not exists a character with id 'Alice' // [!code focus]
+            // so when you get the current dialogue, the character is a fake character with the name 'Alice' // [!code focus]
+            narration.dialogue = { // [!code focus]
+                character: "Alice", // [!code focus]
+                text: "Hello, world!" // [!code focus]
+            } // [!code focus]
+        },
+        () => {
+            // in this example, exists a character with id 'egg-head' // [!code focus]
+            // so when you get the current dialogue, the character is the character with id 'egg-head' // [!code focus]
+            narration.dialogue = { // [!code focus]
+                character: 'egg-head', // [!code focus]
+                text: "Hello, world!" // [!code focus]
+            } // [!code focus]
+            // or better // [!code focus]
+            narration.dialogue = { // [!code focus]
+                character: eggHead, // [!code focus]
+                text: "Hello, world!" // [!code focus]
+            } // [!code focus]
+            // or // [!code focus]
+            narration.dialogue = new Dialogue("Hello, world!", eggHead) // [!code focus]
+        },
+        // if don't want to set a character, you can set a string // [!code focus]
+        () => narration.dialogue = "Hello, world!", // [!code focus]
+    ],
+)
+```
+
+::: sandbox {template=tts9jh}
 :::
 
 ## Get the current Dialogue
@@ -96,7 +136,7 @@ For example:
 
 ( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
 
-::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
+<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/index.tsx{#hidden}
@@ -139,4 +179,7 @@ saveCharacter(eggHead);
 
 <<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
 
+::: -->
+
+::: sandbox {template=d6mn3d}
 :::
