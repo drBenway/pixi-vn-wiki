@@ -7,7 +7,7 @@ export default function SandboxReact({ template }: { template: string }) {
             src={`https://codesandbox.io/embed/${template}?fontsize=14&hidenavigation=1&theme=dark&view=preview&codemirror=1&hidedevtools=1`}
             style={{
                 width: '100%',
-                height: '500px',
+                height: '400px',
                 border: 0,
                 borderRadius: '4px',
                 overflow: 'hidden',

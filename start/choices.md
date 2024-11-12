@@ -6,7 +6,7 @@ In the visual novel, usually, there are choice menus that allow the player to ma
 
 To set a choice menu, you can use `narration.choiceMenuOptions` and pass an array of [`ChoiceMenuOption`](#choice-menu-option) or/and [`ChoiceMenuOptionClose`](#choice-for-closing-the-menu).
 
-::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=749}
+<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=749}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/index.tsx{#hidden}
@@ -55,6 +55,30 @@ const bananaLabel = newLabel("BananaLabel",
 
 <<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
 
+::: -->
+
+```ts
+// /labels/startLabel.ts
+import { ChoiceMenuOption, ChoiceMenuOptionClose, narration, newLabel } from "@drincs/pixi-vn"
+
+export const startLabel = newLabel("start_label",
+    [
+        async () => {
+            narration.dialogue = "Choose a fruit:"
+            narration.choiceMenuOptions = [ // [!code focus]
+                new ChoiceMenuOption("Orange", orangeLabel, {}), // by default, the label will be called by call // [!code focus]
+                new ChoiceMenuOption("Banana", bananaLabel, {}, { type: "jump" }), // [!code focus]
+                new ChoiceMenuOption("Apple", appleLabel, { quantity: 5 }, { type: "call" }), // [!code focus]
+                new ChoiceMenuOptionClose("Cancel"), // [!code focus]
+            ] // [!code focus]
+        },
+        () => { narration.dialogue = "Restart" },
+        async (props) => await narration.jumpLabel("start_label", props)
+    ],
+)
+```
+
+::: sandbox {template=wv63yr}
 :::
 
 ## Choice menu option
@@ -130,7 +154,7 @@ For example:
 
 ( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
 
-::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
+<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/index.tsx{#hidden}
@@ -185,4 +209,7 @@ const skullyLabel = newLabel("skully_label",
 
 <<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
 
+::: -->
+
+::: sandbox {template=k8r2xf}
 :::

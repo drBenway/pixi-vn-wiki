@@ -26,6 +26,9 @@ This language is very simple to learn. Go on [*ink* website](https://www.inklest
 
 :::
 
+::: sandbox {template=quirky-lederberg-9gy7zt}
+:::
+
 ## Why use *ink* integration?
 
 Programming a game narrative in **Javascript/Typescript** has the advantage of having total development freedom, but the disadvantage is that it slows down the writing of a narrative (it makes you write a lot of code).
