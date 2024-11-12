@@ -66,8 +66,10 @@ narration.callLabel(startLabel, {
 
 You can "override" the interface `StepLabelProps` to set required parameters for all steps of all labels.
 
+:::tabs
+== pixi-vn.types.ts
+
 ```typescript
-// pixi-vn.types.ts
 import { narration } from '@drincs/pixi-vn'
 
 declare module '@drincs/pixi-vn/dist/override' {
@@ -77,13 +79,23 @@ declare module '@drincs/pixi-vn/dist/override' {
 }
 ```
 
+== startLabel.ts
+
 ```typescript
-return narration.callLabel(TestLabel, {
-    navigate: (route) => {
-        // navigate to route
-    }
-})
+export const startLabel = newLabel(START_LABEL_ID,
+    [
+        () => {
+            return narration.callLabel(testLabel, { // [!code focus]
+                navigate: (route) => { // [!code focus]
+                    // navigate to route // [!code focus]
+                } // [!code focus]
+            }) // [!code focus]
+        },
+    ]
+)
 ```
+
+:::
 
 ### All Steps Result
 
@@ -91,8 +103,10 @@ The steps can return a `StepLabelResult` object, by default the `StepLabelResult
 
 You can "override" the interface `StepLabelResult` to set your custom properties in the result of the steps.
 
+:::tabs
+== pixi-vn.types.ts
+
 ```typescript
-// pixi-vn.types.ts
 declare module '@drincs/pixi-vn/dist/override' {
     interface StepLabelResult {
         newRoute?: string,
@@ -101,18 +115,22 @@ declare module '@drincs/pixi-vn/dist/override' {
 }
 ```
 
+== startLabel.ts
+
 ```typescript
 export const startLabel = newLabel(START_LABEL_ID,
     [
         () => {
-            return {
-                newRoute: '/new-route',
-                customProperty: 12
-            }
+            return { // [!code focus]
+                newRoute: '/new-route', // [!code focus]
+                customProperty: 12 // [!code focus]
+            } // [!code focus]
         },
     ]
 )
 ```
+
+:::
 
 ## Manage game flow with labels
 
