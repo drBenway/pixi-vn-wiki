@@ -4,6 +4,8 @@ You can start using Pixi’VN by [initializing a new project](#project-initializ
 
 ## Prerequisites
 
+Before starting, you must have the following tools installed:
+
 * [Node.js](https://nodejs.org/) version 18 or higher.
 * Text Editor with TypeScript support.
   * [Visual Studio Code](https://code.visualstudio.com/) is recommended.
