@@ -1,6 +1,6 @@
-# Use Canvas in *ink*
+# Use canvas in *ink*
 
-Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [Canvas](/start/canvas.md).
+Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [canvas](/start/canvas.md).
 
 The syntax is as follows:
 
@@ -15,7 +15,7 @@ The syntax is as follows:
   * If the parameters include spaces, you must use double quotes.
   * If the parameters is a object, you must use the JSON format and the first character must be `\{` and the last character must be `\}`. Example: `\{ "color": "red", isVisble: true, position: { x: 100, y: 100 } \}`
 
-## Show Canvas Element in *ink*
+## Show canvas element in *ink*
 
 You can use the `show` operation to show a canvas element in ***ink***.
 
@@ -27,7 +27,7 @@ This operation requires the tag of the canvas element and the URL/path of the im
 # show image bg https:\/\/game.com/image.png
 ```
 
-### Show Canvas Element with Transition in *ink*
+### Show canvas element with transition in *ink*
 
 If you want to show the canvas element with a [transition](/start/transition.md), you can add after the URL or path of the image the transition parameters.
 
@@ -42,7 +42,7 @@ VAR durationVar = 3
 # show image bg /image.png dissolve duration {durationVar}
 ```
 
-## Edit Canvas Element in *ink*
+## Edit canvas element in *ink*
 
 To edit a canvas element in ***ink***, you can use the `edit` operation. After the tag of the canvas element, you must include the properties of [canvas element](/start/canvas-elements.md) that you want to edit.
 
@@ -52,7 +52,7 @@ In the `parameters` you must include the properties that you want to edit. The p
 # edit image bg position \{ "x": 20, "y": 30 \} visible true  cursor "pointer" alpha 0.5 
 ```
 
-## Remove Canvas Element in *ink*
+## Remove canvas element in *ink*
 
 To remove a canvas element in ***ink***, you can use the `remove` operation.
 
@@ -61,7 +61,7 @@ To remove a canvas element in ***ink***, you can use the `remove` operation.
 # remove image "bg 2"
 ```
 
-### Remove Canvas Element with Transition in *ink*
+### Remove canvas element with transition in *ink*
 
 If you want to remove the canvas element with a [transition](/start/transition.md), you can add after the tag of the canvas element the transition parameters.
 
@@ -74,7 +74,7 @@ After the transition type, you can add the transition parameters. These paramete
 # remove image bg fade duration 3
 ```
 
-## Pause Video Canvas Element in *ink*
+## Pause video canvas element in *ink*
 
 To pause a video canvas element in ***ink***, you can use the `pause` operation.
 
@@ -83,7 +83,7 @@ To pause a video canvas element in ***ink***, you can use the `pause` operation.
 # pause video "bg 2"
 ```
 
-## Resume Video Canvas Element in *ink*
+## Resume video canvas element in *ink*
 
 To resume a video canvas element in ***ink***, you can use the `resume` operation.
 
