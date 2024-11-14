@@ -1,6 +1,6 @@
 # Use Character in *ink*
 
-You can use the [Pixi’VN Character](/start/character.md) in ***ink***. To use the character in ***ink***, you need to create a new character and in the ***ink* script**, you can use following syntax:
+You can use the [Pixi’VN Character](/start/character.md) in ***ink***. To use the character in ***ink***, you need to create a new character in **Typescript** and, after that, in the ***ink* script**, you can use following syntax:
 
 `character_id` + `:` + `SPACE` + `text`
 
