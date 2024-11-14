@@ -1,8 +1,18 @@
 # Use Character in *ink*
 
-You can use the [Pixi’VN Character](/start/character.md) in ***ink***. To use the character in ***ink***, you need to create a new character in **Typescript** and, after that, in the ***ink* script**, you can use following syntax:
+You can use the [Pixi’VN Characters](/start/character.md) in ***ink***. To use the character in ***ink***, you need to create a new character in **Typescript** and, after that, in the ***ink* script**, you can use following syntax:
 
 `character_id` + `:` + `SPACE` + `text`
+
+:::tabs
+== start.ink
+
+```ink
+=== start ===
+liam_id: Hello, I'm Liam.
+```
+
+== character.ts
 
 ```ts
 const liam = new CharacterBaseModel('liam_id', {
@@ -15,15 +25,23 @@ const liam = new CharacterBaseModel('liam_id', {
 saveCharacter(liam);
 ```
 
-```ink
-liam_id: Hello, I'm Liam.
-```
+:::
 
 ## Use Character Emotions in *ink*
 
 You can use the [Pixi’VN Character Emotions](/start/character.md#character-emotions) in ***ink***. To use the character emotions in ***ink***, you need to create a new character and in the ***ink* script**, you can use following syntax:
 
 `character_id` + `@` + `emotion` + `:` + `SPACE` + `text`
+
+:::tabs
+== start.ink
+
+```ink
+=== start ===
+liam_id@happy: Hello, I'm Liam and I'm happy.
+```
+
+== character.ts
 
 ```ts
 const liam = new CharacterBaseModel('liam_id', {
@@ -42,6 +60,4 @@ const liamHappy = new CharacterEmotionModel({ id: 'liam_id', emotion: 'happy' },
 saveCharacter([liam, liamHappy]);
 ```
 
-```ink
-liam_id@happy: Hello, I'm Liam and I'm happy.
-```
+:::

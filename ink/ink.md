@@ -1,6 +1,8 @@
 # *ink* Language Integration
 
-Pixi’VN gives you the ability to write your own narrative using ***ink***.
+Pixi’VN gives you the ability to write your own narrative using ***ink***, a scripting language for writing interactive narrative.
+
+The ***ink* + Pixi’VN integration**, exploits the [inkjs](https://github.com/inkle/inkjs) and [PixiVNJson](/advanced/pixi-vn-json.md) libraries, to parse ***ink* code** and generate a Json that can be interpreted by Pixi’VN. So Javascript/Typescript and ***ink*** share the same memory and canvas, and it is also possible to launch ***ink*** labels (or knots) from Javascript/Typescript and vice versa. This allows you to use the best of both languages. You can use ***ink*** to write the narration, while using Javascript/Typescript to create minigames or complex animations.
 
 **What is *ink*?**
 
@@ -57,8 +59,6 @@ He insisted that we hurried home to Savile Row
 ## Why use *ink* integration?
 
 Programming a game narrative in **Javascript/Typescript** has the advantage of having total development freedom, but the disadvantage is that it slows down the writing of a narrative (it makes you write a lot of code).
-
-Javascript/Typescript and ***ink*** share the same memory and canvas, and it is also possible to launch ***ink*** labels (or knots) from Javascript/Typescript and vice versa. This allows you to use the best of both languages. You can use ***ink*** to write the narration, while using Javascript/Typescript to create minigames or complex animations.
 
 The novice developers can use a [*ink* template](/start/getting-started.md#project-initialization) to start developing just with ***ink***, and then gradually learn Javascript/Typescript to create more complex features.
 
