@@ -274,16 +274,16 @@ export default defineConfig({
       md
         .use(tabsMarkdownPlugin)
         // the second parameter is html tag name
-        .use(container, 'react-sandbox', {
-          render(tokens, idx) {
-            return renderSandbox(tokens, idx, 'react-sandbox');
-          },
-        })
-        .use(container, 'react-typewriter-sandbox', {
-          render(tokens, idx) {
-            return renderSandbox(tokens, idx, 'react-typewriter-sandbox');
-          },
-        })
+        // .use(container, 'react-sandbox', {
+        //   render(tokens, idx) {
+        //     return renderSandbox(tokens, idx, 'react-sandbox');
+        //   },
+        // })
+        // .use(container, 'react-typewriter-sandbox', {
+        //   render(tokens, idx) {
+        //     return renderSandbox(tokens, idx, 'react-typewriter-sandbox');
+        //   },
+        // })
         .use(container, 'sandbox', {
           render(tokens, idx) {
             return renderSandbox(tokens, idx, 'sandbox');

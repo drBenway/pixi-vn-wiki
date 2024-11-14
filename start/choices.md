@@ -6,57 +6,6 @@ In the visual novel, usually, there are choice menus that allow the player to ma
 
 To set a choice menu, you can use `narration.choiceMenuOptions` and pass an array of [`ChoiceMenuOption`](#choice-menu-option) or/and [`ChoiceMenuOptionClose`](#choice-for-closing-the-menu).
 
-<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=749}
-
-<<< @/snippets/react/index.css{#hidden}
-<<< @/snippets/react/index.tsx{#hidden}
-<<< @/snippets/react/App.tsx{#hidden}
-<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
-<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
-<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
-
-```ts /labels/startLabel.ts [active]
-import { ChoiceMenuOption, ChoiceMenuOptionClose, narration, newLabel } from "@drincs/pixi-vn"
-
-export const startLabel = newLabel("start_label",
-    [
-        async () => {
-            narration.dialogue = "Choose a fruit:"
-            narration.choiceMenuOptions = [
-                new ChoiceMenuOption("Orange", orangeLabel, {}), // by default, the label will be called by call
-                new ChoiceMenuOption("Banana", bananaLabel, {}, { type: "jump" }),
-                new ChoiceMenuOption("Apple", appleLabel, { quantity: 5 }, { type: "call" }),
-                new ChoiceMenuOptionClose("Cancel"),
-            ]
-        },
-        () => { narration.dialogue = "Restart" },
-        async (props) => await narration.jumpLabel("start_label", props)
-    ],
-)
-
-const appleLabel = newLabel<{ quantity: number }>("AppleLabel",
-    [
-        (props) => { narration.dialogue = `You have ${props?.quantity ?? 0} apples` },
-    ]
-)
-const orangeLabel = newLabel("OrangeLabel",
-    [
-        () => { narration.dialogue = "You have an orange" }
-    ]
-)
-const bananaLabel = newLabel("BananaLabel",
-    [
-        () => { narration.dialogue = "You have a banana" }
-    ]
-)
-```
-
-<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
-
-::: -->
-
 ```ts
 // /labels/startLabel.ts
 import { ChoiceMenuOption, ChoiceMenuOptionClose, narration, newLabel } from "@drincs/pixi-vn"
@@ -153,63 +102,6 @@ narration.choiceMenuOptions = undefined;
 For example:
 
 ( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
-
-<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
-
-<<< @/snippets/react/index.css{#hidden}
-<<< @/snippets/react/index.tsx{#hidden}
-<<< @/snippets/react/App.tsx{#hidden}
-<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
-<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
-<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#active/screens/}
-
-```ts /labels/startLabel.ts
-import { canvas, ChoiceMenuOption, narration, newLabel, showImage, Assets } from "@drincs/pixi-vn"
-
-export const startLabel = newLabel("start_label",
-    [
-        async () => {
-            narration.choiceMenuOptions = [
-                new ChoiceMenuOption("Helmlok", helmlokLabel, {}),
-                new ChoiceMenuOption("Skully", skullyLabel, {}),
-            ]
-        },
-        async (props) => await narration.jumpLabel("start_label", props),
-    ],
-    {
-        onLoadStep: async () => {
-            Assets.load('https://pixijs.com/assets/skully.png')
-            Assets.load('https://pixijs.com/assets/helmlok.png')
-        }
-    }
-)
-
-const helmlokLabel = newLabel("helmlok_label",
-    [
-        async (props) => {
-            canvas.clear()
-            await showImage('skully', 'https://pixijs.com/assets/skully.png')
-            narration.jumpLabel(startLabel, props)
-        },
-    ]
-)
-
-const skullyLabel = newLabel("skully_label",
-    [
-        async (props) => {
-            canvas.clear()
-            await showImage('helmlok', 'https://pixijs.com/assets/helmlok.png')
-            narration.jumpLabel(startLabel, props)
-        },
-    ]
-)
-```
-
-<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
-
-::: -->
 
 ::: sandbox {template=k8r2xf entry=/src/screens/ChoiceMenu.tsx}
 :::

@@ -43,36 +43,5 @@ For example:
 
 ( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
 
-<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
-
-<<< @/snippets/react/index.css{#hidden}
-<<< @/snippets/react/index.tsx{#hidden}
-<<< @/snippets/react/App.tsx{#hidden}
-<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
-<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#active/screens/modals/}
-<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
-
-```ts /labels/startLabel.ts
-import { narration, newLabel } from "@drincs/pixi-vn"
-
-export const startLabel = newLabel("start_label",
-    [
-        () => {
-            narration.dialogue = "What is your name?"
-            narration.requestInput({ type: "string" })
-        },
-        () => {
-            narration.dialogue = `Nice to meet you, ${narration.inputValue}!`
-        }
-    ]
-)
-```
-
-<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
-
-::: -->
-
 ::: sandbox {template=mjn5c8 entry=/src/screens/modals/TextInput.tsx}
 :::

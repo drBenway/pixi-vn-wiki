@@ -35,24 +35,6 @@ He insisted that we hurried home to Savile Row
 -> start
 ```
 
-<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=532}
-
-<<< @/snippets/react/index.css{#hidden}
-<<< @/snippets/react/App.tsx{#hidden}
-<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
-<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
-<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
-<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
-
-<<< @/snippets/react/ink/ink_labels/start.ink{prefix=#active/ink_labels/}
-<<< @/snippets/react/ink/index.tsx{prefix=/}
-<<< @/snippets/react/ink/ink.d.ts{prefix=#readOnly/}
-<<< @/snippets/react/ink/vite.config.ts{prefix=#readOnly/}
-
-::: -->
-
 ::: sandbox {template=lqsm5y entry=/src/ink_labels/start.ink}
 :::
 

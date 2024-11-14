@@ -305,49 +305,6 @@ narration.closeAllLabels()
 
 When you create a new label you can pass a function that returns the steps of the label.
 
-<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
-
-<<< @/snippets/react/index.css{#hidden}
-<<< @/snippets/react/index.tsx{#hidden}
-<<< @/snippets/react/App.tsx{#hidden}
-<<< @/snippets/react/components/NextButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/components/BackButton.tsx{prefix=#hidden/components/}
-<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
-<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
-<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
-
-```ts /labels/startLabel.ts
-import { getFlag, narration, newLabel, setFlag } from "@drincs/pixi-vn"
-
-const START_LABEL_ID = "start_label"
-export const startLabel = newLabel(START_LABEL_ID,
-    () => {
-        let condition = getFlag("condition")
-        if (condition) {
-            return [
-                () => {
-                    narration.dialogue = "Step 2"
-                },
-            ]
-        } else {
-            return [
-                () => {
-                    narration.dialogue = "Step 1"
-                },
-                async (props) => {
-                    setFlag("condition", true)
-                    return await narration.jumpLabel(START_LABEL_ID, props)
-                }
-            ]
-        }
-    }
-)
-```
-
-<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#hidden/use_query/}
-
-::: -->
-
 ```ts
 // /labels/startLabel.ts
 import { getFlag, narration, newLabel, setFlag } from "@drincs/pixi-vn"
@@ -449,34 +406,6 @@ narration.onStepError = async (error, props) => {
 For example:
 
 ( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
-
-<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=512}
-
-<<< @/snippets/react/index.css{#hidden}
-<<< @/snippets/react/index.tsx{#hidden}
-<<< @/snippets/react/App.tsx{#hidden}
-<<< @/snippets/react/components/NextButton.tsx{prefix=#active/components/}
-<<< @/snippets/react/components/BackButton.tsx{prefix=/components/}
-<<< @/snippets/react/screens/NarrationScreen.tsx{prefix=#hidden/screens/}
-<<< @/snippets/react/screens/modals/TextInput.tsx{prefix=#hidden/screens/modals/}
-<<< @/snippets/react/screens/ChoiceMenu.tsx{prefix=#hidden/screens/}
-
-```ts /labels/startLabel.ts
-import { narration, newLabel } from "@drincs/pixi-vn"
-
-export const startLabel = newLabel("start_label",
-    [
-        () => narration.dialogue = "Step 1",
-        () => narration.dialogue = "Step 2",
-        () => narration.dialogue = "Step 3",
-        () => narration.dialogue = "Restart",
-    ]
-)
-```
-
-<<< @/snippets/react/use_query/useQueryInterface.ts{prefix=#readOnly/use_query/}
-
-::: -->
 
 ::: sandbox {template=5r7m9z entry=/src/components/NextButton.tsx,/src/components/BackButton.tsx}
 :::
