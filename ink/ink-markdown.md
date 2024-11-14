@@ -65,7 +65,7 @@ console.log("Hello World") \\n<>
 \| Cell 1   \| Cell 2   \| \\n<>
 \#\# Separator Test \\n<>
 \*\*\* \\n<>
-Footer \\n<>
+Footer
 ```
 
 == On Markdown
