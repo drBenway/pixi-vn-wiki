@@ -12,7 +12,7 @@ You can use the [Pixi’VN Characters](/start/character.md) in ***ink***. To use
 liam_id: Hello, I'm Liam.
 ```
 
-== character.ts
+== characters.ts
 
 ```ts
 const liam = new CharacterBaseModel('liam_id', {
@@ -34,7 +34,7 @@ import TextInput from "./screens/modals/TextInput";
 import NarrationScreen from "./screens/NarrationScreen";
 
 // Remember to import the character file at least once into your project. // [!code focus]
-import "./character"; // [!code focus]
+import "./values/characters"; // [!code focus]
 
 export default function App() {
 return (
@@ -48,6 +48,9 @@ return (
 }
 ```
 
+:::
+
+::: sandbox {template=lh88tr entry=/src/ink_labels/start.ink,/src/values/characters.ts}
 :::
 
 ## Use Character Emotions in *ink*
@@ -64,7 +67,7 @@ You can use the [Pixi’VN Character Emotions](/start/character.md#character-emo
 liam_id@happy: Hello, I'm Liam and I'm happy.
 ```
 
-== character.ts
+== characters.ts
 
 ```ts
 const liam = new CharacterBaseModel('liam_id', {

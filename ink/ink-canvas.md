@@ -15,6 +15,9 @@ The syntax is as follows:
   * If the parameters include spaces, you must use double quotes.
   * If the parameters is a object, you must use the JSON format and the first character must be `\{` and the last character must be `\}`. Example: `\{ "color": "red", isVisble: true, position: { x: 100, y: 100 } \}`
 
+::: sandbox {template=536v7c entry=/src/ink_labels/start.ink}
+:::
+
 ## Show canvas element in *ink*
 
 You can use the `show` operation to show a canvas element in ***ink***.
