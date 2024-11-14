@@ -10,10 +10,20 @@ The syntax is as follows:
 * `request` It is the operation that you want to do with the input element. The available operations are `request`.
 * `input` It is the type of the input element (is a string). If contains spaces, you must use double quotes.
 
+The value will be saved in storage with the following system key `storage.keysSystem.CURRENT_INPUT_VALUE_MEMORY_KEY`, that is `_input_value_`. So you can access the value with `_input_value_`.
+
 Example:
 
 ```ink
-request input
-request input number
-request input "array of string"
+// this is used to avoid the ink error, because the variable is not defined
+CONST _input_value_ = ""
+
+=== start ===
+# request input
+# request input number
+# request input "array of string"
+My input value is: {_input_value_}
 ```
+
+::: sandbox {template=58gk4t entry=/src/ink_labels/start.ink}
+:::
