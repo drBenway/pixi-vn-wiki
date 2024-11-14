@@ -1,6 +1,6 @@
 # Use input in *ink*
 
-Pixi’VN included in ***ink* syntax** the possibility to use the [Input](/start/input.md).
+Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [Input](/start/input.md).
 
 The syntax is as follows:
 
@@ -15,5 +15,5 @@ Example:
 ```ink
 request input
 request input number
-request input 'array of string'
+request input "array of string"
 ```

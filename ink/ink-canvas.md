@@ -1,6 +1,6 @@
 # Use Canvas in *ink*
 
-Pixi’VN included in ***ink* syntax** the possibility to use the [PixiJS Canvas](/start/canvas.md).
+Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [Canvas](/start/canvas.md).
 
 The syntax is as follows:
 
@@ -19,7 +19,7 @@ The syntax is as follows:
 
 To show a canvas element in ***ink***, you can use the `show` operation.
 
-This operation requires one parameter, the URL or path of the image.
+This operation requires the tag of the canvas element and the URL/path of the image.
 
 ```ink
 # show image bg /image.png
