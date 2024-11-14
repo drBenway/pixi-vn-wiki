@@ -38,6 +38,36 @@ import { storage } from '@drincs/pixi-vn'
 storage.removeVariable("myVariable");
 ```
 
+## Temporary storage
+
+In many occasions it is useful to use variables only for a certain time. Using normal storage we should worry about eliminating these variables once they are no longer needed, to ensure that we take up less space and have lighter saves.
+
+To solve this problem, Pixi’VN has a temporary storage system. Temporary variables initialized in a label will be deleted when it is closed. So if a label is called from it, the temporary variable will still be accessible from the child label. Obviously, if a label is called from it with the jump (so the current label will be closed and the new one started) the temporary variable will no longer be accessible.
+
+**Set a temporary variable**:
+
+To set a temporary variable, you can use the `storage.setTempVariable`, which takes two parameters: the variable name and the value.
+
+```typescript
+import { storage } from '@drincs/pixi-vn'
+
+storage.setTempVariable("myTempVariable", 42);
+```
+
+**Get a temporary variable**:
+
+To get a temporary variable, you can use the normal [`storage.getVariable` function](#get-a-variable-from-the-game-storage).
+
+**Remove a temporary variable**:
+
+To remove a temporary variable, you can use the `storage.removeTempVariable`, which takes one parameter: the variable name.
+
+```typescript
+import { storage } from '@drincs/pixi-vn'
+
+storage.removeTempVariable("myTempVariable");
+```
+
 ## System variables
 
 In storage game, there are some system variables that are used by the game engine. All system variables start with the prefix `___`.
