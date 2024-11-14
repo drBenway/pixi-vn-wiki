@@ -17,7 +17,7 @@ The syntax is as follows:
 
 ## Show Canvas Element in *ink*
 
-To show a canvas element in ***ink***, you can use the `show` operation.
+You can use the `show` operation to show a canvas element in ***ink***.
 
 This operation requires the tag of the canvas element and the URL/path of the image.
 
