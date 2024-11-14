@@ -1,6 +1,6 @@
-# Use Sounds and Music in *ink*
+# Using Sounds and Music in *ink*
 
-Pixi’VN included in ***ink* syntax** the possibility to use the [Sounds and Music](/start/sound.md).
+Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [Sounds and Music](/start/sound.md).
 
 The syntax is as follows:
 
