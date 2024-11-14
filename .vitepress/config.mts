@@ -136,7 +136,7 @@ export default defineConfig({
                 { text: 'Custome Hashtag Script', link: '/ink/ink-hashtag' },
               ]
             },
-            { text: 'Narration (JS/TS)', link: '/start/narration' }
+            { text: 'Back', link: '/start/narration' }
           ],
         }
       ],
@@ -145,7 +145,7 @@ export default defineConfig({
           text: 'Ren’Py (In Development)',
           items: [
             { text: 'Narration with Ren’Py', link: '/renpy/renpy' },
-            { text: 'Narration (JS/TS)', link: '/start/narration' }
+            { text: 'Back', link: '/start/narration' }
           ],
         }
       ],
