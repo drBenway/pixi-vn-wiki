@@ -10,4 +10,10 @@ This tutorial will guide you through the process of creating your first game wit
 
 ## Edit character information and use it as variables
 
+## Use Markdown in the narrative
+
 ## Using the canvas
+
+## Add a background and character images
+
+## Add music and sound effects
