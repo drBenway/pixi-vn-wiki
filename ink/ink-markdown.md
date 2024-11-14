@@ -1,8 +1,8 @@
-# Style Text on *ink* + Pixi’VN
+# *ink* text style
 
 To add style in **native *ink*** it must be done through `.css` files. **This method is not possible** to use in Pixi’VN.
 
-For this reason ***ink* + Pixi’VN integration** provides the following possibilities that are not handled by **native *ink***.
+For this reason ***ink* + Pixi’VN integration** provides the following methods to add style to your text:
 
 ## New Lines
 
@@ -15,9 +15,9 @@ This is a new line.
 
 ## Style Text with Markdown on *ink*
 
-On Pixi’VN it is recommended to use Markdown to add style to your text. If you have [implemented Markdown in your project](/start/markdown.md) then you will be able to write your dialogues using Markdown.
+On Pixi’VN it is recommended to use Markdown to add style to your text. If you have [implemented Markdown in your project](/start/markdown.md) then you will be able to use Markdown syntax to style your text.
 
-To do this you need to keep in mind that many symbols in Markdown syntax are also used by ***ink* syntax**, such as: `#`, `*`, `/`, `~`, `-`, `|` etc. To avoid conflicts you can use the escape character `\` before the symbol.
+To do this you need to keep in mind that many symbols of Markdown syntax are also used by ***ink* syntax**, such as: `#`, `*`, `/`, `~`, `-`, `|` etc. To avoid conflicts you can use the escape character `\` before the Markdown symbol.
 
 Here's an example:
 
