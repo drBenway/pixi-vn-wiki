@@ -8,7 +8,32 @@ Pixi’VN gives you the ability to write your own narrative using ***ink***.
 
 This language is very simple to learn. Go on [*ink* website](https://www.inklestudios.com/ink/) to learn more about it.
 
-::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=532}
+```ink
+=== start ===
+We arrived into London at 9.45pm exactly.
+
+* "There is not a moment to lose!"[] I declared.
+ -> hurry_outside
+
+* "Monsieur, let us savour this moment!"[] I declared.
+ My master clouted me firmly around the head and dragged me out of the door.
+ -> dragged_outside
+
+* [We hurried home] -> hurry_outside
+
+=== hurry_outside ===
+We hurried home to Savile Row -> as_fast_as_we_could
+
+=== dragged_outside ===
+He insisted that we hurried home to Savile Row
+-> as_fast_as_we_could
+
+=== as_fast_as_we_could ===
+<> as fast as we could.
+-> start
+```
+
+<!-- ::: react-sandbox {template=vite-react-ts previewHeight=400 coderHeight=532}
 
 <<< @/snippets/react/index.css{#hidden}
 <<< @/snippets/react/App.tsx{#hidden}
@@ -24,6 +49,9 @@ This language is very simple to learn. Go on [*ink* website](https://www.inklest
 <<< @/snippets/react/ink/ink.d.ts{prefix=#readOnly/}
 <<< @/snippets/react/ink/vite.config.ts{prefix=#readOnly/}
 
+::: -->
+
+::: sandbox {template=lqsm5y entry=/src/ink_labels/start.ink}
 :::
 
 ## Why use *ink* integration?
@@ -94,36 +122,41 @@ narration.callLabel(`start`, {})
 
 For this guide we will use the [Vite](https://vitejs.dev/) project, but you can use the same logic in other projects.
 
-To import text contained in `.ink` files you need create the file `ink.d.ts`:
+To import text contained in `.ink` files you need create the file `ink.d.ts` to declare the module `*.ink`.
+
+After that you need to add the `.ink` extension to the `assetsInclude` option in the `vite.config.ts` file.
+
+After that you can import the *ink* file and add `?raw` at the end of the import to get the text content.
+
+:::tabs
+== main.ts
 
 ```typescript
-// src/ink.d.ts
-declare module '*.ink' {
-    const value: string
-    export default value
-}
+import { importInkText } from '@drincs/pixi-vn-ink'
+import startLabel from './ink_labels/start.ink?raw'
 
+importInkText([startLabel, ...])
 ```
 
-After that you need to add the `.ink` extension to the `assetsInclude` option in the `vite.config.ts` file:
+== vite.config.ts
 
 ```typescript
-// vite.config.ts
 export default defineConfig({
   // ...
   assetsInclude: ['**/*.ink'],
 })
 ```
 
-After that you can import the *ink* file and add `?raw` at the end of the import to get the text content.
+== ink.d.ts
 
 ```typescript
-// main.ts
-import { importInkText } from '@drincs/pixi-vn-ink'
-import startLabel from './ink_labels/start.ink?raw'
-
-importInkText([startLabel, ...])
+declare module '*.ink' {
+    const value: string
+    export default value
+}
 ```
+
+:::
 
 ## *ink* features in development
 
