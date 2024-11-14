@@ -61,22 +61,27 @@ export default defineConfig({
           items: [
             { text: 'Characters', link: '/start/character' },
             {
-              text: 'Narration (JS/TS)',
+              text: 'Narration',
               link: '/start/narration',
               items: [
-                { text: 'Dialogue', link: '/start/dialogue' },
-                { text: 'Label and Game Step', link: '/start/labels' },
-                { text: 'Choice Menus', link: '/start/choices' },
-                { text: 'Input', link: '/start/input' },
-                { text: 'History', link: '/start/history' },
-                { text: 'Translating', link: '/start/translate' },
-                { text: 'Typewriter effect', link: '/start/typewriter' },
-                { text: 'Style Text (Markdown)', link: '/start/markdown' },
-                { text: 'Other features', link: '/start/other-narrative-features' },
+                { text: 'Narration with ink', link: '/ink/ink' },
+                { text: 'Narration with Ren’Py (In Development)', link: '/renpy/renpy' },
+                {
+                  text: 'Narration with JS/TS',
+                  items: [
+                    { text: 'Dialogue', link: '/start/dialogue' },
+                    { text: 'Label and Game Step', link: '/start/labels' },
+                    { text: 'Choice Menus', link: '/start/choices' },
+                    { text: 'Input', link: '/start/input' },
+                    { text: 'History', link: '/start/history' },
+                    { text: 'Translating', link: '/start/translate' },
+                    { text: 'Typewriter effect', link: '/start/typewriter' },
+                    { text: 'Style Text (Markdown)', link: '/start/markdown' },
+                    { text: 'Other features', link: '/start/other-narrative-features' },
+                  ]
+                }
               ]
             },
-            { text: 'Narration with ink', link: '/ink/ink' },
-            { text: 'Narration with Ren’Py (In Development)', link: '/renpy/renpy' },
             {
               text: 'PixiJS Canvas',
               link: '/start/canvas',

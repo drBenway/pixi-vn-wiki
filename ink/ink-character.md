@@ -25,6 +25,29 @@ const liam = new CharacterBaseModel('liam_id', {
 saveCharacter(liam);
 ```
 
+== App.tsx
+
+```ts
+import BackButton from "./components/BackButton";
+import NextButton from "./components/NextButton";
+import TextInput from "./screens/modals/TextInput";
+import NarrationScreen from "./screens/NarrationScreen";
+
+// Remember to import the character file at least once into your project. // [!code focus]
+import "./character"; // [!code focus]
+
+export default function App() {
+return (
+    <>
+        <NarrationScreen />
+        <TextInput />
+        <NextButton />
+        <BackButton />
+    </>
+);
+}
+```
+
 :::
 
 ## Use Character Emotions in *ink*
@@ -58,6 +81,29 @@ const liamHappy = new CharacterEmotionModel({ id: 'liam_id', emotion: 'happy' },
 });
 
 saveCharacter([liam, liamHappy]);
+```
+
+== App.tsx
+
+```ts
+import BackButton from "./components/BackButton";
+import NextButton from "./components/NextButton";
+import TextInput from "./screens/modals/TextInput";
+import NarrationScreen from "./screens/NarrationScreen";
+
+// Remember to import the character file at least once into your project. // [!code focus]
+import "./character"; // [!code focus]
+
+export default function App() {
+return (
+    <>
+        <NarrationScreen />
+        <TextInput />
+        <NextButton />
+        <BackButton />
+    </>
+);
+}
 ```
 
 :::

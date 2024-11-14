@@ -16,13 +16,15 @@ Example:
 
 ```ink
 // this is used to avoid the ink error, because the variable is not defined
-CONST _input_value_ = ""
+VAR _input_value_ = ""
 
 === start ===
+My input value is: {_input_value_}
 # request input
 # request input number
 # request input "array of string"
-My input value is: {_input_value_}
+The input value is: {_input_value_}
+-> DONE
 ```
 
 ::: sandbox {template=58gk4t entry=/src/ink_labels/start.ink}
