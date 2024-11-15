@@ -18,10 +18,10 @@ To assign a value to a key you can use the following 2 methods:
 You can override the function `onReplaceTextAfterTranslation` to assign a value to a key. This function is called after the [translation](/ink/ink-translate.md) of the text and have how parameter the key to replace and return the value to replace or `undefined` if the key does not need to be replaced (so the key will be displayed with the brackets `[key]`).
 
 ```ts
-import { onGetCharacterText } from 'pixi-vn-ink'
+import { onReplaceTextAfterTranslation } from '@drincs/pixi-vn-ink'
 import { getCharacterById } from "@drincs/pixi-vn";
 
-onGetCharacterText((key) => {
+onReplaceTextAfterTranslation((key) => {
     if (key === 'bob') {
         return 'Bob'
     }
@@ -41,7 +41,7 @@ onGetCharacterText((key) => {
 You can override the function `onReplaceTextBeforeTranslation` to add a script that can be interpreted by the [translation library](/ink/ink-translate.md) used (for example [i18next](https://www.i18next.com/)).
 
 ```ts
-import { onReplaceTextBeforeTranslation, onInkTranslate } from 'pixi-vn-ink'
+import { onReplaceTextBeforeTranslation, onInkTranslate } from '@drincs/pixi-vn-ink'
 import { useTranslation } from "react-i18next";
 import { alice, bob } from "../values/characters"
 

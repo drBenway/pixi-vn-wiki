@@ -130,10 +130,10 @@ To use the character name in dialogues, you can take advantage of the possibilit
 == main.ts
 
 ```ts
-import { onGetCharacterText } from 'pixi-vn-ink'
+import { onReplaceTextAfterTranslation } from '@drincs/pixi-vn-ink'
 import { getCharacterById } from "@drincs/pixi-vn";
 
-onGetCharacterText((key) => {
+onReplaceTextAfterTranslation((key) => {
     let character = getCharacterById(key)
     if (character) {
         return character.name
@@ -178,3 +178,40 @@ To edit the character name in dialogues, you can take advantage of the possibili
 == main.ts
 
 ```ts
+import { onInkHashtagScript } from '@drincs/pixi-vn-ink'
+
+onInkHashtagScript((script, convertListStringToObj) => {
+    if (script[0] === "rename" && script.length === 3) {
+        let character = getCharacterById(script[1])
+        if (character) {
+            character.name = script[2]
+        }
+    }
+})
+```
+
+== start.ink
+
+```ink
+=== start ===
+# rename liam_id Liam
+-> DONE
+```
+
+== characters.ts
+
+```ts
+import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
+
+export const liam = new CharacterBaseModel('liam_id', {
+    name: 'Liam',
+    surname: 'Smith',
+    age: 25,
+    icon: "https://example.com/liam.png",
+    color: "#9e2e12"
+});
+
+saveCharacter([liam]);
+```
+
+:::

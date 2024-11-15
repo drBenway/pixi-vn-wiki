@@ -135,7 +135,7 @@ export default defineConfig({
                 { text: 'Pause', link: '/ink/ink-pause' },
                 { text: 'Translating', link: '/ink/ink-translate' },
                 { text: 'Text replacement', link: '/ink/ink-replacement' },
-                { text: 'Custome Hashtag Script', link: '/ink/ink-hashtag' },
+                { text: 'Custom Hashtag Script', link: '/ink/ink-hashtag' },
               ]
             },
             { text: 'Back', link: '/start/narration' }

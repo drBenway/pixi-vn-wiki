@@ -18,7 +18,7 @@
     * [Pause](ink-pause)
     * [Translating](ink-translate)
     * [Text replacement](ink-replacement)
-    * [Custome Hashtag Script](ink-hashtag)
+    * [Custom Hashtag Script](ink-hashtag)
   * [Narration with Ren’Py](renpy)
   * Narration with JS/TS:
     * [Dialogue](dialogue)
