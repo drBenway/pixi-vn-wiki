@@ -9,7 +9,7 @@ You can use the [Pixi’VN Characters](/start/character.md) in ***ink***. To use
 
 ```ink
 === start ===
-liam_id: Hello, I'm Liam.
+egg-head: Hello, I'm Egg.
 -> DONE
 ```
 
@@ -18,15 +18,15 @@ liam_id: Hello, I'm Liam.
 ```ts
 import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
 
-export const liam = new CharacterBaseModel('liam_id', {
-    name: 'Liam',
-    surname: 'Smith',
-    age: 25,
-    icon: "https://example.com/liam.png",
-    color: "#9e2e12"
+export const eggHead = new CharacterBaseModel("egg-head", {
+  name: "Egg",
+  surname: "Head",
+  age: 25,
+  icon: "https://pixijs.com/assets/eggHead.png",
+  color: "#9e2e12",
 });
 
-saveCharacter([liam]);
+saveCharacter(eggHead);
 ```
 
 == App.tsx
