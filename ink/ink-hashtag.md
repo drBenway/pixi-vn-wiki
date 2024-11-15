@@ -24,7 +24,9 @@ onInkHashtagScript((script, convertListStringToObj) => {
             prop = convertListStringToObj(script.slice(2))
         }
         navigateTo(script[1], prop)
+        return true
     }
+    return false
 })
 ```
 

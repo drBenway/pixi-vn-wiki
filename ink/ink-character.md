@@ -122,6 +122,9 @@ Having the ability to rename a character and use their name in dialogues greatly
 
 But you can take advantage of the possibility of [replacing](/ink/ink-replacement.md) and [customizing hashtag scripts](/ink/ink-hashtag.md) to implement this feature.
 
+::: sandbox {template=mhs2pd entry=/src/ink_labels/start.ink,/src/values/characters.ts}
+:::
+
 ### Use character name in dialogues
 
 To use the character name in dialogues, you can take advantage of the possibility of [replacing](/ink/ink-replacement.md). For example, you can use the following method:
@@ -186,7 +189,9 @@ onInkHashtagScript((script, convertListStringToObj) => {
         if (character) {
             character.name = script[2]
         }
+        return true
     }
+    return false
 })
 ```
 
