@@ -234,11 +234,12 @@ My name is John // ✅ This will be handled
 ## Using Pixi’VN Features from *ink*
 
 * [Use Character in *ink*](/ink/ink-character.md)
-* [Open a knot from *ink*](/ink/ink-label.md)
-* [Variables in *ink*](/ink/ink-variables.md)
-* [Style Text on *ink* + Pixi’VN](/ink/ink-markdown.md)
-* [Use PixiJS Canvas in *ink*](/ink/ink-canvas.md)
-* [Use Sounds and Music in *ink*](/ink/ink-sound.md)
+* [*ink* knot (or label)](/ink/ink-label.md)
+* [*ink* variables](/ink/ink-variables.md)
+* [*ink* text style](/ink/ink-markdown.md)
+* [Use canvas in *ink*](/ink/ink-canvas.md)
+* [Using sounds and music in *ink*](/ink/ink-sound.md)
+* [Using pause in *ink*](/ink/ink-pause.md)
 * [Use input in *ink*](/ink/ink-input.md)
 * [How translate *ink* text](/ink/ink-translate.md)
 * [Custome Hashtag Script](/ink/ink-hashtag.md)
