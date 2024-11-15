@@ -242,4 +242,5 @@ My name is John // ✅ This will be handled
 * [Using sounds and music in *ink*](/ink/ink-sound.md)
 * [Using pause in *ink*](/ink/ink-pause.md)
 * [How translate *ink* text](/ink/ink-translate.md)
+* [Replace portions of text in *ink*](/ink/ink-replacement.md)
 * [Custome Hashtag Script](/ink/ink-hashtag.md)

@@ -17,6 +17,7 @@
     * [Sounds and Music](ink-sound)
     * [Pause](ink-pause)
     * [Translating](ink-translate)
+    * [Text replacement](ink-replacement)
     * [Custome Hashtag Script](ink-hashtag)
   * [Narration with Ren’Py](renpy)
   * Narration with JS/TS:
