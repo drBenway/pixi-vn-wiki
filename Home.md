@@ -15,6 +15,7 @@
     * [Input](ink-input)
     * [Canvas](ink-canvas)
     * [Sounds and Music](ink-sound)
+    * [Pause](ink-pause)
     * [Translating](ink-translate)
     * [Custome Hashtag Script](ink-hashtag)
   * [Narration with Ren’Py](renpy)
