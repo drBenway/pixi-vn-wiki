@@ -4,7 +4,8 @@
 
 Pixi’VN gives the developer the ability to intercept the event that parses the scripts # to add custom functionality. This is done through the `onInkHashtagScript` function.
 
-The `onInkHashtagScript` function receives a callback function that will be called whenever a hashtag script is found in the ink script. The callback function receives two parameters:
+The `onInkHashtagScript` function receives a callback function that will be called whenever a hashtag script is found in the ink script. The callback function returns a boolean value that indicates if the script was processed, if the value is `false`, the script will be processed by the default functionality of Pixi’VN. The callback function
+receives two parameters:
 
 * `script`: an array with the hashtag script split by spaces. For add a space in a string, you need to use `""`. For example, the Hashtag-Script `# command "Hello World"` will be split into `["command", "Hello World"]`.
 * `convertListStringToObj`: a function that receives an array of strings and returns an object. This function is used to convert a list of strings into an object. For example, the array `["prop1", "value 1", "prop2", "value 2"]` will be converted to `{prop1: "value 1", prop2: "value 2"}`.
