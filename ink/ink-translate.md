@@ -12,7 +12,7 @@ The `onInkTranslate` function receives a callback function that will be called w
 == index.tsx
 
 ```ts
-import { onInkTranslate } from 'pixi-vn-ink'
+import { onInkTranslate } from '@drincs/pixi-vn-ink'
 import { useTranslation } from "react-i18next";
 
 const { t } = useTranslation(["narration"]);
@@ -24,7 +24,9 @@ onInkTranslate((text) => {
 == start.ink
 
 ```ink
+=== start ===
 Hello, my name is [joe]
+-> DONE
 ```
 
 == App.tsx
@@ -52,6 +54,9 @@ export default function App() {
 }
 ```
 
+:::
+
+::: sandbox {template=7pg6dy entry=/src/ink_labels/start.ink}
 :::
 
 ## Auto-generation of translation files
