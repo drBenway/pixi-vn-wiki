@@ -19,3 +19,22 @@ import { storage } from '@drincs/pixi-vn'
 
 const myVariable = storage.getVariable<number>("myVariable");
 ```
+
+Or vice versa, if you have the following code:
+
+```typescript
+import { storage } from '@drincs/pixi-vn'
+
+storage.setVariable("myVariable", 42);
+```
+
+You can access the variable `myVariable` in the ***ink*** code with the following code:
+
+```ink
+// this is used to avoid the ink error, because the variable is not defined
+VAR myVariable = 0
+
+=== start ===
+The value of myVariable is: {myVariable}
+-> DONE
+```
