@@ -12,7 +12,7 @@ Before starting, you must have the following tools installed:
 
 ## Project Initialization
 
-To initialize a new project, you can use the following command:
+If you want to start a new project, you can use the following command to initialize a new project with the Pixi’VN template:
 
 :::tabs
 == npm
