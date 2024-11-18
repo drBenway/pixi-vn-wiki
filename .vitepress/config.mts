@@ -30,7 +30,15 @@ export default defineConfig({
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-KGCCEKXRVG');`
-    ]
+    ],
+    [
+      'script',
+      { async: '', src: 'https://cdn.botpress.cloud/webchat/v2.2/inject.js' }
+    ],
+    [
+      'script',
+      { async: '', src: 'https://files.bpcontent.cloud/2024/11/18/14/20241118144206-K69YIHK1.js' }
+    ],
   ],
 
   themeConfig: {
