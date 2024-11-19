@@ -150,7 +150,7 @@ Pixi’VN is a library that does not deal with distributing the project. You can
 
 ### Development possibilities
 
-Ren'Py is a engine designed only for creating visual novels. Adding features that go outside of visual novel development is limiting and not recommended by the Ren'Py team. It does not have management for libraries.
+Ren'Py is a engine designed only for creating visual novels. Adding complex functionality through Python that goes beyond the development of a normal visual novel is very complicated and is not recommended by the Ren'Py team. It does not have package/library manager.
 
 Pixi’VN is an [npm](https://www.npmjs.com/) library that allows you to create visual novels. So if you want you can use this library in a project that is not natively a visual novel. [npm](https://www.npmjs.com/) is a package manager for JavaScript and the world's largest software registry.
 
