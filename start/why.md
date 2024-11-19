@@ -164,7 +164,7 @@ This means that keeping Ren'Py updated is a constant and very complex process th
 Pixi’VN born in 2024. It is a very young project.
 Pixi’VN is only a library that uses PixiJS for the canvas. As well as providing functionality for visual novels, it doesn't care about anything else.
 
-This means that keeping Pixi’VN updated is a very simple process and once it reaches a stable version it will not need constant updates.
+This means that keeping Pixi’VN updated is a very simple process and once it reaches a stable version it will not need constant updates to be compatible with the latest devices.
 
 ### Conclusion
 
