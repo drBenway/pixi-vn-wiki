@@ -189,7 +189,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/DRincs-Productions/pixi-vn/wiki',
+      pattern: 'https://github.com/DRincs-Productions/pixi-vn/discussions/categories/wiki',
       text: 'Suggest changes to this page',
     },
 
