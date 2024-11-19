@@ -40,13 +40,13 @@ He insisted that we hurried home to Savile Row
 
 ## Why use *ink* integration?
 
-Programming a game narrative in **Javascript/Typescript** has the advantage of having total development freedom, but the disadvantage is that it slows down the writing of a narrative (it makes you write a lot of code).
+Write a narrative in **Javascript/Typescript** slows you down a lot, because you have to write a lot of code, and is also not suitable for novice developers. So ***ink*** is a good alternative to write the narrative, because it is very simple to learn and write.
 
 The novice developers can use a [*ink* template](/start/getting-started.md#project-initialization) to start developing just with ***ink***, and then gradually learn Javascript/Typescript to create more complex features.
 
 ## Start using *ink* in Pixi’VN
 
-If you have not created a project yet then it is recommended to use the [template](/start/getting-started.md#project-initialization) to start your project with ***ink***.
+If you have not created a project yet then it is recommended to use a [Pixi’VN + *ink* template](/start/getting-started.md#project-initialization) to start developing with ***ink***.
 
 Otherwise to add ***ink*** to your Pixi’VN project you need to install the `@drincs/pixi-vn-ink` package.
 
