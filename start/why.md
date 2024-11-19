@@ -39,12 +39,12 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 |---|---|---|
 | Ease of learning | It is intended for people who do not know how to program | You can use templates to get started, but you will need some knowledge of JavaScript/TypeScript, NodeJS and npm |
 | Is it a typed language? | ❌ (Using Python you can use types, but the Ren'Py compiler does not have type checking. Also, much of the native Ren'Py code does not use types.) | ✅ |
-| Can you use debug? | ❌ | ✅ |
-| package/libraries manager | ❌ | npm |
+| Can you use the debug? | ❌ | ✅ |
+| Package/libraries manager | ❌ | npm |
 | Narrative Language | Ren'Py language and Python Statements | JavaScript/TypeScript and various narrative languages ​​(including Ren'Py language) |
-| Minigame implementation | You can use Ren'Py Creator-Defined Displayables (CDD) | You can use PixiJS or install other libraries |
+| Mini-games implementation  | You can use Ren'Py Creator-Defined Displayables (CDD) | You can use PixiJS or install other libraries |
 | UI implementation | You can use Ren'Py screens | You can use PixiJS, React, Vue, Angular, etc. |
-| UI components | You can use components provided by renpy. They are usually based on images. | Depending on the UI framework you choose, you can use the component library you prefer. For example Material-UI, Bootstrap, PixiJS UI, etc. |
+| UI components | You can use components provided by Ren'Py. They are usually based on images. | Depending on the UI framework you choose, you can use the component library you prefer. For example Material-UI, Bootstrap, PixiJS UI, etc. |
 
 #### Dialogues implementation
 
