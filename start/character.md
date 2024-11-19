@@ -97,7 +97,7 @@ const characters = getAllCharacters();
 
 It means that if the character's name is changed during the game, the new character name will be saved in the game storage by linking it to his `id`.
 
-Furthermore, it is important to consider that if the character's `id` is changed, from one version to another, the system will **not** move the data linked to the previous `id` to the new `id`.
+Furthermore, it is important to consider that if the **character's  id is changed**, from one version to another, the system will **not** move the data linked to the previous `id` to the new `id`.
 
 The properties of the `CharacterBaseModel` that are stored in the game storage are:
 
