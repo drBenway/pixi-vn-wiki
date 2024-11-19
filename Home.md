@@ -11,7 +11,7 @@
     * [Characters](ink-character)
     * [Open a knot](ink-label)
     * [Variables](ink-variables)
-    * [Style Text (Markdown)](ink-markdown)
+    * [Markup language (to add text style)](ink-markdown)
     * [Input](ink-input)
     * [Canvas](ink-canvas)
     * [Sounds and Music](ink-sound)
@@ -28,7 +28,7 @@
     * [History](history)
     * [Translating](translate)
     * [Typewriter effect](typewriter)
-    * [Style Text (Markdown)](markdown)
+    * [Markup language (to add text style)](markdown)
     * [Other features](other-narrative-features)
 * [PixiJS Canvas](canvas):
   * [Images](images)

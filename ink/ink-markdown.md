@@ -1,4 +1,4 @@
-# *ink* text style
+# Markup language in *ink*
 
 To add style in **native *ink*** it must be done through `.css` files. **This method is not possible** to use in Pixi’VN.
 
@@ -17,7 +17,7 @@ This is a new line.
 ::: sandbox {template=vvfhw4 entry=/src/ink_labels/start.ink}
 :::
 
-## Style Text with Markdown on *ink*
+## Markdown on *ink*
 
 On Pixi’VN it is recommended to use Markdown to add style to your text. If you have [implemented Markdown in your project](/start/markdown.md) then you will be able to use Markdown syntax to style your text.
 

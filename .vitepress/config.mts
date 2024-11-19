@@ -84,7 +84,7 @@ export default defineConfig({
                     { text: 'History', link: '/start/history' },
                     { text: 'Translating', link: '/start/translate' },
                     { text: 'Typewriter effect', link: '/start/typewriter' },
-                    { text: 'Style Text (Markdown)', link: '/start/markdown' },
+                    { text: 'Markup language (to add text style)', link: '/start/markdown' },
                     { text: 'Other features', link: '/start/other-narrative-features' },
                   ]
                 }
@@ -134,9 +134,9 @@ export default defineConfig({
               link: '/ink/ink',
               items: [
                 { text: 'Characters', link: '/ink/ink-character' },
-                { text: 'Open a knot from ink', link: '/ink/ink-label' },
-                { text: 'Variables in ink', link: '/ink/ink-variables' },
-                { text: 'Style Text (Markdown)', link: '/ink/ink-markdown' },
+                { text: 'Open a knot', link: '/ink/ink-label' },
+                { text: 'Variables', link: '/ink/ink-variables' },
+                { text: 'Markup language (to add text style)', link: '/ink/ink-markdown' },
                 { text: 'Input', link: '/ink/ink-input' },
                 { text: 'Canvas', link: '/ink/ink-canvas' },
                 { text: 'Sounds and Music', link: '/ink/ink-sound' },
