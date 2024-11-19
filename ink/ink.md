@@ -168,9 +168,7 @@ In Pixi’VN you can use the `importInkText()` function to import the ***ink* fi
 
 ### Narration outside the knots
 
-The narration outside the knots (or labels) will be ignored, except for variables. The reason is that you must run the first knot (or label) with the [Pixi’VN functions](/start/labels.md#run-a-label).
-
-So for example the following cases will be ignored:
+The narration outside the knots (or labels) will be ignored, except for variables. So for example:
 
 ```ink
 VAR my_var = false // ✅ This will be handled (because it is a variable)
@@ -233,7 +231,7 @@ My name is John // ✅ This will be handled
 
 ## Using Pixi’VN Features from *ink*
 
-* [Use Character in *ink*](/ink/ink-character.md)
+* [Use the characters in *ink*](/ink/ink-character.md)
 * [*ink* knot (or label)](/ink/ink-label.md)
 * [*ink* variables](/ink/ink-variables.md)
 * [*ink* text style](/ink/ink-markdown.md)
