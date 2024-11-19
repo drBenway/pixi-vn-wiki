@@ -1,6 +1,6 @@
 # Use the characters in *ink*
 
-You can use the [Pixi’VN Characters](/start/character.md) in ***ink***. To use the character in ***ink***, you need to create a new character in **Typescript** and, after that, in the ***ink* script**, you can use following syntax:
+You can associate a [Pixi’VN character](/start/character.md) with a dialogue in ***ink***. To do this, you need to create a or more characters in **Typescript** and, after that, in the ***ink* script**, you can use following syntax:
 
 `character_id` + `:` + `SPACE` + `text`
 
@@ -59,7 +59,11 @@ return (
 
 ## Use Character Emotions in *ink*
 
-You can use the [Pixi’VN Character Emotions](/start/character.md#character-emotions) in ***ink***. To use the character emotions in ***ink***, you need to create a new character and in the ***ink* script**, you can use following syntax:
+You can use the [Pixi’VN Character Emotions](/start/character.md#character-emotions) in ***ink***. To use the character emotions in ***ink***, you need to create a or more characters with an emotion in **Typescript** and, after that, in the ***ink* script**, you can use following syntax:
+
+`character_id` + `@` + `emotion`
+
+For example, you can associate this character with a dialogue using the following syntax:
 
 `character_id` + `@` + `emotion` + `:` + `SPACE` + `text`
 
