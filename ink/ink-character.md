@@ -124,14 +124,14 @@ return (
 
 Having the ability to rename a character and use their name in dialogues greatly simplifies the development of a Visual Novel. Since the [character](/start/character.md) is an object based on a [customizable model](/start/character.md#custom-character), it is not possible to use the character as a [variable](/ink/ink-variables.md) simply with the `{}` syntax.
 
-But you can take advantage of the possibility of [replacing](/ink/ink-replacement.md) and [customizing hashtag scripts](/ink/ink-hashtag.md) to implement this feature.
+But you can take advantage of the [possibility of replacing portions of text](/ink/ink-replacement.md) and [customizing hashtag scripts](/ink/ink-hashtag.md) to implement this feature.
 
 ::: sandbox {template=mhs2pd entry=/src/ink_labels/start.ink,/src/values/characters.ts}
 :::
 
 ### Use character name in dialogues
 
-To use the character name in dialogues, you can take advantage of the possibility of [replacing](/ink/ink-replacement.md). For example, you can use the following method:
+To use the character name in dialogues, you can take advantage of the [possibility of replacing portions of text](/ink/ink-replacement.md). For example, you can use the following method:
 
 :::tabs
 == main.ts
@@ -155,7 +155,7 @@ onReplaceTextAfterTranslation((key) => {
 
 ```ink
 === start ===
-liam_id: Hello, [liam_id].
+Hello, [liam_id].
 -> DONE
 ```
 
