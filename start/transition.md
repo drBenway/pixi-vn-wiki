@@ -76,9 +76,17 @@ import { removeWithFadeTransition } from '@drincs/pixi-vn'
 removeWithFadeTransition('image1', { duration: 2 })
 ```
 
-<!-- TODO moveIn -->
+## Move in/out Transition
 
-<!-- TODO zoomIn -->
+This page is under construction.
+
+## Zoom in/out Transition
+
+This page is under construction.
+
+## Push in/out Transition
+
+This page is under construction.
 
 ## Create your own transitions
 

@@ -4,12 +4,12 @@ Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [
 
 The syntax is as follows:
 
-`#` + `sound operation` + `sound` + `tag of the sound element` + `parameters`
+`#` + `sound operation` + `sound` + `alias of the sound element` + `parameters`
 
 * `#` It is a special character used by ***ink* syntax** for add Special Commands.
 * `sound operation` It is the operation that you want to do with the sound element. The available operations are `add`, `play`, `pause`, `resume`, `remove` and `volume`.
-* `tag of the sound element` It is the tag of the sound element. The tag is a string that identifies the sound element.
-  * If the tag includes spaces, you must use double quotes.
+* `alias of the sound element` It is the alias of the sound element. The alias is a string that identifies the sound element.
+  * If the alias includes spaces, you must use double quotes.
 * `parameters` It is the parameters of the operation. The parameters depend on the operation.
   * If the parameters include spaces, you must use double quotes.
   * If the parameters is a object, you must use the JSON format and the first character must be `\{` and the last character must be `\}`. Example: `\{ "volume": 100, name: "Music" \}`
@@ -20,7 +20,7 @@ To add a sound in ***ink***, you can use the `add` operation.
 
 This operation requires one parameter, the URL or path of the sound.
 
-After the tag of the the URL or path of the sound, you can add the `SoundOptions` parameters. These parameters do not have a precise order and must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
+After the alias of the the URL or path of the sound, you can add the `SoundOptions` parameters. These parameters do not have a precise order and must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
 
 ```ink
 # sound add bird /bird.mp3
@@ -31,7 +31,7 @@ After the tag of the the URL or path of the sound, you can add the `SoundOptions
 
 To play a sound in ***ink***, you can use the `play` operation.
 
-After the tag of the sound element, you can add the `SoundPlayOptions` parameters. These parameters do not have a precise order and must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
+After the alias of the sound element, you can add the `SoundPlayOptions` parameters. These parameters do not have a precise order and must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
 
 ```ink
 # play sound bird

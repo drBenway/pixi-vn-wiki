@@ -98,6 +98,12 @@ canvas.add("alien", alien);
 canvas.addTicker("alien", new FadeAlphaTicker({ duration: 2 }));
 ```
 
+## Multiple asserts
+
+### Shake
+
+This page is under construction.
+
 ### How to force completion of an Transition/Effect/Animation in the next step?
 
 [Read this](/other/various-answers#how-to-force-completion-of-an-transition-effect-animation-in-the-next-step)
