@@ -1,14 +1,18 @@
 # Use input in *ink*
 
-Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [Input](/start/input.md).
+The ***ink* + Pixi’VN integration** introduces the a # script that allows you to request an [input](/start/input.md) from the user.
 
 The syntax is as follows:
 
-`#` + `request` + `input` + `type of the value`
+`#` + `[operation]` + `input` + `[type of the value] (Optional)`
 
-* `#` It is a special character used by ***ink* syntax** for add Special Commands.
-* `request` It is the operation that you want to do with the input element. The available operations are `request`.
-* `input` It is the type of the input element (is a string). If contains spaces, you must use double quotes.
+Where:
+
+* `#`: It is a special character used by ***ink* syntax** for add Special Commands.
+* `[operation]`: It is the operation that you want to do with the input element. The available operations are:
+  * `request`: Request an input element.
+* `input`: It is the keyword that indicates that you want to request an input element.
+* `[type of the value]` (Optional): It is the type of the value that you want to request. You can use any string of your choice. You can use this value to get more information about the type of value that is requested. If the string contains spaces, you must use double quotes.
 
 The value will be saved in storage with the following system key `storage.keysSystem.CURRENT_INPUT_VALUE_MEMORY_KEY`, that is `_input_value_`. So you can access the value with `_input_value_`.
 
@@ -19,11 +23,19 @@ Example:
 VAR _input_value_ = ""
 
 === start ===
-My input value is: {_input_value_}
-# request input
+Hello
+# request input string
+What is your name?
+My name is { _input_value_ }
+~ _input_value_ = 18
 # request input number
-# request input "array of string"
-The input value is: {_input_value_}
+How old are you?
+I am { _input_value_ } years old
+~ _input_value_ = ""
+# request input "html textarea"
+Describe who you are:
+{ _input_value_ }
+Restart
 -> DONE
 ```
 

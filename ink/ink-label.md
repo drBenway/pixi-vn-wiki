@@ -26,7 +26,7 @@ End
 ::: sandbox {template=5mmwzt entry=/src/ink_labels/start.ink}
 :::
 
-This feature derives from native ***ink*** and is the only native method to start a knot. So, if you test your script using **Inky**, you will be able to use this feature.
+This feature derives from **native *ink*** and is the only native method to start a knot. So, if you test your script using **Inky**, you will be able to use this feature.
 
 It corresponds to the [`jump` functionality](/start/labels.md#jump-to-a-label) in the Pixi’VN library.
 
@@ -60,7 +60,7 @@ This feature has been added by ***ink* + Pixi’VN integration**.
 
 ## Use the `call` script
 
-The ***native ink* language** does not have a possibility to ["call" a knot](/start/labels.md#call-a-label) without close the current knot and open the new one. This is why the ***ink* + Pixi’VN integration** introduces the `# call` script. This script is ignored by **Inky**.
+The **native *ink* language** does not have a possibility to ["call" a knot](/start/labels.md#call-a-label) without close the current knot and open the new one. This is why the ***ink* + Pixi’VN integration** introduces the `# call` script. This script is ignored by **Inky**.
 
 Write `# call` followed by the name of the knot, for example:
 
