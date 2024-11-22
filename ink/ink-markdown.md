@@ -1,6 +1,6 @@
 # Markup language in *ink*
 
-The ***ink* + Pixi’VN integration** provides some additional features to facilitate the use of components that introduce [Markup](/start/markdown.md) in the text.
+The ***ink* + Pixi’VN integration** provides some additional features to facilitate the use of components that introduce a [Markup](/start/markdown.md) in the text.
 
 ## New Lines
 
