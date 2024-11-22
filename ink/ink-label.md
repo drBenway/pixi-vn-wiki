@@ -13,8 +13,18 @@ To run a knot (or label) you can use the following methods:
 You can start a knot using the `->` symbol. Write the `->` symbol followed by the name of the knot, for example:
 
 ```ink
--> start
+=== start ===
+Start
+-> after // [!code focus]
+
+=== after ===
+After
+End
+-> DONE
 ```
+
+::: sandbox {template=5mmwzt entry=/src/ink_labels/start.ink}
+:::
 
 This feature derives from native ***ink*** and is the only native method to start a knot. So, if you test your script using **Inky**, you will be able to use this feature.
 
@@ -29,8 +39,20 @@ It is for this very reason that the need for a new script arises which is ignore
 You can start a knot using the `# jump`. Write `# jump` followed by the name of the knot, for example:
 
 ```ink
-# jump start
+=== start ===
+Start
+# jump after // [!code focus]
+Start End
+-> DONE
+
+=== after ===
+After
+After End
+-> DONE
 ```
+
+::: sandbox {template=rwd5c6 entry=/src/ink_labels/start.ink}
+:::
 
 This feature has been added by ***ink* + Pixi’VN integration**.
 
@@ -43,5 +65,17 @@ The ***native ink* language** does not have a possibility to ["call" a knot](/st
 Write `# call` followed by the name of the knot, for example:
 
 ```ink
-# call start
+=== start ===
+Start
+# call after // [!code focus]
+Start End
+-> DONE
+
+=== after ===
+After
+After End
+-> DONE
 ```
+
+::: sandbox {template=jgzfc7 entry=/src/ink_labels/start.ink}
+:::
