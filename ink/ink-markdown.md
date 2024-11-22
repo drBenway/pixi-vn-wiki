@@ -1,8 +1,6 @@
 # Markup language in *ink*
 
-To add style to your text in ***ink*** you must be done through `.css` files. **This method is not possible** to use in Pixi’VN.
-
-For this reason ***ink* + Pixi’VN integration** provides the following methods to add style to your text:
+The ***ink* + Pixi’VN integration** provides some additional features to facilitate the use of components that introduce [Markup](/start/markdown.md) in the text.
 
 ## New Lines
 
