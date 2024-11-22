@@ -22,25 +22,25 @@ It corresponds to the [`jump` functionality](/start/labels.md#jump-to-a-label) i
 
 As said before you can use the `->` symbol to call a knot written in another narrative language or Javascript/TypeScript, but if you're using **Inky** to test your script, **Inky** will warn you that the knot does not exist (because **Inky** analyzes only the `.ink` file).
 
-It is for this very reason that the need for a new command arises which is ignored by **Inky** but is handled by Pixi’VN. This is the [`# jump` command](#use-the-jump-script-command).
+It is for this very reason that the need for a new script arises which is ignored by **Inky** but is handled by Pixi’VN. This script is the `# jump`.
 
-## Use the `jump` script command
+## Use the `jump` script
 
-You can start a knot using the `# jump` script command. Write the `# jump` script command followed by the name of the knot, for example:
+You can start a knot using the `# jump`. Write `# jump` followed by the name of the knot, for example:
 
 ```ink
 # jump start
 ```
 
-This feature is added by ***ink* + Pixi’VN integration**.
+This feature has been added by ***ink* + Pixi’VN integration**.
 
-This is equivalent to the `->` symbol. The difference is that this command is ignored by **Inky**, so you can use it to call a knot written in another narrative language or Javascript/TypeScript without **Inky** warning you that the knot does not exist.
+`# jump` is equivalent to the `->` symbol. The difference is that this script is ignored by **Inky**, so you can use it to call a knot written in another narrative language or Javascript/TypeScript without **Inky** warning you that the knot does not exist.
 
-## Use the `call` script command
+## Use the `call` script
 
-The ***native ink* language** does not have a possibility to [call a knot](/start/labels.md#call-a-label) without jumping to it. This is why the ***ink* + Pixi’VN integration** adds the `# call` script command. This command is ignored by **Inky**.
+The ***native ink* language** does not have a possibility to ["call" a knot](/start/labels.md#call-a-label) without close the current knot and open the new one. This is why the ***ink* + Pixi’VN integration** introduces the `# call` script. This script is ignored by **Inky**.
 
-Write the `# call` script command followed by the name of the knot, for example:
+Write `# call` followed by the name of the knot, for example:
 
 ```ink
 # call start
