@@ -8,7 +8,9 @@ In the ***ink* + Pixi’VN integration**, the variables `VAR` and `CONST` are eq
 
 Just like in **native *ink*** you can use variables in dialogs or `scripts that start with #`.
 
-The name of the variables of  ***ink*** they are corresponding to the key of the variables in the [storage](/start/storage.md). So For example, if you have the following ***ink*** code:
+The name of the ***ink*** variables corresponds to the key of a variable in the [storage](/start/storage.md).
+
+So For example, if you have the following ***ink*** code:
 
 ```ink
 VAR myVariable = 42
