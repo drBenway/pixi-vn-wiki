@@ -15,9 +15,9 @@ This is a new line.
 ::: sandbox {template=vvfhw4 entry=/src/ink_labels/start.ink}
 :::
 
-## Markdown on *ink*
+## Markdown syntax in *ink*
 
-On Pixi’VN it is recommended to use Markdown to add style to your text. If you have [implemented Markdown in your project](/start/markdown.md) then you will be able to use Markdown syntax to style your text.
+On Pixi’VN it is recommended to use Markdown to add style to your text. If you have [implemented Markdown in your project](/start/markdown.md) then you will be able to use Markdown syntax to style your text in ***ink***.
 
 To do this you need to keep in mind that many symbols of Markdown syntax are also used by ***ink* syntax**, such as: `#`, `*`, `/`, `~`, `-`, `|` etc. To avoid conflicts you can use the escape character `\` before the Markdown symbol.
 
