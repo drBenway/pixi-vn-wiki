@@ -192,7 +192,7 @@ My name is John // ✅ This will be handled
 
     **In native *ink***, you will see 2 different dialogues, the first one will be `2 of Diamonds.` and the second one will be `'You lose this time!' crowed the croupier.`.
 
-    **In Pixi’VN *ink***, you will not see 2 different dialogues, but the following dialogue: `2 of Diamonds.\n\n'You lose this time!' crowed the croupier.`. In [Markdown](/ink/ink-markdown.md#markdown-on-ink) it will be displayed as:
+    **In Pixi’VN *ink***, you will not see 2 different dialogues, but the following dialogue: `2 of Diamonds.\n\n'You lose this time!' crowed the croupier.`. In [Markdown](/ink/ink-markup.md#markdown-on-ink) it will be displayed as:
 
     ```txt
     2 of Diamonds.
@@ -234,7 +234,7 @@ My name is John // ✅ This will be handled
 * [Use the characters in *ink*](/ink/ink-character.md)
 * [*ink* knot (or label)](/ink/ink-label.md)
 * [*ink* variables](/ink/ink-variables.md)
-* [Markup language in *ink* (to add text style)](/ink/ink-markdown.md)
+* [Markup language in *ink* (to add text style)](/ink/ink-markup.md)
 * [Use input in *ink*](/ink/ink-input.md)
 * [Use canvas in *ink*](/ink/ink-canvas.md)
 * [Using sounds and music in *ink*](/ink/ink-sound.md)

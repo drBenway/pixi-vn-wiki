@@ -136,7 +136,7 @@ export default defineConfig({
                 { text: 'Characters', link: '/ink/ink-character' },
                 { text: 'Open a knot', link: '/ink/ink-label' },
                 { text: 'Variables', link: '/ink/ink-variables' },
-                { text: 'Markup language (to add text style)', link: '/ink/ink-markdown' },
+                { text: 'Markup language (to add text style)', link: '/ink/ink-markup' },
                 { text: 'Input', link: '/ink/ink-input' },
                 { text: 'Canvas', link: '/ink/ink-canvas' },
                 { text: 'Sounds and Music', link: '/ink/ink-sound' },

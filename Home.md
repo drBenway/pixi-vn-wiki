@@ -11,7 +11,7 @@
     * [Characters](ink-character)
     * [Open a knot](ink-label)
     * [Variables](ink-variables)
-    * [Markup language (to add text style)](ink-markdown)
+    * [Markup language (to add text style)](ink-markup)
     * [Input](ink-input)
     * [Canvas](ink-canvas)
     * [Sounds and Music](ink-sound)
