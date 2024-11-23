@@ -72,25 +72,25 @@ For example, you can associate this character with a dialogue using the followin
 
 ```ink
 === start ===
-liam_id@happy: Hello, I'm Liam and I'm happy.
+liam@happy: Hi, I'm Liam. I'm very happy today.
 -> DONE
 ```
 
 == characters.ts
 
 ```ts
-const liam = new CharacterBaseModel('liam_id', {
-    name: 'Liam',
-    surname: 'Smith',
-    age: 25,
-    icon: "https://example.com/liam.png",
-    color: "#9e2e12"
+import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
+
+export const liam = new CharacterBaseModel("liam", {
+  name: "Liam",
 });
 
-const liamHappy = new CharacterEmotionModel({ id: 'liam_id', emotion: 'happy' }, {
-    icon: "https://example.com/liam_happy.png",
-    color: "#9e2e12"
-});
+export const liamHappy = new CharacterBaseModel(
+  { id: "liam", emotion: "happy" },
+  {
+    name: "Liam Happy",
+  }
+);
 
 saveCharacter([liam, liamHappy]);
 ```
@@ -118,6 +118,9 @@ return (
 }
 ```
 
+:::
+
+::: sandbox {template=xm9hj9 entry=/src/ink_labels/start.ink,/src/values/characters.ts}
 :::
 
 ## Use Character how variable in *ink*
