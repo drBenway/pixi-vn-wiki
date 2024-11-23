@@ -16,8 +16,8 @@ Where:
   * `pause` (Only for video): Pause a video canvas element. (Read more [here](#pause-video-canvas-element-in-ink))
   * `resume` (Only for video): Resume a video canvas element. (Read more [here](#resume-video-canvas-element-in-ink))
 * `[type of the canvas element]` It is the type of the canvas element. The available types are:
-  * `image`: It is an [image](/start/images.md) canvas element.
-  * `video`: It is a [video](/start/videos.md) canvas element.
+  * [`image`](/start/images.md)
+  * [`video`](/start/videos.md)
 * `[alias]` It is the [alias of the canvas element](/start/canvas-alias.md). The alias is a string that identifies the canvas element.
   * If the alias includes spaces, you must use double quotes.
 * `[parameters]` It is the parameters of the operation. The parameters depend on the operation.

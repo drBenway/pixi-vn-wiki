@@ -27,13 +27,13 @@ VAR _input_value_ = ""
 
 === start ===
 Hello
-# request input type string
+# request input type string // [!code focus]
 What is your name?
 My name is { _input_value_ }
-# request input type number default 18
+# request input type number default 18 // [!code focus]
 How old are you?
 I am { _input_value_ } years old
-# request input type "html textarea"
+# request input type "html textarea" // [!code focus]
 Describe who you are:
 { _input_value_ }
 Restart
