@@ -12,8 +12,9 @@ Where:
 * `[operation]`: It is the operation that you want to do with the input element. The available operations are:
   * `request`: Request an input element.
 * `input`: It is the keyword that indicates that you want to request an input element.
-* `[parameters]` (Optional): It is the parameters of the operation. The available parameters are:
-  * `type` (Optional): It is the type of the value that you want to request. You can use any string of your choice. You can use this value to get more information about the type of value that is requested. If the string contains spaces, you must use double quotes.
+* `[parameters]` (Optional): It is the parameters of the operation. The syntax for adding parameters is as follows: `property1` + `value1` + `property2` + `value2` + `...`. If the value is a string and contains spaces, you must use double quotes.
+The available parameters are:
+  * `type` (Optional): It is the type of the value that you want to request. You can use any string of your choice. You can use this value to get more information about the type of value that is requested.
   * `default` (Optional): It is the default value of the input element.
 
 The value will be saved in storage with the following system key `storage.keysSystem.CURRENT_INPUT_VALUE_MEMORY_KEY`, that is `_input_value_`. So you can access the value with `_input_value_`.
