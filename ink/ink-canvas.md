@@ -4,21 +4,23 @@ Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [
 
 The syntax is as follows:
 
-`#` + `canvas operation` + `type of the canvas element` + `alias of the canvas element` + `parameters`
+`#` + `[operation]` + `[type of the canvas element]` + `[alias]` + `[parameters]`
 
-* `#` It is a special character used by ***ink* syntax** for add "Special Commands".
-* `canvas operation` It is the operation that you want to do with the canvas element. The available operations are:
+Where:
+
+* `#`: It is a special character used by ***ink* syntax** for use a special script.
+* `[operation]` It is the operation that you want to do with the canvas element. The available operations are:
   * `show`: Show a canvas element. (Read more [here](#show-canvas-element-in-ink))
   * `edit`: Edit a canvas element. (Read more [here](#edit-canvas-element-in-ink))
   * `remove`: Remove a canvas element. (Read more [here](#remove-canvas-element-in-ink))
   * `pause` (Only for video): Pause a video canvas element. (Read more [here](#pause-video-canvas-element-in-ink))
   * `resume` (Only for video): Resume a video canvas element. (Read more [here](#resume-video-canvas-element-in-ink))
-* `type of the canvas element` It is the type of the canvas element. The available types are:
+* `[type of the canvas element]` It is the type of the canvas element. The available types are:
   * `image`: It is an [image](/start/images.md) canvas element.
   * `video`: It is a [video](/start/videos.md) canvas element.
-* `alias of the canvas element` It is the [alias of the canvas element](/start/canvas-alias.md). The alias is a string that identifies the canvas element.
+* `[alias]` It is the [alias of the canvas element](/start/canvas-alias.md). The alias is a string that identifies the canvas element.
   * If the alias includes spaces, you must use double quotes.
-* `parameters` It is the parameters of the operation. The parameters depend on the operation.
+* `[parameters]` It is the parameters of the operation. The parameters depend on the operation.
   * If the parameters include spaces, you must use double quotes.
   * If the parameters is a object, you must use the JSON format and the first character must be `\{` and the last character must be `\}`. Example: `\{ "color": "red", isVisble: true, position: { x: 100, y: 100 } \}`
 
@@ -35,7 +37,7 @@ Afer the URL/path of the image, you can add the properties of the [canvas elemen
 
 The syntax is as follows:
 
-`#` + `show` + `type of the canvas element` + `alias of the canvas element` + `URL/path of the image` + `properties`
+`#` + `show` + `[type of the canvas element]` + `[alias]` + `[URL/path of the image]` + `[parameters]`
 
 ```ink
 # show image bg /image.png
@@ -49,7 +51,7 @@ If you want to show the canvas element with a [transition](/start/transition.md)
 
 The syntax is as follows:
 
-`#` + `show` + `type of the canvas element` + `alias of the canvas element` + `URL/path of the image` + `properties` + `with` + `transitionType` + `transition parameters`
+`#` + `show` + `[type of the canvas element]` + `[alias]` + `[URL/path of the image]` + `[parameters]` + `with` + `[transitionType]` + `[transition parameters]`
 
 The available transitions are:
 
@@ -112,7 +114,7 @@ temp durationVar = 3
 
 You can use the [effects](/start/animations-effects.md) in ***ink***.
 
-If you want to use an effect in ***ink***, you can use how `canvas operation` the name of the effect.
+If you want to use an effect in ***ink***, you can use how `[operation]` the name of the effect.
 
 The available effects are:
 
@@ -124,7 +126,7 @@ The available effects are:
 
 The syntax is as follows:
   
-`#` + `effectType` + `alias of the canvas element` + `parameters`
+`#` + `[effectType]` + `[alias]` + `[parameters]`
   
 ```ink
 # fade bg duration 3

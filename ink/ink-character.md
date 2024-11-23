@@ -2,7 +2,7 @@
 
 You can associate a [Pixi’VN character](/start/character.md) with a dialogue in ***ink***. To do this, you need to create a or more characters in **Typescript** and, after that, in the ***ink* script**, you can use following syntax:
 
-`character_id` + `:` + `SPACE` + `text`
+`[character_id]` + `:` + `SPACE` + `[text]`
 
 :::tabs
 == start.ink

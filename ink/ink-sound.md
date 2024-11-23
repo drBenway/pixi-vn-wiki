@@ -4,13 +4,15 @@ Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [
 
 The syntax is as follows:
 
-`#` + `sound operation` + `sound` + `alias of the sound element` + `parameters`
+`#` + `[operation]` + `sound` + `[alias]` + `[parameters]`
 
-* `#` It is a special character used by ***ink* syntax** for add Special Commands.
-* `sound operation` It is the operation that you want to do with the sound element. The available operations are `add`, `play`, `pause`, `resume`, `remove` and `volume`.
-* `alias of the sound element` It is the alias of the sound element. The alias is a string that identifies the sound element.
+Where:
+
+* `#`: It is a special character used by ***ink* syntax** for use a special script.
+* `[operation]` It is the operation that you want to do with the sound element. The available operations are `add`, `play`, `pause`, `resume`, `remove` and `volume`.
+* `[alias]` It is the alias of the sound element. The alias is a string that identifies the sound element.
   * If the alias includes spaces, you must use double quotes.
-* `parameters` It is the parameters of the operation. The parameters depend on the operation.
+* `[parameters]` It is the parameters of the operation. The parameters depend on the operation.
   * If the parameters include spaces, you must use double quotes.
   * If the parameters is a object, you must use the JSON format and the first character must be `\{` and the last character must be `\}`. Example: `\{ "volume": 100, name: "Music" \}`
 
