@@ -1,6 +1,6 @@
 # Use canvas in *ink*
 
-Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [canvas](/start/canvas.md).
+The ***ink* + Pixi’VN integration** introduces the a # script that allows you to show, edit, remove and etc. a [canvas element](/start/canvas-elements.md).
 
 The syntax is as follows:
 
@@ -9,7 +9,7 @@ The syntax is as follows:
 Where:
 
 * `#`: It is a special character used by ***ink* syntax** for use a special script.
-* `[operation]` It is the operation that you want to do with the canvas element. The available operations are:
+* `[operation]`: It is the operation that you want to execute with the canvas element. The available operations are:
   * `show`: Show a canvas element. (Read more [here](#show-canvas-element-in-ink))
   * `edit`: Edit a canvas element. (Read more [here](#edit-canvas-element-in-ink))
   * `remove`: Remove a canvas element. (Read more [here](#remove-canvas-element-in-ink))

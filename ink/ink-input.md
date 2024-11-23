@@ -9,7 +9,7 @@ The syntax is as follows:
 Where:
 
 * `#`: It is a special character used by ***ink* syntax** for use a special script.
-* `[operation]`: It is the operation that you want to do with the input element. The available operations are:
+* `[operation]`: It is the operation that you want to execute with the input element. The available operations are:
   * `request`: Request an input element.
 * `input`: It is the keyword that indicates that you want to request an input element.
 * `[parameters]` (Optional): It is the parameters of the operation. The syntax for adding parameters is as follows: `property1` + `value1` + `property2` + `value2` + `...`. If the value is a string and contains spaces, you must use double quotes.
