@@ -1,5 +1,7 @@
 # Connect the UI components with the game variables
 
+![Frame_Aufbau](https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fpixi-vn-usequery.png?alt=media)
+
 The best way to connect the UI with the game variables is to use the [TanStack Query](https://tanstack.com/query/latest) library.
 
 **What is TanStack Query?** TanStack Query is a library that allows you to manage the state of your application in a simple and efficient way. It is based on the concept of queries, mutations and subscriptions. This library is very useful and is compatible with React, Vue, Angular, Svelte, etc.
