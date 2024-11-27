@@ -38,6 +38,9 @@ It is for this very reason that the need for a new script arises which is ignore
 
 You can start a knot using the `# jump`. Write `# jump` followed by the name of the knot, for example:
 
+:::tabs
+== start.ink
+
 ```ink
 === start ===
 Start
@@ -50,6 +53,47 @@ After
 After End
 -> DONE
 ```
+
+== javascriptLabel.ts
+
+```ts
+import { narration, newLabel } from "@drincs/pixi-vn";
+
+const javascriptLabel = newLabel("javascript_label_id", [
+    () => {
+        narration.dialogue = "After";
+    },
+    () => {
+        narration.dialogue = "After End";
+    },
+]);
+export default javascriptLabel;
+```
+
+== App.tsx
+
+```ts
+import BackButton from "./components/BackButton";
+import NextButton from "./components/NextButton";
+import TextInput from "./screens/modals/TextInput";
+import NarrationScreen from "./screens/NarrationScreen";
+
+// Remember to import the label file at least once into your project. // [!code focus]
+import "./labels/javascriptLabel"; // [!code focus]
+
+export default function App() {
+    return (
+        <>
+            <NarrationScreen />
+            <TextInput />
+            <NextButton />
+            <BackButton />
+        </>
+    );
+}
+```
+
+:::
 
 ::: sandbox {template=rwd5c6 entry=/src/ink_labels/start.ink}
 :::
@@ -64,6 +108,9 @@ The **native *ink* language** does not have a possibility to ["call" a knot](/st
 
 Write `# call` followed by the name of the knot, for example:
 
+:::tabs
+== start.ink
+
 ```ink
 === start ===
 Start
@@ -76,6 +123,47 @@ After
 After End
 -> DONE
 ```
+
+== javascriptLabel.ts
+
+```ts
+import { narration, newLabel } from "@drincs/pixi-vn";
+
+const javascriptLabel = newLabel("javascript_label_id", [
+    () => {
+        narration.dialogue = "After";
+    },
+    () => {
+        narration.dialogue = "After End";
+    },
+]);
+export default javascriptLabel;
+```
+
+== App.tsx
+
+```ts
+import BackButton from "./components/BackButton";
+import NextButton from "./components/NextButton";
+import TextInput from "./screens/modals/TextInput";
+import NarrationScreen from "./screens/NarrationScreen";
+
+// Remember to import the label file at least once into your project. // [!code focus]
+import "./labels/javascriptLabel"; // [!code focus]
+
+export default function App() {
+    return (
+        <>
+            <NarrationScreen />
+            <TextInput />
+            <NextButton />
+            <BackButton />
+        </>
+    );
+}
+```
+
+:::
 
 ::: sandbox {template=jgzfc7 entry=/src/ink_labels/start.ink}
 :::
