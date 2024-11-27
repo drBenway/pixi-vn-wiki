@@ -9,6 +9,7 @@ Before starting, you must have the following tools installed:
 * [Node.js](https://nodejs.org/) version 18 or higher.
 * Text Editor with TypeScript support.
   * [Visual Studio Code](https://code.visualstudio.com/)
+  * [Cursor](https://www.cursor.com/)
 * (Recommended) [Git](https://git-scm.com/)
   * Have a [GitHub account](https://github.com/)
 
