@@ -44,13 +44,8 @@ You can start a knot using the `# jump`. Write `# jump` followed by the name of 
 ```ink
 === start ===
 Start
-# jump after // [!code focus]
+# jump javascript_label_id // [!code focus]
 Start End
--> DONE
-
-=== after ===
-After
-After End
 -> DONE
 ```
 
@@ -114,13 +109,8 @@ Write `# call` followed by the name of the knot, for example:
 ```ink
 === start ===
 Start
-# call after // [!code focus]
+# call javascript_label_id // [!code focus]
 Start End
--> DONE
-
-=== after ===
-After
-After End
 -> DONE
 ```
 
