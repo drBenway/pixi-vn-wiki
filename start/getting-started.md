@@ -43,8 +43,10 @@ bun create pixi-vn@latest
 
 The supported template presets are:
 
-* **[Basic Visual Novel - Web page (Vite + React + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)**
-* **[Basic Visual Novel - Multi Device (Vite + React + MUI joy + Tauri)](https://github.com/DRincs-Productions/pixi-vn-react-template/tree/tauri)**
+* **[Visual Novel - React - Typescript - Web page](https://github.com/DRincs-Productions/pixi-vn-react-template)**
+* **[Visual Novel - React - Typescript - Web page + Desktop + Mobile](https://github.com/DRincs-Productions/pixi-vn-react-template/tree/tauri)**
+* **[Visual Novel - React - Ink + Typescript - Web page](https://github.com/DRincs-Productions/pixi-vn-react-ink-template)**
+* **[Visual Novel - React - Ink + Typescript - Web page + Desktop + Mobile](https://github.com/DRincs-Productions/pixi-vn-react-ink-template/tree/tauri)**
 
 ( More templates will be added in the future, see this [issue](https://github.com/DRincs-Productions/pixi-vn/issues/162) for more information )
 
