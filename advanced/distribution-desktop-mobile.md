@@ -103,8 +103,8 @@ git push origin v1.0.0
 
 In the Actions section of your Repository you can view the status of this procedure.
 
-![Actions section](https://github.com/user-attachments/assets/b39055a9-02a7-472b-930f-daf0a9c6c78b")
+![Actions section](https://github.com/user-attachments/assets/b39055a9-02a7-472b-930f-daf0a9c6c78b)
 
-At its end a Release will be created. Read more about the GitHub Releases [here](https://docs.github.com/en/repositories/releasing-projects-on-github/viewing-your-repositorys-releases-and-tags)
+At its end a Release will be created. Read more about the GitHub Releases [here](https://docs.github.com/en/repositories/releasing-projects-on-github/viewing-your-repositorys-releases-and-tags).
 
 Currently the mobile release with GitHub Actions is in development you can get more information [here](https://github.com/tauri-apps/tauri-action/pull/924).
