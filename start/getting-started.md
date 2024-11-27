@@ -44,7 +44,7 @@ bun create pixi-vn@latest
 The supported template presets are:
 
 * **[Basic Visual Novel - Web page (Vite + React + MUI joy)](https://github.com/DRincs-Productions/pixi-vn-react-template)**
-* **[Basic Visual Novel - Multi Device (Vite + React + MUI joy + Electron Forge)](https://github.com/DRincs-Productions/pixi-vn-react-template/tree/electron)**
+* **[Basic Visual Novel - Multi Device (Vite + React + MUI joy + Tauri)](https://github.com/DRincs-Productions/pixi-vn-react-template/tree/tauri)**
 
 ( More templates will be added in the future, see this [issue](https://github.com/DRincs-Productions/pixi-vn/issues/162) for more information )
 

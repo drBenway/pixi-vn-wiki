@@ -54,7 +54,7 @@ features:
     details: Write your visual novel with the narrative scripting language, Ren'Py.
     link: /renpy/renpy
   - icon: <img
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Felectronjs-icon.png?alt=media" 
+        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftauri-icon.png?alt=media" 
         alt="Multi device"
         style="border-radius:30%;"
       />

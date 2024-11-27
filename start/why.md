@@ -135,7 +135,7 @@ The performance and size of the project are very important factors to consider w
 
 Ren'Py framework is directly responsible for distributing the game on various devices.
 
-Pixi’VN is a library that does not deal with distributing the project. You can use various tools (Electron, Cordova, etc...) to distribute the project on various devices. Pixi’VN provides templates that already include the necessary configurations for distribution.
+Pixi’VN is a library that does not deal with distributing the project. You can use various tools (Tauri, Electron, Cordova, etc...) to distribute the project on various devices. Pixi’VN provides templates that already include the necessary configurations for distribution.
 
 | Device Distribution | Ren'Py | Pixi’VN |
 |---|---|---|
@@ -146,7 +146,7 @@ Pixi’VN is a library that does not deal with distributing the project. You can
 | Use connected devices (Camera, Flashlight etc...) | ❌ | ✅ |
 | UI scaling based on device type | ✅ | ✅ |
 | UI scaling to fit screen size | ❌ | ✅ |
-| Windows/Linux/Mac OS | ✅ (using Ren'Py) | ✅ (using Electron, Electron Forge, Cordova, etc...) |
+| Windows/Linux/Mac OS | ✅ (using Ren'Py) | ✅ (using Tauri, Electron, Cordova, etc...) |
 | Android/iOS | ✅ (using Ren'Py) | ✅ (using Ionic or Cordova) |
 | Web | ✅ (is in beta) | ✅ (is natively supported) |
 | Xbox/PlayStation/Nintendo Switch | ✅ (using Sen’py) | Only with Xbox with UWP |
