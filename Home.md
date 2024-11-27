@@ -39,9 +39,12 @@
   * [Tickers](tickers)
 * [Sounds and Music](sound)
 * [UI with JavaScript Framework](interface)
-  * [Angular UI](interface-angular)
-  * [React UI](interface-react)
-  * [Vue UI](interface-vue)
+  * JavaScript Frameworks
+    * [Angular UI](interface-angular)
+    * [React UI](interface-react)
+    * [Vue UI](interface-vue)
+  * [Navigate/switch between UI screens](interface-navigate)
+  * [Connect the UI with the storage](interface-connect-storage)
 * [Game storage](storage):
   * [Flags Management](flags)
   * [Stored Classes](stored-classes)

@@ -107,9 +107,16 @@ export default defineConfig({
               text: 'UI with JavaScript Framework',
               link: '/start/interface',
               items: [
-                { text: 'Angular UI', link: '/start/interface-angular' },
-                { text: 'React UI', link: '/start/interface-react' },
-                { text: 'Vue UI', link: '/start/interface-vue' },
+                {
+                  text: 'JavaScript Frameworks',
+                  items: [
+                    { text: 'Angular UI', link: '/start/interface-angular' },
+                    { text: 'React UI', link: '/start/interface-react' },
+                    { text: 'Vue UI', link: '/start/interface-vue' },
+                  ]
+                },
+                { text: 'Navigate/switch between UI screens', link: '/start/interface-navigate' },
+                { text: 'Connect the UI with the storage', link: '/start/interface-connect-storage' },
               ]
             },
             {
