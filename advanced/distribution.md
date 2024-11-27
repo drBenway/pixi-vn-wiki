@@ -8,7 +8,4 @@ Potentially all JavaScript/Typescript projects can be distributed in **all platf
   * [Firebase Hosting](/advanced/distribution-website.md#firebase-hosting)
   * [PWA Plugin](/advanced/distribution-website.md#enable-the-add-to-home-screen-pwa-plugin)
   * [itch.io](/advanced/distribution-website.md#itchio)
-* [Desktop devices](/advanced/distribution-desktop.md)
-* [Mobile devices](/advanced/distribution-mobile.md)
-  * [Android](/advanced/distribution-mobile.md#android)
-  * [iOS](/advanced/distribution-mobile.md#ios)
+* [Desktop & Mobile devices](/advanced/distribution-desktop-mobile.md)

@@ -52,8 +52,7 @@
 * [Intecept Events](intercept-events)
 * [Distribution](distribution)
   * [Website distribution](distribution-website)
-  * [Desktop distribution](distribution-desktop)
-  * [Mobile distribution](distribution-mobile)
+  * [Desktop & mobile devices](distribution-desktop-mobile)
 * [Pixi’VN + Json](pixi-vn-json)
 
 ## Other topics
