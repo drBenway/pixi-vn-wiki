@@ -66,6 +66,40 @@ We will create the first ["label"](/start/labels.md) called `start`, which will 
 
 After that we can write the [dialogues](/start/dialogue.md) that will follow in our visual novel. The template we have chosen supports the [markup language markdown](/start/markdown.md) so we will use it for our narration.
 
+This is the example in Typescript:
+
+:::tabs
+
+== /labels/startLabel.ts
+
+```ts
+const startLabel = newLabel("start", [
+    () => narration.dialogue = { character: james, text: "You're my roommate's replacement, huh?" },
+    () => narration.dialogue = { character: james, text: "Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!" },
+    () => narration.dialogue = { character: mc, text: "..." },
+    () => { narration.dialogue = "He thrusts out his hand." },
+    () => narration.dialogue = { character: james, text: "James!" },
+    () => narration.dialogue = { character: mc, text: "...Peter." },
+    () => { narration.dialogue = "I take his hand and shake." },
+    () => narration.dialogue = { character: james, text: "Ooh, Peter! Nice, firm handshake! The last quy always gave me the dead fish. I already think we'r gonna get along fine." },
+    () => narration.dialogue = { character: james, text: "Come on in and..." },
+    () => narration.dialogue = { character: james, text: "..." },
+    () => narration.dialogue = { character: james, text: "I know you're both watching, come on out already!" },
+    () => narration.dialogue = { character: james, text: "I just wanted to see what the new guy was like. Hey, you, Peter- be nice to our little brother, or you'll have to deal with *us*." },
+    () => narration.dialogue = { character: mc, text: "..." },
+    () => narration.dialogue = { character: james, text: "Peter, this is Sly. Yes, that is her real name." },
+    () => { narration.dialogue = "I put out my hand." },
+    () => narration.dialogue = { character: james, text: "I'm not shakin' your hand until I decide you're an all-right dude. Sorry, policy." },
+    () => narration.dialogue = { character: mc, text: "Fair enough, I'm a pretty scary guy, or so l've been told." },
+    () => narration.dialogue = { character: james, text: "The redhead behind her is Stephanie." },
+    () => narration.dialogue = { character: steph, text: "Hey! Everyone calls me Steph. I'll shake your hand." },
+    // ...
+]);
+export default startLabel;
+```
+
+:::
+
 This is the example in *ink*:
 
 :::tabs
