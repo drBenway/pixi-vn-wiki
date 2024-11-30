@@ -46,6 +46,13 @@ bun create pixi-vn@latest
 
 The supported template presets are:
 
+**Visual Novel - React**:
+
+<iframe src="https://pixi-vn-react-template.web.app/"
+    title="Visual Novel - React"
+    style="width:100%; height:400px; border:0; border-radius:4px; overflow:hidden;"
+></iframe>
+
 * **[Visual Novel - React - Typescript - Web page](https://github.com/DRincs-Productions/pixi-vn-react-template)**
 * **[Visual Novel - React - Typescript - Web page + Desktop + Mobile](https://github.com/DRincs-Productions/pixi-vn-react-template/tree/tauri)**
 * **[Visual Novel - React - Ink + Typescript - Web page](https://github.com/DRincs-Productions/pixi-vn-react-template/tree/ink)**
