@@ -61,6 +61,53 @@ return // ...
 
 ## First draft of the narrative
 
+Now we can start drafting the [narrative](/start/narration.md) of the visual novel.
+We will create the first ["label"](/start/labels.md) called `start`, which will be the beginning of the game.
+
+After that we can write the [dialogues](/start/dialogue.md) that will follow in our visual novel. The template we have chosen supports the [markup language markdown](/start/markdown.md) so we will use it for our narration.
+
+This is the example in *ink*:
+
+:::tabs
+
+== /ink_labels/start.ink
+
+```ink
+=== start ===
+james: You're my roommate's replacement, huh?
+james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!
+mc: ...
+
+He thrusts out his hand.
+
+james: James!
+mc: ...Peter.
+
+I take his hand and shake.
+
+james: Ooh, Peter! Nice, firm handshake! The last quy always gave me the dead fish. I already think we'r gonna get along fine.
+james: Come on in and...
+james: ...
+james: I know you're both watching, come on out already!
+
+sly: I just wanted to see what the new guy was like. Hey, you, Peter- be nice to our little brother, or you'll have to deal with *us*.
+mc: ...
+james: Peter, this is Sly. Yes, that is her real name.
+
+I put out my hand.
+
+sly: I'm not shakin' your hand until I decide you're an all-right dude. Sorry, policy.
+mc: Fair enough, I'm a pretty scary guy, or so l've been told.
+james: The redhead behind her is Stephanie.
+steph: Hey! Everyone calls me Steph. I'll shake your hand.
+
+// ...
+
+-> DONE
+```
+
+:::
+
 ### Split the narrative into labels
 
 ## Edit character information and use it as variables
