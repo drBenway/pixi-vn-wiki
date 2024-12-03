@@ -78,8 +78,14 @@ export default defineConfig({
                   text: 'Narration with JS/TS',
                   items: [
                     { text: 'Dialogue', link: '/start/dialogue' },
-                    { text: 'Label and Game Step', link: '/start/labels' },
-                    { text: 'Advanced label features', link: '/start/labels-advanced' },
+                    {
+                      text: 'Label and Game Step',
+                      link: '/start/labels',
+                      items: [
+                        { text: 'Game flow with labels', link: '/start/labels-flow' },
+                        { text: 'Advanced label features', link: '/start/labels-advanced' },
+                      ]
+                    },
                     { text: 'Choice Menus', link: '/start/choices' },
                     { text: 'Input', link: '/start/input' },
                     { text: 'History', link: '/start/history' },

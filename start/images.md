@@ -56,7 +56,7 @@ After adding the image, you can load the texture and show it on the canvas using
 
 This method is asynchronous, so:
 
-* You can use the `await` to wait for the image to load. So if you show the image in a step, you can disable the [next step](/start/labels#next-step) until the image is loaded.
+* You can use the `await` to wait for the image to load. So if you show the image in a step, you can disable the [next step](/start/labels-flow.md#next-step) until the image is loaded.
 * You can not use the `await` and show the image in the next step. In this case, the image will be loaded in the background and will be shown when it is ready.
 
 ```typescript

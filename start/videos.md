@@ -56,7 +56,7 @@ After adding the video, you can load the texture and show it on the canvas using
 
 This method is asynchronous, so:
 
-* You can use the `await` to wait for the video to load. So if you show the video in a step, you can disable the [next step](/start/labels#next-step) until the video is loaded.
+* You can use the `await` to wait for the video to load. So if you show the video in a step, you can disable the [next step](/start/labels-flow.md#next-step) until the video is loaded.
 * You can not use the `await` and show the video in the next step. In this case, the video will be loaded in the background and will be shown when it is ready.
 
 ```typescript

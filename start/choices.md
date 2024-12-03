@@ -40,7 +40,7 @@ In Pixi’VN, it is possible to create choice menus using the `ChoiceMenuOption`
 * `label`: The [label](/start/labels#label) which will be called when the player chooses the option.
 * `props`: The properties that will be passed to the label, if the label not need any parameter you can pass an empty object `{}`.
 * `options`:
-  * `type`: The way the [label will be called](/start/labels#run-a-label). It can be `call` or `jump`. Default is `call`.
+  * `type`: The way the [label will be called](/start/labels-flow.md#run-a-label). It can be `call` or `jump`. Default is `call`.
   * `oneTime`: If this is `true`, the choice can only be made once.
   * `onlyHaveNoChoice`: If `true`, the choice can see only if there are no other choices.
   * `autoSelect`: If `true` and if is the only choice, it will be selected automatically.
