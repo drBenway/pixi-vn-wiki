@@ -43,7 +43,7 @@ newLabel("start", [
         narration.dialogue = "Step 2"
     }
 ], {
-    onStepStart: (stepIndex, props) => {
+    onStepStart: (stepIndex, label) => {
         console.log(`Step ${stepIndex} started`)
     }
 })
@@ -65,7 +65,7 @@ newLabel("start", [
         narration.dialogue = "Step 2"
     }
 ], {
-    onStepEnd: (stepIndex, props) => {
+    onStepEnd: (stepIndex, label) => {
         console.log(`Step ${stepIndex} ended`)
     }
 })
