@@ -21,6 +21,10 @@ For create a label you must use the `newLabel()` function and pass:
 
 * The `id` of the label, must be unique
 * The `steps` of the label, an array of functions that will be executed in order. Or a function that returns the steps.
+* The `options` of the label, an object with the following properties:
+  * `onStepStart`: A function that will be executed before each step of the label. You can read more about it [here](/start/labels-advanced.md#onstepstart).
+  * `onStepEnd`: A function that will be executed after each step of the label. You can read more about it [here](/start/labels-advanced.md#onstepend).
+  * `onLoadingLabel`: A function that will be executed in `onStepStart` if the index of the step is 0 and when the user loads a save file. You can read more about it [here](/start/labels-advanced.md#onloadinglabel).
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
