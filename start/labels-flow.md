@@ -159,7 +159,7 @@ narration.closeCurrentLabel()
 ### Close all labels
 
 To close all labels you must execute the `narration.closeAllLabels()` function.
-**If you call this function and after that you don't call any label, the [game will end](/start/labels.md#how-manage-the-end-of-the-game).**
+**If you call this function and after that you don't call any label, the [game will end](/start/other-narrative-features#how-manage-the-end-of-the-game).**
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
