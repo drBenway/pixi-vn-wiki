@@ -13,6 +13,12 @@ For these reasons it is recommended to handle asserts in the following ways.
 
 Initialize the asset matrix at the start of the project, this will allow you to refer to the assets by a unique alias and not by a url. This will save you code and you will be able to change the url of an asset without having to worry about saving the old saves.
 
+To do this, it is recommended to create an asynchronous function `defineAssets` that will be called at the start of the project.
+In this function you will use the function `Assets.add` which will allow you to add an asset to the matrix. The function `Assets.add` requires an object with the following properties:
+
+- `alias`: a unique string that will be used to refer to the asset.
+- `src`: the url of the asset.
+
 ```ts
 import { Assets } from "@drincs/pixi-vn";
 
@@ -30,6 +36,8 @@ export async function defineAssets() {
 ## Load assets before the project starts
 
 Load the assets before the project starts, this will allow you to start the project only when all the assets are loaded. It is suggested to use this procedure only for assets used in the main page or for assets used frequently. It is recommended not to exceed 100MB.
+
+To do this, you will use the `Assets.load` function with wait before starting the project. The `Assets.load` function is asynchronous and returns a promise that will be resolved when all the assets are loaded. The `Assets.load` function requires a string that is the alias of the asset to be loaded.
 
 ```ts
 import { Assets } from "@drincs/pixi-vn";
@@ -51,6 +59,8 @@ export async function defineAssets() {
 ## Load assets in the background before the project starts
 
 Load assets in the background, which means that the project will start without waiting for those assets to load. Keep in mind that if you upload a large amount of files, a large part of the connection will be used to load those assets. It is recommended not to exceed 500MB.
+
+To do this, you will use the `Assets.load` function without waiting before starting the project. The `Assets.load` function requires a string that is the alias of the asset to be loaded. The `Assets.load` function is asynchronous and returns a promise that will be resolved when all the assets are loaded. The `Assets.load` function requires a string that is the alias of the asset to be loaded.
 
 ```ts
 import { Assets } from "@drincs/pixi-vn";
