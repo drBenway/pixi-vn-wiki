@@ -23,6 +23,7 @@
   * Narration with JS/TS:
     * [Dialogue](dialogue)
     * [Label and Game Step](labels)
+    * [Advanced label features](labels-advanced)
     * [Choice Menus](choices)
     * [Input](input)
     * [History](history)

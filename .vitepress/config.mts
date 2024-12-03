@@ -79,6 +79,7 @@ export default defineConfig({
                   items: [
                     { text: 'Dialogue', link: '/start/dialogue' },
                     { text: 'Label and Game Step', link: '/start/labels' },
+                    { text: 'Advanced label features', link: '/start/labels-advanced' },
                     { text: 'Choice Menus', link: '/start/choices' },
                     { text: 'Input', link: '/start/input' },
                     { text: 'History', link: '/start/history' },
