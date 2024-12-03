@@ -38,6 +38,10 @@
   * [Animations and Effects](animations-effects)
   * [Tickers](tickers)
 * [Sounds and Music](sound)
+* [Game storage](storage):
+  * [Flags Management](flags)
+  * [Stored Classes](stored-classes)
+* [Save and Load](save)
 * [UI with JavaScript Framework](interface)
   * JavaScript Frameworks
     * [Angular UI](interface-angular)
@@ -45,10 +49,6 @@
     * [Vue UI](interface-vue)
   * [Navigate/switch between UI screens](interface-navigate)
   * [Connect the UI with the storage](interface-connect-storage)
-* [Game storage](storage):
-  * [Flags Management](flags)
-  * [Stored Classes](stored-classes)
-* [Save and Load](save)
 
 ## Advanced topics
 

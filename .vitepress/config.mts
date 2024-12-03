@@ -104,6 +104,14 @@ export default defineConfig({
             },
             { text: 'Sounds and Music', link: '/start/sound' },
             {
+              text: 'Game storage',
+              link: '/start/storage',
+              items: [
+                { text: 'Flags Management', link: '/start/flags' },
+                { text: 'Stored Classes', link: '/start/stored-classes' },
+              ]
+            },
+            {
               text: 'UI with JavaScript Framework',
               link: '/start/interface',
               items: [
@@ -117,14 +125,6 @@ export default defineConfig({
                 },
                 { text: 'Navigate/switch between UI screens', link: '/start/interface-navigate' },
                 { text: 'Connect the UI with the storage', link: '/start/interface-connect-storage' },
-              ]
-            },
-            {
-              text: 'Game storage',
-              link: '/start/storage',
-              items: [
-                { text: 'Flags Management', link: '/start/flags' },
-                { text: 'Stored Classes', link: '/start/stored-classes' },
               ]
             },
             { text: 'Save and Load', link: '/start/save' },
