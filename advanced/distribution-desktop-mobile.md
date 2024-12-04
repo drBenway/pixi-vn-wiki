@@ -14,8 +14,11 @@ Generating releases manually for all devices is not an easy process, because it 
 
 The [multi-device templates](/start/getting-started.md#project-initialization) have inside the file `/.github/workflows/tauri.yml` which has the purpose of creating a release not inside the installation packages for all OS.
 
+:::tabs
+
+== .github/workflows/tauri.yml
+
 ```yml
-# .github/workflows/tauri.yml
 # https://tauri.app/distribute/pipelines/github/
 name: Tauri CI
 
@@ -93,6 +96,8 @@ jobs:
           tauriScript: ${{ matrix.tauriScript }}
           args: ${{ matrix.args }}
 ```
+
+:::
 
 To activate this procedure you need to have your own project on GitHub and create a tag on git that starts with the letter "v". For example:
 
