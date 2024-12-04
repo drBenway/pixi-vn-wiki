@@ -5,7 +5,7 @@ In the examples so far we have loaded the "Textures" (images, gifs, videos...) o
 This method works and keeps only the strictly necessary asserts in memory, but it has some disadvantages:
 
 - refer to an asset directly with a url, where that asset must be renamed/moved to another folder or replaced with another asset (which has another url), the old saves will not work anymore and in several places in the code you will have to write a url which is usually very long.
-- Each step where one or more assets are loaded will require some time (even if small) to execute.
+- Each [step](/start/labels.md) where one or more assets are loaded will require some time (even if small) to execute.
 
 For these reasons it is recommended to handle asserts in the following ways.
 
@@ -51,8 +51,8 @@ export async function defineAssets() {
     Assets.add({ alias: 'sound-bird', src: "https://pixijs.io/sound/examples/resources/bird.mp3" })
     Assets.add({ alias: 'sound-musical', src: "https://pixijs.io/sound/examples/resources/musical.mp3" })
 
-    // The game will not start until these asserts are loaded.
-    await Assets.load('eggHead')
+    // The game will not start until these asserts are loaded. // [!code focus]
+    await Assets.load('eggHead') // [!code focus]
 }
 ```
 
@@ -74,11 +74,69 @@ export async function defineAssets() {
     Assets.add({ alias: 'sound-bird', src: "https://pixijs.io/sound/examples/resources/bird.mp3" })
     Assets.add({ alias: 'sound-musical', src: "https://pixijs.io/sound/examples/resources/musical.mp3" })
 
-    // The game will start immediately, but these asserts will be loaded in the background.
-    Assets.load('eggHead')
+    // The game will not start until these asserts are loaded.
+    await Assets.load('eggHead')
+
+    // The game will start immediately, but these asserts will be loaded in the background. // [!code focus]
+    Assets.load('flowerTop') // [!code focus]
 }
 ```
 
 ## Load assets before a label starts
 
+To make the game smoother by trying to remove asset loading times from one step to another, it is possible to load all used assets into a label before it starts.
+
+To do this, you will use the [`onLoadingLabel`](/start/labels-advanced.md#onloadinglabel) function of the label options. This function will be executed in `onStepStart` if the index of the step is 0 and when the user loads a save file. When you load a save file, all `onLoadingLabel` functions of the `narration.openedLabels` (current label and all labels that are in the stack).
+
+```ts
+import { newLabel, showImage, Assets } from "@drincs/pixi-vn";
+
+newLabel("start", [
+    () => {
+        await showImage("eggHead")
+    },
+    () => {
+        await showImage("flowerTop")
+    },
+], {
+    onLoadingLabel: async (stepIndex, label) => { // [!code focus]
+        // The label will not start until these asserts are loaded. // [!code focus]
+        await Assets.load("eggHead") // [!code focus]
+        await Assets.load("flowerTop") // [!code focus]
+    } // [!code focus]
+})
+```
+
 ## Load assets in the background before a label starts
+
+To make the game smoother by trying to remove asset loading times from a step, instead of loading all assets before the label starts, it is possible to load the assets used in the last steps in the background.
+
+To do this, you will use the [`onLoadingLabel`](/start/labels-advanced.md#onloadinglabel) function of the label options. This function will be executed in `onStepStart` if the index of the step is 0 and when the user loads a save file. When you load a save file, all `onLoadingLabel` functions of the `narration.openedLabels` (current label and all labels that are in the stack).
+
+```ts
+import { newLabel, showImage, Assets } from "@drincs/pixi-vn";
+
+newLabel("start", [
+    () => {
+        await showImage("eggHead")
+    },
+    () => {
+        await showImage("flowerTop")
+    },
+    () => {
+        await showImage("helmlok")
+    },
+    () => {
+        await showImage("skully")
+    },
+], {
+    onLoadingLabel: async (stepIndex, label) => { // [!code focus]
+        // The label will not start until these asserts are loaded.
+        await Assets.load("eggHead")
+        await Assets.load("flowerTop")
+        // The label will start immediately, but these asserts will be loaded in the background. // [!code focus]
+        Assets.load("helmlok") // [!code focus]
+        Assets.load("skully") // [!code focus]
+    } // [!code focus]
+})
+```

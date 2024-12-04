@@ -40,6 +40,7 @@
   * [Animations and Effects](animations-effects)
   * [Tickers](tickers)
 * [Sounds and Music](sound)
+* [Assets management](assets-management)
 * [Game storage](storage):
   * [Flags Management](flags)
   * [Stored Classes](stored-classes)

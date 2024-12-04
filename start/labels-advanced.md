@@ -4,7 +4,7 @@ In this section, we will cover advanced [label](/start/labels.md) features. Thes
 
 ## onLoadingLabel
 
-`onLoadingLabel` is a function that will be executed in `onStepStart` if the index of the step is 0 and when the user laods a save file. When you load a save file, will be executed all onLoadingLabel functions of the {@link narration.openedLabels}.
+`onLoadingLabel` is a function that will be executed in `onStepStart` if the index of the step is 0 and when the user laods a save file. When you load a save file, will be executed all onLoadingLabel functions of the `narration.openedLabels` (current label and all labels that are in the stack).
 
 It is useful for example to make sure all images used have been cached before the label starts.
 
@@ -20,10 +20,10 @@ newLabel("start", [
         await showImage("image2", "path/to/image2.png")
     }
 ], {
-    onLoadingLabel: async (stepIndex, label) => {
-        await Assets.load("path/to/image1.png")
-        await Assets.load("path/to/image2.png")
-    }
+    onLoadingLabel: async (stepIndex, label) => { // [!code focus]
+        await Assets.load("path/to/image1.png") // [!code focus]
+        await Assets.load("path/to/image2.png") // [!code focus]
+    } // [!code focus]
 })
 ```
 
@@ -43,9 +43,9 @@ newLabel("start", [
         narration.dialogue = "Step 2"
     }
 ], {
-    onStepStart: (stepIndex, label) => {
-        console.log(`Step ${stepIndex} started`)
-    }
+    onStepStart: (stepIndex, label) => { // [!code focus]
+        console.log(`Step ${stepIndex} started`) // [!code focus]
+    } // [!code focus]
 })
 ```
 
@@ -65,9 +65,9 @@ newLabel("start", [
         narration.dialogue = "Step 2"
     }
 ], {
-    onStepEnd: (stepIndex, label) => {
-        console.log(`Step ${stepIndex} ended`)
-    }
+    onStepEnd: (stepIndex, label) => { // [!code focus]
+        console.log(`Step ${stepIndex} ended`) // [!code focus]
+    } // [!code focus]
 })
 ```
 
