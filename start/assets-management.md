@@ -20,7 +20,7 @@ In this function you will use the function `Assets.add` which will allow you to 
 - `src`: the url of the asset.
 
 ```ts
-import { Assets } from "@drincs/pixi-vn";
+import { Assets, sound } from "@drincs/pixi-vn";
 
 export async function defineAssets() {
     Assets.add({ alias: 'eggHead', src: "https://pixijs.com/assets/eggHead.png" })
@@ -28,8 +28,8 @@ export async function defineAssets() {
     Assets.add({ alias: 'helmlok', src: "https://pixijs.com/assets/helmlok.png" })
     Assets.add({ alias: 'skully', src: "https://pixijs.com/assets/skully.png" })
     Assets.add({ alias: 'video', src: "https://pixijs.com/assets/video.mp4" })
-    Assets.add({ alias: 'sound-bird', src: "https://pixijs.io/sound/examples/resources/bird.mp3" })
-    Assets.add({ alias: 'sound-musical', src: "https://pixijs.io/sound/examples/resources/musical.mp3" })
+    sound.add('bird', 'https://pixijs.io/sound/examples/resources/bird.mp3');
+    sound.add('musical', 'https://pixijs.io/sound/examples/resources/musical.mp3');
 }
 ```
 
@@ -40,7 +40,7 @@ Load the assets before the project starts, this will allow you to start the proj
 To do this, you will use the `Assets.load` function with wait before starting the project. The `Assets.load` function is asynchronous and returns a promise that will be resolved when all the assets are loaded. The `Assets.load` function requires a string that is the alias of the asset to be loaded.
 
 ```ts
-import { Assets } from "@drincs/pixi-vn";
+import { Assets, sound } from "@drincs/pixi-vn";
 
 export async function defineAssets() {
     Assets.add({ alias: 'eggHead', src: "https://pixijs.com/assets/eggHead.png" })
@@ -48,8 +48,8 @@ export async function defineAssets() {
     Assets.add({ alias: 'helmlok', src: "https://pixijs.com/assets/helmlok.png" })
     Assets.add({ alias: 'skully', src: "https://pixijs.com/assets/skully.png" })
     Assets.add({ alias: 'video', src: "https://pixijs.com/assets/video.mp4" })
-    Assets.add({ alias: 'sound-bird', src: "https://pixijs.io/sound/examples/resources/bird.mp3" })
-    Assets.add({ alias: 'sound-musical', src: "https://pixijs.io/sound/examples/resources/musical.mp3" })
+    sound.add('bird', 'https://pixijs.io/sound/examples/resources/bird.mp3');
+    sound.add('musical', 'https://pixijs.io/sound/examples/resources/musical.mp3');
 
     // The game will not start until these asserts are loaded. // [!code focus]
     await Assets.load('eggHead') // [!code focus]
@@ -63,7 +63,7 @@ Load assets in the background, which means that the project will start without w
 To do this, you will use the `Assets.load` function without waiting before starting the project. The `Assets.load` function requires a string that is the alias of the asset to be loaded. The `Assets.load` function is asynchronous and returns a promise that will be resolved when all the assets are loaded. The `Assets.load` function requires a string that is the alias of the asset to be loaded.
 
 ```ts
-import { Assets } from "@drincs/pixi-vn";
+import { Assets, sound } from "@drincs/pixi-vn";
 
 export async function defineAssets() {
     Assets.add({ alias: 'eggHead', src: "https://pixijs.com/assets/eggHead.png" })
@@ -71,8 +71,8 @@ export async function defineAssets() {
     Assets.add({ alias: 'helmlok', src: "https://pixijs.com/assets/helmlok.png" })
     Assets.add({ alias: 'skully', src: "https://pixijs.com/assets/skully.png" })
     Assets.add({ alias: 'video', src: "https://pixijs.com/assets/video.mp4" })
-    Assets.add({ alias: 'sound-bird', src: "https://pixijs.io/sound/examples/resources/bird.mp3" })
-    Assets.add({ alias: 'sound-musical', src: "https://pixijs.io/sound/examples/resources/musical.mp3" })
+    sound.add('bird', 'https://pixijs.io/sound/examples/resources/bird.mp3');
+    sound.add('musical', 'https://pixijs.io/sound/examples/resources/musical.mp3');
 
     // The game will not start until these asserts are loaded.
     await Assets.load('eggHead')
