@@ -29,11 +29,11 @@ Where:
 
 ## Show canvas element in *ink*
 
-You can use the `show` operation to show a canvas element in ***ink***.
+You can use the `show` to show a [canvas element](/start/canvas-elements.md) in ***ink***.
 
 This operation requires the alias of the canvas element and the URL/path of the image. Keep in mind that to write `https://` in ***ink*** you must use `https:\/\/` because the `//` is a comment in ***ink***.
 
-Afer the URL/path of the image, you can add the properties of the [canvas element](/start/canvas-elements.md) that you want to set. The properties must be set as follows: `propertyName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
+Afer the URL/path of the image, you can add the `parameters` of the [canvas element](/start/canvas-elements.md) that you want to set. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
 The syntax is as follows:
 
@@ -47,7 +47,11 @@ The syntax is as follows:
 
 ### Show canvas element with transition in *ink*
 
-If you want to show the canvas element with a [transition](/start/transition.md), you can add into the parameters the `with` + `SPACE` + `transitionType`. After the `transitionType`, you can add the transition parameters. These parameters do not have a precise order and must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
+If you want to show the canvas element with a [transition](/start/transition.md), you can add into the parameters the `with [transitionType]`.
+
+`#` + `show` + `[type of the canvas element]` + `[alias]` + `[URL/path of the image]` + `[parameters]` + `with` + `[transitionType]`
+
+After the `transitionType`, you can add the `transition parameters`. the `transition parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
 The syntax is as follows:
 
