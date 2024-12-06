@@ -218,7 +218,7 @@ VAR _input_value_ = ""
 He thrusts out his hand.
 # request input type string default Peter
 What is your name?
-# rename liam_id {_input_value_}
+# rename mc { _input_value_ }
 
 james: [james]!
 mc: ...[mc].
