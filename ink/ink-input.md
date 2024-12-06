@@ -40,5 +40,5 @@ Restart
 -> DONE
 ```
 
-::: sandbox {template=58gk4t entry=/src/ink/start.ink}
+::: sandbox {template=fvg9l6 entry=/src/ink/start.ink}
 :::
