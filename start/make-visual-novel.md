@@ -282,8 +282,6 @@ james: Don't worry, [mc], she's just giving you the run-down. She's kinda like a
 
 :::
 
-## Use Markdown in the narrative
-
 ## Using the canvas
 
 ## Add a background and character images
