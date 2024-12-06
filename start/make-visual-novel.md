@@ -194,6 +194,94 @@ I'm fumbling for a new subject.
 
 ## Edit character information and use it as variables
 
+:::tabs
+
+== /labels/startLabel.ts
+
+```ts
+```
+
+:::
+
+This is the example in *ink*:
+
+:::tabs
+
+== /ink/start.ink
+
+```ink
+VAR _input_value_ = ""
+
+=== start ===
+// ...
+
+He thrusts out his hand.
+# request input type string default Peter
+What is your name?
+# rename liam_id {_input_value_}
+
+james: [james]!
+mc: ...[mc].
+
+// ...
+
+-> second_part
+```
+
+:::
+
+:::tabs
+
+== /labels/startLabel.ts
+
+```ts
+```
+
+:::
+
+This is the example in *ink*:
+
+:::tabs
+
+== /ink/start.ink
+
+```ink
+=== start ===
+// ...
+
+james: Ooh, [mc]! Nice, firm handshake! The last quy always gave me the dead fish. I already think we'r gonna get along fine.
+james: Come on in and...
+james: ...
+james: I know you're both watching, come on out already!
+
+sly: I just wanted to see what the new guy was like. Hey, you, [mc]- be nice to our little brother, or you'll have to deal with *us*.
+mc: ...
+james: [mc], this is [sly]. Yes, that is her real name.
+
+I put out my hand.
+
+sly: I'm not shakin' your hand until I decide you're an all-right dude. Sorry, policy.
+mc: Fair enough, I'm a pretty scary guy, or so l've been told.
+james: The redhead behind her is [steph_fullname].
+steph: Hey! Everyone calls me [steph]. I'll shake your hand.
+
+She puts out her hand, and I take it.
+
+mc: Thanks, good to meet you, [steph_fullname].
+steph: WOW, that is, like, the most perfect handshake I've ever had! Firm, but also gentle. [sly], you *gotta* shake his hand!
+sly: It's just a handshake...
+steph: Then just give it to him!
+james: Don't worry, [mc], she's just giving you the run-down. She's kinda like a father... I mean a mother... to us.
+
+[sly] thrusts her hand out to shake mine.
+
+// ...
+
+-> second_part
+```
+
+:::
+
 ## Use Markdown in the narrative
 
 ## Using the canvas
