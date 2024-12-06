@@ -35,7 +35,7 @@ He insisted that we hurried home to Savile Row
 -> start
 ```
 
-::: sandbox {template=lqsm5y entry=/src/ink/start.ink}
+::: sandbox {template=v4rkdl entry=/src/ink/start.ink}
 :::
 
 ## Why use *ink* integration?
