@@ -43,18 +43,34 @@ You can override the function `onReplaceTextBeforeTranslation` to add a script t
 ```ts
 import { onReplaceTextBeforeTranslation, onInkTranslate } from '@drincs/pixi-vn-ink'
 import { useTranslation } from "react-i18next";
-import { alice, bob } from "../values/characters"
+import { bob } from "../values/characters"
 
 const { t } = useTranslation(["narration"]);
 
 onInkTranslate((text) => {
-    return t(text, { 
-        alice: alice.name,
-        bob: bob.name
-    })
+    return t(text)
 })
 
 onReplaceTextBeforeTranslation((key) => {
     return `{{${key}}}`
 })
+
+i18n.init({
+    debug: false,
+    fallbackLng: 'en',
+    // ...
+    missingInterpolationHandler(_text, value, _options) {
+        let key = value[1]
+        if (key === 'bob') {
+            return 'Bob'
+        }
+
+        let character = getCharacterById(key)
+        if (character) {
+            return character.name
+        }
+
+        return `[${key}]`
+    },
+});
 ```

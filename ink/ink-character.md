@@ -180,6 +180,77 @@ saveCharacter([liam]);
 
 :::
 
+Or if you are using [i18next](https://www.i18next.com/) for translation, you can use the following method:
+
+:::tabs
+== main.ts
+
+```ts
+import { onInkTranslate, onReplaceTextBeforeTranslation } from '@drincs/pixi-vn-ink'
+import { getCharacterById } from "@drincs/pixi-vn";
+import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from 'react-i18next';
+import strings_en from '../src/locales/strings_en.json';
+
+i18n
+    .use(LanguageDetector)
+    .use(initReactI18next)
+    .init({
+        debug: false,
+        fallbackLng: 'en',
+        lng: getUserLang(),
+        interpolation: {
+            escapeValue: false,
+        },
+        resources: {
+            en: strings_en,
+            // Add more languages here
+        },
+        missingInterpolationHandler(_text, value, _options) {
+            let key = value[1]
+            let character = getCharacterById(key)
+            if (character) {
+                return character.name
+            }
+            return `[${key}]`
+        },
+    });
+
+onReplaceTextBeforeTranslation((key) => {
+    return `{{${key}}}`
+})
+onInkTranslate((text) => {
+    return i18n.t(text)
+})
+```
+
+== start.ink
+
+```ink
+=== start ===
+Hello, [liam_id].
+-> DONE
+```
+
+== characters.ts
+
+```ts
+import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
+
+export const liam = new CharacterBaseModel('liam_id', {
+    name: 'Liam',
+    surname: 'Smith',
+    age: 25,
+    icon: "https://example.com/liam.png",
+    color: "#9e2e12"
+});
+
+saveCharacter([liam]);
+```
+
+:::
+
 ### Edit character name in dialogues
 
 To edit the character name in dialogues, you can take advantage of the possibility of [customizing hashtag scripts](/ink/ink-hashtag.md). For example, you can use the following method:
