@@ -31,19 +31,36 @@ Where:
 
 You can use the `show` to show a [canvas element](/start/canvas-elements.md) in ***ink***.
 
-This operation requires the alias of the canvas element and the URL/path of the image. Keep in mind that to write `https://` in ***ink*** you must use `https:\/\/` because the `//` is a comment in ***ink***.
+Is raccomended to [initialize the asset matrix at project start](/start/assets-management.md#initialize-the-asset-matrix-at-project-start) to use the alias of texture in `[URL/path of the image]`.
 
-Afer the URL/path of the image, you can add the `parameters` of the [canvas element](/start/canvas-elements.md) that you want to set. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
+* `[URL/path of the image]` (Optional): It is the URL/path of the image that you want to show. If you have initialized the asset matrix at project start, you can use the alias of the texture. If you don't provide the URL/path of the image, this parameter is equal to `[alias]`. Keep in mind that to write `https://` in ***ink*** you must use `https:\/\/` because the `//` is considered a comment in ***ink***.
+* `[parameters]` (Optional): Afer the URL/path of the image, you can add the `parameters` of the [canvas element](/start/canvas-elements.md) that you want to set. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
 The syntax is as follows:
 
 `#` + `show` + `[type of the canvas element]` + `[alias]` + `[URL/path of the image]` + `[parameters]`
 
+:::tabs
+== start.ink
+
 ```ink
-# show image bg /image.png
-# show image "bg 2 alice" https:\/\/game.com/image.png
-# show image bg https:\/\/game.com/image.png x 20 y 30 visible true cursor "pointer" alpha 0.5
+# show image eggHead
+# show image "eggHead 2" eggHead x 20 y 30
+# show image flowerTop x 20 y 30 visible true cursor "pointer" alpha 0.5
 ```
+
+== assets-utility.ts
+
+```ts
+import { Assets, sound } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: 'eggHead', src: "https://pixijs.com/assets/eggHead.png" })
+    Assets.add({ alias: 'flowerTop', src: "https://pixijs.com/assets/flowerTop.png" })
+}
+```
+
+:::
 
 ### Show canvas element with transition in *ink*
 
@@ -65,20 +82,38 @@ The available transitions are:
 * `zoomin`: The canvas element appears with a [zoomin transition](/start/transition.md#zoom-inout-transition). You can add all the parameters you would use in JS/TS.
 * `pushin`: The canvas element appears with a [pushin transition](/start/transition.md#push-inout-transition). You can add all the parameters you would use in JS/TS.
 
+:::tabs
+== start.ink
+
 ```ink
-# show image bg /image.png with dissolve duration 3
+# show eggHead with dissolve duration 3
 temp durationVar = 3
-# show image bg /image.png with fade duration {durationVar}
-# show image bg /image.png x 20 y 30 with movein
-# show image bg /image.png x 20 y 30 with zoomin
-# show image bg /image.png x 20 y 30 with pushin
+# show eggHead eggHead2 with fade duration {durationVar}
+# show flowerTop x 20 y 30 with movein
+# show helmlok x 20 y 30 with zoomin
+# show skully x 20 y 30 with pushin
 ```
+
+== assets-utility.ts
+
+```ts
+import { Assets, sound } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: 'eggHead', src: "https://pixijs.com/assets/eggHead.png" })
+    Assets.add({ alias: 'flowerTop', src: "https://pixijs.com/assets/flowerTop.png" })
+    Assets.add({ alias: 'helmlok', src: "https://pixijs.com/assets/helmlok.png" })
+    Assets.add({ alias: 'skully', src: "https://pixijs.com/assets/skully.png" })
+}
+```
+
+:::
 
 ## Edit canvas element in *ink*
 
 To edit a canvas element in ***ink***, you can use the `edit` operation. After the alias of the canvas element, you must include the properties of [canvas element](/start/canvas-elements.md) that you want to edit.
 
-In the `parameters` you must include the properties that you want to edit. The properties must be set as follows: `propertyName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
+* `[parameters]` (Optional): In the `parameters` you must include the properties that you want to edit. The properties must be set as follows: `propertyName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
 
 ```ink
 # edit image bg position \{ "x": 20, "y": 30 \} visible true  cursor "pointer" alpha 0.5 
@@ -120,7 +155,7 @@ You can use the [effects](/start/animations-effects.md) in ***ink***.
 
 If you want to use an effect in ***ink***, you can use how `[operation]` the name of the effect.
 
-The available effects are:
+The available `[effectType]` are:
 
 * `fade`: Create a fade effect. (Read more [here](/start/animations-effects.md#fade)). You can add all the parameters you would use in JS/TS.
 * `move`: Create a move effect. (Read more [here](/start/animations-effects.md#move)). You can add all the parameters you would use in JS/TS.
