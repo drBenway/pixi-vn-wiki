@@ -33,12 +33,12 @@ You can use the `show` to show a [canvas element](/start/canvas-elements.md) in 
 
 Is raccomended to [initialize the asset matrix at project start](/start/assets-management.md#initialize-the-asset-matrix-at-project-start) to use the alias of texture in `[URL/path of the image]`.
 
-* `[URL/path of the image]` (Optional): It is the URL/path of the image that you want to show. If you have initialized the asset matrix at project start, you can use the alias of the texture. If you don't provide the URL/path of the image, this parameter is equal to `[alias]`. Keep in mind that to write `https://` in ***ink*** you must use `https:\/\/` because the `//` is considered a comment in ***ink***.
-* `[parameters]` (Optional): Afer the URL/path of the image, you can add the `parameters` of the [canvas element](/start/canvas-elements.md) that you want to set. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
-
 The syntax is as follows:
 
 `#` + `show` + `[type of the canvas element]` + `[alias]` + `[URL/path of the image]` + `[parameters]`
+
+* `[URL/path of the image]` (Optional): It is the URL/path of the image that you want to show. If you have initialized the asset matrix at project start, you can use the alias of the texture. If you don't provide the URL/path of the image, this parameter is equal to `[alias]`. Keep in mind that to write `https://` in ***ink*** you must use `https:\/\/` because the `//` is considered a comment in ***ink***.
+* `[parameters]` (Optional): Afer the URL/path of the image, you can add the `parameters` of the [canvas element](/start/canvas-elements.md) that you want to set. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
 :::tabs
 == start.ink
@@ -113,9 +113,11 @@ export async function defineAssets() {
 
 You can use the `edit` to edit a [canvas element](/start/canvas-elements.md) in ***ink***. 
 
-After the alias of the canvas element, you must include the properties of [canvas element](/start/canvas-elements.md) that you want to edit.
+The syntax is as follows:
 
-* `[parameters]` (Optional): In the `parameters` you must include the properties that you want to edit. The properties must be set as follows: `propertyName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
+`#` + `edit` + `[type of the canvas element]` + `[alias]` + `[parameters]`
+
+* `[parameters]`: In the `parameters` you must include the properties that you want to edit. The properties must be set as follows: `propertyName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
 
 ```ink
 # edit image bg position \{ "x": 20, "y": 30 \} visible true  cursor "pointer" alpha 0.5 
