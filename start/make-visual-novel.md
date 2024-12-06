@@ -144,6 +144,54 @@ steph: Hey! Everyone calls me Steph. I'll shake your hand.
 
 ### Split the narrative into labels
 
+:::tabs
+
+== /labels/startLabel.ts
+
+```ts
+```
+
+:::
+
+This is the example in *ink*:
+
+:::tabs
+
+== /ink/start.ink
+
+```ink
+=== start ===
+james: You're my roommate's replacement, huh?
+james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!
+mc: ...
+
+He thrusts out his hand.
+
+james: James!
+mc: ...Peter.
+
+// ...
+
+-> second_part
+
+=== second_part ===
+
+She enters my my room before I'VE even had a chance to. \\n\\n...I could've just come back and gotten the platter later...
+She sets it on a desk. I throw my two paper bags down beside the empty bed.
+
+steph: They got you a new mattress, right? That last guy was a druggie, did James tell tell you that?
+sly: *We're* the reason he got expelled!
+steph: Sly! If word gets out about that... well, actually, it wouldn't matter, *he's* the one who shot himself up.
+
+I'm fumbling for a new subject.
+
+// ...
+
+-> DONE
+```
+
+:::
+
 ## Edit character information and use it as variables
 
 ## Use Markdown in the narrative
