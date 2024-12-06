@@ -282,7 +282,7 @@ james: Don't worry, [mc], she's just giving you the run-down. She's kinda like a
 
 :::
 
-## Using the canvas
+## Define assets
 
 ## Add a background and character images
 
