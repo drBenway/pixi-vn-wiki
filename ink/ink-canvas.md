@@ -111,7 +111,9 @@ export async function defineAssets() {
 
 ## Edit canvas element in *ink*
 
-To edit a canvas element in ***ink***, you can use the `edit` operation. After the alias of the canvas element, you must include the properties of [canvas element](/start/canvas-elements.md) that you want to edit.
+You can use the `edit` to edit a [canvas element](/start/canvas-elements.md) in ***ink***. 
+
+After the alias of the canvas element, you must include the properties of [canvas element](/start/canvas-elements.md) that you want to edit.
 
 * `[parameters]` (Optional): In the `parameters` you must include the properties that you want to edit. The properties must be set as follows: `propertyName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
 
