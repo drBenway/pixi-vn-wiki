@@ -54,7 +54,7 @@ return (
 
 :::
 
-::: sandbox {template=lh88tr entry=/src/ink/start.ink,/src/values/characters.ts}
+::: sandbox {template=gxxp47 entry=/src/ink/start.ink,/src/values/characters.ts}
 :::
 
 ## Use Character Emotions in *ink*
@@ -104,7 +104,7 @@ import TextInput from "./screens/modals/TextInput";
 import NarrationScreen from "./screens/NarrationScreen";
 
 // Remember to import the character file at least once into your project. // [!code focus]
-import "./character"; // [!code focus]
+import "./values/characters"; // [!code focus]
 
 export default function App() {
 return (
@@ -120,7 +120,7 @@ return (
 
 :::
 
-::: sandbox {template=xm9hj9 entry=/src/ink/start.ink,/src/values/characters.ts}
+::: sandbox {template=fdj2lt entry=/src/ink/start.ink,/src/values/characters.ts}
 :::
 
 ## Use Character how variable in *ink*
