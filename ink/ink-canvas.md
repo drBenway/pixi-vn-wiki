@@ -117,7 +117,7 @@ The syntax is as follows:
 
 `#` + `edit` + `[type of the canvas element]` + `[alias]` + `[parameters]`
 
-* `[parameters]`: In the `parameters` you must include the properties that you want to edit. The properties must be set as follows: `propertyName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
+* `[parameters]`: In the `parameters` you must include the properties that you want to edit. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
 ```ink
 # edit image bg position \{ "x": 20, "y": 30 \} visible true  cursor "pointer" alpha 0.5 
