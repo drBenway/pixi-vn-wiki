@@ -52,7 +52,7 @@ The syntax is as follows:
 == assets-utility.ts
 
 ```ts
-import { Assets, sound } from "@drincs/pixi-vn";
+import { Assets } from "@drincs/pixi-vn";
 
 export async function defineAssets() {
     Assets.add({ alias: 'eggHead', src: "https://pixijs.com/assets/eggHead.png" })
@@ -97,7 +97,7 @@ temp durationVar = 3
 == assets-utility.ts
 
 ```ts
-import { Assets, sound } from "@drincs/pixi-vn";
+import { Assets } from "@drincs/pixi-vn";
 
 export async function defineAssets() {
     Assets.add({ alias: 'eggHead', src: "https://pixijs.com/assets/eggHead.png" })

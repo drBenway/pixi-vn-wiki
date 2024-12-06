@@ -18,6 +18,8 @@ Where:
 
 ## Add Sound in *ink*
 
+**( This method is not recommended is recommended, to [initialize the asset matrix at project start](/start/assets-management.md#initialize-the-asset-matrix-at-project-start). )**
+
 To add a sound in ***ink***, you can use the `add` operation.
 
 This operation requires one parameter, the URL or path of the sound.
@@ -35,10 +37,27 @@ To play a sound in ***ink***, you can use the `play` operation.
 
 After the alias of the sound element, you can add the `SoundPlayOptions` parameters. These parameters do not have a precise order and must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
 
+:::tabs
+== start.ink
+
 ```ink
 # play sound bird
+Now the bird is singing.
 # play sound bird volume 100
+Now the bird is singing louder.
 ```
+
+== assets-utility.ts
+
+```ts
+import { sound } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    sound.add('bird', 'https://pixijs.io/sound/examples/resources/bird.mp3');
+}
+```
+
+:::
 
 ## Pause Sound in *ink*
 
