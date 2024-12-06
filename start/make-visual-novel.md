@@ -104,7 +104,7 @@ This is the example in *ink*:
 
 :::tabs
 
-== /ink_labels/start.ink
+== /ink/start.ink
 
 ```ink
 === start ===

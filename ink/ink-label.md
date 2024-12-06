@@ -23,7 +23,7 @@ End
 -> DONE
 ```
 
-::: sandbox {template=5mmwzt entry=/src/ink_labels/start.ink}
+::: sandbox {template=5mmwzt entry=/src/ink/start.ink}
 :::
 
 This feature derives from **native *ink*** and is the only native method to start a knot. So, if you test your script using **Inky**, you will be able to use this feature.
@@ -90,7 +90,7 @@ export default function App() {
 
 :::
 
-::: sandbox {template=rwd5c6 entry=/src/ink_labels/start.ink}
+::: sandbox {template=rwd5c6 entry=/src/ink/start.ink}
 :::
 
 This feature has been added by ***ink* + Pixi’VN integration**.
@@ -155,5 +155,5 @@ export default function App() {
 
 :::
 
-::: sandbox {template=jgzfc7 entry=/src/ink_labels/start.ink}
+::: sandbox {template=jgzfc7 entry=/src/ink/start.ink}
 :::

@@ -12,7 +12,7 @@ Hello, this is a test. \\n\\n<>
 This is a new line.
 ```
 
-::: sandbox {template=vvfhw4 entry=/src/ink_labels/start.ink}
+::: sandbox {template=vvfhw4 entry=/src/ink/start.ink}
 :::
 
 ## Markdown syntax in *ink*
@@ -23,7 +23,7 @@ To do this you need to keep in mind that many symbols of Markdown syntax are als
 
 Here's an example:
 
-::: sandbox {template=d7synv entry=/src/ink_labels/start.ink}
+::: sandbox {template=d7synv entry=/src/ink/start.ink}
 :::
 
 :::tabs

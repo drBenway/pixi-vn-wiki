@@ -35,7 +35,7 @@ He insisted that we hurried home to Savile Row
 -> start
 ```
 
-::: sandbox {template=lqsm5y entry=/src/ink_labels/start.ink}
+::: sandbox {template=lqsm5y entry=/src/ink/start.ink}
 :::
 
 ## Why use *ink* integration?
@@ -115,7 +115,7 @@ After that you can import the *ink* file and add `?raw` at the end of the import
 
 ```typescript
 import { importInkText } from '@drincs/pixi-vn-ink'
-import startLabel from './ink_labels/start.ink?raw'
+import startLabel from './ink/start.ink?raw'
 
 importInkText([startLabel, ...])
 ```

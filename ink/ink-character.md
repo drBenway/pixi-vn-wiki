@@ -54,7 +54,7 @@ return (
 
 :::
 
-::: sandbox {template=lh88tr entry=/src/ink_labels/start.ink,/src/values/characters.ts}
+::: sandbox {template=lh88tr entry=/src/ink/start.ink,/src/values/characters.ts}
 :::
 
 ## Use Character Emotions in *ink*
@@ -120,7 +120,7 @@ return (
 
 :::
 
-::: sandbox {template=xm9hj9 entry=/src/ink_labels/start.ink,/src/values/characters.ts}
+::: sandbox {template=xm9hj9 entry=/src/ink/start.ink,/src/values/characters.ts}
 :::
 
 ## Use Character how variable in *ink*
@@ -129,7 +129,7 @@ Having the ability to rename a character and use their name in dialogues greatly
 
 But you can take advantage of the [possibility of replacing portions of text](/ink/ink-replacement.md) and [customizing hashtag scripts](/ink/ink-hashtag.md) to implement this feature.
 
-::: sandbox {template=mhs2pd entry=/src/ink_labels/start.ink,/src/values/characters.ts}
+::: sandbox {template=mhs2pd entry=/src/ink/start.ink,/src/values/characters.ts}
 :::
 
 ### Use character name in dialogues

@@ -56,7 +56,7 @@ export default function App() {
 
 :::
 
-::: sandbox {template=7pg6dy entry=/src/ink_labels/start.ink}
+::: sandbox {template=7pg6dy entry=/src/ink/start.ink}
 :::
 
 ## Auto-generation of translation files
