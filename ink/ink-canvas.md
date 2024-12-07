@@ -111,7 +111,7 @@ export async function defineAssets() {
 
 ## Edit canvas element in *ink*
 
-You can use the `edit` to edit a [canvas element](/start/canvas-elements.md) in ***ink***. 
+You can use the `edit` to edit a [canvas element](/start/canvas-elements.md) in ***ink***.
 
 The syntax is as follows:
 
@@ -125,7 +125,7 @@ The syntax is as follows:
 
 ## Remove canvas element in *ink*
 
-To remove a canvas element in ***ink***, you can use the `remove` operation.
+You can use the `remove` to remove a [canvas element](/start/canvas-elements.md) in ***ink***.
 
 The syntax is as follows:
 
