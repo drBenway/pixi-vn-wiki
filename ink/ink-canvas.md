@@ -167,9 +167,11 @@ temp durationVar = 3
 
 ## Use Effects in *ink*
 
-You can use the [effects](/start/animations-effects.md) in ***ink***.
+You can use the `[effectType]` to use the [effects](/start/animations-effects.md) in ***ink***.
 
-If you want to use an effect in ***ink***, you can use how `[operation]` the name of the effect.
+The syntax is as follows:
+  
+`#` + `[effectType]` + `[alias]` + `[parameters]`
 
 The available `[effectType]` are:
 
@@ -178,10 +180,6 @@ The available `[effectType]` are:
 * `rotate`: Create a rotate effect. (Read more [here](/start/animations-effects.md#rotate)). You can add all the parameters you would use in JS/TS.
 * `zoom`: Create a zoom effect. (Read more [here](/start/animations-effects.md#zoom)). You can add all the parameters you would use in JS/TS.
 * `shake`: Create a shake effect. (Read more [here](/start/animations-effects.md#shake)). You can add all the parameters you would use in JS/TS.
-
-The syntax is as follows:
-  
-`#` + `[effectType]` + `[alias]` + `[parameters]`
   
 ```ink
 # fade bg duration 3
@@ -193,7 +191,7 @@ temp durationVar = 3
 # shake bg duration 3
 ```
 
-## Pause video canvas element in *ink*
+## Pause a video in *ink*
 
 To pause a video canvas element in ***ink***, you can use the `pause` operation.
 
@@ -202,7 +200,7 @@ To pause a video canvas element in ***ink***, you can use the `pause` operation.
 # pause video "bg 2"
 ```
 
-## Resume video canvas element in *ink*
+## Resume a video in *ink*
 
 To resume a video canvas element in ***ink***, you can use the `resume` operation.
 
