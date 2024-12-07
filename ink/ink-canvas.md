@@ -148,7 +148,7 @@ The syntax is as follows:
 
 `#` + `remove` + `[type of the canvas element]` + `[alias]` + `with` + `[transitionType]` + `[transition parameters]`
 
-The first parameter is the transition type, the available transitions are:
+The available transitions are:
 
 * `dissolve`: The canvas element disappears with a [dissolve transition](/start/transition.md#dissolve-transition). You can add all the parameters you would use in JS/TS.
 * `fade`: The canvas element disappears with a [fade transition](/start/transition.md#fade-transition). You can add all the parameters you would use in JS/TS.
