@@ -173,7 +173,7 @@ The syntax is as follows:
   
 `#` + `[effectType]` + `[alias]` + `[parameters]`
 
-The available `[effectType]` are:
+The available effects are:
 
 * `fade`: Create a fade effect. (Read more [here](/start/animations-effects.md#fade)). You can add all the parameters you would use in JS/TS.
 * `move`: Create a move effect. (Read more [here](/start/animations-effects.md#move)). You can add all the parameters you would use in JS/TS. To simplify the use you can use instead of `destination \{ x: 20, y: 30 \}` the `x 20 y 30`.
@@ -193,7 +193,7 @@ temp durationVar = 3
 
 ## Pause a video in *ink*
 
-To pause a video canvas element in ***ink***, you can use the `pause` operation.
+To pause a video in ***ink***, you can use the `pause` operation.
 
 ```ink
 # pause video bg
@@ -202,7 +202,7 @@ To pause a video canvas element in ***ink***, you can use the `pause` operation.
 
 ## Resume a video in *ink*
 
-To resume a video canvas element in ***ink***, you can use the `resume` operation.
+To resume a video in ***ink***, you can use the `resume` operation.
 
 ```ink
 # resume video bg
