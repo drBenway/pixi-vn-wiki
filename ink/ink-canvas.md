@@ -127,6 +127,10 @@ The syntax is as follows:
 
 To remove a canvas element in ***ink***, you can use the `remove` operation.
 
+The syntax is as follows:
+
+`#` + `remove` + `[type of the canvas element]` + `[alias]`
+
 ```ink
 # remove image bg
 # remove image "bg 2"
@@ -134,7 +138,15 @@ To remove a canvas element in ***ink***, you can use the `remove` operation.
 
 ### Remove canvas element with transition in *ink*
 
-If you want to remove the canvas element with a [transition](/start/transition.md), you can add after the alias of the canvas element the `with` + `SPACE` + `transitionType`. After the transition type, you can add the transition parameters. These parameters do not have a precise order and must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
+If you want to remove the canvas element with a [transition](/start/transition.md), you can add after the alias of the canvas element `with [transitionType]`. 
+
+`#` + `remove` + `[type of the canvas element]` + `[alias]` + `with` + `[transitionType]`
+
+After the `transitionType`, you can add the `transition parameters`. the `transition parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
+
+The syntax is as follows:
+
+`#` + `remove` + `[type of the canvas element]` + `[alias]` + `with` + `[transitionType]` + `[transition parameters]`
 
 The first parameter is the transition type, the available transitions are:
 
