@@ -149,10 +149,10 @@ I suggest the following hotkeys:
 
 * `Space` or `Enter`: Continue the dialogue.
 * `Keep Space` or `Keep Enter`: Skip the dialogue.
-* `Shift` + `S`: Quick save the game.
-* `Shift` + `L`: Quick load the game.
-* `Shift` + `H`: Open the history modal.
+* `Alt` + `S`: Quick save the game.
+* `Alt` + `L`: Quick load the game.
+* `Alt` + `H`: Open the history modal.
 * `Esc`: Open the settings modal.
-* `Shift` + `V`: Hide the UI (Show only the canvas).
+* `Alt` + `V`: Hide the UI (Show only the canvas).
 
 Why not use the `Ctrl` key? Because it is used by the browser for many shortcuts, and it is better to avoid conflicts.
