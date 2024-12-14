@@ -282,8 +282,12 @@ james: Don't worry, [mc], she's just giving you the run-down. She's kinda like a
 
 :::
 
-## Define assets
+## Define assets and load them
 
 ## Add a background and character images
+
+## Use transitions
+
+## Use animations and effects or Create your Ticker
 
 ## Add music and sound effects
