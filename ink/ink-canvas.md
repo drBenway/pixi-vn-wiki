@@ -165,7 +165,7 @@ temp durationVar = 3
 # remove image bg with pushout
 ```
 
-## Use Effects in *ink*
+## Use effects in *ink*
 
 You can use the `[effectType]` to use the [effects](/start/animations-effects.md) in ***ink***.
 
