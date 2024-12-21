@@ -12,7 +12,7 @@ Where:
 * `[operation]`: It is the operation that you want to execute with the sound element. The available operations are:
   * `play`: Play a sound. (Read more [here](#play-a-sound-in-ink))
   * `pause`: Pause a sound. (Read more [here](#pause-a-sound-in-ink))
-  * `resume`: Resume a sound. (Read more [here](#))
+  * `resume`: Resume a sound. (Read more [here](#resume-a-sound-in-ink))
   * `stop`: Stop a sound. (Read more [here](#))
   * `volume`: Change the volume of a sound. (Read more [here](#))
 * `[alias]` It is the alias of the sound element. The alias is a string that identifies the sound element.
