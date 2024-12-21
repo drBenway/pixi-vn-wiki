@@ -23,7 +23,11 @@ Where:
 
 ## Play a sound in *ink*
 
-To play a sound in ***ink***, you can use the `play` operation.
+You can use the `edit` to play a sound in ***ink***.
+
+The syntax is as follows:
+
+`#` + `play` + `sound` + `[alias]` + `[parameters]`
 
 After the alias of the sound element, you can add the `SoundPlayOptions` parameters. These parameters do not have a precise order and must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string you must use double quotes.
 
