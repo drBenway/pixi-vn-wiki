@@ -10,11 +10,11 @@ Where:
 
 * `#`: It is a special character used by ***ink* syntax** for use a special script.
 * `[operation]`: It is the operation that you want to execute with the sound element. The available operations are:
-  * `play`
-  * `pause`
-  * `resume`
-  * `stop`
-  * `volume`
+  * `play`: play a sound
+  * `pause`: pause a sound
+  * `resume`: resume a sound
+  * `stop`: stop a sound
+  * `volume`: change the volume of a sound
 * `[alias]` It is the alias of the sound element. The alias is a string that identifies the sound element.
   * If the alias includes spaces, you must use double quotes.
 * `[parameters]` It is the parameters of the operation. The parameters depend on the operation.
@@ -57,7 +57,7 @@ To pause a sound in ***ink***, you can use the `pause` operation.
 # pause sound bird
 ```
 
-## Resume Sound in *ink*
+## Resume a sound in *ink*
 
 To resume a sound in ***ink***, you can use the `resume` operation.
 
