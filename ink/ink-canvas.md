@@ -198,6 +198,10 @@ temp durationVar = 3
 
 To pause a video in ***ink***, you can use `pause`.
 
+The syntax is as follows:
+
+`#` + `pause` + `video` + `[alias]`
+
 ```ink
 # pause video bg
 # pause video "bg 2"
@@ -206,6 +210,10 @@ To pause a video in ***ink***, you can use `pause`.
 ## Resume a video in *ink*
 
 To resume a video in ***ink***, you can use `resume`.
+
+The syntax is as follows:
+
+`#` + `resume` + `video` + `[alias]`
 
 ```ink
 # resume video bg
