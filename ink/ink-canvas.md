@@ -27,7 +27,7 @@ Where:
 ::: sandbox {template=rxzx5z entry=/src/ink/start.ink,/src/utils/assets-utility.ts}
 :::
 
-## Show canvas element in *ink*
+## Show a canvas element in *ink*
 
 You can use the `show` to show a [canvas element](/start/canvas-elements.md) in ***ink***.
 
@@ -62,7 +62,7 @@ export async function defineAssets() {
 
 :::
 
-### Show canvas element with transition in *ink*
+### Show a canvas element with transition in *ink*
 
 If you want to show the canvas element with a [transition](/start/transition.md), you can add into the parameters the `with [transitionType]`.
 
@@ -109,7 +109,7 @@ export async function defineAssets() {
 
 :::
 
-## Edit canvas element in *ink*
+## Edit a canvas element in *ink*
 
 You can use the `edit` to edit a [canvas element](/start/canvas-elements.md) in ***ink***.
 
@@ -123,7 +123,7 @@ The syntax is as follows:
 # edit image bg position \{ "x": 20, "y": 30 \} visible true  cursor "pointer" alpha 0.5 
 ```
 
-## Remove canvas element in *ink*
+## Remove a canvas element in *ink*
 
 You can use the `remove` to remove a [canvas element](/start/canvas-elements.md) in ***ink***.
 
@@ -136,7 +136,7 @@ The syntax is as follows:
 # remove image "bg 2"
 ```
 
-### Remove canvas element with transition in *ink*
+### Remove a canvas element with transition in *ink*
 
 If you want to remove the canvas element with a [transition](/start/transition.md), you can add after the alias of the canvas element `with [transitionType]`. 
 
