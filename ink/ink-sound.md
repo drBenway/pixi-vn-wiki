@@ -1,4 +1,4 @@
-# Using sounds and music in *ink*
+# Use sounds and music in *ink*
 
 Pixi’VN allows you to use in the ***ink* syntax** the possibility to use the [Sounds and Music](/start/sound.md).
 
