@@ -9,7 +9,7 @@ Hello, world!
 -> DONE
 ```
 
-But if you want to show only the image without the dialogue text using **native *ink*** it is not possible. You will have to use the `# pause` command to stop the execution of the steps and set the dialogue text to empty.
+You can use the `pause` to stop the execution of the steps and set the dialogue text to empty.
 
 The syntax is as follows:
 
