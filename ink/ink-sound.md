@@ -57,6 +57,10 @@ export async function defineAssets() {
 
 To pause a sound in ***ink***, you can use the `pause` operation.
 
+The syntax is as follows:
+
+`#` + `pause` + `sound` + `[alias]`
+
 ```ink
 # pause sound bird
 ```
@@ -64,6 +68,10 @@ To pause a sound in ***ink***, you can use the `pause` operation.
 ## Resume a sound in *ink*
 
 To resume a sound in ***ink***, you can use the `resume` operation.
+
+The syntax is as follows:
+
+`#` + `resume` + `sound` + `[alias]`
 
 ```ink
 # resume sound bird
@@ -73,6 +81,10 @@ To resume a sound in ***ink***, you can use the `resume` operation.
 
 To remove a sound in ***ink***, you can use the `stop` operation.
 
+The syntax is as follows:
+
+`#` + `stop` + `sound` + `[alias]`
+
 ```ink
 # stop sound bird
 ```
@@ -80,6 +92,10 @@ To remove a sound in ***ink***, you can use the `stop` operation.
 ## Change the volume of a sound in *ink*
 
 To change the volume of a sound in ***ink***, you can use the `volume` operation.
+
+The syntax is as follows:
+
+`#` + `volume` + `sound` + `[alias]` + `[number]`
 
 This operation requires one parameter, the volume of the sound.
 
