@@ -97,7 +97,7 @@ The syntax is as follows:
 
 `#` + `volume` + `sound` + `[alias]` + `[number]`
 
-This operation requires one parameter, the volume of the sound.
+* `[number]`: It is a number from 0 to 100 that corresponds to the volume you want to set.
 
 ```ink
 # volume sound bird 100
