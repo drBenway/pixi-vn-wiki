@@ -23,7 +23,7 @@ Where:
 
 ## Play a sound in *ink*
 
-You can use the `edit` to play a sound in ***ink***.
+You can use the `play` to play a sound in ***ink***.
 
 The syntax is as follows:
 
