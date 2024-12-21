@@ -11,7 +11,7 @@ Where:
 * `#`: It is a special character used by ***ink* syntax** for use a special script.
 * `[operation]`: It is the operation that you want to execute with the sound element. The available operations are:
   * `play`: Play a sound. (Read more [here](#play-a-sound-in-ink))
-  * `pause`: Pause a sound. (Read more [here](#))
+  * `pause`: Pause a sound. (Read more [here](#pause-a-sound-in-ink))
   * `resume`: Resume a sound. (Read more [here](#))
   * `stop`: Stop a sound. (Read more [here](#))
   * `volume`: Change the volume of a sound. (Read more [here](#))
