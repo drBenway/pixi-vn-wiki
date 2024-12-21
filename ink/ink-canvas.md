@@ -13,8 +13,8 @@ Where:
   * `show`: Show a canvas element. (Read more [here](#show-a-canvas-element-in-ink))
   * `edit`: Edit a canvas element. (Read more [here](#edit-a-canvas-element-in-ink))
   * `remove`: Remove a canvas element. (Read more [here](#remove-a-canvas-element-in-ink))
-  * `pause` (Only for video): Pause a video canvas element. (Read more [here](#pause-a-video-canvas-element-in-ink))
-  * `resume` (Only for video): Resume a video canvas element. (Read more [here](#resume-a-video-canvas-element-in-ink))
+  * `pause` (Only for video): Pause a video canvas element. (Read more [here](#pause-a-video-in-ink))
+  * `resume` (Only for video): Resume a video canvas element. (Read more [here](#resume-a-video-in-ink))
 * `[type of the canvas element]` It is the type of the canvas element. The available types are:
   * [`image`](/start/images.md)
   * [`video`](/start/videos.md)
