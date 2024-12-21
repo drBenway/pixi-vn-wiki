@@ -73,7 +73,7 @@ To remove a sound in ***ink***, you can use the `stop` operation.
 # stop sound bird
 ```
 
-## Volume Sound in *ink*
+## Change the volume of a sound in *ink*
 
 To change the volume of a sound in ***ink***, you can use the `volume` operation.
 
