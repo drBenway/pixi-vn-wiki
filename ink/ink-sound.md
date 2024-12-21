@@ -9,7 +9,13 @@ The syntax is as follows:
 Where:
 
 * `#`: It is a special character used by ***ink* syntax** for use a special script.
-* `[operation]` It is the operation that you want to do with the sound element. The available operations are `add`, `play`, `pause`, `resume`, `remove` and `volume`.
+* `[operation]`: It is the operation that you want to execute with the sound element. The available operations are:
+  * `add`
+  * `play`
+  * `pause`
+  * `resume`
+  * `remove`
+  * `volume`
 * `[alias]` It is the alias of the sound element. The alias is a string that identifies the sound element.
   * If the alias includes spaces, you must use double quotes.
 * `[parameters]` It is the parameters of the operation. The parameters depend on the operation.
