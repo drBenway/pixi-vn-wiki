@@ -21,7 +21,7 @@ Where:
   * If the parameters include spaces, you must use double quotes.
   * If the parameters is a object, you must use the JSON format and the first character must be `\{` and the last character must be `\}`. Example: `\{ "volume": 100, name: "Music" \}`
 
-## Play Sound in *ink*
+## Play a sound in *ink*
 
 To play a sound in ***ink***, you can use the `play` operation.
 
@@ -49,7 +49,7 @@ export async function defineAssets() {
 
 :::
 
-## Pause Sound in *ink*
+## Pause a sound in *ink*
 
 To pause a sound in ***ink***, you can use the `pause` operation.
 
@@ -65,7 +65,7 @@ To resume a sound in ***ink***, you can use the `resume` operation.
 # resume sound bird
 ```
 
-## Stop Sound in *ink*
+## Stop a sound in *ink*
 
 To remove a sound in ***ink***, you can use the `stop` operation.
 
