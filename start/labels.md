@@ -45,7 +45,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 All the functionality to control the flow of labels requires an object that corresponds to the `StepLabelProps` interface. The object will be passed as a parameter to the step that will be executed.
 
-By default `StepLabelProps` corresponds to { `[key: string]: any }`. You can "override" the interface `StepLabelProps` to set required parameters.
+By default `StepLabelProps` corresponds to `{ [key: string]: any }`. You can "override" the interface `StepLabelProps` to set required parameters.
 
 :::tabs
 == pixi-vn.types.ts
