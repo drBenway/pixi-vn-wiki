@@ -80,7 +80,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ### Parameters of the label steps
 
-You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters).
+You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters) for that label.
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
