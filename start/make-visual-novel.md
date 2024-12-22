@@ -70,7 +70,7 @@ This is the example:
 
 :::tabs
 
-== *ink* example
+== ink example
 
 ```ink
 === start ===
@@ -137,6 +137,8 @@ export default startLabel;
 :::
 
 ### Split the narrative into labels
+
+It is not recommended to create very long labels (even for linear visual novels), but it is recommended to create many small labels and open them as needed with pixi's [features to control the flow of the game](/start/labels-flow.md).
 
 This is the example in *ink*:
 
