@@ -1,8 +1,8 @@
-# Make your first game in Pixi’VN
+# Make your first Visual Novel
 
 This tutorial will guide you through the process of creating your first Visual Novel.
 
-For testing purposes we will recreate the visual novel Breakdown with Pixi’VN in this guide. Breakdown is a short story that has all the features that a visual novel should have. Breakdown was created by Josh Powlison (<https://joshpowlison.itch.io/breakdown>)
+For testing purposes we will recreate the visual novel [Breakdown](https://joshpowlison.itch.io/breakdown) with Pixi’VN in this guide. Breakdown is a short story that has all the features that a visual novel should have. Josh Powlison, the creator of Breakdown, has given us permission to use his narration for educational purposes❤️.
 
 Since Pixi’VN gives you the ability to write your [narration in different types of languages](/start/narration.md), it will be explained at each step how to do it with each language.
 
@@ -209,6 +209,12 @@ const secondPart = newLabel("second_part", [
 
 ## Edit character information and use it as variables
 
+Now I give the player the opportunity to choose the name of the `mc`.
+
+To do this, I request the player to [enter an inputs using Pixi’VN's features](/start/input.md) ([Use input in *ink*](/ink/ink-input.md)).
+
+After obtaining the value of the input you can [set the name of the character](/start/character.md#edit-characters-in-the-game) equal to the value obtained ([Edit character name in *ink*](/ink/ink-character.md#edit-character-name-in-dialogues)).
+
 This is the example:
 
 :::tabs
@@ -226,12 +232,26 @@ He thrusts out his hand.
 What is your name?
 # rename mc { _input_value_ }
 
-james: [james]!
-mc: ...[mc].
-
 // ...
 
--> second_part
+```
+
+== Typescript example
+
+```ts
+const startLabel = newLabel("start", [
+    // ...
+    () => { narration.dialogue = `He thrusts out his hand.` },
+    () => {
+        narration.requestInput({ type: "string" }, "Peter")
+        narration.dialogue = `What is your name?`
+    },
+    () => {
+        mc.name = narration.inputValue as string
+    },
+    // ...
+]);
+export default startLabel;
 ```
 
 :::
