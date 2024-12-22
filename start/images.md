@@ -36,7 +36,7 @@ import { addImage } from '@drincs/pixi-vn'
 const image = addImage('image1', 'path/to/image.png')
 ```
 
-If you want initialize the image before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-elements#add-canvas-elements)function.
+If you want initialize the image before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-functions.md#add-canvas-elements)function.
 
 ```typescript
 import { canvas, CanvasImage } from '@drincs/pixi-vn'
@@ -135,4 +135,4 @@ export const startLabel = newLabel("StartLabel", [
 
 ## Remove Image
 
-As for the Canvas Elements, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-elements#remove-canvas-elements) function.
+As for the Canvas Elements, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-elements) function.

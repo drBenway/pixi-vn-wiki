@@ -36,7 +36,7 @@ import { addVideo } from '@drincs/pixi-vn'
 const video = addVideo('video1', 'path/to/video.mp4')
 ```
 
-If you want initialize the video before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-elements#add-canvas-elements)function.
+If you want initialize the video before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-functions#add-canvas-elements)function.
 
 ```typescript
 import { canvas, CanvasVideo } from '@drincs/pixi-vn'
@@ -111,7 +111,7 @@ It's exactly the same as [Load Image Textures in Cache when a label is called](/
 
 ## Remove Video
 
-As for the Canvas Elements, you can remove an video from the canvas using the [`canvas.remove`](/start/canvas-elements#remove-canvas-elements) function.
+As for the Canvas Elements, you can remove an video from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-elements) function.
 
 ## Play and Pause Video
 
