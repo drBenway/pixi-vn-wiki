@@ -14,4 +14,4 @@ Programming a game narrative in **Javascript/Typescript** has the advantage of h
 
 ## Ren'Py integration is in development
 
-**Ren'Py integration is in development. Add a like or comment to [this issue #167](https://github.com/DRincs-Productions/pixi-vn/issues/167) to show your interest in this feature.**
+**Ren'Py integration is in development. Add a like or comment to [this discussion](https://github.com/DRincs-Productions/pixi-vn/discussions/268) to show your interest in this feature.**
