@@ -29,7 +29,7 @@
     * [Input](input)
     * [History](history)
     * [Translating](translate)
-    * [Typewriter effect](typewriter)
+    * [Typewriter effect](markup-typewriter)
     * [Markup language (to add text style)](markup-markdown)
     * [Other features](other-narrative-features)
 * [PixiJS Canvas](canvas):
