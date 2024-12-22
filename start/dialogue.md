@@ -65,6 +65,26 @@ To clear the current dialogue, you can use `narration.dialogue = undefined`.
 narration.dialogue = undefined;
 ```
 
+## Dialogue glue
+
+Dialogue glue is a feature originally created for ***ink***, which was also introduced in Pixi’VN.
+
+When "glue" is enabled the next dialogue will be added after the current dialogue.
+
+```typescript
+const startLabel = newLabel("start", [
+    () => {
+        narration.dialogue = `Hello, my name is Alice and ...`
+    },
+    () => {
+        narration.dialogGlue = true // [!code focus]
+        narration.dialogue = ` I am a character in this game.`
+    },
+])
+```
+
+<!-- TODO sandbox example -->
+
 ## How to create the narrative dialogue UI screen
 
 For example:
