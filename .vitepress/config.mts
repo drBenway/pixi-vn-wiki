@@ -90,8 +90,14 @@ export default defineConfig({
                     { text: 'Input', link: '/start/input' },
                     { text: 'History', link: '/start/history' },
                     { text: 'Translating', link: '/start/translate' },
-                    { text: 'Typewriter effect', link: '/start/markup-typewriter' },
-                    { text: 'Markup language (to add text style)', link: '/start/markup-markdown' },
+                    {
+                      text: 'Markup language (to add text style)',
+                      link: '/start/markup',
+                      items: [
+                        { text: 'Markdown', link: '/start/markup-markdown' },
+                        { text: 'Typewriter effect', link: '/start/markup-typewriter' },
+                      ]
+                    },
                     { text: 'Other features', link: '/start/other-narrative-features' },
                   ]
                 }

@@ -29,8 +29,9 @@
     * [Input](input)
     * [History](history)
     * [Translating](translate)
-    * [Typewriter effect](markup-typewriter)
-    * [Markup language (to add text style)](markup-markdown)
+    * [Markup language (to add text style)](markup)
+      * [Markdown](markup-markdown)
+      * [Typewriter effect](markup-typewriter)
     * [Other features](other-narrative-features)
 * [PixiJS Canvas](canvas):
   * [Images](images)

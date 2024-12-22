@@ -75,3 +75,12 @@ export default function Typewriter({ text, delay = 30 }: {
 
 ::: sandbox {template=73dkhh previewHeight=200 entry=/src/components/Typewriter.tsx}
 :::
+
+## Markdown + Typewriter
+
+To be able to merge with Markdown and Typewriter, you can use [react-markdown](https://www.npmjs.com/package/react-markdown) and [Framer Motion](https://www.framer.com/motion/).
+
+The following phrase creates an effect of typing only for a "normal" text (in the react-markdown is the "p" element), for the other elements it will be displayed immediately.
+
+::: sandbox {template=p2cjqm previewHeight=500 entry=/src/components/Typewriter.tsx}
+:::
