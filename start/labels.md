@@ -41,31 +41,6 @@ export const startLabel = newLabel(START_LABEL_ID,
 )
 ```
 
-### Parameters of the label steps
-
-You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters).
-
-```typescript
-import { narration } from '@drincs/pixi-vn'
-
-const START_LABEL_ID = "start_label_id"
-
-export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
-    [
-        (props) => {
-            console.log(props.name)
-        },
-    ]
-)
-
-narration.callLabel(startLabel, {
-    // add StepLabelProps here
-    navigate: navigate, // example
-    // and the props that will be passed to the label
-    name: "John"
-})
-```
-
 ### All Steps Parameters
 
 You can "override" the interface `StepLabelProps` to set required parameters for all steps of all labels.
@@ -100,6 +75,31 @@ export const startLabel = newLabel(START_LABEL_ID,
 ```
 
 :::
+
+### Parameters of the label steps
+
+You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters).
+
+```typescript
+import { narration } from '@drincs/pixi-vn'
+
+const START_LABEL_ID = "start_label_id"
+
+export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+    [
+        (props) => {
+            console.log(props.name)
+        },
+    ]
+)
+
+narration.callLabel(startLabel, {
+    // add StepLabelProps here
+    navigate: navigate, // example
+    // and the props that will be passed to the label
+    name: "John"
+})
+```
 
 ### All Steps Result
 
