@@ -30,7 +30,7 @@
     * [History](history)
     * [Translating](translate)
     * [Typewriter effect](typewriter)
-    * [Markup language (to add text style)](markdown)
+    * [Markup language (to add text style)](markup-markdown)
     * [Other features](other-narrative-features)
 * [PixiJS Canvas](canvas):
   * [Images](images)

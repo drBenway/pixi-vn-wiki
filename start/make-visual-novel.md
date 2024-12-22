@@ -64,7 +64,7 @@ return // ...
 Now we can start drafting the [narrative](/start/narration.md) of the visual novel.
 We will create the first ["label"](/start/labels.md) called `start`, which will be the beginning of the game.
 
-After that we can write the [dialogues](/start/dialogue.md) that will follow in our visual novel. The template we have chosen supports the [markup language markdown](/start/markdown.md) ([Markup language in ink](/ink/ink-markup.md)) so we will use it for our narration.
+After that we can write the [dialogues](/start/dialogue.md) that will follow in our visual novel. The template we have chosen supports the [markup language markdown](/start/markup-markdown.md) ([Markup language in ink](/ink/ink-markup.md)) so we will use it for our narration.
 
 This is the example:
 
