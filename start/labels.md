@@ -20,7 +20,7 @@ The label is a container of steps. It is used to organize the steps in a more re
 For create a label you must use the `newLabel()` function and pass:
 
 * The `id` of the label, must be unique
-* The `steps` of the label, an array of functions that will be executed in order. Or a function that returns the steps.
+* The `steps` of the label, an array of functions that will be executed in order. Or a function that returns the array of functions.
 * The `options` of the label, an object with the following properties:
   * `onStepStart`: A function that will be executed before each step of the label. You can read more about it [here](/start/labels-advanced.md#onstepstart).
   * `onStepEnd`: A function that will be executed after each step of the label. You can read more about it [here](/start/labels-advanced.md#onstepend).
