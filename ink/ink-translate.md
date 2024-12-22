@@ -4,9 +4,7 @@ As explained in more detail [here](/start/translate.md), Pixi’VN gives the pos
 
 Pixi'VN gives the developer the ability to intercept the translation event with the `onInkTranslate` function.
 
-The `onInkTranslate` function has as a parameter a callback function that will be called whenever a text is found in the ***ink*** script. The callback function returns a string that indicates the translated text. The callback function receives a parameter:
-
-* `text`: the text to translate.
+The `onInkTranslate` function has as a parameter a callback function takes as parameter the text to translate and returns the translated text.
 
 :::tabs
 == index.tsx
