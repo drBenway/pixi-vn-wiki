@@ -234,6 +234,7 @@ What is your name?
 
 // ...
 
+-> DONE
 ```
 
 == Typescript example
@@ -256,6 +257,8 @@ export default startLabel;
 
 :::
 
+Now we could use character names within dialogues ([Use character name in dialogues in *ink*](/ink/ink-character.md#use-character-name-in-dialogues)).
+
 This is the example:
 
 :::tabs
@@ -263,6 +266,8 @@ This is the example:
 == ink example
 
 ```ink
+VAR steph_fullname = "Stephanie"
+
 === start ===
 // ...
 
@@ -294,7 +299,38 @@ james: Don't worry, [mc], she's just giving you the run-down. She's kinda like a
 
 // ...
 
--> second_part
+-> DONE
+```
+
+== Typescript example
+
+```ts
+const steph_fullname = "Stephanie";
+
+const startLabel = newLabel("start", [
+    // ...
+    async () => narration.dialogue = { character: james, text: `Ooh, ${mc.name}! Nice, firm handshake! The last guy always gave me the dead fish. I already think we're gonna get along fine.` },
+    async () => narration.dialogue = { character: james, text: `Come on in and...` },
+    () => narration.dialogue = { character: james, text: `...` },
+    () => narration.dialogue = { character: james, text: `I know you're both watching, come on out already!` },
+    () => narration.dialogue = { character: sly, text: `I just wanted to see what the new guy was like. Hey, you, ${mc.name}- be nice to our little brother, or you'll have to deal with *us*.` },
+    () => narration.dialogue = { character: mc, text: `...` },
+    () => narration.dialogue = { character: james, text: `${mc.name}, this is ${sly.name}. Yes, that is her real name.` },
+    () => { narration.dialogue = `I put out my hand.` },
+    () => narration.dialogue = { character: sly, text: `I'm not shakin' your hand until I decide you're an all-right dude. Sorry, policy.` },
+    () => narration.dialogue = { character: mc, text: `Fair enough, I'm a pretty scary guy, or so I've been told.` },
+    () => narration.dialogue = { character: james, text: `The redhead behind her is ${steph_fullname}.` },
+    () => narration.dialogue = { character: steph, text: `Hey! Everyone calls me ${steph.name}. I'll shake your hand.` },
+    () => { narration.dialogue = `She puts out her hand, and I take it.` },
+    () => narration.dialogue = { character: mc, text: `Thanks, good to meet you, ${steph_fullname}.` },
+    () => narration.dialogue = { character: steph, text: `WOW, that is, like, the most perfect handshake I've ever had! Firm, but also gentle. ${sly.name}, you *gotta* shake his hand!` },
+    () => narration.dialogue = { character: sly, text: `It's just a handshake...` },
+    () => narration.dialogue = { character: steph, text: `Then just give it to him!` },
+    () => narration.dialogue = { character: james, text: `Don't worry, ${mc.name}, she's just giving you the run-down. She's kinda like a father ... I mean a mother... to us.` },
+    () => { narration.dialogue = `${sly.name} thrusts her hand out to shake mine.` },
+    // ...
+]);
+export default startLabel;
 ```
 
 :::
