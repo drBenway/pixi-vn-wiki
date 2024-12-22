@@ -335,12 +335,106 @@ export default startLabel;
 
 :::
 
+## Use dialogue glue
+
+To improve the narrative, it can be useful to break up a dialogue and continue it in the next step. To do this we can use the [glue functionality](/start/dialogue.md#dialogue-glue).
+
+This is the example:
+
+:::tabs
+
+== ink example
+
+```ink
+=== start ===
+// ...
+
+james: Ooh, [mc]! Nice, firm handshake!
+<> The last guy always gave me the dead fish.
+<> I already think we're gonna get along fine.
+james: Come on in and...
+
+// ...
+
+-> DONE
+```
+
+== Typescript example
+
+```ts
+const startLabel = newLabel("start", [
+    // ...
+    async () => narration.dialogue = { character: james, text: `Ooh, ${mc.name}! Nice, firm handshake!` },
+    async () => {
+        narration.dialogGlue = true
+        narration.dialogue = ` The last guy always gave me the dead fish.`
+    },
+    async () => {
+        narration.dialogGlue = true
+        narration.dialogue = ` I already think we're gonna get along fine.`
+    },
+    async () => narration.dialogue = { character: james, text: `Come on in and...` },
+    // ...
+]);
+export default startLabel;
+```
+
+:::
+
 ## Define assets and load them
+
+This is the example:
+
+:::tabs
+
+== ink example
+
+```ink
+```
+
+== Typescript example
+
+```ts
+```
+
+:::
 
 ## Add a background and character images
 
+This is the example:
+
+:::tabs
+
+== ink example
+
+```ink
+```
+
+== Typescript example
+
+```ts
+```
+
+:::
+
 ## Use transitions
 
-## Use animations and effects or Create your Ticker
+This is the example:
+
+:::tabs
+
+== ink example
+
+```ink
+```
+
+== Typescript example
+
+```ts
+```
+
+:::
+
+## Use animations and effects or create your Ticker
 
 ## Add music and sound effects
