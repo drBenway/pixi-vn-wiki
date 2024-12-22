@@ -81,11 +81,11 @@ export const startLabel = newLabel(START_LABEL_ID,
 )
 ```
 
-## Next Step and Go back
+## Next step and go back
 
 <!-- TODO can go next -->
 
-### Next Step
+### Next step
 
 To execute the next step you must execute the `narration.goNext()` function. This function have a parameter `props` that will be passed to the next step, if you not want to pass any parameter you can pass an empty object `{}`.
 
