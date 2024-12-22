@@ -167,7 +167,7 @@ import { narration } from '@drincs/pixi-vn'
 narration.closeAllLabels()
 ```
 
-## How to create the Go Back and Go Next buttons
+## How to create the go back and go next buttons
 
 For example:
 
