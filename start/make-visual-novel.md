@@ -146,7 +146,7 @@ This is the example in *ink*:
 
 :::tabs
 
-== /ink/start.ink
+== ink example
 
 ```ink
 === start ===
@@ -165,10 +165,10 @@ mc: ...Peter.
 
 === second_part ===
 
-She enters my my room before I'VE even had a chance to. \\n\\n...I could've just come back and gotten the platter later...
+She enters my room before I'VE even had a chance to. \\n\\n...I could've just come back and gotten the platter later...
 She sets it on a desk. I throw my two paper bags down beside the empty bed.
 
-steph: They got you a new mattress, right? That last guy was a druggie, did James tell tell you that?
+steph: They got you a new mattress, right? That last guy was a druggie, did James tell you that?
 sly: *We're* the reason he got expelled!
 steph: Sly! If word gets out about that... well, actually, it wouldn't matter, *he's* the one who shot himself up.
 
@@ -179,15 +179,30 @@ I'm fumbling for a new subject.
 -> DONE
 ```
 
-:::
-
-This is the example in Typescript:
-
-:::tabs
-
-== /labels/startLabel.ts
+== Typescript example
 
 ```ts
+const startLabel = newLabel("start", [
+    () => narration.dialogue = { character: james, text: `You're my roommate's replacement, huh?` },
+    () => narration.dialogue = { character: james, text: `Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!` },
+    () => narration.dialogue = { character: mc, text: `...` },
+    () => { narration.dialogue = "He thrusts out his hand." },
+    () => narration.dialogue = { character: james, text: `James!` },
+    () => narration.dialogue = { character: mc, text: `...Peter.` },
+    // ...
+    async (props) => await narration.jumpLabel(secondPart, props),
+]);
+export default startLabel;
+
+const secondPart = newLabel("second_part", [
+    () => { narration.dialogue = `She enters my room before I'VE even had a chance to. \n\n...I could've just come back and gotten the platter later...` },
+    () => { narration.dialogue = `She sets it on a desk. I throw my two paper bags down beside the empty bed.` },
+    () => narration.dialogue = { character: steph, text: `They got you a new mattress, right? That last guy was a druggie, did James tell you that?` },
+    () => narration.dialogue = { character: sly, text: `*We're* the reason he got expelled!` },
+    () => narration.dialogue = { character: steph, text: `Sly! If word gets out about that... well, actually, it wouldn't matter, *he's* the one who shot himself up.` },
+    () => { narration.dialogue = `I'm fumbling for a new subject.` },
+    // ...
+]);
 ```
 
 :::
