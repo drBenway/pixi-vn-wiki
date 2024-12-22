@@ -64,7 +64,7 @@ return // ...
 Now we can start drafting the [narrative](/start/narration.md) of the visual novel.
 We will create the first ["label"](/start/labels.md) called `start`, which will be the beginning of the game.
 
-After that we can write the [dialogues](/start/dialogue.md) that will follow in our visual novel. The template we have chosen supports the [markup language markdown](/start/markdown.md) so we will use it for our narration.
+After that we can write the [dialogues](/start/dialogue.md) that will follow in our visual novel. The template we have chosen supports the [markup language markdown](/start/markdown.md) ([Markup language in ink](/ink/ink-markup.md)) so we will use it for our narration.
 
 This is the example:
 
@@ -138,11 +138,11 @@ export default startLabel;
 
 ### Split the narrative into labels
 
-It is not recommended to create very long labels (even for linear visual novels), but it is recommended to create many small labels and open them as needed with pixi's [features to control the flow of the game](/start/labels-flow.md).
+It is not recommended to create very long labels (even for linear visual novels), but it is recommended to create many small labels and open them as needed with pixi's [features to control the flow of the game](/start/labels-flow.md) ([ink knot (or label)](/ink/ink-label.md)).
 
 For this reason, even if in our case our story is linear, it will be divided into two labels, the first one will be the one we have already created, and the second one will be called `second_part`.
 
-This is the example in *ink*:
+This is the example:
 
 :::tabs
 
@@ -209,11 +209,11 @@ const secondPart = newLabel("second_part", [
 
 ## Edit character information and use it as variables
 
-This is the example in *ink*:
+This is the example:
 
 :::tabs
 
-== /ink/start.ink
+== ink example
 
 ```ink
 VAR _input_value_ = ""
@@ -236,11 +236,11 @@ mc: ...[mc].
 
 :::
 
-This is the example in *ink*:
+This is the example:
 
 :::tabs
 
-== /ink/start.ink
+== ink example
 
 ```ink
 === start ===
