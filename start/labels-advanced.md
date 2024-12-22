@@ -4,7 +4,9 @@ In this section, we will cover advanced [label](/start/labels.md) features. Thes
 
 ## onLoadingLabel
 
-`onLoadingLabel` is a function that will be executed in `onStepStart` if the index of the step is 0 and when the user laods a save file. When you load a save file, will be executed all onLoadingLabel functions of the `narration.openedLabels` (current label and all labels that are in the stack).
+`onLoadingLabel` is a function that will be executed in `onStepStart` if the index of the step is 0 and when the user laods a save file. 
+
+When you load a save file, will be executed all `onLoadingLabel` functions of the `narration.openedLabels` (current label and all labels that are in the stack).
 
 It is useful for example to make sure all images used have been cached before the label starts.
 
