@@ -140,6 +140,8 @@ export default startLabel;
 
 It is not recommended to create very long labels (even for linear visual novels), but it is recommended to create many small labels and open them as needed with pixi's [features to control the flow of the game](/start/labels-flow.md).
 
+For this reason, even if in our case our story is linear, it will be divided into two labels, the first one will be the one we have already created, and the second one will be called `second_part`.
+
 This is the example in *ink*:
 
 :::tabs
