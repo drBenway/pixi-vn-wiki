@@ -39,7 +39,7 @@ export default class RotateTicker extends TickerBase<{ speed?: number, clockwise
 }
 ```
 
-## Run a Ticker and associate with a Canvas Element
+## Run a Ticker and associate with a Canvas Component
 
 To add a Ticker you must use the `canvas.addTicker` function and pass the ticker class.
 
@@ -69,9 +69,9 @@ You can also set the duration of the ticket so that upon completion it is delete
 canvas.addTicker("alien", new RotateTicker({ speed: my_speed }, 2))
 ```
 
-## Remove association between a Ticker and a Canvas Element
+## Remove association between a Ticker and a Canvas Component
 
-For unlink a Ticker from a Canvas Element you must use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the alias of the canvas element and a ticker class.
+For unlink a Ticker from a Canvas Component you must use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the alias of the canvas element and a ticker class.
 
 If the ticker not have any more canvas components associated, it will be deleted.
 
@@ -87,7 +87,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 canvas.removeAssociationBetweenTickerCanvasElement("alien", RotateTicker)
 ```
 
-If you remove the Canvas Element associated with the Ticker, if the Ticker not have any more canvas components associated, it will be deleted.
+If you remove the Canvas Component associated with the Ticker, if the Ticker not have any more canvas components associated, it will be deleted.
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
