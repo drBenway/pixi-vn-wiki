@@ -374,6 +374,8 @@ export default startLabel;
 
 ## Define assets and load them
 
+This page is under construction.
+
 This is the example:
 
 :::tabs
@@ -391,6 +393,8 @@ This is the example:
 :::
 
 ## Add a background and character images
+
+This page is under construction.
 
 This is the example:
 
@@ -410,6 +414,8 @@ This is the example:
 
 ## Use transitions
 
+This page is under construction.
+
 This is the example:
 
 :::tabs
@@ -428,4 +434,8 @@ This is the example:
 
 ## Use animations and effects or create your Ticker
 
+This page is under construction.
+
 ## Add music and sound effects
+
+This page is under construction.
