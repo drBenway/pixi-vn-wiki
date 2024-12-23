@@ -35,7 +35,7 @@ narration.callLabel(startLabel, {})
 Remember that if you execute the `narration.callLabel` inside a step, you should return the [result of first step of the called label](/start/labels.md#all-steps-result) and use `await`. The reason is that it might generate a wrong history.
 
 ```typescript
-import { narration } from '@drincs/pixi-vn'
+import { narration, newLabel } from '@drincs/pixi-vn'
 
 export const startLabel = newLabel(START_LABEL_ID,
     [
