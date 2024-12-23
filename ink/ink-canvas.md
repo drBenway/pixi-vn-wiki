@@ -16,8 +16,8 @@ Where:
   * `pause` (Only for video): Pause a video canvas element. (Read more [here](#pause-a-video-in-ink))
   * `resume` (Only for video): Resume a video canvas element. (Read more [here](#resume-a-video-in-ink))
 * `[type of the canvas element]` It is the type of the canvas element. The available types are:
-  * [`image`](/start/images.md)
-  * [`video`](/start/videos.md)
+  * [`image`](/start/canvas-images.md)
+  * [`video`](/start/canvas-videos.md)
 * `[alias]` It is the [alias of the canvas element](/start/canvas-alias.md). The alias is a string that identifies the canvas element.
   * If the alias includes spaces, you must use double quotes.
 * `[parameters]` It is the parameters of the operation. The parameters depend on the operation.
@@ -138,7 +138,7 @@ The syntax is as follows:
 
 ### Remove a canvas element with transition in *ink*
 
-If you want to remove the canvas element with a [transition](/start/transition.md), you can add after the alias of the canvas element `with [transitionType]`. 
+If you want to remove the canvas element with a [transition](/start/transition.md), you can add after the alias of the canvas element `with [transitionType]`.
 
 `#` + `remove` + `[type of the canvas element]` + `[alias]` + `with` + `[transitionType]`
 

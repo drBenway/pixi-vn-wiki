@@ -1,6 +1,6 @@
 # Videos
 
-To make adding and managing videos on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing and managing videos. `CanvasVideo` is a class that extends [`CanvasImage`](/start/images.md), all the methods and properties of [`CanvasImage`](/start/images.md) can be used with `CanvasVideo` and all functions that work with images can work with videos.
+To make adding and managing videos on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing and managing videos. `CanvasVideo` is a class that extends [`CanvasImage`](/start/canvas-images.md), all the methods and properties of [`CanvasImage`](/start/canvas-images.md) can be used with `CanvasVideo` and all functions that work with images can work with videos.
 
 ## Show Video
 
@@ -21,7 +21,7 @@ This function is a combination of the [`addVideo`](#add-video) and [`load`](#loa
 
 ## Add Video
 
-To add an video to the canvas, you can use the `addVideo` function. This function will return a `CanvasVideo` object that you can use to manipulate the video. `CanvasVideo` is a class the extends [`CanvasImage`](/start/images.md), so you can use all the methods and properties of [`CanvasImage`](/start/images.md).
+To add an video to the canvas, you can use the `addVideo` function. This function will return a `CanvasVideo` object that you can use to manipulate the video. `CanvasVideo` is a class the extends [`CanvasImage`](/start/canvas-images.md), so you can use all the methods and properties of [`CanvasImage`](/start/canvas-images.md).
 
 It is important to take into account that this function only adds the element to the canvas but does **not show it and does not load its texture**.
 
@@ -107,7 +107,7 @@ video2.load()
 
 ## Load Video Textures in Cache when a label is called
 
-It's exactly the same as [Load Image Textures in Cache when a label is called](/start/images.md#load-image-textures-in-cache-when-a-label-is-called), but with videos.
+It's exactly the same as [Load Image Textures in Cache when a label is called](/start/canvas-images.md#load-image-textures-in-cache-when-a-label-is-called), but with videos.
 
 ## Remove Video
 
