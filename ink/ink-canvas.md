@@ -194,6 +194,11 @@ temp durationVar = 3
 # shake bg duration 3
 ```
 
+## Video in *ink*
+
+::: sandbox {template=p3qgjq entry=/src/ink/start.ink,/src/utils/assets-utility.ts}
+:::
+
 ## Pause a video in *ink*
 
 To pause a video in ***ink***, you can use `pause`.
