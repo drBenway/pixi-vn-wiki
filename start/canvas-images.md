@@ -29,7 +29,7 @@ Compared to the Sprite component, ImageSprite adds the following features:
 
 The simplest and fastest method to show an image on the canvas is to use the `showImage` function. This function is a combination of the `load` and [`canvas.add`](/start/canvas-functions.md#add-canvas-components) functions.
 
-This function has the following parameters:
+This function will return a `ImageSprite`, that you can use to manipulate the image, and it has the following parameters:
 
 * `alias`: Is a [alias](/start/canvas-alias.md) for the image.
 * `imageUrl` (Optional): The URL or path of the image. If you don't provide the url, then the alias is used as the url.
