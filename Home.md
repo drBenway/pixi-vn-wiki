@@ -34,10 +34,10 @@
       * [Typewriter effect](markup-typewriter)
     * [Other features](other-narrative-features)
 * [PixiJS Canvas](canvas):
-  * [Images](canvas-images)
-  * [Video](canvas-videos)
-  * [Transitions](transition)
   * [Canvas Elements](canvas-elements)
+    * [Images](canvas-images)
+    * [Video](canvas-videos)
+  * [Transitions](transition)
   * [Animations and Effects](animations-effects)
   * [Tickers](tickers)
 * [Sounds and Music](sound)

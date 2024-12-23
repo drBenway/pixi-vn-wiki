@@ -107,10 +107,15 @@ export default defineConfig({
               text: 'PixiJS Canvas',
               link: '/start/canvas',
               items: [
-                { text: 'Images', link: '/start/canvas-images' },
-                { text: 'Video', link: '/start/canvas-videos' },
+                {
+                  text: 'Canvas Elements',
+                  link: '/start/canvas-elements',
+                  items: [
+                    { text: 'Images', link: '/start/canvas-images' },
+                    { text: 'Video', link: '/start/canvas-videos' },
+                  ]
+                },
                 { text: 'Transitions', link: '/start/transition' },
-                { text: 'Canvas Elements', link: '/start/canvas-elements' },
                 { text: 'Animations and Effects', link: '/start/animations-effects' },
                 { text: 'Tickers', link: '/start/tickers' },
               ]

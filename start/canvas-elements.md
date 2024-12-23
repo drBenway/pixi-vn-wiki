@@ -1,14 +1,3 @@
-<!-- TODO: Move in new file:
-## Add Canvas Elements
-## Get Canvas Elements
-## Remove Canvas Elements
-## Remove All Canvas Elements
-## Edit Canvas Element Alias
--->
-<!-- TODO: Move in new file:
-## Add a listener for a given event
--->
-
 # Canvas Elements
 
 Pixi’VN provides a set of canvas elements. These elements are based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine with additional features to perform save and load operations.
