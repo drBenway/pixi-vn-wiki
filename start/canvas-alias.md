@@ -16,3 +16,7 @@ import { canvas } from '@drincs/pixi-vn'
 
 canvas.editAlias('sprite1', 'sprite2')
 ```
+
+<!-- TODO ### Alias -->
+<!-- TODO **PixiJS stage alias** -->
+<!-- TODO #### Alias - Heredity factor -->

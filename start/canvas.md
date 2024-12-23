@@ -16,18 +16,13 @@ It is perfect for creating visual novels because it allows you to easily add ima
 
 Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal project. The only differences are as follows:
 
-* A new element called [CanvasImage](/start/animations-effects.md) has been added, it simplifies the process of adding images to the canvas and the ability to use transitions to add and remove images.
-* You do not have direct access to PIXI.Application, but you need to use canvas.
-* You cannot use [PixiJS Components](https://pixijs.com/8.x/guides/components/assets) and Tickers directly, but other [components](/start/canvas-elements.md) and [Tickers](/start/tickers.md) that are equivalent to PixiJS ones.
+* All the elements added in the canvas will be linked to an [alias](/start/canvas-alias.md) of your choice. This alias will be used to identify the element and to manipulate it.
+* Compared to PixiJS, Pixi’VN saves the current canvas state at each step.
+**Attention**: when saving the canvas state, only elements linked to an alias will be saved. If you added elements by directly accessing `PixiJS.Application`, they will not be considered.
+* Pixi’VN provides [various functionalities](/start/canvas-functions.md) to add, remove, find... elements in the canvas.
+* Pixi’VN provides [their components](/start/canvas-elements.md) of which some correspond to PixiJS while others are added to add some features.
+* Just like for the components, the [Tickers](/start/tickers.md) are managed by Pixi’VN. If you use a PixiJS Ticker, the Ticker state will not be saved.
 * You can't set a listener with the `on` method, but must use the [onEvent](/start/canvas-functions.md#add-a-listener-for-a-given-event) to add a listener.
-
-<!-- TODO ### Alias -->
-<!-- TODO **PixiJS stage alias** -->
-<!-- TODO #### Alias - Heredity factor -->
-<!-- TODO ### New element and not use PixiJS Components -->
-<!-- TODO ### New method to add remove and find elements -->
-<!-- TODO ### New method to add listener -->
-<!-- TODO ### access to PIXI.Application -->
 
 ## Use PixiJS DevTools with Pixi’VN
 

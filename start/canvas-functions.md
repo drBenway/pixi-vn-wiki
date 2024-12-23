@@ -127,3 +127,8 @@ button
 // Add it to the stage
 canvas.add("button", button);
 ```
+
+<!-- TODO ### New element and not use PixiJS Components -->
+<!-- TODO ### New method to add remove and find elements -->
+<!-- TODO ### New method to add listener -->
+<!-- TODO ### access to PIXI.Application -->
