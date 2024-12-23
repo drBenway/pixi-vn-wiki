@@ -1,23 +1,70 @@
-# Images
+# ImageSprite
 
-To make adding and managing images on the canvas easier than pixi.js methods, Pixi’VN it has very basic functions for showing an image.
+The `ImageSprite` component extends the [`Sprite`](/start/canvas-components#base-components) component. It is used to display images on the canvas.
+
+To initialize the `ImageSprite` component, you must pass the following parameters:
+
+* `options` (Optional): It corresponds to the `ImageSpriteOptions` interface.
+* `imageUrl` (Optional): The URL or path of the image.
+
+```ts
+import { canvas, ImageSprite } from "@drincs/pixi-vn"
+
+let alien = new ImageSprite({
+    anchor: { x: 0.5, y: 0.5 },
+    x: 100,
+    y: 100,
+}, 'https://pixijs.com/assets/eggHead.png')
+
+await alien.load()
+canvas.add("alien", alien)
+```
+
+Compared to the Sprite component, ImageSprite adds the following features:
+
+* `load()`: Load the image URL and set the resulting texture to the sprite.
+* Additional positions: [Align](/start/canvas-position.md) and [Position with percentage](/start/canvas-position.md)
 
 ## Show Image
 
-The simplest and fastest method to show an image on the canvas is to use the `showImage` function.
+The simplest and fastest method to show an image on the canvas is to use the `showImage` function. This function is a combination of the `load` and [`canvas.add`](/start/canvas-functions.md#add-canvas-components) functions.
 
 This function has the following parameters:
 
-* `alias`: Is a alias (or id) for the image. There can only be one item in the canvas with that id, if you add an image with the same alias, the previous image will be removed.
-* `imageUrl`: The URL or path of the image.
+* `alias`: Is a [alias](/start/canvas-alias.md) for the image.
+* `imageUrl` (Optional): The URL or path of the image. If you don't provide the url, then the alias is used as the url.
+* `options` (Optional): It corresponds to the `ImageSpriteOptions` interface.
 
-```typescript
-import { showImage } from '@drincs/pixi-vn'
+:::tabs
+== startLabel.ts
 
-await showImage('image1', 'path/to/image.png')
+```ts
+import { newLabel, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        let alien1 = await showImage("alien"); // [!code focus]
+        let alien2 = await showImage("alien2", "alien", { // [!code focus]
+            xAlign: 0.5, // [!code focus]
+        }); // [!code focus]
+    },
+]);
 ```
 
-This function is a combination of the [`addImage`](#add-image) and [`load`](#load-image) functions. It is very simple to use, but in cases where you want to manipulate the image before showing it, it is better to use the [`addImage`](#add-image) and [`load`](#load-image) functions separately.
+== assets-utility.ts
+
+```ts
+import { sound } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=m9q8zk entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Add Image
 
