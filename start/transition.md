@@ -1,6 +1,6 @@
 # Transition
 
-You can show and remove an [canvas element](/start/canvas-components.md) with a transition effect.
+You can show and remove an [canvas component](/start/canvas-components.md) with a transition effect.
 
 You can use the Pixi’VN built-in transitions or [create your own transitions](#create-your-own-transitions).
 
@@ -15,7 +15,7 @@ Dissolve Transition means that the image will be shown with a dissolve effect. I
 The `showWithDissolveTransition` function has the following parameters:
 
 * `alias`: The unique alias of the image. You can use this alias to refer to this image
-* `image`: The imageUrl or the canvas element. If imageUrl is a video, then the CanvasVideo is added to the canvas.
+* `image`: The imageUrl or the canvas component. If imageUrl is a video, then the CanvasVideo is added to the canvas.
 * `props`: The properties of the effect
 * `priority`: ( optional ) The priority of the effect
 
@@ -29,7 +29,7 @@ showWithDissolveTransition('image1', 'path/to/image.png', { duration: 2 })
 import { showWithDissolveTransition } from '@drincs/pixi-vn'
 
 let sprite = new CanvasSprite(yourTexture)
-// you can pass a canvas element
+// you can pass a canvas component
 showWithDissolveTransition('image1', sprite, { duration: 2 })
 ```
 
@@ -50,7 +50,7 @@ Fade Transition means that the image will be shown with a fade-in effect. If exi
 The `showWithFadeTransition` function has the following parameters:
 
 * `alias`: The unique alias of the image. You can use this alias to refer to this image
-* `image`: The imageUrl or the canvas element. If imageUrl is a video, then the CanvasVideo is added to the canvas.
+* `image`: The imageUrl or the canvas component. If imageUrl is a video, then the CanvasVideo is added to the canvas.
 * `props`: The properties of the effect
 * `priority`: ( optional ) The priority of the effect
 
@@ -64,7 +64,7 @@ showWithFadeTransition('image1', 'path/to/image.png', { duration: 2 })
 import { showWithFadeTransition } from '@drincs/pixi-vn'
 
 let sprite = new CanvasSprite(yourTexture)
-// you can pass a canvas element
+// you can pass a canvas component
 showWithFadeTransition('image1', sprite, { duration: 2 })
 ```
 
@@ -102,11 +102,11 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
     priority?: UPDATE_PRIORITY,
 ): Promise<void> {
     let oldCanvasAlias: string | undefined = undefined
-    // if exist a canvas element with the same alias, then the image is replaced and the first image is removed after the effect is done
+    // if exist a canvas component with the same alias, then the image is replaced and the first image is removed after the effect is done
     if (canvas.find(alias)) {
         oldCanvasAlias = alias + "_temp_disolve"
-        // so is necessary to change the alias of the old canvas element
-        // and remove the old canvas element after the effect is done
+        // so is necessary to change the alias of the old canvas component
+        // and remove the old canvas component after the effect is done
         canvas.editAlias(alias, oldCanvasAlias)
     }
 
@@ -126,7 +126,7 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
     let effect = new FadeAlphaTicker({
         ...props,
         type: "show",
-        // After the effect is done, the old canvas element is removed
+        // After the effect is done, the old canvas component is removed
         aliasToRemoveAfter: oldCanvasAlias,
         startOnlyIfHaveTexture: true,
     }, 10, priority)

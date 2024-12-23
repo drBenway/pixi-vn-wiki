@@ -1,11 +1,11 @@
 
 ## Add Canvas Components
 
-To add a canvas element to the game window, you can use the `canvas.add`.
+To add a canvas component to the game window, you can use the `canvas.add`.
 The `add` method have the following parameters:
 
-* `alias`: Is a alias (or id) for the canvas element. There can only be one item in the canvas with that id, if you add an canvas element with the same alias, the previous canvas element will be removed.
-* `element`: The canvas element to add.
+* `alias`: Is a alias (or id) for the canvas component. There can only be one item in the canvas with that id, if you add an canvas component with the same alias, the previous canvas component will be removed.
+* `component`: The canvas component to add.
 
 ```typescript
 import { canvas, CanvasSprite, Assets } from '@drincs/pixi-vn'
@@ -18,10 +18,10 @@ canvas.add('sprite1', sprite)
 
 ## Get Canvas Components
 
-To get a canvas element from the game window, you can use the `canvas.find`, if the element does not exist, it will return `undefined`.
+To get a canvas component from the game window, you can use the `canvas.find`, if the component does not exist, it will return `undefined`.
 The `find` method have the following parameters:
 
-* `alias`: The alias of the element to get.
+* `alias`: The alias of the component to get.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
@@ -31,10 +31,10 @@ const sprite = canvas.find<CanvasSprite>('sprite1')
 
 ## Remove Canvas Components
 
-To remove a canvas element from the game window, you can use the `canvas.remove`.
+To remove a canvas component from the game window, you can use the `canvas.remove`.
 The `remove` method have the following parameters:
 
-* `alias`: The alias of the element to remove.
+* `alias`: The alias of the component to remove.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
@@ -128,7 +128,7 @@ button
 canvas.add("button", button);
 ```
 
-<!-- TODO ### New element and not use PixiJS Components -->
+<!-- TODO ### New component and not use PixiJS Components -->
 <!-- TODO ### New method to add remove and find components -->
 <!-- TODO ### New method to add listener -->
 <!-- TODO ### access to PIXI.Application -->

@@ -16,7 +16,7 @@ It is perfect for creating visual novels because it allows you to easily add ima
 
 Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal project. The only differences are as follows:
 
-* All the components added in the canvas will be linked to an [alias](/start/canvas-alias.md) of your choice. This alias will be used to identify the element and to manipulate it.
+* All the components added in the canvas will be linked to an [alias](/start/canvas-alias.md) of your choice. This alias will be used to identify the component and to manipulate it.
 * Compared to PixiJS, Pixi’VN saves the current canvas state at each step.
 **Attention**: when saving the canvas state, only components linked to an alias will be saved. If you added components by directly accessing `PixiJS.Application`, they will not be considered.
 * Pixi’VN provides [various functionalities](/start/canvas-functions.md) to add, remove, find... components in the canvas.

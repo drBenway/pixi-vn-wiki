@@ -27,12 +27,12 @@ export default class RotateTicker extends TickerBase<{ speed?: number, clockwise
         let speed = args.speed === undefined ? 0.1 : args.speed
         let clockwise = args.clockwise === undefined ? true : args.clockwise
         aliases.forEach((alias) => {
-            let element = canvas.find(alias)
-            if (element && element instanceof Container) {
+            let component = canvas.find(alias)
+            if (component && component instanceof Container) {
                 if (clockwise)
-                    element.rotation += speed * t.deltaTime
+                    component.rotation += speed * t.deltaTime
                 else
-                    element.rotation -= speed * t.deltaTime
+                    component.rotation -= speed * t.deltaTime
             }
         })
     }
@@ -71,7 +71,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: my_speed }, 2))
 
 ## Remove association between a Ticker and a Canvas Component
 
-For unlink a Ticker from a Canvas Component you must use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the alias of the canvas element and a ticker class.
+For unlink a Ticker from a Canvas Component you must use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the alias of the canvas component and a ticker class.
 
 If the ticker not have any more canvas components associated, it will be deleted.
 
@@ -104,13 +104,13 @@ canvas.remove("alien")
 ## Run a succession of Tickers
 
 <!-- TODO 
-remove the ticker if there is no canvas element connected to it.
+remove the ticker if there is no canvas component connected to it.
 -->
 
 You can run a succession of Tickers.
 This means you can start a list of tokens, so that when one ends the next begins.
 
-For this you must use the `narration.addTickersSteps` function and pass the alias of the canvas element and an array of tickers.
+For this you must use the `narration.addTickersSteps` function and pass the alias of the canvas component and an array of tickers.
 
 ```typescript
 canvas.addTickersSteps("alien", [

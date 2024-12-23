@@ -19,9 +19,9 @@ Other components are added by Pixi’VN, such as:
 
 You can create custom components by extending the base components. It is necessary use the decorator `@canvasElementDecorator`.
 
-`@canvasElementDecorator` is a decorator that save the canvas element in memory. It have a optional parameter that is the id of the canvas element (must be unique). If you don't pass the id, the canvas element will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
+`@canvasElementDecorator` is a decorator that save the canvas component in memory. It have a optional parameter that is the id of the canvas component (must be unique). If you don't pass the id, the canvas component will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
 
-And is necessary to override the `memory` property to store the custom element properties.
+And is necessary to override the `memory` property to store the custom component properties.
 In `get memory()` is very important to return the `className` property, this property must equal to the decorator parameter or the class name if the decorator parameter is not passed.
 
 For example, you can create a `AlienTinting` class that extends the `CanvasSprite` class to manage character sprites.

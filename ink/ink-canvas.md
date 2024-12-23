@@ -1,24 +1,24 @@
 # Use canvas in *ink*
 
-The ***ink* + Pixi’VN integration** introduces the a # script that allows you to show, edit, remove and etc. a [canvas element](/start/canvas-components.md).
+The ***ink* + Pixi’VN integration** introduces the a # script that allows you to show, edit, remove and etc. a [canvas component](/start/canvas-components.md).
 
 The syntax is as follows:
 
-`#` + `[operation]` + `[type of the canvas element]` + `[alias]` + `[parameters]`
+`#` + `[operation]` + `[type of the canvas component]` + `[alias]` + `[parameters]`
 
 Where:
 
 * `#`: It is a special character used by ***ink* syntax** for use a special script.
-* `[operation]`: It is the operation that you want to execute with the canvas element. The available operations are:
-  * `show`: Show a canvas element. (Read more [here](#show-a-canvas-element-in-ink))
-  * `edit`: Edit a canvas element. (Read more [here](#edit-a-canvas-element-in-ink))
-  * `remove`: Remove a canvas element. (Read more [here](#remove-a-canvas-element-in-ink))
-  * `pause` (Only for video): Pause a video canvas element. (Read more [here](#pause-a-video-in-ink))
-  * `resume` (Only for video): Resume a video canvas element. (Read more [here](#resume-a-video-in-ink))
-* `[type of the canvas element]` It is the type of the canvas element. The available types are:
+* `[operation]`: It is the operation that you want to execute with the canvas component. The available operations are:
+  * `show`: Show a canvas component. (Read more [here](#show-a-canvas-component-in-ink))
+  * `edit`: Edit a canvas component. (Read more [here](#edit-a-canvas-component-in-ink))
+  * `remove`: Remove a canvas component. (Read more [here](#remove-a-canvas-component-in-ink))
+  * `pause` (Only for video): Pause a video canvas component. (Read more [here](#pause-a-video-in-ink))
+  * `resume` (Only for video): Resume a video canvas component. (Read more [here](#resume-a-video-in-ink))
+* `[type of the canvas component]` It is the type of the canvas component. The available types are:
   * [`image`](/start/canvas-images.md)
   * [`video`](/start/canvas-videos.md)
-* `[alias]` It is the [alias of the canvas element](/start/canvas-alias.md). The alias is a string that identifies the canvas element.
+* `[alias]` It is the [alias of the canvas component](/start/canvas-alias.md). The alias is a string that identifies the canvas component.
   * If the alias includes spaces, you must use double quotes.
 * `[parameters]` It is the parameters of the operation. The parameters depend on the operation.
   * If the parameters include spaces, you must use double quotes.
@@ -27,18 +27,18 @@ Where:
 ::: sandbox {template=rxzx5z entry=/src/ink/start.ink,/src/utils/assets-utility.ts}
 :::
 
-## Show a canvas element in *ink*
+## Show a canvas component in *ink*
 
-You can use the `show` to show a [canvas element](/start/canvas-components.md) in ***ink***.
+You can use the `show` to show a [canvas component](/start/canvas-components.md) in ***ink***.
 
 Is raccomended to [initialize the asset matrix at project start](/start/assets-management.md#initialize-the-asset-matrix-at-project-start) to use the alias of texture in `[URL/path of the image]`.
 
 The syntax is as follows:
 
-`#` + `show` + `[type of the canvas element]` + `[alias]` + `[URL/path of the image]` + `[parameters]`
+`#` + `show` + `[type of the canvas component]` + `[alias]` + `[URL/path of the image]` + `[parameters]`
 
 * `[URL/path of the image]` (Optional): It is the URL/path of the image that you want to show. If you have initialized the asset matrix at project start, you can use the alias of the texture. If you don't provide the URL/path of the image, this parameter is equal to `[alias]`. Keep in mind that to write `https://` in ***ink*** you must use `https:\/\/` because the `//` is considered a comment in ***ink***.
-* `[parameters]` (Optional): Afer the URL/path of the image, you can add the `parameters` of the [canvas element](/start/canvas-components.md) that you want to set. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
+* `[parameters]` (Optional): Afer the URL/path of the image, you can add the `parameters` of the [canvas component](/start/canvas-components.md) that you want to set. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
 :::tabs
 == start.ink
@@ -62,25 +62,25 @@ export async function defineAssets() {
 
 :::
 
-### Show a canvas element with transition in *ink*
+### Show a canvas component with transition in *ink*
 
-If you want to show the canvas element with a [transition](/start/transition.md), you can add into the parameters the `with [transitionType]`.
+If you want to show the canvas component with a [transition](/start/transition.md), you can add into the parameters the `with [transitionType]`.
 
-`#` + `show` + `[type of the canvas element]` + `[alias]` + `[URL/path of the image]` + `[parameters]` + `with` + `[transitionType]`
+`#` + `show` + `[type of the canvas component]` + `[alias]` + `[URL/path of the image]` + `[parameters]` + `with` + `[transitionType]`
 
 After the `transitionType`, you can add the `transition parameters`. the `transition parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
 The syntax is as follows:
 
-`#` + `show` + `[type of the canvas element]` + `[alias]` + `[URL/path of the image]` + `[parameters]` + `with` + `[transitionType]` + `[transition parameters]`
+`#` + `show` + `[type of the canvas component]` + `[alias]` + `[URL/path of the image]` + `[parameters]` + `with` + `[transitionType]` + `[transition parameters]`
 
 The available transitions are:
 
-* `dissolve`: The canvas element appears with a [dissolve transition](/start/transition.md#dissolve-transition). You can add all the parameters you would use in JS/TS.
-* `fade`: The canvas element appears with a [fade transition](/start/transition.md#fade-transition). You can add all the parameters you would use in JS/TS.
-* `movein`: The canvas element appears with a [movein transition](/start/transition.md#move-inout-transition). You can add all the parameters you would use in JS/TS.
-* `zoomin`: The canvas element appears with a [zoomin transition](/start/transition.md#zoom-inout-transition). You can add all the parameters you would use in JS/TS.
-* `pushin`: The canvas element appears with a [pushin transition](/start/transition.md#push-inout-transition). You can add all the parameters you would use in JS/TS.
+* `dissolve`: The canvas component appears with a [dissolve transition](/start/transition.md#dissolve-transition). You can add all the parameters you would use in JS/TS.
+* `fade`: The canvas component appears with a [fade transition](/start/transition.md#fade-transition). You can add all the parameters you would use in JS/TS.
+* `movein`: The canvas component appears with a [movein transition](/start/transition.md#move-inout-transition). You can add all the parameters you would use in JS/TS.
+* `zoomin`: The canvas component appears with a [zoomin transition](/start/transition.md#zoom-inout-transition). You can add all the parameters you would use in JS/TS.
+* `pushin`: The canvas component appears with a [pushin transition](/start/transition.md#push-inout-transition). You can add all the parameters you would use in JS/TS.
 
 :::tabs
 == start.ink
@@ -109,13 +109,13 @@ export async function defineAssets() {
 
 :::
 
-## Edit a canvas element in *ink*
+## Edit a canvas component in *ink*
 
-You can use the `edit` to edit a [canvas element](/start/canvas-components.md) in ***ink***.
+You can use the `edit` to edit a [canvas component](/start/canvas-components.md) in ***ink***.
 
 The syntax is as follows:
 
-`#` + `edit` + `[type of the canvas element]` + `[alias]` + `[parameters]`
+`#` + `edit` + `[type of the canvas component]` + `[alias]` + `[parameters]`
 
 * `[parameters]`: In the `parameters` you must include the properties that you want to edit. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
@@ -123,38 +123,38 @@ The syntax is as follows:
 # edit image bg position \{ "x": 20, "y": 30 \} visible true  cursor "pointer" alpha 0.5 
 ```
 
-## Remove a canvas element in *ink*
+## Remove a canvas component in *ink*
 
-You can use the `remove` to remove a [canvas element](/start/canvas-components.md) in ***ink***.
+You can use the `remove` to remove a [canvas component](/start/canvas-components.md) in ***ink***.
 
 The syntax is as follows:
 
-`#` + `remove` + `[type of the canvas element]` + `[alias]`
+`#` + `remove` + `[type of the canvas component]` + `[alias]`
 
 ```ink
 # remove image bg
 # remove image "bg 2"
 ```
 
-### Remove a canvas element with transition in *ink*
+### Remove a canvas component with transition in *ink*
 
-If you want to remove the canvas element with a [transition](/start/transition.md), you can add after the alias of the canvas element `with [transitionType]`.
+If you want to remove the canvas component with a [transition](/start/transition.md), you can add after the alias of the canvas component `with [transitionType]`.
 
-`#` + `remove` + `[type of the canvas element]` + `[alias]` + `with` + `[transitionType]`
+`#` + `remove` + `[type of the canvas component]` + `[alias]` + `with` + `[transitionType]`
 
 After the `transitionType`, you can add the `transition parameters`. the `transition parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
 The syntax is as follows:
 
-`#` + `remove` + `[type of the canvas element]` + `[alias]` + `with` + `[transitionType]` + `[transition parameters]`
+`#` + `remove` + `[type of the canvas component]` + `[alias]` + `with` + `[transitionType]` + `[transition parameters]`
 
 The available transitions are:
 
-* `dissolve`: The canvas element disappears with a [dissolve transition](/start/transition.md#dissolve-transition). You can add all the parameters you would use in JS/TS.
-* `fade`: The canvas element disappears with a [fade transition](/start/transition.md#fade-transition). You can add all the parameters you would use in JS/TS.
-* `moveout`: The canvas element disappears with a [moveout transition](/start/transition.md#move-inout-transition). You can add all the parameters you would use in JS/TS.
-* `zoomout`: The canvas element disappears with a [zoomout transition](/start/transition.md#zoom-inout-transition). You can add all the parameters you would use in JS/TS.
-* `pushout`: The canvas element disappears with a [pushout transition](/start/transition.md#push-inout-transition). You can add all the parameters you would use in JS/TS.
+* `dissolve`: The canvas component disappears with a [dissolve transition](/start/transition.md#dissolve-transition). You can add all the parameters you would use in JS/TS.
+* `fade`: The canvas component disappears with a [fade transition](/start/transition.md#fade-transition). You can add all the parameters you would use in JS/TS.
+* `moveout`: The canvas component disappears with a [moveout transition](/start/transition.md#move-inout-transition). You can add all the parameters you would use in JS/TS.
+* `zoomout`: The canvas component disappears with a [zoomout transition](/start/transition.md#zoom-inout-transition). You can add all the parameters you would use in JS/TS.
+* `pushout`: The canvas component disappears with a [pushout transition](/start/transition.md#push-inout-transition). You can add all the parameters you would use in JS/TS.
 
 ```ink
 # remove image bg with dissolve duration 3

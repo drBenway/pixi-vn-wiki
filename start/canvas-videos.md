@@ -23,7 +23,7 @@ This function is a combination of the [`addVideo`](#add-video) and [`load`](#loa
 
 To add an video to the canvas, you can use the `addVideo` function. This function will return a `CanvasVideo` object that you can use to manipulate the video. `CanvasVideo` is a class the extends [`CanvasImage`](/start/canvas-images.md), so you can use all the methods and properties of [`CanvasImage`](/start/canvas-images.md).
 
-It is important to take into account that this function only adds the element to the canvas but does **not show it and does not load its texture**.
+It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**.
 
 `addVideo` function has the following parameters:
 
