@@ -1,6 +1,6 @@
 # Tickers
 
-The [PixiJS Ticker](https://pixijs.com/8.x/examples/basic/tinting) is a class that manages the update loop. It is used to animate the canvas elements.
+The [PixiJS Ticker](https://pixijs.com/8.x/examples/basic/tinting) is a class that manages the update loop. It is used to animate the canvas components.
 
 In Pixi’VN, you can use the Ticker, but through functions of the `canvas` class.
 The reason is that this way I can keep track of the Tickers and delete those that are no longer used.
@@ -57,7 +57,7 @@ canvas.add("alien", alien);
 canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 ```
 
-If a ticket needs to update multiple canvas elements, you can pass an array of aliases to the `addTicker` function.
+If a ticket needs to update multiple canvas components, you can pass an array of aliases to the `addTicker` function.
 
 ```typescript
 canvas.addTicker(["alien", "alien2"], new RotateTicker({ speed: my_speed }))
@@ -73,7 +73,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: my_speed }, 2))
 
 For unlink a Ticker from a Canvas Element you must use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the alias of the canvas element and a ticker class.
 
-If the ticker not have any more canvas elements associated, it will be deleted.
+If the ticker not have any more canvas components associated, it will be deleted.
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
@@ -87,7 +87,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 canvas.removeAssociationBetweenTickerCanvasElement("alien", RotateTicker)
 ```
 
-If you remove the Canvas Element associated with the Ticker, if the Ticker not have any more canvas elements associated, it will be deleted.
+If you remove the Canvas Element associated with the Ticker, if the Ticker not have any more canvas components associated, it will be deleted.
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');

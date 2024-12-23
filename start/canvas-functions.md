@@ -44,7 +44,7 @@ canvas.remove('sprite1')
 
 ## Remove All Canvas Elements
 
-To remove all canvas elements from the game window, you can use the `canvas.remove`.
+To remove all canvas components from the game window, you can use the `canvas.remove`.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
@@ -54,7 +54,7 @@ canvas.removeAll()
 
 ## Add a listener for a given event
 
-**Note that**: It is suggested to try to add events to the [UI](/start/interface) and not add it to the canvas elements.
+**Note that**: It is suggested to try to add events to the [UI](/start/interface) and not add it to the canvas components.
 
 In Pixi’VN compared to PixiJS you can't set a [listener with the `on` method](https://pixijs.com/8.x/examples/events/click), because it is not possible to save the listeners in the memory for the save and load operations.
 
@@ -129,6 +129,6 @@ canvas.add("button", button);
 ```
 
 <!-- TODO ### New element and not use PixiJS Components -->
-<!-- TODO ### New method to add remove and find elements -->
+<!-- TODO ### New method to add remove and find components -->
 <!-- TODO ### New method to add listener -->
 <!-- TODO ### access to PIXI.Application -->

@@ -1,23 +1,23 @@
 # Canvas Elements
 
-Pixi’VN provides a set of canvas elements. These elements are based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine with additional features to perform save and load operations.
+Pixi’VN provides a set of canvas components. These components are based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine with additional features to perform save and load operations.
 
 ## Base Elements
 
-Currently the base canvas elements are:
+Currently the base canvas components are:
 
 * `CanvasSprite` is a class that extends the [PIXI.Sprite](https://pixijs.com/8.x/examples/sprite/basic) class.
 * `CanvasContainer` is a class that extends the [PIXI.Container](https://pixijs.com/8.x/examples/basic/container) class.
 * `CanvasText` is a class that extends the [PIXI.Text](https://pixijs.com/8.x/examples/text/pixi-text) class.
 
-Other elements are added by Pixi’VN, such as:
+Other components are added by Pixi’VN, such as:
 
 * [CanvasImage](/start/canvas-images.md) is a class that extends the `CanvasSprite` class.
 * [CanvasVideo](/start/canvas-videos.md) is a class that extends the `CanvasImage` class.
 
 ## Custom Elements
 
-You can create custom elements by extending the base elements. It is necessary use the decorator `@canvasElementDecorator`.
+You can create custom components by extending the base components. It is necessary use the decorator `@canvasElementDecorator`.
 
 `@canvasElementDecorator` is a decorator that save the canvas element in memory. It have a optional parameter that is the id of the canvas element (must be unique). If you don't pass the id, the canvas element will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
 

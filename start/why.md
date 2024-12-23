@@ -107,7 +107,7 @@ You can try some Ren'py and PIxiJS games to understand the difference:
 
 In Ren'Py, for creating the UI, you need to create screens and styles. The most recommended implementation is to create a series of images that are positioned within the canvas across graphic objects. The graphic tools are very few, limiting and not very intuitive.
 
-In Pixi’VN, in addition to being able to use the elements of PixiJS, you can also use systems such as React, Vue, Angular, etc. and install component libraries such as Material-UI, Bootstrap, etc. This allows you to create much more complex UI screens with excellent performance.
+In Pixi’VN, in addition to being able to use the components of PixiJS, you can also use systems such as React, Vue, Angular, etc. and install component libraries such as Material-UI, Bootstrap, etc. This allows you to create much more complex UI screens with excellent performance.
 
 ### Performance and project size
 

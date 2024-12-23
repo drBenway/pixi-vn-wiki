@@ -18,9 +18,9 @@ UI and canvas are two different things. The UI is above the canvas and is used t
 
 All canvas information is included in saves and Pixi’VN manages going back and forth between the different steps. The UI is not included in the saves and is not managed by Pixi’VN, so you have to [manage it yourself saving information](/start/interface-connect-storage.md) you care about in [game storage](/start/storage.md) or browser storage.
 
-In the canvas you can add elements during each step. In the UI you can't do that, you can create several ["screens" and navigate between them](/start/interface-connect-storage.md).
+In the canvas you can add components during each step. In the UI you can't do that, you can create several ["screens" and navigate between them](/start/interface-connect-storage.md).
 
-In the canvas you can only add PixiJS elements, they are usually composed of images and are very simple. In the UI you can add any HTML element or use any UI component library, so you can create much more complex interfaces.
+In the canvas you can only add PixiJS components, they are usually composed of images and are very simple. In the UI you can add any HTML element or use any UI component library, so you can create much more complex interfaces.
 
 ## How to enable UI interaction?
 

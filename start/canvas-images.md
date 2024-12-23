@@ -21,7 +21,7 @@ This function is a combination of the [`addImage`](#add-image) and [`load`](#loa
 
 ## Add Image
 
-To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/start/canvas-components#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/start/canvas-components#base-elements).
+To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/start/canvas-components#base-components), so you can use all the methods and properties of [`CanvasSprite`](/start/canvas-components#base-components).
 
 It is important to take into account that this function only adds the element to the canvas but does **not show it and does not load its texture**.
 
