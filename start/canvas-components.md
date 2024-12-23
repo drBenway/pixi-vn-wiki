@@ -6,9 +6,9 @@ Pixi’VN provides a set of canvas components. These components are based on [Pi
 
 Currently the base canvas components are:
 
-* `CanvasSprite` is a class that extends the [PIXI.Sprite](https://pixijs.com/8.x/examples/sprite/basic) class.
-* `CanvasContainer` is a class that extends the [PIXI.Container](https://pixijs.com/8.x/examples/basic/container) class.
-* `CanvasText` is a class that extends the [PIXI.Text](https://pixijs.com/8.x/examples/text/pixi-text) class.
+* `Sprite` corresponds to the component [PixiJS.Sprite](https://pixijs.com/8.x/examples/sprite/basic).
+* `Container` corresponds to the component [PixiJS.Container](https://pixijs.com/8.x/examples/basic/container).
+* `Text` corresponds to the component [PixiJS.Text](https://pixijs.com/8.x/examples/text/pixi-text).
 
 Other components are added by Pixi’VN, such as:
 
