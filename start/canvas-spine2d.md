@@ -16,7 +16,12 @@ You should create a library that allows you to use this component in Pixi'VN (co
 
 
 
-**What is [Spine 2D](https://it.esotericsoftware.com/)?**
+**What is [Spine 2D](https://it.esotericsoftware.com/)?** Spine 2D is a powerful 2D animation software specifically designed for game development. It utilizes a skeletal animation system, meaning that characters and objects are animated using a hierarchy of "bones" that control the movement of attached parts.
+
+
+
+
+
 
 Having the ability to use elements with advanced animations can be very useful in many cases.
 
