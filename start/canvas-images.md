@@ -71,7 +71,7 @@ export async function defineAssets() {
 
 ## Add image
 
-To add an image to the canvas, you can use the `addImage` function. It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**. This function use [`canvas.add`](/start/canvas-functions.md#add-canvas-components) function to add the image to the canvas.
+To add an image to the canvas, you can use the `addImage` function. It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**. This function use [`canvas.add`](/start/canvas-functions.md#add-canvas-components) to add the image to the canvas.
 
 This function will return a `ImageSprite`, that you can use to manipulate the image, and it has the following parameters:
 
