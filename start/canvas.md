@@ -16,7 +16,7 @@ Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal proje
 
 * All the components added in the canvas will be linked to an [alias](/start/canvas-alias.md) of your choice. This alias will be used to identify the component and to manipulate it.
 * Compared to PixiJS, Pixi’VN saves the current canvas state at each step.
-**Attention**: when saving the canvas state, only components linked to an alias will be saved. If you added components by directly accessing `PixiJS.Application`, they will not be considered.
+**Attention**: when saving the canvas state, only components linked to an alias will be saved (if you added components by directly accessing `PixiJS.Application`, they will not be considered).
 * Pixi’VN provides [various functionalities](/start/canvas-functions.md) to add, remove, find... components in the canvas.
 * Pixi’VN provides [their components](/start/canvas-components.md) of which some correspond to PixiJS while others are added to add some features.
 * Just like for the components, the [Tickers](/start/tickers.md) are managed by Pixi’VN. If you use a PixiJS Ticker, the Ticker state will not be saved.
