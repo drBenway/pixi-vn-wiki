@@ -1,8 +1,8 @@
-# canvas-alias
+# Canvas alias
 
 This page is under construction.
 
-## Edit Canvas Element Alias
+## Edit canvas element alias
 
 To edit the alias of a canvas element, you can use the `canvas.editAlias`.
 

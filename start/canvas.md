@@ -12,7 +12,7 @@ PixiJS is a powerful tool for creating games and interactive experiences. It is 
 
 It is perfect for creating visual novels because it allows you to easily add images, text, and animations to the canvas.
 
-## How use PixiJS in Pixi’VN?
+## Differences between Pixi’VN and PixiJS
 
 Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal project. The only differences are as follows:
 
