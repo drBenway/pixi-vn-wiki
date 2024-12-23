@@ -72,6 +72,8 @@ Dialogue glue is a feature originally created for ***ink***, which was also intr
 When "glue" is enabled the next dialogue will be added after the current dialogue.
 
 ```typescript
+import { narration, newLabel } from "@drincs/pixi-vn";
+
 const startLabel = newLabel("start", [
     () => {
         narration.dialogue = `Hello, my name is Alice and ...`
@@ -83,7 +85,8 @@ const startLabel = newLabel("start", [
 ])
 ```
 
-<!-- TODO sandbox example -->
+::: sandbox {template=ctn72c entry=/src/labels/startLabel.ts}
+:::
 
 ## How to create the narrative dialogue UI screen
 

@@ -186,8 +186,8 @@ export default defineConfig({
                 { text: 'Canvas', link: '/ink/ink-canvas' },
                 { text: 'Sounds and Music', link: '/ink/ink-sound' },
                 { text: 'Pause', link: '/ink/ink-pause' },
-                { text: 'Translating', link: '/ink/ink-translate' },
                 { text: 'Text replacement', link: '/ink/ink-replacement' },
+                { text: 'Translating', link: '/ink/ink-translate' },
                 { text: 'Custom Hashtag Script', link: '/ink/ink-hashtag' },
               ]
             },
