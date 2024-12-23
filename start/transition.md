@@ -1,6 +1,6 @@
 # Transition
 
-You can show and remove an [canvas element](/start/canvas-elements.md) with a transition effect.
+You can show and remove an [canvas element](/start/canvas-components.md) with a transition effect.
 
 You can use the Pixi’VN built-in transitions or [create your own transitions](#create-your-own-transitions).
 

@@ -35,7 +35,7 @@
     * [Other features](other-narrative-features)
 * [PixiJS Canvas](canvas):
   * [Canvas alias](canvas-alias)
-  * [Canvas Elements](canvas-elements)
+  * [Canvas Elements](canvas-components)
     * [Images](canvas-images)
     * [Video](canvas-videos)
   * [Position properties](canvas-position)

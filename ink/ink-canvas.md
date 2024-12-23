@@ -1,6 +1,6 @@
 # Use canvas in *ink*
 
-The ***ink* + Pixi’VN integration** introduces the a # script that allows you to show, edit, remove and etc. a [canvas element](/start/canvas-elements.md).
+The ***ink* + Pixi’VN integration** introduces the a # script that allows you to show, edit, remove and etc. a [canvas element](/start/canvas-components.md).
 
 The syntax is as follows:
 
@@ -29,7 +29,7 @@ Where:
 
 ## Show a canvas element in *ink*
 
-You can use the `show` to show a [canvas element](/start/canvas-elements.md) in ***ink***.
+You can use the `show` to show a [canvas element](/start/canvas-components.md) in ***ink***.
 
 Is raccomended to [initialize the asset matrix at project start](/start/assets-management.md#initialize-the-asset-matrix-at-project-start) to use the alias of texture in `[URL/path of the image]`.
 
@@ -38,7 +38,7 @@ The syntax is as follows:
 `#` + `show` + `[type of the canvas element]` + `[alias]` + `[URL/path of the image]` + `[parameters]`
 
 * `[URL/path of the image]` (Optional): It is the URL/path of the image that you want to show. If you have initialized the asset matrix at project start, you can use the alias of the texture. If you don't provide the URL/path of the image, this parameter is equal to `[alias]`. Keep in mind that to write `https://` in ***ink*** you must use `https:\/\/` because the `//` is considered a comment in ***ink***.
-* `[parameters]` (Optional): Afer the URL/path of the image, you can add the `parameters` of the [canvas element](/start/canvas-elements.md) that you want to set. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
+* `[parameters]` (Optional): Afer the URL/path of the image, you can add the `parameters` of the [canvas element](/start/canvas-components.md) that you want to set. The `parameters` must be set as follows: `parameterName` + `SPACE` + `value`. If the `value` is a string and includes spaces, you must use double quotes.
 
 :::tabs
 == start.ink
@@ -111,7 +111,7 @@ export async function defineAssets() {
 
 ## Edit a canvas element in *ink*
 
-You can use the `edit` to edit a [canvas element](/start/canvas-elements.md) in ***ink***.
+You can use the `edit` to edit a [canvas element](/start/canvas-components.md) in ***ink***.
 
 The syntax is as follows:
 
@@ -125,7 +125,7 @@ The syntax is as follows:
 
 ## Remove a canvas element in *ink*
 
-You can use the `remove` to remove a [canvas element](/start/canvas-elements.md) in ***ink***.
+You can use the `remove` to remove a [canvas element](/start/canvas-components.md) in ***ink***.
 
 The syntax is as follows:
 

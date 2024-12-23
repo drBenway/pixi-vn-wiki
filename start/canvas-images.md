@@ -21,7 +21,7 @@ This function is a combination of the [`addImage`](#add-image) and [`load`](#loa
 
 ## Add Image
 
-To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/start/canvas-elements#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/start/canvas-elements#base-elements).
+To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/start/canvas-components#base-elements), so you can use all the methods and properties of [`CanvasSprite`](/start/canvas-components#base-elements).
 
 It is important to take into account that this function only adds the element to the canvas but does **not show it and does not load its texture**.
 
@@ -36,7 +36,7 @@ import { addImage } from '@drincs/pixi-vn'
 const image = addImage('image1', 'path/to/image.png')
 ```
 
-If you want initialize the image before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-functions.md#add-canvas-elements)function.
+If you want initialize the image before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-functions.md#add-canvas-components)function.
 
 ```typescript
 import { canvas, CanvasImage } from '@drincs/pixi-vn'
@@ -135,4 +135,4 @@ export const startLabel = newLabel("StartLabel", [
 
 ## Remove Image
 
-As for the Canvas Elements, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-elements) function.
+As for the Canvas Elements, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-components) function.
