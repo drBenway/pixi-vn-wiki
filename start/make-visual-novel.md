@@ -216,6 +216,10 @@ const secondPart = newLabel("second_part", [
 
 :::
 
+## Choice Menus
+
+This page is under construction.
+
 ## Edit character information and use it as variables
 
 Now I give the player the opportunity to choose the name of the `mc`.
