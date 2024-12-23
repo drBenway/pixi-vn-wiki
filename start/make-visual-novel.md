@@ -10,6 +10,15 @@ Since Pixi’VN gives you the ability to write your [narration in different type
 
 The first step is to create a new project. You can find more information on how to create a new project starting from a template [here](/start/getting-started.md#project-initialization). We will use the "Visual Novel - React Template".
 
+After the creation is complete, it is very important to read the `README.md` file that is in the root of the project. This file contains important information about the project and how to use it.
+
+In our case, to start the project we will simply need to execute the following commands:
+
+```bash
+npm install
+npm start
+```
+
 ## Character creation
 
 Now we will define the characters of this story. To do this we will define in the `/values/characters.ts` file the characters that we will be using. For more information on how to create and use characters you can consult: [Characters](/start/character.md) & [Use the characters in *ink*](/ink/ink-character.md)
