@@ -111,7 +111,7 @@ It's exactly the same as [Load Image Textures in Cache when a label is called](/
 
 ## Remove Video
 
-As for the Canvas Elements, you can remove an video from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-components) function.
+As for the Canvas Components, you can remove an video from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-components) function.
 
 ## Play and Pause Video
 

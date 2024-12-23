@@ -109,7 +109,7 @@ export default defineConfig({
               items: [
                 { text: 'Canvas alias', link: '/start/canvas-alias' },
                 {
-                  text: 'Canvas Elements',
+                  text: 'Canvas Components',
                   link: '/start/canvas-components',
                   items: [
                     { text: 'Images', link: '/start/canvas-images' },

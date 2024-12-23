@@ -1,5 +1,5 @@
 
-## Add Canvas Elements
+## Add Canvas Components
 
 To add a canvas element to the game window, you can use the `canvas.add`.
 The `add` method have the following parameters:
@@ -16,7 +16,7 @@ sprite.texture = texture
 canvas.add('sprite1', sprite)
 ```
 
-## Get Canvas Elements
+## Get Canvas Components
 
 To get a canvas element from the game window, you can use the `canvas.find`, if the element does not exist, it will return `undefined`.
 The `find` method have the following parameters:
@@ -29,7 +29,7 @@ import { canvas } from '@drincs/pixi-vn'
 const sprite = canvas.find<CanvasSprite>('sprite1')
 ```
 
-## Remove Canvas Elements
+## Remove Canvas Components
 
 To remove a canvas element from the game window, you can use the `canvas.remove`.
 The `remove` method have the following parameters:
@@ -42,7 +42,7 @@ import { canvas } from '@drincs/pixi-vn'
 canvas.remove('sprite1')
 ```
 
-## Remove All Canvas Elements
+## Remove All Canvas Components
 
 To remove all canvas components from the game window, you can use the `canvas.remove`.
 

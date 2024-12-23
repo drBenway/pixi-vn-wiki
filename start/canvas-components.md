@@ -1,8 +1,8 @@
-# Canvas Elements
+# Canvas Components
 
 Pixi’VN provides a set of canvas components. These components are based on [Pixi.js](https://pixijs.com/), a modern 2D rendering engine with additional features to perform save and load operations.
 
-## Base Elements
+## Base Components
 
 Currently the base canvas components are:
 
@@ -15,7 +15,7 @@ Other components are added by Pixi’VN, such as:
 * [CanvasImage](/start/canvas-images.md) is a class that extends the `CanvasSprite` class.
 * [CanvasVideo](/start/canvas-videos.md) is a class that extends the `CanvasImage` class.
 
-## Custom Elements
+## Custom Components
 
 You can create custom components by extending the base components. It is necessary use the decorator `@canvasElementDecorator`.
 
