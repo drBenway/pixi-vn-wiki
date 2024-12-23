@@ -114,6 +114,9 @@ export default defineConfig({
                   items: [
                     { text: 'Images', link: '/start/canvas-images' },
                     { text: 'Video', link: '/start/canvas-videos' },
+                    { text: 'Filters', link: '/start/canvas-filters' },
+                    { text: 'Lights', link: '/start/canvas-lights' },
+                    { text: 'Spine 2D', link: '/start/canvas-spine2d' },
                   ]
                 },
                 { text: 'Position properties', link: '/start/canvas-position' },
