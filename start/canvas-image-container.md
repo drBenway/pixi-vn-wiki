@@ -1,26 +1,30 @@
-# ImageSprite
+# ImageContainer
 
-The `ImageSprite` component extends the [`Sprite`](/start/canvas-components#base-components) component, so you can use all the methods and properties of `Sprite`. It is used to display a single image on the canvas.
+The `ImageContainer` component extends the [`Container`](/start/canvas-components#base-components) component, so you can use all the methods and properties of `Container`. It is used to display multiple images on the canvas as if it were a single element.
 
-To initialize the `ImageSprite` component, you must pass the following parameters:
+To initialize the `ImageContainer` component, you must pass the following parameters:
 
-* `options` (Optional): It corresponds to the `ImageSpriteOptions` interface.
-* `imageUrl` (Optional): The URL or path of the image.
+* `options` (Optional): It corresponds to the `ImageContainerOptions<ImageSprite>` interface.
+* `imageUrls` (Optional): The array of URLs or paths of the images.
 
 ```ts
-import { canvas, ImageSprite } from "@drincs/pixi-vn"
+import { canvas, ImageContainer } from "@drincs/pixi-vn"
 
-let alien = new ImageSprite({
+let james = new ImageContainer({
     anchor: { x: 0.5, y: 0.5 },
     x: 100,
     y: 100,
-}, 'https://pixijs.com/assets/eggHead.png')
+}, [
+    'https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm01%2Ffm01-body.webp?alt=media',
+    'https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm01%2Ffm01-eyes-smile.webp?alt=media',
+    'https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm01%2Ffm01-mouth-smile00.webp?alt=media',
+])
 
-await alien.load()
-canvas.add("alien", alien)
+await james.load()
+canvas.add("james", james)
 ```
 
-Compared to the Sprite component, ImageSprite adds the following features:
+Compared to the Sprite component, ImageContainer adds the following features:
 
 * `load()`: Load the image URL and set the resulting texture to the sprite.
 * Additional positions: [Align](/start/canvas-position.md) and [Position with percentage](/start/canvas-position.md)
@@ -29,11 +33,11 @@ Compared to the Sprite component, ImageSprite adds the following features:
 
 The simplest and fastest method to show an image on the canvas is to use the `showImage` function. This function is a combination of the `load` and [`canvas.add`](/start/canvas-functions.md#add-canvas-components) functions.
 
-This function will return a `ImageSprite`, that you can use to manipulate the image, and it has the following parameters:
+This function will return a `ImageContainer`, that you can use to manipulate the image, and it has the following parameters:
 
 * `alias`: Is a [alias](/start/canvas-alias.md) for the image.
 * `imageUrl` (Optional): The URL or path of the image. If you don't provide the url, then the alias is used as the url.
-* `options` (Optional): It corresponds to the `ImageSpriteOptions` interface.
+* `options` (Optional): It corresponds to the `ImageContainerOptions<ImageSprite>` interface.
 
 :::tabs
 == startLabel.ts
@@ -73,17 +77,17 @@ export async function defineAssets() {
 
 To add an image to the canvas, you can use the `addImage` function. It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**. This function use [`canvas.add`](/start/canvas-functions.md#add-canvas-components) functions to add the image to the canvas.
 
-This function will return a `ImageSprite`, that you can use to manipulate the image, and it has the following parameters:
+This function will return a `ImageContainer`, that you can use to manipulate the image, and it has the following parameters:
 
 * `alias`: Is a [alias](/start/canvas-alias.md) for the image.
 * `imageUrl` (Optional): The URL or path of the image. If you don't provide the url, then the alias is used as the url.
-* `options` (Optional): It corresponds to the `ImageSpriteOptions` interface.
+* `options` (Optional): It corresponds to the `ImageContainerOptions<ImageSprite>` interface.
 
 :::tabs
 == startLabel.ts
 
 ```ts
-import { addImage, canvas, ImageSprite, newLabel } from "@drincs/pixi-vn";
+import { addImage, canvas, ImageContainer, newLabel } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
     () => {
@@ -96,9 +100,9 @@ export const startLabel = newLabel("start_label", [
         }); // [!code focus]
     },
     async () => {
-        let alien1 = canvas.find<ImageSprite>("alien");
-        let alien2 = canvas.find<ImageSprite>("alien2");
-        let alien3 = canvas.find<ImageSprite>("alien3");
+        let alien1 = canvas.find<ImageContainer>("alien");
+        let alien2 = canvas.find<ImageContainer>("alien2");
+        let alien3 = canvas.find<ImageContainer>("alien3");
         // Load the textures
         alien1 && (await alien1.load());
         alien2 && (await alien2.load());
