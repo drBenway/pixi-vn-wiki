@@ -21,7 +21,7 @@ This function is a combination of the [`addImage`](#add-image) and [`load`](#loa
 
 ## Add Image
 
-To add an image to the canvas, you can use the `addImage` function. This function will return a `CanvasImage` object that you can use to manipulate the image. `CanvasImage` is a class the extends [`CanvasSprite`](/start/canvas-components#base-components), so you can use all the methods and properties of [`CanvasSprite`](/start/canvas-components#base-components).
+To add an image to the canvas, you can use the `addImage` function. This function will return a `ImageSprite` object that you can use to manipulate the image. `ImageSprite` is a class the extends [`Sprite`](/start/canvas-components#base-components), so you can use all the methods and properties of [`Sprite`](/start/canvas-components#base-components).
 
 It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**.
 
@@ -39,9 +39,9 @@ const image = addImage('image1', 'path/to/image.png')
 If you want initialize the image before and then add it to the canvas, you can use the [`canvas.add`](/start/canvas-functions.md#add-canvas-components)function.
 
 ```typescript
-import { canvas, CanvasImage } from '@drincs/pixi-vn'
+import { canvas, ImageSprite } from '@drincs/pixi-vn'
 
-let alien = new CanvasImage({
+let alien = new ImageSprite({
     anchor: { x: 0.5, y: 0.5 },
     x: 100,
     y: 100,
@@ -52,7 +52,7 @@ canvas.add("alien", alien)
 
 ## Load Image
 
-After adding the image, you can load the texture and show it on the canvas using the `CanvasImage.load` method.
+After adding the image, you can load the texture and show it on the canvas using the `ImageSprite.load` method.
 
 This method is asynchronous, so:
 
@@ -66,7 +66,7 @@ const image = addImage('image1', 'path/to/image.png')
 await image.load()
 ```
 
-In some cases you may need to ensure that multiple images are displayed at the same time. In this case, you can use the `loadImage` function to load a array of `CanvasImage`.
+In some cases you may need to ensure that multiple images are displayed at the same time. In this case, you can use the `loadImage` function to load a array of `ImageSprite`.
 
 ```typescript
 import { addImage, loadImage } from '@drincs/pixi-vn'

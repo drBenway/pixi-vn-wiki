@@ -15,7 +15,7 @@ Dissolve Transition means that the image will be shown with a dissolve effect. I
 The `showWithDissolveTransition` function has the following parameters:
 
 * `alias`: The unique alias of the image. You can use this alias to refer to this image
-* `image`: The imageUrl or the canvas component. If imageUrl is a video, then the CanvasVideo is added to the canvas.
+* `image`: The imageUrl or the canvas component. If imageUrl is a video, then the VideoSprite is added to the canvas.
 * `props`: The properties of the effect
 * `priority`: ( optional ) The priority of the effect
 
@@ -28,7 +28,7 @@ showWithDissolveTransition('image1', 'path/to/image.png', { duration: 2 })
 ```typescript
 import { showWithDissolveTransition } from '@drincs/pixi-vn'
 
-let sprite = new CanvasSprite(yourTexture)
+let sprite = new Sprite(yourTexture)
 // you can pass a canvas component
 showWithDissolveTransition('image1', sprite, { duration: 2 })
 ```
@@ -50,7 +50,7 @@ Fade Transition means that the image will be shown with a fade-in effect. If exi
 The `showWithFadeTransition` function has the following parameters:
 
 * `alias`: The unique alias of the image. You can use this alias to refer to this image
-* `image`: The imageUrl or the canvas component. If imageUrl is a video, then the CanvasVideo is added to the canvas.
+* `image`: The imageUrl or the canvas component. If imageUrl is a video, then the VideoSprite is added to the canvas.
 * `props`: The properties of the effect
 * `priority`: ( optional ) The priority of the effect
 
@@ -63,7 +63,7 @@ showWithFadeTransition('image1', 'path/to/image.png', { duration: 2 })
 ```typescript
 import { showWithFadeTransition } from '@drincs/pixi-vn'
 
-let sprite = new CanvasSprite(yourTexture)
+let sprite = new Sprite(yourTexture)
 // you can pass a canvas component
 showWithFadeTransition('image1', sprite, { duration: 2 })
 ```
@@ -118,7 +118,7 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
         canvasElement = image
         canvas.add(alias, canvasElement)
     }
-    if (canvasElement instanceof CanvasImage && canvasElement.texture?.label == "EMPTY") {
+    if (canvasElement instanceof ImageSprite && canvasElement.texture?.label == "EMPTY") {
         await canvasElement.load()
     }
     canvasElement.alpha = 0

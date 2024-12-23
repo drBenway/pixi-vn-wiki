@@ -51,7 +51,7 @@ You can run multiple addTicker with the same alias and different tickerClasses.
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
-const alien = CanvasSprite.from(texture);
+const alien = Sprite.from(texture);
 canvas.add("alien", alien);
 
 canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
@@ -77,7 +77,7 @@ If the ticker not have any more canvas components associated, it will be deleted
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
-const alien = CanvasSprite.from(texture);
+const alien = Sprite.from(texture);
 canvas.add("alien", alien);
 
 canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
@@ -91,7 +91,7 @@ If you remove the Canvas Component associated with the Ticker, if the Ticker not
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
-const alien = CanvasSprite.from(texture);
+const alien = Sprite.from(texture);
 canvas.add("alien", alien);
 
 canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))

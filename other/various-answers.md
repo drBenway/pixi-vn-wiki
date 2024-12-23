@@ -46,7 +46,7 @@ export const startLabel = newLabel(START_LABEL_ID,
             showWithDissolveTransition("alien", 'https://pixijs.com/assets/eggHead.png', 0.01)
         },
         () => {
-            let alien = canvas.find<CanvasImage>("alien")
+            let alien = canvas.find<ImageSprite>("alien")
             if (alien) alien.alpha = 1
         },
     ]

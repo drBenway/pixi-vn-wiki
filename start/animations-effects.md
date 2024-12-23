@@ -38,7 +38,7 @@ for example:
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
-const alien = CanvasSprite.from(texture);
+const alien = Sprite.from(texture);
 alien.anchor.set(0.5);
 canvas.add("alien", alien);
 
@@ -48,7 +48,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: 0.2 }));
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
-const alien = CanvasSprite.from(texture);
+const alien = Sprite.from(texture);
 alien.anchor.set(0.5);
 canvas.add("alien", alien);
 
@@ -58,7 +58,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: 0.2, clockwise: false }, 2))
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
-const alien = CanvasSprite.from(texture);
+const alien = Sprite.from(texture);
 alien.anchor.set(0.5);
 canvas.add("alien", alien);
 
@@ -90,7 +90,7 @@ for example:
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
-const alien = CanvasSprite.from(texture);
+const alien = Sprite.from(texture);
 alien.alpha = 0;
 canvas.add("alien", alien);
 

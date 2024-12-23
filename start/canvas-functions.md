@@ -8,9 +8,9 @@ The `add` method have the following parameters:
 * `component`: The canvas component to add.
 
 ```typescript
-import { canvas, CanvasSprite, Assets } from '@drincs/pixi-vn'
+import { canvas, Sprite, Assets } from '@drincs/pixi-vn'
 
-const sprite = new CanvasSprite()
+const sprite = new Sprite()
 const texture = await Assets.load("path/to/image.png")
 sprite.texture = texture
 canvas.add('sprite1', sprite)
@@ -26,7 +26,7 @@ The `find` method have the following parameters:
 ```typescript
 import { canvas } from '@drincs/pixi-vn'
 
-const sprite = canvas.find<CanvasSprite>('sprite1')
+const sprite = canvas.find<Sprite>('sprite1')
 ```
 
 ## Remove Canvas Components
@@ -68,11 +68,11 @@ The class that is passed must have the following characteristics:
 
 ```typescript
 @eventDecorator()
-export class EventTest2 extends CanvasEvent<CanvasSprite> {
+export class EventTest2 extends CanvasEvent<Sprite> {
     textureButtonDown = Texture.from('https://pixijs.com/assets/button_down.png');
     textureButtonOver = Texture.from('https://pixijs.com/assets/button_over.png');
     textureButton = Texture.from('https://pixijs.com/assets/button.png');
-    override fn(event: CanvasEventNamesType, sprite: CanvasSprite): void {
+    override fn(event: CanvasEventNamesType, sprite: Sprite): void {
         if (event === 'pointerdown') {
             (sprite as any).isdown = true;
             sprite.texture = this.textureButtonDown;
@@ -104,7 +104,7 @@ export class EventTest2 extends CanvasEvent<CanvasSprite> {
     }
 }
 
-const button = new CanvasSprite(textureButton);
+const button = new Sprite(textureButton);
 
 button.anchor.set(0.5);
 button.x = buttonPositions[i * 2];
