@@ -46,6 +46,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Guide', link: '/start/getting-started' },
+      {
+        text: 'Make your first',
+        items: [
+          { text: 'Visual Novel', link: '/start/make-visual-novel' },
+          { text: 'Point and Click adventure game', link: '/start/make-point-and-click' },
+        ],
+      },
       { text: 'Advanced topics', link: '/advanced/intercept-events' },
       {
         text: 'Other topics',
@@ -62,6 +69,13 @@ export default defineConfig({
           items: [
             { text: 'Why Pixi’VN?', link: '/start/why' },
             { text: 'Getting Started', link: '/start/getting-started' },
+            {
+              text: 'Make your first',
+              items: [
+                { text: 'Visual Novel', link: '/start/make-visual-novel' },
+                { text: 'Point and Click adventure game', link: '/start/make-point-and-click' },
+              ]
+            },
           ]
         },
         {
