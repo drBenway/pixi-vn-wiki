@@ -41,9 +41,9 @@ export const startLabel = newLabel(START_LABEL_ID,
 )
 ```
 
-### All Steps Parameters
+### Override `StepLabelProps`
 
-All the functionality to control the flow of labels requires an object that corresponds to the `StepLabelProps` interface. The object will be passed as a parameter to the step that will be executed.
+All the [functionality to control the flow of labels](/start/labels-flow.md) requires an object that corresponds to the `StepLabelProps` interface. The object will be passed as a parameter to the step that will be executed.
 
 By default `StepLabelProps` corresponds to `{ [key: string]: any }`. You can "override" the interface `StepLabelProps` to set required parameters.
 
@@ -80,7 +80,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ### Parameters of the label steps
 
-You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#all-steps-parameters), for that label.
+You can pass a type to `newLabel` function for add other parameters in addition to [`StepLabelProps`](#override-steplabelprops), for that label.
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'

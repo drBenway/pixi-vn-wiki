@@ -18,7 +18,7 @@ There are two ways to run a label:
 To call a label you must use the `narration.callLabel` function. This function have 2 parameters:
 
 * `label`: the label that will be called
-* `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
+* `props`: the properties that will be passed to the label. Its interface corresponds to [`StepLabelProps`](/start/labels.md#override-steplabelprops).
 
 When you call a label, the first step of that label will be started. If before the call was running another label, the remaining steps of the another label will be executed after the steps of the called label.
 
@@ -52,7 +52,7 @@ export const startLabel = newLabel(START_LABEL_ID,
 To jump to a label you must use the `narration.jumpLabel` function and pass the label. This function have 2 parameters:
 
 * `label`: the label that will be called
-* `props`: the properties that will be passed to the label, if you not want to pass any parameter you can pass an empty object `{}`.
+* `props`: the properties that will be passed to the label. Its interface corresponds to [`StepLabelProps`](/start/labels.md#override-steplabelprops).
 
 When you jump to a label, the steps of the current label will be stopped and the steps of the label passed as parameter will be started.
 
@@ -87,7 +87,9 @@ export const startLabel = newLabel(START_LABEL_ID,
 
 ### Next step
 
-To execute the next step you must execute the `narration.goNext()` function. This function have a parameter `props` that will be passed to the next step, if you not want to pass any parameter you can pass an empty object `{}`.
+To execute the next step you must execute the `narration.goNext()` function. This function have a parameter:
+
+* `props`: the properties that will be passed to the label. Its interface corresponds to [`StepLabelProps`](/start/labels.md#override-steplabelprops).
 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
