@@ -8,7 +8,7 @@ In order to use i18n you have to initialize it and load the translations.
 
 It is recommended to divide the translations into two parts:
 - The [UI](/start/interface.md) texts, that is, the texts that are contained in menus, settings, quick buttons, etc... that is, everything that is not part of the narration.
-- The [narration](/start/narration.md) is the text that is part of the story, such as dialogues, monologues, etc. (See `strings_es.json` tab).
+- The [narration](/start/narration.md) texts, that is, the texts that are contained in dialogues, monologues, etc. (See `strings_es.json` tab).
 
 :::tabs
 == i18n.ts
