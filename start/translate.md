@@ -6,7 +6,9 @@ The most used library and compatible with many frameworks is [i18next](https://w
 
 In order to use i18n you have to initialize it and load the translations.
 
-It is recommended to divide the translations into two parts: UI and narration. The [UI](/start/interface.md) is the text that is not part of the story, such as buttons, menus, etc. The [narration](/start/narration.md) is the text that is part of the story, such as dialogues, monologues, etc. (See `strings_es.json` tab).
+It is recommended to divide the translations into two parts:
+- The [UI](/start/interface.md) is the text that is not part of the story, such as buttons, menus, etc.
+- The [narration](/start/narration.md) is the text that is part of the story, such as dialogues, monologues, etc. (See `strings_es.json` tab).
 
 :::tabs
 == i18n.ts
