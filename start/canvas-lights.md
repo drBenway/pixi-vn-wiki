@@ -2,7 +2,7 @@
 
 Having the ability to create light and shadow effects can be very useful in many cases.
 
-![Screenshot_20240814-161331.png](https://github.com/user-attachments/assets/af5a80c0-6996-4b74-a8b8-36b63c8b825c)
+![357854550-af5a80c0-6996-4b74-a8b8-36b63c8b825c](https://github.com/user-attachments/assets/1ce47130-322e-4a62-96c0-b5513615545c)
 
 The [PixiJS Lights](https://userland.pixijs.io/lights/docs/index.html) library provides this capability to PixiJS.
 
