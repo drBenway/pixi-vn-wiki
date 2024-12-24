@@ -2,6 +2,8 @@
 
 This tutorial will guide you through the process of creating your first Visual Novel.
 
+**What is a Visual Novel?** A visual novel is a type of video game that is similar to an interactive story. It is a game that is mostly text-based and has a lot of dialogue. Visual novels are popular in Japan and are often used to tell stories that are too complex for a traditional video game.
+
 For testing purposes we will recreate the visual novel [Breakdown](https://joshpowlison.itch.io/breakdown) with Pixi’VN in this guide. Breakdown is a short story that has all the features that a visual novel should have. Josh Powlison, the creator of Breakdown, has given us permission to use his narration for educational purposes❤️.
 
 Since Pixi’VN gives you the ability to write your [narration in different types of languages](/start/narration.md), it will be explained at each step how to do it with each language.
