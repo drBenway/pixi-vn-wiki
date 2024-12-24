@@ -8,7 +8,7 @@ You can use the transitions provided by Pixi’VN or [create your own transition
 
 ## Dissolve transition
 
-Dissolve Transition means that the image will be shown with a dissolve effect. If exist a image with the same alias, the existing image will be removed when the new image is shown.
+Dissolve transition makes a canvas component visible by gradually increasing the alpha. If exist a image with the same alias, the existing image will be removed when the new image is shown.
 
 ( This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade) )
 
