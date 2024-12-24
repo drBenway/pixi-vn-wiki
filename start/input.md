@@ -2,7 +2,7 @@
 
 In Visual Novels it may be necessary to ask the user to enter text, number, date, etc.
 
-Pixi’VN provides functions to manage this possibility. In short, the developer can require you to enter a value (the game will not allow you to proceed until the value is entered), while the [UI](/start/interface.md) must manage the information obtained from this variable.
+Pixi’VN provides functions to manage this possibility. In short, the developer can require you to enter a value (the game will not allow you to proceed until the value is entered), while the [UI](/start/interface.md) must prompt the player to enter the value.
 
 ## Requesting input
 
