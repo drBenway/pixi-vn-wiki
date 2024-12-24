@@ -36,8 +36,9 @@
 * [PixiJS Canvas](canvas):
   * [Canvas alias](canvas-alias)
   * [Canvas Components](canvas-components)
-    * [Images](canvas-images)
-    * [Video](canvas-videos)
+    * [ImageSprite](canvas-images)
+    * [ImageContainer](canvas-image-container)
+    * [VideoSprite](canvas-videos)
     * [Filters](canvas-filters)
     * [Lights](canvas-lights)
     * [Spine 2D](canvas-spine2d)

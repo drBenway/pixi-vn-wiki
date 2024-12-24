@@ -126,8 +126,9 @@ export default defineConfig({
                   text: 'Canvas Components',
                   link: '/start/canvas-components',
                   items: [
-                    { text: 'Images', link: '/start/canvas-images' },
-                    { text: 'Video', link: '/start/canvas-videos' },
+                    { text: 'ImageSprite', link: '/start/canvas-images' },
+                    { text: 'ImageContainer', link: '/start/canvas-image-container' },
+                    { text: 'VideoSprite', link: '/start/canvas-videos' },
                     { text: 'Filters', link: '/start/canvas-filters' },
                     { text: 'Lights', link: '/start/canvas-lights' },
                     { text: 'Spine 2D', link: '/start/canvas-spine2d' },

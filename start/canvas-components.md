@@ -13,6 +13,7 @@ Currently the base canvas components are:
 Other components are added by Pixi’VN, such as:
 
 * [ImageSprite](/start/canvas-images.md) is a class that extends the `Sprite` class.
+* [ImageContainer](/start/canvas-image-container.md) is a class that extends the `Container` class.
 * [VideoSprite](/start/canvas-videos.md) is a class that extends the `ImageSprite` class.
 
 ## Custom Components
