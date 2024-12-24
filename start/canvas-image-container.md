@@ -31,7 +31,7 @@ Compared to the `Container` component, `ImageContainer` adds the following featu
 * `load()`: Load all the image URLs and set the resulting textures to the [`ImageSprite`](/start/canvas-images.md).
 * Additional positions: [Align](/start/canvas-position.md) and [Position with percentage](/start/canvas-position.md)
 
-## Show images container
+## Show a images container
 
 The simplest and fastest method to show a group of images on the canvas is to use the `showImageContainer` function. This function is a combination of the `load` and [`canvas.add`](/start/canvas-functions.md#add-canvas-components) functions.
 
@@ -79,7 +79,7 @@ export async function defineAssets() {
 ::: sandbox {template=qz66sg entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Add images container
+## Add a images container
 
 To add a group of images to the canvas, you can use the `addImageCointainer` function. It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**. This function use [`canvas.add`](/start/canvas-functions.md#add-canvas-components) functions to add the image to the canvas.
 
@@ -126,6 +126,6 @@ export async function defineAssets() {
 ::: sandbox {template=ptqws3 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Remove images container
+## Remove a images container
 
 As for the rest of the canvas components, you can remove a group of images from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-components) function.

@@ -25,7 +25,7 @@ Compared to the `Sprite` component, `ImageSprite` adds the following features:
 * `load()`: Load the image URL and set the resulting texture to the sprite.
 * Additional positions: [Align](/start/canvas-position.md) and [Position with percentage](/start/canvas-position.md)
 
-## Show image
+## Show a image
 
 The simplest and fastest method to show an image on the canvas is to use the `showImage` function. This function is a combination of the `load` and [`canvas.add`](/start/canvas-functions.md#add-canvas-components) functions.
 
@@ -69,7 +69,7 @@ export async function defineAssets() {
 ::: sandbox {template=m9q8zk entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Add image
+## Add a image
 
 To add an image to the canvas, you can use the `addImage` function. It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**. This function use [`canvas.add`](/start/canvas-functions.md#add-canvas-components) to add the image to the canvas.
 
@@ -122,6 +122,6 @@ export async function defineAssets() {
 ::: sandbox {template=5f3jcr entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Remove image
+## Remove a image
 
 As for the rest of the canvas components, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-components) function.
