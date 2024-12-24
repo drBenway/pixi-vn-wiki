@@ -2,6 +2,10 @@
 
 * [Why Pixi’VN?](why)
 * [Get Started](getting-started)
+* Make your first:
+  * [Visual Novel](make-visual-novel)
+  * [Point and Click adventure game](make-point-and-click)
+  * [RPG game](make-rpg)
 
 ## First steps
 

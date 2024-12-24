@@ -51,6 +51,7 @@ export default defineConfig({
         items: [
           { text: 'Visual Novel', link: '/start/make-visual-novel' },
           { text: 'Point and Click adventure game', link: '/start/make-point-and-click' },
+          { text: 'RPG game', link: '/start/make-rpg' },
         ],
       },
       { text: 'Advanced topics', link: '/advanced/intercept-events' },
@@ -74,6 +75,7 @@ export default defineConfig({
               items: [
                 { text: 'Visual Novel', link: '/start/make-visual-novel' },
                 { text: 'Point and Click adventure game', link: '/start/make-point-and-click' },
+                { text: 'RPG game', link: '/start/make-rpg' },
               ]
             },
           ]
