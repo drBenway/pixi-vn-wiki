@@ -20,7 +20,7 @@ await alien.load()
 canvas.add("alien", alien)
 ```
 
-Compared to the Sprite component, ImageSprite adds the following features:
+Compared to the `Sprite` component, `ImageSprite` adds the following features:
 
 * `load()`: Load the image URL and set the resulting texture to the sprite.
 * Additional positions: [Align](/start/canvas-position.md) and [Position with percentage](/start/canvas-position.md)
@@ -57,7 +57,7 @@ export const startLabel = newLabel("start_label", [
 == assets-utility.ts
 
 ```ts
-import { sound } from "@drincs/pixi-vn";
+import { Assets } from "@drincs/pixi-vn";
 
 export async function defineAssets() {
     Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
@@ -110,7 +110,7 @@ export const startLabel = newLabel("start_label", [
 == assets-utility.ts
 
 ```ts
-import { sound } from "@drincs/pixi-vn";
+import { Assets } from "@drincs/pixi-vn";
 
 export async function defineAssets() {
     Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
