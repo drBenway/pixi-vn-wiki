@@ -130,22 +130,54 @@ export async function defineAssets() {
 
 As for the rest of the canvas components, you can remove an video from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-components) function.
 
-## Play and Pause Video
+## Play and pause a video
 
 You can use the `play()` and `pause()` methods to play and pause the video, or set the `paused` property to `true` or `false`.
 
-```typescript
-import { addVideo } from '@drincs/pixi-vn'
+:::tabs
+== startLabel.ts
 
-const video = addVideo('video1', 'path/to/video.mp4')
-await video.load()
+```ts
+import { canvas, narration, newLabel, showVideo, VideoSprite } from "@drincs/pixi-vn";
 
-video.play()
-// or video.paused = false
-
-video.pause()
-// or video.paused = true
+export const startLabel = newLabel("start_label", [
+    async () => {
+        narration.dialogue = "add video";
+        await showVideo("video");
+    },
+    async () => {
+        narration.dialogue = "pause video";
+        let video = canvas.find<VideoSprite>("video");
+        if (video) {
+            video.pause(); // [!code focus]
+            // or video.paused = true // [!code focus]
+        }
+    },
+    async () => {
+        narration.dialogue = "resume video";
+        let video = canvas.find<VideoSprite>("video");
+        if (video) {
+            video.play(); // [!code focus]
+            // or video.paused = false // [!code focus]
+        }
+    },
+]);
 ```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "video", src: "https://pixijs.com/assets/video.mp4" });
+}
+```
+
+:::
+
+::: sandbox {template=29hjtk entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Loop Video
 
