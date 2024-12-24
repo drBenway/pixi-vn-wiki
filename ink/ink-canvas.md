@@ -241,7 +241,7 @@ temp durationVar = 3
 # shake bg duration 3
 ```
 
-## Video in *ink*
+## Pause and resume a video in *ink*
 
 :::tabs
 == start.ink
@@ -272,7 +272,7 @@ export async function defineAssets() {
 ::: sandbox {template=p3qgjq entry=/src/ink/start.ink,/src/utils/assets-utility.ts}
 :::
 
-## Pause a video in *ink*
+### Pause a video in *ink*
 
 To pause a video in ***ink***, you can use `pause`.
 
@@ -285,7 +285,7 @@ The syntax is as follows:
 # pause video "bg 2"
 ```
 
-## Resume a video in *ink*
+### Resume a video in *ink*
 
 To resume a video in ***ink***, you can use `resume`.
 
