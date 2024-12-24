@@ -6,7 +6,7 @@ You can use the transitions provided by Pixi’VN or [create your own transition
 
 [( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
-## Dissolve Transition
+## Dissolve transition
 
 Dissolve Transition means that the image will be shown with a dissolve effect. If exist a image with the same alias, the existing image will be removed when the new image is shown.
 
@@ -41,7 +41,7 @@ import { removeWithDissolveTransition } from '@drincs/pixi-vn'
 removeWithDissolveTransition('image1', { duration: 2 })
 ```
 
-## Fade Transition
+## Fade transition
 
 Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same alias, the existing image will be removed with a fade-out effect before the new image is shown.
 
@@ -76,15 +76,15 @@ import { removeWithFadeTransition } from '@drincs/pixi-vn'
 removeWithFadeTransition('image1', { duration: 2 })
 ```
 
-## Move in/out Transition
+## Move in/out transition
 
 This page is under construction.
 
-## Zoom in/out Transition
+## Zoom in/out transition
 
 This page is under construction.
 
-## Push in/out Transition
+## Push in/out transition
 
 This page is under construction.
 
