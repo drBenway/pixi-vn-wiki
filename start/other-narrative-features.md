@@ -43,7 +43,7 @@ narration.onGameEnd = async (props) => {
 }
 ```
 
-## How manage the step error
+## How manage the step errors
 
 When an error occurs in a step, the game gives a console error and stops the execution of the steps. The developer must manage the error. The method for managing the error is to set `narration.onStepError`.
 
