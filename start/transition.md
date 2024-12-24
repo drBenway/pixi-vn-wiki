@@ -2,7 +2,7 @@
 
 You can show and remove an [canvas component](/start/canvas-components.md) with a transition effect.
 
-You can use the Pixi’VN built-in transitions or [create your own transitions](#create-your-own-transitions).
+You can use the transitions provided by Pixi’VN or [create your own transitions](#create-your-own-transitions).
 
 [( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
