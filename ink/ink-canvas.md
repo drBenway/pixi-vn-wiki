@@ -17,6 +17,7 @@ Where:
   * `resume` (Only for video): Resume a video canvas component. (Read more [here](#resume-a-video-in-ink))
 * `[type of the canvas component]` It is the type of the canvas component. The available types are:
   * [`image`](/start/canvas-images.md)
+  * [`imagecontainer`](/start/canvas-image-container.md)
   * [`video`](/start/canvas-videos.md)
 * `[alias]` It is the [alias of the canvas component](/start/canvas-alias.md). The alias is a string that identifies the canvas component.
   * If the alias includes spaces, you must use double quotes.
@@ -47,6 +48,7 @@ The syntax is as follows:
 # show image eggHead
 # show image "eggHead 2" eggHead x 20 y 30
 # show image flowerTop x 20 y 30 visible true cursor "pointer" alpha 0.5
+# show video my_video
 ```
 
 == assets-utility.ts
@@ -57,9 +59,54 @@ import { Assets } from "@drincs/pixi-vn";
 export async function defineAssets() {
     Assets.add({ alias: 'eggHead', src: "https://pixijs.com/assets/eggHead.png" })
     Assets.add({ alias: 'flowerTop', src: "https://pixijs.com/assets/flowerTop.png" })
+    Assets.add({ alias: "my_video", src: "https://pixijs.com/assets/video.mp4" });
 }
 ```
 
+:::
+
+### Show a image container in *ink*
+
+Since the container contains a list of images, the command to show a container accepts a list of strings instead of accepting a string:
+
+* `[list of URL/path of the image]`: It is the list of URL/path of the images that you want to show. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. Keep in mind that to write `https://` in ***ink*** you must use `https:\/\/` because the `//` is considered a comment in ***ink**.
+
+:::tabs
+== start.ink
+
+```ink
+=== start ===
+# show imagecontainer james [m01-body m01-eyes m01-mouth] xAlign 0.5 yAlign 1
+# show imagecontainer sly [fm01-body fm01-eyes fm01-mouth] xAlign 0.2 yAlign 1 with movein
+# show imagecontainer steph [fm02-body fm02-eyes fm02-mouth] xAlign 0.8 yAlign 1 with dissolve
+# pause
+-> start
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn"
+
+export async function defineAssets() {
+    // female character 01
+    Assets.add({ alias: 'fm01-body', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm01%2Ffm01-body.webp?alt=media" })
+    Assets.add({ alias: 'fm01-eyes', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm01%2Ffm01-eyes-smile.webp?alt=media" })
+    Assets.add({ alias: 'fm01-mouth', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm01%2Ffm01-mouth-smile00.webp?alt=media" })
+    // female character 02
+    Assets.add({ alias: 'fm02-body', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm02%2Ffm02-body.webp?alt=media" })
+    Assets.add({ alias: 'fm02-eyes', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm02%2Ffm02-eyes-smile.webp?alt=media" })
+    Assets.add({ alias: 'fm02-mouth', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm02%2Ffm02-mouth-smile00.webp?alt=media" })
+    // male character 01
+    Assets.add({ alias: 'm01-body', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-body.webp?alt=media" })
+    Assets.add({ alias: 'm01-eyes', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-eyes-smile.webp?alt=media" })
+    Assets.add({ alias: 'm01-mouth', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-mouth-smile00.webp?alt=media" })
+}
+```
+
+:::
+
+::: sandbox {template=sndrvv entry=/src/ink/start.ink,/src/utils/assets-utility.ts}
 :::
 
 ### Show a canvas component with transition in *ink*
@@ -195,6 +242,32 @@ temp durationVar = 3
 ```
 
 ## Video in *ink*
+
+:::tabs
+== start.ink
+
+```ink
+=== start ===
+# show video my_video
+Video started
+# pause video my_video
+Video paused
+# resume video my_video
+Video resumed
+-> start
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn"
+
+export async function defineAssets() {
+    Assets.add({ alias: "my_video", src: "https://pixijs.com/assets/video.mp4" });
+}
+```
+
+:::
 
 ::: sandbox {template=p3qgjq entry=/src/ink/start.ink,/src/utils/assets-utility.ts}
 :::

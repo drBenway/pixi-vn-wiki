@@ -5,7 +5,7 @@ The `ImageSprite` component extends the [`Sprite`](/start/canvas-components#base
 To initialize the `ImageSprite` component, you must pass the following parameters:
 
 * `options` (Optional): It corresponds to the `ImageSpriteOptions` interface.
-* `imageUrl` (Optional): The URL or path of the image.
+* `imageUrl` (Optional): The URL or path of the image. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture.
 
 ```ts
 import { canvas, ImageSprite } from "@drincs/pixi-vn"
@@ -32,7 +32,7 @@ The simplest and fastest method to show an image on the canvas is to use the `sh
 This function will return a `ImageSprite`, that you can use to manipulate the image, and it has the following parameters:
 
 * `alias`: Is a [alias](/start/canvas-alias.md) for the image.
-* `imageUrl` (Optional): The URL or path of the image. If you don't provide the url, then the alias is used as the url.
+* `imageUrl` (Optional): The URL or path of the image. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If you don't provide the url, then the alias is used as the url.
 * `options` (Optional): It corresponds to the `ImageSpriteOptions` interface.
 
 :::tabs
@@ -76,7 +76,7 @@ To add an image to the canvas, you can use the `addImage` function. It is import
 This function will return a `ImageSprite`, that you can use to manipulate the image, and it has the following parameters:
 
 * `alias`: Is a [alias](/start/canvas-alias.md) for the image.
-* `imageUrl` (Optional): The URL or path of the image. If you don't provide the url, then the alias is used as the url.
+* `imageUrl` (Optional): The URL or path of the image. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If you don't provide the url, then the alias is used as the url.
 * `options` (Optional): It corresponds to the `ImageSpriteOptions` interface.
 
 :::tabs

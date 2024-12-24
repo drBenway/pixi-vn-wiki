@@ -7,7 +7,7 @@ The children of the `ImageContainer` are the [`ImageSprite`](/start/canvas-image
 To initialize the `ImageContainer` component, you must pass the following parameters:
 
 * `options` (Optional): It corresponds to the `ImageContainerOptions<ImageSprite>` interface.
-* `imageUrls` (Optional): The array of URLs or paths of the images.
+* `imageUrls` (Optional): The array of URLs or paths of the images. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture.
 
 ```ts
 import { canvas, ImageContainer } from "@drincs/pixi-vn"
@@ -38,7 +38,7 @@ The simplest and fastest method to show a group of images on the canvas is to us
 This function will return a `ImageContainer`, that you can use to manipulate the container, and it has the following parameters:
 
 * `alias`: Is a [alias](/start/canvas-alias.md) for the image.
-* `imageUrls` (Optional): The array of URLs or paths of the images. If you don't provide the urls, then the alias is used as the url.
+* `imageUrls` (Optional): The array of URLs or paths of the images. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If you don't provide the urls, then the alias is used as the url.
 * `options` (Optional): It corresponds to the `ImageContainerOptions<ImageSprite>` interface.
 
 :::tabs
@@ -86,7 +86,7 @@ To add a group of images to the canvas, you can use the `addImageCointainer` fun
 This function will return a `ImageContainer`, that you can use to manipulate the image, and it has the following parameters:
 
 * `alias`: Is a [alias](/start/canvas-alias.md) for the image.
-* `imageUrls` (Optional): The array of URLs or paths of the images. If you don't provide the urls, then the alias is used as the url.
+* `imageUrls` (Optional): The array of URLs or paths of the images. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If you don't provide the urls, then the alias is used as the url.
 * `options` (Optional): It corresponds to the `ImageContainerOptions<ImageSprite>` interface.
 
 :::tabs
