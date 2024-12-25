@@ -45,9 +45,9 @@ Let’s pretend that 1mm is equal to 1 pixel on a computer screen.
 - The cork board is the screen, or the container you’re trying to position the element inside.
 - The photograph is the element.
 - Where you put the pin on the photo is the anchor of the photograph.
-- Where you push the pin into on the cork board is the pos of the photograph.
+- Where you push the pin into on the cork board is the position of the photograph.
 
-By default in Pixi’VN, the push pin always starts in the top left corner of the photo, so to speak. If you want the top-left corner of the photo 200mm from the left side of the cork board, you will put it at xpos 200. If you also want the top-left corner 300mm down from the top of the board, you will put it at ypos 300.
+By default in Pixi’VN, the push pin always starts in the top left corner of the photo, so to speak. If you want the top-left corner of the photo 200mm from the left side of the cork board, you will put it at x 200. If you also want the top-left corner 300mm down from the top of the board, you will put it at y 300.
 
 ![17351597056618553068745888144175](https://github.com/user-attachments/assets/c6955336-1c30-4518-8f05-edd950a1227e)
 
