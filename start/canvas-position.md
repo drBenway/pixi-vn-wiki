@@ -12,7 +12,7 @@ Position and anchor will make up the bulk of what you use to move elements aroun
 
 ## Position (pixel)
 
-Position is used to position the component with the pixel size unit. This property is introduced by PixiJS.
+Position is used to position the component with the pixel size unit.
 
 You can modify it with 3 properties: 
 - `x`, for moving things left-to-right (along the x-axis)
