@@ -6,7 +6,7 @@
 
 Before we get into the different positioning properties, know that Pixi’VN considers the default for all position properties to be `{ x: 0, y: 0 }`, which corresponds to the top-left of the element you’re positioning.
 
-Positive numbers will move the element to the right and down. So, something at a position of (200, 300) in the game will be 200 pixels from the left edge of the screen and 300 pixels from the top edge of the screen. Similarly, negative numbers move the element left and up relative to their starting position.
+Positive numbers will move the element to the right and down. So, something at a position of `{ x: 200, y: 300 }` in the game will be 200 pixels from the left edge of the screen and 300 pixels from the top edge of the screen. Similarly, negative numbers move the element left and up relative to their starting position.
 
 Position and anchor will make up the bulk of what you use to move elements around on the screen. It’s very important to understand how they work, because most of the other positioning properties act as some combination of these two properties.
 
