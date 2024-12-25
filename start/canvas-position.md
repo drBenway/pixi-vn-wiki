@@ -21,10 +21,6 @@ It comes in three main flavours:
 - `y`, for moving things top-to-bottom (along the y-axis).
 - `position`, is an object that corresponds to `{ x: number, y: number }` Then you can also use it to set x and y to the same value, `conponent.position = 200`.
 
-There is also a property that lets you set both xpos and ypos at the same time: pos. If you are using pos, you have to provide two numbers, separated by a comma. The first number is the xpos and the second is the ypos e.g. pos (200, 300) which positions the top-left corner of the image 200 pixels from the left and 300 pixels down from the top. pos (200, 300) is equivalent to xpos 200 ypos 300.
-
-By default, the starting position for a screen element is the top-left corner of its container.
-
 ## Anchor
 
 Next is anchor. It also comes in two main varieties: xanchor, which moves the anchor on the x-axis (left-to-right), and yanchor which moves the anchor on the y-axis (top-to-bottom). anchor lets you set both at the same time, much like pos e.g. anchor (0, 0).
