@@ -19,7 +19,7 @@ You can modify it with 3 properties:
 - `y`, for moving things top-to-bottom (along the y-axis).
 - `position`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.position = 200`.
 
-## Anchor
+## Anchor and pivot
 
 Anchors are specified in percentages, from 0.0 to 1.0, in each dimension.
 
