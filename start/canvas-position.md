@@ -24,7 +24,9 @@ While position seems pretty intuitive to understand – it’s just the position
 
 Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things: a cork board, a push pin, and a photograph. Let’s pretend that 1mm is equal to 1 pixel on a computer screen.
 
-![Image](https://feniksdev.com/wp-content/uploads/2023/12/bulletin1-2.png)
+![17351596389764883495402859713640](https://github.com/user-attachments/assets/becfa6ac-1156-49ad-8ceb-17b06627be7c)
+![17351597056618553068745888144175](https://github.com/user-attachments/assets/c6955336-1c30-4518-8f05-edd950a1227e)
+
 
 - The cork board is the screen, or the container you’re trying to position the element inside.
 - The photograph is the element.
