@@ -53,7 +53,7 @@ By default in Pixi’VN, the push pin always starts in the top left corner of th
 
 What if you want the center of the photo at 200mm x 300mm?
 
-This means you need to move where the pin is relative to the photo. The pin will stay at the point (200, 300) on the cork board – you just need to center the photo around that point as well. This means you need to change the pivot of the photo.
+This means you need to move where the pin is relative to the photo. The pin will stay at the point (200, 300) on the cork board – you just need to center the photo around that point as well. This means you need to change the anchor/pivot of the photo.
 
 Except in some rare cases, an anchor point is usually one of three values: 0.0, 0.5, or 1.0. Note that 1.0 is very different from 1 for positioning properties – see [Floats vs Integers](https://feniksdev.com/renpy-position-properties-pos-and-anchor/#floats-vs-integers). This is because usually you want to position elements relative to one of their edges, or relative to the center.
 
