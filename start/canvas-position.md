@@ -33,7 +33,7 @@ You can modify it with 2 properties:
 
 ---
 
-**What, exactly, is anchor?** Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things: 
+**What, exactly, is anchor/pivot?** Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things: 
 - a cork board
 - a push pin
 - a photograph
@@ -44,7 +44,7 @@ Let’s pretend that 1mm is equal to 1 pixel on a computer screen.
 
 - The cork board is the screen, or the container you’re trying to position the element inside.
 - The photograph is the element.
-- Where you put the pin on the photo is the anchor of the photograph.
+- Where you put the pin on the photo is the anchor/pivot of the photograph.
 - Where you push the pin into on the cork board is the position of the photograph.
 
 By default in Pixi’VN, the push pin always starts in the top left corner of the photo, so to speak. If you want the top-left corner of the photo 200mm from the left side of the cork board, you will put it at x 200. If you also want the top-left corner 300mm down from the top of the board, you will put it at y 300.
@@ -53,7 +53,7 @@ By default in Pixi’VN, the push pin always starts in the top left corner of th
 
 What if you want the center of the photo at 200mm x 300mm?
 
-This means you need to move where the pin is relative to the photo. The pin will stay at the point (200, 300) on the cork board – you just need to center the photo around that point as well. This means you need to change the anchor of the photo.
+This means you need to move where the pin is relative to the photo. The pin will stay at the point (200, 300) on the cork board – you just need to center the photo around that point as well. This means you need to change the pivot of the photo.
 
 Except in some rare cases, an anchor point is usually one of three values: 0.0, 0.5, or 1.0. Note that 1.0 is very different from 1 for positioning properties – see [Floats vs Integers](https://feniksdev.com/renpy-position-properties-pos-and-anchor/#floats-vs-integers). This is because usually you want to position elements relative to one of their edges, or relative to the center.
 
