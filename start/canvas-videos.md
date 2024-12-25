@@ -179,28 +179,75 @@ export async function defineAssets() {
 ::: sandbox {template=29hjtk entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Loop Video
+## Looping video
 
 You can use the `loop` property to set the video to loop.
 
-```typescript
-import { addVideo } from '@drincs/pixi-vn'
+:::tabs
+== startLabel.ts
 
-const video = addVideo('video1', 'path/to/video.mp4')
-await video.load()
+```ts
+import { newLabel, showVideo } from "@drincs/pixi-vn";
 
-video.loop = true
+export const startLabel = newLabel("start_label", [
+    async () => {
+        let video = await showVideo("video");
+        video.loop = true; // [!code focus]
+    },
+]);
 ```
 
-## Restart Video
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "video", src: "https://pixijs.com/assets/video.mp4" });
+}
+```
+
+:::
+
+::: sandbox {template=fdzncz entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
+## Restart a video
 
 You can use the `restart` method to restart the video.
 
-```typescript
-import { addVideo } from '@drincs/pixi-vn'
+:::tabs
+== startLabel.ts
 
-const video = addVideo('video1', 'path/to/video.mp4')
-await video.load()
+```ts
+import { canvas, narration, newLabel, showVideo, VideoSprite } from "@drincs/pixi-vn";
 
-video.restart()
+export const startLabel = newLabel("start_label", [
+    async () => {
+        narration.dialogue = "add video";
+        await showVideo("video");
+    },
+    async () => {
+        narration.dialogue = "restart video";
+        let video = canvas.find<VideoSprite>("video");
+        if (video) {
+            video.restart(); // [!code focus]
+        }
+    },
+]);
 ```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "video", src: "https://pixijs.com/assets/video.mp4" });
+}
+```
+
+:::
+
+::: sandbox {template=7pngqy entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
