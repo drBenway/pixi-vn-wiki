@@ -4,7 +4,7 @@ In this section, we will cover advanced [label](/start/labels.md) features. Thes
 
 ## onLoadingLabel
 
-`onLoadingLabel` is a function that will be executed in `onStepStart` if the index of the step is 0 and when the user laods a save file. 
+`onLoadingLabel` is a function that will be executed in `onStepStart` if the index of the step is 0 and when the user laods a save file.
 
 When you load a save file, will be executed all `onLoadingLabel` functions of the `narration.openedLabels` (current label and all labels that are in the stack).
 
@@ -81,8 +81,7 @@ When you create a new label you can pass a function that returns the steps of th
 // /labels/startLabel.ts
 import { getFlag, narration, newLabel, setFlag } from "@drincs/pixi-vn"
 
-const START_LABEL_ID = "start_label"
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     () => {
         let condition = getFlag("condition")
         if (condition) {
@@ -99,9 +98,9 @@ export const startLabel = newLabel(START_LABEL_ID,
                 () => {
                     narration.dialogue = "Step 1"
                 },
-                async (props) => {
+                async (props, { labelId }) => {
                     setFlag("condition", true)
-                    return await narration.jumpLabel(START_LABEL_ID, props)
+                    return await narration.jumpLabel(labelId, props)
                 }
             ]
         }
@@ -109,5 +108,5 @@ export const startLabel = newLabel(START_LABEL_ID,
 )
 ```
 
-::: sandbox {template=5jtwrt entry=/src/labels/startLabel.ts}
+::: sandbox {template=mzw5n2 entry=/src/labels/startLabel.ts}
 :::

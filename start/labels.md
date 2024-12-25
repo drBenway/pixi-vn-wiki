@@ -29,14 +29,12 @@ For create a label you must use the `newLabel()` function and pass:
 ```typescript
 import { narration } from '@drincs/pixi-vn'
 
-const START_LABEL_ID = "start_label_id"
-
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     [
         () => {
             narration.dialogue = { character: liam, text: "Example of dialogue" }
         },
-        (props) => narration.jumpLabel(START_LABEL_ID, props),
+        (props, { labelId }) => narration.jumpLabel(labelId, props),
     ]
 )
 ```
@@ -63,7 +61,7 @@ declare module '@drincs/pixi-vn/dist/override' {
 == startLabel.ts
 
 ```typescript
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     [
         () => {
             return narration.callLabel(testLabel, { // [!code focus]
@@ -85,9 +83,7 @@ You can pass a type to `newLabel` function for add other parameters in addition 
 ```typescript
 import { narration } from '@drincs/pixi-vn'
 
-const START_LABEL_ID = "start_label_id"
-
-export const startLabel = newLabel<{name: string}>(START_LABEL_ID,
+export const startLabel = newLabel<{name: string}>("start_label",
     [
         (props) => {
             console.log(props.name)
@@ -124,7 +120,7 @@ declare module '@drincs/pixi-vn/dist/override' {
 == startLabel.ts
 
 ```typescript
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     [
         () => {
             return { // [!code focus]

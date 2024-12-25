@@ -22,7 +22,7 @@ declare module '@drincs/pixi-vn/dist/override' {
 ```
 
 ```typescript
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     [
         ({ navigate }) => navigate('/new-route'),
     ]
@@ -40,7 +40,7 @@ In this case you can simply set the variable equal to the objective to be achiev
 For example:
 
 ```typescript
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     [
         () => {
             showWithDissolveTransition("alien", 'https://pixijs.com/assets/eggHead.png', 0.01)

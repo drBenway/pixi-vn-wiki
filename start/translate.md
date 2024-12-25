@@ -7,6 +7,7 @@ The most used library and compatible with many frameworks is [i18next](https://w
 In order to use i18n you have to initialize it and load the translations.
 
 It is recommended to divide the translations into two parts (See `strings_es.json` tab):
+
 - The [UI](/start/interface.md) texts, that is, the texts that are contained in menus, settings, quick buttons, etc... that is, everything that is not part of the narration.
 - The [narration](/start/narration.md) texts, that is, the texts that are contained in dialogues, monologues, etc...
 
@@ -80,10 +81,10 @@ export default function App() {
 
 Depending on what you want to translate, it is recommended to use the following guides:
 
-* [Translate the UI](#translate-the-ui)
-* [Translate the narration (TypeScript/JavaScript)](#translate-the-narration-typescriptjavascript)
-* [Translate the narration (*ink*)](/ink/ink-translate.md)
-* Translate the dialogue (Ren'Py) (Under development)
+- [Translate the UI](#translate-the-ui)
+- [Translate the narration (TypeScript/JavaScript)](#translate-the-narration-typescriptjavascript)
+- [Translate the narration (*ink*)](/ink/ink-translate.md)
+- Translate the dialogue (Ren'Py) (Under development)
 
 ## Translate the UI
 
@@ -135,7 +136,7 @@ declare module '@drincs/pixi-vn/dist/override' {
 == startLabel.ts
 
 ```typescript
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     [
         ({ t }) => { // [!code focus]
             narration.dialogue = {

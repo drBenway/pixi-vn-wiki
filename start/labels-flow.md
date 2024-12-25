@@ -37,7 +37,7 @@ Remember that if you execute the `narration.callLabel` inside a step, you should
 ```typescript
 import { narration, newLabel } from '@drincs/pixi-vn'
 
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     [
         async (props) => {
             return await narration.callLabel(TestLabel, props)
@@ -71,7 +71,7 @@ Remember that if you execute the `narration.jumpLabel` inside a step, you should
 ```typescript
 import { narration } from '@drincs/pixi-vn'
 
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     [
         async (props) => {
             return await narration.jumpLabel(TestLabel, props)
@@ -114,7 +114,7 @@ Remember that if you execute the `narration.goNext()` inside a step, you should 
 ```typescript
 import { narration, newLabel } from '@drincs/pixi-vn'
 
-export const startLabel = newLabel(START_LABEL_ID,
+export const startLabel = newLabel("start_label",
     [
         async (props) => {
             await narration.goNext(props)
