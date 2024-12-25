@@ -1,6 +1,6 @@
 # Position properties
 
-(Most of the texts and images on this page were copied from Position Properties – [Pos and Anchor]() and [align, xycenter, and offset](). Feniks in these two pages explained very well the properties of Ren'py positioning, common to many other canvases including Pixi’VN)
+(Most of the texts and images on this page were copied from Position Properties – [Pos and Anchor](https://feniksdev.com/renpy-position-properties-pos-and-anchor/) and [align, xycenter, and offset](). Feniks in these two pages explained very well the properties of Ren'py positioning, common to many other canvases including Pixi’VN)
 
 Before we get into the different positioning properties, know that Pixi’VN considers the default for all position properties to be `{ x: 0, y: 0 }`, which corresponds to the top-left of the element you’re positioning.
 
