@@ -57,6 +57,8 @@ This means you need to move where the pin is relative to the photo. The pin will
 
 To set the anchor point of the photo to the center of the photo, you can use anchor (0.5, 0.5) or pivot (100, 150)
 
+## Position with percentage
+
 ## Align
 
 Now with knowledge of pos and anchor under your belt, you’re ready to understand align. align combines anchor and pos. It sets both of them to the same value. This is really excellent shorthand for several examples you saw before – namely, the following have align equivalents:
@@ -67,5 +69,3 @@ Now with knowledge of pos and anchor under your belt, you’re ready to understa
 ![17351599909265068327853750732595](https://github.com/user-attachments/assets/2d1dccf5-0f69-4a09-b04b-9880df0ba273)
 ![17351600069191572839632388213405](https://github.com/user-attachments/assets/09715c9a-dee4-48a8-acff-8c71b52836f2)
 ![17351600214426648210562421723893](https://github.com/user-attachments/assets/fc179863-a36f-4600-9e95-f5923a2d9d9a)
-
-## Position with percentage
