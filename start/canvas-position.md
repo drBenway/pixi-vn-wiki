@@ -28,9 +28,7 @@ You can modify it with 3 properties:
 
 ---
 
-While position seems pretty intuitive to understand – it’s just the position where the element is – what, exactly, is anchor?
-
-Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things: a cork board, a push pin, and a photograph. Let’s pretend that 1mm is equal to 1 pixel on a computer screen.
+**What, exactly, is anchor?** Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things: a cork board, a push pin, and a photograph. Let’s pretend that 1mm is equal to 1 pixel on a computer screen.
 
 ![17351596389764883495402859713640](https://github.com/user-attachments/assets/becfa6ac-1156-49ad-8ceb-17b06627be7c)
 
