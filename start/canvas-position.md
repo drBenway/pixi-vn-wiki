@@ -1,6 +1,6 @@
 # Position properties
 
-Before we get into the different positioning properties, know that Pixi’VN considers the default for all position properties to be (0, 0), which corresponds to the top-left of the element you’re positioning. Coordinates come in (x, y) pairs. So, the position (0, 0) is the top-left corner of the screen if you’re positioning an element without a container.
+Before we get into the different positioning properties, know that Pixi’VN considers the default for all position properties to be `{ x: 0, y: 0 }`, which corresponds to the top-left of the element you’re positioning.
 
 Positive numbers will move the element to the right and down. So, something at a position of (200, 300) in the game will be 200 pixels from the left edge of the screen and 300 pixels from the top edge of the screen. Similarly, negative numbers move the element left and up relative to their starting position.
 
