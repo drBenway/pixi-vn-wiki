@@ -21,7 +21,7 @@ You can modify it with 3 properties:
 
 ## Anchor and pivot
 
-An object's pivot is an offset, expressed in pixels, from the top-left corner of the component. If you have a component whose texture is 100px x 50px, and want to set the pivot point to the center of the image, you'd set your pivot to (50, 25) - half the width, and half the height. Note that pivots can be set outside of the image, meaning the pivot may be less than zero or greater than the width/height.
+An object's pivot is an offset, expressed in pixels, from the top-left corner of the component. If you have a component whose texture is 100px x 50px, and want to set the pivot point to the center of the image, you'd set your pivot to (50, 25) - half the width, and half the height.
 
 Anchors are specified in percentages, from 0.0 to 1.0, in each dimension.
 
