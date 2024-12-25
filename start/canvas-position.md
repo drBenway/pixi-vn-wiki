@@ -21,9 +21,9 @@ You can modify it with 3 properties:
 
 ## Anchor and pivot
 
-An object's pivot is an offset, expressed in pixels, from the top-left corner of the component. If you have a component whose texture is 100px x 50px, and want to set the pivot point to the center of the image, you'd set your pivot to (50, 25) - half the width, and half the height.
+The pivot is an offset, expressed in pixels, from the top-left corner of the component. If you have a component whose texture is 100px x 50px, and want to set the pivot point to the center of the image, you'd set your pivot to (50, 25) - half the width, and half the height.
 
-Anchors are specified in percentages, from 0.0 to 1.0, in each dimension.
+Anchors are specified in percentages, from 0.0 to 1.0, in each dimension. To rotate around the center point of a texture using anchors, you'd set your Sprite's anchor to (0.5, 0.5) - 50% in width and height.
 
 You can modify it with a property: 
 - `anchor`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.anchor = 0.5`.
