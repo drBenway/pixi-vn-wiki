@@ -1,8 +1,47 @@
 # Position properties
 
+Before we get into the different positioning properties, know that Ren’Py considers the default for all position properties to be (0, 0), which corresponds to the top-left of the element you’re positioning. Coordinates come in (x, y) pairs. So, the position (0, 0) is the top-left corner of the screen if you’re positioning an element without a container.
+
+Positive numbers will move the element to the right and down. So, something at a position of (200, 300) in the game will be 200 pixels from the left edge of the screen and 300 pixels from the top edge of the screen. Similarly, negative numbers move the element left and up relative to their starting position.
+
+Position and anchor will make up the bulk of what you use to move elements around on the screen. It’s very important to understand how they work, because most of the other positioning properties act as some combination of these two properties.
+
 ## Position (pixel)
 
+First up is pos. Pos is short for position. It comes in two main flavours: xpos, for moving things left-to-right (along the x-axis), and ypos, for moving things top-to-bottom (along the y-axis). There is also a property that lets you set both xpos and ypos at the same time: pos. If you are using pos, you have to provide two numbers, separated by a comma. The first number is the xpos and the second is the ypos e.g. pos (200, 300) which positions the top-left corner of the image 200 pixels from the left and 300 pixels down from the top. pos (200, 300) is equivalent to xpos 200 ypos 300.
+
+By default, the starting position for a screen element is the top-left corner of its container.
+
 ## Anchor
+
+Next is anchor. It also comes in two main varieties: xanchor, which moves the anchor on the x-axis (left-to-right), and yanchor which moves the anchor on the y-axis (top-to-bottom). anchor lets you set both at the same time, much like pos e.g. anchor (0, 0).
+
+By default, the anchor for a screen element is its top-left corner (0, 0).
+
+---
+
+While position seems pretty intuitive to understand – it’s just the position where the element is – what, exactly, is anchor?
+
+Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things: a cork board, a push pin, and a photograph. Let’s pretend that 1mm is equal to 1 pixel on a computer screen.
+
+![Image](https://feniksdev.com/wp-content/uploads/2023/12/bulletin1-2.png)
+
+- The cork board is the screen, or the container you’re trying to position the element inside.
+- The photograph is the element.
+- Where you put the pin on the photo is the anchor of the photograph.
+- Where you push the pin into on the cork board is the pos of the photograph.
+
+By default in Ren’Py, the push pin always starts in the top left corner of the photo, so to speak. If you want the top-left corner of the photo 200mm from the left side of the cork board, you will put it at xpos 200. If you also want the top-left corner 300mm down from the top of the board, you will put it at ypos 300.
+
+![Image](https://feniksdev.com/renpy-position-properties-pos-and-anchor/)
+
+What if you want the center of the photo at 200mm x 300mm?
+
+This means you need to move where the pin is relative to the photo. The pin will stay at the point (200, 300) on the cork board – you just need to center the photo around that point as well. This means you need to change the anchor of the photo.
+
+Except in some rare cases, an anchor point is usually one of three values: 0.0, 0.5, or 1.0. Note that 1.0 is very different from 1 for positioning properties – see [Floats vs Integers](https://feniksdev.com/renpy-position-properties-pos-and-anchor/#floats-vs-integers). This is because usually you want to position elements relative to one of their edges, or relative to the center.
+
+To set the anchor point of the photo to the center of the photo, you can use anchor (0.5, 0.5) (aka xanchor 0.5 yanchor 0.5). Remember that floats mean percentages, so 0.5 means that the anchor is 50% of the way across the photo and 50% of the way down the photo, putting it at the exact center.
 
 ## Align
 
