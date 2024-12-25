@@ -9,8 +9,6 @@ export default {
   extends: DefaultTheme,
   enhanceApp(ctx) {
     DefaultTheme.enhanceApp(ctx);
-    // ctx.app.component('ReactSandbox', ReactSandbox);
-    // ctx.app.component('ReactTypewriterSandbox', ReactTypewriterSandbox);
     ctx.app.component('Sandbox', Sandbox);
     enhanceAppWithTabs(ctx.app)
 

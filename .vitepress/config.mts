@@ -1,4 +1,3 @@
-import react from '@vitejs/plugin-react';
 import container from 'markdown-it-container';
 import { defineConfig } from 'vitepress';
 import { renderSandbox } from 'vitepress-plugin-sandpack';
@@ -315,17 +314,6 @@ export default defineConfig({
     config(md) {
       md
         .use(tabsMarkdownPlugin)
-        // the second parameter is html tag name
-        // .use(container, 'react-sandbox', {
-        //   render(tokens, idx) {
-        //     return renderSandbox(tokens, idx, 'react-sandbox');
-        //   },
-        // })
-        // .use(container, 'react-typewriter-sandbox', {
-        //   render(tokens, idx) {
-        //     return renderSandbox(tokens, idx, 'react-typewriter-sandbox');
-        //   },
-        // })
         .use(container, 'sandbox', {
           render(tokens, idx) {
             return renderSandbox(tokens, idx, 'sandbox');
@@ -365,8 +353,5 @@ export default defineConfig({
         scopeName: "source.renpy",
       }
     ]
-  },
-  vite: {
-    plugins: [react()],
   },
 })
