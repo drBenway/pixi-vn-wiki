@@ -2,7 +2,7 @@
 
 ## Position (pixel)
 
-## Anchor and pivot
+## Anchor
 
 ## Align
 
