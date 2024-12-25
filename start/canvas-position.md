@@ -23,12 +23,17 @@ You can modify it with 3 properties:
 
 Anchors are specified in percentages, from 0.0 to 1.0, in each dimension.
 
-You can modify it with 3 properties: 
+You can modify it with a property: 
 - `anchor`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.anchor = 0.5`.
 
 ---
 
-**What, exactly, is anchor?** Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things: a cork board, a push pin, and a photograph. Let’s pretend that 1mm is equal to 1 pixel on a computer screen.
+**What, exactly, is anchor?** Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things: 
+- a cork board
+- a push pin
+- a photograph
+
+Let’s pretend that 1mm is equal to 1 pixel on a computer screen.
 
 ![17351596389764883495402859713640](https://github.com/user-attachments/assets/becfa6ac-1156-49ad-8ceb-17b06627be7c)
 
