@@ -1,6 +1,6 @@
 # Position properties
 
-Before we get into the different positioning properties, know that Ren’Py considers the default for all position properties to be (0, 0), which corresponds to the top-left of the element you’re positioning. Coordinates come in (x, y) pairs. So, the position (0, 0) is the top-left corner of the screen if you’re positioning an element without a container.
+Before we get into the different positioning properties, know that Pixi’VN considers the default for all position properties to be (0, 0), which corresponds to the top-left of the element you’re positioning. Coordinates come in (x, y) pairs. So, the position (0, 0) is the top-left corner of the screen if you’re positioning an element without a container.
 
 Positive numbers will move the element to the right and down. So, something at a position of (200, 300) in the game will be 200 pixels from the left edge of the screen and 300 pixels from the top edge of the screen. Similarly, negative numbers move the element left and up relative to their starting position.
 
@@ -31,7 +31,7 @@ Let’s think of it in terms of something you may be more familiar with. Instead
 - Where you put the pin on the photo is the anchor of the photograph.
 - Where you push the pin into on the cork board is the pos of the photograph.
 
-By default in Ren’Py, the push pin always starts in the top left corner of the photo, so to speak. If you want the top-left corner of the photo 200mm from the left side of the cork board, you will put it at xpos 200. If you also want the top-left corner 300mm down from the top of the board, you will put it at ypos 300.
+By default in Pixi’VN, the push pin always starts in the top left corner of the photo, so to speak. If you want the top-left corner of the photo 200mm from the left side of the cork board, you will put it at xpos 200. If you also want the top-left corner 300mm down from the top of the board, you will put it at ypos 300.
 
 ![17351597056618553068745888144175](https://github.com/user-attachments/assets/c6955336-1c30-4518-8f05-edd950a1227e)
 
@@ -53,7 +53,5 @@ Now with knowledge of pos and anchor under your belt, you’re ready to understa
 ![17351599909265068327853750732595](https://github.com/user-attachments/assets/2d1dccf5-0f69-4a09-b04b-9880df0ba273)
 ![17351600069191572839632388213405](https://github.com/user-attachments/assets/09715c9a-dee4-48a8-acff-8c71b52836f2)
 ![17351600214426648210562421723893](https://github.com/user-attachments/assets/fc179863-a36f-4600-9e95-f5923a2d9d9a)
-
-
 
 ## Position with percentage
