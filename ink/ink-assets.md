@@ -17,9 +17,9 @@ The syntax is as follows:
 ```ink
 === start ===
 # load assets eggHead flowerTop my_video
-# show eggHead
-# show flowerTop
-# show my_video
+# show image eggHead
+# show image flowerTop
+# show video my_video
 # pause
 -> start
 ```
