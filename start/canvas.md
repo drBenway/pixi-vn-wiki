@@ -2,7 +2,7 @@
 
 <img src="https://pixijs.com/images/logo.svg" alt="drawing" width="200" style="margin-top: 10px;" />
 
-Pixi’VN uses [PixiJS](https://pixijs.com/7.x/guides/basics/what-pixijs-is) to render the visual novel. You can use the Pixi’VN API to add images, text, and animations to the canvas PixiJS.
+Pixi’VN uses [PixiJS](https://pixijs.com/8.x/guides/basics/what-pixijs-is) to render the visual novel. You can use the Pixi’VN API to add images, text, and animations to the canvas PixiJS.
 
 ## What is PixiJS?
 
