@@ -1,5 +1,7 @@
 # Position properties
 
+(Most of the texts and images on this page were copied from Position Properties – [Pos and Anchor]() and BBB. Feniks in these two pages explained very well the properties of Ren'py positioning, common to many other canvases including Pixi’VN)
+
 Before we get into the different positioning properties, know that Pixi’VN considers the default for all position properties to be `{ x: 0, y: 0 }`, which corresponds to the top-left of the element you’re positioning.
 
 Positive numbers will move the element to the right and down. So, something at a position of (200, 300) in the game will be 200 pixels from the left edge of the screen and 300 pixels from the top edge of the screen. Similarly, negative numbers move the element left and up relative to their starting position.
