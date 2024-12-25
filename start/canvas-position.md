@@ -33,7 +33,7 @@ Let’s think of it in terms of something you may be more familiar with. Instead
 
 By default in Ren’Py, the push pin always starts in the top left corner of the photo, so to speak. If you want the top-left corner of the photo 200mm from the left side of the cork board, you will put it at xpos 200. If you also want the top-left corner 300mm down from the top of the board, you will put it at ypos 300.
 
-![Image](https://feniksdev.com/renpy-position-properties-pos-and-anchor/)
+![Image](https://feniksdev.com/wp-content/uploads/2023/12/bulletin3.png)
 
 What if you want the center of the photo at 200mm x 300mm?
 
