@@ -55,9 +55,7 @@ What if you want the center of the photo at 200mm x 300mm?
 
 This means you need to move where the pin is relative to the photo. The pin will stay at the point (200, 300) on the cork board – you just need to center the photo around that point as well. This means you need to change the anchor/pivot of the photo.
 
-Except in some rare cases, an anchor point is usually one of three values: 0.0, 0.5, or 1.0. Note that 1.0 is very different from 1 for positioning properties – see [Floats vs Integers](https://feniksdev.com/renpy-position-properties-pos-and-anchor/#floats-vs-integers). This is because usually you want to position elements relative to one of their edges, or relative to the center.
-
-To set the anchor point of the photo to the center of the photo, you can use anchor (0.5, 0.5) (aka xanchor 0.5 yanchor 0.5). Remember that floats mean percentages, so 0.5 means that the anchor is 50% of the way across the photo and 50% of the way down the photo, putting it at the exact center.
+To set the anchor point of the photo to the center of the photo, you can use anchor (0.5, 0.5) or pivot (100, 150)
 
 ## Align
 
