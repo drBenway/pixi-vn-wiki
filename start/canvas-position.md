@@ -14,16 +14,19 @@ Position and anchor will make up the bulk of what you use to move elements aroun
 
 Position is used to position the component with the pixel size unit. This property is introduced by PixiJS.
 
-You can modify it with 3 properties.: 
+You can modify it with 3 properties: 
 - `x`, for moving things left-to-right (along the x-axis)
 - `y`, for moving things top-to-bottom (along the y-axis).
 - `position`, is an object that corresponds to `{ x: number, y: number }` Then you can also use it to set x and y to the same value, `conponent.position = 200`.
 
 ## Anchor
 
-Next is anchor. It also comes in two main varieties: xanchor, which moves the anchor on the x-axis (left-to-right), and yanchor which moves the anchor on the y-axis (top-to-bottom). anchor lets you set both at the same time, much like pos e.g. anchor (0, 0).
+Anchors are specified in percentages, from 0.0 to 1.0, in each dimension.
 
-By default, the anchor for a screen element is its top-left corner (0, 0).
+You can modify it with 3 properties: 
+- `x`, for moving things left-to-right (along the x-axis)
+- `y`, for moving things top-to-bottom (along the y-axis).
+- `position`, is an object that corresponds to `{ x: number, y: number }` Then you can also use it to set x and y to the same value, `conponent.position = 200`.
 
 ---
 
