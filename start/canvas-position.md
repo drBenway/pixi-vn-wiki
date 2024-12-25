@@ -17,14 +17,14 @@ Position is used to position the component with the pixel size unit. This proper
 You can modify it with 3 properties: 
 - `x`, for moving things left-to-right (along the x-axis)
 - `y`, for moving things top-to-bottom (along the y-axis).
-- `position`, is an object that corresponds to `{ x: number, y: number }` Then you can also use it to set x and y to the same value, `conponent.position = 200`.
+- `position`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.position = 200`.
 
 ## Anchor
 
 Anchors are specified in percentages, from 0.0 to 1.0, in each dimension.
 
 You can modify it with 3 properties: 
-- `anchor`, is an object that corresponds to `{ x: number, y: number }` Then you can also use it to set x and y to the same value, `conponent.anchor = 0.5`.
+- `anchor`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.anchor = 0.5`.
 
 ---
 
