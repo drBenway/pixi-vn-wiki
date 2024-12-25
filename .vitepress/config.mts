@@ -188,6 +188,7 @@ export default defineConfig({
                 { text: 'Input', link: '/ink/ink-input' },
                 { text: 'Canvas', link: '/ink/ink-canvas' },
                 { text: 'Sounds and Music', link: '/ink/ink-sound' },
+                { text: 'Assets management', link: '/ink/ink-assets' },
                 { text: 'Pause', link: '/ink/ink-pause' },
                 { text: 'Text replacement', link: '/ink/ink-replacement' },
                 { text: 'Translating', link: '/ink/ink-translate' },

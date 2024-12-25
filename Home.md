@@ -19,6 +19,7 @@
     * [Input](ink-input)
     * [Canvas](ink-canvas)
     * [Sounds and Music](ink-sound)
+    * [Assets management](ink-assets)
     * [Pause](ink-pause)
     * [Text replacement](ink-replacement)
     * [Translating](ink-translate)
