@@ -47,4 +47,13 @@ To set the anchor point of the photo to the center of the photo, you can use anc
 
 Now with knowledge of pos and anchor under your belt, you’re ready to understand align. align combines anchor and pos. It sets both of them to the same value. This is really excellent shorthand for several examples you saw before – namely, the following have align equivalents:
 
+![17351599464394619760866269081175](https://github.com/user-attachments/assets/905f8284-b58f-40d1-86b3-66170c6b2438)
+![17351599588441465184865762162774](https://github.com/user-attachments/assets/b2e23f6a-8236-4769-8479-9d0255d42500)
+![17351599755996849758281561582636](https://github.com/user-attachments/assets/3724b1c2-004a-4451-86a5-b8ee17130f13)
+![17351599909265068327853750732595](https://github.com/user-attachments/assets/2d1dccf5-0f69-4a09-b04b-9880df0ba273)
+![17351600069191572839632388213405](https://github.com/user-attachments/assets/09715c9a-dee4-48a8-acff-8c71b52836f2)
+![17351600214426648210562421723893](https://github.com/user-attachments/assets/fc179863-a36f-4600-9e95-f5923a2d9d9a)
+
+
+
 ## Position with percentage
