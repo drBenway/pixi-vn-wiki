@@ -19,9 +19,9 @@ You can modify it with 3 properties:
 - `y`, for moving things top-to-bottom (along the y-axis).
 - `position`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.position = 200`.
 
-An object's pivot is an offset, expressed in pixels, from the top-left corner of the Sprite. It defaults to (0, 0). If you have a Sprite whose texture is 100px x 50px, and want to set the pivot point to the center of the image, you'd set your pivot to (50, 25) - half the width, and half the height. Note that pivots can be set outside of the image, meaning the pivot may be less than zero or greater than the width/height.
-
 ## Anchor and pivot
+
+An object's pivot is an offset, expressed in pixels, from the top-left corner of the component. If you have a component whose texture is 100px x 50px, and want to set the pivot point to the center of the image, you'd set your pivot to (50, 25) - half the width, and half the height. Note that pivots can be set outside of the image, meaning the pivot may be less than zero or greater than the width/height.
 
 Anchors are specified in percentages, from 0.0 to 1.0, in each dimension.
 
