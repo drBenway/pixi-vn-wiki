@@ -8,13 +8,14 @@ Before we get into the different positioning properties, know that Pixi’VN con
 
 Positive numbers will move the element to the right and down. So, something at a position of `{ x: 200, y: 300 }` in the game will be 200 pixels from the left edge of the screen and 300 pixels from the top edge of the screen. Similarly, negative numbers move the element left and up relative to their starting position.
 
-Position and anchor will make up the bulk of what you use to move elements around on the screen. It’s very important to understand how they work, because most of the other positioning properties act as some combination of these two properties.
+[Position](#position-pixel) and [anchor](#align) will make up the bulk of what you use to move elements around on the screen. It’s very important to understand how they work, because most of the other positioning properties act as some combination of these two properties.
 
 ## Position (pixel)
 
 Position is used to position the component with the pixel size unit.
 
-You can modify it with 3 properties: 
+You can modify it with 3 properties:
+
 - `x`, for moving things left-to-right (along the x-axis)
 - `y`, for moving things top-to-bottom (along the y-axis).
 - `position`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.position = 200`.
@@ -27,13 +28,15 @@ Anchors are specified in percentages, from 0.0 to 1.0, in each dimension. It has
 
 Anchors compared to Pivot are easier to use. You can learn more about their differences [here](https://pixijs.com/8.x/guides/components/sprites#pivot-vs-anchor).
 
-You can modify it with 2 properties: 
+You can modify it with 2 properties:
+
 - `anchor`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.anchor = 0.5`.
 - `pivot`, is an object that corresponds to `{ x: number, y: number }`.
 
 ---
 
-**What, exactly, is anchor/pivot?** Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things: 
+**What, exactly, is anchor/pivot?** Let’s think of it in terms of something you may be more familiar with. Instead of positioning an element on a screen, you are trying to pin a photo onto a cork board. You have three things:
+
 - a cork board
 - a push pin
 - a photograph
