@@ -119,7 +119,7 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=5f3jcr entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+::: sandbox {template=yrwkf5 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
 ## Remove a image
