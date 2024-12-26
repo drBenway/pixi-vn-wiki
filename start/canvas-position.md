@@ -77,6 +77,10 @@ myComponent.x = (align * (fatherComponent.width - myComponent.width)) + myCompon
 myComponent.y = (align * (fatherComponent.height - myComponent.height)) + myComponent.pivot + (myComponent.anchor * myComponent.height)
 ```
 
+You can modify it with a property:
+
+- `align`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.align = 0.5`.
+
 ![17351599464394619760866269081175](https://github.com/user-attachments/assets/905f8284-b58f-40d1-86b3-66170c6b2438)
 ![17351599588441465184865762162774](https://github.com/user-attachments/assets/b2e23f6a-8236-4769-8479-9d0255d42500)
 ![17351599755996849758281561582636](https://github.com/user-attachments/assets/3724b1c2-004a-4451-86a5-b8ee17130f13)
