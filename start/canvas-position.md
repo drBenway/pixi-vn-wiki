@@ -64,7 +64,7 @@ To set the anchor point of the photo to the center of the photo, you can use anc
 
 ## Align
 
-Now with knowledge of pos and anchor under your belt, you’re ready to understand align. align combines anchor and pos. It sets both of them to the same value. This is really excellent shorthand for several examples you saw before – namely, the following have align equivalents:
+Now with knowledge of position and anchor under your belt, you’re ready to understand align. align combines anchor and position. It sets both of them to the same value. This is really excellent shorthand for several examples you saw before – namely, the following have align equivalents:
 
 ![17351599464394619760866269081175](https://github.com/user-attachments/assets/905f8284-b58f-40d1-86b3-66170c6b2438)
 ![17351599588441465184865762162774](https://github.com/user-attachments/assets/b2e23f6a-8236-4769-8479-9d0255d42500)
