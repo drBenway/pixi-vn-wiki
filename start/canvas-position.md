@@ -62,6 +62,10 @@ To set the anchor point of the photo to the center of the photo, you can use anc
 
 ## Position with percentage
 
+Pixi’VN introduces the ability to position a component by percentage. Its operation is very similar to that of html.
+
+In practice, the percentage will be multiplied by the height or width of the parent component to calculate the position in pixels.
+
 :::tabs
 == startLabel.ts
 
