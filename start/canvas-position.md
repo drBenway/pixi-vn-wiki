@@ -8,7 +8,7 @@ Before we get into the different positioning properties, know that Pixi’VN con
 
 Positive numbers will move the element to the right and down. So, something at a position of `{ x: 200, y: 300 }` in the game will be 200 pixels from the left edge of the screen and 300 pixels from the top edge of the screen. Similarly, negative numbers move the element left and up relative to their starting position.
 
-[Position](#position-pixel) and [anchor](#align) will make up the bulk of what you use to move elements around on the screen. It’s very important to understand how they work, because most of the other positioning properties act as some combination of these two properties.
+[Position](#position-pixel) and [anchor](#anchor-and-pivot) will make up the bulk of what you use to move elements around on the screen. It’s very important to understand how they work, because most of the other positioning properties act as some combination of these two properties.
 
 ## Position (pixel)
 
@@ -64,7 +64,7 @@ To set the anchor point of the photo to the center of the photo, you can use anc
 
 ## Align
 
-Now with knowledge of position and anchor under your belt, you’re ready to understand align. align combines anchor and position. It sets both of them to the same value. This is really excellent shorthand for several examples you saw before – namely, the following have align equivalents:
+Now with knowledge of [position](#position-pixel) and [anchor](#anchor-and-pivot) under your belt, you’re ready to understand align.
 
 ![17351599464394619760866269081175](https://github.com/user-attachments/assets/905f8284-b58f-40d1-86b3-66170c6b2438)
 ![17351599588441465184865762162774](https://github.com/user-attachments/assets/b2e23f6a-8236-4769-8479-9d0255d42500)
