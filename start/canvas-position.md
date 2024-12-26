@@ -83,9 +83,62 @@ You can modify it with a property:
 - `yAlign`, for moving things top-to-bottom (along the y-axis).
 - `align`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.align = 0.5`.
 
-![17351599464394619760866269081175](https://github.com/user-attachments/assets/905f8284-b58f-40d1-86b3-66170c6b2438)
-![17351599588441465184865762162774](https://github.com/user-attachments/assets/b2e23f6a-8236-4769-8479-9d0255d42500)
-![17351599755996849758281561582636](https://github.com/user-attachments/assets/3724b1c2-004a-4451-86a5-b8ee17130f13)
-![17351599909265068327853750732595](https://github.com/user-attachments/assets/2d1dccf5-0f69-4a09-b04b-9880df0ba273)
-![17351600069191572839632388213405](https://github.com/user-attachments/assets/09715c9a-dee4-48a8-acff-8c71b52836f2)
-![17351600214426648210562421723893](https://github.com/user-attachments/assets/fc179863-a36f-4600-9e95-f5923a2d9d9a)
+:::tabs
+== startLabel.ts
+
+```ts
+import { newLabel, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        let alien1 = await showImage("alien"); // [!code focus]
+        let alien2 = await showImage("alien2", "alien", { // [!code focus]
+            xAlign: 0.5, // [!code focus]
+        }); // [!code focus]
+        let alien3 = await showImage("alien3", "https://pixijs.com/assets/eggHead.png", { // [!code focus]
+            xAlign: 1, // [!code focus]
+        }); // [!code focus]
+    },
+]);
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=m9q8zk entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
+## Add a image
+
+To add an image to the canvas, you can use the `addImage` function. It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**. This function use [`canvas.add`](/start/canvas-functions.md#add-canvas-components) to add the image to the canvas.
+
+This function will return a `ImageSprite`, that you can use to manipulate the image, and it has the following parameters:
+
+* `alias`: Is a [alias](/start/canvas-alias.md) for the image.
+* `imageUrl` (Optional): The URL or path of the image. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If you don't provide the url, then the alias is used as the url.
+* `options` (Optional): It corresponds to the `ImageSpriteOptions` interface.
+
+:::tabs
+== startLabel.ts
+
+```ts
+```
+
+== assets-utility.ts
+
+```ts
+```
+
+:::
+
+::: sandbox {template=yrwkf5 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
