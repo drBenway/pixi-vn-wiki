@@ -64,7 +64,18 @@ To set the anchor point of the photo to the center of the photo, you can use anc
 
 ## Align
 
-Now with knowledge of [position](#position-pixel) and [anchor](#anchor-and-pivot) under your belt, you’re ready to understand align.
+Until now we have seen positioning methods influenced by [anchor/pivot](#anchor-and-pivot). The disadvantage of these methods is that if for example you want to add your component to the center of the screen you will first have to set the anchor to 0.5 and then set the position to half the width and height of the screen. This is where the align property comes in.
+
+Align is a feature originally created for ***Ren'py***, which was also introduced in Pixi’VN. Align combines [position](#position-pixel) and [anchor/pivot](#anchor-and-pivot) to give you a more intuitive way to position your components at the beginning, in the center or in the end of the screen.
+
+Align are specified in percentages, from 0.0 to 1.0, in each dimension. For example if you use 0.25 as a percentage, your component will be positioned at 25% of the screen with anchor at 0.25.
+
+The calculation that is used to calculate the location is the following:
+
+```ts
+myComponent.x = (align * (fatherComponent.width - myComponent.width)) + myComponent.pivot + (myComponent.anchor * myComponent.width)
+myComponent.y = (align * (fatherComponent.height - myComponent.height)) + myComponent.pivot + (myComponent.anchor * myComponent.height)
+```
 
 ![17351599464394619760866269081175](https://github.com/user-attachments/assets/905f8284-b58f-40d1-86b3-66170c6b2438)
 ![17351599588441465184865762162774](https://github.com/user-attachments/assets/b2e23f6a-8236-4769-8479-9d0255d42500)
