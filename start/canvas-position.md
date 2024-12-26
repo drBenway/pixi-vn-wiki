@@ -66,6 +66,12 @@ Pixi’VN introduces the ability to position a component by percentage. Its oper
 
 In practice, the percentage will be multiplied by the height or width of the parent component to calculate the position in pixels.
 
+You can modify it with a property:
+
+- `xPercentagePosition`, for moving things left-to-right (along the x-axis)
+- `yPercentagePosition`, for moving things top-to-bottom (along the y-axis).
+- `percentagePosition`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.align = 0.5`.
+
 :::tabs
 == startLabel.ts
 
