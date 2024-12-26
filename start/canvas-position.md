@@ -79,6 +79,8 @@ myComponent.y = (align * (fatherComponent.height - myComponent.height)) + myComp
 
 You can modify it with a property:
 
+- `xAlign`, for moving things left-to-right (along the x-axis)
+- `yAlign`, for moving things top-to-bottom (along the y-axis).
 - `align`, is an object that corresponds to `{ x: number, y: number }`. Then you can also use it to set x and y to the same value, `conponent.align = 0.5`.
 
 ![17351599464394619760866269081175](https://github.com/user-attachments/assets/905f8284-b58f-40d1-86b3-66170c6b2438)
