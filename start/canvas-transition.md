@@ -1,16 +1,12 @@
 # Transition
 
-You can show and remove an [canvas component](/start/canvas-components.md) with a transition effect.
-
-You can use the transitions provided by Pixi’VN or [create your own transitions](#create-your-own-transitions).
+In Pixi’VN provides various transition effect to show and remove an [canvas component](/start/canvas-components.md) and the possibility to [create your own transitions](#create-your-own-transitions).
 
 [( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
 ## Dissolve transition
 
-Dissolve transition makes a canvas component visible by gradually increasing the alpha. If exist a image with the same alias, the existing image will be removed when the new image is shown.
-
-( This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade) )
+Dissolve transition makes a canvas component visible by gradually increasing the alpha. If exist a image with the same alias, the existing image will be removed when the new image is shown. This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade)
 
 The `showWithDissolveTransition` function has the following parameters:
 
