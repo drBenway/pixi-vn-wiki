@@ -1,6 +1,6 @@
 # Canvas components functions
 
-## Add a canvas components
+## Add a canvas component
 
 To add a canvas component to the game window, you can use the `canvas.add`.
 The `add` method have the following parameters:
@@ -39,7 +39,7 @@ export async function defineAssets() {
 ::: sandbox {template=pm3n7c entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Get a canvas components
+## Get a canvas component
 
 To get a canvas component from the game window, you can use the `canvas.find`, if the component does not exist, it will return `undefined`.
 The `find` method have the following parameters:
@@ -84,7 +84,7 @@ export async function defineAssets() {
 ::: sandbox {template=k6xqwz entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Remove a canvas components
+## Remove a canvas component
 
 To remove a canvas component from the game window, you can use the `canvas.remove`.
 The `remove` method have the following parameters:
@@ -125,15 +125,46 @@ export async function defineAssets() {
 ::: sandbox {template=3qfr7m entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Remove All Canvas Components
+## Remove all canvas components
 
-To remove all canvas components from the game window, you can use the `canvas.remove`.
+To remove all canvas components from the game window, you can use the `canvas.removeAll`.
 
-```typescript
-import { canvas } from '@drincs/pixi-vn'
+:::tabs
+== startLabel.ts
 
-canvas.removeAll()
+```ts
+import { Assets, canvas, newLabel, Sprite } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        const texture = await Assets.load("egg_head");
+        for (let i = 0; i < 3; i++) {
+            const sprite = new Sprite();
+            sprite.texture = texture;
+            sprite.x = i * 150;
+            canvas.add(`sprite${i}`, sprite);
+        }
+    },
+    () => {
+        canvas.removeAll(); // [!code focus]
+    },
+]);
 ```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=rnktj2 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Add a listener for a given event
 

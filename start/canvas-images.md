@@ -27,7 +27,7 @@ Compared to the `Sprite` component, `ImageSprite` adds the following features:
 
 ## Show a image
 
-The simplest and fastest method to show an image on the canvas is to use the `showImage` function. This function is a combination of the `load` and [`canvas.add`](/start/canvas-functions.md#add-a-canvas-components) functions.
+The simplest and fastest method to show an image on the canvas is to use the `showImage` function. This function is a combination of the `load` and [`canvas.add`](/start/canvas-functions.md#add-a-canvas-component) functions.
 
 This function will return a `ImageSprite`, that you can use to manipulate the image, and it has the following parameters:
 
@@ -71,7 +71,7 @@ export async function defineAssets() {
 
 ## Add a image
 
-To add an image to the canvas, you can use the `addImage` function. It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**. This function use [`canvas.add`](/start/canvas-functions.md#add-a-canvas-components) to add the image to the canvas.
+To add an image to the canvas, you can use the `addImage` function. It is important to take into account that this function only adds the component to the canvas but does **not show it and does not load its texture**. This function use [`canvas.add`](/start/canvas-functions.md#add-a-canvas-component) to add the image to the canvas.
 
 This function will return a `ImageSprite`, that you can use to manipulate the image, and it has the following parameters:
 
@@ -124,4 +124,4 @@ export async function defineAssets() {
 
 ## Remove a image
 
-As for the rest of the canvas components, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-a-canvas-components) function.
+As for the rest of the canvas components, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-a-canvas-component) function.
