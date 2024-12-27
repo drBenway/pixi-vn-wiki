@@ -6,15 +6,53 @@ Pixi’VN provides functions to manage this possibility. In short, the developer
 
 ## Requesting input
 
-To request input from the player, you must use the `narration.requestInput()` function. This function receives an object with the following properties:
+To request input from the player, you must use the `narration.requestInput()` function. This function receives 2 parameters:
 
-- `type` (optional): The type of input to be requested (It is a string).
+- an object with the following properties:
+  - `type` (optional): The type of input to be requested (It is a string).
+- a default value (optional): The default value to be displayed in the input field.
 
-```typescript
-narration.requestInput()
-narration.requestInput({ type: "text" })
-narration.requestInput({ type: "date" })
+:::tabs
+== startLabel.ts
+
+```ts
+import { narration, newLabel } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    () => {
+        narration.dialogue = "Hello";
+    },
+    () => {
+        narration.dialogue = "What is your name?";
+        narration.requestInput({ type: "string" });
+    },
+    () => {
+        narration.dialogue = `My name is ${narration.inputValue}`;
+    },
+    () => {
+        narration.dialogue = "How old are you?";
+        narration.requestInput({ type: "number" }, 18);
+    },
+    () => {
+        narration.dialogue = `I am ${narration.inputValue} years old`;
+    },
+    () => {
+        narration.dialogue = "Describe who you are:";
+        narration.requestInput({ type: "html textarea" });
+    },
+    () => {
+        narration.dialogue = `${narration.inputValue}`;
+    },
+    () => {
+        narration.dialogue = "Restart";
+    },
+]);
 ```
+
+:::
+
+::: sandbox {template=6968x8 entry=/src/labels/startLabel.ts,/src/screens/modals/TextInput.tsx}
+:::
 
 ## Getting input information
 

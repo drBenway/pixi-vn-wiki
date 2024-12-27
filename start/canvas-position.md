@@ -88,7 +88,6 @@ You can modify it with a property:
 ::: sandbox {template=8sd94f entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-
 ## Align
 
 Until now we have seen positioning methods influenced by [anchor/pivot](#anchor-and-pivot). The disadvantage of these methods is that if for example you want to add your component to the center of the screen you will first have to set the anchor to 0.5 and then set the position to half the width and height of the screen. This is where the align property comes in.
