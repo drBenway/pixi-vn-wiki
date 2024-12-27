@@ -89,13 +89,41 @@ export async function defineAssets() {
 To remove a canvas component from the game window, you can use the `canvas.remove`.
 The `remove` method have the following parameters:
 
-* `alias`: The alias of the component to remove.
+* `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
 
-```typescript
-import { canvas } from '@drincs/pixi-vn'
+:::tabs
+== startLabel.ts
 
-canvas.remove('sprite1')
+```ts
+import { Assets, canvas, newLabel, Sprite } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        const sprite = new Sprite();
+        const texture = await Assets.load("egg_head");
+        sprite.texture = texture;
+        canvas.add("sprite", sprite);
+    },
+    () => {
+        canvas.remove("sprite"); // [!code focus]
+    },
+]);
 ```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=3qfr7m entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Remove All Canvas Components
 
