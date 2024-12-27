@@ -111,7 +111,7 @@ export async function defineAssets() {
 
 ### Show a canvas component with transition in *ink*
 
-If you want to show the canvas component with a [transition](/start/transition.md), you can add into the parameters the `with [transitionType]`.
+If you want to show the canvas component with a [transition](/start/canvas-transition.md), you can add into the parameters the `with [transitionType]`.
 
 `#` + `show` + `[type of the canvas component]` + `[alias]` + `[URL/path of the image]` + `[parameters]` + `with` + `[transitionType]`
 
@@ -123,11 +123,11 @@ The syntax is as follows:
 
 The available transitions are:
 
-* `dissolve`: The canvas component appears with a [dissolve transition](/start/transition.md#dissolve-transition). You can add all the parameters you would use in JS/TS.
-* `fade`: The canvas component appears with a [fade transition](/start/transition.md#fade-transition). You can add all the parameters you would use in JS/TS.
-* `movein`: The canvas component appears with a [movein transition](/start/transition.md#move-inout-transition). You can add all the parameters you would use in JS/TS.
-* `zoomin`: The canvas component appears with a [zoomin transition](/start/transition.md#zoom-inout-transition). You can add all the parameters you would use in JS/TS.
-* `pushin`: The canvas component appears with a [pushin transition](/start/transition.md#push-inout-transition). You can add all the parameters you would use in JS/TS.
+* `dissolve`: The canvas component appears with a [dissolve transition](/start/canvas-transition.md#dissolve-transition). You can add all the parameters you would use in JS/TS.
+* `fade`: The canvas component appears with a [fade transition](/start/canvas-transition.md#fade-transition). You can add all the parameters you would use in JS/TS.
+* `movein`: The canvas component appears with a [movein transition](/start/canvas-transition.md#move-inout-transition). You can add all the parameters you would use in JS/TS.
+* `zoomin`: The canvas component appears with a [zoomin transition](/start/canvas-transition.md#zoom-inout-transition). You can add all the parameters you would use in JS/TS.
+* `pushin`: The canvas component appears with a [pushin transition](/start/canvas-transition.md#push-inout-transition). You can add all the parameters you would use in JS/TS.
 
 :::tabs
 == start.ink
@@ -185,7 +185,7 @@ The syntax is as follows:
 
 ### Remove a canvas component with transition in *ink*
 
-If you want to remove the canvas component with a [transition](/start/transition.md), you can add after the alias of the canvas component `with [transitionType]`.
+If you want to remove the canvas component with a [transition](/start/canvas-transition.md), you can add after the alias of the canvas component `with [transitionType]`.
 
 `#` + `remove` + `[type of the canvas component]` + `[alias]` + `with` + `[transitionType]`
 
@@ -197,11 +197,11 @@ The syntax is as follows:
 
 The available transitions are:
 
-* `dissolve`: The canvas component disappears with a [dissolve transition](/start/transition.md#dissolve-transition). You can add all the parameters you would use in JS/TS.
-* `fade`: The canvas component disappears with a [fade transition](/start/transition.md#fade-transition). You can add all the parameters you would use in JS/TS.
-* `moveout`: The canvas component disappears with a [moveout transition](/start/transition.md#move-inout-transition). You can add all the parameters you would use in JS/TS.
-* `zoomout`: The canvas component disappears with a [zoomout transition](/start/transition.md#zoom-inout-transition). You can add all the parameters you would use in JS/TS.
-* `pushout`: The canvas component disappears with a [pushout transition](/start/transition.md#push-inout-transition). You can add all the parameters you would use in JS/TS.
+* `dissolve`: The canvas component disappears with a [dissolve transition](/start/canvas-transition.md#dissolve-transition). You can add all the parameters you would use in JS/TS.
+* `fade`: The canvas component disappears with a [fade transition](/start/canvas-transition.md#fade-transition). You can add all the parameters you would use in JS/TS.
+* `moveout`: The canvas component disappears with a [moveout transition](/start/canvas-transition.md#move-inout-transition). You can add all the parameters you would use in JS/TS.
+* `zoomout`: The canvas component disappears with a [zoomout transition](/start/canvas-transition.md#zoom-inout-transition). You can add all the parameters you would use in JS/TS.
+* `pushout`: The canvas component disappears with a [pushout transition](/start/canvas-transition.md#push-inout-transition). You can add all the parameters you would use in JS/TS.
 
 ```ink
 # remove image bg with dissolve duration 3
