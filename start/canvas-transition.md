@@ -10,7 +10,7 @@ The dissolve transition when:
 * shows a component, gradually increases `alpha`. If a component with the same alias exists, the component will be removed when the new component transition is complete.
 * removes a component, gradually decreases `alpha`.
 
-This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
+This transition has been created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
 
 The `showWithDissolveTransition` function show a canvas element with dissolve transition. This function has the following parameters:
 
@@ -51,7 +51,7 @@ The fade transition when:
 * shows a component, gradually increases `alpha`. If a component with the same alias exists, the existing component will be removed with a fade-out effect before the new component is shown.
 * removes a component, gradually decreases `alpha`.
 
-This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
+This transition has been created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
 
 The `showWithFadeTransition` function show a canvas element with fade transition. This function has the following parameters:
 
