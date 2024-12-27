@@ -16,8 +16,8 @@ The `showWithDissolveTransition` function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
 * `image`: The URL/path, array of URL/path or the canvas component. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If URL/path is a video will be added a VideoSprite, else a ImageSprite. If you use a array of URL/path will be added a ImageContainer.
-* `props`: The properties of the effect
-* `priority`: ( optional ) The priority of the effect
+* `props` (Optional): The properties of the effect
+* `priority` (Optional): The priority of the effect
 
 ```typescript
 import { showWithDissolveTransition } from '@drincs/pixi-vn'
