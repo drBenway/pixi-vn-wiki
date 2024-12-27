@@ -76,11 +76,53 @@ You can modify it with a property:
 == startLabel.ts
 
 ```ts
+import { newLabel, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+  async () => {
+    await showImage("egg_head", "egg_head", {
+        percentagePosition: 0.5,
+        anchor: 0.5,
+    });
+    await showImage("flower_top", "flower_top", {
+        percentagePosition: 0
+    });
+    await showImage("panda", "panda", {
+        xPercentagePosition: 1,
+        yPercentagePosition: 0,
+        anchor: { x: 1, y: 0 },
+    });
+    await showImage("skully", "skully", {
+        xPercentagePosition: 0,
+        yPercentagePosition: 1,
+        anchor: { x: 0, y: 1 },
+    });
+    await showImage("helmlok", "helmlok", {
+        percentagePosition: 1,
+        anchor: 1
+    });
+    await showImage("bunny", "bunny", {
+        xPercentagePosition: 0.5,
+        yPercentagePosition: 1,
+        anchor: { x: 0.5, y: 1 },
+    });
+  },
+]);
 ```
 
 == assets-utility.ts
 
 ```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+    Assets.add({ alias: "flower_top", src: "https://pixijs.com/assets/flowerTop.png" });
+    Assets.add({ alias: "panda", src: "https://pixijs.com/assets/panda.png" });
+    Assets.add({ alias: "skully", src: "https://pixijs.com/assets/skully.png" });
+    Assets.add({ alias: "helmlok", src: "https://pixijs.com/assets/helmlok.png" });
+    Assets.add({ alias: "bunny", src: "https://pixijs.com/assets/bunny.png" });
+}
 ```
 
 :::
@@ -113,11 +155,33 @@ You can modify it with a property:
 == startLabel.ts
 
 ```ts
+import { newLabel, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("egg_head", "egg_head", { align: 0.5 });
+        await showImage("flower_top", "flower_top", { align: 0 });
+        await showImage("panda", "panda", { xAlign: 1, yAlign: 0 });
+        await showImage("skully", "skully", { xAlign: 0, yAlign: 1 });
+        await showImage("helmlok", "helmlok", { align: 1 });
+        await showImage("bunny", "bunny", { xAlign: 0.5, yAlign: 1 });
+    },
+]);
 ```
 
 == assets-utility.ts
 
 ```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+    Assets.add({ alias: "flower_top", src: "https://pixijs.com/assets/flowerTop.png" });
+    Assets.add({ alias: "panda", src: "https://pixijs.com/assets/panda.png" });
+    Assets.add({ alias: "skully", src: "https://pixijs.com/assets/skully.png" });
+    Assets.add({ alias: "helmlok", src: "https://pixijs.com/assets/helmlok.png" });
+    Assets.add({ alias: "bunny", src: "https://pixijs.com/assets/bunny.png" });
+}
 ```
 
 :::
