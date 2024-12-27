@@ -98,7 +98,7 @@ This page is under construction.
 
 This page is under construction.
 
-## Create your own transitions
+## Create your own transition
 
 Create a transition is very simple, you can combine more [Animations and Effects](/start/animations-effects) to create your own transition.
 
