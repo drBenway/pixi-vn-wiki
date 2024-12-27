@@ -6,7 +6,11 @@ In Pixi’VN provides various transition effect to show and remove an [canvas co
 
 ## Dissolve transition
 
-Dissolve transition makes a canvas component visible by gradually increasing the alpha. If exist a image with the same alias, the existing image will be removed when the new image is shown. This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade)
+The dissolve transition when:
+* shows a component, gradually increases `alpha`. If exist a image with the same alias, the existing image will be removed when the new image is shown.
+* removes a component, gradually decreases `alpha`.
+
+This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
 
 The `showWithDissolveTransition` function has the following parameters:
 
