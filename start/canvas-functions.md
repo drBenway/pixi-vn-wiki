@@ -19,7 +19,7 @@ export const startLabel = newLabel("start_label", [
         const sprite = new Sprite();
         const texture = await Assets.load("egg_head");
         sprite.texture = texture;
-        canvas.add("sprite", sprite);
+        canvas.add("sprite", sprite); // [!code focus]
     },
 ]);
 ```
@@ -46,11 +46,43 @@ The `find` method have the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to get.
 
-```typescript
-import { canvas } from '@drincs/pixi-vn'
+:::tabs
+== startLabel.ts
 
-const sprite = canvas.find<Sprite>('sprite1')
+```ts
+import { Assets, canvas, newLabel, Sprite } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        const sprite = new Sprite();
+        const texture = await Assets.load("egg_head");
+        sprite.texture = texture;
+        canvas.add("sprite", sprite);
+    },
+    () => {
+        const sprite = canvas.find("sprite"); // [!code focus]
+        if (sprite) {
+            sprite.x = 100;
+            sprite.y = 100;
+        }
+    },
+]);
 ```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=k6xqwz entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Remove Canvas Components
 
