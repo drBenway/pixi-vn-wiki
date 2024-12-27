@@ -144,3 +144,4 @@ canvas.addTickersSteps("alien", [
 ```
 
 <!-- TODO: paused tiker -->
+<!-- TODO: tickerMustBeCompletedBeforeNextStep -->
