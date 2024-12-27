@@ -49,7 +49,7 @@
     * [Spine 2D](canvas-spine2d)
   * [Canvas functions](canvas-functions)
   * [Position properties](canvas-position)
-  * [Transitions](transition)
+  * [Transitions](canvas-transition)
   * [Animations and Effects](animations-effects)
   * [Tickers](tickers)
 * [Sounds and Music](sound)
