@@ -35,7 +35,7 @@ showWithDissolveTransition('image1', sprite, { duration: 2 })
 
 The `removeWithDissolveTransition` function remove a canvas element with dissolve transition. This function has the following parameters:
 
-* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
+* `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
 * `props` (Optional): The properties of the effect
 * `priority` (Optional): The priority of the effect
 
