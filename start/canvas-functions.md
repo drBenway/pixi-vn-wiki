@@ -1,27 +1,50 @@
+# Canvas components functions
 
-## Add Canvas Components
+## Add a canvas components
 
 To add a canvas component to the game window, you can use the `canvas.add`.
 The `add` method have the following parameters:
 
-* `alias`: Is a alias (or id) for the canvas component. There can only be one item in the canvas with that id, if you add an canvas component with the same alias, the previous canvas component will be removed.
+* `alias`: Is a [alias](/start/canvas-alias.md) to identify the component.
 * `component`: The canvas component to add.
 
-```typescript
-import { canvas, Sprite, Assets } from '@drincs/pixi-vn'
+:::tabs
+== startLabel.ts
 
-const sprite = new Sprite()
-const texture = await Assets.load("path/to/image.png")
-sprite.texture = texture
-canvas.add('sprite1', sprite)
+```ts
+import { Assets, canvas, newLabel, Sprite } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        const sprite = new Sprite();
+        const texture = await Assets.load("egg_head");
+        sprite.texture = texture;
+        canvas.add("sprite", sprite);
+    },
+]);
 ```
 
-## Get Canvas Components
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=pm3n7c entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
+## Get a canvas components
 
 To get a canvas component from the game window, you can use the `canvas.find`, if the component does not exist, it will return `undefined`.
 The `find` method have the following parameters:
 
-* `alias`: The alias of the component to get.
+* `alias`: The [alias](/start/canvas-alias.md) of the component to get.
 
 ```typescript
 import { canvas } from '@drincs/pixi-vn'

@@ -135,6 +135,7 @@ export default defineConfig({
                     { text: 'Spine 2D', link: '/start/canvas-spine2d' },
                   ]
                 },
+                { text: 'Components functions', link: '/start/canvas-functions' },
                 { text: 'Position properties', link: '/start/canvas-position' },
                 { text: 'Transitions', link: '/start/transition' },
                 { text: 'Animations and Effects', link: '/start/animations-effects' },
