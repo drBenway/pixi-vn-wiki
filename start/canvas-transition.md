@@ -33,7 +33,11 @@ let sprite = new Sprite(yourTexture)
 showWithDissolveTransition('image1', sprite, { duration: 2 })
 ```
 
-For remove an image with a fade-out effect, you can use the `removeWithDissolveTransition` function.
+The `removeWithDissolveTransition` function remove a canvas element with dissolve transition. This function has the following parameters:
+
+* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
+* `props` (Optional): The properties of the effect
+* `priority` (Optional): The priority of the effect
 
 ```typescript
 import { removeWithDissolveTransition } from '@drincs/pixi-vn'
