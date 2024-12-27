@@ -12,7 +12,7 @@ The dissolve transition when:
 
 This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
 
-The `showWithDissolveTransition` is the function to show a canvas element with dissolve transition. This function has the following parameters:
+The `showWithDissolveTransition` function show a canvas element with dissolve transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
 * `image`: A URL/path, a array of URL/paths or a canvas component. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If URL/path is a video will be added a VideoSprite, else a ImageSprite. If you use a array of URL/path will be added a ImageContainer.
