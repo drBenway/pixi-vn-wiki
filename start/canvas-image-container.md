@@ -128,4 +128,4 @@ export async function defineAssets() {
 
 ## Remove a images container
 
-As for the rest of the canvas components, you can remove a group of images from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-components) function.
+As for the rest of the canvas components, you can remove a group of images from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-a-canvas-components) function.

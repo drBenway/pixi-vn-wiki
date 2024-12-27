@@ -84,7 +84,7 @@ export async function defineAssets() {
 ::: sandbox {template=k6xqwz entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Remove Canvas Components
+## Remove a canvas components
 
 To remove a canvas component from the game window, you can use the `canvas.remove`.
 The `remove` method have the following parameters:

@@ -124,4 +124,4 @@ export async function defineAssets() {
 
 ## Remove a image
 
-As for the rest of the canvas components, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-components) function.
+As for the rest of the canvas components, you can remove an image from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-a-canvas-components) function.

@@ -128,7 +128,7 @@ export async function defineAssets() {
 
 ## Remove a video
 
-As for the rest of the canvas components, you can remove an video from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-canvas-components) function.
+As for the rest of the canvas components, you can remove an video from the canvas using the [`canvas.remove`](/start/canvas-functions#remove-a-canvas-components) function.
 
 ## Play and pause a video
 
