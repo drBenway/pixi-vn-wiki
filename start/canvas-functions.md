@@ -211,30 +211,35 @@ export default class ButtonEvent extends CanvasEvent<Sprite> {
     textureButtonOver?: Texture = undefined;
     textureButton?: Texture = undefined;
     override fn(event: CanvasEventNamesType, sprite: Sprite): void {
-        if (event === "pointerdown") {
-            (sprite as any).isdown = true;
-            sprite.texture = this.textureButtonDown!;
-            sprite.alpha = 1;
-        }
-        else if (event === "pointerup" || event === "pointerupoutside") {
-            (sprite as any).isdown = false;
-            if ((sprite as any).isOver) {
+        switch (event) {
+            case "pointerdown":
+                (sprite as any).isdown = true;
+                sprite.texture = this.textureButtonDown!;
+                sprite.alpha = 1;
+                break;
+            case "pointerup":
+            case "pointerupoutside":
+                (sprite as any).isdown = false;
+                if ((sprite as any).isOver) {
+                    sprite.texture = this.textureButtonOver!;
+                } else {
+                    sprite.texture = this.textureButton!;
+                }
+                break;
+            case "pointerover":
+                (sprite as any).isOver = true;
+                if ((sprite as any).isdown) {
+                    return;
+                }
                 sprite.texture = this.textureButtonOver!;
-            } else {
+                break;
+            case "pointerout":
+                (sprite as any).isOver = false;
+                if ((sprite as any).isdown) {
+                    return;
+                }
                 sprite.texture = this.textureButton!;
-            }
-        } else if (event === "pointerover") {
-            (sprite as any).isOver = true;
-            if ((sprite as any).isdown) {
-                return;
-            }
-            sprite.texture = this.textureButtonOver!;
-        } else if (event === "pointerout") {
-            (sprite as any).isOver = false;
-            if ((sprite as any).isdown) {
-                return;
-            }
-            sprite.texture = this.textureButton!;
+                break;
         }
     }
 }
