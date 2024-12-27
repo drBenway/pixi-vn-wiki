@@ -1,6 +1,6 @@
 # Transition
 
-In Pixi’VN provides various transition effect to show and remove an [canvas component](/start/canvas-components.md) and the possibility to [create your own transitions](#create-your-own-transitions).
+In Pixi’VN provides various transition effect to show or remove an [canvas component](/start/canvas-components.md) and the possibility to [create your own transitions](#create-your-own-transitions).
 
 [( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
