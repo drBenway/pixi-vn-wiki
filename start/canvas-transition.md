@@ -47,16 +47,18 @@ removeWithDissolveTransition('image1', { duration: 2 })
 
 ## Fade transition
 
-Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same alias, the existing image will be removed with a fade-out effect before the new image is shown.
+The fade transition when:
+* shows a component, gradually increases `alpha`. If a component with the same alias exists, the existing component will be removed with a fade-out effect before the new component is shown.
+* removes a component, gradually decreases `alpha`.
 
-( This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade) )
+This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
 
-The `showWithFadeTransition` function has the following parameters:
+The `showWithFadeTransition` function show a canvas element with dissolve transition. This function has the following parameters:
 
-* `alias`: The unique alias of the image. You can use this alias to refer to this image
-* `image`: The imageUrl or the canvas component. If imageUrl is a video, then the VideoSprite is added to the canvas.
-* `props`: The properties of the effect
-* `priority`: ( optional ) The priority of the effect
+* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
+* `image`: A URL/path, a array of URL/paths or a canvas component. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If URL/path is a video will be added a VideoSprite, else a ImageSprite. If you use a array of URL/path will be added a ImageContainer.
+* `props` (Optional): The properties of the effect
+* `priority` (Optional): The priority of the effect
 
 ```typescript
 import { showWithFadeTransition } from '@drincs/pixi-vn'
