@@ -14,7 +14,7 @@ This transition is created with the [`FadeAlphaTicker`](/start/animations-effect
 
 The `showWithDissolveTransition` function has the following parameters:
 
-* `alias`: * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
+* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
 * `image`: The imageUrl or the canvas component. If imageUrl is a video, then the VideoSprite is added to the canvas.
 * `props`: The properties of the effect
 * `priority`: ( optional ) The priority of the effect
