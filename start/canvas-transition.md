@@ -1,19 +1,23 @@
 # Transition
 
-In Pixi’VN provides various transition effect to show and remove an [canvas component](/start/canvas-components.md) and the possibility to [create your own transitions](#create-your-own-transitions).
+In Pixi’VN provides various transition effect to show or remove an [canvas component](/start/canvas-components.md) and the possibility to [create your own transitions](#create-your-own-transitions).
 
 [( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
 ## Dissolve transition
 
-Dissolve transition makes a canvas component visible by gradually increasing the alpha. If exist a image with the same alias, the existing image will be removed when the new image is shown. This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade)
+The dissolve transition when:
+* shows a component, gradually increases `alpha`. If a component with the same alias exists, the component will be removed when the new component transition is complete.
+* removes a component, gradually decreases `alpha`.
 
-The `showWithDissolveTransition` function has the following parameters:
+This transition has been created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
 
-* `alias`: The unique alias of the image. You can use this alias to refer to this image
-* `image`: The imageUrl or the canvas component. If imageUrl is a video, then the VideoSprite is added to the canvas.
-* `props`: The properties of the effect
-* `priority`: ( optional ) The priority of the effect
+The `showWithDissolveTransition` function show a canvas element with dissolve transition. This function has the following parameters:
+
+* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
+* `image`: A URL/path, a array of URL/paths or a canvas component. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If URL/path is a video will be added a VideoSprite, else a ImageSprite. If you use a array of URL/path will be added a ImageContainer.
+* `props` (Optional): The properties of the effect
+* `priority` (Optional): The priority of the effect
 
 ```typescript
 import { showWithDissolveTransition } from '@drincs/pixi-vn'
@@ -29,7 +33,11 @@ let sprite = new Sprite(yourTexture)
 showWithDissolveTransition('image1', sprite, { duration: 2 })
 ```
 
-For remove an image with a fade-out effect, you can use the `removeWithDissolveTransition` function.
+The `removeWithDissolveTransition` function remove a canvas element with dissolve transition. This function has the following parameters:
+
+* `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
+* `props` (Optional): The properties of the effect
+* `priority` (Optional): The priority of the effect
 
 ```typescript
 import { removeWithDissolveTransition } from '@drincs/pixi-vn'
@@ -39,16 +47,18 @@ removeWithDissolveTransition('image1', { duration: 2 })
 
 ## Fade transition
 
-Fade Transition means that the image will be shown with a fade-in effect. If exist a image with the same alias, the existing image will be removed with a fade-out effect before the new image is shown.
+The fade transition when:
+* shows a component, gradually increases `alpha`. If a component with the same alias exists, the existing component will be removed with a fade-out effect before the new component is shown.
+* removes a component, gradually decreases `alpha`.
 
-( This transition is created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade) )
+This transition has been created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
 
-The `showWithFadeTransition` function has the following parameters:
+The `showWithFadeTransition` function show a canvas element with fade transition. This function has the following parameters:
 
-* `alias`: The unique alias of the image. You can use this alias to refer to this image
-* `image`: The imageUrl or the canvas component. If imageUrl is a video, then the VideoSprite is added to the canvas.
-* `props`: The properties of the effect
-* `priority`: ( optional ) The priority of the effect
+* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
+* `image`: A URL/path, a array of URL/paths or a canvas component. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If URL/path is a video will be added a VideoSprite, else a ImageSprite. If you use a array of URL/path will be added a ImageContainer.
+* `props` (Optional): The properties of the effect
+* `priority` (Optional): The priority of the effect
 
 ```typescript
 import { showWithFadeTransition } from '@drincs/pixi-vn'
@@ -64,7 +74,11 @@ let sprite = new Sprite(yourTexture)
 showWithFadeTransition('image1', sprite, { duration: 2 })
 ```
 
-For remove an image with a fade-out effect, you can use the `removeWithFadeTransition` function.
+The `removeWithFadeTransition` function remove a canvas element with fade transition. This function has the following parameters:
+
+* `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
+* `props` (Optional): The properties of the effect
+* `priority` (Optional): The priority of the effect
 
 ```typescript
 import { removeWithFadeTransition } from '@drincs/pixi-vn'
@@ -84,7 +98,7 @@ This page is under construction.
 
 This page is under construction.
 
-## Create your own transitions
+## Create your own transition
 
 Create a transition is very simple, you can combine more [Animations and Effects](/start/animations-effects) to create your own transition.
 

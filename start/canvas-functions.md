@@ -5,7 +5,7 @@
 To add a canvas component to the game window, you can use the `canvas.add`.
 The `add` method have the following parameters:
 
-* `alias`: Is a [alias](/start/canvas-alias.md) to identify the component.
+* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
 * `component`: The canvas component to add.
 
 :::tabs
