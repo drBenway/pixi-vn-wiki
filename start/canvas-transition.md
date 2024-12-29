@@ -1,12 +1,13 @@
 # Transition
 
-In Pixi’VN provides various transition effect to show or remove an [canvas component](/start/canvas-components.md) and the possibility to [create your own transitions](#create-your-own-transitions).
+In Pixi’VN provides various transition effect to show or remove an [canvas component](/start/canvas-components.md) and the possibility to [create your own transitions](#create-your-own-transition).
 
 [( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
 
 ## Dissolve transition
 
 The dissolve transition when:
+
 * shows a component, gradually increases `alpha`. If a component with the same alias exists, the component will be removed when the new component transition is complete.
 * removes a component, gradually decreases `alpha`.
 
@@ -48,6 +49,7 @@ removeWithDissolveTransition('image1', { duration: 2 })
 ## Fade transition
 
 The fade transition when:
+
 * shows a component, gradually increases `alpha`. If a component with the same alias exists, the existing component will be removed with a fade-out effect before the new component is shown.
 * removes a component, gradually decreases `alpha`.
 
