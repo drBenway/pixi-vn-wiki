@@ -17,8 +17,8 @@ The `showWithDissolveTransition` function show a canvas element with dissolve tr
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
 * `image`: A URL/path, a array of URL/paths or a canvas component. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If URL/path is a video will be added a VideoSprite, else a ImageSprite. If you use a array of URL/path will be added a ImageContainer.
-* `props` (Optional): The properties of the effect
-* `priority` (Optional): The priority of the effect
+* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
+* `priority` (Optional): The priority of the effect.
 
 ```typescript
 import { showWithDissolveTransition } from '@drincs/pixi-vn'
@@ -37,8 +37,8 @@ showWithDissolveTransition('image1', sprite, { duration: 2 })
 The `removeWithDissolveTransition` function remove a canvas element with dissolve transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
-* `props` (Optional): The properties of the effect
-* `priority` (Optional): The priority of the effect
+* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
+* `priority` (Optional): The priority of the effect.
 
 ```typescript
 import { removeWithDissolveTransition } from '@drincs/pixi-vn'
@@ -59,8 +59,8 @@ The `showWithFadeTransition` function show a canvas element with fade transition
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
 * `image`: A URL/path, a array of URL/paths or a canvas component. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If URL/path is a video will be added a VideoSprite, else a ImageSprite. If you use a array of URL/path will be added a ImageContainer.
-* `props` (Optional): The properties of the effect
-* `priority` (Optional): The priority of the effect
+* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
+* `priority` (Optional): The priority of the effect.
 
 ```typescript
 import { showWithFadeTransition } from '@drincs/pixi-vn'
@@ -79,8 +79,8 @@ showWithFadeTransition('image1', sprite, { duration: 2 })
 The `removeWithFadeTransition` function remove a canvas element with fade transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
-* `props` (Optional): The properties of the effect
-* `priority` (Optional): The priority of the effect
+* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
+* `priority` (Optional): The priority of the effect.
 
 ```typescript
 import { removeWithFadeTransition } from '@drincs/pixi-vn'
