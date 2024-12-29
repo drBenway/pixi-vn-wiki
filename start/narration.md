@@ -12,7 +12,7 @@ With the [PixiVNJson](/advanced/pixi-vn-json.md) implementation you have the opt
 |---|---|---|---|
 | Ease of learning | ❌ | ✅ | ✅ |
 | Is it a typed language? | ✅ | ❌ | ❌ |
-| Visual Studio Code extension | ✅ | ❌ | ✅ |
+| Visual Studio Code extension | ✅ | ✅ | ✅ |
 | Translation possibility | ✅ | ✅ | ✅ |
 | Auto-generation of translation files | ❌ | ✅ ([Under development](https://github.com/DRincs-Productions/pixi-vn-json/issues/3)) | ✅ (Under development) |
 | Ability to use non-Pixi’VN features | ✅ | ✅  ([custom # script](/ink/ink-hashtag.md)) | ✅ (using $ - Under development) |
