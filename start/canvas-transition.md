@@ -25,31 +25,55 @@ The `showWithDissolveTransition` function show a canvas element with dissolve tr
 * `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
-```typescript
-import { showWithDissolveTransition } from '@drincs/pixi-vn'
-
-showWithDissolveTransition('image1', 'path/to/image.png', { duration: 2 })
-```
-
-```typescript
-import { showWithDissolveTransition } from '@drincs/pixi-vn'
-
-let sprite = new Sprite(yourTexture)
-// you can pass a canvas component
-showWithDissolveTransition('image1', sprite, { duration: 2 })
-```
-
 The `removeWithDissolveTransition` function remove a canvas element with dissolve transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
 * `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
-```typescript
-import { removeWithDissolveTransition } from '@drincs/pixi-vn'
+:::tabs
+== startLabel.ts
 
-removeWithDissolveTransition('image1', { duration: 2 })
+```ts
+import { Assets, newLabel, removeWithDissolveTransition, showWithDissolveTransition } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+        async () => {
+            await showWithDissolveTransition("alien", "egg_head", { duration: 10 }); // [!code focus]
+            await showWithDissolveTransition("human", { // [!code focus]
+                value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
+                options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
+            }); // [!code focus]
+        },
+        async () => {
+            await showWithDissolveTransition("alien", "flower_top"); // [!code focus]
+            removeWithDissolveTransition("human"); // [!code focus]
+        },
+], {
+    onLoadingLabel: async () => {
+        await Assets.load(["egg_head", "m01-mouth", "m01-body", "m01-eyes"]);
+    },
+});
 ```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+    Assets.add({ alias: "flower_top", src: "https://pixijs.com/assets/flowerTop.png" });
+    Assets.add({ alias: "m01-body", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-body.webp?alt=media" });
+    Assets.add({ alias: "m01-eyes", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-eyes-smile.webp?alt=media" });
+    Assets.add({ alias: "m01-mouth", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-mouth-smile00.webp?alt=media" });
+}
+```
+
+:::
+
+::: sandbox {template=yzslsf entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Fade transition
 
