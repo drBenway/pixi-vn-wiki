@@ -38,17 +38,17 @@ The `removeWithDissolveTransition` function remove a canvas element with dissolv
 import { Assets, newLabel, removeWithDissolveTransition, showWithDissolveTransition } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
-        async () => {
-            await showWithDissolveTransition("alien", "egg_head", { duration: 5 }); // [!code focus]
-            await showWithDissolveTransition("human", { // [!code focus]
-                value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
-                options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
-            }); // [!code focus]
-        },
-        async () => {
-            await showWithDissolveTransition("alien", "flower_top"); // [!code focus]
-            removeWithDissolveTransition("human"); // [!code focus]
-        },
+    async () => {
+        await showWithDissolveTransition("alien", "egg_head", { duration: 5 }); // [!code focus]
+        await showWithDissolveTransition("human", { // [!code focus]
+            value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
+            options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
+        }); // [!code focus]
+    },
+    async () => {
+        await showWithDissolveTransition("alien", "flower_top"); // [!code focus]
+        removeWithDissolveTransition("human"); // [!code focus]
+    },
 ], {
     onLoadingLabel: async () => {
         await Assets.load(["egg_head", "m01-mouth", "m01-body", "m01-eyes"]);
@@ -109,17 +109,17 @@ The `removeWithFadeTransition` function remove a canvas element with fade transi
 import { Assets, newLabel, removeWithDissolveTransition, showWithFadeTransition } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
-        async () => {
-            await showWithFadeTransition("alien", "egg_head", { duration: 5 }); // [!code focus]
-            await showWithFadeTransition("human", { // [!code focus]
-                value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
-                options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
-            }); // [!code focus]
-        },
-        async () => {
-            await showWithFadeTransition("alien", "flower_top"); // [!code focus]
-            removeWithFadeTransition("human"); // [!code focus]
-        },
+    async () => {
+        await showWithFadeTransition("alien", "egg_head", { duration: 5 }); // [!code focus]
+        await showWithFadeTransition("human", { // [!code focus]
+            value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
+            options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
+        }); // [!code focus]
+    },
+    async () => {
+        await showWithFadeTransition("alien", "flower_top"); // [!code focus]
+        removeWithFadeTransition("human"); // [!code focus]
+    },
 ], {
     onLoadingLabel: async () => {
         await Assets.load(["egg_head", "m01-mouth", "m01-body", "m01-eyes"]);
@@ -148,7 +148,76 @@ export async function defineAssets() {
 
 ## Move in/out transition
 
-This page is under construction.
+The move in/out transition when:
+
+* shows a component, moves the component from outside of the right or left ot top or bottom end of the canvas to the canvas component position. If a component with the same alias exists, the existing component will be removed.
+* removes a component, moves the component from a position to outside of the right or left ot top or bottom end of the canvas.
+
+This transition has been created with the [`MoveTicker`](/start/animations-effects.md#move).
+
+The `moveIn` function show a canvas element with move in transition. This function has the following parameters:
+
+* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
+* `image`: The image to show. It can be:
+  * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
+  * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
+  * a [canvas component](/start/canvas-components.md).
+* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/animations-effects.md#move) with following properties:
+  * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
+* `priority` (Optional): The priority of the effect.
+
+The `moveOut` function remove a canvas element with move out transition. This function has the following parameters:
+
+* `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
+* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/animations-effects.md#move) with following properties:
+  * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
+* `priority` (Optional): The priority of the effect.
+
+:::tabs
+== startLabel.ts
+
+```ts
+import { Assets, moveIn, moveOut, newLabel } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await moveIn("alien", "egg_head", { direction: "up" }); // [!code focus]
+        await moveIn("human", { // [!code focus]
+            value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
+            options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
+        }); // [!code focus]
+    },
+    async () => {
+        await moveIn("alien", "flower_top", { direction: "up" }); // [!code focus]
+        moveOut("human"); // [!code focus]
+    },
+], {
+    onLoadingLabel: async () => {
+        await Assets.load(["egg_head", "m01-mouth", "m01-body", "m01-eyes"]);
+    },
+});
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+    Assets.add({ alias: "flower_top", src: "https://pixijs.com/assets/flowerTop.png" });
+    Assets.add({ alias: "m01-body", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-body.webp?alt=media" });
+    Assets.add({ alias: "m01-eyes", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-eyes-smile.webp?alt=media" });
+    Assets.add({ alias: "m01-mouth", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-mouth-smile00.webp?alt=media" });
+}
+```
+
+:::
+
+::: sandbox {template=z8gsyy entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Zoom in/out transition
 
