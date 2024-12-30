@@ -248,6 +248,7 @@ export default defineConfig({
       { icon: "itchdotio", link: "https://drincs-productions.itch.io/pixi-vn" },
       { icon: "reddit", link: "https://www.reddit.com/r/PixiVN" },
       { icon: "patreon", link: "https://www.patreon.com/c/pixi_vn" },
+      { icon: "pixiv", link: "https://pixi-vn.fanbox.cc" },
     ],
 
     search: {

@@ -16,7 +16,12 @@ This transition has been created with the [`FadeAlphaTicker`](/start/animations-
 The `showWithDissolveTransition` function show a canvas element with dissolve transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
-* `image`: A URL/path, a array of URL/paths or a canvas component. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If URL/path is a video will be added a VideoSprite, else a ImageSprite. If you use a array of URL/path will be added a ImageContainer.
+* `image`: The image to show. It can be:
+  * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
+  * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
+  * a [canvas component](/start/canvas-components.md).
 * `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
@@ -58,7 +63,12 @@ This transition has been created with the [`FadeAlphaTicker`](/start/animations-
 The `showWithFadeTransition` function show a canvas element with fade transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
-* `image`: A URL/path, a array of URL/paths or a canvas component. If you have initialized the [asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start), you can use the alias of the texture. If URL/path is a video will be added a VideoSprite, else a ImageSprite. If you use a array of URL/path will be added a ImageContainer.
+* `image`: The image to show. It can be:
+  * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
+  * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
+  * a [canvas component](/start/canvas-components.md).
 * `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
