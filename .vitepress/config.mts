@@ -247,6 +247,7 @@ export default defineConfig({
       { icon: 'npm', link: 'https://www.npmjs.com/package/@drincs/pixi-vn' },
       { icon: "itchdotio", link: "https://drincs-productions.itch.io/pixi-vn" },
       { icon: "reddit", link: "https://www.reddit.com/r/PixiVN" },
+      { icon: "patreon", link: "https://www.patreon.com/c/pixi_vn" },
     ],
 
     search: {
