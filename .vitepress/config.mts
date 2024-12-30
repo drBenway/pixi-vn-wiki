@@ -245,9 +245,9 @@ export default defineConfig({
       { icon: 'discord', link: 'https://discord.gg/E95FZWakzp' },
       { icon: 'github', link: 'https://github.com/DRincs-Productions/pixi-vn' },
       { icon: 'npm', link: 'https://www.npmjs.com/package/@drincs/pixi-vn' },
-      { icon: "itchdotio", link: "https://drincs-productions.itch.io/pixi-vn" },
-      { icon: "reddit", link: "https://www.reddit.com/r/PixiVN" },
       { icon: "patreon", link: "https://www.patreon.com/c/pixi_vn" },
+      { icon: "reddit", link: "https://www.reddit.com/r/PixiVN" },
+      { icon: "itchdotio", link: "https://drincs-productions.itch.io/pixi-vn" },
       { icon: "pixiv", link: "https://pixi-vn.fanbox.cc" },
     ],
 
