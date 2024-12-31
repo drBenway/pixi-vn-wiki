@@ -256,15 +256,15 @@ import { Assets, newLabel, pushIn, pushOut } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
     async () => {
-        await pushIn("alien", "egg_head");
-        await pushIn("human", {
-            value: ["m01-body", "m01-eyes", "m01-mouth"],
-            options: { scale: 0.5, xAlign: 0.7 },
-        });
+        await pushIn("alien", "egg_head"); // [!code focus]
+        await pushIn("human", { // [!code focus]
+            value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
+            options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
+        }); // [!code focus]
     },
     async () => {
-        await pushIn("alien", "flower_top", { direction: "up" });
-        pushOut("human");
+        await pushIn("alien", "flower_top", { direction: "up" }); // [!code focus]
+        pushOut("human"); // [!code focus]
     },
 ], {
     onLoadingLabel: async () => {
@@ -329,15 +329,15 @@ import { Assets, newLabel, zoomIn, zoomOut } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
     async () => {
-        await zoomIn("alien", "egg_head");
-        await zoomIn("human", {
-        value: ["m01-body", "m01-eyes", "m01-mouth"],
-        options: { scale: 0.5, xAlign: 0.7 },
-        });
+        await zoomIn("alien", "egg_head"); // [!code focus]
+        await zoomIn("human", { // [!code focus]
+            value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
+            options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
+        }); // [!code focus]
     },
     async () => {
-        await zoomIn("alien", "flower_top");
-        zoomOut("human");
+        await zoomIn("alien", "flower_top"); // [!code focus]
+        zoomOut("human"); // [!code focus]
     },
 ], {
     onLoadingLabel: async () => {
