@@ -389,7 +389,7 @@ export async function showWithDissolveTransition(
         ...props,
         type: "show",
         startOnlyIfHaveTexture: true,
-    }, 10, priority)
+    }, undefined, priority)
     let id = canvas.addTicker(alias, effect)
     if (canvasElement.haveEmptyTexture) {
         await canvasElement.load()
@@ -415,11 +415,11 @@ export async function showWithDissolveTransition(
     alias: string,
     canvasElement: ImageSprite,
     props: FadeAlphaTickerProps && {
-        mustBeCompletedBeforeNextStep?: boolean // [!code focus]
+        mustBeCompletedBeforeNextStep?: boolean // [!code ++]
     } = {},
     priority?: UPDATE_PRIORITY,
 ): Promise<string[] | undefined> {
-    let mustBeCompletedBeforeNextStep = props.mustBeCompletedBeforeNextStep ?? true // [!code focus]
+    let mustBeCompletedBeforeNextStep = props.mustBeCompletedBeforeNextStep ?? true // [!code ++]
     canvas.add(alias, canvasElement)
     canvasElement.alpha = 0
 
@@ -427,11 +427,11 @@ export async function showWithDissolveTransition(
         ...props,
         type: "show",
         startOnlyIfHaveTexture: true,
-    }, 10, priority)
+    }, undefined, priority)
     let id = canvas.addTicker(alias, effect)
-    if (id) { // [!code focus]
-        mustBeCompletedBeforeNextStep && canvas.tickerMustBeCompletedBeforeNextStep({ id: id }) // [!code focus]
-    } // [!code focus]
+    if (id) { // [!code ++]
+        mustBeCompletedBeforeNextStep && canvas.tickerMustBeCompletedBeforeNextStep({ id: id }) // [!code ++]
+    } // [!code ++]
     if (canvasElement.haveEmptyTexture) {
         await canvasElement.load()
     }
@@ -449,35 +449,6 @@ If a component with the same alias already exists, you can
 * Remove the previous component with a transition
 * Remove the previous component when the new component transition is complete
 
-#### Remove the previous component with a transition
-
-```typescript
-import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
-
-export async function showWithDissolveTransition(
-    alias: string,
-    canvasElement: ImageSprite,
-    props: FadeAlphaTickerProps = {},
-    priority?: UPDATE_PRIORITY,
-): Promise<string[] | undefined> {
-    canvas.add(alias, canvasElement)
-    canvasElement.alpha = 0
-
-    let effect = new FadeAlphaTicker({
-        ...props,
-        type: "show",
-        startOnlyIfHaveTexture: true,
-    }, 10, priority)
-    let id = canvas.addTicker(alias, effect)
-    if (canvasElement.haveEmptyTexture) {
-        await canvasElement.load()
-    }
-    if (id) {
-        return [id]
-    }
-}
-```
-
 #### Remove the previous component when the new component transition is complete
 
 ```typescript
@@ -489,23 +460,23 @@ export async function showWithDissolveTransition(
     props: FadeAlphaTickerProps = {},
     priority?: UPDATE_PRIORITY,
 ): Promise<string[] | undefined> {
-    let oldCanvasAlias: string | undefined = undefined
-    if (canvas.find(alias)) {
-        oldCanvasAlias = alias + "_temp_disolve"
-        canvas.editAlias(alias, oldCanvasAlias)
-    }
+    let oldCanvasAlias: string | undefined = undefined // [!code ++]
+    if (canvas.find(alias)) { // [!code ++]
+        oldCanvasAlias = alias + "_temp_disolve" // [!code ++]
+        canvas.editAlias(alias, oldCanvasAlias) // [!code ++]
+    } // [!code ++]
 
     canvas.add(alias, canvasElement)
-    oldCanvasAlias && canvas.copyCanvasElementProperty(oldCanvasAlias, alias)
-    oldCanvasAlias && canvas.transferTickers(oldCanvasAlias, alias, "duplicate")
+    oldCanvasAlias && canvas.copyCanvasElementProperty(oldCanvasAlias, alias) // [!code ++]
+    oldCanvasAlias && canvas.transferTickers(oldCanvasAlias, alias, "duplicate") // [!code ++]
     canvasElement.alpha = 0
 
     let effect = new FadeAlphaTicker({
         ...props,
         type: "show",
-        aliasToRemoveAfter: oldCanvasAlias,
+        aliasToRemoveAfter: oldCanvasAlias, // [!code ++]
         startOnlyIfHaveTexture: true,
-    }, 10, priority)
+    }, undefined, priority)
     let id = canvas.addTicker(alias, effect)
     if (canvasElement.haveEmptyTexture) {
         await canvasElement.load()
@@ -513,5 +484,71 @@ export async function showWithDissolveTransition(
     if (id) {
         return [id]
     }
+}
+```
+
+#### Remove the previous component with a transition
+
+```typescript
+import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY, Pause } from "@drincs/pixi-vn"
+
+export async function showWithFadeTransition(
+    alias: string,
+    canvasElement: ImageSprite,
+    props: FadeAlphaTickerProps = {},
+    priority?: UPDATE_PRIORITY,
+): Promise<string[] | undefined> {
+    let oldCanvasAlias: string | undefined = undefined // [!code ++]
+    if (canvas.find(alias)) { // [!code ++]
+        oldCanvasAlias = alias + "_temp_fade" // [!code ++]
+        canvas.editAlias(alias, oldCanvasAlias) // [!code ++]
+    } // [!code ++]
+
+    canvas.add(alias, canvasElement)
+    oldCanvasAlias && canvas.copyCanvasElementProperty(oldCanvasAlias, alias) // [!code ++]
+    oldCanvasAlias && canvas.transferTickers(oldCanvasAlias, alias, "duplicate") // [!code ++]
+    canvasElement.alpha = 0
+
+    let res: undefined | string[] = undefined // [!code ++]
+
+    if (oldCanvasAlias) { // [!code ++]
+        let id1 = canvas.addTickersSteps(oldCanvasAlias, [ // [!code ++]
+            new FadeAlphaTicker({ // [!code ++]
+                ...props, // [!code ++]
+                type: "hide", // [!code ++]
+                startOnlyIfHaveTexture: true, // [!code ++]
+            }, undefined, priority), // [!code ++]
+        ]) // [!code ++]
+        if (id1) { // [!code ++]
+            res = [id1] // [!code ++]
+        } // [!code ++]
+        let id2 = canvas.addTickersSteps(alias, [ // [!code ++]
+            Pause(props.duration || 1), // [!code ++]
+            new FadeAlphaTicker({ // [!code ++]
+                ...props, // [!code ++]
+                type: "show", // [!code ++]
+                startOnlyIfHaveTexture: true, // [!code ++]
+                aliasToRemoveAfter: oldCanvasAlias, // [!code ++]
+            }, undefined, priority) // [!code ++]
+        ]) // [!code ++]
+        if (id2) { // [!code ++]
+            res ? res.push(id2) : res = [id2] // [!code ++]
+        } // [!code ++]
+    } // [!code ++]
+    else { // [!code ++]
+        let effect = new FadeAlphaTicker({
+            ...props,
+            type: "show",
+            startOnlyIfHaveTexture: true,
+        }, undefined, priority)
+        let id = canvas.addTicker(alias, effect)
+        if (id) { // [!code ++]
+            res = [id] // [!code ++]
+        } // [!code ++]
+    } // [!code ++]
+    if (canvasElement.haveEmptyTexture) {
+        await canvasElement.load()
+    }
+    return res // [!code ++]
 }
 ```
