@@ -399,3 +399,92 @@ export async function showWithDissolveTransition(
     }
 }
 ```
+
+### Force completion at the end of the step
+
+```typescript
+import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
+
+export async function showWithDissolveTransition(
+    alias: string,
+    canvasElement: ImageSprite,
+    props: FadeAlphaTickerProps = {},
+    priority?: UPDATE_PRIORITY,
+): Promise<string[] | undefined> {
+    canvas.add(alias, canvasElement)
+    canvasElement.alpha = 0
+
+    let effect = new FadeAlphaTicker({
+        ...props,
+        type: "show",
+        startOnlyIfHaveTexture: true,
+    }, 10, priority)
+    let id = canvas.addTicker(alias, effect)
+    if (canvasElement.haveEmptyTexture) {
+        await canvasElement.load()
+    }
+    if (id) {
+        return [id]
+    }
+}
+```
+
+### If a component with the same alias exists
+
+#### Remove the previous component with a transition
+
+```typescript
+import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
+
+export async function showWithDissolveTransition(
+    alias: string,
+    canvasElement: ImageSprite,
+    props: FadeAlphaTickerProps = {},
+    priority?: UPDATE_PRIORITY,
+): Promise<string[] | undefined> {
+    canvas.add(alias, canvasElement)
+    canvasElement.alpha = 0
+
+    let effect = new FadeAlphaTicker({
+        ...props,
+        type: "show",
+        startOnlyIfHaveTexture: true,
+    }, 10, priority)
+    let id = canvas.addTicker(alias, effect)
+    if (canvasElement.haveEmptyTexture) {
+        await canvasElement.load()
+    }
+    if (id) {
+        return [id]
+    }
+}
+```
+
+#### Remove the previous component when the new component transition is complete
+
+```typescript
+import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
+
+export async function showWithDissolveTransition(
+    alias: string,
+    canvasElement: ImageSprite,
+    props: FadeAlphaTickerProps = {},
+    priority?: UPDATE_PRIORITY,
+): Promise<string[] | undefined> {
+    canvas.add(alias, canvasElement)
+    canvasElement.alpha = 0
+
+    let effect = new FadeAlphaTicker({
+        ...props,
+        type: "show",
+        startOnlyIfHaveTexture: true,
+    }, 10, priority)
+    let id = canvas.addTicker(alias, effect)
+    if (canvasElement.haveEmptyTexture) {
+        await canvasElement.load()
+    }
+    if (id) {
+        return [id]
+    }
+}
+```
