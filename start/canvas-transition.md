@@ -219,11 +219,11 @@ export async function defineAssets() {
 ::: sandbox {template=z8gsyy entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Zoom in/out transition
+## Push in/out transition
 
 This page is under construction.
 
-## Push in/out transition
+## Zoom in/out transition
 
 This page is under construction.
 
