@@ -400,7 +400,7 @@ export async function showWithDissolveTransition(
 }
 ```
 
-### Force completion at the end of the step
+### Force completion of the transition at the end of the step
 
 ```typescript
 import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
@@ -408,9 +408,12 @@ import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIO
 export async function showWithDissolveTransition(
     alias: string,
     canvasElement: ImageSprite,
-    props: FadeAlphaTickerProps = {},
+    props: FadeAlphaTickerProps && {
+        mustBeCompletedBeforeNextStep?: boolean // [!code focus]
+    } = {},
     priority?: UPDATE_PRIORITY,
 ): Promise<string[] | undefined> {
+    let mustBeCompletedBeforeNextStep = props.mustBeCompletedBeforeNextStep ?? true // [!code focus]
     canvas.add(alias, canvasElement)
     canvasElement.alpha = 0
 
@@ -420,6 +423,9 @@ export async function showWithDissolveTransition(
         startOnlyIfHaveTexture: true,
     }, 10, priority)
     let id = canvas.addTicker(alias, effect)
+    if (id) { // [!code focus]
+        mustBeCompletedBeforeNextStep && canvas.tickerMustBeCompletedBeforeNextStep({ id: id }) // [!code focus]
+    } // [!code focus]
     if (canvasElement.haveEmptyTexture) {
         await canvasElement.load()
     }
