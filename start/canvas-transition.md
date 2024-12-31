@@ -402,6 +402,12 @@ export async function showWithDissolveTransition(
 
 ### Force completion of the transition at the end of the step
 
+It is recommended to create a transition that forces the completion of the transition at the end of the step.
+
+To do this, you can use the [`canvas.tickerMustBeCompletedBeforeNextStep` function](/start/tickers.md#force-completion-of-the-transition-at-the-end-of-the-step).
+
+This example shows how to create a transition that forces the completion of the transition at the end of the step.
+
 ```typescript
 import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
 
@@ -435,7 +441,13 @@ export async function showWithDissolveTransition(
 }
 ```
 
-### If a component with the same alias exists
+### if a component with the same alias already exists
+
+If a component with the same alias already exists, you can
+
+* Let it be replaced
+* Remove the previous component with a transition
+* Remove the previous component when the new component transition is complete
 
 #### Remove the previous component with a transition
 
@@ -477,12 +489,21 @@ export async function showWithDissolveTransition(
     props: FadeAlphaTickerProps = {},
     priority?: UPDATE_PRIORITY,
 ): Promise<string[] | undefined> {
+    let oldCanvasAlias: string | undefined = undefined
+    if (canvas.find(alias)) {
+        oldCanvasAlias = alias + "_temp_disolve"
+        canvas.editAlias(alias, oldCanvasAlias)
+    }
+
     canvas.add(alias, canvasElement)
+    oldCanvasAlias && canvas.copyCanvasElementProperty(oldCanvasAlias, alias)
+    oldCanvasAlias && canvas.transferTickers(oldCanvasAlias, alias, "duplicate")
     canvasElement.alpha = 0
 
     let effect = new FadeAlphaTicker({
         ...props,
         type: "show",
+        aliasToRemoveAfter: oldCanvasAlias,
         startOnlyIfHaveTexture: true,
     }, 10, priority)
     let id = canvas.addTicker(alias, effect)
