@@ -29,32 +29,6 @@ export const startLabel = newLabel("start_label",
 )
 ```
 
-## How to force completion of an Transition/Effect/Animation in the next step?
-
-In Pixi’VN, it is possible to force the completion of a Transition/Effect/Animation in the next step in many cases it can be useful.
-
-Transition/Effect/Animation usually increment a variable until it reaches a target, after which it is closed.
-
-In this case you can simply set the variable equal to the objective to be achieved in the next step.
-
-For example:
-
-```typescript
-export const startLabel = newLabel("start_label",
-    [
-        () => {
-            showWithDissolveTransition("alien", 'https://pixijs.com/assets/eggHead.png', 0.01)
-        },
-        () => {
-            let alien = canvas.find<ImageSprite>("alien")
-            if (alien) alien.alpha = 1
-        },
-    ]
-)
-```
-
-Also, you can [unlink the Transition/Effect/Animation](/start/tickers) from the canvas component in the next step.
-
 ## Skip step and Auto Forward
 
 In a visual novel, It's very helpful to have the option to skip a step or auto forward to the next step.

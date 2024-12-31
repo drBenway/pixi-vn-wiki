@@ -413,7 +413,3 @@ export async function showWithDissolveTransition<T extends CanvasBase<any> | str
 ```
 
 The Pixi’VN Team welcomes new proposals/sharing to make this library more and more complete. So you can create a [issue](https://github.com/DRincs-Productions/pixi-vn/issues) to share/propose it.
-
-## How to force completion of an Transition in the next step?
-
-[Read this](/other/various-answers#how-to-force-completion-of-an-transition-effect-animation-in-the-next-step)
