@@ -367,49 +367,35 @@ export async function defineAssets() {
 
 ## Create your own transition
 
-Create a transition is very simple, you can combine more [Animations and Effects](/start/animations-effects) to create your own transition.
+Create your own transition is very simple, you can combine more [Animations and Effects](/start/animations-effects) to create your own transition.
 
-For example, the function `showWithDissolveTransition` is a combination of the [`FadeAlphaTicker`](/start/animations-effects.md#fade) and the `showImage` functions.
+( The Pixi’VN Team welcomes new proposals/sharing to make this library more and more complete. So you can create a [discussion](https://github.com/DRincs-Productions/pixi-vn/discussions/categories/show-and-tell) to share/propose it. )
+
+To better understand how to create one, a simplified version of [`showWithDissolveTransition`](#dissolve-transition) will be left as an example below.
 
 ```typescript
-export async function showWithDissolveTransition<T extends CanvasBase<any> | string = string>(
-    alias: string,
-    image: T,
-    props: Omit<FadeAlphaTickerProps, "type" | aliasToRemoveAfterType | "startOnlyIfHaveTexture"> = {},
-    priority?: UPDATE_PRIORITY,
-): Promise<void> {
-    let oldCanvasAlias: string | undefined = undefined
-    // if exist a canvas component with the same alias, then the image is replaced and the first image is removed after the effect is done
-    if (canvas.find(alias)) {
-        oldCanvasAlias = alias + "_temp_disolve"
-        // so is necessary to change the alias of the old canvas component
-        // and remove the old canvas component after the effect is done
-        canvas.editAlias(alias, oldCanvasAlias)
-    }
+import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
 
-    let canvasElement: CanvasBase<any>
-    if (typeof image === "string") {
-        canvasElement = addImage(alias, image)
-    }
-    else {
-        canvasElement = image
-        canvas.add(alias, canvasElement)
-    }
-    if (canvasElement instanceof ImageSprite && canvasElement.texture?.label == "EMPTY") {
-        await canvasElement.load()
-    }
+export async function showWithDissolveTransition(
+    alias: string,
+    canvasElement: ImageSprite,
+    props: FadeAlphaTickerProps = {},
+    priority?: UPDATE_PRIORITY,
+): Promise<string[] | undefined> {
+    canvas.add(alias, canvasElement)
     canvasElement.alpha = 0
 
     let effect = new FadeAlphaTicker({
         ...props,
         type: "show",
-        // After the effect is done, the old canvas component is removed
-        aliasToRemoveAfter: oldCanvasAlias,
         startOnlyIfHaveTexture: true,
     }, 10, priority)
-    canvas.addTicker(alias, effect)
-    return
+    let id = canvas.addTicker(alias, effect)
+    if (canvasElement.haveEmptyTexture) {
+        await canvasElement.load()
+    }
+    if (id) {
+        return [id]
+    }
 }
 ```
-
-The Pixi’VN Team welcomes new proposals/sharing to make this library more and more complete. So you can create a [issue](https://github.com/DRincs-Productions/pixi-vn/issues) to share/propose it.
