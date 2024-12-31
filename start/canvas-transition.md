@@ -451,6 +451,8 @@ If a component with the same alias already exists, you can
 
 #### Remove the previous component when the new component transition is complete
 
+To remove the previous component when the new component transition is complete, you can use the `aliasToRemoveAfter` property. The `aliasToRemoveAfter` property is the alias of the component to remove when the new component transition is complete, it is available in all [Animations and Effects](/start/animations-effects) provided by Pixi’VN.
+
 ```typescript
 import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
 
@@ -488,6 +490,10 @@ export async function showWithDissolveTransition(
 ```
 
 #### Remove the previous component with a transition
+
+To remove the previous component with a transition, you can run a  [Animations or Effects](/start/animations-effects) to remove the previous component before the new component transition is complete.
+
+To do this you will also need to use many other functions depending on the transition you are creating.
 
 ```typescript
 import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY, Pause } from "@drincs/pixi-vn"
