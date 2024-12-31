@@ -144,4 +144,9 @@ canvas.addTickersSteps("alien", [
 ```
 
 <!-- TODO: paused tiker -->
+
+### Force completion of the transition at the end of the step
+
 <!-- TODO: tickerMustBeCompletedBeforeNextStep -->
+
+This page is under construction.
