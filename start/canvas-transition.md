@@ -150,7 +150,7 @@ export async function defineAssets() {
 
 The move in/out transition when:
 
-* shows a component, moves the component from outside of the right or left ot top or bottom end of the canvas to the canvas component position. If a component with the same alias exists, the existing component will be removed.
+* shows a component, moves the component from outside of the right or left ot top or bottom end of the canvas to the canvas component position. If a component with the same alias exists, the existing component will be removed with a move-out effect before the new component is shown.
 * removes a component, moves the component from a position to outside of the right or left ot top or bottom end of the canvas.
 
 This transition has been created with the [`MoveTicker`](/start/animations-effects.md#move).
@@ -221,7 +221,32 @@ export async function defineAssets() {
 
 ## Push in/out transition
 
-This page is under construction.
+The push in/out transition when:
+
+* shows a component, moves the component from outside of the right or left ot top or bottom end of the canvas to the canvas component position. If a component with the same alias exists, the existing component will be removed with a push-out effect while the transition of the new component is in progress.
+* removes a component, moves the component from a position to outside of the right or left ot top or bottom end of the canvas.
+
+This transition has been created with the [`MoveTicker`](/start/animations-effects.md#move).
+
+The `pushIn` function show a canvas element with push in transition. This function has the following parameters:
+
+* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
+* `image`: The image to show. It can be:
+  * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
+  * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
+  * a [canvas component](/start/canvas-components.md).
+* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/animations-effects.md#move) with following properties:
+  * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
+* `priority` (Optional): The priority of the effect.
+
+The `pushOut` function remove a canvas element with push out transition. This function has the following parameters:
+
+* `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
+* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/animations-effects.md#move) with following properties:
+  * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
+* `priority` (Optional): The priority of the effect.
 
 ## Zoom in/out transition
 
