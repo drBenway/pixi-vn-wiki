@@ -294,7 +294,76 @@ export async function defineAssets() {
 
 ## Zoom in/out transition
 
-This page is under construction.
+The zoom in/out transition when:
+
+* shows a component, scales the component from 0, from outside of the right or left ot top or bottom end of the canvas, to the original scale and to the component position. If a component with the same alias exists, the existing component will be removed when the new component transition is complete.
+* removes a component, scales the component from the original scale to 0, to outside of the right or left ot top or bottom end of the canvas.
+
+This transition has been created with the [`ZoomTicker`](/start/animations-effects.md#zoom).
+
+The `zoomIn` function show a canvas element with zoom in transition. This function has the following parameters:
+
+* `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
+* `image`: The image to show. It can be:
+  * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
+  * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
+  * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
+  * a [canvas component](/start/canvas-components.md).
+* `props` (Optional): The properties of the effect. It combines the properties of the [Zoom effect](/start/animations-effects.md#zoom) with following properties:
+  * `direction`: The direction of the zoom. It can be `right`, `left`, `top`, `bottom`. default is `right`.
+* `priority` (Optional): The priority of the effect.
+
+The `zoomOut` function remove a canvas element with zoom out transition. This function has the following parameters:
+
+* `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
+* `props` (Optional): The properties of the effect. It combines the properties of the [Zoom effect](/start/animations-effects.md#zoom) with following properties:
+  * `direction`: The direction of the zoom. It can be `right`, `left`, `top`, `bottom`. default is `right`.
+* `priority` (Optional): The priority of the effect.
+
+:::tabs
+== startLabel.ts
+
+```ts
+import { Assets, newLabel, zoomIn, zoomOut } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await zoomIn("alien", "egg_head");
+        await zoomIn("human", {
+        value: ["m01-body", "m01-eyes", "m01-mouth"],
+        options: { scale: 0.5, xAlign: 0.7 },
+        });
+    },
+    async () => {
+        await zoomIn("alien", "flower_top");
+        zoomOut("human");
+    },
+], {
+    onLoadingLabel: async () => {
+        await Assets.load(["egg_head", "m01-mouth", "m01-body", "m01-eyes"]);
+    },
+});
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+    Assets.add({ alias: "flower_top", src: "https://pixijs.com/assets/flowerTop.png" });
+    Assets.add({ alias: "m01-body", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-body.webp?alt=media" });
+    Assets.add({ alias: "m01-eyes", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-eyes-smile.webp?alt=media" });
+    Assets.add({ alias: "m01-mouth", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-mouth-smile00.webp?alt=media" });
+}
+```
+
+:::
+
+::: sandbox {template=pkfqvr entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Create your own transition
 
