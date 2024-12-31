@@ -248,6 +248,50 @@ The `pushOut` function remove a canvas element with push out transition. This fu
   * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
 * `priority` (Optional): The priority of the effect.
 
+:::tabs
+== startLabel.ts
+
+```ts
+import { Assets, newLabel, pushIn, pushOut } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await pushIn("alien", "egg_head");
+        await pushIn("human", {
+            value: ["m01-body", "m01-eyes", "m01-mouth"],
+            options: { scale: 0.5, xAlign: 0.7 },
+        });
+    },
+    async () => {
+        await pushIn("alien", "flower_top", { direction: "up" });
+        pushOut("human");
+    },
+], {
+    onLoadingLabel: async () => {
+        await Assets.load(["egg_head", "m01-mouth", "m01-body", "m01-eyes"]);
+    },
+});
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+    Assets.add({ alias: "flower_top", src: "https://pixijs.com/assets/flowerTop.png" });
+    Assets.add({ alias: "m01-body", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-body.webp?alt=media" });
+    Assets.add({ alias: "m01-eyes", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-eyes-smile.webp?alt=media" });
+    Assets.add({ alias: "m01-mouth", src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-mouth-smile00.webp?alt=media" });
+}
+```
+
+:::
+
+::: sandbox {template=vgf4fp entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
 ## Zoom in/out transition
 
 This page is under construction.
