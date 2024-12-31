@@ -441,7 +441,7 @@ export async function showWithDissolveTransition(
 }
 ```
 
-### if a component with the same alias already exists
+### If a component with the same alias already exists
 
 If a component with the same alias already exists, you can
 
