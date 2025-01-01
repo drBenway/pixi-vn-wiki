@@ -2,13 +2,29 @@
 
 Pixi’VN provides a set of animations and effects that can be applied to canvas components.
 
-Animations and effects are based on [Ticker](/start/tickers). So for add, remove... animations and effects read the [Tickers documentation](/start/tickers).
+**What is a animation?** An animation is a Ticker that moves a canvas component without altering the texture. For example, you can move a canvas component from `(0, 0)` to `(100, 100)`.
 
-## Animations
+**What is a effect?** An effect is a Ticker that alters the texture of a canvas component. For example, you can fade a canvas component.
 
-Animations are [Tickers](/start/tickers) that move a [canvas component](/start/canvas-components) without altering the texture.
+Animations and effects are divided into two categories:
 
-### Move
+* **Primitives**: They are classes, that can be used to perform basic actions. For example, the `MoveTicker` class is a primitive that can be used to move a canvas component. They are based on [Ticker](/start/tickers). So for add, remove... a primitive you can read the [Tickers documentation](/start/tickers). The advantage is that they can be joined to create more complex animations and effects.
+* **Articulated**: They are functions that can be used to perform complex actions. They combine more primitive animations and effects to create a more complex animation or effect. For example, the `Shake` function is an articulated animation that add more `MoveTicker` to create a shake effect.
+
+Primitive animations:
+
+* [Move](#move)
+* [Rotate](#rotate)
+
+Articulated animations:
+
+Primitive effects:
+
+* [Fade](#fade)
+
+Articulated effects:
+
+## Move
 
 For moving a canvas component in `(x, y)` direction you can use the `MoveTicker` class.
 This Ticker will edit the `x` and `y` properties to reach the destination.
@@ -29,7 +45,11 @@ This Ticker will edit the `x` and `y` properties to reach the destination.
 * `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
 * `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
 
-### Rotate
+## Shake
+
+This page is under construction.
+
+## Rotate
 
 For rotating a canvas component you can use the `RotateTicker` class.
 This Ticker edit the `rotation` property of the [canvas component](/start/canvas-components).
@@ -74,13 +94,7 @@ canvas.add("alien", alien);
 canvas.addTicker("alien", new RotateTicker({ speed: 0, speedProgression: { type: "linear", amt: 0.001, limit: 0.5 } }))
 ```
 
-## Effects
-
-Effects are [Tickers](/start/tickers) that alter the texture of a [canvas component](/start/canvas-components).
-
-[( More are on the way )](https://github.com/DRincs-Productions/pixi-vn/issues/20)
-
-### Fade
+## Fade
 
 For fading a canvas component you can use the `FadeAlphaTicker` class.
 This Ticker edit the `alpha` property of the [canvas component](/start/canvas-components).
@@ -107,10 +121,6 @@ canvas.addTicker("alien", new FadeAlphaTicker({ duration: 2 }));
 ```
 
 ## Multiple asserts
-
-### Shake
-
-This page is under construction.
 
 ## Special properties
 
