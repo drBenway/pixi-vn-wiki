@@ -1,8 +1,8 @@
-# Animations and Effects
+# Animations and effects
 
 Pixi’VN provides a set of animations and effects that can be applied to canvas components.
 
-Animations and Effects are based on [Ticker](/start/tickers). So for add, remove... animations and effects read the [Tickers documentation](/start/tickers).
+Animations and effects are based on [Ticker](/start/tickers). So for add, remove... animations and effects read the [Tickers documentation](/start/tickers).
 
 ## Animations
 
