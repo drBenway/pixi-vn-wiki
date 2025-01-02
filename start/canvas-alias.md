@@ -12,7 +12,7 @@ If a component is added using an existing alias the new component, in addition t
 
 ## Edit canvas component alias
 
-To edit the alias of a canvas component, you can use the `canvas.editAlias`.
+To edit the alias of a canvas component, you can use the `canvas.editAlias`. If the alias has a or more [tickers](/start/canvas-tickers.md) associated, it will be automatically edited in the ticker.
 
 The `editAlias` method have the following parameters:
 
