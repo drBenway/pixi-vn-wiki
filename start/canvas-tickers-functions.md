@@ -1,14 +1,15 @@
 # Tickers methods
 
-## Run a Ticker and associate with a Canvas Component
+To play, pause, or stop a Ticker, you must use the functions of the `canvas`.
 
-To add a Ticker you must use the `canvas.addTicker` function and pass the ticker class.
+## Run a tickerRun a ticker
 
-<!-- TODO  
-You can run multiple addTicker with the same alias and different tickerClasses.
-* If you run a ticker with the same alias and tickerClass, the old ticker will be removed.
-* If already exists a sequence of tickers with the same alias, it will be removed.
--->
+To add a Ticker you must use the `canvas.addTicker` function. This function receives the following parameters:
+
+- `canvasElementAlias`: The alias of the canvas element that will use the ticker. You can pass a string or an array of strings. If you pass an array of strings, the ticker will be associated with all canvas components.
+- `ticker`: The [ticker](/start/canvas-tickers.md) instance to be run.
+
+The function returns the id of the ticker that was added.
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
