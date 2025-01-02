@@ -262,11 +262,11 @@ async () => {
     canvas.addTickersSteps("alien", [
         new MoveTicker({
             destination: { x: 1, y: 0, type: "align" },
-            speedProgression: { type: "linear", amt: -10, limit: 5 },
+            speedProgression: { type: "linear", amt: -10, limit: 5 }, // [!code focus]
         }),
         new MoveTicker({
             destination: { x: 0, y: 0, type: "align" },
-            speedProgression: { type: "exponential", percentage: 1.5, limit: 1000 },
+            speedProgression: { type: "exponential", percentage: 1.5, limit: 1000 }, // [!code focus]
         }),
         Repeat,
     ]);

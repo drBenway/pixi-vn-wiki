@@ -11,25 +11,36 @@ To add a Ticker you must use the `canvas.addTicker` function. This function rece
 
 The function returns the id of the ticker that was added.
 
-```typescript
-const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
-const alien = Sprite.from(texture);
-canvas.add("alien", alien);
+:::tabs
+== startLabel.ts
 
-canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
+```ts
+import { canvas, newLabel, RotateTicker, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("egg_head", "egg_head", { yAlign: 0.5, xAlign: 0.25, anchor: 0.5 });
+        await showImage("flower_top", "flower_top", { yAlign: 0.5, xAlign: 0.75, anchor: 0.5 });
+        let tikerId = canvas.addTicker(["egg_head", "flower_top"], new RotateTicker({})); // [!code focus]
+    },
+]);
 ```
 
-If a ticket needs to update multiple canvas components, you can pass an array of aliases to the `addTicker` function.
+== assets-utility.ts
 
-```typescript
-canvas.addTicker(["alien", "alien2"], new RotateTicker({ speed: my_speed }))
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+    Assets.add({ alias: "flower_top", src: "https://pixijs.com/assets/flowerTop.png" });
+}
 ```
 
-You can also set the duration of the ticket so that upon completion it is deleted.
+:::
 
-```typescript
-canvas.addTicker("alien", new RotateTicker({ speed: my_speed }, 2))
-```
+::: sandbox {template=vfqzch entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Remove association between a Ticker and a Canvas Component
 
