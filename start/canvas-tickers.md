@@ -228,7 +228,27 @@ export async function defineAssets() {
 
 ## Special properties
 
+All the Tickers have the following properties:
+
 ### Speed progression property
+
+You can use the `speedProgression` property to increase/decrease the speed of the effect over time.
+
+Existent types are `linear` and `exponential`. The `linear` type will increase the speed by a fixed amount every frame, while the `exponential` type will increase the speed by a percentage every frame.
+
+The `speedProgression` property is an object that contains the following properties:
+
+* `type`: is a string that represents the type of the progression. Possible values are `linear` and `exponential`.
+
+If the `type` is `linear`, the object must contain the following properties:
+
+* `amt`: is a number that represents the amount of the speed to increase every frame.
+* `limit` (Optional): is a number that represents the limit of the effect.
+
+If the `type` is `exponential`, the object must contain the following properties:
+
+* `percentage`: is a number that represents the percentage of the speed to increase every frame. If the percentage is `0.1`, the speed will increase by `10%` every frame.
+* `limit` (Optional): is a number that represents the limit of the effect.
 
 ### Start only if have texture property
 
