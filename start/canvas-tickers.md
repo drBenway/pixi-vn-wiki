@@ -1,11 +1,10 @@
 # Tickers (primitive animations and effects)
 
-The [PixiJS Ticker](https://pixijs.com/8.x/examples/basic/tinting) is a class that manages the update loop. It is used to animate the canvas components.
+Pixi’VN provides the possibility to animate the canvas components with the Tickers (primitive animations and effects).
 
-In Pixi’VN, you can use the Ticker, but through functions of the `canvas` class.
-The reason is that this way I can keep track of the Tickers and delete those that are no longer used.
+The Tickers, compared to `PixiJS.tickers`, are a class with a `fn` method that is executed on each frame. This method is used to animate the canvas components. Pixi’VN keeps track of all running Tickers, detects when they are no longer used and allows you to pause, resume, and delete them with [various methods](/start/canvas-tickers-functions.md).
 
-* **Primitives (Ticker)**: They are classes, that can be used to perform basic actions. For example, the `MoveTicker` class is primitive animation that can be used to move a canvas component. They are classes that extend the [Ticker](/start/canvas-tickers-functions). So for add, remove... a primitive animation or effect you must use the [Ticker's methods](/start/canvas-tickers-functions). The advantage is that they can be joined to create more complex animations and effects.
+Pixi’VN provides various primitive Tickers, that can be used to perform basic actions. For example, the `MoveTicker` class is primitive animation that can be used to move a canvas component. They are classes that extend the [Ticker](/start/canvas-tickers-functions).
 
 ## Move
 
