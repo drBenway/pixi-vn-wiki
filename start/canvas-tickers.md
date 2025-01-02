@@ -27,6 +27,48 @@ This Ticker will edit the `x` and `y` properties to reach the destination.
 * `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
 * `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
 
+:::tabs
+== startLabel.ts
+
+```ts
+import { canvas, MoveTicker, newLabel, Repeat, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("alien");
+        canvas.addTickersSteps("alien", [
+            new MoveTicker({ // [!code focus]
+                destination: { x: 1, y: 0, type: "align" }, // [!code focus]
+            }), // [!code focus]
+            new MoveTicker({ // [!code focus]
+                destination: { x: 1, y: 1, type: "align" }, // [!code focus]
+                speed: 50, // [!code focus]
+            }), // [!code focus]
+            new MoveTicker({ // [!code focus]
+                destination: { x: 0, y: 0, type: "align" }, // [!code focus]
+                speed: 20, // [!code focus]
+            }), // [!code focus]
+            Repeat,
+        ]);
+    }
+]);
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=vl986g entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
 ## Rotate
 
 For rotating a canvas component you can use the `RotateTicker` class.
@@ -97,8 +139,6 @@ canvas.add("alien", alien);
 // in this example we fade the canvas component "alien" with a duration of 2 seconds
 canvas.addTicker("alien", new FadeAlphaTicker({ duration: 2 }));
 ```
-
-## Multiple asserts
 
 ## Special properties
 
