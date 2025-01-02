@@ -301,19 +301,21 @@ You can use the `aliasToRemoveAfter` property to remove the canvas component aft
 
 You can use the `tickerAliasToResume` property to resume some tickers that were previously paused. `tickerAliasToResume` is an array of strings that contains the aliases of the canvas components that have the tickers to be resumed.
 
-## Create a Ticker
+## Create your own Ticker
 
-In Pixi.js, you can add a Ticker by passing a lambda as a parameter that will be executed on each frame.
+Create your own Ticker is very simple, you just need to extend the [TickerBase](/start/canvas-tickers-functions) class, override the `fn` method and implement your own logic.
 
-In Pixi’VN, you must create a class tha extends `TickerBase`, add a decorator `@tickerDecorator` to the class and override the `fn` method.
+After that, you must decorate the class with the `@tickerDecorator` decorator. The decorator can receive a string that represents the alias of the Ticker. If the alias is not provided, the class name will be used as the alias.
 
-`@tickerDecorator` is a decorator that save the ticker in memory. It have a optional parameter that is the id of the ticker (must be unique). If you don't pass the id, the ticker will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
+To better understand how to create one, a simplified version of the `RotateTicker` class is shown below:
 
 ```typescript
+import { canvas, Container, TickerBase, tickerDecorator, TickerValue } from "@drincs/pixi-vn";
+
 @tickerDecorator() // or @tickerDecorator('RotateTicker')
 export default class RotateTicker extends TickerBase<{ speed?: number, clockwise?: boolean }> {
     override fn(
-        t: Ticker,
+        t: TickerValue,
         args: {
             speed?: number,
             clockwise?: boolean,
