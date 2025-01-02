@@ -86,7 +86,7 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=vfqzch entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+::: sandbox {template=scjm5d entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
 ## Run a succession of tickers
