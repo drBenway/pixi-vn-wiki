@@ -1,43 +1,4 @@
-# Tickers
-
-The [PixiJS Ticker](https://pixijs.com/8.x/examples/basic/tinting) is a class that manages the update loop. It is used to animate the canvas components.
-
-In Pixi’VN, you can use the Ticker, but through functions of the `canvas` class.
-The reason is that this way I can keep track of the Tickers and delete those that are no longer used.
-
-## Create a Ticker
-
-In Pixi.js, you can add a Ticker by passing a lambda as a parameter that will be executed on each frame.
-
-In Pixi’VN, you must create a class tha extends `TickerBase`, add a decorator `@tickerDecorator` to the class and override the `fn` method.
-
-`@tickerDecorator` is a decorator that save the ticker in memory. It have a optional parameter that is the id of the ticker (must be unique). If you don't pass the id, the ticker will be saved with the class name. ( [How enable the decorators in TypeScript?](/start/getting-started#how-enable-the-decorators-in-typescript) )
-
-```typescript
-@tickerDecorator() // or @tickerDecorator('RotateTicker')
-export default class RotateTicker extends TickerBase<{ speed?: number, clockwise?: boolean }> {
-    override fn(
-        t: Ticker,
-        args: {
-            speed?: number,
-            clockwise?: boolean,
-        },
-        aliases: string[]
-    ): void {
-        let speed = args.speed === undefined ? 0.1 : args.speed
-        let clockwise = args.clockwise === undefined ? true : args.clockwise
-        aliases.forEach((alias) => {
-            let component = canvas.find(alias)
-            if (component && component instanceof Container) {
-                if (clockwise)
-                    component.rotation += speed * t.deltaTime
-                else
-                    component.rotation -= speed * t.deltaTime
-            }
-        })
-    }
-}
-```
+# Tickers methods
 
 ## Run a Ticker and associate with a Canvas Component
 

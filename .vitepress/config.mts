@@ -138,8 +138,18 @@ export default defineConfig({
                 { text: 'Components functions', link: '/start/canvas-functions' },
                 { text: 'Position properties', link: '/start/canvas-position' },
                 { text: 'Transitions', link: '/start/canvas-transition' },
-                { text: 'Animations and Effects', link: '/start/canvas-animations-effects' },
-                { text: 'Tickers', link: '/start/canvas-tickers-functions' },
+                {
+                  text: 'Animations and Effects', link: '/start/canvas-animations-effects',
+                  items: [
+                    {
+                      text: 'Primitives (Ticker)', link: '/start/canvas-tickers',
+                      items: [
+                        { text: 'Tickers methods', link: '/start/canvas-tickers-functions' },
+                      ]
+                    },
+                    { text: 'Articulated', link: '/start/canvas-articulated-animations-effects' },
+                  ]
+                },
               ]
             },
             { text: 'Sounds and Music', link: '/start/sound' },
