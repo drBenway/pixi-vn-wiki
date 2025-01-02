@@ -89,6 +89,12 @@ export async function defineAssets() {
 ::: sandbox {template=scjm5d entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
+## Force completion of the transition at the end of the step
+
+<!-- TODO: tickerMustBeCompletedBeforeNextStep -->
+
+This page is under construction.
+
 ## Run a succession of tickers
 
 <!-- TODO 
@@ -132,9 +138,3 @@ canvas.addTickersSteps("alien", [
 ```
 
 <!-- TODO: paused tiker -->
-
-### Force completion of the transition at the end of the step
-
-<!-- TODO: tickerMustBeCompletedBeforeNextStep -->
-
-This page is under construction.
