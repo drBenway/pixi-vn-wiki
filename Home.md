@@ -51,7 +51,7 @@
   * [Position properties](canvas-position)
   * [Transitions](canvas-transition)
   * [Animations and Effects](canvas-animations-effects)
-    * [Primitives (Ticker)](canvas-tickers)
+    * [Primitives (ticker)](canvas-tickers)
       * [Tickers methods](canvas-tickers-functions)
     * [Articulated](canvas-articulated-animations-effects)
 * [Sounds and Music](sound)

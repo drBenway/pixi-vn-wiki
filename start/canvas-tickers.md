@@ -1,15 +1,15 @@
 # Tickers (primitive animations and effects)
 
-Pixi’VN provides the possibility to animate the canvas components with the Tickers (primitive animations and effects).
+Pixi’VN provides the possibility to animate the canvas components with the tickers (primitive animations and effects).
 
-The Tickers, compared to `PixiJS.tickers`, are a class with a `fn` method that is executed on each frame. This method is used to animate the canvas components. Pixi’VN keeps track of all running Tickers, detects when they are no longer used and allows you to pause, resume, and delete them with [various methods](/start/canvas-tickers-functions.md).
+The tickers, compared to `PixiJS.tickers`, are a class with a `fn` method that is executed on each frame. This method is used to animate the canvas components. Pixi’VN keeps track of all running tickers, detects when they are no longer used and allows you to pause, resume, and delete them with [various methods](/start/canvas-tickers-functions.md).
 
-Pixi’VN provides various primitive Tickers, that can be used to perform basic actions. For example, the `MoveTicker` class is primitive animation that can be used to move a canvas component. They are classes that extend the [Ticker](/start/canvas-tickers-functions).
+Pixi’VN provides various primitive tickers, that can be used to perform basic actions. For example, the `MoveTicker` class is primitive animation that can be used to move a canvas component.
 
 ## Move
 
 For moving a canvas component in `(x, y)` direction you can use the `MoveTicker` class.
-This Ticker will edit the `x` and `y` properties to reach the destination.
+This ticker will edit the `x` and `y` properties to reach the destination.
 
 `MoveTicker` have a constructor that takes the a object with the following properties:
 
@@ -72,7 +72,7 @@ export async function defineAssets() {
 ## Rotate
 
 For rotating a canvas component you can use the `RotateTicker` class.
-This Ticker will edit the `rotation` property to rotate the canvas component.
+This ticker will edit the `rotation` property to rotate the canvas component.
 
 `RotateTicker` have a constructor that takes the a object with the following properties:
 
@@ -122,7 +122,7 @@ export async function defineAssets() {
 ## Fade
 
 For fading a canvas component you can use the `FadeAlphaTicker` class.
-This Ticker will edit the `alpha` property of the canvas component to fade in/out.
+This ticker will edit the `alpha` property of the canvas component to fade in/out.
 
 `FadeAlphaTicker` have a constructor that takes the a object with the following properties:
 
@@ -174,7 +174,7 @@ export async function defineAssets() {
 ## Zoom
 
 For zooming a canvas component you can use the `ZoomTicker` class.
-This Ticker will edit the `scale.x` and `scale.y` properties of the canvas component to zoom in/out.
+This ticker will edit the `scale.x` and `scale.y` properties of the canvas component to zoom in/out.
 
 `ZoomTicker` have a constructor that takes the a object with the following properties:
 
@@ -228,7 +228,7 @@ export async function defineAssets() {
 
 ## Special properties
 
-All the Tickers have the following properties:
+All the tickers, provided by Pixi’VN, have the following properties:
 
 ### Speed progression property
 
@@ -301,11 +301,11 @@ You can use the `aliasToRemoveAfter` property to remove the canvas component aft
 
 You can use the `tickerAliasToResume` property to resume some tickers that were previously paused. `tickerAliasToResume` is an array of strings that contains the aliases of the canvas components that have the tickers to be resumed.
 
-## Create your own Ticker
+## Create your own ticker
 
-Create your own Ticker is very simple, you just need to extend the [TickerBase](/start/canvas-tickers-functions) class, override the `fn` method and implement your own logic.
+Create your own ticker is very simple, you just need to extend the [TickerBase](/start/canvas-tickers-functions) class, override the `fn` method and implement your own logic.
 
-After that, you must decorate the class with the `@tickerDecorator` decorator. The decorator can receive a string that represents the alias of the Ticker. If the alias is not provided, the class name will be used as the alias.
+After that, you must decorate the class with the `@tickerDecorator` decorator. The decorator can receive a string that represents the alias of the ticker. If the alias is not provided, the class name will be used as the alias.
 
 To better understand how to create one, a simplified version of the `RotateTicker` class is shown below:
 

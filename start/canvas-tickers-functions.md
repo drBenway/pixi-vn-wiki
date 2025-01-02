@@ -1,10 +1,10 @@
 # Tickers methods
 
-To play, pause, or stop a Ticker, you must use the functions of the `canvas`.
+To play, pause, or stop a ticker, you must use the functions of the `canvas`.
 
 ## Run a tickerRun a ticker
 
-To add a Ticker you must use the `canvas.addTicker` function. This function receives the following parameters:
+To add a ticker you must use the `canvas.addTicker` function. This function receives the following parameters:
 
 - `canvasElementAlias`: The alias of the canvas element that will use the ticker. You can pass a string or an array of strings. If you pass an array of strings, the ticker will be associated with all canvas components.
 - `ticker`: The [ticker](/start/canvas-tickers.md) instance to be run.
@@ -42,9 +42,9 @@ export async function defineAssets() {
 ::: sandbox {template=vfqzch entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
-## Remove association between a Ticker and a Canvas Component
+## Unlink a canvas component from a ticker
 
-For unlink a Ticker from a Canvas Component you must use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the alias of the canvas component and a ticker class.
+For unlink a canvas component from a ticker you can use the `canvas.removeAssociationBetweenTickerCanvasElement` function and pass the alias of the canvas component and a ticker class.
 
 If the ticker not have any more canvas components associated, it will be deleted.
 
@@ -60,7 +60,7 @@ canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 canvas.removeAssociationBetweenTickerCanvasElement("alien", RotateTicker)
 ```
 
-If you remove the Canvas Component associated with the Ticker, if the Ticker not have any more canvas components associated, it will be deleted.
+If you remove the Canvas Component associated with the ticker, if the ticker not have any more canvas components associated, it will be deleted.
 
 ```typescript
 const texture = await Assets.load('https://pixijs.com/assets/eggHead.png');
@@ -74,13 +74,13 @@ canvas.addTicker("alien", new RotateTicker({ speed: my_speed }))
 canvas.remove("alien")
 ```
 
-## Run a succession of Tickers
+## Run a succession of tickers
 
 <!-- TODO 
 remove the ticker if there is no canvas component connected to it.
 -->
 
-You can run a succession of Tickers.
+You can run a succession of tickers.
 This means you can start a list of tokens, so that when one ends the next begins.
 
 For this you must use the `narration.addTickersSteps` function and pass the alias of the canvas component and an array of tickers.

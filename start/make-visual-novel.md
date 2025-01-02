@@ -438,7 +438,7 @@ This is the example:
 
 :::
 
-## Use animations and effects or create your Ticker
+## Use animations and effects or create your ticker
 
 This page is under construction.
 

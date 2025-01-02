@@ -8,5 +8,5 @@ Pixi’VN provides a set of animations and effects that can be applied to canvas
 
 Animations and effects are divided into two categories:
 
-* [Primitives (Ticker)](/start/canvas-tickers.md)
+* [Primitives (ticker)](/start/canvas-tickers.md)
 * [Articulated](/start/canvas-articulated-animations-effects.md)

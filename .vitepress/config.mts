@@ -142,7 +142,7 @@ export default defineConfig({
                   text: 'Animations and Effects', link: '/start/canvas-animations-effects',
                   items: [
                     {
-                      text: 'Primitives (Ticker)', link: '/start/canvas-tickers',
+                      text: 'Primitives (ticker)', link: '/start/canvas-tickers',
                       items: [
                         { text: 'Tickers methods', link: '/start/canvas-tickers-functions' },
                       ]
