@@ -76,6 +76,49 @@ This Ticker will edit the `rotation` property to rotate the canvas component.
 
 `RotateTicker` have a constructor that takes the a object with the following properties:
 
+* `speed` (Optional): is a number that represents the speed of the rotation.
+* `clockwise` (Optional): is a boolean that represents the direction of the rotation. If `true`, the rotation will be clockwise, otherwise it will be counterclockwise.
+* `speedProgression` (Optional): in case the rotation needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
+* `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `rotation` property, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
+* `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
+* `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+
+:::tabs
+== startLabel.ts
+
+```ts
+import { canvas, newLabel, Repeat, RotateTicker, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("alien", "alien", { align: 0.5, anchor: 0.5 });
+        canvas.addTickersSteps("alien", [
+            new RotateTicker({}, 2), // [!code focus]
+            new RotateTicker({ // [!code focus]
+                clockwise: false, // [!code focus]
+                speed: 10, // [!code focus]
+            }, 3), // [!code focus]
+            Repeat,
+        ]);
+    },
+]);
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=6zc9js entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
 ## Fade
 
 For fading a canvas component you can use the `FadeAlphaTicker` class.
