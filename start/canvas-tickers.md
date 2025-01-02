@@ -250,6 +250,45 @@ If the `type` is `exponential`, the object must contain the following properties
 * `percentage`: is a number that represents the percentage of the speed to increase every frame. If the percentage is `0.1`, the speed will increase by `10%` every frame.
 * `limit` (Optional): is a number that represents the limit of the effect.
 
+:::tabs
+== startLabel.ts
+
+```ts
+import { canvas, MoveTicker, newLabel, Repeat, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+async () => {
+    await showImage("alien");
+    canvas.addTickersSteps("alien", [
+        new MoveTicker({
+            destination: { x: 1, y: 0, type: "align" },
+            speedProgression: { type: "linear", amt: -10, limit: 5 },
+        }),
+        new MoveTicker({
+            destination: { x: 0, y: 0, type: "align" },
+            speedProgression: { type: "exponential", percentage: 1.5, limit: 1000 },
+        }),
+        Repeat,
+    ]);
+},
+]);
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=ts4dfc entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
 ### Start only if have texture property
 
 ### Alias to remove after property
