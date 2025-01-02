@@ -291,9 +291,15 @@ export async function defineAssets() {
 
 ### Start only if have texture property
 
+You can use the `startOnlyIfHaveTexture` property to start the animation only if the canvas component have a texture not empty. This is actually during the [creation of a transition](/start/canvas-transition.md#create-your-own-transition).
+
 ### Alias to remove after property
 
+You can use the `aliasToRemoveAfter` property to remove the canvas component after the effect. This is actually during the [creation of a transition](/start/canvas-transition.md#create-your-own-transition).
+
 ### Ticker alias to resume property
+
+You can use the `tickerAliasToResume` property to resume some tickers that were previously paused. `tickerAliasToResume` is an array of strings that contains the aliases of the canvas components that have the tickers to be resumed.
 
 ## Create a Ticker
 
