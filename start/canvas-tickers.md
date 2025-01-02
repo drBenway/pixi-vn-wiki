@@ -171,6 +171,61 @@ export async function defineAssets() {
 ::: sandbox {template=gj3pdp entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
+## Zoom
+
+For zooming a canvas component you can use the `ZoomTicker` class.
+This Ticker will edit the `scale.x` and `scale.y` properties of the canvas component to zoom in/out.
+
+`ZoomTicker` have a constructor that takes the a object with the following properties:
+
+* `speed` (Optional): is a number that represents the speed of the zoom effect.
+* `type` (Optional): is a string that represents the type of the zoom effect. Possible values are `zoom` and `unzoom`:
+  * `zoom`: The canvas component will zoom in.
+  * `unzoom`: The canvas component will zoom out.
+* `limit` (Optional): is a number that represents the limit of the effect. If `type` is `zoom`, the limit will be `Infinity`, otherwise it will be `0`.
+* `speedProgression` (Optional): in case the zoom effect needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
+* `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `scale.x` and `scale.y` properties, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
+* `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
+* `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+
+:::tabs
+== startLabel.ts
+
+```ts
+import { canvas, newLabel, Repeat, showImage, ZoomTicker } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("alien", "alien", { align: 0.5, anchor: 0.5 });
+        canvas.addTickersSteps("alien", [
+            new ZoomTicker({ // [!code focus]
+                limit: 3, // [!code focus]
+            }), // [!code focus]
+            new ZoomTicker({ // [!code focus]
+                type: "unzoom", // [!code focus]
+                limit: -3, // [!code focus]
+            }), // [!code focus]
+            Repeat,
+        ]);
+    },
+]);
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=wxn3qm entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
 ## Special properties
 
 ### Speed progression property
