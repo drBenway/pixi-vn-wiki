@@ -139,7 +139,7 @@ export default defineConfig({
                 { text: 'Position properties', link: '/start/canvas-position' },
                 { text: 'Transitions', link: '/start/canvas-transition' },
                 { text: 'Animations and Effects', link: '/start/canvas-animations-effects' },
-                { text: 'Tickers', link: '/start/tickers' },
+                { text: 'Tickers', link: '/start/canvas-tickers-functions' },
               ]
             },
             { text: 'Sounds and Music', link: '/start/sound' },

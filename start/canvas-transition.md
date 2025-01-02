@@ -404,7 +404,7 @@ export async function showWithDissolveTransition(
 
 It is recommended to create a transition that forces the completion of the transition at the end of the step.
 
-To do this, you can use the [`canvas.tickerMustBeCompletedBeforeNextStep` function](/start/tickers.md#force-completion-of-the-transition-at-the-end-of-the-step).
+To do this, you can use the [`canvas.tickerMustBeCompletedBeforeNextStep` function](/start/canvas-tickers-functions.md#force-completion-of-the-transition-at-the-end-of-the-step).
 
 This example shows how to create a transition that forces the completion of the transition at the end of the step.
 

@@ -51,7 +51,7 @@
   * [Position properties](canvas-position)
   * [Transitions](canvas-transition)
   * [Animations and Effects](canvas-animations-effects)
-  * [Tickers](tickers)
+  * [Tickers](canvas-tickers-functions)
 * [Sounds and Music](sound)
 * [Assets management](assets-management)
 * [Game storage](storage):

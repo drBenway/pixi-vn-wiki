@@ -8,7 +8,7 @@ The alias corresponds to `PixiJSComponent.label`, so do not modify `label`, use 
 
 ## Heredity factor
 
-If a component is added using an existing alias the new component, in addition to replacing the old one, will inherit the properties, the zIndex and the [Tickers](/start/tickers.md) of the old component.
+If a component is added using an existing alias the new component, in addition to replacing the old one, will inherit the properties, the zIndex and the [Tickers](/start/canvas-tickers-functions.md) of the old component.
 
 ## Edit canvas component alias
 
