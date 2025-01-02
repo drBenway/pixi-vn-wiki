@@ -8,8 +8,8 @@ Pixi’VN provides a set of animations and effects that can be applied to canvas
 
 Animations and effects are divided into two categories:
 
-* **Primitives**: They are classes, that can be used to perform basic actions. For example, the `MoveTicker` class is a primitive that can be used to move a canvas component. They are based on [Ticker](/start/tickers). So for add, remove... a primitive you can read the [Tickers documentation](/start/tickers). The advantage is that they can be joined to create more complex animations and effects.
-* **Articulated**: They are functions that can be used to perform complex actions. They combine more primitive animations and effects to create a more complex animation or effect. For example, the `Shake` function is an articulated animation that add more `MoveTicker` to create a shake effect.
+* **Primitives (Ticker)**: They are classes, that can be used to perform basic actions. For example, the `MoveTicker` class is primitive animation that can be used to move a canvas component. They are classes that extend the [Ticker](/start/tickers). So for add, remove... a primitive animation or effect you must use the [Ticker's methods](/start/tickers). The advantage is that they can be joined to create more complex animations and effects.
+* **Articulated**: They are functions that can be used to perform complex animations and effects. They combine more primitive animations and effects to create a more complex animation or effect. For example, the `Shake` function is an articulated animation that uses more `MoveTicker` to create a shake effect.
 
 Primitive animations:
 

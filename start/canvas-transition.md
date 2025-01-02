@@ -11,7 +11,7 @@ The dissolve transition when:
 * shows a component, gradually increases `alpha`. If a component with the same alias exists, the component will be removed when the new component transition is complete.
 * removes a component, gradually decreases `alpha`.
 
-This transition has been created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
+This transition has been created with the [`FadeAlphaTicker`](/start/canvas-animations-effects.md#fade).
 
 The `showWithDissolveTransition` function show a canvas element with dissolve transition. This function has the following parameters:
 
@@ -22,13 +22,13 @@ The `showWithDissolveTransition` function show a canvas element with dissolve tr
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
   * a [canvas component](/start/canvas-components.md).
-* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
+* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/canvas-animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
 The `removeWithDissolveTransition` function remove a canvas element with dissolve transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
-* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
+* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/canvas-animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
 :::tabs
@@ -82,7 +82,7 @@ The fade transition when:
 * shows a component, gradually increases `alpha`. If a component with the same alias exists, the existing component will be removed with a fade-out effect before the new component is shown.
 * removes a component, gradually decreases `alpha`.
 
-This transition has been created with the [`FadeAlphaTicker`](/start/animations-effects.md#fade).
+This transition has been created with the [`FadeAlphaTicker`](/start/canvas-animations-effects.md#fade).
 
 The `showWithFadeTransition` function show a canvas element with fade transition. This function has the following parameters:
 
@@ -93,13 +93,13 @@ The `showWithFadeTransition` function show a canvas element with fade transition
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
   * a [canvas component](/start/canvas-components.md).
-* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
+* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/canvas-animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
 The `removeWithFadeTransition` function remove a canvas element with fade transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
-* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/animations-effects.md#fade).
+* `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/canvas-animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
 :::tabs
@@ -153,7 +153,7 @@ The move in/out transition when:
 * shows a component, moves the component from outside of the right or left ot top or bottom end of the canvas to the canvas component position. If a component with the same alias exists, the existing component will be removed with a move-out effect before the new component is shown.
 * removes a component, moves the component from a position to outside of the right or left ot top or bottom end of the canvas.
 
-This transition has been created with the [`MoveTicker`](/start/animations-effects.md#move).
+This transition has been created with the [`MoveTicker`](/start/canvas-animations-effects.md#move).
 
 The `moveIn` function show a canvas element with move in transition. This function has the following parameters:
 
@@ -164,14 +164,14 @@ The `moveIn` function show a canvas element with move in transition. This functi
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
   * a [canvas component](/start/canvas-components.md).
-* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/animations-effects.md#move) with following properties:
+* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/canvas-animations-effects.md#move) with following properties:
   * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
 * `priority` (Optional): The priority of the effect.
 
 The `moveOut` function remove a canvas element with move out transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
-* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/animations-effects.md#move) with following properties:
+* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/canvas-animations-effects.md#move) with following properties:
   * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
 * `priority` (Optional): The priority of the effect.
 
@@ -226,7 +226,7 @@ The push in/out transition when:
 * shows a component, moves the component from outside of the right or left ot top or bottom end of the canvas to the canvas component position. If a component with the same alias exists, the existing component will be removed with a push-out effect while the transition of the new component is in progress.
 * removes a component, moves the component from a position to outside of the right or left ot top or bottom end of the canvas.
 
-This transition has been created with the [`MoveTicker`](/start/animations-effects.md#move).
+This transition has been created with the [`MoveTicker`](/start/canvas-animations-effects.md#move).
 
 The `pushIn` function show a canvas element with push in transition. This function has the following parameters:
 
@@ -237,14 +237,14 @@ The `pushIn` function show a canvas element with push in transition. This functi
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
   * a [canvas component](/start/canvas-components.md).
-* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/animations-effects.md#move) with following properties:
+* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/canvas-animations-effects.md#move) with following properties:
   * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
 * `priority` (Optional): The priority of the effect.
 
 The `pushOut` function remove a canvas element with push out transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
-* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/animations-effects.md#move) with following properties:
+* `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/canvas-animations-effects.md#move) with following properties:
   * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
 * `priority` (Optional): The priority of the effect.
 
@@ -299,7 +299,7 @@ The zoom in/out transition when:
 * shows a component, scales the component from 0, from outside of the right or left ot top or bottom end of the canvas, to the original scale and to the component position. If a component with the same alias exists, the existing component will be removed when the new component transition is complete.
 * removes a component, scales the component from the original scale to 0, to outside of the right or left ot top or bottom end of the canvas.
 
-This transition has been created with the [`ZoomTicker`](/start/animations-effects.md#zoom).
+This transition has been created with the [`ZoomTicker`](/start/canvas-animations-effects.md#zoom).
 
 The `zoomIn` function show a canvas element with zoom in transition. This function has the following parameters:
 
@@ -310,14 +310,14 @@ The `zoomIn` function show a canvas element with zoom in transition. This functi
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a `{ value: string[], options: ImageContainerOptions }`, where `value` is the array of URL/paths and `options` is the the options of the [ImageContainer](/start/canvas-images.md).
   * a [canvas component](/start/canvas-components.md).
-* `props` (Optional): The properties of the effect. It combines the properties of the [Zoom effect](/start/animations-effects.md#zoom) with following properties:
+* `props` (Optional): The properties of the effect. It combines the properties of the [Zoom effect](/start/canvas-animations-effects.md#zoom) with following properties:
   * `direction`: The direction of the zoom. It can be `right`, `left`, `top`, `bottom`. default is `right`.
 * `priority` (Optional): The priority of the effect.
 
 The `zoomOut` function remove a canvas element with zoom out transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
-* `props` (Optional): The properties of the effect. It combines the properties of the [Zoom effect](/start/animations-effects.md#zoom) with following properties:
+* `props` (Optional): The properties of the effect. It combines the properties of the [Zoom effect](/start/canvas-animations-effects.md#zoom) with following properties:
   * `direction`: The direction of the zoom. It can be `right`, `left`, `top`, `bottom`. default is `right`.
 * `priority` (Optional): The priority of the effect.
 
@@ -367,7 +367,7 @@ export async function defineAssets() {
 
 ## Create your own transition
 
-Create your own transition is very simple, you can combine more [Animations and Effects](/start/animations-effects) to create your own transition.
+Create your own transition is very simple, you can combine more [Animations and Effects](/start/canvas-animations-effects) to create your own transition.
 
 ( The Pixi’VN Team welcomes new proposals/sharing to make this library more and more complete. So you can create a [discussion](https://github.com/DRincs-Productions/pixi-vn/discussions/categories/show-and-tell) to share/propose it. )
 
@@ -451,7 +451,7 @@ If a component with the same alias already exists, you can
 
 #### Remove the previous component when the new component transition is complete
 
-To remove the previous component when the new component transition is complete, you can use the `aliasToRemoveAfter` property. The `aliasToRemoveAfter` property is the alias of the component to remove when the new component transition is complete, it is available in all [Animations and Effects](/start/animations-effects) provided by Pixi’VN.
+To remove the previous component when the new component transition is complete, you can use the `aliasToRemoveAfter` property. The `aliasToRemoveAfter` property is the alias of the component to remove when the new component transition is complete, it is available in all [Animations and Effects](/start/canvas-animations-effects) provided by Pixi’VN.
 
 ```typescript
 import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
@@ -491,7 +491,7 @@ export async function showWithDissolveTransition(
 
 #### Remove the previous component with a transition
 
-To remove the previous component with a transition, you can run a  [Animations or Effects](/start/animations-effects) to remove the previous component before the new component transition is complete.
+To remove the previous component with a transition, you can run a  [Animations or Effects](/start/canvas-animations-effects) to remove the previous component before the new component transition is complete.
 
 To do this you will also need to use many other functions depending on the transition you are creating.
 

@@ -214,7 +214,7 @@ temp durationVar = 3
 
 ## Use the effects in *ink*
 
-You can use the `[effectType]` to use the [effects](/start/animations-effects.md) in ***ink***.
+You can use the `[effectType]` to use the [effects](/start/canvas-animations-effects.md) in ***ink***.
 
 The syntax is as follows:
   
@@ -222,14 +222,14 @@ The syntax is as follows:
 
 The available effects are:
 
-* `fade`: Create a fade effect. (Read more [here](/start/animations-effects.md#fade)). You can add all the parameters you would use in JS/TS.
-* `move`: Create a move effect. (Read more [here](/start/animations-effects.md#move)). You can add all the parameters you would use in JS/TS. To simplify the use:
+* `fade`: Create a fade effect. (Read more [here](/start/canvas-animations-effects.md#fade)). You can add all the parameters you would use in JS/TS.
+* `move`: Create a move effect. (Read more [here](/start/canvas-animations-effects.md#move)). You can add all the parameters you would use in JS/TS. To simplify the use:
   * you can use instead of `destination \{ x: 20, y: 30, type: "pixel" \}` the `x 20 y 30`.
   * you can use instead of `destination \{ x: 0.5, y: 0.5, type: "align" \}` the `xAlign 0.5 yAlign 0.5`.
   * you can use instead of `destination \{ x: 0.5, y: 0.5, type: "percentage" \}` the `xPercentage 0.5 yPercentage 0.5`.
-* `rotate`: Create a rotate effect. (Read more [here](/start/animations-effects.md#rotate)). You can add all the parameters you would use in JS/TS.
-* `zoom`: Create a zoom effect. (Read more [here](/start/animations-effects.md#zoom)). You can add all the parameters you would use in JS/TS.
-* `shake`: Create a shake effect. (Read more [here](/start/animations-effects.md#shake)). You can add all the parameters you would use in JS/TS.
+* `rotate`: Create a rotate effect. (Read more [here](/start/canvas-animations-effects.md#rotate)). You can add all the parameters you would use in JS/TS.
+* `zoom`: Create a zoom effect. (Read more [here](/start/canvas-animations-effects.md#zoom)). You can add all the parameters you would use in JS/TS.
+* `shake`: Create a shake effect. (Read more [here](/start/canvas-animations-effects.md#shake)). You can add all the parameters you would use in JS/TS.
   
 ```ink
 # fade bg duration 3

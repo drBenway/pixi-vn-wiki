@@ -50,7 +50,7 @@
   * [Canvas functions](canvas-functions)
   * [Position properties](canvas-position)
   * [Transitions](canvas-transition)
-  * [Animations and Effects](animations-effects)
+  * [Animations and Effects](canvas-animations-effects)
   * [Tickers](tickers)
 * [Sounds and Music](sound)
 * [Assets management](assets-management)

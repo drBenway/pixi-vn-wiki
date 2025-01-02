@@ -138,7 +138,7 @@ export default defineConfig({
                 { text: 'Components functions', link: '/start/canvas-functions' },
                 { text: 'Position properties', link: '/start/canvas-position' },
                 { text: 'Transitions', link: '/start/canvas-transition' },
-                { text: 'Animations and Effects', link: '/start/animations-effects' },
+                { text: 'Animations and Effects', link: '/start/canvas-animations-effects' },
                 { text: 'Tickers', link: '/start/tickers' },
               ]
             },
