@@ -126,6 +126,51 @@ This Ticker will edit the `alpha` property of the canvas component to fade in/ou
 
 `FadeAlphaTicker` have a constructor that takes the a object with the following properties:
 
+* `speed` (Optional): is a number that represents the speed of the fade.
+* `type` (Optional): is a string that represents the type of the fade. Possible values are `hide` and `show`:
+  * `hide`: The canvas component will fade out.
+  * `show`: The canvas component will fade in.
+* `limit` (Optional): is a number that represents the limit of the fade. If `type` is `hide`, the limit will be `0`, otherwise it will be `1`.
+* `speedProgression` (Optional): in case the fade needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
+* `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `alpha` property, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
+* `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
+* `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+
+:::tabs
+== startLabel.ts
+
+```ts
+import { canvas, FadeAlphaTicker, newLabel, Repeat, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("alien", "alien", { align: 0.5, anchor: 0.5 });
+        canvas.addTickersSteps("alien", [
+            new FadeAlphaTicker({}), // [!code focus]
+            new FadeAlphaTicker({ // [!code focus]
+                type: "show", // [!code focus]
+            }), // [!code focus]
+            Repeat,
+        ]);
+    },
+]);
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=gj3pdp entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
 ## Special properties
 
 ### Speed progression property
