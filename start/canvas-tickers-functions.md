@@ -48,12 +48,55 @@ export async function defineAssets() {
 ::: sandbox {template=vfqzch entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
+## Remove a ticker
+
+To remove a ticker, you must use the `canvas.removeTicker` function. This function receives the following parameters:
+
+* `tikerId`: The id or an array of ids of the ticker to be removed.
+
+:::tabs
+== startLabel.ts
+
+```ts
+import { canvas, newLabel, RotateTicker, showImage, storage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("egg_head", "egg_head", { yAlign: 0.5, xAlign: 0.25, anchor: 0.5 });
+        await showImage("flower_top", "flower_top", { yAlign: 0.5, xAlign: 0.75, anchor: 0.5 });
+        let tikerId = canvas.addTicker(["egg_head", "flower_top"], new RotateTicker({}));
+        storage.setVariable("tiker_id", tikerId);
+    },
+    () => {
+        let tikerId = storage.getVariable<string>("tiker_id");
+        tikerId && canvas.removeTicker(tikerId); // [!code focus]
+    },
+]);
+
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+    Assets.add({ alias: "flower_top", src: "https://pixijs.com/assets/flowerTop.png" });
+}
+```
+
+:::
+
+::: sandbox {template=zglj8q entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
 ## Unlink a canvas component from a ticker
 
 For unlink a canvas component from a ticker class you can use the `canvas.removeAssociationBetweenTickerCanvasElement` function. This function receives the following parameters:
 
 * `alias`: The alias of the canvas element that will be unlinked from the ticker. You can pass a string or an array of strings.
-* `ticker`: The ticker class to be unlinked.
+* `ticker` (Optional): The ticker class to be unlinked. If you do not pass this parameter, all tickers will be unlinked.
 
 :::tabs
 == startLabel.ts
@@ -135,6 +178,55 @@ export async function defineAssets() {
 :::
 
 ::: sandbox {template=7zgqr6 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
+## Pause and resume a ticker
+
+To pause a ticker, you must use the `canvas.putOnPauseTicker` function. This function receives the following parameters:
+
+* `alias`: The alias of the canvas element that will use the ticker.
+* `tickerIdsExcluded`: The tickers that will not be paused.
+
+To resume a paused ticker, you must use the `canvas.resumeTickerPaused` function. This function receives the following parameters:
+
+* `alias`: The alias of the canvas element that will use the ticker.
+
+:::tabs
+== startLabel.ts
+
+```ts
+import { canvas, narration, newLabel, RotateTicker, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("egg_head", "egg_head", { align: 0.5, anchor: 0.5 });
+        let tikerId = canvas.addTicker(["egg_head"], new RotateTicker({}));
+        narration.dialogue = "start";
+    },
+    () => {
+        canvas.putOnPauseTicker("egg_head"); // [!code focus]
+        narration.dialogue = "pause";
+    },
+    () => {
+        canvas.resumeTickerPaused("egg_head"); // [!code focus]
+        narration.dialogue = "resume";
+    },
+]);
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=ns726n entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
 ## Sequence of tickers
@@ -254,5 +346,3 @@ export async function defineAssets() {
 
 ::: sandbox {template=d3f7gv entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
-
-<!-- TODO: paused tiker -->
