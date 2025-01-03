@@ -11,21 +11,24 @@ Pixi’VN provides various primitive tickers, that can be used to perform basic 
 For moving a canvas component in `(x, y)` direction you can use the `MoveTicker` class.
 This ticker will edit the `x` and `y` properties to reach the destination.
 
-`MoveTicker` have a constructor that takes the a object with the following properties:
+`MoveTicker` have a constructor that takes following properties:
 
-* `destination`: is an object that contains the destination of the movement. It has the following properties:
+* `props`: the properties of the shake effect. The properties are:
+  * `destination`: is an object that contains the destination of the movement. It has the following properties:
   * `x`: is a number that represents the destination in the x direction.
   * `y`: is a number that represents the destination in the y direction.
   * `type` (Optional): is a string that represents the type of the destination. Possible values are `pixel`, `percentage` and `align`:
     * `pixel`: The destination is in pixel.
     * `percentage`: The destination is in percentage.
     * `align`: The destination is in align.
-    default is `pixel`.
-* `speed` (Optional): is a number that represents the speed of the movement.
-* `speedProgression` (Optional): in case the movement needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
-* `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `x` and `y` properties, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
-* `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
-* `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+        default is `pixel`.
+  * `speed` (Optional): is a number that represents the speed of the movement.
+  * `speedProgression` (Optional): in case the movement needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
+  * `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `x` and `y` properties, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
+  * `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
+  * `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+* `duration` (Optional): the maximum duration of the ticker in seconds.
+* `priority` (Optional): the priority of the ticker.
 
 :::tabs
 == startLabel.ts
@@ -74,14 +77,17 @@ export async function defineAssets() {
 For rotating a canvas component you can use the `RotateTicker` class.
 This ticker will edit the `rotation` property to rotate the canvas component.
 
-`RotateTicker` have a constructor that takes the a object with the following properties:
+`RotateTicker` have a constructor that takes following properties:
 
-* `speed` (Optional): is a number that represents the speed of the rotation.
-* `clockwise` (Optional): is a boolean that represents the direction of the rotation. If `true`, the rotation will be clockwise, otherwise it will be counterclockwise.
-* `speedProgression` (Optional): in case the rotation needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
-* `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `rotation` property, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
-* `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
-* `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+* `props`: the properties of the shake effect. The properties are:
+  * `speed` (Optional): is a number that represents the speed of the rotation.
+  * `clockwise` (Optional): is a boolean that represents the direction of the rotation. If `true`, the rotation will be clockwise, otherwise it will be counterclockwise.
+  * `speedProgression` (Optional): in case the rotation needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
+  * `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `rotation` property, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
+  * `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
+  * `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+* `duration` (Optional): the maximum duration of the ticker in seconds.
+* `priority` (Optional): the priority of the ticker.
 
 :::tabs
 == startLabel.ts
@@ -124,17 +130,20 @@ export async function defineAssets() {
 For fading a canvas component you can use the `FadeAlphaTicker` class.
 This ticker will edit the `alpha` property of the canvas component to fade in/out.
 
-`FadeAlphaTicker` have a constructor that takes the a object with the following properties:
+`FadeAlphaTicker` have a constructor that takes following properties:
 
-* `speed` (Optional): is a number that represents the speed of the fade.
-* `type` (Optional): is a string that represents the type of the fade. Possible values are `hide` and `show`:
+* `props`: the properties of the shake effect. The properties are:
+  * `speed` (Optional): is a number that represents the speed of the fade.
+  * `type` (Optional): is a string that represents the type of the fade. Possible values are `hide` and `show`:
   * `hide`: The canvas component will fade out.
   * `show`: The canvas component will fade in.
-* `limit` (Optional): is a number that represents the limit of the fade. If `type` is `hide`, the limit will be `0`, otherwise it will be `1`.
-* `speedProgression` (Optional): in case the fade needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
-* `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `alpha` property, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
-* `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
-* `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+  * `limit` (Optional): is a number that represents the limit of the fade. If `type` is `hide`, the limit will be `0`, otherwise it will be `1`.
+  * `speedProgression` (Optional): in case the fade needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
+  * `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `alpha` property, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
+  * `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
+  * `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+* `duration` (Optional): the maximum duration of the ticker in seconds.
+* `priority` (Optional): the priority of the ticker.
 
 :::tabs
 == startLabel.ts
@@ -176,17 +185,20 @@ export async function defineAssets() {
 For zooming a canvas component you can use the `ZoomTicker` class.
 This ticker will edit the `scale.x` and `scale.y` properties of the canvas component to zoom in/out.
 
-`ZoomTicker` have a constructor that takes the a object with the following properties:
+`ZoomTicker`  have a constructor that takes following properties:
 
-* `speed` (Optional): is a number that represents the speed of the zoom effect.
-* `type` (Optional): is a string that represents the type of the zoom effect. Possible values are `zoom` and `unzoom`:
+* `props`: the properties of the shake effect. The properties are:
+  * `speed` (Optional): is a number that represents the speed of the zoom effect.
+  * `type` (Optional): is a string that represents the type of the zoom effect. Possible values are `zoom` and `unzoom`:
   * `zoom`: The canvas component will zoom in.
   * `unzoom`: The canvas component will zoom out.
-* `limit` (Optional): is a number that represents the limit of the effect. If `type` is `zoom`, the limit will be `Infinity`, otherwise it will be `0`.
-* `speedProgression` (Optional): in case the zoom effect needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
-* `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `scale.x` and `scale.y` properties, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
-* `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
-* `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+  * `limit` (Optional): is a number that represents the limit of the effect. If `type` is `zoom`, the limit will be `Infinity`, otherwise it will be `0`.
+  * `speedProgression` (Optional): in case the zoom effect needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
+  * `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `scale.x` and `scale.y` properties, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
+  * `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
+  * `tickerAliasToResume` (Optional): in case you want to continue some tickers that were previously paused, you can pass the aliases of the canvas components that have the tickers to be resumed. You can read more about it [here](#ticker-alias-to-resume-property).
+* `duration` (Optional): the maximum duration of the ticker in seconds.
+* `priority` (Optional): the priority of the ticker.
 
 :::tabs
 == startLabel.ts
