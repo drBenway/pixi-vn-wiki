@@ -50,7 +50,7 @@ export async function defineAssets() {
 
 ## Unlink a canvas component from a ticker
 
-For unlink a canvas component from a ticker you can use the `canvas.removeAssociationBetweenTickerCanvasElement` function. This function receives the following parameters:
+For unlink a canvas component from a ticker class you can use the `canvas.removeAssociationBetweenTickerCanvasElement` function. This function receives the following parameters:
 
 * `alias`: The alias of the canvas element that will be unlinked from the ticker. You can pass a string or an array of strings.
 * `ticker`: The ticker class to be unlinked.
@@ -91,9 +91,51 @@ export async function defineAssets() {
 
 ## Force completion of the transition at the end of the step
 
-<!-- TODO: tickerMustBeCompletedBeforeNextStep -->
+When the animation has a goal to reach, such as a destination, we sometimes need the animation to reach the goal before the current step ends.
 
-This page is under construction.
+To do this, you can use the `canvas.tickerMustBeCompletedBeforeNextStep` function. This function receives the following parameters:
+
+* `step`: The step that the ticker must be completed before the next step. It receives an object with the following properties:
+  * `id`: The id of the step.
+  * `alias`: If it is a sequence of tickers, the alias of the sequence of tickers.
+
+:::tabs
+== startLabel.ts
+
+```ts
+import { canvas, MoveTicker, narration, newLabel, showImage } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("egg_head", "egg_head", { yAlign: 0, xAlign: 0, anchor: 0 });
+        let tikerId = canvas.addTicker(["egg_head"],
+            new MoveTicker({
+                destination: { x: 1, y: 0, type: "align" },
+                speed: 1,
+            })
+        );
+        tikerId && canvas.tickerMustBeCompletedBeforeNextStep({ id: tikerId }); // [!code focus]
+    },
+    () => {
+        narration.dialogue = "complete";
+    },
+]);
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "egg_head", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=7zgqr6 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
 
 ## Run a succession of tickers
 
