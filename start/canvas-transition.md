@@ -16,7 +16,7 @@ This transition has been created with the [`FadeAlphaTicker`](/start/canvas-anim
 The `showWithDissolveTransition` function show a canvas element with dissolve transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
-* `image`: The image to show. It can be:
+* `image` (Optional): The image to show. If you don't provide the url, then the alias is used as the url. It can be:
   * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
@@ -87,7 +87,7 @@ This transition has been created with the [`FadeAlphaTicker`](/start/canvas-anim
 The `showWithFadeTransition` function show a canvas element with fade transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
-* `image`: The image to show. It can be:
+* `image` (Optional): The image to show. If you don't provide the url, then the alias is used as the url. It can be:
   * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
@@ -158,7 +158,7 @@ This transition has been created with the [`MoveTicker`](/start/canvas-animation
 The `moveIn` function show a canvas element with move in transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
-* `image`: The image to show. It can be:
+* `image` (Optional): The image to show. If you don't provide the url, then the alias is used as the url. It can be:
   * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
@@ -231,7 +231,7 @@ This transition has been created with the [`MoveTicker`](/start/canvas-animation
 The `pushIn` function show a canvas element with push in transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
-* `image`: The image to show. It can be:
+* `image` (Optional): The image to show. If you don't provide the url, then the alias is used as the url. It can be:
   * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
@@ -304,7 +304,7 @@ This transition has been created with the [`ZoomTicker`](/start/canvas-animation
 The `zoomIn` function show a canvas element with zoom in transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
-* `image`: The image to show. It can be:
+* `image` (Optional): The image to show. If you don't provide the url, then the alias is used as the url. It can be:
   * a URL/path. In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
   * a array of URL/paths. In this case, will be added a [ImageContainer](/start/canvas-images.md).
   * a `{ value: string, options: ImageSpriteOptions }`, where `value` is the URL/path and `options` is the the options of the [ImageSprite](/start/canvas-images.md). In this case, if URL/path is a video will be added a [VideoSprite](/start/canvas-videos.md), else a [ImageSprite](/start/canvas-images.md).
