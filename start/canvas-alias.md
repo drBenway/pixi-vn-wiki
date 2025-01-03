@@ -24,3 +24,17 @@ import { canvas } from '@drincs/pixi-vn'
 
 canvas.editAlias('sprite1', 'sprite2')
 ```
+
+## Stage alias
+
+In PixiJS the stage is a component that manages all the layers in its scene tree. It can be considered the entire window that contains all the elements.
+
+This component has been assigned a special alias, `CANVAS_APP_STAGE_ALIAS`, which is used to reference the stage in the script.
+
+This is very useful if you want to run some [animations or effects](/start/canvas-animations-effects.md) at the entire window. Not all features are allowed with this alias, such as deleting.
+
+```typescript
+import { CANVAS_APP_STAGE_ALIAS, shakeEffect } from '@drincs/pixi-vn'
+
+shakeEffect(CANVAS_APP_STAGE_ALIAS)
+```
