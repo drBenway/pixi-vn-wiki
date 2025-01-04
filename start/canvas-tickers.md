@@ -238,6 +238,51 @@ export async function defineAssets() {
 ::: sandbox {template=wxn3qm entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
 :::
 
+### Mirror
+
+You can use the `MirrorTicker` class to mirror a canvas component.
+
+For example, if you want to mirror a canvas component horizontally, you can use the following code:
+
+:::tabs
+== startLabel.ts
+
+```ts
+import { canvas, newLabel, Repeat, showImage, ZoomTicker } from "@drincs/pixi-vn";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImage("alien", "alien", { align: 0.5, anchor: 0.5 });
+        canvas.addTickersSteps("alien", [
+            new ZoomTicker({
+                type: "unzoom",
+                limit: { x: -1, y: 0 },
+                speed: { x: 1, y: 0 },
+            }),
+            new ZoomTicker({
+                limit: 1,
+            }),
+            Repeat,
+        ]);
+    },
+]);
+```
+
+== assets-utility.ts
+
+```ts
+import { Assets } from "@drincs/pixi-vn";
+
+export async function defineAssets() {
+    Assets.add({ alias: "alien", src: "https://pixijs.com/assets/eggHead.png" });
+}
+```
+
+:::
+
+::: sandbox {template=lyj52j entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
+:::
+
 ## Special properties
 
 All the tickers, provided by Pixi’VN, have the following properties:
