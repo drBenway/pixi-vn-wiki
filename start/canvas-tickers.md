@@ -82,6 +82,7 @@ This ticker will edit the `rotation` property to rotate the canvas component.
 * `props`: the properties of the shake effect. The properties are:
   * `speed` (Optional): is a number that represents the speed of the rotation.
   * `clockwise` (Optional): is a boolean that represents the direction of the rotation. If `true`, the rotation will be clockwise, otherwise it will be counterclockwise.
+  * `limit` (Optional): is a number that represents the limit of the rotation. It is in degrees.
   * `speedProgression` (Optional): in case the rotation needs to increase/decrease in speed over time, this property can be used. You can read more about it [here](#speed-progression-property).
   * `startOnlyIfHaveTexture` (Optional): is a boolean that represents if the animation should start only if the canvas component have a texture not empty. If `true` and the canvas component not have a texture, the animation will not edit the `rotation` property, but will be executed. You can read more about it [here](#start-only-if-have-texture-property).
   * `aliasToRemoveAfter` (Optional): is a string[] that contains the aliases of the [canvas component](/start/canvas-components) that will be removed after the movement. You can read more about it [here](#alias-to-remove-after-property).
