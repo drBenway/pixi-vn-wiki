@@ -312,6 +312,7 @@ The `zoomIn` function show a canvas element with zoom in transition. This functi
   * a [canvas component](/start/canvas-components.md).
 * `props` (Optional): The properties of the effect. It combines the properties of the [Zoom effect](/start/canvas-animations-effects.md#zoom) with following properties:
   * `direction`: The direction of the zoom. It can be `right`, `left`, `top`, `bottom`. default is `right`.
+  * `removeOldComponentWithZoomOut` (Optional): If a component with the same alias exists, the existing component will be removed with a `zoomOut` effect when the new component transition is complete. default is `false`.
 * `priority` (Optional): The priority of the effect.
 
 The `zoomOut` function remove a canvas element with zoom out transition. This function has the following parameters:
