@@ -2,7 +2,9 @@
 
 To load and manipulate assets (images, gifs, videos...) you will need to use `Assets`. `Assets` is a class with many features and comes from the PixiJS library, if you want more information read [here](https://pixijs.com/8.x/guides/components/assets).
 
-In the examples so far we have loaded the "Textures"  of our canvas components and our sounds just before using them without connecting these asserts to a unique alias.
+In all Pixi VN functions you can directly use the image URL without having to worry about uploading and manipulating the image with `Assets`.
+
+
 
 This method works and keeps only the strictly necessary asserts in memory, but it has some disadvantages:
 
