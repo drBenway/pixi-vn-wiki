@@ -166,6 +166,7 @@ The `moveIn` function show a canvas element with move in transition. This functi
   * a [canvas component](/start/canvas-components.md).
 * `props` (Optional): The properties of the effect. It combines the properties of the [Move effect](/start/canvas-animations-effects.md#move) with following properties:
   * `direction`: The direction of the move. It can be `right`, `left`, `top`, `bottom`. default is `right`.
+  * `removeOldComponentWithMoveOut` (Optional): If a component with the same alias exists, the existing component will be removed with a `moveOut` effect when the new component transition is complete. default is `false`.
 * `priority` (Optional): The priority of the effect.
 
 The `moveOut` function remove a canvas element with move out transition. This function has the following parameters:
