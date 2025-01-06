@@ -4,7 +4,9 @@ To load and manipulate assets (images, gifs, videos...) you will need to use `As
 
 In all Pixi’VN functions you can directly use the image URL without having to worry about uploading and manipulating the image with `Assets`.
 
-
+```ts
+let alien1 = await showImage("alien", "https://pixijs.com/assets/eggHead.png");
+```
 
 This method works and keeps only the strictly necessary asserts in memory, but it has some disadvantages:
 
