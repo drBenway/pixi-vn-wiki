@@ -25,7 +25,7 @@ The `showWithDissolveTransition` function show a canvas element with dissolve tr
 * `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/canvas-animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
-The `removeWithDissolveTransition` function remove a canvas element with dissolve transition. This function has the following parameters:
+The `removeWithDissolve` function remove a canvas element with dissolve transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
 * `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/canvas-animations-effects.md#fade).
@@ -35,7 +35,7 @@ The `removeWithDissolveTransition` function remove a canvas element with dissolv
 == startLabel.ts
 
 ```ts
-import { Assets, newLabel, removeWithDissolveTransition, showWithDissolveTransition } from "@drincs/pixi-vn";
+import { Assets, newLabel, removeWithDissolve, showWithDissolveTransition } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
     async () => {
@@ -47,7 +47,7 @@ export const startLabel = newLabel("start_label", [
     },
     async () => {
         await showWithDissolveTransition("alien", "flower_top"); // [!code focus]
-        removeWithDissolveTransition("human"); // [!code focus]
+        removeWithDissolve("human"); // [!code focus]
     },
 ], {
     onLoadingLabel: async () => {
@@ -96,7 +96,7 @@ The `showWithFadeTransition` function show a canvas element with fade transition
 * `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/canvas-animations-effects.md#fade).
 * `priority` (Optional): The priority of the effect.
 
-The `removeWithFadeTransition` function remove a canvas element with fade transition. This function has the following parameters:
+The `removeWithFade` function remove a canvas element with fade transition. This function has the following parameters:
 
 * `alias`: The [alias](/start/canvas-alias.md) of the component to remove.
 * `props` (Optional): The properties of the effect. It corresponds to the props of the [Fade effect](/start/canvas-animations-effects.md#fade).
@@ -106,7 +106,7 @@ The `removeWithFadeTransition` function remove a canvas element with fade transi
 == startLabel.ts
 
 ```ts
-import { Assets, newLabel, removeWithFadeTransition, showWithFadeTransition } from "@drincs/pixi-vn";
+import { Assets, newLabel, removeWithFade, showWithFadeTransition } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
     async () => {
@@ -118,7 +118,7 @@ export const startLabel = newLabel("start_label", [
     },
     async () => {
         await showWithFadeTransition("alien", "flower_top"); // [!code focus]
-        removeWithFadeTransition("human"); // [!code focus]
+        removeWithFade("human"); // [!code focus]
     },
 ], {
     onLoadingLabel: async () => {
