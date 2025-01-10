@@ -106,7 +106,7 @@ The `removeWithFadeTransition` function remove a canvas element with fade transi
 == startLabel.ts
 
 ```ts
-import { Assets, newLabel, removeWithDissolveTransition, showWithFadeTransition } from "@drincs/pixi-vn";
+import { Assets, newLabel, removeWithFadeTransition, showWithFadeTransition } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
     async () => {
