@@ -13,7 +13,7 @@ The dissolve transition when:
 
 This transition has been created with the [`FadeAlphaTicker`](/start/canvas-animations-effects.md#fade).
 
-The `showWithDissolveTransition` function show a canvas element with dissolve transition. This function has the following parameters:
+The `showWithDissolve` function show a canvas element with dissolve transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
 * `image` (Optional): The image to show. If you don't provide the url, then the alias is used as the url. It can be:
@@ -35,18 +35,18 @@ The `removeWithDissolve` function remove a canvas element with dissolve transiti
 == startLabel.ts
 
 ```ts
-import { Assets, newLabel, removeWithDissolve, showWithDissolveTransition } from "@drincs/pixi-vn";
+import { Assets, newLabel, removeWithDissolve, showWithDissolve } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
     async () => {
-        await showWithDissolveTransition("alien", "egg_head", { duration: 5 }); // [!code focus]
-        await showWithDissolveTransition("human", { // [!code focus]
+        await showWithDissolve("alien", "egg_head", { duration: 5 }); // [!code focus]
+        await showWithDissolve("human", { // [!code focus]
             value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
             options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
         }); // [!code focus]
     },
     async () => {
-        await showWithDissolveTransition("alien", "flower_top"); // [!code focus]
+        await showWithDissolve("alien", "flower_top"); // [!code focus]
         removeWithDissolve("human"); // [!code focus]
     },
 ], {
@@ -373,12 +373,12 @@ Create your own transition is very simple, you can combine more [Animations and 
 
 ( The Pixi’VN Team welcomes new proposals/sharing to make this library more and more complete. So you can create a [discussion](https://github.com/DRincs-Productions/pixi-vn/discussions/categories/show-and-tell) to share/propose it. )
 
-To better understand how to create one, a simplified version of [`showWithDissolveTransition`](#dissolve-transition) will be left as an example below.
+To better understand how to create one, a simplified version of [`showWithDissolve`](#dissolve-transition) will be left as an example below.
 
 ```typescript
 import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
 
-export async function showWithDissolveTransition(
+export async function showWithDissolve(
     alias: string,
     canvasElement: ImageSprite,
     props: FadeAlphaTickerProps = {},
@@ -413,7 +413,7 @@ This example shows how to create a transition that forces the completion of the 
 ```typescript
 import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
 
-export async function showWithDissolveTransition(
+export async function showWithDissolve(
     alias: string,
     canvasElement: ImageSprite,
     props: FadeAlphaTickerProps && {
@@ -458,7 +458,7 @@ To remove the previous component when the new component transition is complete, 
 ```typescript
 import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY } from "@drincs/pixi-vn"
 
-export async function showWithDissolveTransition(
+export async function showWithDissolve(
     alias: string,
     canvasElement: ImageSprite,
     props: FadeAlphaTickerProps = {},
