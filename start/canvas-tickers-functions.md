@@ -182,7 +182,7 @@ export async function defineAssets() {
 
 ## Pause and resume a ticker
 
-To pause a ticker, you must use the `canvas.putOnPauseTicker` function. This function receives the following parameters:
+To pause a ticker, you must use the `canvas.pauseTicker` function. This function receives the following parameters:
 
 * `alias`: The alias of the canvas element that will use the ticker.
 * `tickerIdsExcluded`: The tickers that will not be paused.
@@ -204,7 +204,7 @@ export const startLabel = newLabel("start_label", [
         narration.dialogue = "start";
     },
     () => {
-        canvas.putOnPauseTicker("egg_head"); // [!code focus]
+        canvas.pauseTicker("egg_head"); // [!code focus]
         narration.dialogue = "pause";
     },
     () => {

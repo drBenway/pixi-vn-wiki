@@ -539,7 +539,7 @@ export async function showWithFade(
                 aliasToRemoveAfter: oldCanvasAlias, // [!code ++]
             }, undefined, priority) // [!code ++]
         ) // [!code ++]
-        canvas.putOnPauseTicker(alias) // [!code ++]
+        canvas.pauseTicker(alias) // [!code ++]
         if (id2) { // [!code ++]
             res ? res.push(id2) : res = [id2] // [!code ++]
         } // [!code ++]
