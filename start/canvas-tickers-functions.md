@@ -231,7 +231,7 @@ export async function defineAssets() {
 
 ## Sequence of tickers
 
-If you want to run a sequence of tickers, you can use the `canvas.addTickersSteps` function. This function receives the following parameters:
+If you want to run a sequence of tickers, you can use the `canvas.addTickersSequence` function. This function receives the following parameters:
 
 * `canvasElementAlias`: The alias of the canvas element that will use the ticker. Please note that a component alias can only have one sequence sequence of tickers to it. If you add a new sequence of tickers to the same alias, the new sequence will replace the old one.
 * `tickers`: An array of tickers to be run in sequence.
@@ -245,7 +245,7 @@ import { canvas, MoveTicker, newLabel, RotateTicker, showImage } from "@drincs/p
 export const startLabel = newLabel("start_label", [
 async () => {
     await showImage("egg_head", "egg_head", { anchor: 0.5 });
-    let tikerId = canvas.addTickersSteps("egg_head", [ // [!code focus]
+    let tikerId = canvas.addTickersSequence("egg_head", [ // [!code focus]
         new MoveTicker({ // [!code focus]
             destination: { x: 0.5, y: 0.5, type: "align" }, // [!code focus]
         }), // [!code focus]
@@ -283,7 +283,7 @@ import { canvas, newLabel, Pause, RotateTicker, showImage } from "@drincs/pixi-v
 export const startLabel = newLabel("start_label", [
     async () => {
         await showImage("egg_head", "egg_head", { anchor: 0.5, align: 0.5 });
-        let tikerId = canvas.addTickersSteps("egg_head", [ // [!code focus]
+        let tikerId = canvas.addTickersSequence("egg_head", [ // [!code focus]
             new RotateTicker({ speed: 1, clockwise: true }, 2), // [!code focus]
             Pause(1), // [!code focus]
             new RotateTicker({ speed: 1, clockwise: false }, 2), // [!code focus]
@@ -323,7 +323,7 @@ export const startLabel = newLabel("start_label", [
             anchor: 0.5,
             align: 0.5,
         });
-        let tikerId = canvas.addTickersSteps("egg_head", [ // [!code focus]
+        let tikerId = canvas.addTickersSequence("egg_head", [ // [!code focus]
             new RotateTicker({ speed: 1, clockwise: true }, 2), // [!code focus]
             new RotateTicker({ speed: 2, clockwise: false }, 2), // [!code focus]
             Repeat, // [!code focus]

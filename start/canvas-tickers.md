@@ -39,7 +39,7 @@ import { canvas, MoveTicker, newLabel, Repeat, showImage } from "@drincs/pixi-vn
 export const startLabel = newLabel("start_label", [
     async () => {
         await showImage("alien");
-        canvas.addTickersSteps("alien", [
+        canvas.addTickersSequence("alien", [
             new MoveTicker({ // [!code focus]
                 destination: { x: 1, y: 0, type: "align" }, // [!code focus]
             }), // [!code focus]
@@ -99,7 +99,7 @@ import { canvas, newLabel, Repeat, RotateTicker, showImage } from "@drincs/pixi-
 export const startLabel = newLabel("start_label", [
     async () => {
         await showImage("alien", "alien", { align: 0.5, anchor: 0.5 });
-        canvas.addTickersSteps("alien", [
+        canvas.addTickersSequence("alien", [
             new RotateTicker({}, 2), // [!code focus]
             new RotateTicker({ // [!code focus]
                 clockwise: false, // [!code focus]
@@ -155,7 +155,7 @@ import { canvas, FadeAlphaTicker, newLabel, Repeat, showImage } from "@drincs/pi
 export const startLabel = newLabel("start_label", [
     async () => {
         await showImage("alien", "alien", { align: 0.5, anchor: 0.5 });
-        canvas.addTickersSteps("alien", [
+        canvas.addTickersSequence("alien", [
             new FadeAlphaTicker({}), // [!code focus]
             new FadeAlphaTicker({ // [!code focus]
                 type: "show", // [!code focus]
@@ -210,7 +210,7 @@ import { canvas, newLabel, Repeat, showImage, ZoomTicker } from "@drincs/pixi-vn
 export const startLabel = newLabel("start_label", [
     async () => {
         await showImage("alien", "alien", { align: 0.5, anchor: 0.5 });
-        canvas.addTickersSteps("alien", [
+        canvas.addTickersSequence("alien", [
             new ZoomTicker({ // [!code focus]
                 limit: 3, // [!code focus]
             }), // [!code focus]
@@ -254,7 +254,7 @@ import { canvas, newLabel, Repeat, showImage, ZoomTicker } from "@drincs/pixi-vn
 export const startLabel = newLabel("start_label", [
     async () => {
         await showImage("alien", "alien", { align: 0.5, anchor: 0.5 });
-        canvas.addTickersSteps("alien", [
+        canvas.addTickersSequence("alien", [
             new ZoomTicker({
                 type: "unzoom",
                 limit: { x: -1, y: 0 },
@@ -317,7 +317,7 @@ import { canvas, MoveTicker, newLabel, Repeat, showImage } from "@drincs/pixi-vn
 export const startLabel = newLabel("start_label", [
 async () => {
     await showImage("alien");
-    canvas.addTickersSteps("alien", [
+    canvas.addTickersSequence("alien", [
         new MoveTicker({
             destination: { x: 1, y: 0, type: "align" },
             speedProgression: { type: "linear", amt: -10, limit: 5 }, // [!code focus]
