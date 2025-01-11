@@ -187,7 +187,7 @@ To pause a ticker, you must use the `canvas.pauseTicker` function. This function
 * `alias`: The alias of the canvas element that will use the ticker.
 * `tickerIdsExcluded`: The tickers that will not be paused.
 
-To resume a paused ticker, you must use the `canvas.resumeTickerPaused` function. This function receives the following parameters:
+To resume a paused ticker, you must use the `canvas.resumeTicker` function. This function receives the following parameters:
 
 * `alias`: The alias of the canvas element that will use the ticker.
 
@@ -208,7 +208,7 @@ export const startLabel = newLabel("start_label", [
         narration.dialogue = "pause";
     },
     () => {
-        canvas.resumeTickerPaused("egg_head"); // [!code focus]
+        canvas.resumeTicker("egg_head"); // [!code focus]
         narration.dialogue = "resume";
     },
 ]);
