@@ -93,7 +93,7 @@ export async function defineAssets() {
 
 ## Unlink a canvas component from a ticker
 
-For unlink a canvas component from a ticker class you can use the `canvas.removeAssociationBetweenTickerCanvasElement` function. This function receives the following parameters:
+For unlink a canvas component from a ticker class you can use the `canvas.unlinkComponentFromTicker` function. This function receives the following parameters:
 
 * `alias`: The alias of the canvas element that will be unlinked from the ticker. You can pass a string or an array of strings.
 * `ticker` (Optional): The ticker class to be unlinked. If you do not pass this parameter, all tickers will be unlinked.
@@ -111,7 +111,7 @@ export const startLabel = newLabel("start_label", [
         let tikerId = canvas.addTicker(["egg_head", "flower_top"], new RotateTicker({}));
     },
     () => {
-        canvas.removeAssociationBetweenTickerCanvasElement("egg_head", RotateTicker); // [!code focus]
+        canvas.unlinkComponentFromTicker("egg_head", RotateTicker); // [!code focus]
     },
 ]);
 ```

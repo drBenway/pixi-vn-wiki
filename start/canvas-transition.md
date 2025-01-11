@@ -84,7 +84,7 @@ The fade transition when:
 
 This transition has been created with the [`FadeAlphaTicker`](/start/canvas-animations-effects.md#fade).
 
-The `showWithFadeTransition` function show a canvas element with fade transition. This function has the following parameters:
+The `showWithFade` function show a canvas element with fade transition. This function has the following parameters:
 
 * `alias`: Is the [alias](/start/canvas-alias.md) to identify the component.
 * `image` (Optional): The image to show. If you don't provide the url, then the alias is used as the url. It can be:
@@ -106,18 +106,18 @@ The `removeWithFade` function remove a canvas element with fade transition. This
 == startLabel.ts
 
 ```ts
-import { Assets, newLabel, removeWithFade, showWithFadeTransition } from "@drincs/pixi-vn";
+import { Assets, newLabel, removeWithFade, showWithFade } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
     async () => {
-        await showWithFadeTransition("alien", "egg_head", { duration: 5 }); // [!code focus]
-        await showWithFadeTransition("human", { // [!code focus]
+        await showWithFade("alien", "egg_head", { duration: 5 }); // [!code focus]
+        await showWithFade("human", { // [!code focus]
             value: ["m01-body", "m01-eyes", "m01-mouth"], // [!code focus]
             options: { scale: 0.5, xAlign: 0.7 }, // [!code focus]
         }); // [!code focus]
     },
     async () => {
-        await showWithFadeTransition("alien", "flower_top"); // [!code focus]
+        await showWithFade("alien", "flower_top"); // [!code focus]
         removeWithFade("human"); // [!code focus]
     },
 ], {
@@ -500,7 +500,7 @@ To do this you will also need to use many other functions depending on the trans
 ```typescript
 import { canvas, FadeAlphaTicker, FadeAlphaTickerProps, ImageSprite, UPDATE_PRIORITY, Pause } from "@drincs/pixi-vn"
 
-export async function showWithFadeTransition(
+export async function showWithFade(
     alias: string,
     canvasElement: ImageSprite,
     props: FadeAlphaTickerProps = {},
