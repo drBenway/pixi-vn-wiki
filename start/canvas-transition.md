@@ -406,7 +406,7 @@ export async function showWithDissolve(
 
 It is recommended to create a transition that forces the completion of the transition at the end of the step.
 
-To do this, you can use the [`canvas.tickerMustBeCompletedBeforeNextStep` function](/start/canvas-tickers-functions.md#force-completion-of-the-transition-at-the-end-of-the-step).
+To do this, you can use the [`canvas.completeTickerOnStepEnd` function](/start/canvas-tickers-functions.md#force-completion-of-the-transition-at-the-end-of-the-step).
 
 This example shows how to create a transition that forces the completion of the transition at the end of the step.
 
@@ -432,7 +432,7 @@ export async function showWithDissolve(
     }, undefined, priority)
     let id = canvas.addTicker(alias, effect)
     if (id) { // [!code ++]
-        mustBeCompletedBeforeNextStep && canvas.tickerMustBeCompletedBeforeNextStep({ id: id }) // [!code ++]
+        mustBeCompletedBeforeNextStep && canvas.completeTickerOnStepEnd({ id: id }) // [!code ++]
     } // [!code ++]
     if (canvasElement.haveEmptyTexture) {
         await canvasElement.load()

@@ -57,7 +57,6 @@ export const startLabel = newLabel("start_label", [
     () => {
         canvas.removeAllTickers();
         let tickerId = canvas.addTicker("james", new MoveTicker({ destination: { x: 0, y: 1, type: "align" } }));
-        tickerId && canvas.tickerMustBeCompletedBeforeNextStep({ id: tickerId });
     },
 ]);
 ```

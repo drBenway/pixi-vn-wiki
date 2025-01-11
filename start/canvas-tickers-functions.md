@@ -136,7 +136,7 @@ export async function defineAssets() {
 
 When the animation has a goal to reach, such as a destination, we sometimes need the animation to reach the goal before the current step ends.
 
-To do this, you can use the `canvas.tickerMustBeCompletedBeforeNextStep` function. This function receives the following parameters:
+To do this, you can use the `canvas.completeTickerOnStepEnd` function. This function receives the following parameters:
 
 * `step`: The step that the ticker must be completed before the next step. It receives an object with the following properties:
   * `id`: The id of the step.
@@ -157,7 +157,7 @@ export const startLabel = newLabel("start_label", [
                 speed: 1,
             })
         );
-        tikerId && canvas.tickerMustBeCompletedBeforeNextStep({ id: tikerId }); // [!code focus]
+        tikerId && canvas.completeTickerOnStepEnd({ id: tikerId }); // [!code focus]
     },
     () => {
         narration.dialogue = "complete";
