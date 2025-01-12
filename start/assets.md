@@ -24,19 +24,50 @@ The main possibilities are the following:
 
 ### Github
 
-`https://github.com/[repository]/raw/refs/heads/main/[file path]`
+You can use Github to host your assets. You can use the raw link of the file to use it in your project. The link will be in the following format: `https://github.com/[repository]/raw/refs/heads/main/[file path]`
 
-* You have no space limits. But each single file must not exceed 100 MiB.
-* Completely free.
-* You can upload any type of file.
-* you can edit the file keeping the same url.
-
-### Amazon S3
-
-### Firebase
-
-### Supabase
+* **Price**: Completely free.
+* **Space limits**: You have no space limits. But each single file must not exceed 100 MiB.
+* **Type of files**: You can upload any type of file.
+* **Traffic**: Speed is not the best.
+* **Edit assets**: You can edit the file keeping the same url.
 
 ### Image hosting
 
-There are more sites that allow you to upload images for free, for example [imgbb](https://imgbb.com/), [imgix](https://www.imgix.com/), [imgur](https://imgur.com/). You can use the public URL of the image. It recommend t this method if you plan to create a web application.
+Image hosting is a service that allows you to upload images for free. There are more sites to upload images for free, for example [imgbb](https://imgbb.com/), [imgix](https://www.imgix.com/), [imgur](https://imgur.com/). You can use the public URL of the image.
+
+* **Price**: Completely free. But you can pay for more features.
+* **Space limits**: You have no space limits. But each single file can have a maximum size.
+* **Type of files**: You can upload only images.
+* **Traffic**: Speed is good.
+* **Edit assets**: You can't edit the file keeping the same url.
+
+### Firebase Storage
+
+Firebase Storage is a cloud service that allows you to store and serve user-generated content, such as photos or videos or other files. You can use the public URL of the file to use it in your project.
+
+* **Price**: Firebase have two plans: Spark (free) and Blaze (pay as you go). You can find more information [here](https://firebase.google.com/pricing).
+* **Space limits**: You have, free, 5GB of free storage and 1GB/day of download. You can increase the storage by upgrading to Blaze plan. For 50GB you will pay around $1.17.
+* **Type of files**: You can upload any type of file.
+* **Traffic**: Speed is good.
+* **Edit assets**: You can edit the file keeping the same url.
+
+### Amazon S3
+
+Amazon S3 is a cloud service that allows you to store and serve user-generated content, such as photos or videos or other files. You can use the public URL of the file to use it in your project.
+
+* **Price**: Amazon S3 have a pay as you go plan. You can find more information [here](https://aws.amazon.com/s3/pricing/).
+* **Space limits**: You pay for the storage you use. You can increase the storage by upgrading the plan.
+* **Type of files**: You can upload any type of file. The price is around $0.023 per GB, so for 50GB you will pay around $1.15.
+* **Traffic**: Speed is good.
+* **Edit assets**: You can edit the file keeping the same url.
+
+### Supabase
+
+Supabase is an open-source Firebase alternative. You can use the public URL of the file to use it in your project.
+
+* **Price**: Supabase have two plans: Free and Pay as you go. You can find more information [here](https://supabase.io/pricing).
+* **Space limits**: You have, free, 5GB of free storage and 1GB/day of download. You can increase the storage by upgrading the plan.
+* **Type of files**: You can upload any type of file.
+* **Traffic**: Speed is good.
+* **Edit assets**: You can edit the file keeping the same url.
