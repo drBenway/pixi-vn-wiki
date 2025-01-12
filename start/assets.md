@@ -29,8 +29,11 @@ The main possibilities are the following:
 * You have no space limits. But each single file must not exceed 100 MiB.
 * Completely free.
 * You can upload any type of file.
+* you can edit the file keeping the same url.
 
-* Private URL: You can use a private URL of the image, you can use a private server or a cloud service, for example [Amazon S3](https://aws.amazon.com/s3/) or [Firebase](https://firebase.google.com/). It recommend t this method if you plan to create a web application.
+### Amazon S3
+
+### Firebase
 
 ### Image hosting
 
