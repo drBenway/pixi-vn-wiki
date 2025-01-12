@@ -253,7 +253,13 @@ You want continue to the next part?
 ```ts
 const startLabel = newLabel("start", [
     // ...
-    async (props) => await narration.jumpLabel(secondPart, props),
+    async () => {
+        narration.dialogue = `You want continue to the next part?`
+        narration.choiceMenuOptions = [
+            new ChoiceMenuOption("Yes, I want to continue", secondPart, {}, { type: "jump" }),
+            new ChoiceMenuOptionClose("No, I want to stop here"),
+        ]
+    },
 ]);
 export default startLabel;
 
