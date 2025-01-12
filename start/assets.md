@@ -14,7 +14,7 @@ You are completely free to store images however you want.
 
 The main possibilities are the following:
 
-<https://github.com/DRincs-Productions/ABFD-renders/raw/refs/heads/main/routine_school/A00.webp>
+* Github: https://github.com/[repository]/raw/refs/heads/main/[file path]
 
 * Public URL: There are more sites that allow you to upload images for free, for example [imgbb](https://imgbb.com/), [imgix](https://www.imgix.com/), [imgur](https://imgur.com/). You can use the public URL of the image. It recommend t this method if you plan to create a web application.
 * Private URL: You can use a private URL of the image, you can use a private server or a cloud service, for example [Amazon S3](https://aws.amazon.com/s3/) or [Firebase](https://firebase.google.com/). It recommend t this method if you plan to create a web application.
