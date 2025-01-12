@@ -35,6 +35,8 @@ The main possibilities are the following:
 
 ### Firebase
 
+### Supabase
+
 ### Image hosting
 
 There are more sites that allow you to upload images for free, for example [imgbb](https://imgbb.com/), [imgix](https://www.imgix.com/), [imgur](https://imgur.com/). You can use the public URL of the image. It recommend t this method if you plan to create a web application.
