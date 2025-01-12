@@ -17,8 +17,8 @@ hero:
       text: Why Pixi’VN?
       link: /start/why
     - theme: alt
-      text: GitHub
-      link: https://github.com/DRincs-Productions/pixi-vn
+      text: Make your first Visual Novel 
+      link: /start/make-visual-novel
 
 features:
   - icon: <img 
