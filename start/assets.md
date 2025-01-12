@@ -8,21 +8,6 @@ If you are creating a visual novel, it is recommended to keep only the assets th
 
 It is also very important that you read this documentation to better [organize the uploading of your assets](/start/assets-management.md).
 
-## Assets hosting
-
-You are completely free to store images however you want.
-
-The main possibilities are the following:
-
-Github: `https://github.com/[repository]/raw/refs/heads/main/[file path]`
-
-* You have no space limits. But each single file must not exceed 100 MiB.
-* Completely free.
-* You can upload any type of file.
-
-* Public URL: There are more sites that allow you to upload images for free, for example [imgbb](https://imgbb.com/), [imgix](https://www.imgix.com/), [imgur](https://imgur.com/). You can use the public URL of the image. It recommend t this method if you plan to create a web application.
-* Private URL: You can use a private URL of the image, you can use a private server or a cloud service, for example [Amazon S3](https://aws.amazon.com/s3/) or [Firebase](https://firebase.google.com/). It recommend t this method if you plan to create a web application.
-
 ## PixiJS AssetPack
 
 ![logo-main](https://github.com/user-attachments/assets/8e5a1437-e446-4b2d-9b9d-ff0898472086)
@@ -30,3 +15,23 @@ Github: `https://github.com/[repository]/raw/refs/heads/main/[file path]`
 AssetPack is a tool for optimising assets for the web. It can be used to transform, combine, compress assets. Any asset that you want to transform or optimise into something else can be done with AssetPack.
 
 If you want to use AssetPack, you can find the documentation [here](https://pixijs.io/assetpack)
+
+## Assets hosting
+
+You are completely free to store images however you want.
+
+The main possibilities are the following:
+
+### Github
+
+`https://github.com/[repository]/raw/refs/heads/main/[file path]`
+
+* You have no space limits. But each single file must not exceed 100 MiB.
+* Completely free.
+* You can upload any type of file.
+
+* Private URL: You can use a private URL of the image, you can use a private server or a cloud service, for example [Amazon S3](https://aws.amazon.com/s3/) or [Firebase](https://firebase.google.com/). It recommend t this method if you plan to create a web application.
+
+### Image hosting
+
+There are more sites that allow you to upload images for free, for example [imgbb](https://imgbb.com/), [imgix](https://www.imgix.com/), [imgur](https://imgur.com/). You can use the public URL of the image. It recommend t this method if you plan to create a web application.
