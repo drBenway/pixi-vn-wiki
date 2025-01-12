@@ -52,6 +52,11 @@ Firebase Storage is a cloud service that allows you to store and serve user-gene
 * **Traffic**: Speed is good.
 * **Edit assets**: You can edit the file keeping the same url.
 
+**Solving Firebase Storage CORS Issue**:
+
+* Install [gcloud CLI](https://cloud.google.com/sdk/docs/install)
+* Read this [documentation](https://intercom.help/flutterflow/en/articles/8145715-how-to-configure-cors-in-firebase-storage) to solve the CORS issue.
+
 ### Amazon S3
 
 Amazon S3 is a cloud service that allows you to store and serve user-generated content, such as photos or videos or other files. You can use the public URL of the file to use it in your project.
