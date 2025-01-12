@@ -8,7 +8,7 @@ If you are creating a visual novel, it is recommended to keep only the assets th
 
 It is also very important that you read this documentation to better [organize the uploading of your assets](/start/assets-management.md).
 
-## Where can I store the images?
+## Assets hosting
 
 You are completely free to store images however you want.
 
