@@ -483,6 +483,8 @@ Now it's time to think about the visual part too. We will add the background and
 
 In our case the character sprites are composed of 3 images: the body, the eyes and the mouth. So we use the [ImageContainer](/start/canvas-image-container.md) to create the character.
 
+You can find more information on how to add canvas components in [this documentation](/start/canvas-components.md) ([Use canvas components in *ink*](/ink/ink-canvas.md)).
+
 This is the example:
 
 :::tabs
@@ -527,7 +529,7 @@ export default startLabel;
 
 ## Use transitions
 
-This page is under construction.
+To make the visual novel more dynamic, you can use transitions between images. You can find more information on how to use transitions in the [documentation](/start/canvas-transition.md) ([Use transitions in *ink*](/ink/ink-canvas.md#show-a-canvas-component-with-transition-in-ink)).
 
 This is the example:
 
