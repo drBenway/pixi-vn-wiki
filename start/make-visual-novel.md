@@ -536,11 +536,39 @@ This is the example:
 == ink example
 
 ```ink
+# show image bg bg01-hallway
+# show imagecontainer james [m01-body m01-eyes-smile m01-mouth-neutral01] xAlign 0.5 yAlign 1 with movein direction right speed 300
+james: You're my roommate's replacement, huh?
+# show imagecontainer james [m01-body m01-eyes-grin m01-mouth-smile01]
+james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you'll be fine!
+# show imagecontainer james [m01-body m01-eyes-smile m01-mouth-grin00]
+mc: ...
+-> DONE
 ```
 
 == Typescript example
 
 ```ts
+const startLabel = newLabel("start", [
+    async () => {
+        await showImage("bg", "bg01-hallway");
+        await moveIn("james", {
+            value: ["m01-body", "m01-eyes-smile", "m01-mouth-neutral01"],
+            options: { xAlign: 0.5, yAlign: 1 }
+        }, { direction: "right", speed: 300 })
+        narration.dialogue = { character: james, text: `You're my roommate's replacement, huh?` }
+    },
+    async () => {
+        await showImageContainer("james", ["m01-body", "m01-eyes-grin", "m01-mouth-smile01"])
+        narration.dialogue = { character: james, text: `Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you'll be fine!` }
+    },
+    async () => {
+        await showImageContainer("james", ["m01-body", "m01-eyes-smile", "m01-mouth-grin00"])
+        narration.dialogue = { character: mc, text: `...` }
+    },
+    // ...
+]);
+export default startLabel;
 ```
 
 :::
