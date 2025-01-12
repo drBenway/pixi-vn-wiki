@@ -55,7 +55,8 @@
       * [Tickers methods](canvas-tickers-functions)
     * [Articulated](canvas-articulated-animations-effects)
 * [Sounds and Music](sound)
-* [Assets management](assets-management)
+* [Assets](assets)
+  * [Assets management](assets-management)
 * [Game storage](storage):
   * [Flags Management](flags)
   * [Stored Classes](stored-classes)

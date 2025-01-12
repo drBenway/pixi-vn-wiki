@@ -153,7 +153,13 @@ export default defineConfig({
               ]
             },
             { text: 'Sounds and Music', link: '/start/sound' },
-            { text: 'Assets management', link: '/start/assets-management' },
+            {
+              text: 'Assets',
+              link: '/start/assets',
+              items: [
+                { text: 'Assets management', link: '/start/assets-management' },
+              ]
+            },
             {
               text: 'Game storage',
               link: '/start/storage',

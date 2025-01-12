@@ -94,6 +94,8 @@ To make the game smoother by trying to remove asset loading times from one step 
 
 To do this, you will use the [`onLoadingLabel`](/start/labels-advanced.md#onloadinglabel) function of the label options. This function will be executed in `onStepStart` if the index of the step is 0 and when the user loads a save file. When you load a save file, all `onLoadingLabel` functions of the `narration.openedLabels` (current label and all labels that are in the stack).
 
+If you are using ***ink*** you can read the following to get the same result in the [following way](/ink/ink-assets.md).
+
 ```ts
 import { newLabel, showImage, Assets } from "@drincs/pixi-vn";
 
