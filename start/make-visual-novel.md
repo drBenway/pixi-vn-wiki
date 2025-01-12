@@ -428,20 +428,51 @@ export default startLabel;
 
 ## Define assets and load them
 
-This page is under construction.
+One of the first steps is to choose whether you want to save the assets of the visual novel. In this case, we will save the assets in the Firebase storage.
+
+Before using an asset it is highly recommended to [initialize the asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start).
 
 This is the example:
 
 :::tabs
 
-== ink example
-
-```ink
-```
-
-== Typescript example
+== assets-utility.ts
 
 ```ts
+import { Assets } from "@drincs/pixi-vn"
+
+/**
+ * Define all the assets that will be used in the game.
+ * This function will be called before the game starts.
+ * You can read more about assets management in the documentation: https://pixi-vn.web.app/start/assets-management.html
+ */
+export async function defineAssets() {
+    // backgrounds
+    Assets.add({ alias: 'background_main_menu', src: "https://andreannaking.com/wp-content/uploads/2021/12/Download-Beautiful-Nature-Landscape-Hd-Wallpaper-Full-HD-Wallpapers.jpg" })
+    Assets.add({ alias: 'bg01-hallway', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fbg01-hallway.webp?alt=media" })
+    Assets.add({ alias: 'bg02-dorm', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fbg02-dorm.webp?alt=media" })
+    // female character 01
+    Assets.add({ alias: 'fm01-body', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm01%2Ffm01-body.webp?alt=media" })
+    Assets.add({ alias: 'fm01-eyes-grin', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm01%2Ffm01-eyes-grin.webp?alt=media" })
+    Assets.add({ alias: 'fm01-eyes-smile', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm01%2Ffm01-eyes-smile.webp?alt=media" })
+    // ...
+    // female character 02
+    Assets.add({ alias: 'fm02-body', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm02%2Ffm02-body.webp?alt=media" })
+    Assets.add({ alias: 'fm02-eyes-bawl', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm02%2Ffm02-eyes-bawl.webp?alt=media" })
+    Assets.add({ alias: 'fm02-eyes-joy', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Ffm02%2Ffm02-eyes-joy.webp?alt=media" })
+    // ...
+    // male character 01
+    Assets.add({ alias: 'm01-body', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-body.webp?alt=media" })
+    Assets.add({ alias: 'm01-eyes-annoy', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-eyes-annoy.webp?alt=media" })
+    Assets.add({ alias: 'm01-eyes-concern', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-eyes-concern.webp?alt=media" })
+    // ...
+
+    // The game will not start until these asserts are loaded.
+    await Assets.load('background_main_menu')
+
+    // The game will start immediately, but these asserts will be loaded in the background.
+    // Assets.load('flowerTop')
+}
 ```
 
 :::
@@ -486,10 +517,51 @@ This is the example:
 
 :::
 
-## Use animations and effects or create your ticker
+<!-- ## Use animations and effects or create your ticker
 
 This page is under construction.
+
+:::tabs
+
+== ink example
+
+```ink
+```
+
+== Typescript example
+
+```ts
+```
+
+:::
 
 ## Add music and sound effects
 
 This page is under construction.
+
+:::tabs
+
+== ink example
+
+```ink
+```
+
+== Typescript example
+
+```ts
+```
+
+::: -->
+
+## Conclusion
+
+Well, now you know how to create a visual novel with Pixi’VN. With great power comes great responsibility, so use it wisely and create a great story! 🚀
+
+Here is the project we created together:
+
+<iframe src="https://codesandbox.io/embed/pixi-vn-visual-novel?fontsize=14&hidenavigation=1&theme=dark&view=preview"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="pixi-vn-visual-novel"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
