@@ -220,7 +220,49 @@ const secondPart = newLabel("second_part", [
 
 ## Choice Menus
 
-This page is under construction.
+Now we would ask the player if he wants to continue with the second part of the visual novel.
+
+To do this we will use the [choice menus](/start/choices.md).
+
+This is the example:
+
+:::tabs
+
+== ink example
+
+```ink
+=== start ===
+
+// ...
+
+You want continue to the next part?
+* Yes, I want to continue
+-> second_part
+* No, I want to stop here
+-> END
+
+=== second_part ===
+
+// ...
+
+-> DONE
+```
+
+== Typescript example
+
+```ts
+const startLabel = newLabel("start", [
+    // ...
+    async (props) => await narration.jumpLabel(secondPart, props),
+]);
+export default startLabel;
+
+const secondPart = newLabel("second_part", [
+    // ...
+]);
+```
+
+:::
 
 ## Edit character information and use it as variables
 
