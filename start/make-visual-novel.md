@@ -617,9 +617,9 @@ Well, now you know how to create a visual novel with Pixi’VN. With great power
 
 Here is the project we created together:
 
-<iframe src="https://codesandbox.io/embed/pixi-vn-visual-novel?fontsize=14&hidenavigation=1&theme=dark&view=preview"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="pixi-vn-visual-novel"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+<iframe src="https://stackblitz.com/~/github.com/DRincs-Productions/pixi-vn-react-template"
+    style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+    title="drincs/pixi-vn"
+    allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+    sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
 ></iframe>
