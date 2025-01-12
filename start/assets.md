@@ -6,14 +6,16 @@ You can use assets saved locally in the project or online (For the second option
 
 If you are creating a visual novel, it is recommended to keep only the assets that are used multiple times locally. Often in visual novels some images are displayed only once during the game.
 
+It is also very important that you read this documentation to better [organize the uploading of your assets](/start/assets-management.md).
+
 ## Where can I store the images?
 
 You are completely free to store images however you want.
 
 The main possibilities are the following:
 
-* Inside the project: You can insert the images inside the project and use the relative path. It recommend this method if you plan to create a desktop/mobile application.
-* Inside the project, but download them upon installation: You can insert the images inside the project and download them upon installation. It recommend t this method if you plan to create a desktop/mobile application.
+<https://github.com/DRincs-Productions/ABFD-renders/raw/refs/heads/main/routine_school/A00.webp>
+
 * Public URL: There are more sites that allow you to upload images for free, for example [imgbb](https://imgbb.com/), [imgix](https://www.imgix.com/), [imgur](https://imgur.com/). You can use the public URL of the image. It recommend t this method if you plan to create a web application.
 * Private URL: You can use a private URL of the image, you can use a private server or a cloud service, for example [Amazon S3](https://aws.amazon.com/s3/) or [Firebase](https://firebase.google.com/). It recommend t this method if you plan to create a web application.
 
