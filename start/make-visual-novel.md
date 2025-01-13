@@ -621,7 +621,7 @@ Here is an interactive example with a minimal template (HTML). Scrolling down yo
 
 == ink example
 
-::: sandbox {template=2r5f6v entry=/src/labels/startLabel.ts}
+::: sandbox {template=2r5f6v entry=/src/ink/start.ink}
 
 == Typescript example
 
