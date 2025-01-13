@@ -122,6 +122,7 @@ export default defineConfig({
               text: 'PixiJS Canvas',
               link: '/start/canvas',
               items: [
+                { text: 'Initialize', link: '/start/canvas-initialize' },
                 { text: 'Canvas alias', link: '/start/canvas-alias' },
                 {
                   text: 'Canvas Components',
