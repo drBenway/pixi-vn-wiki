@@ -615,11 +615,21 @@ This page is under construction.
 
 Well, now you know how to create a visual novel with Pixi’VN. With great power comes great responsibility, so use it wisely and create a great story! 🚀
 
-Here is the project we created together:
+Here is an interactive example with a minimal template (HTML). Scrolling down you can see the same result using a complete template.
 
-<iframe src="https://codesandbox.io/p/github/DRincs-Productions/pixi-vn-react-template/main?import=true&embed=1"
-    style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
-    title="DRincs-Productions/pixi-vn-react-template/main"
-    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+:::tabs
+
+== ink example
+
+::: sandbox {template=2r5f6v entry=/src/labels/startLabel.ts}
+
+== Typescript example
+
+::: sandbox {template=zfxsqq entry=/src/labels/startLabel.ts}
+
+:::
+
+<iframe src="https://pixi-vn-react-template.web.app/"
+    title="Visual Novel - React"
+    style="width:100%; height:400px; border:0; border-radius:4px; overflow:hidden;"
 ></iframe>
