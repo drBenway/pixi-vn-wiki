@@ -27,19 +27,25 @@ npm create pixi-vn@latest
 == yarn
 
 ```bash
-yarn create pixi-vn@latest
+yarn create pixi-vn
 ```
 
 == pnpm
 
 ```bash
-pnpm create pixi-vn@latest
+pnpm create pixi-vn
 ```
 
 == bun
 
 ```bash
-bun create pixi-vn@latest
+bun create pixi-vn
+```
+
+== bun
+
+```bash
+deno init --npm pixi-vn
 ```
 
 :::
