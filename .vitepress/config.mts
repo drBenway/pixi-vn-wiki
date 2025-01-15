@@ -7,7 +7,7 @@ const ogUrl = 'https://pixi-vn.web.app'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Pixi’VN game engine",
+  title: "Pixi’VN 2D game engine",
   description: "Pixi’VN is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the PixiJS library for rendering.",
 
   head: [
