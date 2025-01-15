@@ -13,12 +13,17 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.svg' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'Pixi’VN 2D game engine' }],
+    ['meta', { property: 'og:title', content: 'Visual Novel/2D game engine.' }],
     ['meta', { property: 'og:url', content: 'https://pixi-vn.web.app' }],
     ['meta', { property: 'og:description', content: 'Create your own visual novel/2D game with Pixi’VN. It is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the PixiJS library for rendering.' }],
     ['meta', { property: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fog_image.png?alt=media' }],
     ['meta', { property: 'og:site_name', content: 'Pixi’VN Wiki' }],
     ['meta', { name: 'theme-color', content: '#646cff' }],
+    ['meta', { name: 'twitter:title', content: 'Visual Novel/2D game engine.' }],
+    ['meta', { name: 'twitter:description', content: 'Create your own visual novel/2D game with Pixi’VN. It is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the PixiJS library for rendering.' }],
+    ['meta', { name: 'twitter:image', content: 'https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fog_image.png?alt=media' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:url', content: 'https://pixi-vn.web.app' }],
     [
       'script',
       { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-KGCCEKXRVG' }
