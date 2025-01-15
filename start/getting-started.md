@@ -128,9 +128,7 @@ import pixivn from "https://cdn.jsdelivr.net/npm/@drincs/pixi-vn/+esm";
 
 :::
 
-Now you must initialize the Pixi’VN window before using the engine.
-
-For example, you add the following code to the `main.ts` or `index.ts` (It depends on your project configuration):
+Now you must initialize the Pixi’VN window before using the engine. For example, you can add the following code to the `main.ts` or `index.ts` (It depends on your project configuration):
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="Pixi’VN" src="https://codepen.io/BlackRam-oss/embed/oNrqgNd?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/BlackRam-oss/pen/oNrqgNd">
