@@ -107,7 +107,7 @@ For using the Pixi’VN package in a browser, you can use the following script t
 == script tag
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@drincs/pixi-vn@0.10.5/+esm"></script>
+<script src="https://cdn.jsdelivr.net/npm/@drincs/pixi-vn/+esm"></script>
 ```
 
 == import map
@@ -115,7 +115,7 @@ For using the Pixi’VN package in a browser, you can use the following script t
 ```html
 <script type="importmap">
   { "imports": {
-      "@drincs/pixi-vn":        "https://cdn.jsdelivr.net/npm/@drincs/pixi-vn@0.10.5/+esm"
+      "@drincs/pixi-vn":        "https://cdn.jsdelivr.net/npm/@drincs/pixi-vn/+esm"
   } }
 </script>
 ```
