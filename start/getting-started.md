@@ -70,9 +70,9 @@ After the project is initialized, you can open the project directory with your t
 
 Into all templates there is a `README.md` file with more information about the project.
 
-## Package Installation
+## Installation
 
-For installing the Pixi’VN package, you can use the following command:
+For installing the Pixi’VN package in an existing (node.js) project, you can use the following command:
 
 :::tabs
 == npm
@@ -101,31 +101,42 @@ bun add @drincs/pixi-vn
 
 :::
 
+For using the Pixi’VN package in a browser, you can use the following script tag:
+
+:::tabs
+== script tag
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@drincs/pixi-vn@0.10.5/+esm"></script>
+```
+
+== import map
+
+```html
+<script type="importmap">
+  { "imports": {
+      "@drincs/pixi-vn":        "https://cdn.jsdelivr.net/npm/@drincs/pixi-vn@0.10.5/+esm"
+  } }
+</script>
+```
+
+== js import
+
+```js
+import pixivn from "https://cdn.jsdelivr.net/npm/@drincs/pixi-vn/+esm";
+```
+
+:::
+
 Now you must initialize the Pixi’VN window before using the engine.
 
 For example, you add the following code to the `main.ts` or `index.ts` (It depends on your project configuration):
 
-```typescript
-import { canvas, narration, clearAllGameDatas } from '@drincs/pixi-vn'
-import App from './App'
-import './index.css'
-
-// Canvas setup with PIXI
-const body = document.body
-if (!body) {
-    throw new Error('body element not found')
-}
-
-canvas.initialize(body, 1920, 1080, {
-    backgroundColor: "#303030"
-})
-
-// read more here: https://pixi-vn.web.app/start/other-narrative-features.html#how-manage-the-end-of-the-game
-narration.onGameEnd = async (props) => {
-    clearAllGameDatas()
-    props.navigate("/")
-}
-```
+<iframe height="300" style="width: 100%;" scrolling="no" title="Pixi’VN" src="https://codepen.io/BlackRam-oss/embed/oNrqgNd?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/BlackRam-oss/pen/oNrqgNd">
+  Pixi’VN</a> by Black Ram (<a href="https://codepen.io/BlackRam-oss">@BlackRam-oss</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ### How enable the decorators in TypeScript?
 
