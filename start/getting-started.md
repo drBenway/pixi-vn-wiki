@@ -1,6 +1,6 @@
 # Getting Started
 
-You can start using Pixi’VN by [initializing a new project](#project-initialization) or [installing the package](#package-installation) in an existing project.
+You can start using Pixi’VN by [initializing a new project](#project-initialization) or [installing the package](#installation) in an existing project.
 
 ## Prerequisites
 
