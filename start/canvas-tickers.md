@@ -2,7 +2,7 @@
 
 Pixi’VN provides the possibility to animate the canvas components with the tickers (primitive animations and effects).
 
-The tickers, compared to `PixiJS.tickers`, are a class with a `fn` method that is executed on each frame. This method is used to animate the canvas components. Pixi’VN keeps track of all running tickers, detects when they are no longer used and allows you to pause, resume, and delete them with [various methods](/start/canvas-tickers-functions.md).
+The tickers, compared to `PixiJS.tickers`, are classes with a `fn` method that is executed on each frame. This method is used to animate the canvas components. Pixi’VN keeps track of all running tickers, detects when they are no longer used and allows you to pause, resume, and delete them with [various methods](/start/canvas-tickers-functions.md).
 
 Pixi’VN provides various primitive tickers, that can be used to perform basic actions. For example, the `MoveTicker` class is primitive animation that can be used to move a canvas component.
 
