@@ -55,7 +55,7 @@ Firebase Storage is a cloud service that allows you to store and serve user-gene
 **Solving Firebase Storage CORS Issue**:
 
 * Install [gcloud CLI](https://cloud.google.com/sdk/docs/install)
-* Read this [documentation](https://intercom.help/flutterflow/en/articles/8145715-how-to-configure-cors-in-firebase-storage) to solve the CORS issue.
+* Read this [documentation](https://medium.com/@we.viavek/setting-cors-in-firebase-19a2cce2fe28) to solve the CORS issue.
 
 ### Amazon S3
 
