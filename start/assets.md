@@ -2,7 +2,7 @@
 
 **What are assets?** Assets are all the files that are not code, such as images, sounds, and videos.
 
-You can use assets saved locally in the project or online (For the second option you will need to make sure that the cloud service you are using allows *CORS requests*). Of course, if your assets are online, a requirement of the game will be to be connected online. So I should warn the user and block the game in stone where the connection is absent.
+You can use assets saved locally in the project or online (For the second option you will need to make sure that the cloud service you are using allows *CORS requests*). Of course, if your assets are online, a requirement of the game will be to be connected online. Then you will have to notify the user and block the game where there is no connection.
 
 If you are creating a visual novel, it is recommended to keep only the assets that are used multiple times locally. Often in visual novels some images are displayed only once during the game.
 
