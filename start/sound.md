@@ -1,6 +1,6 @@
 # Sounds and Music
 
-The sound module is a wrapper around the [PixiJS Sound](https://github.com/pixijs/sound) library. It provides a simple interface for adding and playing sounds.
+The sound module is a wrapper around the [PixiJS Sound](https://github.com/pixijs/sound) library. It provides a simple interface for playing sounds.
 
 ## Add and Playing
 
