@@ -2,8 +2,6 @@
 
 The sound module is a wrapper around the [PixiJS Sound](https://github.com/pixijs/sound) library. It provides a simple interface for adding and playing sounds.
 
-The principal functions are:
-
 ## Add and Playing
 
 Creation of a sound is simple. You can also use the PIXI.sound library methods (`add`, `play`) for adding and playing a sound as well.
