@@ -42,7 +42,7 @@ pnpm create pixi-vn
 bun create pixi-vn
 ```
 
-== bun
+== deno
 
 ```bash
 deno init --npm pixi-vn
