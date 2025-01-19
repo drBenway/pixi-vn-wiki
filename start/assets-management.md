@@ -39,7 +39,21 @@ export async function defineAssets() {
 }
 ```
 
-## Load assets before the project starts
+## Load assets
+
+By default, asserts are loaded only when needed. This means when starting a new step.
+
+But **in case the assets are not saved locally**, but in an ["assets hosting"](/start/assets.md#assets-hosting) their loading may take some time.
+
+This means that starting a step may not be timely. So the player after starting the execution of the [next step](/start/labels-flow.md#next-step) (for example with the "next" button) may have to wait some time to be able to "view" the changes and be able to run the next step again.
+
+Performing these loadings at each step may be annoying to the player, even if they are very short.
+
+The developer to deal with this problem can start a "loading group" at a certain step of the game. This means that the player will have fewer loadings, but longer ones.
+
+Here are various ways to load assets:
+
+### Load assets before the project starts
 
 Load the assets before the project starts, this will allow you to start the project only when all the assets are loaded. It is suggested to use this procedure only for assets used in the main page or for assets used frequently. It is recommended not to exceed 100MB.
 
@@ -62,7 +76,7 @@ export async function defineAssets() {
 }
 ```
 
-## Load assets in the background before the project starts
+### Load assets in the background before the project starts
 
 Load assets in the background, which means that the project will start without waiting for those assets to load. Keep in mind that if you upload a large amount of files, a large part of the connection will be used to load those assets. It is recommended not to exceed 500MB.
 
@@ -88,7 +102,7 @@ export async function defineAssets() {
 }
 ```
 
-## Load assets before a label starts
+### Load assets before a label starts
 
 To make the game smoother by trying to remove asset loading times from one step to another, it is possible to load all used assets into a label before it starts.
 
@@ -115,7 +129,7 @@ newLabel("start", [
 })
 ```
 
-## Load assets in the background before a label starts
+### Load assets in the background before a label starts
 
 To make the game smoother by trying to remove asset loading times from a step, instead of loading all assets before the label starts, it is possible to load the assets used in the last steps in the background.
 
