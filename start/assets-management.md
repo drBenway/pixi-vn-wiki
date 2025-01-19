@@ -8,12 +8,12 @@ In all Pixi’VN functions you can directly use the image URL without having to 
 let alien1 = await showImage("alien", "https://pixijs.com/assets/eggHead.png");
 ```
 
-This method works and keeps only the strictly necessary asserts in memory, but it has some disadvantages:
+This method works and keeps only the strictly necessary assets in memory, but it has some disadvantages:
 
 - refer to an asset directly with a url, where that asset must be renamed/moved to another folder or replaced with another asset (which has another url), the old saves will not work anymore and in several places in the code you will have to write a url which is usually very long.
 - Each [step](/start/labels.md) where one or more assets are loaded will require some time (even if small) to execute.
 
-For these reasons it is recommended to handle asserts in the following ways.
+For these reasons it is recommended to handle assets in the following ways.
 
 ## Initialize the asset matrix at project start
 
@@ -41,7 +41,7 @@ export async function defineAssets() {
 
 ## Load assets
 
-By default, asserts are loaded only when needed. This means when starting a new step.
+By default, assets are loaded only when needed. This means when starting a new step.
 
 But **in case the assets are not saved locally**, but in an ["assets hosting"](/start/assets.md#assets-hosting) their loading may take some time.
 
@@ -71,7 +71,7 @@ export async function defineAssets() {
     sound.add('bird', 'https://pixijs.io/sound/examples/resources/bird.mp3');
     sound.add('musical', 'https://pixijs.io/sound/examples/resources/musical.mp3');
 
-    // The game will not start until these asserts are loaded. // [!code focus]
+    // The game will not start until these assets are loaded. // [!code focus]
     await Assets.load('eggHead') // [!code focus]
 }
 ```
@@ -94,10 +94,10 @@ export async function defineAssets() {
     sound.add('bird', 'https://pixijs.io/sound/examples/resources/bird.mp3');
     sound.add('musical', 'https://pixijs.io/sound/examples/resources/musical.mp3');
 
-    // The game will not start until these asserts are loaded.
+    // The game will not start until these assets are loaded.
     await Assets.load('eggHead')
 
-    // The game will start immediately, but these asserts will be loaded in the background. // [!code focus]
+    // The game will start immediately, but these assets will be loaded in the background. // [!code focus]
     Assets.load('flowerTop') // [!code focus]
 }
 ```
@@ -122,7 +122,7 @@ newLabel("start", [
     },
 ], {
     onLoadingLabel: async (stepIndex, label) => { // [!code focus]
-        // The label will not start until these asserts are loaded. // [!code focus]
+        // The label will not start until these assets are loaded. // [!code focus]
         await Assets.load("eggHead") // [!code focus]
         await Assets.load("flowerTop") // [!code focus]
     } // [!code focus]
@@ -153,10 +153,10 @@ newLabel("start", [
     },
 ], {
     onLoadingLabel: async (stepIndex, label) => { // [!code focus]
-        // The label will not start until these asserts are loaded.
+        // The label will not start until these assets are loaded.
         await Assets.load("eggHead")
         await Assets.load("flowerTop")
-        // The label will start immediately, but these asserts will be loaded in the background. // [!code focus]
+        // The label will start immediately, but these assets will be loaded in the background. // [!code focus]
         Assets.load("helmlok") // [!code focus]
         Assets.load("skully") // [!code focus]
     } // [!code focus]

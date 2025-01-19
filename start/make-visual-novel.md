@@ -502,10 +502,10 @@ export async function defineAssets() {
     Assets.add({ alias: 'm01-eyes-concern', src: "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fbreakdown%2Fm01%2Fm01-eyes-concern.webp?alt=media" })
     // ...
 
-    // The game will not start until these asserts are loaded.
+    // The game will not start until these assets are loaded.
     await Assets.load('background_main_menu')
 
-    // The game will start immediately, but these asserts will be loaded in the background.
+    // The game will start immediately, but these assets will be loaded in the background.
     // Assets.load('flowerTop')
 }
 ```
