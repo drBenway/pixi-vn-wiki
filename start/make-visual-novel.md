@@ -535,6 +535,9 @@ james: You're my roommate's replacement, huh?
 james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you'll be fine!
 # show imagecontainer james [m01-body m01-eyes-smile m01-mouth-grin00]
 mc: ...
+
+// ...
+
 -> DONE
 ```
 
@@ -562,6 +565,60 @@ export default startLabel;
 
 :::
 
+## Smart asset loading
+
+In our case we saved the game images on a hosting service (Firebase). For this reason the asset loading is not timely.
+
+In order for the player not to perceive too many loadings we should group them in certain phases of the game. In my case I will load the most used images at the start of the label.
+
+You can find more information on how to manage the loadings [here](/start/assets-management.md).
+
+This is the example:
+
+:::tabs
+
+== ink example
+
+```ink
+=== start ===
+# load assets bg01-hallway
+# load assets m01-body m01-eyes-grin m01-eyes-smile m01-eyes-wow m01-mouth-grin00 m01-mouth-smile00 m01-mouth-smile01
+# load assets fm01-body fm01-eyes-smile fm01-eyes-upset fm01-mouth-serious00 fm01-mouth-serious01 fm01-mouth-smile00
+# load assets fm02-body fm02-eyes-joy fm02-eyes-nervous fm02-eyes-wow fm02-mouth-nervous00 fm02-mouth-smile00
+
+# show image bg bg01-hallway
+# show imagecontainer james [m01-body m01-eyes-smile m01-mouth-neutral01] xAlign 0.5 yAlign 1 with movein direction right speed 300
+james: You're my roommate's replacement, huh?
+# show imagecontainer james [m01-body m01-eyes-grin m01-mouth-smile01]
+james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you'll be fine!
+# show imagecontainer james [m01-body m01-eyes-smile m01-mouth-grin00]
+mc: ...
+
+// ...
+
+-> DONE
+```
+
+== Typescript example
+
+```ts
+const startLabel = newLabel("start", [
+    // ...
+], {
+    onLoadingLabel: () => {
+        Assets.load([
+            "bg01-hallway",
+            "m01-body", "m01-eyes-grin", "m01-eyes-smile", "m01-eyes-wow", "m01-mouth-grin00", "m01-mouth-smile00", "m01-mouth-smile01",
+            "fm01-body", "fm01-eyes-smile", "fm01-eyes-upset", "fm01-mouth-serious00", "fm01-mouth-serious01", "fm01-mouth-smile00",
+            "fm02-body", "fm02-eyes-joy", "fm02-eyes-nervous", "fm02-eyes-wow", "fm02-mouth-nervous00", "fm02-mouth-smile00",
+        ])
+    }
+});
+export default startLabel;
+```
+
+:::
+
 ## Use transitions
 
 To make the visual novel more dynamic, you can use transitions between images. You can find more information on how to use transitions in the [documentation](/start/canvas-transition.md) ([Use transitions in *ink*](/ink/ink-canvas.md#show-a-canvas-component-with-transition-in-ink)).
@@ -580,6 +637,9 @@ james: You're my roommate's replacement, huh?
 james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you'll be fine!
 # show imagecontainer james [m01-body m01-eyes-smile m01-mouth-grin00]
 mc: ...
+
+// ...
+
 -> DONE
 ```
 
