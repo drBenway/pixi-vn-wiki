@@ -22,7 +22,7 @@ This function have the following parameters:
 == startLabel.ts
 
 ```ts
-import { CANVAS_APP_STAGE_ALIAS, newLabel, shakeEffect, showImage } from "@drincs/pixi-vn";
+import { CANVAS_APP_GAME_LAYER_ALIAS, newLabel, shakeEffect, showImage } from "@drincs/pixi-vn";
 
 export const startLabel = newLabel("start_label", [
     async () => {
@@ -31,7 +31,7 @@ export const startLabel = newLabel("start_label", [
         shakeEffect("alien"); // [!code focus]
     },
     async () => {
-        shakeEffect(CANVAS_APP_STAGE_ALIAS); // [!code focus]
+        shakeEffect(CANVAS_APP_GAME_LAYER_ALIAS); // [!code focus]
     },
 ]);
 ```
