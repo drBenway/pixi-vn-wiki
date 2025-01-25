@@ -10,6 +10,7 @@ Before starting, you must have the following tools installed:
 * Text Editor with TypeScript support.
   * [Visual Studio Code](https://code.visualstudio.com/)
   * [Cursor](https://www.cursor.com/)
+  * [VSCodium](https://vscodium.com/)
 * (Recommended) [Git](https://git-scm.com/)
   * Have a [GitHub account](https://github.com/)
 
