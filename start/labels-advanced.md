@@ -79,11 +79,11 @@ When you create a new label you can pass a function that returns the steps of th
 
 ```ts
 // /labels/startLabel.ts
-import { getFlag, narration, newLabel, setFlag } from "@drincs/pixi-vn"
+import { storage, narration, newLabel } from "@drincs/pixi-vn"
 
 export const startLabel = newLabel("start_label",
     () => {
-        let condition = getFlag("condition")
+        let condition = storage.getFlag("condition")
         if (condition) {
             return [
                 () => {
@@ -99,7 +99,7 @@ export const startLabel = newLabel("start_label",
                     narration.dialogue = "Step 1"
                 },
                 async (props, { labelId }) => {
-                    setFlag("condition", true)
+                    storage.setFlag("condition", true)
                     return await narration.jumpLabel(labelId, props)
                 }
             ]
