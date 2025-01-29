@@ -258,7 +258,7 @@ export class Character extends CharacterStoredClass implements CharacterInterfac
 == pixi-vn.types.ts
 
 ```ts
-declare module '@drincs/pixi-vn/dist/override' {
+declare module '@drincs/pixi-vn' {
     interface CharacterInterface {
         name: string
         surname?: string

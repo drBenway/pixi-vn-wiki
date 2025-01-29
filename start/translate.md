@@ -120,7 +120,7 @@ Is recommended to use as translation key the native string from which the transl
 == pixi-vn.types.ts
 
 ```typescript
-declare module '@drincs/pixi-vn/dist/override' {
+declare module '@drincs/pixi-vn' {
     interface StepLabelProps {
         /**
          * Translate a key to a string.

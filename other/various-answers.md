@@ -8,7 +8,7 @@ For example:
 
 ```typescript
 // pixi-vn.types.ts
-declare module '@drincs/pixi-vn/dist/override' {
+declare module '@drincs/pixi-vn' {
     interface StepLabelProps {
         /**
          * function to navigate to a new route.
@@ -71,6 +71,6 @@ function nextOnClick() {
 // Button for enable skip and auto ...
 ```
 
-https://supabase.com/
-https://www.convex.dev/
-https://api.imgbb.com/
+<https://supabase.com/>
+<https://www.convex.dev/>
+<https://api.imgbb.com/>

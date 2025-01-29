@@ -51,7 +51,7 @@ By default `StepLabelProps` corresponds to `{ [key: string]: any }`. You can "ov
 ```typescript
 import { narration } from '@drincs/pixi-vn'
 
-declare module '@drincs/pixi-vn/dist/override' {
+declare module '@drincs/pixi-vn' {
     interface StepLabelProps {
         navigate: (route: string) => void,
     }
@@ -109,7 +109,7 @@ You can "override" the interface `StepLabelResult` to set your custom properties
 == pixi-vn.types.ts
 
 ```typescript
-declare module '@drincs/pixi-vn/dist/override' {
+declare module '@drincs/pixi-vn' {
     interface StepLabelResult {
         newRoute?: string,
         [key: string]: any
