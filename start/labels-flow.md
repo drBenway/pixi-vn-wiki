@@ -83,8 +83,6 @@ export const startLabel = newLabel("start_label",
 
 ## Next step and go back
 
-<!-- TODO can go next -->
-
 ### Next step
 
 To execute the next step you must execute the `narration.goNext()` function. This function have a parameter:
@@ -109,21 +107,73 @@ narration.goNext({})
     })
 ```
 
-Remember that if you execute the `narration.goNext()` inside a step, you should return the [result of the step](/start/labels.md#all-steps-result) and use `await`. The reason is that it might generate a wrong history.
+If you execute the `narration.goNext()` inside a step, the "go next request" will be queued and executed when steps queue is empty.
 
 ```typescript
 import { narration, newLabel } from '@drincs/pixi-vn'
 
-export const startLabel = newLabel("start_label",
-    [
-        async (props) => {
-            await narration.goNext(props)
-        },
-    ]
-)
+export const startLabel = newLabel("start_label", [
+    async (props) => {
+        narration.goNext(props)
+    },
+])
 ```
 
-<!-- TODO: canGoNext -->
+This is a example to understand how the queue works:
+
+```typescript
+import { narration, newLabel } from '@drincs/pixi-vn'
+
+export const startLabel = newLabel("start_label", [
+    async (props) => {
+        await narration.callLabel(label2, props);
+        console.log(1);
+    },
+    () => {
+        console.log(3);
+    },
+])
+
+const label2 = newLabel("label_02", [
+    async (props) => {
+        await narration.goNext(props);
+        console.log(2);
+    },
+])
+```
+
+In this example, the output will be `2`, `1`, `3`. Because:
+
+1. `await narration.callLabel(label2, props)` will call the label `label2` and await the first step of the label. (There are 1 item in the step queue)
+2. The first step of the label `label2` will execute the `await narration.goNext(props)`, but the `goNext` request will be queued because the step queue is not empty. (There are 2 items in the step queue)
+3. `console.log(2)` will be executed and the first step of the label `label2` will be finished. (There are 1 item in the step queue)
+4. The `console.log(1)` will be executed and the first step of the label `startLabel` will be finished. (There are 0 items in the step queue)
+5. Since the step queue is empty, the `goNext` request will be executed and the second step of the label `startLabel` will be executed. (There are 1 items in the step queue)
+6. The `console.log(3)` will be executed and the second step of the label `startLabel` will be finished. (There are 0 items in the step queue)
+
+#### Check if you can go to the next step
+
+You can use the `narration.canGoNext` property to check if you can go to the next step.
+
+The `narration.canGoNext` is false when:
+
+* A step is running
+* The player must [make a choice](/start/choices.md)
+* The player must [enter a value](/start/input.md)
+
+```tsx
+import { narration } from '@drincs/pixi-vn'
+
+function NextButton() {
+    return (
+        <button disabled={!narration.canGoNext} onClick={() => {
+            narration.goNext({})
+        }}>
+            Next
+        </button>
+    )
+}
+```
 
 ### Go back
 
