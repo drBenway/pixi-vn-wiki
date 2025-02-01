@@ -283,6 +283,7 @@ export default defineConfig({
     }
   },
 
+  cleanUrls: true,
   sitemap: {
     hostname: 'https://pixi-vn.web.app/',
     xmlns: {
