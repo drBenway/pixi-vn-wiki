@@ -670,6 +670,62 @@ export default startLabel;
 
 :::
 
+## Building animations
+
+To make the visual novel more dynamic, you can use animations. You can find more information on how to use animations in the [documentation](/start/canvas-animations-effects.md) ([Use animations in *ink*](/ink/ink-canvas.md#use-the-effects-in-ink)).
+
+I recommend using Typescript if you need to set a lot of properties, this way you have more control over the animation, more features and types.
+
+```ts
+import { canvas, moveIn, newLabel, ZoomTicker } from "@drincs/pixi-vn";
+
+export const animation01 = newLabel("animation_01", [
+    async () => {
+        canvas.addTicker(
+            "steph",
+            new ZoomTicker({ type: "zoom", limit: 1, speed: 70 })
+        );
+
+        await moveIn("steph", {
+                value: ["fm02-body", "fm02-eyes-joy", "fm02-mouth-smile01"],
+                options: { xAlign: 0.8, yAlign: 1, scale: { y: 1, x: -1 }, anchor: 0.5 },
+            }, { direction: "right", speed: 300 }
+        );
+    },
+]);
+```
+
+:::tabs
+
+== ink example
+
+```ink
+```
+
+== Typescript example
+
+```ts
+const startLabel = newLabel("start", [
+    // ...
+    async () => {
+        await showImageContainer("james", ["m01-body", "m01-eyes-grin", "m01-mouth-grin00"]);
+        await showImageContainer("sly", ["fm01-body", "fm01-eyes-smile", "fm01-mouth-smile00"]);
+        await showImageContainer("steph", ["fm02-body", "fm02-eyes-upset", "fm02-mouth-nervous00"]);
+        moveOut("steph", { direction: "left", speed: 300 });
+        narration.dialogue = `${steph_fullname} goes through the opposite door,`;
+    },
+    async (props) => {
+        narration.dialogGlue = true;
+        narration.dialogue = ` and returns with a HUGE tinfoil-covered platter.`;
+        await narration.callLabel(animation01, props);
+    },
+    // ...
+]);
+export default startLabel;
+```
+
+:::
+
 <!-- ## Use animations and effects or create your ticker
 
 This page is under construction.
