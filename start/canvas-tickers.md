@@ -241,7 +241,7 @@ export async function defineAssets() {
 
 ### Mirror
 
-You can use the `MirrorTicker` class to mirror a canvas component.
+You can use the `ZoomTicker` class to mirror a canvas component.
 
 For example, if you want to mirror a canvas component horizontally, you can use the following code:
 
