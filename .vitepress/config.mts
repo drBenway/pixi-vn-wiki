@@ -394,6 +394,7 @@ export default defineConfig({
         plugins: [
             groupIconVitePlugin({
                 customIcon: {
+                    rpy: "https://icon.icepanel.io/Technology/svg/Ren%27Py.svg",
                     renpy: "https://icon.icepanel.io/Technology/svg/Ren%27Py.svg",
                     ink: "vscode-icons:file-type-ink",
                 },
