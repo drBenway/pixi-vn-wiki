@@ -55,7 +55,7 @@ What does `mc` mean? `mc` is a common abbreviation for "Main Character". It is a
 
 ::: code-group
 
-```ts [/values/characters.ts]
+```ts [values/characters.ts]
 import { saveCharacter } from "@drincs/pixi-vn";
 import Character from "../models/Character";
 

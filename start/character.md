@@ -3,7 +3,7 @@
 The characters are the actors that appear in the visual novel.
 In Pixi’VN, characters are created using the `CharacterBaseModel` class or a [custom class](#custom-character).
 
-## Initialize Characters
+## Initialize characters
 
 To initialize a character, you need to create a new instance of the `CharacterBaseModel` class and add it into a game character dictionary, when the game is initialized.
 
@@ -19,7 +19,7 @@ The properties are:
   * `icon`: The character's icon image URL. ( Optional )
   * `color`: The character's color. ( Optional )
 
-```typescript
+```typescript [characters.ts]
 import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
 
 export const liam = new CharacterBaseModel('liam', {
@@ -45,7 +45,7 @@ saveCharacter([liam, emma]);
 
 It is also possible to create a function for loading characters. The important thing is that it is started at least once before the characters are used in the game, otherwise they will not be available.
 
-```typescript
+```typescript [characters.ts]
 import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
 
 export function loadCharacters() {
@@ -71,7 +71,7 @@ export function loadCharacters() {
 loadCharacters();
 ```
 
-## Get Characters by id
+## Get characters by id
 
 To get a character by its `id`, you can use the `getCharacterById` function.
 
@@ -81,7 +81,7 @@ import { getCharacterById } from "@drincs/pixi-vn";
 const liam = getCharacterById('liam');
 ```
 
-## Get All Characters
+## Get all characters
 
 To get all characters, you can use the `getAllCharacters` function.
 
@@ -91,7 +91,7 @@ import { getAllCharacters } from "@drincs/pixi-vn";
 const characters = getAllCharacters();
 ```
 
-## Edit Characters in the Game
+## Edit characters in the game
 
 `CharacterBaseModel` is a [stored class](/start/stored-classes), which means that it is possible to save and load the character's properties from the [game storage](/start/storage).
 
@@ -140,11 +140,11 @@ export default class CharacterBaseModel extends StoredClassModel implements Char
 }
 ```
 
-## Use Characters in the Game
+## Use characters in the game
 
 You can use the characters in the game for example to [set a dialogue](/start/dialogue#set-the-current-dialogue). You can use the character's `id` or the character's instance, but it is recommended to use the instance.
 
-```typescript
+```typescript [characters.ts]
 export const liam = new CharacterBaseModel('liam_id', {
     name: 'Liam',
     surname: 'Smith',
@@ -152,14 +152,16 @@ export const liam = new CharacterBaseModel('liam_id', {
     icon: "https://example.com/liam.png",
     color: "#9e2e12"
 });
-saveCharacter([liam, emma]);
+saveCharacter([liam]);
+```
 
+```typescript
 narration.dialogue = { character: liam, text: "Hello" }
 // or
 narration.dialogue = { character: "liam_id", text: "Hello" }
 ```
 
-## Character Emotions
+## Character emotions
 
 It can often be useful to have multiple types of the same character.
 
@@ -167,7 +169,7 @@ A classic example of visual novels is to have a character "Alice" a subtype rela
 
 For this reason, in Pixi’VN it is possible to create a "character with an emotion". This is possible by passing the id as an object with two properties: the `id`, that corresponds to the id of an already existing character, and the `emotion`, that corresponds to the emotion of the character.
 
-```typescript
+```typescript [characters.ts]
 import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
 
 export const alice = new CharacterBaseModel('alice', {
@@ -206,10 +208,9 @@ Now you can create a class `Character` that extends `CharacterStoredClass` and i
 
 For set the properties and store them in the game storage, you must use the `setStorageProperty` method. ( See the following file `Character.ts` )
 
-:::tabs
-== models/Character.ts
+::: code-group
 
-```ts
+```ts [models/Character.ts]
 import { CharacterInterface, CharacterStoredClass } from "@drincs/pixi-vn";
 
 export class Character extends CharacterStoredClass implements CharacterInterface {
@@ -255,9 +256,7 @@ export class Character extends CharacterStoredClass implements CharacterInterfac
 }
 ```
 
-== pixi-vn.types.ts
-
-```ts
+```ts [pixi-vn.d.ts]
 declare module '@drincs/pixi-vn' {
     interface CharacterInterface {
         name: string
