@@ -349,7 +349,8 @@ export default defineConfig({
 
     markdown: {
         config(md) {
-            md.use(tabsMarkdownPlugin).use(container, "sandbox", {
+            md.use(tabsMarkdownPlugin);
+            md.use(container, "sandbox", {
                 render(tokens, idx) {
                     return renderSandbox(tokens, idx, "sandbox");
                 },
