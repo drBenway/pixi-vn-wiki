@@ -103,7 +103,7 @@ This is the example:
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 === start ===
 james: You're my roommate's replacement, huh?
 james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!
@@ -136,7 +136,7 @@ steph: Hey! Everyone calls me Steph. I'll shake your hand.
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const startLabel = newLabel("start", [
     () => narration.dialogue = { character: james, text: `You're my roommate's replacement, huh?` },
     () => narration.dialogue = { character: james, text: `Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!` },
@@ -174,7 +174,7 @@ This is the example:
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 === start ===
 james: You're my roommate's replacement, huh?
 james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!
@@ -203,7 +203,7 @@ I'm fumbling for a new subject.
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const startLabel = newLabel("start", [
     () => narration.dialogue = { character: james, text: `You're my roommate's replacement, huh?` },
     () => narration.dialogue = { character: james, text: `Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!` },
@@ -239,7 +239,7 @@ This is the example:
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 === start ===
 // ...
 
@@ -255,7 +255,7 @@ You want continue to the next part?
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
     async () => {
@@ -287,7 +287,7 @@ This is the example:
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 VAR _input_value_ = ""
 
 === start ===
@@ -302,7 +302,7 @@ What is your name?
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
     () => { narration.dialogue = `He thrusts out his hand.` },
@@ -326,7 +326,7 @@ This is the example:
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 VAR steph_fullname = "Stephanie"
 
 === start ===
@@ -352,7 +352,7 @@ steph: WOW, that is, like, the most perfect handshake I've ever had! Firm, but a
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const steph_fullname = "Stephanie";
 
 const startLabel = newLabel("start", [
@@ -383,7 +383,7 @@ This is the example:
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 === start ===
 // ...
 
@@ -396,7 +396,7 @@ james: Come on in and...
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
     async () => narration.dialogue = { character: james, text: `Ooh, ${mc.name}! Nice, firm handshake!` },
@@ -424,7 +424,7 @@ Before using an asset it is highly recommended to [initialize the asset matrix](
 
 This is the example:
 
-```ts [src/assets/defineAssets.ts]
+```ts [assets/defineAssets.ts]
 import { Assets } from "@drincs/pixi-vn"
 
 /**
@@ -473,7 +473,7 @@ This is the example:
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 === start ===
 # show image bg bg01-hallway
 # show imagecontainer james [m01-body m01-eyes-smile m01-mouth-neutral01] xAlign 0.5 yAlign 1
@@ -487,7 +487,7 @@ mc: ...
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const startLabel = newLabel("start", [
     async () => {
         await showImage("bg", "bg01-hallway");
@@ -521,7 +521,7 @@ This is the example:
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 === start ===
 # load assets bg01-hallway
 # load assets m01-body m01-eyes-grin m01-eyes-smile m01-eyes-wow m01-mouth-grin00 m01-mouth-smile00 m01-mouth-smile01
@@ -540,7 +540,7 @@ mc: ...
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
 ], {
@@ -566,7 +566,7 @@ This is the example:
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 === start ===
 // ...
 
@@ -582,7 +582,7 @@ mc: ...
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const startLabel = newLabel("start", [
     async () => {
         await showImage("bg", "bg01-hallway");
@@ -623,7 +623,7 @@ So, in my case, I will use before the `moveIn` function the `addTicker` function
 
 Also since I will use typescript for this animation, I created a special label for this animation. So that it can be called also from other languages ​​that are not JS/TS.
 
-```ts [src/labels/animation01.ts]
+```ts [labels/animation01.ts]
 import { canvas, moveIn, newLabel, ZoomTicker } from "@drincs/pixi-vn";
 
 export const animation01 = newLabel("animation_01", [
@@ -646,7 +646,7 @@ Now I can call this label `animation_01` from the main label `start`. (As explai
 
 ::: code-group
 
-```ink [src/ink/start.ink]
+```ink [ink/start.ink]
 === start ===
 // ...
 
@@ -662,7 +662,7 @@ Now I can call this label `animation_01` from the main label `start`. (As explai
 -> DONE
 ```
 
-```ts [src/labels/startLabel.ts]
+```ts [labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
     async () => {
