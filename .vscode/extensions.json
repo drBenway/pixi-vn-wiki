@@ -3,6 +3,7 @@
         "ms-vscode.vscode-typescript-next",
         "antiantisepticeye.vscode-color-picker",
         "davidanson.vscode-markdownlint",
-        "vue.volar"
+        "vue.volar",
+        "esbenp.prettier-vscode"
     ]
 }
