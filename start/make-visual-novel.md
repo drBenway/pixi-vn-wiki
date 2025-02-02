@@ -12,34 +12,25 @@ Since Pixi’VN gives you the ability to write your [narration in different type
 
 The first step is to create a new project. You can find more information on how to create a new project starting from a template [here](/start/getting-started.md#project-initialization). We will use the "Visual Novel - React Template".
 
-:::tabs
-== npm
+::: code-group
 
-```bash
+```sh [npm]
 npm create pixi-vn@latest
 ```
 
-== yarn
-
-```bash
+```sh [yarn]
 yarn create pixi-vn
 ```
 
-== pnpm
-
-```bash
+```sh [pnpm]
 pnpm create pixi-vn
 ```
 
-== bun
-
-```bash
+```sh [bun]
 bun create pixi-vn
 ```
 
-== bun
-
-```bash
+```sh [deno]
 deno init --npm pixi-vn
 ```
 

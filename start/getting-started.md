@@ -66,28 +66,21 @@ Into all templates there is a `README.md` file with more information about the p
 
 For installing the Pixi’VN package in an existing (node.js) project, you can use the following command:
 
-:::tabs
-== npm
+::: code-group
 
-```bash
+```sh [npm]
 npm install @drincs/pixi-vn
 ```
 
-== yarn
-
-```bash
+```sh [yarn]
 yarn add @drincs/pixi-vn
 ```
 
-== pnpm
-
-```bash
+```sh [pnpm]
 pnpm add @drincs/pixi-vn
 ```
 
-== bun
-
-```bash
+```sh [bun]
 bun add @drincs/pixi-vn
 ```
 
@@ -95,16 +88,13 @@ bun add @drincs/pixi-vn
 
 For using the Pixi’VN package in a browser, you can use the following script tag:
 
-:::tabs
-== script tag
+::: code-group
 
-```html
+```html [script tag]
 <script src="https://cdn.jsdelivr.net/npm/@drincs/pixi-vn/+esm"></script>
 ```
 
-== import map
-
-```html
+```html [import map]
 <script type="importmap">
   { "imports": {
       "@drincs/pixi-vn":        "https://cdn.jsdelivr.net/npm/@drincs/pixi-vn/+esm"
@@ -112,9 +102,7 @@ For using the Pixi’VN package in a browser, you can use the following script t
 </script>
 ```
 
-== js import
-
-```js
+```js [js import]
 import pixivn from "https://cdn.jsdelivr.net/npm/@drincs/pixi-vn/+esm";
 ```
 
@@ -134,7 +122,7 @@ In Pixi’VN, in some advanced features, it is necessary to use decorators.
 
 By default, TypeScript does not enable the use of decorators. To enable the use of decorators in TypeScript, you must add the following configuration to the `tsconfig.json` file:
 
-```json
+```json [tsconfig.json]
 {
     "compilerOptions": {
         // ...
