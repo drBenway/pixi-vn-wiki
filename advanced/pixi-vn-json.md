@@ -7,7 +7,20 @@ Pixi’VN can be integrated with JSON files to create a visual novel. This metho
 
 ( In both these cases it is advisable to notify the developers of Pixi’VN to add the new feature to be helped )
 
-![Pixi’VN + Json Integration](https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2FPixiVNJson.png?alt=media)
+```mermaid
+flowchart LR;
+    K@{ img: "/renpy.svg", label: "Ren'py", pos: "b", w: 90, h: 90, constraint: "on" }---->Json;
+    H@{ img: "/ink.svg", label: "ink", pos: "b", w: 90, h: 90, constraint: "on" }---->Json;
+    I@{ img: "/twine.svg", label: "Twine", pos: "b", w: 90, h: 90, constraint: "on" }---->Json;
+    J@{ img: "/yarn-spinner.svg", label: "Yarn Spinner", pos: "b", w: 90, h: 90, constraint: "on" }---->Json;
+    Json@{ img: "/pixivn-json.svg", label: "Pixi’VN + Json", pos: "b", w: 140, h: 140, constraint: "on" }
+    Json===>PixiVN;
+    PixiVN@{ img: "/logo.webp", label: "Pixi’VN", pos: "b", w: 180, h: 180, constraint: "on" }
+classDef img fill:none,stroke:none,borderRadius:50px
+class Json,D,K,H,B,I,J,PixiVN img
+click K "/renpy/renpy" _blank
+click H "/ink/ink" "ink" _blank
+```
 
 ## How use Pixi’VN + Json?
 
