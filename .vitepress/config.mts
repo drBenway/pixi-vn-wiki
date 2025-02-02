@@ -1,6 +1,7 @@
 import container from "markdown-it-container";
 import { defineConfig } from "vitepress";
 import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
+import { MermaidMarkdown, MermaidPlugin } from "vitepress-plugin-mermaid";
 import { renderSandbox } from "vitepress-plugin-sandpack";
 import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
 
@@ -356,6 +357,7 @@ export default defineConfig({
                 },
             });
             md.use(groupIconMdPlugin);
+            md.use(MermaidMarkdown);
         },
         languages: [
             {
@@ -400,6 +402,13 @@ export default defineConfig({
                     ink: "vscode-icons:file-type-ink",
                 },
             }),
+            MermaidPlugin(),
         ],
+        optimizeDeps: {
+            include: ["mermaid"],
+        },
+        ssr: {
+            noExternal: ["mermaid"],
+        },
     },
 });
