@@ -1,3 +1,4 @@
+import "virtual:group-icons.css";
 import type { Theme } from "vitepress";
 import "vitepress-plugin-sandpack/dist/style.css";
 import { enhanceAppWithTabs } from "vitepress-plugin-tabs/client";

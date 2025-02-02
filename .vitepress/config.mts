@@ -1,5 +1,6 @@
 import container from "markdown-it-container";
 import { defineConfig } from "vitepress";
+import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
 import { renderSandbox } from "vitepress-plugin-sandpack";
 import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
 
@@ -353,6 +354,7 @@ export default defineConfig({
                     return renderSandbox(tokens, idx, "sandbox");
                 },
             });
+            md.use(groupIconMdPlugin);
         },
         languages: [
             {
@@ -387,5 +389,8 @@ export default defineConfig({
                 scopeName: "source.renpy",
             },
         ],
+    },
+    vite: {
+        plugins: [groupIconVitePlugin()],
     },
 });
