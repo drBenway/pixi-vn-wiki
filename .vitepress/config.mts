@@ -391,6 +391,13 @@ export default defineConfig({
         ],
     },
     vite: {
-        plugins: [groupIconVitePlugin()],
+        plugins: [
+            groupIconVitePlugin({
+                customIcon: {
+                    renpy: "https://icon.icepanel.io/Technology/svg/Ren%27Py.svg",
+                    ink: "vscode-icons:file-type-ink",
+                },
+            }),
+        ],
     },
 });
