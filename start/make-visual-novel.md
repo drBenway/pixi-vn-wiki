@@ -53,11 +53,9 @@ Now we will define the characters of this story. To do this we will define in th
 
 What does `mc` mean? `mc` is a common abbreviation for "Main Character". It is a common practice in visual novels to use `mc` as the main character's name.
 
-:::tabs
+::: code-group
 
-== /values/characters.ts
-
-```ts
+```ts [/values/characters.ts]
 import { saveCharacter } from "@drincs/pixi-vn";
 import Character from "../models/Character";
 
@@ -83,9 +81,7 @@ export const sly = new Character('sly', {
 saveCharacter([mc, james, steph, sly]);
 ```
 
-== App.tsx
-
-```ts
+```ts [App.tsx]
 // Remember to import the character file at least once into your project. // [!code focus]
 import "./values/characters"; // [!code focus]
 
@@ -105,11 +101,9 @@ After that we can write the [dialogues](/start/dialogue.md) that will follow in 
 
 This is the example:
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 === start ===
 james: You're my roommate's replacement, huh?
 james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!
@@ -143,9 +137,7 @@ steph: Hey! Everyone calls me Steph. I'll shake your hand.
 -> DONE
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const startLabel = newLabel("start", [
     () => narration.dialogue = { character: james, text: `You're my roommate's replacement, huh?` },
     () => narration.dialogue = { character: james, text: `Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!` },
@@ -181,11 +173,9 @@ For this reason, even if in our case our story is linear, it will be divided int
 
 This is the example:
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 === start ===
 james: You're my roommate's replacement, huh?
 james: Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!
@@ -216,9 +206,7 @@ I'm fumbling for a new subject.
 -> DONE
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const startLabel = newLabel("start", [
     () => narration.dialogue = { character: james, text: `You're my roommate's replacement, huh?` },
     () => narration.dialogue = { character: james, text: `Don't worry, you don't have much to live up to. Just don't use heroin like the last guy, and you' fine!` },
@@ -252,11 +240,9 @@ To do this we will use the [choice menus](/start/choices.md).
 
 This is the example:
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 === start ===
 
 // ...
@@ -274,9 +260,7 @@ You want continue to the next part?
 -> DONE
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
     async () => {
@@ -306,11 +290,9 @@ After obtaining the value of the input you can [set the name of the character](/
 
 This is the example:
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 VAR _input_value_ = ""
 
 === start ===
@@ -326,9 +308,7 @@ What is your name?
 -> DONE
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
     () => { narration.dialogue = `He thrusts out his hand.` },
@@ -350,11 +330,9 @@ Now we could use character names within dialogues ([Use character name in dialog
 
 This is the example:
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 VAR steph_fullname = "Stephanie"
 
 === start ===
@@ -381,9 +359,7 @@ steph: WOW, that is, like, the most perfect handshake I've ever had! Firm, but a
 -> DONE
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const steph_fullname = "Stephanie";
 
 const startLabel = newLabel("start", [
@@ -412,11 +388,9 @@ To improve the narrative, it can be useful to break up a dialogue and continue i
 
 This is the example:
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 === start ===
 // ...
 
@@ -430,9 +404,7 @@ james: Come on in and...
 -> DONE
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
     async () => narration.dialogue = { character: james, text: `Ooh, ${mc.name}! Nice, firm handshake!` },
@@ -460,11 +432,7 @@ Before using an asset it is highly recommended to [initialize the asset matrix](
 
 This is the example:
 
-:::tabs
-
-== assets-utility.ts
-
-```ts
+```ts [src/assets/defineAssets.ts]
 import { Assets } from "@drincs/pixi-vn"
 
 /**
@@ -501,8 +469,6 @@ export async function defineAssets() {
 }
 ```
 
-:::
-
 ## Add a background and character images
 
 Now it's time to think about the visual part too. We will add the background and the characters to the visual novel.
@@ -513,11 +479,9 @@ You can find more information on how to add canvas components in [this documenta
 
 This is the example:
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 === start ===
 # show image bg bg01-hallway
 # show imagecontainer james [m01-body m01-eyes-smile m01-mouth-neutral01] xAlign 0.5 yAlign 1
@@ -532,9 +496,7 @@ mc: ...
 -> DONE
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const startLabel = newLabel("start", [
     async () => {
         await showImage("bg", "bg01-hallway");
@@ -566,11 +528,9 @@ You can find more information on how to manage the loadings [here](/start/assets
 
 This is the example:
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 === start ===
 # load assets bg01-hallway
 # load assets m01-body m01-eyes-grin m01-eyes-smile m01-eyes-wow m01-mouth-grin00 m01-mouth-smile00 m01-mouth-smile01
@@ -590,9 +550,7 @@ mc: ...
 -> DONE
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
 ], {
@@ -616,11 +574,9 @@ To make the visual novel more dynamic, you can use transitions between images. Y
 
 This is the example:
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 # show image bg bg01-hallway
 # show imagecontainer james [m01-body m01-eyes-smile m01-mouth-neutral01] xAlign 0.5 yAlign 1 with movein direction right speed 300
 james: You're my roommate's replacement, huh?
@@ -634,9 +590,7 @@ mc: ...
 -> DONE
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const startLabel = newLabel("start", [
     async () => {
         await showImage("bg", "bg01-hallway");
@@ -677,7 +631,7 @@ So, in my case, I will use before the `moveIn` function the `addTicker` function
 
 Also since I will use typescript for this animation, I created a special label for this animation. So that it can be called also from other languages ​​that are not JS/TS.
 
-```ts
+```ts [src/labels/animation01.ts]
 import { canvas, moveIn, newLabel, ZoomTicker } from "@drincs/pixi-vn";
 
 export const animation01 = newLabel("animation_01", [
@@ -698,16 +652,12 @@ export const animation01 = newLabel("animation_01", [
 
 Now I can call this label `animation_01` from the main label `start`.
 
-:::tabs
+::: code-group
 
-== ink example
-
-```ink
+```ink [src/ink/start.ink]
 ```
 
-== Typescript example
-
-```ts
+```ts [src/labels/startLabel.ts]
 const startLabel = newLabel("start", [
     // ...
     async () => {
