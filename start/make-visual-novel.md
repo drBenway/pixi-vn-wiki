@@ -133,7 +133,6 @@ james: The redhead behind her is Stephanie.
 steph: Hey! Everyone calls me Steph. I'll shake your hand.
 
 // ...
-
 -> DONE
 ```
 
@@ -187,7 +186,6 @@ james: James!
 mc: ...Peter.
 
 // ...
-
 -> second_part
 
 === second_part ===
@@ -202,7 +200,6 @@ steph: Sly! If word gets out about that... well, actually, it wouldn't matter, *
 I'm fumbling for a new subject.
 
 // ...
-
 -> DONE
 ```
 
@@ -244,7 +241,6 @@ This is the example:
 
 ```ink [src/ink/start.ink]
 === start ===
-
 // ...
 
 You want continue to the next part?
@@ -256,7 +252,6 @@ You want continue to the next part?
 === second_part ===
 
 // ...
-
 -> DONE
 ```
 
@@ -304,7 +299,6 @@ What is your name?
 # rename mc { _input_value_ }
 
 // ...
-
 -> DONE
 ```
 
@@ -355,7 +349,6 @@ mc: Thanks, good to meet you, [steph_fullname].
 steph: WOW, that is, like, the most perfect handshake I've ever had! Firm, but also gentle. [sly], you *gotta* shake his hand!
 
 // ...
-
 -> DONE
 ```
 
@@ -400,7 +393,6 @@ james: Ooh, [mc]! Nice, firm handshake!
 james: Come on in and...
 
 // ...
-
 -> DONE
 ```
 
@@ -492,7 +484,6 @@ james: Don't worry, you don't have much to live up to. Just don't use heroin lik
 mc: ...
 
 // ...
-
 -> DONE
 ```
 
@@ -546,7 +537,6 @@ james: Don't worry, you don't have much to live up to. Just don't use heroin lik
 mc: ...
 
 // ...
-
 -> DONE
 ```
 
@@ -577,6 +567,9 @@ This is the example:
 ::: code-group
 
 ```ink [src/ink/start.ink]
+=== start ===
+// ...
+
 # show image bg bg01-hallway
 # show imagecontainer james [m01-body m01-eyes-smile m01-mouth-neutral01] xAlign 0.5 yAlign 1 with movein direction right speed 300
 james: You're my roommate's replacement, huh?
@@ -586,7 +579,6 @@ james: Don't worry, you don't have much to live up to. Just don't use heroin lik
 mc: ...
 
 // ...
-
 -> DONE
 ```
 
@@ -650,11 +642,24 @@ export const animation01 = newLabel("animation_01", [
 ]);
 ```
 
-Now I can call this label `animation_01` from the main label `start`.
+Now I can call this label `animation_01` from the main label `start`. (As explained [here](/ink/ink-label.md#use-the-call-script) from *ink* I can call labels written in ts and vice versa.)
 
 ::: code-group
 
 ```ink [src/ink/start.ink]
+=== start ===
+// ...
+
+# show imagecontainer james [m01-body m01-eyes-grin m01-mouth-grin00]
+# show imagecontainer sly [fm01-body fm01-eyes-smile fm01-mouth-smile00]
+# show imagecontainer steph [fm02-body fm02-eyes-upset fm02-mouth-nervous00]
+# remove image steph with moveout direction left speed 300
+[steph_fullname] goes through the opposite door,
+# call animation_01
+<> and returns with a HUGE tinfoil-covered platter.
+
+// ...
+-> DONE
 ```
 
 ```ts [src/labels/startLabel.ts]
