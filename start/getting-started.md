@@ -18,34 +18,25 @@ Before starting, you must have the following tools installed:
 
 If you want to start a new project, you can use the following command to initialize a new project with the Pixi’VN template:
 
-:::tabs
-== npm
+::: code-group
 
-```bash
+```sh [npm]
 npm create pixi-vn@latest
 ```
 
-== yarn
-
-```bash
+```sh [yarn]
 yarn create pixi-vn
 ```
 
-== pnpm
-
-```bash
+```sh [pnpm]
 pnpm create pixi-vn
 ```
 
-== bun
-
-```bash
+```sh [bun]
 bun create pixi-vn
 ```
 
-== deno
-
-```bash
+```sh [deno]
 deno init --npm pixi-vn
 ```
 
