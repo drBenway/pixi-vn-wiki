@@ -119,3 +119,82 @@ features:
     link: /start/interface-angular
 ---
 
+
+---
+
+<div class="grid">
+<div class="right">
+  <h2>
+    Learn to Code <br />
+    <span>Awesome</span>
+  </h2>
+  <p>
+    Learn the fundamentals of software development and other advanced
+    programming concepts.
+  </p>
+</div>
+<div class="left">
+
+::: code-group
+
+```ink [start.ink]
+=== start
+Hello, world!
+This is a Ren'Py tutorial.
+I hope you enjoy it!
+->DONE
+```
+
+```renpy [start.rpy]
+label start:
+    "Hello, world!"
+    "This is a Ren'Py tutorial."
+    "I hope you enjoy it!"
+```
+
+```typescript [startLabel.ts]
+const startLabel = newLabel("start_label_id", [
+    (props) => narration.dialogue = "Hello, world!",
+    (props) => narration.dialogue = "This is a Pixi’VN tutorial.",
+    (props) => narration.dialogue = "I hope you enjoy it!"
+])
+```
+
+:::
+
+</div>
+</div>
+
+<style scoped>
+.grid {
+  display: grid;
+  align-items: center;
+
+  h2 {
+    border-top: none;
+    margin-top: 0rem;
+    font-size: 2.25rem;
+    line-height: calc(2.5 / 2.25);
+
+    span {
+      color: cyan;
+    }
+  }
+
+  .right {
+    max-width: 40ch;
+    text-wrap: pretty;
+  }
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem;
+
+    .right {
+      order: 2;
+    }
+  }
+}
+</style>
