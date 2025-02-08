@@ -30,7 +30,9 @@ hero:
     <span>As you like!!!</span>
   </h2>
 
-  Write your story in your favorite storytelling language. Like *ink* or Ren'py or TS/JS. In all cases you can also interact with the canvas and sounds, or create custom features. You can read more about it [here](/start/narration.md).
+  Write your story in your favorite storytelling language. Like *ink* or Ren'py or TS/JS. <br />
+  In all cases you can also interact with the canvas and sounds, or create custom features. <br />
+  You can read more about it [here](/start/narration.md).
 
 </div>
 <div class="left">
@@ -92,8 +94,9 @@ const startLabel = newLabel("start_label_id", [
     <span>Show your creativity!</span>
   </h2>
 
-  Create your own assets with your favorite tools. Like Daz 3D, Blender, Photoshop, Krita, GIMP, Cinema 4D, Spine 2D etc.
-  Pixi’VN uses the power of [PixiJS](/start/canvas.md) to render your assets. You can also create 2D animations with [Spine 2D](/start/canvas-spine2d.md) or interact with 3D elements with [Three.js](/start/canvas-threejs.md).
+  Create your own assets with your favorite tools. Like Daz 3D, Blender, Photoshop, Krita, GIMP, Cinema 4D, Spine 2D etc. <br />
+  Pixi’VN uses the power of [PixiJS](/start/canvas.md) to render your assets. <br />
+  You can also create 2D animations with [Spine 2D](/start/canvas-spine2d.md) or interact with 3D elements with [Three.js](/start/canvas-threejs.md).
 
 </div>
 
@@ -119,11 +122,12 @@ const startLabel = newLabel("start_label_id", [
 <div class="grid">
 <div class="left">
   <h2>
-    AAA <br />
-    <span>AAAA</span>
+    Build the UI<br />
+    <span>Use your favorite framework</span>
   </h2>
 
-  aaaa
+  Build the UI with your favorite JavaScript framework. Like React, Vue, Preact, Qwik, lit, Solid, Svelte, Angular, PixiJS etc. <br />
+  You can read more about it [here](/start/interface.md).
 
 </div>
 
@@ -160,7 +164,6 @@ const startLabel = newLabel("start_label_id", [
 <div class="left">
 
 <div class="images">
-  <img src="/pixijs.svg" alt="PixiJS">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftypescript-icon.svg?alt=media" alt="TypeScript">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftauri-icon.png?alt=media" alt="Tauri">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvscode-icon.png?alt=media" alt="VS Code">
