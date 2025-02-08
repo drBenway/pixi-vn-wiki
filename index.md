@@ -153,11 +153,11 @@ const startLabel = newLabel("start_label_id", [
 <div class="grid">
 <div class="right">
   <h2>
-    AAA <br />
-    <span>AAAA</span>
+    Welcome to the Web App<br />
+    <span>Use your favorite tools</span>
   </h2>
 
-  aaaa
+  Use your favorite tools to build your web app. Like TypeScript, Tauri, VS Code, Vite.js, i18n, NodeJS, Astro, AWS, Bootstrap, Electron, ESLint, Firebase, Gatsby, Gulp, Bit, Jest, MUI, Netlify, Nextjs, npm, Nuxt, Rollup, Supabase, Webpack, Fluent etc.
 
 </div>
 
@@ -170,6 +170,25 @@ const startLabel = newLabel("start_label_id", [
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvitejs-icon.svg?alt=media" alt="Vite.js">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fi18n-icon.png?alt=media" alt="i18n">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fnodejs-icon.png?alt=media" alt="NodeJS">
+  <img src="/astro.svg" alt="Astro" style="background-color: white;">
+  <img src="/aws.svg" alt="AWS">
+  <img src="/bootstrap.svg" alt="Bootstrap">
+  <img src="/electron.svg" alt="Electron">
+  <img src="/eslint.svg" alt="ESLint">
+  <img src="/firebase.svg" alt="Firebase">
+  <img src="/gatsby.svg" alt="Gatsby">
+  <img src="/gulp.svg" alt="Gulp">
+  <img src="/bit.svg" alt="bit">
+  <img src="/jest.svg" alt="Jest">
+  <img src="/mui.svg" alt="MUI">
+  <img src="/netlify.svg" alt="Netlify">
+  <img src="/nextjs.svg" alt="Nextjs" style="background-color: white; border-radius: 50%;">
+  <img src="/npm.svg" alt="npm">
+  <img src="/nuxt.svg" alt="Nuxt">
+  <img src="/rollup.svg" alt="Rollup">
+  <img src="/supabase.svg" alt="supabase">
+  <img src="/webpack.svg" alt="Webpack">
+  <img src="/fluent.svg" alt="Fluent">
 </div>
 
 </div>
@@ -216,6 +235,7 @@ const startLabel = newLabel("start_label_id", [
 
   img {
     width: 6rem;
+    height: 6rem;
     transition: 200ms ease-in-out transform;
     border-radius: 20%;
   }
@@ -232,8 +252,10 @@ const startLabel = newLabel("start_label_id", [
   align-items: center;
 
   img {
-    width: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
     transition: 200ms ease-in-out transform;
+    border-radius: 20%;
   }
 
   img:hover {
