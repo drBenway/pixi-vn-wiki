@@ -37,22 +37,6 @@ features:
     title: TypeScript
     details: Write your visual novel with the modern JavaScript language, TypeScript.
     link: https://www.typescriptlang.org/
-  - icon: <img 
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fink-icon.png?alt=media" 
-        alt="TypeScript"
-        style="border-radius:30%;"
-      />
-    title: ink
-    details: Write your visual novel with the narrative scripting language, ink.
-    link: /ink/ink
-  - icon: <img 
-        src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Frenpy-icon.png?alt=media" 
-        alt="TypeScript"
-        style="border-radius:30%;"
-      />
-    title: Ren'Py
-    details: Write your visual novel with the narrative scripting language, Ren'Py.
-    link: /renpy/renpy
   - icon: <img
         src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftauri-icon.png?alt=media" 
         alt="Multi device"
@@ -125,13 +109,12 @@ features:
 <div class="grid">
 <div class="right">
   <h2>
-    Learn to Code <br />
-    <span>Awesome</span>
+    Write your narrative <br />
+    <span>As you like</span>
   </h2>
-  <p>
-    Learn the fundamentals of software development and other advanced
-    programming concepts.
-  </p>
+
+  Write your story in your favorite storytelling language. Like *ink* or Ren'py or TS/JS. In all cases you can also interact with the canvas and sounds, or create custom features. You can read more about it [here](/start/narration.md).
+
 </div>
 <div class="left">
 
@@ -158,6 +141,24 @@ const startLabel = newLabel("start_label_id", [
     (props) => narration.dialogue = "This is a Pixi’VN tutorial.",
     (props) => narration.dialogue = "I hope you enjoy it!"
 ])
+```
+
+```json [startLabel.json]
+{
+    "labels": {
+        "start_label_id": [
+            {
+                "dialogue": "Hello, world!",
+            },
+            {
+                "dialogue": "This is a Pixi’VN tutorial.",
+            },
+            {
+                "dialogue": "I hope you enjoy it!",
+            },
+        ],
+    }
+}
 ```
 
 :::
