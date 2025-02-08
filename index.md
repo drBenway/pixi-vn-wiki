@@ -21,14 +21,13 @@ hero:
       link: /start/make-visual-novel
 ---
 
-
----
+<div style="height: 5rem;"></div>
 
 <div class="grid">
 <div class="right">
   <h2>
     Write your narrative <br />
-    <span>As you like</span>
+    <span>As you like!!!</span>
   </h2>
 
   Write your story in your favorite storytelling language. Like *ink* or Ren'py or TS/JS. In all cases you can also interact with the canvas and sounds, or create custom features. You can read more about it [here](/start/narration.md).
@@ -84,7 +83,7 @@ const startLabel = newLabel("start_label_id", [
 </div>
 </div>
 
----
+<div style="height: 5rem;"></div>
 
 <div class="grid">
 <div class="left">
@@ -99,21 +98,22 @@ const startLabel = newLabel("start_label_id", [
 
 <div class="right">
 
-<div class="images">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Freact-icon.png?alt=media" alt="React">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvue-icon.png?alt=media" alt="Vue">
+<div class="ui_images">
+  <img src="/react.svg" alt="React">
+  <img src="/vue.svg" alt="Vue">
   <img src="/preact.svg" alt="Preact">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fpixijs-icon.png?alt=media" alt="PixiJS">
+  <img src="/pixijs.svg" alt="PixiJS">
   <img src="/qwik.svg" alt="qwik">
   <img src="/litjs.svg" alt="lit">
   <img src="/solidjs.svg" alt="Solid">
   <img src="/svelte.svg" alt="Svelte">
+  <img src="/angular.svg" alt="Angular">
 </div>
 
 </div>
 </div>
 
----
+<div style="height: 5rem;"></div>
 
 <div class="grid">
 <div class="right">
@@ -129,7 +129,7 @@ const startLabel = newLabel("start_label_id", [
 <div class="left">
 
 <div class="images">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fpixijs-icon.png?alt=media" alt="PixiJS">
+  <img src="/pixijs.svg" alt="PixiJS">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftypescript-icon.svg?alt=media" alt="TypeScript">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftauri-icon.png?alt=media" alt="Tauri">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvscode-icon.png?alt=media" alt="VS Code">
@@ -175,6 +175,23 @@ const startLabel = newLabel("start_label_id", [
   }
 }
 
+.ui_images {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: center;
+
+  img {
+    width: 6rem;
+    transition: 200ms ease-in-out transform;
+    border-radius: 20%;
+  }
+
+  img:hover {
+    transform: scale(1.3);
+  }
+}
+
 .images {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -183,14 +200,11 @@ const startLabel = newLabel("start_label_id", [
 
   img {
     width: 4rem;
+    transition: 200ms ease-in-out transform;
   }
-}
 
-img {
-  transition: 200ms ease-in-out transform;
-}
-
-img:hover {
-  transform: scale(1.3);
+  img:hover {
+    transform: scale(1.3);
+  }
 }
 </style>
