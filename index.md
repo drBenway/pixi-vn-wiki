@@ -88,6 +88,37 @@ const startLabel = newLabel("start_label_id", [
 <div class="grid">
 <div class="left">
   <h2>
+    Create your own assets <br />
+    <span>Show your creativity!</span>
+  </h2>
+
+  Create your own assets with your favorite tools. Like Daz 3D, Blender, Photoshop, Krita, GIMP, Cinema 4D, Spine 2D etc.
+  Pixi’VN uses the power of [PixiJS](/start/canvas.md) to render your assets. You can also create 2D animations with [Spine 2D](/start/canvas-spine2d.md) or interact with 3D elements with [Three.js](/start/canvas-threejs.md).
+
+</div>
+
+<div class="right">
+
+<div class="nine_images">
+  <img src="/daz.svg" alt="Daz 3D">
+  <img src="/photoshop.svg" alt="Photoshop">
+  <img src="/blender.svg" alt="Blender">
+  <img src="/krita.svg" alt="Krita">
+  <img src="/cinema4d.svg" alt="Cinema 4d">
+  <img src="/gimp.svg" alt="GIMP">
+  <img src="/spine.svg" alt="Spine 2D">
+  <img src="/pixijs.svg" alt="PixiJS">
+  <img src="/threejs.svg" alt="Three.js" style="background-color: white;">
+</div>
+
+</div>
+</div>
+
+<div style="height: 5rem;"></div>
+
+<div class="grid">
+<div class="left">
+  <h2>
     AAA <br />
     <span>AAAA</span>
   </h2>
@@ -98,7 +129,7 @@ const startLabel = newLabel("start_label_id", [
 
 <div class="right">
 
-<div class="ui_images">
+<div class="nine_images">
   <img src="/react.svg" alt="React">
   <img src="/vue.svg" alt="Vue">
   <img src="/preact.svg" alt="Preact">
@@ -136,7 +167,6 @@ const startLabel = newLabel("start_label_id", [
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvitejs-icon.svg?alt=media" alt="Vite.js">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fi18n-icon.png?alt=media" alt="i18n">
   <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fnodejs-icon.png?alt=media" alt="NodeJS">
-  <img src="/threejs.svg" alt="Three.js">
 </div>
 
 </div>
@@ -175,7 +205,7 @@ const startLabel = newLabel("start_label_id", [
   }
 }
 
-.ui_images {
+.nine_images {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
