@@ -140,7 +140,7 @@ features:
 ```ink [start.ink]
 === start
 Hello, world!
-This is a Ren'Py tutorial.
+This is a Pixi’VN tutorial.
 I hope you enjoy it!
 ->DONE
 ```
@@ -148,7 +148,7 @@ I hope you enjoy it!
 ```renpy [start.rpy]
 label start:
     "Hello, world!"
-    "This is a Ren'Py tutorial."
+    "This is a Pixi’VN tutorial."
     "I hope you enjoy it!"
 ```
 

@@ -57,7 +57,7 @@ Example of Ren'Py:
 ```renpy [start.rpy]
 label start:
     "Hello, world!"
-    "This is a Ren'Py tutorial."
+    "This is a Pixi’VN tutorial."
     "I hope you enjoy it!"
 ```
 
@@ -74,7 +74,7 @@ const startLabel = newLabel("start_label_id", [
 ```ink [start.ink]
 === start
 Hello, world!
-This is a Ren'Py tutorial.
+This is a Pixi’VN tutorial.
 I hope you enjoy it!
 ->DONE
 ```
@@ -82,7 +82,7 @@ I hope you enjoy it!
 ```renpy [start.rpy]
 label start:
     "Hello, world!"
-    "This is a Ren'Py tutorial."
+    "This is a Pixi’VN tutorial."
     "I hope you enjoy it!"
 ```
 
