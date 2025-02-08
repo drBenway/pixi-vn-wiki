@@ -117,6 +117,7 @@ export default defineConfig({
                                 { text: "Narration with Ren’Py (In Development)", link: "/renpy/renpy" },
                                 {
                                     text: "Narration with JS/TS",
+                                    collapsed: true,
                                     items: [
                                         { text: "Dialogue", link: "/start/dialogue" },
                                         {
@@ -134,6 +135,7 @@ export default defineConfig({
                                         {
                                             text: "Markup language (to add text style)",
                                             link: "/start/markup",
+                                            collapsed: true,
                                             items: [
                                                 { text: "Markdown", link: "/start/markup-markdown" },
                                                 { text: "Typewriter effect", link: "/start/markup-typewriter" },
@@ -147,12 +149,14 @@ export default defineConfig({
                         {
                             text: "PixiJS Canvas",
                             link: "/start/canvas",
+                            collapsed: true,
                             items: [
                                 { text: "Initialize", link: "/start/canvas-initialize" },
                                 { text: "Canvas alias", link: "/start/canvas-alias" },
                                 {
                                     text: "Canvas Components",
                                     link: "/start/canvas-components",
+                                    collapsed: true,
                                     items: [
                                         { text: "ImageSprite", link: "/start/canvas-images" },
                                         { text: "ImageContainer", link: "/start/canvas-image-container" },
@@ -168,6 +172,7 @@ export default defineConfig({
                                 {
                                     text: "Animations and Effects",
                                     link: "/start/canvas-animations-effects",
+                                    collapsed: true,
                                     items: [
                                         {
                                             text: "Primitives (ticker)",
@@ -185,11 +190,13 @@ export default defineConfig({
                         {
                             text: "Assets",
                             link: "/start/assets",
+                            collapsed: true,
                             items: [{ text: "Assets management", link: "/start/assets-management" }],
                         },
                         {
                             text: "Game storage",
                             link: "/start/storage",
+                            collapsed: true,
                             items: [
                                 { text: "Flags Management", link: "/start/flags" },
                                 { text: "Stored Classes", link: "/start/stored-classes" },
@@ -198,6 +205,7 @@ export default defineConfig({
                         {
                             text: "UI with JavaScript Framework",
                             link: "/start/interface",
+                            collapsed: true,
                             items: [
                                 {
                                     text: "JavaScript Frameworks",
