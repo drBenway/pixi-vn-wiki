@@ -220,6 +220,14 @@ export default defineConfig({
                             ],
                         },
                         { text: "Save and Load", link: "/start/save" },
+                        {
+                            text: "Distribution",
+                            link: "/start/distribution",
+                            items: [
+                                { text: "Website distribution", link: "/start/distribution-website" },
+                                { text: "Desktop & mobile devices", link: "/start/distribution-desktop-mobile" },
+                            ],
+                        },
                         { text: "Advanced topics", link: "/advanced/intercept-events" },
                     ],
                 },
@@ -265,14 +273,6 @@ export default defineConfig({
                     items: [
                         { text: "First steps", link: "/start/character" },
                         { text: "Intecept Events", link: "/advanced/intercept-events" },
-                        {
-                            text: "Distribution",
-                            link: "/advanced/distribution",
-                            items: [
-                                { text: "Website distribution", link: "/advanced/distribution-website" },
-                                { text: "Desktop & mobile devices", link: "/advanced/distribution-desktop-mobile" },
-                            ],
-                        },
                         { text: "Pixi’VN + Json", link: "/advanced/pixi-vn-json" },
                     ],
                 },
