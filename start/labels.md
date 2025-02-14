@@ -133,3 +133,26 @@ export const startLabel = newLabel("start_label",
 ```
 
 :::
+
+## Step limit saved
+
+At each step all the information of the current state of the game is [saved](/start/save.md).
+
+To avoid the size of the save file growing too much, there is a limit of 100 steps saved, by default is 20 steps. When the limit is reached, only essential information from old steps will be kept.
+This basic information allows you to show the entire [history of the narrative](/start/history.md), but without the possibility of [returning](/start/labels-flow.md#go-back) to a specific step.
+
+You can edit the limit of steps saved by changing the `stepLimitSaved` property in the `narration` object.
+
+```typescript
+import { narration } from '@drincs/pixi-vn'
+
+narration.stepLimitSaved = 100
+```
+
+If you want to disable the limit of steps saved, you can set the `stepLimitSaved` property to `Infinity`.
+
+```typescript
+import { narration } from '@drincs/pixi-vn'
+
+narration.stepLimitSaved = Infinity
+```
