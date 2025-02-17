@@ -75,7 +75,7 @@ function nextOnClick() {
 
 Linking a character to an image to add to the canvas is a common feature in visual novels. It can be useful for example for showing the character's expression.
 
-To do this, you just need to create a [custom character](/start/character.md#custom-character) or modify the existing one (it is already present in the templates), and add the image to the character's properties. I recommend adding an array of strings containing the links/aliases of the images that make up the character (body, head...), and using an ImageContainer when you need to display the character.
+To do this, you just need to create a [custom character](/start/character.md#custom-character) or modify the existing one (it is already present in the templates), and add the image to the character's properties. I recommend adding an array of strings containing the links/aliases of the images that make up the character (body, head...), and using an [ImageContainer](/start/canvas-image-container.md) when you need to display the character.
 
 For example:
 
@@ -108,6 +108,36 @@ declare module '@drincs/pixi-vn' {
         readonly images: string[]
     }
 }
+```
+
+:::
+
+Now you can use the `images` property to link the character to the images.
+
+::: code-group
+
+```ts [labels/startLabel.ts]
+import { newLabel, showImageContainer } from "@drincs/pixi-vn";
+import { alice } from "../values/characters";
+
+export const startLabel = newLabel("start_label", [
+    async () => {
+        await showImageContainer("alice", alice.images, { // [!code focus]
+            xAlign: 0.5, // [!code focus]
+            yAlign: 1, // [!code focus]
+        }); // [!code focus]
+    },
+]);
+```
+
+```ts [values/characters.ts]
+import { Character } from "../models/Character";
+
+const alice = new Character('alice_id', {
+    // other properties...
+    images: ['alice-body', 'alice-head', 'alice-eyes']
+})
+saveCharacter(alice)
 ```
 
 :::
