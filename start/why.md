@@ -10,7 +10,7 @@ Its great versatility is due to the fact that Pixi’VN is a npm package, that p
 
 Pixi’VN provides the ability to use [Templates](/start/getting-started.md#pivivn-templates) to get started quickly. Less experienced developers can use these templates to create a visual novel without much knowledge of JavaScript/TypeScript.
 
-With the [PixiVNJson](/advanced/pixi-vn-json.md) implementation you have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
+With the [PixiVNJson](/other-topics/pixi-vn-json.md) implementation you have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
 
 * [*ink*](/ink/ink.md)
 * [Ren'Py](/renpy/renpy.md)
@@ -33,7 +33,7 @@ Ren'Py is a visual novel engine – used by thousands of creators from around th
 
 Ren'Py uses its own language, `Ren'Py language`, which is based on superset of Python. You can use Python statements in Ren'Py language.
 
-Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular language. To write narrative instead of using a specific language, you can use various narrative languages ​​(with the [PixiVNJson](/advanced/pixi-vn-json.md)).
+Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular language. To write narrative instead of using a specific language, you can use various narrative languages ​​(with the [PixiVNJson](/other-topics/pixi-vn-json.md)).
 
 | Programming language | Ren'Py | Pixi’VN |
 |---|---|---|
@@ -50,7 +50,7 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 
 In Ren'Py, for creating dialogues, you need to use the `Ren'Py language`. This language is very simple and easy to learn. It is based on Python and you can use Python statements in Ren'Py language.
 
-In Pixi’VN, you can use JavaScript/TypeScript to create dialogues. You can also use various narrative languages ​​(with the [PixiVNJson](/advanced/pixi-vn-json.md)).
+In Pixi’VN, you can use JavaScript/TypeScript to create dialogues. You can also use various narrative languages ​​(with the [PixiVNJson](/other-topics/pixi-vn-json.md)).
 
 Example of Ren'Py:
 

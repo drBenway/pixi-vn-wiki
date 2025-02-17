@@ -7,6 +7,12 @@ import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
 
 const ogUrl = "https://pixi-vn.web.app";
 
+const otherTopics = [
+    { text: "FAQ", link: "/other-topics/faq" },
+    { text: "Intecept Events", link: "/other-topics/intercept-events" },
+    { text: "Pixi’VN + Json", link: "/other-topics/pixi-vn-json" },
+];
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "Pixi’VN 2D game engine",
@@ -72,7 +78,6 @@ export default defineConfig({
         logo: "/logo.webp",
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            { text: "Guide", link: "/start/getting-started" },
             {
                 text: "Make your first",
                 items: [
@@ -81,10 +86,10 @@ export default defineConfig({
                     { text: "RPG game", link: "/start/make-rpg" },
                 ],
             },
-            { text: "Advanced topics", link: "/advanced/intercept-events" },
+            { text: "Guide", link: "/start/getting-started" },
             {
                 text: "Other topics",
-                items: [{ text: "FAQ", link: "/other/faq" }],
+                items: otherTopics,
             },
         ],
 
@@ -223,12 +228,12 @@ export default defineConfig({
                         {
                             text: "Distribution",
                             link: "/start/distribution",
+                            collapsed: true,
                             items: [
                                 { text: "Website distribution", link: "/start/distribution-website" },
                                 { text: "Desktop & mobile devices", link: "/start/distribution-desktop-mobile" },
                             ],
                         },
-                        { text: "Advanced topics", link: "/advanced/intercept-events" },
                     ],
                 },
             ],
@@ -267,20 +272,10 @@ export default defineConfig({
                     ],
                 },
             ],
-            "/advanced/": [
-                {
-                    text: "Advanced topics",
-                    items: [
-                        { text: "First steps", link: "/start/character" },
-                        { text: "Intecept Events", link: "/advanced/intercept-events" },
-                        { text: "Pixi’VN + Json", link: "/advanced/pixi-vn-json" },
-                    ],
-                },
-            ],
-            "/other/": [
+            "/other-topics/": [
                 {
                     text: "Other topics",
-                    items: [{ text: "FAQ", link: "/other/faq" }],
+                    items: otherTopics,
                 },
             ],
         },
