@@ -151,7 +151,7 @@ In this example, the output will be `2`, `1`, `3`. Because:
 5. Since the step queue is empty, the `goNext` request will be executed and the second step of the label `startLabel` will be executed. (There are 1 items in the step queue)
 6. The `console.log(3)` will be executed and the second step of the label `startLabel` will be finished. (There are 0 items in the step queue)
 
-#### Check if you can go to the next step
+#### Check if the player can go to the next step
 
 You can use the `narration.canGoNext` property to check if you can go to the next step.
 
@@ -194,6 +194,36 @@ if (narration.canGoBack) {
         // ...
     })
 }
+```
+
+#### Check if the player can go back
+
+You can use the `narration.canGoBack` property to check if you can go back.
+
+The `narration.canGoBack` is false when there are no steps in the history to restore.
+
+```tsx
+import { narration } from '@drincs/pixi-vn'
+
+function BackButton() {
+    return (
+        <button disabled={!narration.canGoBack} onClick={() => {
+            narration.goBack({})
+        }}>
+            Back
+        </button>
+    )
+}
+```
+
+#### Block the possibility of going back
+
+You can block the possibility of going back by setting the `narration.canGoBack` property to `false`.
+
+```typescript
+import { narration } from '@drincs/pixi-vn'
+
+narration.blockGoBack()
 ```
 
 ## Close labels
