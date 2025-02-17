@@ -80,4 +80,4 @@
 
 ## Other topics
 
-* [Various Answers](various-answers)
+* [FAQ](faq)

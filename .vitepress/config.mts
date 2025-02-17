@@ -84,7 +84,7 @@ export default defineConfig({
             { text: "Advanced topics", link: "/advanced/intercept-events" },
             {
                 text: "Other topics",
-                items: [{ text: "Various Answers", link: "/other/various-answers" }],
+                items: [{ text: "FAQ", link: "/other/faq" }],
             },
         ],
 
@@ -280,7 +280,7 @@ export default defineConfig({
             "/other/": [
                 {
                     text: "Other topics",
-                    items: [{ text: "Various Answers", link: "/other/various-answers" }],
+                    items: [{ text: "FAQ", link: "/other/faq" }],
                 },
             ],
         },

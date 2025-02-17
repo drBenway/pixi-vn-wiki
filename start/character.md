@@ -197,7 +197,7 @@ console.log(alice.name); // Eleonora
 console.log(angryAlice.name); // Angry Eleonora
 ```
 
-## Custom Character
+## Custom character
 
 It recommend creating your own class `Character` that extends `CharacterStoredClass` and "override" the interface `CharacterInterface`
 to add/edit/remove properties or methods.
@@ -222,16 +222,14 @@ export class Character extends CharacterStoredClass implements CharacterInterfac
         this.defaultSurname = props.surname
         this.defaultAge = props.age
     }
+
     // Not stored properties
-    private _icon?: string
-    get icon(): string | undefined {
-        return this._icon
-    }
-    private _color?: string | undefined
-    get color(): string | undefined {
-        return this._color
-    }
+    
+    readonly icon?: string;
+    readonly color?: string | undefined;
+
     // Stored properties
+
     private defaultName?: string
     get name(): string {
         return this.getStorageProperty<string>("name") || this.defaultName || this.id
@@ -254,16 +252,57 @@ export class Character extends CharacterStoredClass implements CharacterInterfac
         this.setStorageProperty<number>("age", value)
     }
 }
+
+interface CharacterProps {
+    /**
+     * The name of the character.
+     */
+    name?: string;
+    /**
+     * The surname of the character.
+     */
+    surname?: string;
+    /**
+     * The age of the character.
+     */
+    age?: number;
+    /**
+     * The icon of the character.
+     */
+    icon?: string;
+    /**
+     * The color of the character.
+     */
+    color?: string;
+}
 ```
 
 ```ts [pixi-vn.d.ts]
 declare module '@drincs/pixi-vn' {
     interface CharacterInterface {
-        name: string
-        surname?: string
-        age?: number
-        icon?: string
-        color?: string
+        /**
+         * The name of the character.
+         * If you set undefined, it will return the default name.
+         */
+        name: string;
+        /**
+         * The surname of the character.
+         * If you set undefined, it will return the default surname.
+         */
+        surname?: string;
+        /**
+         * The age of the character.
+         * If you set undefined, it will return the default age.
+         */
+        age?: number;
+        /**
+         * The icon of the character.
+         */
+        readonly icon?: string;
+        /**
+         * The color of the character.
+         */
+        readonly color?: string;
     }
 }
 ```
