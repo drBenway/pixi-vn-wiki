@@ -75,7 +75,8 @@ function nextOnClick() {
 
 Linking a character to an image to add to the canvas is a common feature in visual novels. It can be useful for example for showing the character's expression.
 
-To do this, you just need to create a [custom character](/start/character.md#custom-character) or modify the existing one (it is already present in the templates), and add the image to the character's properties. I recommend adding an array of strings containing the links/aliases of the images that make up the character (body, head...), and using an [ImageContainer](/start/canvas-image-container.md) when you need to display the character.
+To do this, you just need to create a [custom character](/start/character.md#custom-character) or modify the existing one (it is already present in the templates).
+I recommend adding an array of strings containing the links/aliases of the images that make up the character (body, head...), and using an [ImageContainer](/start/canvas-image-container.md) when you need to display the character.
 
 For example:
 
@@ -112,7 +113,7 @@ declare module '@drincs/pixi-vn' {
 
 :::
 
-Now you can use the `images` property to link the character to the images.
+Now you can use the `images` property to show the character on the canvas.
 
 ::: code-group
 
@@ -138,6 +139,45 @@ const alice = new Character('alice_id', {
     images: ['alice-body', 'alice-head', 'alice-eyes']
 })
 saveCharacter(alice)
+```
+
+:::
+
+**If you are using *ink***:
+
+You can create a [custom hashtag script](/ink/ink-hashtag.md) to use this feature.
+For example you can add a script with the following syntax and convert it to a [show imagecontainer script](/ink/ink-canvas.md#show-a-image-container-in-ink):
+
+`#` + `show` + `character` + `[character id]` + `[parameters]`
+
+::: code-group
+
+```ts [utils/ink-utility.ts]
+import { onInkHashtagScript } from '@drincs/pixi-vn-ink'
+import { getCharacterById } from '@drincs/pixi-vn'
+
+onInkHashtagScript((script, convertListStringToObj) => {
+    // ...
+    if (script[0] === "show" && script[1] === "character" && script.length > 2) {
+        let character = getCharacterById(script[2])
+        if (character) {
+            console.error('Character not found')
+            return false 
+        }
+        let characterId: string = script[2].split('@')[0] // to remove the emotion
+        let oltherProps: string = script.slice(3).join(' ')
+        let images = character.images.join(' ')
+        let newScript: string = `show imagecontainer ${characterId} [${images}] ${oltherProps}`
+        return newScript
+    }
+    return false
+})
+```
+
+```ink [start.ink]
+=== start ===
+# show character alice xAlign 0.8 yAlign 1 with dissolve
+-> DONE
 ```
 
 :::
