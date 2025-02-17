@@ -76,3 +76,13 @@ Supabase is an open-source Firebase alternative. You can use the public URL of t
 * **Type of files**: You can upload any type of file.
 * **Traffic**: Speed is good.
 * **Edit assets**: You can edit the file keeping the same url.
+
+### Convex
+
+Convex is a cloud service that allows you to store and serve user-generated content, such as photos or videos or other files. You can use the public URL of the file to use it in your project.
+
+* **Price**: Convex have two plans: Free and Pay as you go. You can find more information [here](https://www.convex.dev/pricing).
+* **Space limits**: You have, free, 10GB of free storage and 1GB/month of download. You can increase the storage by upgrading the plan.
+* **Type of files**: You can upload any type of file.
+* **Traffic**: Speed is good.
+* **Edit assets**: You can edit the file keeping the same url.
