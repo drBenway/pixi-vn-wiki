@@ -6,9 +6,9 @@ You have the option to use various types of narrative languages (thanks to the [
 
 * **JavaScript/TypeScript** is a programming language. You can use it to write your narrative, but it will lead you to write a lot of code. It has the advantage that it can access all functions of the project.
 * **[*ink*](/ink/ink.md)** is a narrative language that allows you to write a narrative easily, without having to write a lot of code.
-* **[Ren'Py](/renpy/renpy.md)** (coming soon) is a narrative language that allows you to write a narrative easily, without having to write a lot of code.
+* **[Ren'Py](/renpy/renpy.md)** is a narrative language that allows you to write a narrative easily, without having to write a lot of code.
 
-| Language skills | JavaScript/TypeScript | *ink* | Ren'Py (Under development) |
+| Language skills | JavaScript/TypeScript | *ink* | Ren'Py |
 |---|---|---|---|
 | Ease of learning | ❌ | ✅ | ✅ |
 | Is it a typed language? | ✅ | ❌ | ❌ |
