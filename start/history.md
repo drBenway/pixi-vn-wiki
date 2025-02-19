@@ -110,3 +110,9 @@ For example:
 
 ::: sandbox {template=ryzljv entry=/src/screens/HistoryScreen.tsx}
 :::
+
+<!-- TODO: add addCurrentStepToHistory
+
+ ## Add current state into step history
+
+Every -->
