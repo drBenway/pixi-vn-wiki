@@ -48,6 +48,7 @@
     * [Filters](canvas-filters)
     * [Lights](canvas-lights)
     * [Spine 2D](canvas-spine2d)
+    * [Three.js](canvas-threejs)
   * [Canvas functions](canvas-functions)
   * [Position properties](canvas-position)
   * [Transitions](canvas-transition)

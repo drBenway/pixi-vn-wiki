@@ -169,6 +169,7 @@ export default defineConfig({
                                         { text: "Filters", link: "/start/canvas-filters" },
                                         { text: "Lights", link: "/start/canvas-lights" },
                                         { text: "Spine 2D", link: "/start/canvas-spine2d" },
+                                        { text: "Three.js", link: "/start/canvas-threejs" },
                                     ],
                                 },
                                 { text: "Components functions", link: "/start/canvas-functions" },
