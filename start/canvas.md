@@ -17,7 +17,7 @@ You can learn more about PixiJS on the [PixiJS website](https://www.pixijs.com/)
 
 ## Differences between Pixi’VN and PixiJS
 
-Pixi’VN provides a `canvas` API object used to interface with Pixi’VN's PixiJS application. Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal project. The only differences are as follows:
+Pixi’VN provides a API object called `canvas` used to interface with Pixi’VN's PixiJS application. Use `PixiJS Canvas` in Pixi’VN is very similar to use PixiJS in a normal project. The only differences are as follows:
 
 - All the components added in the canvas will be linked to an [alias](/start/canvas-alias.md) of your choice. This alias will be used to identify the component and to manipulate it.
 - Compared to PixiJS, Pixi’VN saves the current canvas state at each [step](/start/labels.md).
