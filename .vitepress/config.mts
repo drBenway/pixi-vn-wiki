@@ -119,7 +119,7 @@ export default defineConfig({
                             link: "/start/narration",
                             items: [
                                 { text: "Narration with ink", link: "/ink/ink" },
-                                { text: "Narration with Ren’Py (In Development)", link: "/renpy/renpy" },
+                                { text: "Narration with Ren’Py", link: "/renpy/renpy" },
                                 {
                                     text: "Narration with JS/TS",
                                     collapsed: true,
@@ -265,7 +265,7 @@ export default defineConfig({
             ],
             "/renpy/": [
                 {
-                    text: "Ren’Py (In Development)",
+                    text: "Ren’Py",
                     items: [
                         { text: "Narration with Ren’Py", link: "/renpy/renpy" },
                         { text: "Back", link: "/start/narration" },
