@@ -1,0 +1,6 @@
+files:
+  - source: '*.md'
+    ignore:
+      - Home.md
+      - /locales/*
+    translation: /locales/%two_letters_code%/%original_file_name%
