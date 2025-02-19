@@ -7,7 +7,7 @@
   * [Point and Click adventure game](make-point-and-click)
   * [RPG game](make-rpg)
 
-## First steps
+## Guide
 
 * [Characters](character)
 * [Narration](narration):
@@ -69,15 +69,12 @@
   * [Navigate/switch between UI screens](interface-navigate)
   * [Connect the UI with the storage](interface-connect-storage)
 * [Save and Load](save)
-
-## Advanced topics
-
-* [Intecept Events](intercept-events)
 * [Distribution](distribution)
   * [Website distribution](distribution-website)
   * [Desktop & mobile devices](distribution-desktop-mobile)
-* [Pixi’VN + Json](pixi-vn-json)
 
 ## Other topics
 
 * [FAQ](faq)
+* [Intecept Events](intercept-events)
+* [Pixi’VN + Json](pixi-vn-json)
