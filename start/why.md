@@ -93,7 +93,7 @@ CDD is not very intuitive and complicated to use. There are very few examples an
 
 In Pixi’VN, you can use PixiJS to create minigames. PixiJS is a very powerful library that allows you to create complex animations and mechanics. The documentation and examples are very detailed and there are many developers using PixiJS.
 
-You can try some Ren'py and PIxiJS games to understand the difference:
+You can try some Ren'py and PIxiJS minigames to understand the difference:
 
 * Ren'Py minigames: <https://itch.io/game-assets/free/tag-minigames/tag-renpy>
 * PixiJS minigames: <https://github.com/pixijs/open-games>
