@@ -11,9 +11,9 @@ If In addition to being able to interact with the canvas from JavaScript/TypeScr
 
 ## What is PixiJS?
 
-PixiJS is a rendering engine that allows you to create rich, interactive graphics and animations. It is used in games like [Good Pizza, Great Pizza](https://www.goodpizzagreatpizza.com/) and [The Enchanted Cave 2](https://store.steampowered.com/app/368610/The_Enchanted_Cave_2/).
+PixiJS is the fastest, most lightweight 2D library available for the web, working across all devices and allowing you to create rich, interactive graphics and cross-platform applications using WebGL and WebGPU. It is fast, flexible, and easy to use. It is used in games like [Good Pizza, Great Pizza](https://www.goodpizzagreatpizza.com/) and [The Enchanted Cave 2](https://store.steampowered.com/app/368610/The_Enchanted_Cave_2/).
 
-PixiJS is a powerful tool for creating games and interactive experiences. It is fast, flexible, and easy to use. You can learn more about PixiJS on the [PixiJS website](https://www.pixijs.com/).
+You can learn more about PixiJS on the [PixiJS website](https://www.pixijs.com/).
 
 ## Differences between Pixi’VN and PixiJS
 
