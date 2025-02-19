@@ -17,7 +17,7 @@ You have the option to use various types of narrative languages ​​(in additi
 
 ## Ren'Py vs Pixi’VN
 
-Making a comparison between Ren'Py and Pixi’VN is necessary because Ren'Py is currently the most popular engine for creating visual novels.
+Making a comparison between Ren'Py and Pixi’VN is necessary because Ren'Py is currently the most widely used engine for creating visual novels.
 
 (This comparison was made by the Pixi’VN team, trying to be unbiased. If you disagree with this comparison or if you think other features should be compared, create an [new discussion](https://github.com/DRincs-Productions/pixi-vn/discussions/categories/wiki).)
 
