@@ -4,7 +4,7 @@
 
 Pixi’VN uses [PixiJS](https://pixijs.com/8.x/guides/basics/what-pixijs-is) to render the visual novel. You can use the Pixi’VN API to add images, text, and animations to the canvas PixiJS.
 
-If In addition to being able to interact with the canvas from JavaScript/TypeScript, you can also use other narrative languages:
+In addition to being able to interact with the canvas from JavaScript/TypeScript, you can also use other narrative languages:
 
 - [***ink***](/ink/ink-canvas.md)
 - Ren'Py (Under development)
