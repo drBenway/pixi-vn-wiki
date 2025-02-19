@@ -10,7 +10,7 @@ Its great versatility is due to the fact that Pixi’VN is a npm package, that p
 
 Pixi’VN provides the ability to use [project templates](/start/getting-started.md#pivivn-templates) to get started quickly. Less experienced developers can use these templates to create a visual novel without much knowledge of JavaScript/TypeScript.
 
-With the [PixiVNJson](/other-topics/pixi-vn-json.md) implementation you have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
+You have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
 
 * [*ink*](/ink/ink.md)
 * [Ren'Py](/renpy/renpy.md)
