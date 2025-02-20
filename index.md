@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Pixi’VN"
   text: "PixiJS & Visual Novel engine"
-  tagline: Create visual novels with a modern 2D rendering engine and your favorite JavaScript framework.
+  tagline: Create visual novels with the modern 2D rendering engine PixiJS, and your favorite JavaScript framework.
   image:
     src: /logo.webp
     alt: Pixi’VN Logo
@@ -30,7 +30,7 @@ hero:
     <span>As you like!!!</span>
   </h2>
 
-  Write your story in your favorite storytelling language. Like *ink* or Ren'py or TS/JS. <br />
+  Write your story in your favorite storytelling language. Such as *ink* or Ren'py or TS/JS. <br />
   In all cases you can also interact with the canvas and sounds, or create custom features. <br />
   You can read more about it [here](/start/narration.md).
 
