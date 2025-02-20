@@ -124,7 +124,7 @@ The performance and size of the project are very important factors to consider w
 
 **Project size:**
 
-* The entire UI of Renpy is based on "physical images" and this makes the size of the project very large.
+* The entire UI of Ren'py is based on "physical images" and this makes the size of the project very large.
 * In a Pixi’VN project, you can choose whether and which graphics component library to use or use a canvas with a "physical images". Being a library it does not determine the size of the project, but if you use [vite](https://vitejs.dev/) or other tools, the size of the project will be very small.
 
 ### Device Distribution
