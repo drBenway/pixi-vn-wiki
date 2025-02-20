@@ -120,7 +120,7 @@ The performance and size of the project are very important factors to consider w
 **UI performance:**
 
 * Ren'Py's UI is based on canvas components that use images within the project.
-* In Pixi’VN you can use HTML and/or JavaScript frameworks, known for their performance and usability, or cancas. HTML/JavaScript components are not necessarily based on images, which leads to a smaller project size.
+* In Pixi’VN you can use HTML and/or JavaScript frameworks, known for their performance and usability, or the canvas. HTML/JavaScript components are not necessarily based on images, which leads to a smaller project size.
 
 **Project size:**
 
