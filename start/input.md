@@ -51,8 +51,10 @@ export const startLabel = newLabel("start_label", [
 
 :::
 
-::: sandbox {template=6968x8 entry=/src/labels/startLabel.ts,/src/screens/modals/TextInput.tsx}
-:::
+<sandbox
+  template="6968x8"
+  entry="/src/labels/startLabel.ts,/src/screens/modals/TextInput.tsx"
+/>
 
 ## Getting input information
 
@@ -81,5 +83,7 @@ For example:
 
 ( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
 
-::: sandbox {template=mjn5c8 entry=/src/screens/modals/TextInput.tsx}
-:::
+<sandbox
+  template="mjn5c8"
+  entry="/src/screens/modals/TextInput.tsx"
+/>

@@ -36,8 +36,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=pm3n7c entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="pm3n7c"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Get a canvas component
 
@@ -81,8 +83,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=k6xqwz entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="k6xqwz"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Remove a canvas component
 
@@ -122,8 +126,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=3qfr7m entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="3qfr7m"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Remove all canvas components
 
@@ -163,8 +169,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=rnktj2 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="rnktj2"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Add a listener for a given event
 
@@ -234,8 +242,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=k5hqyv entry=/src/labels/ButtonEvent.ts,/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="k5hqyv"
+  entry="/src/labels/ButtonEvent.ts,/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 <!-- TODO ### New component and not use PixiJS Components -->
 <!-- TODO ### New method to add remove and find components -->

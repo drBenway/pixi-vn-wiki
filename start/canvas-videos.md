@@ -70,8 +70,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=v44hk9 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="v44hk9"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Add a video
 
@@ -123,8 +125,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=xlsrnj entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="xlsrnj"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Remove a video
 
@@ -176,8 +180,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=29hjtk entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="29hjtk"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Looping video
 
@@ -209,8 +215,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=fdzncz entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="fdzncz"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Restart a video
 
@@ -249,5 +257,7 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=7pngqy entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="7pngqy"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>

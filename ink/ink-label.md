@@ -23,8 +23,10 @@ End
 -> DONE
 ```
 
-::: sandbox {template=ykykkg entry=/src/ink/start.ink}
-:::
+<sandbox
+  template="ykykkg"
+  entry="/src/ink/start.ink"
+/>
 
 This feature derives from **native *ink*** and is the only native method to start a knot. So, if you test your script using **Inky**, you will be able to use this feature.
 
@@ -90,8 +92,10 @@ export default function App() {
 
 :::
 
-::: sandbox {template=wxt2j9 entry=/src/ink/start.ink,/src/labels/javascriptLabel.ts,/src/app.ts}
-:::
+<sandbox
+  template="wxt2j9"
+  entry="/src/ink/start.ink,/src/labels/javascriptLabel.ts,/src/app.ts"
+/>
 
 This feature has been added by ***ink* + Pixi’VN integration**.
 
@@ -155,5 +159,7 @@ export default function App() {
 
 :::
 
-::: sandbox {template=cdln8v entry=/src/ink/start.ink,/src/labels/javascriptLabel.ts,/src/app.ts}
-:::
+<sandbox
+  template="cdln8v"
+  entry="/src/ink/start.ink,/src/labels/javascriptLabel.ts,/src/app.ts"
+/>

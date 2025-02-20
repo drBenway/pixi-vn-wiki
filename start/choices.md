@@ -27,8 +27,10 @@ export const startLabel = newLabel("start_label",
 )
 ```
 
-::: sandbox {template=wv63yr entry=/src/labels/startLabel.ts}
-:::
+<sandbox
+  template="wv63yr"
+  entry="/src/labels/startLabel.ts"
+/>
 
 ## Choice menu option
 
@@ -103,5 +105,7 @@ For example:
 
 ( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
 
-::: sandbox {template=k8r2xf entry=/src/screens/ChoiceMenu.tsx}
-:::
+<sandbox
+  template="k8r2xf"
+  entry="/src/screens/ChoiceMenu.tsx"
+/>

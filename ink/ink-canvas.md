@@ -25,8 +25,10 @@ Where:
   * If the parameters include spaces, you must use double quotes.
   * If the parameters is a object, you must use the JSON format and the first character must be `\{` and the last character must be `\}`. Example: `\{ "color": "red", isVisble: true, position: { x: 100, y: 100 } \}`
 
-::: sandbox {template=rxzx5z entry=/src/ink/start.ink,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="rxzx5z"
+  entry="/src/ink/start.ink,/src/utils/assets-utility.ts"
+/>
 
 ## Show a canvas component in *ink*
 
@@ -106,8 +108,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=sndrvv entry=/src/ink/start.ink,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="sndrvv"
+  entry="/src/ink/start.ink,/src/utils/assets-utility.ts"
+/>
 
 ### Show a canvas component with transition in *ink*
 
@@ -269,8 +273,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=p3qgjq entry=/src/ink/start.ink,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="p3qgjq"
+  entry="/src/ink/start.ink,/src/utils/assets-utility.ts"
+/>
 
 ### Pause a video in *ink*
 

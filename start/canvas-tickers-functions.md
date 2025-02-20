@@ -45,8 +45,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=vfqzch entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="vfqzch"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Remove a ticker
 
@@ -88,8 +90,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=zglj8q entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="zglj8q"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Unlink a canvas component from a ticker
 
@@ -129,8 +133,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=scjm5d entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="scjm5d"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Force completion of the transition at the end of the step
 
@@ -177,8 +183,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=7zgqr6 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="7zgqr6"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Pause and resume a ticker
 
@@ -226,8 +234,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=ns726n entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="ns726n"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Sequence of tickers
 
@@ -267,8 +277,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=k3wj6d entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="k3wj6d"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ### Pause
 
@@ -304,8 +316,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=y25tgn entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="y25tgn"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ### Repeat
 
@@ -344,5 +358,7 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=d3f7gv entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="d3f7gv"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>

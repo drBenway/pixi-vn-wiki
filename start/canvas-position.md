@@ -127,8 +127,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=8sd94f entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="8sd94f"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Align
 
@@ -186,5 +188,7 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=yrwkf5 entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="yrwkf5"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>

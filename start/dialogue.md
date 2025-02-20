@@ -46,8 +46,10 @@ export const startLabel = newLabel("start_label",
 )
 ```
 
-::: sandbox {template=tts9jh entry=/src/labels/startLabel.ts}
-:::
+<sandbox
+  template="tts9jh"
+  entry="/src/labels/startLabel.ts"
+/>
 
 ## Get the current Dialogue
 
@@ -85,8 +87,10 @@ const startLabel = newLabel("start", [
 ])
 ```
 
-::: sandbox {template=ctn72c entry=/src/labels/startLabel.ts}
-:::
+<sandbox
+  template="ctn72c"
+  entry="/src/labels/startLabel.ts"
+/>
 
 ## How to create the narrative dialogue UI screen
 
@@ -94,5 +98,7 @@ For example:
 
 ( **It's in basic html**, you will need to replace the basic html elements with UI components from your favorite library to improve the graphics. )
 
-::: sandbox {template=d6mn3d entry=/src/screens/NarrationScreen.tsx}
-:::
+<sandbox
+  template="d6mn3d"
+  entry="/src/screens/NarrationScreen.tsx"
+/>

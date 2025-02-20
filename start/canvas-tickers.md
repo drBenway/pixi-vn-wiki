@@ -69,8 +69,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=vl986g entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="vl986g"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Rotate
 
@@ -123,8 +125,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=6zc9js entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="6zc9js"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Fade
 
@@ -178,8 +182,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=gj3pdp entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="gj3pdp"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Zoom
 
@@ -236,8 +242,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=wxn3qm entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="wxn3qm"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ### Mirror
 
@@ -281,8 +289,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=lyj52j entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="lyj52j"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Special properties
 
@@ -344,8 +354,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=ts4dfc entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="ts4dfc"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ### Start only if have texture property
 

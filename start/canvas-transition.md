@@ -72,8 +72,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=yzslsf entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="yzslsf"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Fade transition
 
@@ -143,8 +145,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=3r2f3h entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="3r2f3h"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Move in/out transition
 
@@ -217,8 +221,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=z8gsyy entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="z8gsyy"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Push in/out transition
 
@@ -290,8 +296,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=vgf4fp entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="vgf4fp"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Zoom in/out transition
 
@@ -364,8 +372,10 @@ export async function defineAssets() {
 
 :::
 
-::: sandbox {template=pkfqvr entry=/src/labels/startLabel.ts,/src/utils/assets-utility.ts}
-:::
+<sandbox
+  template="pkfqvr"
+  entry="/src/labels/startLabel.ts,/src/utils/assets-utility.ts"
+/>
 
 ## Create your own transition
 
