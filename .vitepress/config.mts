@@ -441,30 +441,30 @@ export default defineConfig(
         {
             locales: [
                 { locale: "en", path: "/" },
-                {
-                    locale: "ja",
-                    path: "locales/ja",
-                },
-                {
-                    locale: "zhHans",
-                    path: "locales/zh",
-                },
-                {
-                    locale: "ru",
-                    path: "locales/ru",
-                },
-                {
-                    locale: "es",
-                    path: "locales/es",
-                },
-                {
-                    locale: "fr",
-                    path: "locales/fr",
-                },
-                {
-                    locale: "it",
-                    path: "locales/it",
-                },
+                // {
+                //     locale: "ja",
+                //     path: "locales/ja",
+                // },
+                // {
+                //     locale: "zhHans",
+                //     path: "locales/zh",
+                // },
+                // {
+                //     locale: "ru",
+                //     path: "locales/ru",
+                // },
+                // {
+                //     locale: "es",
+                //     path: "locales/es",
+                // },
+                // {
+                //     locale: "fr",
+                //     path: "locales/fr",
+                // },
+                // {
+                //     locale: "it",
+                //     path: "locales/it",
+                // },
             ],
             rootLocale: "en",
         }
