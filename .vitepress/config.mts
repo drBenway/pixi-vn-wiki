@@ -306,6 +306,7 @@ export default defineConfig({
             { icon: "github", link: "https://github.com/DRincs-Productions/pixi-vn" },
             { icon: "npm", link: "https://www.npmjs.com/package/@drincs/pixi-vn" },
             { icon: "patreon", link: "https://www.patreon.com/c/pixi_vn" },
+            { icon: "crowdin", link: "https://crowdin.com/project/pixi-vn", ariaLabel: "Help us translate" },
             // { icon: "paypal", link: "https://www.paypal.com/paypalme/DRincsProductions" },
             { icon: "reddit", link: "https://www.reddit.com/r/PixiVN" },
             { icon: "itchdotio", link: "https://drincs-productions.itch.io/pixi-vn" },
@@ -465,9 +466,5 @@ export default defineConfig({
         //     label: "Italiano",
         //     dir: "locales/it",
         // },
-        crowdin: {
-            label: "Help us translate",
-            link: "https://crowdin.com/project/pixi-vn",
-        },
     },
 });
