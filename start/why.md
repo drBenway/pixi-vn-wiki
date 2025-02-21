@@ -16,7 +16,7 @@ It provides the following features:
 * saves the current state of the entire game at each "story step" also giving the possibility to go back
 * functionality to save and load the current state of the game.
 
-Pixi’VN provides the ability to use [project templates](/start/getting-started.md#pivivn-templates) to get started quickly. Less experienced developers can use these templates to create a visual novel without much knowledge of JavaScript/TypeScript.
+For a quick start, various [project templates](/start/getting-started.md#pivivn-templates) are available. Less experienced developers can use these templates without much knowledge of JavaScript/TypeScript.
 
 You have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
 
