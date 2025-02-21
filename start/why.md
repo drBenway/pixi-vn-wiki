@@ -10,7 +10,7 @@ Pixi’VN is a very versatile and powerful 2D game engine. It is based on JavaSc
 
 It provides the following features:
 * narrative management
-* providing a 2D soundtrack
+* provides a 2D canvas
 * providing functionality to play sounds and music
 * providing a storage device to save the game loadable
 * saves the current state of the entire game at each "story step" giving the possibility to go back
