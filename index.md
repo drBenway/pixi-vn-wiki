@@ -154,7 +154,7 @@ const startLabel = newLabel("start_label_id", [
 <div class="right">
   <h2>
     Welcome to the Web World<br />
-    <span>A vast collection of tools</span>
+    <span>With infinite possibilities</span>
   </h2>
 
   Choose which tools to use from the vast possibilities of the world of Web apps. Like TypeScript, Tauri, VS Code, Vite.js, i18n, NodeJS, Astro, AWS, Bootstrap, Electron, ESLint, Firebase, Gatsby, Gulp, Bit, Jest, MUI, Netlify, Nextjs, npm, Nuxt, Rollup, Supabase, Webpack, Fluent etc.
