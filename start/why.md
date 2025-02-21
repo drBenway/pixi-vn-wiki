@@ -13,6 +13,8 @@ You have the option to use various types of narrative languages ​​(in additi
 * [*ink*](/ink/ink.md)
 * [Ren'Py](/renpy/renpy.md)
 
+## Features of Pixi’VN
+
 Its great **versatility** is due to the fact that Pixi’VN is an npm package, and not a framework. This means that it can be installed on any Node.js project, coupled with your favorite JavaScript framework (React, Vue, Angular, etc.) and use the provided features (even if only partially) for a specific purpose, which can be for example the creation of a visual novel or another type of 2D game (such as Point and Click Adventure Games, RPGs, etc...), use only the narrative features in a 3D game, display an animation in a website etc...
 
 In order to be as **light** as possible, it only deals with the following essential features:
