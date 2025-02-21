@@ -23,7 +23,7 @@ In order to be as **light** as possible, it only deals with the following essent
 * saves the current state of the entire game at each "story step" also giving the possibility to go back
 * functionality to save and load the current state of the game.
 
-It does **not reinvent things** that already exist. Pixi'VN binds together several very popular libraries and provides APIs to interact with them and have full access to them. It does not invent new programming/narrative languages.
+It does **not reinvent things** that already exist. Pixi’VN binds together several very popular libraries and provides APIs to interact with them and have full access to them. It does not invent new programming/narrative languages.
 
 ## Ren'Py vs Pixi’VN
 
