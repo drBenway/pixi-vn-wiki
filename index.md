@@ -153,7 +153,7 @@ const startLabel = newLabel("start_label_id", [
 <div class="grid">
 <div class="right">
   <h2>
-    Welcome to the Web App<br />
+    Welcome to the Web World<br />
     <span>Use your favorite tools</span>
   </h2>
 
