@@ -157,7 +157,7 @@ const startLabel = newLabel("start_label_id", [
     <span>A vast collection of tools</span>
   </h2>
 
-  Use your favorite tools to build your web app. Like TypeScript, Tauri, VS Code, Vite.js, i18n, NodeJS, Astro, AWS, Bootstrap, Electron, ESLint, Firebase, Gatsby, Gulp, Bit, Jest, MUI, Netlify, Nextjs, npm, Nuxt, Rollup, Supabase, Webpack, Fluent etc.
+  Choose which tools to use from the vast possibilities of the world of Web apps. Like TypeScript, Tauri, VS Code, Vite.js, i18n, NodeJS, Astro, AWS, Bootstrap, Electron, ESLint, Firebase, Gatsby, Gulp, Bit, Jest, MUI, Netlify, Nextjs, npm, Nuxt, Rollup, Supabase, Webpack, Fluent etc.
 
 </div>
 
