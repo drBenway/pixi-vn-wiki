@@ -1,6 +1,6 @@
 # Why Pixi’VN?
 
-The reason why Pixi’VN was born is that current systems for creating a visual novel are based on dated systems and have many shortcomings.
+The reason Pixi’VN was born is that the current systems for creating visual novels or 2D RPGs are based on dated systems and have numerous shortcomings and bring video game development closer to web applications.
 
 ## What is Pixi’VN?
 
