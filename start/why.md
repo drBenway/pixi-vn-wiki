@@ -6,7 +6,7 @@ Pixi’VN combines the development of various 2D games in a single engine, bring
 
 ## What is Pixi’VN?
 
-Pixi’VN is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the [PixiJS](https://pixijs.com/) library for rendering.
+Pixi’VN is a very versatile and powerful 2D game engine. It is based on JavaScript/TypeScript and [PixiJS](https://pixijs.com/).
 
 Pixi’VN provides the ability to use [project templates](/start/getting-started.md#pivivn-templates) to get started quickly. Less experienced developers can use these templates to create a visual novel without much knowledge of JavaScript/TypeScript.
 
