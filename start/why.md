@@ -13,7 +13,7 @@ It provides the following features:
 * providing a 2D soundtrack
 * providing functionality to play sounds and music
 * providing a storage device to save the game loadable
-* saves the current state of the entire game at each "story step" also giving the possibility to go back
+* saves the current state of the entire game at each "story step" giving the possibility to go back
 * functionality to save and load the current state of the game.
 
 For a quick start, various [project templates](/start/getting-started.md#pivivn-templates) are available. Less experienced developers can use these templates without much knowledge of JavaScript/TypeScript.
