@@ -12,7 +12,7 @@ It provides the following features:
 * narrative management
 * provides a 2D canvas
 * providing functionality to play sounds and music
-* providing a storage device to save the game loadable
+* storage to set and get game variables.
 * saves the current state of the entire game at each "story step" giving the possibility to go back
 * functionality to save and load the current state of the game.
 
