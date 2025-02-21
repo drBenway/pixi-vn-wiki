@@ -8,21 +8,20 @@ Pixi’VN combines the development of various 2D games in a single engine, bring
 
 Pixi’VN is a very versatile and powerful 2D game engine. It is based on JavaScript/TypeScript and [PixiJS](https://pixijs.com/).
 
-Pixi’VN provides the ability to use [project templates](/start/getting-started.md#pivivn-templates) to get started quickly. Less experienced developers can use these templates to create a visual novel without much knowledge of JavaScript/TypeScript.
-
-You have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
-
-* [*ink*](/ink/ink.md)
-* [Ren'Py](/renpy/renpy.md)
-
 It provides the following features:
-
 * narrative management
 * providing a 2D soundtrack
 * providing functionality to play sounds and music
 * providing a storage device to save the game loadable
 * saves the current state of the entire game at each "story step" also giving the possibility to go back
 * functionality to save and load the current state of the game.
+
+Pixi’VN provides the ability to use [project templates](/start/getting-started.md#pivivn-templates) to get started quickly. Less experienced developers can use these templates to create a visual novel without much knowledge of JavaScript/TypeScript.
+
+You have the option to use various types of narrative languages ​​(in addition to JavaScript/TypeScript). Currently you can use the following:
+
+* [*ink*](/ink/ink.md)
+* [Ren'Py](/renpy/renpy.md)
 
 ## Features of Pixi’VN
 
