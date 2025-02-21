@@ -90,8 +90,8 @@ const startLabel = newLabel("start_label_id", [
 <div class="grid">
 <div class="left">
   <h2>
-    Create your own assets <br />
-    <span>Show your creativity!</span>
+    Show your creativity <br />
+    <span>To the whole world!</span>
   </h2>
 
   Create your own assets with your favorite tools. Like Daz 3D, Blender, Photoshop, Krita, GIMP, Cinema 4D, Spine 2D etc. <br />
