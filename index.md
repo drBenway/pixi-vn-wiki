@@ -26,7 +26,7 @@ hero:
 <div class="grid">
 <div class="right">
   <h2>
-    Write your narrative <br />
+    Write your story <br />
     <span>As you like!!!</span>
   </h2>
 
