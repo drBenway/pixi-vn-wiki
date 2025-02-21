@@ -63,7 +63,7 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 | UI implementation | You can use Ren'Py screens | You can use PixiJS, React, Vue, Angular, etc. |
 | UI components | You can use components provided by Ren'Py. They are usually based on images. | Depending on the UI framework you choose, you can use the component library you prefer. For example Material-UI, Bootstrap, PixiJS UI, etc. |
 
-#### Dialogues implementation
+#### Writing the narrative
 
 In Ren'Py, for creating dialogues, you need to use the `Ren'Py language`. This language is very simple and easy to learn. It is based on Python and you can use Python statements in Ren'Py language.
 
