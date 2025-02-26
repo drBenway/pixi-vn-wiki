@@ -8,7 +8,7 @@ With Pixi’VN, you have the option to use various types of narrative languages.
 * **[*ink*](/ink/ink.md)** is a narrative language that allows you to write a narrative easily, without having to write a lot of code.
 * **[Ren'Py](/renpy/renpy.md)** is a narrative language that allows you to write a narrative easily, without having to write a lot of code.
 
-| Language skills | JavaScript/TypeScript | *ink* | Ren'Py |
+| Narrative languages | JavaScript/TypeScript | *ink* | Ren'Py |
 |---|---|---|---|
 | Ease of learning | ❌ | ✅ | ✅ |
 | Is it a typed language? | ✅ | ❌ | ❌ |
