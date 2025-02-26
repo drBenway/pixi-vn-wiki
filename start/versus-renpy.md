@@ -20,7 +20,7 @@ Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular langu
 
 | Programming language | Ren'Py | Pixi’VN |
 |---|---|---|
-| Ease of learning | It is intended for people who do not know how to program | You can get started quickly using a template, but as you progress in development and need to integrate new features, you will need to learn some basic skills in JavaScript/TypeScript, NodeJS, and npm. |
+| Ease of learning | It is intended for people who do not know how to program | You can get started quickly using a template, but as you progress in development and need to integrate new features, you will need to learn some basic skills in JavaScript/TypeScript, NodeJS and npm |
 | Is it a typed language? | ❌ (Using Python you can use types, but the Ren'Py compiler does not have type checking. Also, much of the native Ren'Py code does not use types.) | ✅ |
 | Can you use the debug? | ❌ | ✅ |
 | Package/libraries manager | ❌ | npm |
