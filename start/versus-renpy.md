@@ -16,7 +16,7 @@ Ren'Py is a visual novel engine – used by thousands of creators from around th
 
 Ren'Py uses its own language, `Ren'Py language`, which is based on superset of Python. You can use Python statements in Ren'Py language.
 
-Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular language. To write a narrative, you can choose a narrative language that has been integrated or use more than one in the same project.
+Pixi’VN uses JavaScript/TypeScript, which is a very powerful and popular language. To write the narrative, you can choose a narrative language that has been integrated or use more than one in the same project.
 
 | Programming language | Ren'Py | Pixi’VN |
 |---|---|---|
