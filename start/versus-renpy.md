@@ -71,10 +71,10 @@ label start:
 
 ### Implementation of minigames
 
-In Ren'Py, for creating minigames with complex mechanics/animations, you need to use the [`Creator-Defined Displayables (CDD)`](https://www.renpy.org/doc/html/cdd.html), this is necessary because otherwise you will have big performance problems. With CDD you can create/control one or more graphic elements through a render loop.
+With Ren'Py, for creating minigames with complex mechanics/animations, you need to use the [`Creator-Defined Displayables (CDD)`](https://www.renpy.org/doc/html/cdd.html), this is necessary because otherwise you will have big performance problems. With CDD you can create/control one or more graphic elements through a render loop.
 CDD is not very intuitive and complicated to use. There are very few examples and few developers using CDD. In fact, most of the minigames do not have complex logic and animations.
 
-In Pixi’VN, you can use PixiJS to create minigames. PixiJS is a very powerful library that allows you to create complex animations and mechanics. The documentation and examples are very detailed and there are many developers using PixiJS.
+With Pixi’VN, you can use PixiJS to create minigames. PixiJS is a very powerful library that allows you to create complex animations and mechanics. The documentation and examples are very detailed and there are many developers using PixiJS.
 
 You can try some Ren'py and PIxiJS minigames to understand the difference:
 
@@ -84,9 +84,9 @@ You can try some Ren'py and PIxiJS minigames to understand the difference:
 
 ### UI implementation
 
-In Ren'Py, to create the user interface, you need to use screenshots and styles. The recommended implementation is to draw a series of images and add them inside the canvas through the graphics components. The graphic components are very few, limiting and not very intuitive.
+With Ren'Py, to create the user interface, you need to use screenshots and styles. The recommended implementation is to draw a series of images and add them inside the canvas through the graphics components. The graphic components are very few, limiting and not very intuitive.
 
-In Pixi’VN, in addition to being able to use the components of PixiJS, you can also use systems such as React, Vue, Angular, etc. and install component libraries such as Material-UI, Bootstrap, etc. This allows you to create much more complex UI screens with excellent performance.
+With Pixi’VN, in addition to being able to use the components of PixiJS, you can also use systems such as React, Vue, Angular, etc. and install component libraries such as Material-UI, Bootstrap, etc. This allows you to create much more complex UI screens with excellent performance.
 
 ## Performance and project size
 
@@ -105,7 +105,7 @@ The performance and size of the project are very important factors to consider w
 **UI performance:**
 
 * Ren'Py's UI is based on canvas components that use images within the project.
-* In Pixi’VN you can use HTML and/or JavaScript frameworks, known for their performance and usability, or the canvas. HTML/JavaScript components are not necessarily based on images, which leads to a smaller project size.
+* With Pixi’VN you can use HTML and/or JavaScript frameworks, known for their performance and usability, or the canvas. HTML/JavaScript components are not necessarily based on images, which leads to a smaller project size.
 
 **Project size:**
 
