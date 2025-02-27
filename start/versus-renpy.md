@@ -118,7 +118,7 @@ Ren'Py framework is directly responsible for distributing the game on various de
 
 Pixi’VN does not deal with distributing the project. You can use various frameworks (Tauri, Electron, Cordova, etc...) to distribute the project on various devices. Pixi’VN provides templates that already include the necessary configurations for distribution.
 
-| Device Distribution | Ren'Py | Pixi’VN |
+| Distribution on multiple devices | Ren'Py | Pixi’VN |
 |---|---|---|
 | Ease of use | It's **very simple**. You can use an Ren'Py UI to create the package | For less experienced users, it **can be difficult** to set up the project so that it can be distributed on multiple devices. Using templates can simplify this step. |
 | Package Configurations | Essential | Very complete. (You can choose if the package should be installed and run without an installation) |
