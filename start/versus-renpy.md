@@ -121,7 +121,7 @@ Pixi’VN does not deal with distributing the project. You can use various frame
 | Distribution on multiple devices | Ren'Py | Pixi’VN |
 |---|---|---|
 | Ease of use | It's **very simple**. You can use Ren'Py UI to create the package to distribute | For less experienced users, it **can be difficult** to set up the project so that it can be distributed on multiple devices. Using templates can simplify this step. |
-| Package configurations | Essential | Very complete. (You can choose if the package should be installed and run without an installation) |
+| Package configurations | Essential | Very complete. (You can choose if the package should be installed or run without an installation) |
 | Deployment automations with github action or gitlab pipeline | ❌ | ✅ |
 | System notification | ❌ | ✅ |
 | Use connected devices (Camera, Flashlight etc...) | ❌ | ✅ |
