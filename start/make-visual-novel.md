@@ -253,7 +253,7 @@ const secondPart = newLabel("second_part", [
 
 ## Edit character information and use it as a variable
 
-Now I will ask the player to write the name of the `mc`.
+Now I will give the player the ability to change the name of the `mc`.
 
 To do this, I request the player to [enter an inputs using Pixi’VN's features](/start/input.md) ([Use input in *ink*](/ink/ink-input.md)).
 
