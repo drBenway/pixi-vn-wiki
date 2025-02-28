@@ -10,7 +10,7 @@ Since Pixi’VN gives you the ability to write your own narration by choosing on
 
 ## Create a new project
 
-The first step is to create a new project. You can find more information on how to create a new project starting from a template [here](/start/getting-started.md#project-initialization). We will use the "Visual Novel - React Template".
+The first step is to create a new project. You can find more information on how to create a new project starting from a template [here](/start/getting-started.md#project-initialization). We will use the template "Visual Novel - React".
 
 `Visual Novel -> React`
 
