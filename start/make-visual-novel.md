@@ -351,7 +351,7 @@ export default startLabel;
 
 :::
 
-## Use dialogue glue
+## Use the "glue" feature of dialogues
 
 To improve the narrative, it can be useful to break up a dialogue and continue it in the next step. To do this, we can use the [glue functionality](/start/dialogue.md#dialogue-glue).
 
