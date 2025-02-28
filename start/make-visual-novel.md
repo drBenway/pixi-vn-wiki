@@ -257,7 +257,7 @@ Now I will give the player the ability to change the name of the `mc`.
 
 To do this, I will ask the player to [complete an input box using Pixi'VN's features](/start/input.md) ([Use the input prompt in *ink*](/ink/ink-input.md)).
 
-After obtaining the value of the input you can [set the name of the character](/start/character.md#edit-characters-in-the-game) equal to the value obtained ([Edit character name in *ink*](/ink/ink-character.md#edit-character-name-in-dialogues)).
+After getting the input value you can [set the character name](/start/character.md#edit-characters-in-the-game) using the obtained value ([Edit character name in *ink*](/ink/ink-character.md#edit-character-name-in-dialogues)).
 
 This is the example:
 
