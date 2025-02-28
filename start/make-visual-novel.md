@@ -587,7 +587,7 @@ export default startLabel;
 
 ## Building an animation
 
-To make the visual novel more dynamic, you can use animations. You can find more information on how to use animations in the [documentation](/start/canvas-animations-effects.md) ([Use animations in *ink*](/ink/ink-canvas.md#use-the-effects-in-ink)).
+To make the visual novel more dynamic, you can use animations. You can find more information about how to use animations [here](/start/canvas-animations-effects.md) ([Using animations in *ink*](/ink/ink-canvas.md#use-the-effects-in-ink)).
 
 I recommend using Typescript if you need to set a lot of properties, this way you have more control over the animation, more features and types.
 
