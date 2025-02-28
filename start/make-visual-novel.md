@@ -585,7 +585,7 @@ export default startLabel;
 
 :::
 
-## Building animations
+## Building an animation
 
 To make the visual novel more dynamic, you can use animations. You can find more information on how to use animations in the [documentation](/start/canvas-animations-effects.md) ([Use animations in *ink*](/ink/ink-canvas.md#use-the-effects-in-ink)).
 
