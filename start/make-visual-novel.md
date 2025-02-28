@@ -207,7 +207,7 @@ const secondPart = newLabel("second_part", [
 
 ## Choice menus
 
-Now we would ask the player if he wants to continue with the second part of the visual novel.
+Now we will ask the player if he wants to continue with the second part of the visual novel, in the last `start` step.
 
 To do this we will use the [choice menus](/start/choices.md).
 
