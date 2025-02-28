@@ -141,7 +141,7 @@ Pixi’VN is an [npm](https://www.npmjs.com/) library that allows you to create 
 ## Longevity and ease of internal development
 
 Ren'py born in 2004 and is still used today. It is a very stable and mature project.
-Ren'Py in addition to including the development of its own library for visual novels also includes the development of `Ren'Py language` and `Pygame_sdl2`. Since it also takes care of distributing the project on various devices, Ren'Py must keep the system up to date with the OS updates it supports.
+Ren'Py in addition to including the development of its own library for visual novels also includes the development of `Ren'Py language` and `Pygame_sdl2`. Since Ren'Py also handles the distribution of the project on various devices, it is necessary to keep the system up to date with updates for supported operating systems.
 
 This means that keeping Ren'Py updated is a constant and very complex process that "touches" many types of programming (Parsing, Graphics, etc...).
 
