@@ -538,7 +538,7 @@ export default startLabel;
 
 ## Use transitions
 
-To make the visual novel more dynamic, you can use transitions to show images. You can find more information on how to use transitions in the [documentation](/start/canvas-transition.md) ([Use transitions in *ink*](/ink/ink-canvas.md#show-a-canvas-component-with-transition-in-ink)).
+To make the visual novel more dynamic, you can use transitions to show images. You can find more information about using transitions [here](/start/canvas-transition.md) ([Using transitions in *ink*](/ink/ink-canvas.md#show-a-canvas-component-with-transition-in-ink)).
 
 This is the example:
 
