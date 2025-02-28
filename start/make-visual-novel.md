@@ -443,7 +443,7 @@ Now it's time to think about the visual part too. We will add the background and
 
 **What is a sprite?** In computer graphics, a sprite is a two-dimensional bitmap that is integrated into a larger scene, most often in a 2D video game.
 
-In our case the character sprites are composed of 3 images: the body, the eyes and the mouth. So we use the [ImageContainer](/start/canvas-image-container.md) to create the character.
+In our case the character sprites are composed of 3 images: the body, the eyes and the mouth. Then we use [ImageContainer](/start/canvas-image-container.md) to compose the character.
 
 You can find more information on how to add canvas components in [this documentation](/start/canvas-components.md) ([Use canvas components in *ink*](/ink/ink-canvas.md)).
 
