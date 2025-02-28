@@ -255,7 +255,7 @@ const secondPart = newLabel("second_part", [
 
 Now I will give the player the ability to change the name of the `mc`.
 
-To do this, I request the player to [enter an inputs using Pixi’VN's features](/start/input.md) ([Use input in *ink*](/ink/ink-input.md)).
+To do this, I will ask the player to [complete an input box using Pixi'VN's features](/start/input.md) ([Use the input prompt in *ink*](/ink/ink-input.md)).
 
 After obtaining the value of the input you can [set the name of the character](/start/character.md#edit-characters-in-the-game) equal to the value obtained ([Edit character name in *ink*](/ink/ink-character.md#edit-character-name-in-dialogues)).
 
