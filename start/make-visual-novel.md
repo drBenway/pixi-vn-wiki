@@ -437,7 +437,7 @@ export async function defineAssets() {
 }
 ```
 
-## Add a background and character images
+## Add background and character images
 
 Now it's time to think about the visual part too. We will add the background and the characters to the visual novel.
 
