@@ -439,7 +439,9 @@ export async function defineAssets() {
 
 ## Add background and character images
 
-Now it's time to think about the visual part too. We will add the background and character images to the visual novel canvas.
+Now it's time to think about the visual part too. We will add the background and character sprites to the visual novel canvas.
+
+**What is a sprite?** In computer graphics, a sprite is a two-dimensional bitmap that is integrated into a larger scene, most often in a 2D video game.
 
 In our case the character sprites are composed of 3 images: the body, the eyes and the mouth. So we use the [ImageContainer](/start/canvas-image-container.md) to create the character.
 
