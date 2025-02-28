@@ -439,7 +439,7 @@ export async function defineAssets() {
 
 ## Add background and character images
 
-Now it's time to think about the visual part too. We will add the background and the characters to the visual novel.
+Now it's time to think about the visual part too. We will add the background and character images to the visual novel canvas.
 
 In our case the character sprites are composed of 3 images: the body, the eyes and the mouth. So we use the [ImageContainer](/start/canvas-image-container.md) to create the character.
 
