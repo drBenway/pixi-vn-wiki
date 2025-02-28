@@ -25,7 +25,7 @@ npm start
 
 ## Character creation
 
-Now we will define the characters of this story. To do this we will define in the `/values/characters.ts` file the characters that we will be using. For more information on how to create and use characters you can consult: [Characters](/start/character.md) & [Use the characters in *ink*](/ink/ink-character.md)
+Now we will define the characters of this story. To do this we will define in the `/values/characters.ts` file the characters that we will be using. For more information on how to create and use characters you can consult: [Characters](/start/character.md)
 
 What does `mc` mean? `mc` is a common abbreviation for "Main Character". It is a common practice in visual novels to use `mc` as the main character's name.
 
@@ -251,7 +251,7 @@ const secondPart = newLabel("second_part", [
 
 :::
 
-## Edit character information and use it as variables
+## Edit character information and use it as a variable
 
 Now I give the player the opportunity to choose the name of the `mc`.
 
