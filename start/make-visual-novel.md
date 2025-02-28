@@ -394,7 +394,7 @@ export default startLabel;
 
 ## Define assets and load them
 
-One of the first steps is choosing where to save your visual novel assets. In this case, we will save the assets in the Firebase storage.
+One of the first steps is choosing where to save your visual novel assets. In this case, we will save the assets in the Firebase storage (a hosting service).
 
 Before using an asset it is highly recommended to [initialize the asset matrix](/start/assets-management.md#initialize-the-asset-matrix-at-project-start).
 
