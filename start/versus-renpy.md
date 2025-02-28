@@ -152,4 +152,4 @@ This means that keeping Pixi’VN updated is a very simple process and once it r
 
 ## Conclusion
 
-Finally my personal conclusion is that, if you know object oriented programming and want to create a visual novel with many features, minigames, a very complex UI etc... you should use Pixi’VN. If you are not a programmer and you want to create a visual novel quickly and easily, you can use Ren'Py.
+Finally my personal conclusion is that, if you know object oriented programming and want to create a visual novel with many features, minigames, a very complex UI etc... you should use Pixi’VN. If you are not a programmer, want to create your visual novel quickly and are willing to learn knowledge over time that you can reuse later from this project, forget Ren'Py, use Pixi'VN.
