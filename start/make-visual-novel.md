@@ -25,7 +25,7 @@ npm start
 
 ## Character creation
 
-Now we will define the characters of this story. To do this we will define in the `/values/characters.ts` file the characters that we will be using. For more information on how to create and use characters you can consult: [Characters](/start/character.md)
+Now we will define the characters of this story. To do this, we will define in the `/values/characters.ts` file the characters that we will be using. For more information on how to create and use characters you can consult: [Characters](/start/character.md)
 
 What does `mc` mean? `mc` is a common abbreviation for "Main Character". It is a common practice in visual novels to use `mc` as the main character's name.
 
@@ -209,7 +209,7 @@ const secondPart = newLabel("second_part", [
 
 Now we will ask the player if he wants to continue with the second part of the visual novel, in the last `start` step.
 
-To do this we will use the [choice menu](/start/choices.md).
+To do this, we will use the [choice menu](/start/choices.md).
 
 This is the example:
 
@@ -353,7 +353,7 @@ export default startLabel;
 
 ## Use dialogue glue
 
-To improve the narrative, it can be useful to break up a dialogue and continue it in the next step. To do this we can use the [glue functionality](/start/dialogue.md#dialogue-glue).
+To improve the narrative, it can be useful to break up a dialogue and continue it in the next step. To do this, we can use the [glue functionality](/start/dialogue.md#dialogue-glue).
 
 This is the example:
 
