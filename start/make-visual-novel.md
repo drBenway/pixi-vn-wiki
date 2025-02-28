@@ -353,7 +353,7 @@ export default startLabel;
 
 ## Use the "glue" feature of dialogues
 
-To improve the narrative, it can be useful to break up a dialogue and continue it in the next step. To do this, we can use the [glue functionality](/start/dialogue.md#dialogue-glue).
+In visual novels it is often useful to paste text into the current dialogue, in the next step. For example, to pause a conversation and have it continue in a subsequent step. To do this, we can use the [glue functionality](/start/dialogue.md#dialogue-glue).
 
 This is the example:
 
