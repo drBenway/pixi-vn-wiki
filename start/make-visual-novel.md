@@ -599,7 +599,7 @@ An important feature of transitions is that they momentarily pause all animation
 
 So, in my case, I will use before the `moveIn` function the `addTicker` function to add the `ZoomTicker` ticker. This way Steph will be mirrored on the x-axis after the transition is complete.
 
-Also since I will use typescript for this animation, I created a special label for this animation. So that it can be called also from other languages ​​that are not JS/TS.
+Also since I will use typescript for this animation, I created a label for this animation. So that it can be called also from other languages ​​that are not JS/TS.
 
 ```ts [labels/animation01.ts]
 import { canvas, moveIn, newLabel, ZoomTicker } from "@drincs/pixi-vn";
