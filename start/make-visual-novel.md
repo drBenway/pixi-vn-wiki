@@ -597,7 +597,7 @@ For taking steph out/in I will use the `moveOut` and `moveIn` functions. For the
 
 An important feature of transitions is that they momentarily pause all animations connected to that component and resume them when the transition is complete.
 
-So, in my case, I will use before the `moveIn` function the `addTicker` function to add the `ZoomTicker` ticker. This way steph will be mirrored on the x-axis after the transition is complete.
+So, in my case, I will use before the `moveIn` function the `addTicker` function to add the `ZoomTicker` ticker. This way Steph will be mirrored on the x-axis after the transition is complete.
 
 Also since I will use typescript for this animation, I created a special label for this animation. So that it can be called also from other languages ​​that are not JS/TS.
 
