@@ -589,7 +589,7 @@ export default startLabel;
 
 To make the visual novel more dynamic, you can use animations. You can find more information about how to use animations [here](/start/canvas-animations-effects.md) ([Using animations in *ink*](/ink/ink-canvas.md#use-the-effects-in-ink)).
 
-I recommend using Typescript if you need to set a lot of properties, this way you have more control over the animation, more functionality and feedback with the types.
+I recommend using Typescript if you need to set a lot of properties, this way you have more control over the animation, more functionality and type feedback.
 
 In my case my animation will take steph out of the scene and reinsert her in the next step. I will also mirror it on the x-axis to make sure it is facing the right way.
 
