@@ -702,7 +702,7 @@ This page is under construction.
 
 Well, now you know how to create a visual novel with Pixi’VN. With great power comes great responsibility, so use it wisely and create a great story! 🚀
 
-Here is an interactive example with a minimal template (HTML). Scrolling down you can see the same result using a complete UI (React template).
+Here is an interactive example with a minimal UI (HTML). Scrolling down you can see the same result using a complete UI (React template).
 
 :::tabs
 
