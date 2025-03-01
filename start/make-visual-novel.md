@@ -591,7 +591,7 @@ To make the visual novel more dynamic, you can use animations. You can find more
 
 I recommend using Typescript if you need to set a lot of properties, this way you have more control over the animation, more functionality and type feedback.
 
-In my case my animation will take steph out of the scene and reinsert her in the next step. I will also mirror it on the x-axis to make sure it is facing the right way.
+In my case my animation will take steph out of the scene and reinsert her in the next step. I'll also mirror her on the x-axis to make sure she's facing the right way.
 
 For taking steph out/in I will use the `moveOut` and `moveIn` functions. For the mirror effect I will use the `ZoomTicker` ticker.
 
