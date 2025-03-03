@@ -43,6 +43,8 @@ saveCharacter([liam, emma]);
 
 `saveCharacter` is **required** to save the characters in the game.
 
+It is also possible to create a function for loading characters. The important thing is that it is started at least once before the characters are used in the game, otherwise they will not be available.
+
 ## Get characters by id
 
 To get a character by its `id`, you can use the `getCharacterById` function.
