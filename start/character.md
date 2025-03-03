@@ -182,7 +182,7 @@ For example, you want to create a class `Character`, you must "override" the int
 
 Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`.
 
-For set the properties and store them in the game storage, you must use the `setStorageProperty` method. ( See the file `Character.ts` )
+To save property changes to the game storage, you can use the `setStorageProperty` method. ( See the file `Character.ts` )
 
 ::: code-group
 
