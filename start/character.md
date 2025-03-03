@@ -67,7 +67,7 @@ const characters = getAllCharacters();
 
 ## Edit characters in the game
 
-`CharacterBaseModel` is a [stored class](/start/stored-classes), which means that it is possible to save and load the character's properties from the [game storage](/start/storage).
+`CharacterBaseModel` is a [stored class](/start/stored-classes), which means that its properties are saved in [game storage](/start/storage).
 
 It means that if the character's name is changed during the game, the new character name will be saved in the game storage by linking it to his `id`.
 
