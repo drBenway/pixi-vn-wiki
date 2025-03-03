@@ -107,3 +107,35 @@ export class MarkdownComponent {
   entry="/src/components/MarkdownComponent.tsx"
   previewHeight=300
 />
+
+## React Markdown Typewriter
+
+[React Markdown Typewriter](https://www.npmjs.com/package/react-markdown-typewriter) is a library that combines Markdown and Typewriter. This library was created by me for my need to add a Typewriter effect to the Markdown component for my React templates.
+
+If you are using react I recommend you to use it:
+
+```tsx [React]
+import { MarkdownTypewriter } from "react-markdown-typewriter";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
+
+export default function MarkdownComponent({ text }: {
+    text: string;
+}) {
+    return (
+        <MarkdownTypewriter
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+        >
+            {text}
+        </MarkdownTypewriter>
+    )
+};
+
+```
+
+<sandbox
+  template="rgjf6t"
+  entry="/src/components/MarkdownComponent.tsx"
+  previewHeight=320
+/>
