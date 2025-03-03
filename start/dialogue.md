@@ -1,5 +1,7 @@
 # Dialogue
 
+**What is dialogue and example?** a written composition in which two or more characters are represented as conversing.
+
 In Pixi’VN, is possible to set/get the current dialogue.
 A dialogue can link to a [character](/start/character#use-characters-in-the-game) or a string and will be used to indicate who is speaking.
 
