@@ -41,35 +41,7 @@ export const emma = new CharacterBaseModel('emma', {
 saveCharacter([liam, emma]);
 ```
 
-`saveCharacter` is required to save the characters in the game.
-
-It is also possible to create a function for loading characters. The important thing is that it is started at least once before the characters are used in the game, otherwise they will not be available.
-
-```typescript [characters.ts]
-import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
-
-export function loadCharacters() {
-    const liam = new CharacterBaseModel('liam', {
-        name: 'Liam',
-        surname: 'Smith',
-        age: 25,
-        icon: "https://example.com/liam.png",
-        color: "#9e2e12"
-    });
-
-    const emma = new CharacterBaseModel('emma', {
-        name: 'Emma',
-        surname: 'Johnson',
-        age: 23,
-        icon: "https://example.com/emma.png",
-        color: "#9e2e12"
-    });
-
-    saveCharacter([liam, emma]);
-}
-
-loadCharacters();
-```
+`saveCharacter` is **required** to save the characters in the game.
 
 ## Get characters by id
 
