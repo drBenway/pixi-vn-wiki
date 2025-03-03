@@ -141,7 +141,7 @@ It can often be useful to have multiple types of the same character.
 
 A classic example in visual novels is to have a character "Alice" a subtype related to his/her emotional state "Angry Alice". The character and the subtype have the same characteristics, except for one or more properties, such as the icon.
 
-For this reason, in Pixi’VN it is possible to create a "character with an emotion". This is possible by passing the id as an object with two properties: the `id`, that corresponds to the id of an already existing character, and the `emotion`, that corresponds to the emotion of the character.
+For this reason, with Pixi’VN it is possible to create a "character with an emotion". This is possible by passing the id as an object with two properties: the `id`, that corresponds to the id of an already existing character, and the `emotion`, that corresponds to the emotion of the character.
 
 ```typescript [characters.ts]
 import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
