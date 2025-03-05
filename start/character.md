@@ -180,7 +180,7 @@ to add/edit/remove properties or methods.
 
 For example, you want to create a class `Character`, you must "override" the interface `CharacterInterface` to use your properties or methods. ( See the file `pixi-vn.types.ts` )
 
-Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`.
+Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`. (For more information on how to create a class in Typescript read [here](https://www.typescriptlang.org/docs/handbook/2/classes.html))
 
 To save property changes to the game storage, you can use the `setStorageProperty` method. ( See the file `Character.ts` )
 
