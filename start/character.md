@@ -143,7 +143,7 @@ A classic example in visual novels is to have a character "Alice" a subtype rela
 
 For this reason, with Pixi’VN it is possible to create a "character with an emotion". This is possible by passing an object, instead of the id, with the following properties:
 * `id`, which corresponds to the id of an existing character.
-* `emotion`, which corresponds to the character's emotion.
+* `emotion`, which corresponds to the character's subcategory (e.g. the character's emotion).
 
 ```typescript [characters.ts]
 import { CharacterBaseModel, saveCharacter } from "@drincs/pixi-vn";
