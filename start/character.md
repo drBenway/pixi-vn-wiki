@@ -182,7 +182,7 @@ For example, you want to create a class `Character`, you must "override" the int
 
 Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`. (For more information on how to create a class in Typescript read [here](https://www.typescriptlang.org/docs/handbook/2/classes.html))
 
-To save property changes to the game storage, you can use the `setStorageProperty` method. ( See the file `Character.ts` )
+To create a "property" that stores its value in the game storage you can create a [Getters/Setters](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters) and use the `this.getStorageProperty()`/`this.setStorageProperty()` methods ( See the file `Character.ts` )
 
 ::: code-group
 
