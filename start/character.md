@@ -142,6 +142,7 @@ It can often be useful to have multiple types of the same character.
 A classic example in visual novels is to have a character "Alice" a subtype related to his/her emotional state "Angry Alice". The character and the subtype have the same characteristics, except for one or more properties, such as the icon.
 
 For this reason, with Pixi’VN it is possible to create a "character with an emotion". This is possible by passing an object, instead of the id, with the following properties:
+
 * `id`, which corresponds to the id of an existing character.
 * `emotion`, which corresponds to the character's subcategory (e.g. the character's emotion).
 
@@ -178,7 +179,7 @@ console.log(angryAlice.name); // Angry Eleonora
 It recommend creating your own class `Character` that extends `CharacterStoredClass` and "override" the interface `CharacterInterface`
 to add/edit/remove properties or methods.
 
-For example, you want to create a class `Character`, you must "override" the interface `CharacterInterface` to use your properties or methods. ( See the file `pixi-vn.types.ts` )
+For example, you want to create a class `Character`, you must "override" the interface `CharacterInterface` to use your properties or methods. ( See the file `pixi-vn.d.ts` )
 
 Now you can create a class `Character` that extends `CharacterStoredClass` and implements the `CharacterInterface`. (For more information on how to create a class in Typescript read [here](https://www.typescriptlang.org/docs/handbook/2/classes.html))
 
