@@ -36,7 +36,7 @@
     * [Translating](translate)
     * [Markup language (to add text style)](markup)
       * [Markdown](markup-markdown)
-      * [Typewriter effect](markup-typewriter)
+      * [Tailwind CSS](markup-tailwindcss)
     * [Other features](other-narrative-features)
 * [PixiJS Canvas](canvas):
   * [Initialize the canvas](canvas-initialize)

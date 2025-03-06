@@ -148,7 +148,7 @@ export default defineConfig({
                                             collapsed: true,
                                             items: [
                                                 { text: "Markdown", link: "/start/markup-markdown" },
-                                                { text: "Typewriter effect", link: "/start/markup-typewriter" },
+                                                { text: "Tailwind CSS", link: "/start/markup-tailwindcss" },
                                             ],
                                         },
                                         { text: "Other features", link: "/start/other-narrative-features" },
