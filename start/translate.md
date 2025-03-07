@@ -6,7 +6,7 @@ In your Pixi’VN project you need to use external libraries to handle translati
 
 The most used library and compatible with many frameworks is [i18next](https://www.i18next.com/). **What is i18next?** i18next is an internationalization-framework written in and for JavaScript.
 
-In order to use i18n you have to initialize it and load the translations.
+In order to use i18n you need to install and initialize it.
 
 It is recommended to divide the translations into two parts (See `strings_es.json` tab):
 
