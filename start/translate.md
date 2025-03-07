@@ -11,7 +11,7 @@ In order to use i18n you need to install and initialize it.
 It is recommended to split the translations into two parts (see `strings_es.json` file):
 
 - The [UI](/start/interface.md) texts, that is, the texts that are contained in menus, settings, quick buttons, etc... that is, everything that is not part of the narration.
-- The [narration](/start/narration.md) texts, that is, the texts that are contained in dialogues, monologues, etc...
+- The [narration](/start/narration.md) texts, i.e. the texts contained in the dialogues, the texts in the choice menu, etc...
 
 ::: code-group
 
