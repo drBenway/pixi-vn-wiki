@@ -83,7 +83,7 @@ To translate the UI, you need to use the `t` function that is provided by i18nex
 
 Is recommended to use as translation key the a lowercase string with underscores.
 
-For example in React:
+For example:
 
 ::: code-group
 
