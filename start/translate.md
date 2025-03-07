@@ -8,7 +8,7 @@ The most used library and compatible with many frameworks is [i18next](https://w
 
 In order to use i18n you need to install and initialize it.
 
-It is recommended to split the translations into two parts (see `strings_es.json` file):
+The translations will be inserted into multiple json files (one json file for each language) with the key value correspondence. Where the key is a unique key of the text (or the text to be translated) and the value is the text that will be displayed. It is recommended to split the translations into two parts (see `strings_es.json` file):
 
 - The [UI](/start/interface.md) texts, that is, the texts that are contained in menus, settings, quick buttons, etc... that is, everything that is not part of the narration.
 - The [narration](/start/narration.md) texts, i.e. the texts contained in the dialogues, the texts in the choice menu, etc...
