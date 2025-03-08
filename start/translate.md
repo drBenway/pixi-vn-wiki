@@ -1,15 +1,17 @@
 # How translate the visual novel?
 
-In visual novels it is common to have the option to translate the game into different languages. Pixi’VN does not have any built-in functionality to handle translations. So you will have to use external libraries to perform translations and you have total freedom of implementation.
+In visual novels, or other types of games, it is common to have the ability to select the game language.
+
+In your Pixi’VN project you need to use external libraries to handle translations. So you are free to choose the implementation that suits you best.
 
 The most used library and compatible with many frameworks is [i18next](https://www.i18next.com/). **What is i18next?** i18next is an internationalization-framework written in and for JavaScript.
 
-In order to use i18n you have to initialize it and load the translations.
+In order to use i18n you need to install and initialize it.
 
-It is recommended to divide the translations into two parts (See `strings_es.json` tab):
+The translations will be inserted into multiple json files (one json file for each language) with the key value correspondence. Where the key is a unique key of the text (or the text to be translated) and the value is the text that will be displayed. It is recommended to split the translations into two parts (see `strings_es.json` file):
 
 - The [UI](/start/interface.md) texts, that is, the texts that are contained in menus, settings, quick buttons, etc... that is, everything that is not part of the narration.
-- The [narration](/start/narration.md) texts, that is, the texts that are contained in dialogues, monologues, etc...
+- The [narration](/start/narration.md) texts, i.e. the texts contained in the dialogues, the texts in the choice menu, etc...
 
 ::: code-group
 
@@ -81,7 +83,7 @@ To translate the UI, you need to use the `t` function that is provided by i18nex
 
 Is recommended to use as translation key the a lowercase string with underscores.
 
-For example in React:
+For example:
 
 ::: code-group
 
