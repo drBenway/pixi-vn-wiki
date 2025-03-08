@@ -1,6 +1,6 @@
 # React UI
 
-<img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Freact-logo.png?alt=media" alt="drawing" width="200" style="margin-top: 10px;" />
+<img src="/react.svg" alt="drawing" width="50" style="margin-top: 10px;" />
 
 [React](https://react.dev/) is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript.
 
