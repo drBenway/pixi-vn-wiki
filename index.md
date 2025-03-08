@@ -164,12 +164,12 @@ const startLabel = newLabel("start_label_id", [
 <div class="left">
 
 <div class="images">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftypescript-icon.svg?alt=media" alt="TypeScript">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Ftauri-icon.png?alt=media" alt="Tauri">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvscode-icon.png?alt=media" alt="VS Code">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fvitejs-icon.svg?alt=media" alt="Vite.js">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fi18n-icon.png?alt=media" alt="i18n">
-  <img src="https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fnodejs-icon.png?alt=media" alt="NodeJS">
+  <img src="/typescript.svg" alt="TypeScript">
+  <img src="/tauri.svg" alt="Tauri">
+  <img src="/vscode.svg" alt="VS Code">
+  <img src="/vitejs.svg" alt="Vite.js">
+  <img src="/i18next.svg" alt="i18next">
+  <img src="/nodejs.svg" alt="NodeJS">
   <img src="/astro.svg" alt="Astro" style="background-color: white;">
   <img src="/aws.svg" alt="AWS">
   <img src="/bootstrap.svg" alt="Bootstrap">

@@ -1,6 +1,4 @@
-# *ink* Language Integration
-
-<img src="/ink.svg" alt="drawing" width="100" style="margin-top: 10px;" />
+# ![icon](/ink.svg){style="width:40px;height:40px;margin-right:10px;float:left"} *ink* Language Integration
 
 Pixi’VN gives you the ability to write your own narrative using ***ink***, a scripting language for writing interactive narrative.
 
