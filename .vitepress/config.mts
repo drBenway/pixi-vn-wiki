@@ -139,7 +139,7 @@ export default defineConfig({
                                             ],
                                         },
                                         { text: "Choice Menus", link: "/start/choices" },
-                                        { text: "Input", link: "/start/input" },
+                                        { text: "Input prompt", link: "/start/input" },
                                         { text: "History", link: "/start/history" },
                                         { text: "Translating", link: "/start/translate" },
                                         {
@@ -270,7 +270,7 @@ export default defineConfig({
                                 { text: "Open a knot", link: "/ink/ink-label" },
                                 { text: "Variables", link: "/ink/ink-variables" },
                                 { text: "Markup language (to add text style)", link: "/ink/ink-markup" },
-                                { text: "Input", link: "/ink/ink-input" },
+                                { text: "Input prompt", link: "/ink/ink-input" },
                                 { text: "Canvas", link: "/ink/ink-canvas" },
                                 { text: "Sounds and Music", link: "/ink/ink-sound" },
                                 { text: "Assets management", link: "/ink/ink-assets" },

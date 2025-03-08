@@ -228,7 +228,7 @@ My name is John // ✅ This will be handled
 * [*ink* knot (or label)](/ink/ink-label.md)
 * [*ink* variables](/ink/ink-variables.md)
 * [Markup language in *ink* (to add text style)](/ink/ink-markup.md)
-* [Use input in *ink*](/ink/ink-input.md)
+* [Use input prompt in *ink*](/ink/ink-input.md)
 * [Use canvas in *ink*](/ink/ink-canvas.md)
 * [Using sounds and music in *ink*](/ink/ink-sound.md)
 * [Using pause in *ink*](/ink/ink-pause.md)
