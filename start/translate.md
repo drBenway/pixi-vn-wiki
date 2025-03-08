@@ -79,7 +79,7 @@ Depending on what you want to translate, it is recommended to use the following 
 - [Translate the UI](#translate-the-ui)
 - [Translate the narration (TypeScript/JavaScript)](#translate-the-narration-typescriptjavascript)
 - [Translate the narration (*ink*)](/ink/ink-translate.md)
-- Translate the dialogue (Ren'Py) (Under development)
+- Translate the narration (Ren'Py) (Under development)
 
 ## Translate the UI
 
