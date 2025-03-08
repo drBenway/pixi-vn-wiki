@@ -83,7 +83,7 @@ Depending on what you want to translate, it is recommended to use the following 
 
 ## Translate the UI
 
-To translate the UI, you need to use the `t` function that is provided by i18next. The `t` function is a function that will be called with the key of the translation, so you can use it to translate the text.
+To translate the UI, you need to use the `t` function that is provided by i18next. The `t` function is a function that will be called by passing the key as input to get the corresponding text in the player's language.
 
 Is recommended to use as translation key the a lowercase string with underscores.
 
