@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Pixi’VN"
-  text: "PixiJS & Visual Novel engine"
+  text: "PixiJS Game Engine"
   tagline: Create visual novels with the modern 2D rendering engine PixiJS, and your favorite JavaScript framework.
   image:
     src: /logo.webp
