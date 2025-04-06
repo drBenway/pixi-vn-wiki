@@ -10,7 +10,7 @@ It is also very important that you read this documentation to better [organize t
 
 ## ![icon](/pixijs-assetpack.svg){style="width:30px;height:30px;margin-right:5px;float:left;border-radius:5px"} PixiJS AssetPack
 
-AssetPack is a tool for optimising assets for the web. It can be used to transform, combine, compress assets. Any asset that you want to transform or optimise into something else can be done with AssetPack.
+AssetPack is a tool for optimising assets for the web. It can be used to transform, combine, compress assets.
 
 If you want to use AssetPack, you can find the documentation [here](https://pixijs.io/assetpack)
 
