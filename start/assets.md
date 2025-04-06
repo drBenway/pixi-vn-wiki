@@ -16,7 +16,7 @@ If you want to use AssetPack, you can find the documentation [here](https://pixi
 
 ## Assets hosting
 
-You are completely free to store images however you want.
+You can save your assets as you like, with complete freedom.
 
 The main possibilities are the following:
 
