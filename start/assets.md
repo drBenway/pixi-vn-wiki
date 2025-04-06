@@ -32,7 +32,7 @@ You can use Github to host your assets. You can use the raw link of the file to 
 
 ### Image hosting
 
-Image hosting is a service that allows you to upload images. There are more sites to upload images for free, for example [imgbb](https://imgbb.com/), [imgix](https://www.imgix.com/), [imgur](https://imgur.com/). You can use the public URL of the image.
+Image hosting is a service that allows you to upload images. There are more sites to upload images for free, for example [imgbb](https://imgbb.com/), [imgix](https://www.imgix.com/), [imgur](https://imgur.com/). You can use the link of the image to use it in your project.
 
 * **Price**: Completely free. But you can pay for more features.
 * **Space limits**: You have no space limits. But each single file can have a maximum size.
