@@ -4,7 +4,7 @@
 
 You can use assets saved locally in the project or online (For the second option you will need to make sure that the cloud service you are using allows *CORS requests*). Of course, if your assets are online, a requirement of the game will be to be connected online. Then you will have to notify the user and block the game where there is no connection.
 
-If you are creating a visual novel, it is recommended to only keep assets that are used frequently locally. On the contrary, it is recommended to publish resources that are used only once in the online game.
+If you are creating a visual novel, it is recommended to only keep assets that are used frequently locally. While, for assets used only once in the game, it is recommended to publish them online.
 
 It is also very important that you read this documentation to better [organize the uploading of your assets](/start/assets-management.md).
 
