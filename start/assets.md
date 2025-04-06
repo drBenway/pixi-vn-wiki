@@ -59,7 +59,7 @@ Firebase Storage is a cloud service that allows you to store and serve user-gene
 
 Amazon S3 is a cloud service that allows you to store and serve user-generated content, such as photos or videos or other files. You can use the public URL of the file to use it in your project.
 
-* **Price**: Amazon S3 have a pay as you go plan. You can find more information [here](https://aws.amazon.com/s3/pricing/).
+* **Price**: There is a payment plan to use Amazon S3. You can find more information [here](https://aws.amazon.com/s3/pricing/).
 * **Space limits**: You pay for the storage you use. You can increase the storage by upgrading the plan.
 * **Type of files**: You can upload any type of file. The price is around $0,023 per GB, so for 50GB you will pay around $1,15.
 * **Traffic**: Speed is good.
