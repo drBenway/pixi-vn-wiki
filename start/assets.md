@@ -16,9 +16,7 @@ If you want to use AssetPack, you can find the documentation [here](https://pixi
 
 ## Assets hosting
 
-You can save your assets as you like, with complete freedom.
-
-The main possibilities are the following:
+You can save your assets as you like, with complete freedom. If you plan to save your assets online, here are some of the options:
 
 ### ![icon](/github.svg){style="width:30px;height:30px;margin-right:5px;float:left;border-radius:50%;background-color:white"} Github
 
