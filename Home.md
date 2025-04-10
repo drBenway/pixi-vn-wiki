@@ -77,5 +77,6 @@
 ## Other topics
 
 * [FAQ](faq)
+* [Migration](migration)
 * [Intecept Events](intercept-events)
 * [Pixi’VN + Json](pixi-vn-json)

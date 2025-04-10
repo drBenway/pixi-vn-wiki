@@ -9,6 +9,7 @@ const ogUrl = "https://pixi-vn.web.app";
 
 const otherTopics = [
     { text: "FAQ", link: "/other-topics/faq" },
+    { text: "Migration", link: "/other-topics/migration" },
     { text: "Intecept Events", link: "/other-topics/intercept-events" },
     { text: "Pixi’VN + Json", link: "/other-topics/pixi-vn-json" },
 ];
