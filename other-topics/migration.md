@@ -18,6 +18,25 @@ Game.clear(); // [!code ++]
 ```
 
 ```ts
+canvas // [!code --]
+    .initialize(body, { // [!code --]
+        height: 1080, // [!code --]
+        width: 1920, // [!code --]
+        backgroundColor: "#303030", // [!code --]
+    }) // [!code --]
+    .then(() => { // [!code --]
+        // Pixi.JS UI Layer // [!code --]
+        canvas.addLayer(CANVAS_UI_LAYER_NAME, new Container()); // [!code --]
+Game.init(body, { // [!code ++]
+    height: 1080, // [!code ++]
+    width: 1920, // [!code ++]
+    backgroundColor: "#303030", // [!code ++]
+}).then(() => { // [!code ++]
+    // Pixi.JS UI Layer // [!code ++]
+    canvas.addLayer(CANVAS_UI_LAYER_NAME, new Container()); // [!code ++]
+```
+
+```ts
 getSaveData(); // [!code --]
 Game.exportGameState(); // [!code ++]
 ```
@@ -45,4 +64,19 @@ Game.restoreGameState(JSON.parse(dataString) as GameState, navigate); // [!code 
 ```ts
 jsonToSaveData(json); // [!code --]
 JSON.parse(json); // [!code ++]
+```
+
+```ts
+narration.canGoBack; // [!code --]
+stepHistory.canGoBack; // [!code ++]
+```
+
+```ts
+narration.goBack(); // [!code --]
+stepHistory.goBack(); // [!code ++]
+```
+
+```ts
+narration.narrativeHistory; // [!code --]
+stepHistory.narrativeHistory; // [!code ++]
 ```
