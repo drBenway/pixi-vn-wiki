@@ -6,6 +6,7 @@
   * [Visual Novel](make-visual-novel)
   * [Point and Click adventure game](make-point-and-click)
   * [RPG game](make-rpg)
+  * [Game Engine](make-game-engine)
 
 ## Guide
 

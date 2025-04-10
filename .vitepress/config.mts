@@ -85,6 +85,7 @@ export default defineConfig({
                     { text: "Visual Novel", link: "/start/make-visual-novel" },
                     { text: "Point and Click adventure game", link: "/start/make-point-and-click" },
                     { text: "RPG game", link: "/start/make-rpg" },
+                    { text: "Game Engine", link: "/start/make-game-engine" },
                 ],
             },
             { text: "Guide", link: "/start/getting-started" },
