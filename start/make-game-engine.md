@@ -60,6 +60,7 @@ export namespace Game {
             removeVariable: (key) => storage.removeVariable(key), // [!code --]
             getFlag: (key) => storage.getFlag(key), // [!code --]
             setFlag: (name, value) => storage.setFlag(name, value), // [!code --]
+            onLabelClosing: (openedLabelsNumber) => StorageManagerStatic.clearOldTempVariables(openedLabelsNumber),  // [!code --]
             getVariable: (key) => storage.get(key), // [!code ++]
             setVariable: (key, value) => storage.set(key, value), // [!code ++]
             removeVariable: (key) => storage.delete(key), // [!code ++]
