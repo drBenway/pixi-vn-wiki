@@ -4,12 +4,12 @@
   "private": false,
   "type": "module",
   "devDependencies": {
-    "mermaid": "^11.5.0",
+    "mermaid": "^11.6.0",
     "vitepress": "^1.6.3",
-    "vitepress-plugin-group-icons": "^1.3.8",
+    "vitepress-plugin-group-icons": "^1.4.1",
     "vitepress-plugin-mermaid": "^2.0.17",
     "vitepress-plugin-sandpack": "^1.1.4",
-    "vitepress-plugin-tabs": "^0.6.0"
+    "vitepress-plugin-tabs": "^0.7.0"
   },
   "scripts": {
     "start": "vitepress dev",
