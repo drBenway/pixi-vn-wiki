@@ -74,6 +74,7 @@ export namespace Game {
         // ...
         storage.clear(); // [!code --]
         storage.clear(); // new class // [!code ++]
+        flagStorage.clear(); // [!code ++]
     }
 
     export function exportGameState(): GameState {
