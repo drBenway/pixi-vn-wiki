@@ -75,9 +75,9 @@ Cloud storage is a service that allows you to upload files. There are more sites
 
 * **Price**: Usually paid or with free version with limits.
 * **Space limits**: Monthly cost based on space occupied by use. (Usually if you do not exceed a certain threshold it is free)
-**Type of files**: You can upload any type of file.
-**Traffic**: Speed is good.
-**Edit assets**: You can edit the file keeping the same URL.
+* **Type of files**: You can upload any type of file.
+* **Traffic**: Speed is good.
+* **Edit assets**: You can edit the file keeping the same URL.
 
 Here is a list of some of the most popular cloud storage services:
 
