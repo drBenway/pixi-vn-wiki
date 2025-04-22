@@ -40,7 +40,6 @@
       * [Tailwind CSS](markup-tailwindcss)
     * [Other features](other-narrative-features)
 * [PixiJS Canvas](canvas):
-  * [Initialize the canvas](canvas-initialize)
   * [Canvas alias](canvas-alias)
   * [Canvas Components](canvas-components)
     * [ImageSprite](canvas-images)
