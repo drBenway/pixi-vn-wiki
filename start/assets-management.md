@@ -41,7 +41,7 @@ export async function defineAssets() {
 
 ## Load assets
 
-By default, assets are loaded only when needed. This means when starting a new step.
+By default, assets are loaded only when needed.
 
 But **in case the assets are not saved locally**, but in an ["assets hosting"](/start/assets.md#assets-hosting) their loading may take some time.
 
