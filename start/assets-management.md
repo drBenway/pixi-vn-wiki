@@ -43,9 +43,7 @@ export async function defineAssets() {
 
 By default, assets are loaded only when needed.
 
-But **in case the assets are not saved locally**, but in an ["assets hosting"](/start/assets.md#assets-hosting) their loading may take some time.
-
-This means that starting a step may not be timely. So the player after starting the execution of the [next step](/start/labels-flow.md#next-step) (for example with the "next" button) may have to wait some time to be able to "view" the changes and be able to run another step.
+But **in case the assets are not saved locally**, but in an ["assets hosting"](/start/assets.md#assets-hosting) their loading may take some time. This means that starting a step may not be timely. So the player after starting the execution of the [next step](/start/labels-flow.md#next-step) (for example with the "next" button) may have to wait some time to be able to "view" the changes and be able to run another step.
 
 Performing these loadings at each step may be annoying to the player, even if they are very short.
 
