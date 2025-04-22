@@ -402,7 +402,7 @@ Before using an asset it is highly recommended to [initialize the asset matrix](
 
 This is the example:
 
-```ts [assets/defineAssets.ts]
+```ts [utils/defineAssets.ts]
 import { Assets } from "@drincs/pixi-vn"
 
 /**
