@@ -29,6 +29,8 @@ import { Assets, sound } from "@drincs/pixi-vn";
 import manifest from "../assets/manifest";
 
 export async function defineAssets() {
+    // manifest
+    Assets.init({ manifest });
     // single asset
     Assets.add({ alias: 'eggHead', src: "https://pixijs.com/assets/eggHead.png" })
     Assets.add({ alias: 'flowerTop', src: "https://pixijs.com/assets/flowerTop.png" })
@@ -41,8 +43,6 @@ export async function defineAssets() {
         "liam-body": 'liam_body.png',
         "liam-arms": 'liam_arms.png',
     });
-    // manifest
-    Assets.init({ manifest });
 }
 ```
 
