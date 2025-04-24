@@ -17,7 +17,7 @@ For these reasons it is recommended to handle assets in the following ways.
 
 ## Initialize the asset matrix at project start
 
-Initializing the asset matrix at the beginning of the project allows you to reference assets by a unique alias without having to use the URL/path. This way you can change the URL of a resource (while keeping the old alias) so you don't have to worry about version compatibility.
+Initializing the asset matrix at the beginning of the project allows you to reference assets by a unique alias without having to use the URL/path. This way you can change the URL of a asset (while keeping the old alias) so you don't have to worry about version compatibility.
 
 To do this, it is recommended to create an asynchronous function `defineAssets` that will be called at the start of the project.
 In this feature we will use the `Assets` functions (For example `Assets.add`, `Assets.addBundle` and `Assets.init`. You can find more information about them [here](https://pixijs.com/8.x/guides/components/assets)) to assign an alias to each asset.
