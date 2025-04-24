@@ -2,7 +2,7 @@
 
 To load and manipulate assets (images, gifs, videos...) you will need to use `Assets`. `Assets` is a class with many features and comes from the PixiJS library, if you want more information read [here](https://pixijs.com/8.x/guides/components/assets).
 
-In all Pixi’VN functions you can directly use the image URL, even if not yet defined in `Assets`.
+In all Pixi’VN functions you can directly use the image URL, even if not defined in `Assets`.
 
 ```ts
 let alien1 = await showImage("alien", "https://pixijs.com/assets/eggHead.png");
