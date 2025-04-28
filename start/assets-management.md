@@ -11,7 +11,7 @@ let alien1 = await showImage("alien", "https://pixijs.com/assets/eggHead.png");
 This method has some cons:
 
 - refer to an asset directly with a URL, where that asset must be renamed/moved to another folder or replaced with another asset (which has another URL), the old saves will not work anymore and in several places in the code you will have to write a URL which is usually very long.
-- Each [step](/start/labels.md) where one or more assets are loaded will require some time (even if small) to execute.
+- The player will have to wait for a short loading time, every time pressing "go next" a [step](/start/labels.md) will be started which uses assets.
 
 For these reasons it is recommended to handle assets in the following ways.
 
