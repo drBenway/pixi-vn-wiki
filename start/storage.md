@@ -71,9 +71,7 @@ storage.removeTempVariable("myTempVariable");
 In game storage, there are some system variables that are used by the game engine. All system variables start with the prefix `___`.
 So please avoid using this prefix in your variables.
 
-You can get all the system variables keys with the `SYSTEM_RESERVED_STORAGE_KEYS` function.
-
-<!-- TODO Temp storage -->
+You can get all system variable keys from the `SYSTEM_RESERVED_STORAGE_KEYS` constant.
 
 ## ![icon](/keyv.svg){style="width:30px;height:30px;margin-right:5px;float:left"} Keyv
 
