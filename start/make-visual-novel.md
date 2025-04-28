@@ -32,7 +32,7 @@ What does `mc` mean? `mc` is a common abbreviation for "Main Character". It is a
 ::: code-group
 
 ```ts [values/characters.ts]
-import { saveCharacter } from "@drincs/pixi-vn";
+import { RegisteredCharacters } from "@drincs/pixi-vn";
 import Character from "../models/Character";
 
 export const mc = new Character('mc', {
@@ -54,7 +54,7 @@ export const sly = new Character('sly', {
     color: "#6d00ac"
 });
 
-saveCharacter([mc, james, steph, sly]);
+RegisteredCharacters.add([mc, james, steph, sly]);
 ```
 
 ```ts [App.tsx]
