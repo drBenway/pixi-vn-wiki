@@ -68,7 +68,7 @@ storage.removeTempVariable("myTempVariable");
 
 ## System variables
 
-In storage game, there are some system variables that are used by the game engine. All system variables start with the prefix `___`.
+In game storage, there are some system variables that are used by the game engine. All system variables start with the prefix `___`.
 So please avoid using this prefix in your variables.
 
 You can get all the system variables keys with the `SYSTEM_RESERVED_STORAGE_KEYS` function.
