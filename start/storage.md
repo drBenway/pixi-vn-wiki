@@ -77,9 +77,7 @@ You can get all system variable keys from the `SYSTEM_RESERVED_STORAGE_KEYS` con
 
 The entire storage system was developed using Map, a native JavaScript object, so you can use Keyv interact with game storage.
 
-**What is Keyv?** Keyv is a simple key-value storage. It is a very easy-to-use system and very popular in the Node.js community. Keyv can be combined with other libraries, such as [Cacheable](https://cacheable.org/) (Caching for Nodejs based on Keyv).
-
-You can learn more about Keyv on the [Keyv website](https://keyv.org/).
+**What is Keyv?** Keyv is a simple key-value storage. It is a very easy-to-use system and very popular in the Node.js community. Keyv can be combined with other libraries, such as [Cacheable](https://cacheable.org/) (Caching for Nodejs based on Keyv). You can learn more on the [Keyv website](https://keyv.org/).
 
 **How to use Keyv with Pixi’VN?** You can use Keyv with Pixi’VN by creating a new instance of Keyv and passing the storage object as a parameter.
 
