@@ -4,7 +4,7 @@
 
 You can learn more on the [Tailwind CSS website](https://tailwindcss.com/).
 
-It is also possible to install Tailwind CSS Plugins. Here is a list of some of them:
+There are various Tailwind CSS plugins available. Here is a list of some of them:
 
 * [Tailwind CSS Motion](https://docs.rombo.co/tailwind): Add animations to your Tailwind CSS project.
 
