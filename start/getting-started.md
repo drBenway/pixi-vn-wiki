@@ -53,6 +53,7 @@ Pixi’VN knows the possibility of proposing templates and helps you in its deve
 <iframe src="https://pixi-vn-react-template.web.app/"
     title="Visual Novel - React"
     style="width:100%; height:400px; border:0; border-radius:4px; overflow:hidden;"
+    allowfullscreen
 ></iframe>
 
 * **[Visual Novel - React - Typescript - Web page](https://github.com/DRincs-Productions/pixi-vn-react-template)**
