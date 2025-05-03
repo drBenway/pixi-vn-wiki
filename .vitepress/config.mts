@@ -16,23 +16,24 @@ const otherTopics = [
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "Pixi’VN 2D game engine",
+    title: "Pixi'VN 2D game engine",
     description:
-        "Pixi’VN is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the PixiJS library for rendering.",
+        "Pixi'VN is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the PixiJS library for rendering.",
 
     head: [
         ["link", { rel: "icon", href: "/favicon.svg" }],
         ["meta", { property: "og:type", content: "website" }],
-        ["meta", { property: "og:title", content: "Pixi’VN - Visual Novel/2D game engine" }],
+        ["meta", { property: "og:title", content: "Pixi'VN - Visual Novel/2D game engine" }],
         ["meta", { property: "og:url", content: "https://pixi-vn.web.app" }],
         [
             "meta",
             {
                 property: "og:description",
                 content:
-                    "Create your own visual novel/2D game with Pixi’VN. It is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the PixiJS library for rendering.",
+                    "Create your own visual novel/2D game with Pixi'VN. It is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the PixiJS library for rendering.",
             },
         ],
+
         [
             "meta",
             {
@@ -41,15 +42,15 @@ export default defineConfig({
                     "https://firebasestorage.googleapis.com/v0/b/pixi-vn.appspot.com/o/public%2Fog_image.png?alt=media",
             },
         ],
-        ["meta", { property: "og:site_name", content: "Pixi’VN Wiki" }],
+        ["meta", { property: "og:site_name", content: "Pixi'VN Wiki" }],
         ["meta", { name: "theme-color", content: "#646cff" }],
-        ["meta", { name: "twitter:title", content: "Pixi’VN - Visual Novel/2D game engine" }],
+        ["meta", { name: "twitter:title", content: "Pixi'VN - Visual Novel/2D game engine" }],
         [
             "meta",
             {
                 name: "twitter:description",
                 content:
-                    "Create your own visual novel/2D game with Pixi’VN. It is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the PixiJS library for rendering.",
+                    "Create your own visual novel/2D game with Pixi'VN. It is a very versatile and powerful visual novel/2D game engine. It is based on JavaScript/TypeScript and uses the PixiJS library for rendering.",
             },
         ],
         [
